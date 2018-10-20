@@ -7,7 +7,111 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/wodecss.css">
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
-    <script>var user_data = null;</script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/sortable.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        var user_data = null;
+        //存放图片路径的数组
+        var imgSrcArr = [
+            './images/pic/36kr.png',
+            './images/pic/80s.png',
+            './images/pic/acfun.png',
+            './images/pic/aiqiyi.png',
+            './images/pic/alibaba.png',
+            './images/pic/aliyun.png',
+            './images/pic/baiduditu.png',
+            './images/pic/baidufanyi.png',
+            './images/pic/baiduyun.png',
+            './images/pic/baijiahao.png',
+            './images/pic/bilibili.png',
+            './images/pic/bing.png',
+            './images/pic/chengxuyuandaohang.png',
+            './images/pic/chongbuluo.png',
+            './images/pic/chouti.png',
+            './images/pic/dashenwang.png',
+            './images/pic/dazhongdianping.png',
+            './images/pic/dianyingtiantang.png',
+            './images/pic/douban.png',
+            './images/pic/douyu.png',
+            './images/pic/fenghuang.png',
+            './images/pic/github.png',
+            './images/pic/gitlab.png',
+            './images/pic/gugefanyi.png',
+            './images/pic/guojiadili.png',
+            './images/pic/hao123.png',
+            './images/pic/haoqixinribao.png',
+            './images/pic/hupu.png',
+            './images/pic/huxiu.png',
+            './images/pic/huya.png',
+            './images/pic/imdb.png',
+            './images/pic/jianshu.png',
+            './images/pic/jingdong.png',
+            './images/pic/kexuesongshuhui.png',
+            './images/pic/kuaidi100.png',
+            './images/pic/lanfanqie.png',
+            './images/pic/lanrentuku.png',
+            './images/pic/lianjia.png',
+            './images/pic/mafengwo.png',
+            './images/pic/mangguotv.png',
+            './images/pic/mukewang.png',
+            './images/pic/qichezhijia.png',
+            './images/pic/qingting.png',
+            './images/pic/qiongyou.png',
+            './images/pic/qiushibaike.png',
+            './images/pic/qq.png',
+            './images/pic/qqyinyue.png',
+            './images/pic/qqyouxiang.png',
+            './images/pic/quantianhoukeji.png',
+            './images/pic/shiguang.png',
+            './images/pic/sina.png',
+            './images/pic/taimeiti.png',
+            './images/pic/taobao.png',
+            './images/pic/tengxunwendang.png',
+            './images/pic/tianmao.png',
+            './images/pic/tieba.png',
+            './images/pic/tinypng.png',
+            './images/pic/toutiao.jpg',
+            './images/pic/txshipin.png',
+            './images/pic/wangyi.png',
+            './images/pic/wangyigongkaike.png',
+            './images/pic/wangyiyun.png',
+            './images/pic/wangyiyunketang.png',
+            './images/pic/weibo.png',
+            './images/pic/weijibaike.png',
+            './images/pic/weiyun.png',
+            './images/pic/xiaolvji.png',
+            './images/pic/ximalaya.png',
+            './images/pic/yamaxun.png',
+            './images/pic/yidianzixun.png',
+            './images/pic/yinxiangbiji.png',
+            './images/pic/youku.png',
+            './images/pic/zhanku.png',
+            './images/pic/zhihu.png',
+            './images/pic/zhongguoguojiadili.png',
+            './images/pic/zhongguomoocdaxue.png',
+            './images/logo/biji.png',
+            './images/logo/book.png',
+            './images/logo/dengpao.png',
+            './images/logo/gongju.png',
+            './images/logo/houzi.png',
+            './images/logo/huoche.png',
+            './images/logo/shiyanshi.png',
+            './images/logo/wendang.png',
+        ];
+        var imgWrap = [];
+        function preloadImg(arr) {
+            for(var i =0; i< arr.length ;i++) {
+                imgWrap[i] = new Image();
+                imgWrap[i].src = arr[i];
+            }
+        }
+        preloadImg(imgSrcArr);
+        //或者延迟的文档加载完毕在加载图片
+        $(function () {
+            preloadImg(imgSrcArr);
+        })
+    </script>
     <title>轻导航</title>
 </head>
 <body class="night-mode">
@@ -1440,8 +1544,6 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/sortable.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="js/index.js"></script>
 </html>

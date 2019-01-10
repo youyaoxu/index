@@ -72,9 +72,7 @@
         margin: 8px 10px 8px 0px;
         padding: 0px 5px;
     }
-    .bdsug_copy {
-        display: none;
-    }
+    .bdsug_copy {display: none;}
     </style>
     <!--[if lt IE 10]>
 		<style type="text/css">
@@ -91,167 +89,6 @@
 
 <body>
 
-    <div class="main_bar main_bar_size" style="display: none;">
-        <div class="bar_logo waves" id="bar_logo" title="返回主界面">「效率集」</div>
-        <div class="bar_info" id="bar_info" style="display: ;">
-            <div id="bar_info_weather_area">
-                <div class="bar_info_weather" id="bar_info_weather_ifame_show" >
-                    <div id="bar_info_weather_ifame_show_content">
-                        <div>
-                            <div class="weather_show_content_day">今日(1月9日) : </div>
-                            <div>闵行</div>
-                            <div>小雨</div>
-                            <div class="weather_show_content_max">7℃</div>
-                            <div>～</div>
-                            <div class="weather_show_content_min">5℃</div>
-                            <div>东北风</div>
-                            <div class="weather_show_content_separator">|</div>
-                        </div>
-                        <div>
-                            <div class="weather_show_content_day">明日(1月10日) : </div>
-                            <div>闵行</div>
-                            <div>小雨</div>
-                            <div class="weather_show_content_max">10℃</div>
-                            <div>～</div>
-                            <div class="weather_show_content_min">7℃</div>
-                            <div>东北风</div>
-                            <div class="weather_show_content_fill"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="bar_info_city_change" style="display: none;">
-                    <div id="bar_info_city_switch_button">变更当前城市</div>
-                    <ul class="bar_info_city" id="bar_info_city_switch" style="display: none;">
-                        <li>
-                            <select id="selectProvince"></select>
-                        </li>
-                        <li><select id="selectCity"></select></li>
-                        <li><select id="selectCounty"></select></li>
-                        <li>
-                            <div id="bar_info_city_switch_submit">确定</div>
-                            <div id="bar_info_city_switch_cancel">取消</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bar_body" id="bar_body" style="margin-left: 92px; margin-right: 160px;">
-            <div class="bar_type menu_select" id="type_now_box" style="background-color: rgba(14, 118, 226, 0.9);">
-                <div class="bar_type_name" title="" id="type_now" tid="t_33" stype="normal">综合</div>
-                <div class="bar_type_arrow">
-                    <div class="bar_type_arrow_img"></div>
-                </div>
-                <ul class="bar_type_switch" style="display: none;" id="type_switch_box">
-                    <li class="bar_type_switch_li" title="" tid="t_14" stype="nav"><span class="bar_type_switch_part">导航</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_33" stype="normal"><span class="bar_type_switch_part">综合</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_1" stype="normal"><span class="bar_type_switch_part">网页</span></li>
-                    <li class="ele_position bar_type_switch_li" title="" tid="t_2" stype="normal"><span class="bar_type_switch_part">购物</span>
-                        <div class="bar_type_switch_li_arrow">
-                            <div class="bar_type_switch_li_arrow_img"></div>
-                        </div>
-                    </li>
-                    <li class="ele_position bar_type_switch_li" title="" tid="t_10001" stype="normal"><span class="bar_type_switch_part">影视</span>
-                        <div class="bar_type_switch_li_arrow">
-                            <div class="bar_type_switch_li_arrow_img"></div>
-                        </div>
-                    </li>
-                    <li class="bar_type_switch_li" title="" tid="t_24" stype="normal"><span class="bar_type_switch_part">网盘</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_3" stype="normal"><span class="bar_type_switch_part">音乐</span></li>
-                    <li class="ele_position bar_type_switch_li" title="" tid="t_16" stype="normal"><span class="bar_type_switch_part">图片</span>
-                        <div class="bar_type_switch_li_arrow">
-                            <div class="bar_type_switch_li_arrow_img"></div>
-                        </div>
-                    </li>
-                    <li class="bar_type_switch_li" title="" tid="t_17" stype="normal"><span class="bar_type_switch_part">词典</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_7" stype="normal_fy"><span class="bar_type_switch_part">翻译</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_22" stype="normal"><span class="bar_type_switch_part">菜谱</span></li>
-                    <li class="bar_type_switch_li" title="" tid="t_20" stype="normal"><span class="bar_type_switch_part">寻医</span></li>
-                </ul>
-            </div>
-            <div class="bar_c" id="bar_body_c" style="margin-left: 51px;">
-                <div class="bar_c_search" id="search_normal_type">
-                    <div class="bar_c_input_area">
-                        <input type="text" class="bar_c_search_input" style="display:none;" id="normal_input_non" value="">
-                        <textarea class="bar_c_search_area" id="normal_input"></textarea>
-                        <div class="input_clear_search_bar" id="search_normal_input_clear" title="清空输入" style="display: none;"></div>
-                    </div>
-                    <div class="bar_c_search_btn no-select" id="normal_submit">搜索</div>
-                    <div id="bar_c_search_input_helper" style="display: none;">
-                        <div id="bar_c_search_input_history" style="display: none;"></div>
-                        <div id="bar_c_search_input_sug" style="display: none;"></div>
-                    </div>
-                </div>
-                <div class="bar_c_news" id="bar_body_c_news" style="display: none;"></div>
-                <div class="bar_c_site" id="bar_c_site_total" style="margin-left: 251px; margin-right: 0px;">
-                    <div class="bar_c_site_normal" sid="s_2_101" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.baidu.com/favicon.ico"/></div>
-                            <div class="icon_filter" id="s_101_g"></div>
-                            <div class="bar_c_site_part_name">网页</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_102" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://static.hdslb.com/images/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_102_g"></div>
-                        <div class="bar_c_site_part_name">视频</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_103" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.jd.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_103_g"></div>
-                        <div class="bar_c_site_part_name">购物</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_104" title="">
-                    	<div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.smzdm.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_104_g"></div>
-                        <div class="bar_c_site_part_name">特惠</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_105" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://search.yhd.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_105_g"></div>
-                        <div class="bar_c_site_part_name">超市</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_106" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.dangdang.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_106_g"></div>
-                        <div class="bar_c_site_part_name">购书</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_107" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://pan.baidu.com/static/images/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_107_g"></div>
-                        <div class="bar_c_site_part_name">网盘</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_108" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://y.qq.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_108_g"></div>
-                        <div class="bar_c_site_part_name">音乐</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_109" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://699pic.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_109_g"></div>
-                        <div class="bar_c_site_part_name">图片</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_110" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.iciba.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_110_g"></div>
-                        <div class="bar_c_site_part_name">词典</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_111" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://translate.google.cn/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_111_g"></div>
-                        <div class="bar_c_site_part_name">翻译</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_112" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://www.xiachufang.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_112_g"></div>
-                        <div class="bar_c_site_part_name">菜谱</div>
-                    </div>
-                    <div class="bar_c_site_normal" sid="s_2_113" title="">
-                        <div class="bar_c_site_part_icon"><img class="site_icon" src="http://i1.hdfimg.com/favicon.ico"/></div>
-                        <div class="icon_filter" id="s_113_g"></div>
-                        <div class="bar_c_site_part_name">寻医</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="content_area">
         <div class="userinfo" style="display: none;">
             <div class="infoplace">
@@ -373,17 +210,14 @@
                         <span class="separator_vertical_moulding" style="display: none;">|</span>
                         <span class="diy_pop_link no-select" id="web_fav_user_des_edit" title="设置我的自定义导航" style="display: none;">自定义导航</span>
                     </div>
-                    <div class="web_fav_user_edit" id="web_fav_user_edit" style="display: none;">
-                        <span class="web_fav_user_edit_save no-select" id="web_fav_user_edit_save">保存</span>
-                        <span class="web_fav_user_edit_cancel no-select" id="web_fav_user_edit_cancel">取消</span>
-                    </div>
                 </div>
                 <div id="user_fav_area">
                     <div class="myweb">
                         <a class="myweb_title"  title="常用网址">常用网址</a>
                         <div class="myweb_content">
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.baidu.com/" target="_blank" class="myweb_site_name" title="百度" >百度</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://cn.bing.com/" target="_blank" class="myweb_site_name" title="必应" >必应</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://cn.bing.com/" target="_blank" class="myweb_site_name" title="必应" >Bing</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.google.com/" target="_blank" class="myweb_site_name" title="谷歌" >Google</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.qq.com/" target="_blank" class="myweb_site_name" title="腾讯网" >腾讯网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.ifeng.com/" target="_blank" class="myweb_site_name" title="凤凰网" >凤凰网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.163.com/" target="_blank" class="myweb_site_name" title="网易" >网易</a></div>
@@ -395,16 +229,17 @@
                         <div class="myweb_content">
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.zhihu.com/" target="_blank" class="myweb_site_name" title="知乎" >知乎</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.huxiu.com/" target="_blank" class="myweb_site_name" title="虎嗅" >虎嗅</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.tmtpost.com/" target="_blank" class="myweb_site_name" title="钛媒体" >钛媒体</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://awtmt.com/" target="_blank" class="myweb_site_name" title="全天候科技" >全天候科技</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://36kr.com/" target="_blank" class="myweb_site_name" title="36kr" >36kr</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://baijia.baidu.com/" target="_blank" class="myweb_site_name" title="百家号" >百家号</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yidianzixun.com/" target="_blank" class="myweb_site_name" title="一点资讯" >一点资讯</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.jianshu.com/" target="_blank" class="myweb_site_name" title="简书" >简书</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://baijia.baidu.com/" target="_blank" class="myweb_site_name" title="百家号" >百家号</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.tmtpost.com/" target="_blank" class="myweb_site_name" title="钛媒体" >钛媒体</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yidianzixun.com/" target="_blank" class="myweb_site_name" title="一点资讯" >一点资讯</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://bbs.hupu.com/" target="_blank" class="myweb_site_name" title="虎扑" >虎扑</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://sh.qq.com/" target="_blank" class="myweb_site_name" title="大申网" >大申网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://dig.chouti.com/" target="_blank" class="myweb_site_name" title="抽屉" >抽屉</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.qdaily.com/" target="_blank" class="myweb_site_name" title="好奇心日报" >好奇心日报</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.toutiao.com/" target="_blank" class="myweb_site_name" title="今日头条" >今日头条</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://weibo.com/" target="_blank" class="myweb_site_name" title="微博" >微博</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://awtmt.com/" target="_blank" class="myweb_site_name" title="全天候科技" >全天候科技</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
@@ -415,16 +250,12 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.10why.net/" target="_blank" class="myweb_site_name" title="十万个为什么" >十万个为什么</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.cnki.net/" target="_blank" class="myweb_site_name" title="中国知网" >中国知网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.top500.org/l" target="_blank" class="myweb_site_name" title="top500" >top500</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.toutiao.com/" target="_blank" class="myweb_site_name" title="今日头条" >今日头条</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://weibo.com/" target="_blank" class="myweb_site_name" title="微博" >微博</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.qiushibaike.com/" target="_blank" class="myweb_site_name" title="糗事百科" >糗事百科</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.dianping.com/" target="_blank" class="myweb_site_name" title="大众点评" >大众点评</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.mafengwo.cn/" target="_blank" class="myweb_site_name" title="马蜂窝" >马蜂窝</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.autohome.com.cn" target="_blank" class="myweb_site_name" title="汽车之家" >汽车之家</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.qyer.com/" target="_blank" class="myweb_site_name" title="穷游网" >穷游网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.lianjia.com/" target="_blank" class="myweb_site_name" title="链家" >链家</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://map.baidu.com/" target="_blank" class="myweb_site_name" title="百度地图" >百度地图</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://songshuhui.net/" target="_blank" class="myweb_site_name" title="科学松鼠会" >科学松鼠会</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://tieba.baidu.com/index.html" target="_blank" class="myweb_site_name" title="贴吧" >贴吧</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.wikipedia.org/" target="_blank" class="myweb_site_name" title="维基百科" >维基百科</a></div>
                         </div>
@@ -432,16 +263,18 @@
                     <div class="myweb"> 
                         <a class="myweb_title"  title="购物">购物</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.jd.com/" target="_blank" class="myweb_site_name" title="京东" >京东</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.tmall.com/" target="_blank" class="myweb_site_name" title="天猫" >天猫</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.12306.cn" target="_blank" class="myweb_site_name" title="12306" >12306</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.jd.com/" target="_blank" class="myweb_site_name" title="京东" >京东</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.amazon.cn/" target="_blank" class="myweb_site_name" title="亚马逊" >亚马逊</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.dianping.com/" target="_blank" class="myweb_site_name" title="大众点评" >大众点评</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.12306.cn" target="_blank" class="myweb_site_name" title="12306" >12306</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                         <a class="myweb_title"  title="科技">科技</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.10why.net/" target="_blank" class="myweb_site_name" title="十万个为什么" >十万个为什么</a></div>
+                                <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.qdaily.com/" target="_blank" class="myweb_site_name" title="好奇心日报" >好奇心日报</a></div>
+                                <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://songshuhui.net/" target="_blank" class="myweb_site_name" title="科学松鼠会" >科学松鼠会</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
@@ -462,23 +295,24 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.youku.com/" target="_blank" class="myweb_site_name" title="优酷" >优酷</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.iqiyi.com/" target="_blank" class="myweb_site_name" title="爱奇艺" >爱奇艺</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://v.qq.com/" target="_blank" class="myweb_site_name" title="腾讯视频" >腾讯视频</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.bilibili.com/" target="_blank" class="myweb_site_name" title="哔哩哔哩" >哔哩哔哩</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.bilibili.com/" target="_blank" class="myweb_site_name" title="哔哩哔哩">哔哩哔哩</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.acfun.cn/" target="_blank" class="myweb_site_name" title="AcFun" >AcFun</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.douyu.com/" target="_blank" class="myweb_site_name" title="斗鱼" >斗鱼</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.huya.com/" target="_blank" class="myweb_site_name" title="虎牙" >虎牙</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.mgtv.com/" target="_blank" class="myweb_site_name" title="芒果TV" >芒果TV</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://music.163.com/" target="_blank" class="myweb_site_name" title="网易音乐" >网易音乐</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://y.qq.com/" target="_blank" class="myweb_site_name" title="QQ音乐" >QQ音乐</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.qingting.fm/" target="_blank" class="myweb_site_name" title="蜻蜓" >蜻蜓</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.ximalaya.com/" target="_blank" class="myweb_site_name" title="喜马拉雅" >喜马拉雅</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://open.163.com/" target="_blank" class="myweb_site_name" title="网易公开课" >网易公开课</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://y.qq.com/" target="_blank" class="myweb_site_name" title="QQ音乐" >QQ音乐</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://music.163.com/" target="_blank" class="myweb_site_name" title="网易音乐" >网易音乐</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://study.163.com/" target="_blank" class="myweb_site_name" title="网易云课堂" >网易云课堂</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.icourse163.org/" target="_blank" class="myweb_site_name" title="中国Mooc大学" >中国Mooc大学</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mooc.guokr.com/course/" target="_blank" class="myweb_site_name" title="果壳Mooc学院" >果壳Mooc学院</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://study.163.com/" target="_blank" class="myweb_site_name" title="网易云课堂" >网易云课堂</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.pluralsight.com/codeschool" target="_blank" class="myweb_site_name" title="codeschool" >codeschool</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.chungold.com/" target="_blank" class="myweb_site_name" title="chungold" >chungold</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.rails365.net/" target="_blank" class="myweb_site_name" title="rails365-前端视频" >rails365</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.tmooc.cn/" target="_blank" class="myweb_site_name" title="tmooc" >tmooc</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.tmooc.cn/" target="_blank" class="myweb_site_name" title="Tmooc" >Tmooc</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.jikexueyuan.com/" target="_blank" class="myweb_site_name" title="极客学院" >极客学院</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
@@ -491,12 +325,13 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://fanyi.youdao.com/" target="_blank" class="myweb_site_name" title="有道翻译" >有道翻译</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yuque.com/" target="_blank" class="myweb_site_name" title="语雀" >语雀</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://docs.qq.com/desktop/" target="_blank" class="myweb_site_name" title="腾讯文档" >腾讯文档</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://shimo.im/" target="_blank" class="myweb_site_name" title="blog" style="font-weight: bold;">石墨文档</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yinxiang.com/" target="_blank" class="myweb_site_name" title="印象笔记" >印象笔记</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://youyaoxu.github.io/blog/" target="_blank" class="myweb_site_name" title="blog" style="font-weight: bold;">blog</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
-                        <a class="myweb_title" title="影视/图书">影视/图书</a>
+                        <a class="myweb_title" title="影视/图书">影视/图书/存储</a>
                         <div class="myweb_content">
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.douban.com/" target="_blank" class="myweb_site_name" title="豆瓣" >豆瓣</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.mtime.com/" target="_blank" class="myweb_site_name" title="时光网" >时光网</a></div>
@@ -504,33 +339,27 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.imdb.com/" target="_blank" class="myweb_site_name" title="IMDB" >IMDB</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.dy2018.com/index.html" target="_blank" class="myweb_site_name" title="电影天堂"  >电影天堂</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.80s.tw/" target="_blank" class="myweb_site_name" title="80s" >80s</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.library.sh.cn/" target="_blank" class="myweb_site_name" title="上海图书馆" >上海图书馆</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.feng.com/" target="_blank" class="myweb_site_name" title="威锋" >威锋</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.weiyun.com/" target="_blank" class="myweb_site_name" title="微云" >微云</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://pan.baidu.com/" target="_blank" class="myweb_site_name" title="百度网盘" >百度网盘</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://sobooks.cc/" target="_blank" class="myweb_site_name" title="sobooks" >sobooks</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                     	<a class="myweb_title" title="脑图">脑图</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云" >阿里云</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://naotu.baidu.com/" target="_blank" class="myweb_site_name" title="百度脑图" >百度脑图</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.processon.com/" target="_blank" class="myweb_site_name" title="ProcessOn" >ProcessOn</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mubu.com/" target="_blank" class="myweb_site_name" title="笔记大纲,思维导图" >幕布</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.xmind.cn/" target="_blank" class="myweb_site_name" title="思维导图" >xmind</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.mindmanager.cn/" target="_blank" class="myweb_site_name" title="思维导图" >mindmanager</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                     	<a class="myweb_title" title="开发工具">开发工具</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云" >阿里云</a></div>
-                        </div>
-                    </div>
-                    <div class="myweb"> 
-                    	<a class="myweb_title"  title="其他工具">其他工具</a>
-                        <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mail.qq.com/" target="_blank" class="myweb_site_name" title="QQ邮箱" >QQ邮箱</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://pan.baidu.com/" target="_blank" class="myweb_site_name" title="百度网盘" >百度网盘</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.12306.cn" target="_blank" class="myweb_site_name" title="12306" >12306</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.kuaidi100.com/" target="_blank" class="myweb_site_name" title="快递100" >快递100</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.bootcdn.cn/" target="_blank" class="myweb_site_name" title="BootCDN" >BootCDN</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.weiyun.com/" target="_blank" class="myweb_site_name" title="微云" >微云</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://sobooks.cc/" target="_blank" class="myweb_site_name" title="sobooks" >sobooks</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.library.sh.cn/" target="_blank" class="myweb_site_name" title="上海图书馆" >上海图书馆</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.feng.com/" target="_blank" class="myweb_site_name" title="威锋" >威锋</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.12306bypass.com/" target="_blank" class="myweb_site_name" title="12306bypass" >12306bypass</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://c.runoob.com/" target="_blank" class="myweb_site_name" title="菜鸟工具" >菜鸟工具</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://tool.oschina.net/" target="_blank" class="myweb_site_name" title="在线工具" >在线工具</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://qqe2.com/" target="_blank" class="myweb_site_name" title="qqe2" >qqe2</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://mqtest.io/" target="_blank" class="myweb_site_name" title="mqtest" >mqtest</a></div>
@@ -541,24 +370,29 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://unpkg.com/" target="_blank" class="myweb_site_name" title="unpkg" >unpkg</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://cdnjs.com/" target="_blank" class="myweb_site_name" title="CDNjs" >CDNjs</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://http//cdn.code.baidu.com/" target="_blank" class="myweb_site_name" title="百度静态资源" >百度静态资源</a></div>
-                            
-                        </div>
-                    </div>
-                    <div class="myweb"> 
-                    	<a class="myweb_title"  title="工具-2">工具-2</a>
-                        <div class="myweb_content">
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.bootcdn.cn/" target="_blank" class="myweb_site_name" title="BootCDN" >BootCDN</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.fancynode.com.cn/pxcook" target="_blank" class="myweb_site_name" title="pxcook" >pxcook</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.cutterman.cn/zh/cutterman" target="_blank" class="myweb_site_name" title="cutterman" >cutterman</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.mockplus.cn/" target="_blank" class="myweb_site_name" title="摹客" >摹客</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://gtmetrix.com/" target="_blank" class="myweb_site_name" title="gtmetrix" >gtmetrix</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://transfonter.org/" target="_blank" class="myweb_site_name" title="transfonter" >transfonter</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://club.huawei.com/" target="_blank" class="myweb_site_name" title="花粉俱乐部" >花粉俱乐部</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://squoosh.app/" target="_blank" class="myweb_site_name" title="谷歌图片压缩工具" >squoosh</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://tinypng.com/" target="_blank" class="myweb_site_name" title="Tinypng" >Tinypng</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://cmder.net/" target="_blank" class="myweb_site_name" title="cmder" >cmder</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://tinypng.com/" target="_blank" class="myweb_site_name" title="Tinypng" >TinyPNG</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://npm.taobao.org/" target="_blank" class="myweb_site_name" title="淘宝镜像" >淘宝镜像</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://jsfiddle.net/" target="_blank" class="myweb_site_name" title="在线代码调试平台" >jsfiddle</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://jsfiddle.net/" target="_blank" class="myweb_site_name" title="在线代码调试平台" >jsfiddle</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.iterm2.com/" target="_blank" class="myweb_site_name" title="Mac下终端操作软件" >iterm2</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://c.runoob.com/front-end/854" target="_blank" class="myweb_site_name" title="正则表达式在线测试工具" >正则表达式</a></div>
                         </div>
                     </div>
+                    <div class="myweb"> 
+                    	<a class="myweb_title" title="其他工具">其他工具</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mail.qq.com/" target="_blank" class="myweb_site_name" title="QQ邮箱" >QQ邮箱</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.kuaidi100.com/" target="_blank" class="myweb_site_name" title="快递100" >快递100</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.12306bypass.com/" target="_blank" class="myweb_site_name" title="12306bypass" >12306bypass</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://club.huawei.com/" target="_blank" class="myweb_site_name" title="花粉俱乐部" >花粉俱乐部</a></div>
+                        </div>
+                    </div>
+                    
                     <div class="myweb"> 
                     	<a class="myweb_title"  title="博客">博客</a>
                         <div class="myweb_content">
@@ -616,26 +450,36 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://msdn.microsoft.com/zh-cn/" target="_blank" class="myweb_site_name" title="msdn" >msdn</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yiibai.com/" target="_blank" class="myweb_site_name" title="易百" >易百</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://cssnext.io/" target="_blank" class="myweb_site_name" title="cssnext" >cssnext</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.v2ex.com/" target="_blank" class="myweb_site_name" title="v2ex" >v2ex</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.cnbeta.com/" target="_blank" class="myweb_site_name" title="cnbeta" >cnbeta</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.finalshares.com/" target="_blank" class="myweb_site_name" title="极分享" >极分享</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://toutiao.io/" target="_blank" class="myweb_site_name" title="开发者头条" >开发者头条</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.oschina.net/" target="_blank" class="myweb_site_name" title="开源中国" >开源中国</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                     	<a class="myweb_title"  title="web端">web端</a>
                         <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/html/html-tutorial.html" target="_blank" class="myweb_site_name" title="HTML基本语法手册">HTML教程</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/css/css-tutorial.html" target="_blank" class="myweb_site_name" title="CSS语法手册" >CSS教程</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/html/html5-intro.html" target="_blank" class="myweb_site_name" title="新一代HTML标准" >HTML5教程</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/css3/css3-tutorial.html" target="_blank" class="myweb_site_name" title="CSS技术的升级版" >CSS3教程</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/htmldom/htmldom-tutorial.html" target="_blank" class="myweb_site_name" title="HTML文档标准" >HTML DOM</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/jquery/jquery-tutorial.html" target="_blank" class="myweb_site_name" title="js标准文档" >jQuery教程</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://javascript.ruanyifeng.com/" target="_blank" class="myweb_site_name" title="js标准文档" >js标准文档</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://es6.ruanyifeng.com/" target="_blank" class="myweb_site_name" title="es6" >es6</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://nodejs.cn/" target="_blank" class="myweb_site_name" title="node中文" >node中文</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.npmjs.com/" target="_blank" class="myweb_site_name" title="npm" >npm</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.webpackjs.com/" target="_blank" class="myweb_site_name" title="webpack中文网" >webpack中文网</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.tslang.cn/" target="_blank" class="myweb_site_name" title="typescript中文" >typescript中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://cn.vuejs.org/" target="_blank" class="myweb_site_name" title="vue" >vue</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://cn.vuejs.org/" target="_blank" class="myweb_site_name" title="vue" >Vue</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://doc.react-china.org/" target="_blank" class="myweb_site_name" title="React中文网" >React中文网</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.angular.cn" target="_blank" class="myweb_site_name" title="angular中文" >angular中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://nodelover.gitbook.io/typescript" target="_blank" class="myweb_site_name" title="typescript文档" >typescript文档</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.angular.cn" target="_blank" class="myweb_site_name" title="angular中文" >Angular中文</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://nodelover.gitbook.io/typescript" target="_blank" class="myweb_site_name" title="typescript文档" >TypeScript文档</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://babeljs.io/" target="_blank" class="myweb_site_name" title="babel" >babel</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.gulpjs.com.cn/" target="_blank" class="myweb_site_name" title="gulp中文" >gulp中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://router.vuejs.org/zh-cn/" target="_blank" class="myweb_site_name" title="vue-router中文" >vue-router中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.angularjs.net.cn/" target="_blank" class="myweb_site_name" title="angular1中文" >angular1中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://npm.taobao.org/" target="_blank" class="myweb_site_name" title="淘宝镜像" >淘宝镜像</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://router.vuejs.org/zh-cn/" target="_blank" class="myweb_site_name" title="vue-router中文" >Vue-Router中文</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.angularjs.net.cn/" target="_blank" class="myweb_site_name" title="angular1中文" >Angular1中文</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://handlebarsjs.com/" target="_blank" class="myweb_site_name" title="handlebarsjs" >handlebarsjs</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://yeoman.io/" target="_blank" class="myweb_site_name" title="yeoman" >yeoman</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://v3.bootcss.com/" target="_blank" class="myweb_site_name" title="bootstrap3" >bootstrap3</a></div>
@@ -643,13 +487,15 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://browserify.org/" target="_blank" class="myweb_site_name" title="browserify" >browserify</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://cn.redux.js.org/" target="_blank" class="myweb_site_name" title="redux中文" >redux中文</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://redux.js.org/" target="_blank" class="myweb_site_name" title="redux" >redux</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.wulihub.com.cn/" target="_blank" class="myweb_site_name" title="WuliHub中国站" >静态HTML托管</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.jetbrains.com/webstorm/" target="_blank" class="myweb_site_name" title="WuliHub中国站" >WebStorm</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                     	<a class="myweb_title"  title="web端-插件">web端-插件</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.lodashjs.com/" target="_blank" class="myweb_site_name" title="loadshjs中文" >loadshjs中文</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://coffee-script.org/" target="_blank" class="myweb_site_name" title="coffeescript中文" >coffeescript中文</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.lodashjs.com/" target="_blank" class="myweb_site_name" title="loadshjs中文">loadshjs中文</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://coffee-script.org/" target="_blank" class="myweb_site_name" title="coffeescript中文">coffeescript中文</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.telerik.com/kendo-ui" target="_blank" class="myweb_site_name" title="kendo-ui" >kendo-ui</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.sencha.com/" target="_blank" class="myweb_site_name" title="extjs" >extjs</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.treejs.cn/v3/main.php#_zTreeInfo" target="_blank" class="myweb_site_name" title="ztree" >ztree</a></div>
@@ -698,7 +544,7 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://zhuanlan.zhihu.com/p/28225188" target="_blank" class="myweb_site_name" title="vue-router知乎" >vue-router知乎</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://doc.react-china.org/docs/jsx-in-depth.html" target="_blank" class="myweb_site_name" title="react-高级" >react-高级</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://doc.react-china.org/docs/handling-events.html" target="_blank" class="myweb_site_name" title="react-普通" >react-普通</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" class="myweb_site_name" title="免费编程书籍" >免费编程书籍</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" class="myweb_site_name" title="免费编程书籍">免费编程书籍</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md" target="_blank" class="myweb_site_name" title="免费编程书籍-英文版" >免费编程书籍-英文版</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://huziketang.mangojuice.top/books/react/" target="_blank" class="myweb_site_name" title="大胡子-react" >大胡子-react</a></div>
                         </div>
@@ -740,35 +586,32 @@
                     <div class="myweb"> 
                         <a class="myweb_title" title="PHP">PHP</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/php/php-tutorial.html" target="_blank" class="myweb_site_name" title="服务器端脚本语言">PHP语言</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" class="myweb_site_name" title="关系型数据库管理系统">MySql教程</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://jingyan.baidu.com/article/5225f26b037247e6fa0908fe.html" target="_blank" class="myweb_site_name" title="快速搭建php开发环境">Mamp</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.golaravel.com/" target="_blank" class="myweb_site_name" title="阿里云">Laravel</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/php/php-tutorial.html" target="_blank" class="myweb_site_name" title="阿里云">PHP语言</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.jetbrains.com/phpstorm/" target="_blank" class="myweb_site_name" title="阿里云">PHPStorm</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                         <a class="myweb_title" title="iOS">iOS</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.yiibai.com/objective_c/home.html" target="_blank" class="myweb_site_name" title="苹果应用编程的语言">Objective-C</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/swift/swift-tutorial.html" target="_blank" class="myweb_site_name" title="苹果应用编程的语言">Swift</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.code4app.com/" target="_blank" class="myweb_site_name" title="iOS开源代码与特效">Code4App</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://developer.apple.com/xcode/" target="_blank" class="myweb_site_name" title="苹果应用开发编辑器">XCode</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                         <a class="myweb_title" title="安卓">安卓</a>
                         <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" target="_blank" class="myweb_site_name" title="安卓编程语法">Android语法</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.android-studio.org/" target="_blank" class="myweb_site_name" title="安卓开发官方编辑器">Android Studio</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
                         <a class="myweb_title" title="测试工程师">测试工程师</a>
-                        <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
-                        </div>
-                    </div>
-                    <div class="myweb"> 
-                        <a class="myweb_title" title="编辑器">编辑器</a>
-                        <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
-                        </div>
-                    </div>
-                    <div class="myweb"> 
-                        <a class="myweb_title" title="开发软件">软件</a>
                         <div class="myweb_content">
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
                         </div>
@@ -803,22 +646,7 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com" target="_blank" class="myweb_site_name" title="阿里云">阿里云</a></div>
                         </div>
                     </div>
-                    <div class="myweb"> 
-                        <a class="myweb_title" title="公司">公司</a>
-                        <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://netease.im/" target="_blank" class="myweb_site_name" title="网易云信" >网易云信</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://oa.t3c.com.cn" target="_blank" class="myweb_site_name" title="t3cOA" >t3cOA</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://redmine.teein.com/" target="_blank" class="myweb_site_name" title="redmine" >redmine</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mall.chaoniuhui.com/h5/index.html#/login" target="_blank" class="myweb_site_name" title="h5-vue" >h5-vue</a></div>
-                        </div>
-                    </div>
-                    <div class="myweb"> 
-                        <a class="myweb_title" title="游戏">游戏</a>
-                        <div class="myweb_content">
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://emojisandearthporn.com/" target="_blank" class="myweb_site_name" title="emojisandearthporn" >emojisandearthporn</a></div>
-                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://willyoupressthebutton.com/" target="_blank" class="myweb_site_name" title="willyoupressthebutton" >willyoupressthebutton</a></div>
-                        </div>
-                    </div>
+                    
                     <div class="myweb"> 
                         <a class="myweb_title" title="UI和交互设计">设计</a>
                         <div class="myweb_content">
@@ -827,6 +655,20 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.lanrentuku.com/" target="_blank" class="myweb_site_name" title="懒人图库" >懒人图库</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://unsplash.com/" target="_blank" class="myweb_site_name" title="壁纸-桌面" >unsplash</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://500px.com/" target="_blank" class="myweb_site_name" title="图片" >500px</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb"> 
+                        <a class="myweb_title" title="轻量编辑器">轻量编辑器</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://cmder.net/" target="_blank" class="myweb_site_name" title="cmder" >cmder</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.cutterman.cn/zh/cutterman" target="_blank" class="myweb_site_name" title="cutterman" >cutterman</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.fancynode.com.cn/pxcook" target="_blank" class="myweb_site_name" title="pxcook" >pxcook</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.jetbrains.com/" target="_blank" class="myweb_site_name" title="pxcook" >jetbrains</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://code.visualstudio.com/" target="_blank" class="myweb_site_name" title="微软出品免费编辑器" >VS-Code</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://www.sublimetext.com/" target="_blank" class="myweb_site_name" title="微软出品免费编辑器" >Sublime Text</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://atom.io//" target="_blank" class="myweb_site_name" title="Github出品的编辑器" >Atom</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://desktop.github.com/" target="_blank" class="myweb_site_name" title="仅可向github托管代码" >Github Desktop</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.sourcetreeapp.com/" target="_blank" class="myweb_site_name" title="仅可向github托管代码" >sourcetree</a></div>
                         </div>
                     </div>
                     <div class="myweb"> 
@@ -845,6 +687,32 @@
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://push.baidu.com/" target="_blank" class="myweb_site_name" title="百度推送">百度推送</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.growingio.com/" target="_blank" class="myweb_site_name" title="腾讯信鸽">腾讯信鸽</a></div>
                             <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.aliyun.com/product/cps" target="_blank" class="myweb_site_name" title="阿里推送">阿里推送</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb"> 
+                        <a class="myweb_title" title="公司">公司</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://oa.t3c.com.cn" target="_blank" class="myweb_site_name" title="t3cOA" >t3cOA</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://redmine.teein.com/" target="_blank" class="myweb_site_name" title="redmine" >redmine</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://mall.chaoniuhui.com/h5/index.html#/login" target="_blank" class="myweb_site_name" title="h5-vue" >h5-vue</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb"> 
+                        <a class="myweb_title" title="团队协作">团队协作</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.github.com/" target="_blank" class="myweb_site_name" title="代码托管与协作" >github</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://about.gitlab.com/" target="_blank" class="myweb_site_name" title="代码托管与协作" >gitLab</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://legacy.gitbook.com/" target="_blank" class="myweb_site_name" title="文档管理与协作" >gitbook</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://tower.im/" target="_blank" class="myweb_site_name" title="在线团队协作" >Tower</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://www.teambition.com/" target="_blank" class="myweb_site_name" title="团队任务管理" >teambition</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="https://coding.net/" target="_blank" class="myweb_site_name" title="代码托管与协作" >coding</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb"> 
+                        <a class="myweb_title" title="游戏">游戏</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://emojisandearthporn.com/" target="_blank" class="myweb_site_name" title="emojisandearthporn" >emojisandearthporn</a></div>
+                            <div class="myweb_site"><b class="myweb_site_img_area" style="visibility: hidden;"><img class="myweb_site_img_content" /></b><a href="http://willyoupressthebutton.com/" target="_blank" class="myweb_site_name" title="willyoupressthebutton" >willyoupressthebutton</a></div>
                         </div>
                     </div>
                 </div>

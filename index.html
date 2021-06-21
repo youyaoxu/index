@@ -44,8 +44,9 @@
                         <div class="inputbox">
                             <input type="text" id="invalue" name="word" class="invalue" value="" />
                         </div>
-                        <button id="baid" type="submit" class="sbtn" style="font-weight: bold;border:0;background-color:#3385ff;border-radius:3px;" value="百度几下" ></button>
-                        <button id="guge" type="submit" class="sbtn" style="font-weight: bold;border:0;" value="谷歌一下"></button>
+                        <button id="baid" type="submit" class="sbtn">百度几下</button>
+                        <button id="biying" type="submit" class="sbtn">必应两下</button>
+                        <button id="guge" type="submit" class="sbtn">谷歌一下</button>
                     </form>
                 </div>
                 <div class="zhelitext" id="zhelitext_area">伟人之所以伟大，是因为他与别人共处逆境时，别人失去了信心，他却下决心实现自己的目标。</div>
@@ -162,7 +163,7 @@
                             <div class="myweb_site"><a href="http://linux.vbird.org/" target="_blank" class="myweb_site_name" title="鸟哥">鸟哥</a></div>
                             <div class="myweb_site"><a href="http://www.liaoxuefeng.com/" target="_blank" class="myweb_site_name" title="廖雪峰">廖雪峰</a></div>
                             <div class="myweb_site"><a href="http://cmsblogs.com/" target="_blank" class="myweb_site_name" title="chenssy-Java技术驿站">chenssy</a></div>
-                            <div class="myweb_site"><a href="https://www.laruence.com/" target="_blank" class="myweb_site_name" title="风雪之隅-惠新宸-PHP-PECL">风雪之隅-惠新宸</a></div>
+                            <div class="myweb_site"><a href="https://www.laruence.com/" target="_blank" class="myweb_site_name" title="风雪之隅-惠新宸-PHP-PECL">惠新宸</a></div>
                             <div class="myweb_site"><a href="https://blog.codingnow.com/" target="_blank" class="myweb_site_name" title="云风-Java">云风</a></div>
                             <div class="myweb_site"><a href="http://www.ityouknow.com/" target="_blank" class="myweb_site_name" title="纯洁的微笑-Java">纯洁的微笑</a></div>
                             <div class="myweb_site"><a href="https://www.diguage.com/" target="_blank" class="myweb_site_name" title="D瓜哥-Java">D瓜哥</a></div>
@@ -1317,12 +1318,19 @@ function time() {
 setInterval(function() {
     time();
 }, 1000);
+// https://www.google.com/search?q=123
+// https://www.baidu.com/s?ie=utf-8&word=212
+// https://cn.bing.com/search?q=123
 document.getElementById("guge").onclick = function() {
-    document.getElementById("form").setAttribute("action", "https://www.google.com/")
+    document.getElementById("form").setAttribute("action", "https://www.google.com/search")
+    document.getElementById("invalue").setAttribute("name", "q")
+};
+document.getElementById("biying").onclick = function() {
+    document.getElementById("form").setAttribute("action", "https://cn.bing.com/search")
     document.getElementById("invalue").setAttribute("name", "q")
 };
 document.getElementById("baid").onclick = function() {
-    document.getElementById("form").setAttribute("action", "https://www.baidu.com/")
+    document.getElementById("form").setAttribute("action", "https://www.baidu.com/s")
     document.getElementById("invalue").setAttribute("name", "word")
 };
 </script>

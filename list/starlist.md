@@ -2,7 +2,33 @@
 
 ## 一.TODO
 
+[中国制造之困](https://mp.weixin.qq.com/s/x2iLQobqYvNO3uu0QBcmlQ)
 
+[全球不均衡复苏的经济后果](https://mp.weixin.qq.com/s/dkgMtr3XSSHplNeIDZ0xmA)
+
+[汇率、房价与改革](https://mp.weixin.qq.com/s/N88n7DdJnclTYNpSriBKcw)
+
+[保罗·沃尔克 | 半世风云，一蓑烟雨](https://mp.weixin.qq.com/s/c22UWIrC6P9NnR2oT8WJKQ)
+
+[《货币经济学：起源、制度与危机》](https://mp.weixin.qq.com/s/MVwl27ZDMADcEPliBGmkrg)
+
+[美联储豹变](https://mp.weixin.qq.com/s/i6EiuhnHI_tO5HoITx07dQ)
+
+[《结构性通胀》 | 穷人通缩，富人通胀](https://mp.weixin.qq.com/s/XStiXamdBfBXcONkanddvw)
+
+[国运2021 | 后疫情时代的中国及世界](https://mp.weixin.qq.com/s/fH_V3JtO_5jIwX27tTMkCQ)
+
+[今年下半年经济走势](https://mp.weixin.qq.com/s/s9rfPVpuF8n3AUtPhdD-KA)
+
+[货币大变局](https://mp.weixin.qq.com/s/sRp6BjLFfPKwuepgnzR0KA)
+
+[中国“千亿私募天团”横空出世！](https://mp.weixin.qq.com/s/N7fHRmZ-QFWQ02lzBiBoOQ)
+
+[如果你没空看书，我强烈建议你试试这个神器！](https://mp.weixin.qq.com/s/iOcn9dErVKdJO2JsuD5V-w)
+
+[英军侵犯领海，俄军回应"简单粗暴](https://mp.weixin.qq.com/s/UQeEwynHJ3P3jimHb6hjTQ)
+
+[如何读懂一份财报](https://mp.weixin.qq.com/s/dG7tyV5zrU14-b6KBRj9yw)
 
 ## 二.Interest List
 
@@ -5724,3 +5750,4 @@ MPV推荐榜
 
 ## 七.宝宝清单
 
+[宝宝拉绿色粑粑的10种原因](https://zhuanlan.zhihu.com/p/53278261)

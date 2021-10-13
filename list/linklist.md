@@ -70,8 +70,6 @@
 
 [mall-admin-web](https://github.com/macrozheng/mall-admin-web)
 
-#### 路线参考
-
 [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
 [DeepLearning-500-questions](https://github.com/scutan90/DeepLearning-500-questions)
@@ -82,7 +80,7 @@
 
 [LeetCodeAnimation](https://github.com/MisterBooo/LeetCodeAnimation)
 
-### gitee
+#### gitee
 
 [xmind](https://gitee.com/youyaoxu/xmind)
 
@@ -230,6 +228,8 @@
 [ES6面试、复习干货知识点汇总（全）](https://juejin.cn/post/6844903734464495623)
 
 #### Webpack
+
+[手把手教你撸一个 Webpack Loader](https://juejin.cn/post/6844903555673882632)
 
 [2020年webpack面试题](https://blog.csdn.net/Aria_Miazzy/article/details/106235716)
 
@@ -504,6 +504,8 @@
 [防火墙](https://www.jianshu.com/p/3921510bfb94)
 
 ### 技术
+
+[做一个自己的VUE组件，并且上传至npm](https://juejin.cn/post/6844904194147614733)
 
 [领域驱动设计详解：是什么、为什么、怎么做？](https://zhuanlan.zhihu.com/p/164757995)
 

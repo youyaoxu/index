@@ -18,11 +18,37 @@
 
 ## Todo
 
-[node-pre-gyp WARN Pre-bui 在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关。 - 云松编程 - 博客园 (cnblogs.com)](https://www.cnblogs.com/gooldns/p/12073504.html)
+[node-pre-gyp WARN Pre-bui 在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关](https://www.cnblogs.com/gooldns/p/12073504.html)
 
 ## 一.Link List
 
 ### 文档
+
+[highlight.js](https://highlightjs.org/)
+
+[fusejs](https://fusejs.io/)
+
+[file-saver](https://www.npmjs.com/package/file-saver)
+
+[echarts-wordcloud](https://www.npmjs.com/package/echarts-wordcloud)
+
+[echarts-stat](https://www.npmjs.com/package/echarts-stat)
+
+[dhtmlx-scheduler](https://www.npmjs.com/package/dhtmlx-scheduler)
+
+[core-js](https://www.npmjs.com/package/core-js)
+
+[axios-zh](https://www.axios-http.cn/)
+
+[antv-g2](https://antv-g2.gitee.io/zh/docs/manual/about-g2)
+
+[data-set](https://github.com/antvis/data-set)
+
+[fontawesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free)
+
+[jenkins](https://www.jenkins.io/zh/)
+
+[underscorejs](https://www.underscorejs.com.cn/)
 
 [uni-app官网 (dcloud.io)](https://uniapp.dcloud.io/)
 
@@ -30,35 +56,23 @@
 
 [Vue3 (vue3js.cn)](https://vue3js.cn/)
 
+[lodash](https://lodash.com/)
+
+[laodsh-zh](https://www.lodashjs.com/)
+
+[echarts](https://echarts.apache.org/zh/index.html)
+
+[momentjs](http://momentjs.cn/)
+
 ### github
 
 [xmind](https://github.com/youyaoxu/xmind)
 
 [note](https://github.com/youyaoxu/note)
 
-[react-hooks-qunar-demo](https://github.com/yjdjiayou/react-hooks-qunar-demo)
 
-[blog-client-小火柴Vue全家桶](https://github.com/littlematch0123/blog-client)
 
-[blog-admin-小火柴React全家桶](https://github.com/littlematch0123/blog-admin)
 
-[react_home](https://github.com/aiyuekuang/react_home)
-
-[react-pxq](https://github.com/bailicangdu/react-pxq)
-
-[react-源码](https://github.com/facebook/react)
-
-[react_blog-jspang](https://github.com/shenghy/react_blog)
-
-[ant-design](https://github.com/ant-design/ant-design)
-
-[vue2-elm](https://github.com/bailicangdu/vue2-elm)
-
-[vue-源码](https://github.com/vuejs/vue)
-
-[vue-backend](https://github.com/harsima/vue-backend)
-
-[eladmin](https://github.com/elunez/eladmin)
 
 [SpringCloud-miaosha](https://github.com/tengshe789/SpringCloud-miaosha)
 
@@ -86,7 +100,7 @@
 
 [note](https://gitee.com/youyaoxu/note)
 
-### Web Front
+### Web
 
 [前端经典面试题 ( 60道前端面试题包含 JS、CSS、React、网络、浏览器、程序题等)](https://mp.weixin.qq.com/s/Q2mWm_DN-vt83LSgLm-JLQ)
 
@@ -102,6 +116,50 @@
 [CSS实现圆角，三角，五角星，五边形，爱心，12角星，8角星，圆，椭圆，圆圈，八卦](https://blog.csdn.net/chenhongwu666/article/details/38905803)
 
 #### React
+
+##### doc
+
+[ant-desing-pro-components](https://procomponents.ant.design/)
+
+[ant-design-pro](https://pro.ant.design/zh-CN/)
+
+[ant-design-charts](https://charts.ant.design/)
+
+[fusion-design](https://fusion.design/pc/?themeid=2)
+
+[BizCharts](https://github.com/alibaba/BizCharts)
+
+[ant-design-mobile](https://mobile.ant.design/zh)
+
+[ant-motion](https://motion.ant.design/index-cn)
+
+[ice](https://alibaba.github.io/ice/)
+
+[Hook 简介](https://react.docschina.org/docs/hooks-intro.html)
+
+[ant-design](https://github.com/ant-design/ant-design)
+
+##### project
+
+[blog-admin](https://github.com/littlematch0123/blog-admin)
+
+[react-hooks-qunar-demo](https://github.com/yjdjiayou/react-hooks-qunar-demo)
+
+[react_home](https://github.com/aiyuekuang/react_home)
+
+[react-pxq](https://github.com/bailicangdu/react-pxq)
+
+[react_blog-jspang](https://github.com/shenghy/react_blog)
+
+##### code
+
+[React 源码解析](https://react.jokcy.me/)
+
+[react-源码](https://github.com/facebook/react)
+
+##### link
+
+[React与Vue的对比](https://www.cnblogs.com/yubin-/p/11537122.html)
 
 [React 16.6 之 React.memo()](https://www.jianshu.com/p/9293daab4161)
 
@@ -127,39 +185,141 @@
 
 [必须要会的 50 个React 面试题](https://segmentfault.com/a/1190000018604138)
 
-[React 源码解析](https://react.jokcy.me/)
-
 [30分钟精通React Hooks](https://juejin.cn/post/6844903709927800846)
 
 [React Hooks 详解 【近 1W 字】+ 项目实战](https://juejin.cn/post/6844903985338400782)
-
-[Hook 简介](https://react.docschina.org/docs/hooks-intro.html)
 
 [《React源码解析》系列完结！](https://juejin.cn/post/6844903568487497741)
 
 #### Vue
 
+##### doc
+
+[axios](https://github.com/axios/axios)
+
+[vue3](https://v3.vuejs.org/)
+
+[next-vue-router](https://next.router.vuejs.org/)
+
+[vue-router](https://router.vuejs.org/zh/)
+
+[next-vuex](https://next.vuex.vuejs.org/)
+
+[vuex](https://vuex.vuejs.org/zh/guide/)
+
+[vue-cli](https://cli.vuejs.org/zh/)
+
+[nuxtjs](https://www.nuxtjs.cn/)
+
+[vite-zh](https://cn.vitejs.dev/)
+
+##### ui
+
+[elementUI](https://element.eleme.cn/)
+
+[antd-design-vue](https://antdv.com/docs/vue/introduce-cn/)
+
+[vant](https://vant-contrib.gitee.io/vant/v3/#/zh-CN)
+
+[element-plus](https://element-plus.org/zh-CN/#/zh-CN/component/installation)
+
+[element3](https://github.com/hug-sun/element3)
+
+[vux](https://github.com/airyland/vux)
+
+[iview](https://github.com/iview/iview)
+
+[muse-ui](https://muse-ui.org/)
+
+[bootstrap-vue](https://bootstrap-vue.org/)
+
+##### plugin
+
+[clipboard](https://www.npmjs.com/package/clipboard)
+
+[vuedraggable](https://www.npmjs.com/package/vuedraggable)
+
+[vue-dompurify-html](https://www.npmjs.com/package/vue-dompurify-html)
+
+[vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
+
+[vue-fontawesome](https://www.npmjs.com/package/@fortawesome/vue-fontawesome)
+
+##### project
+
+[vue-vben-admin](https://github.com/anncwb/vue-vben-admin)
+
+[vue3-composition-admin](https://github.com/RainManGO/vue3-composition-admin)
+
+[vue-h5-template](https://github.com/Ewall1106/vue-h5-template)
+
+[blog-client](https://github.com/littlematch0123/blog-client)
+
+[vue2-elm](https://github.com/bailicangdu/vue2-elm)
+
+[vue-cli](https://github.com/Wscats/vue-cli)
+
+[vue-backend](https://github.com/harsima/vue-backend)
+
+[movie-trailer](https://github.com/lhz960904/movie-trailer)
+
+[newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)
+
+[vue3-jd-h5](https://github.com/geekskai/vue3-jd-h5)
+
+[vue-authorized](https://github.com/xjh22222228/vue-authorized)
+
+[eladmin](https://github.com/elunez/eladmin)
+
+[vue2-elm](https://github.com/bailicangdu/vue2-elm)
+
+[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+
+[vue2-manage](https://github.com/bailicangdu/vue2-manage)
+
+[koel](https://github.com/koel/koel)
+
+[NeteaseCloudWebApp](https://github.com/javaSwing/NeteaseCloudWebApp)
+
+[bilibili-vue](https://github.com/lybenson/bilibili-vue)
+
+##### code
+
+[vue-压缩版-源码](https://github.com/vuejs/vue)
+
+[vue2源码](https://vue-js.com/learn-vue/)
+
+[vue3源码解析](https://vue3js.cn/start/)
+
+[前端面试题](https://github.com/febobo/web-interview)
+
+##### link
+
+[nprogress made with Vuejs](https://madewith.cn/23)
+
+[Vue.js - Font Awesome字体图标的使用详解](https://www.hangge.com/blog/cache/detail_2104.html)
+
 [来吧，解锁 vue3 全家桶+Ts 的正确姿势 (qq.com)](https://mp.weixin.qq.com/s/_34WBaf2jXzfgwU_DY1i5g)
 
 [20+道必知必会的Vue面试题（附答案解析）](https://www.php.cn/vuejs/473436.html)
 
-1.[12个vue高频原理面试题（附分析）](https://www.php.cn/js-tutorial-455048.html)
+[12个vue高频原理面试题（附分析）](https://www.php.cn/js-tutorial-455048.html)
 
-2.[vue面试题的介绍（附答案）](https://www.php.cn/js-tutorial-416386.html)
+[vue面试题的介绍（附答案）](https://www.php.cn/js-tutorial-416386.html)
 
-3.[关于vue的面试题汇总](https://www.php.cn/js-tutorial-398054.html)
+[关于vue的面试题汇总](https://www.php.cn/js-tutorial-398054.html)
 
-4.[2019 前端面试题汇总（主要为 Vue）](https://www.php.cn/toutiao-415463.html)
+[2019 前端面试题汇总（主要为 Vue）](https://www.php.cn/toutiao-415463.html)
 
-5.[vue框架的学习之vue面试题汇总](https://www.php.cn/js-tutorial-412155.html)
+[vue框架的学习之vue面试题汇总](https://www.php.cn/js-tutorial-412155.html)
 
-6.[关于面试：写一个Vue的双向数据绑定](https://www.php.cn/js-tutorial-392117.html)
+[关于面试：写一个Vue的双向数据绑定](https://www.php.cn/js-tutorial-392117.html)
 
-7.[vue实战项目里常用知识点归纳](https://www.php.cn/js-tutorial-395223.html)
+[vue实战项目里常用知识点归纳](https://www.php.cn/js-tutorial-395223.html)
 
-8.[关于vue面试的知识点](https://www.php.cn/js-tutorial-390077.html)
+[关于vue面试的知识点](https://www.php.cn/js-tutorial-390077.html)
 
-9.[vue-router使用总结（附代码）](https://www.php.cn/js-tutorial-396013.html)
+[vue-router使用总结（附代码）](https://www.php.cn/js-tutorial-396013.html)
 
 [VUE源码相关面试题汇总](https://www.cnblogs.com/vickylinj/p/13529926.html)
 
@@ -171,8 +331,6 @@
 
 [Vue(v2.6.11)万行源码生啃，就硬刚！](https://juejin.cn/post/6846687602679119885)
 
-[vue3-doc](https://v3.vuejs.org/)
-
 [Vue源码解读之Dep,Observer和Watcher](https://www.cnblogs.com/datiangou/p/10144883.html)
 
 [VNode - 源码版](https://cloud.tencent.com/developer/article/1479295)
@@ -181,33 +339,33 @@
 
 [jQuery中的$(window).load()与$(document).ready()以及jquery $(document).ready() 与window.onload的区别 - chenxj - 博客园 (cnblogs.com)](https://www.cnblogs.com/Chen-XiaoJun/articles/5829876.html)
 
-《[分享几个 常见的 js 面试题](https://www.php.cn/js-tutorial-55606.html)》
+[分享几个 常见的 js 面试题](https://www.php.cn/js-tutorial-55606.html)
 
-《[50个JavaScript面试和解答（收藏）](https://www.php.cn/js-tutorial-436609.html)》
+[50个JavaScript面试和解答（收藏）](https://www.php.cn/js-tutorial-436609.html)
 
-《[五个典型的javascript面试题](https://www.php.cn/js-tutorial-352943.html)》
+[五个典型的javascript面试题](https://www.php.cn/js-tutorial-352943.html)
 
-《[前端JS面试题](https://www.php.cn/js-tutorial-381413.html)》
+[前端JS面试题](https://www.php.cn/js-tutorial-381413.html)
 
-《[关于javascript常见面试题](https://www.php.cn/js-tutorial-371165.html)》
+[关于javascript常见面试题](https://www.php.cn/js-tutorial-371165.html)
 
-《[你有必要知道的23个JavaScript面试题](https://www.php.cn/js-tutorial-3413.html)》
+[你有必要知道的23个JavaScript面试题](https://www.php.cn/js-tutorial-3413.html)
 
-《[Js面试算法详解](https://www.php.cn/js-tutorial-398438.html)》
+[Js面试算法详解](https://www.php.cn/js-tutorial-398438.html)
 
-《[2019年最新春季面试之javascript经典面试题](https://www.php.cn/js-tutorial-415218.html)》
+[2019年最新春季面试之javascript经典面试题](https://www.php.cn/js-tutorial-415218.html)
 
-《[史上最全的js、jQuery面试题](https://www.php.cn/js-tutorial-454724.html)》
+[史上最全的js、jQuery面试题](https://www.php.cn/js-tutorial-454724.html)
 
-《[JS基础知识必备—常见面试题目系统整理](https://www.php.cn/js-tutorial-407445.html)》
+[JS基础知识必备—常见面试题目系统整理](https://www.php.cn/js-tutorial-407445.html)
 
-《[2018年最新26个JavaScript面试题及答案介绍](https://www.php.cn/js-tutorial-413101.html)》
+[2018年最新26个JavaScript面试题及答案介绍](https://www.php.cn/js-tutorial-413101.html)
 
-《[JavaScript面试基础知识题分享](https://www.php.cn/js-tutorial-386800.html)》
+[JavaScript面试基础知识题分享](https://www.php.cn/js-tutorial-386800.html)
 
-《[2017、2018年JS面试题记录分享](https://www.php.cn/js-tutorial-391223.html)》
+[2017、2018年JS面试题记录分享](https://www.php.cn/js-tutorial-391223.html)
 
-《[Js面试中容易遇到的算法](https://www.php.cn/js-tutorial-398560.html)》
+[Js面试中容易遇到的算法](https://www.php.cn/js-tutorial-398560.html)
 
 [AMP](https://www.jianshu.com/p/8ec7decc2f22)
 
@@ -217,9 +375,9 @@
 
 #### CSS
 
-《[CSS基础面试题小结](https://www.php.cn/js-tutorial-386902.html)》
+[CSS基础面试题小结](https://www.php.cn/js-tutorial-386902.html)
 
-《[各大互联网公司前端面试题（HTML/CSS）](https://www.php.cn/div-tutorial-333919.html)》
+[各大互联网公司前端面试题（HTML/CSS）](https://www.php.cn/div-tutorial-333919.html)
 
 #### ES6
 
@@ -229,11 +387,15 @@
 
 #### Webpack
 
+[webpack](https://www.webpackjs.com/)
+
 [手把手教你撸一个 Webpack Loader](https://juejin.cn/post/6844903555673882632)
 
 [2020年webpack面试题](https://blog.csdn.net/Aria_Miazzy/article/details/106235716)
 
 #### Typescript
+
+[ts](https://www.tslang.cn/)
 
  [Typescript面试题](https://www.jianshu.com/p/c8aaba6e8ce0)
 
@@ -245,9 +407,39 @@
 
 [Nodejs面试28题](https://zhuanlan.zhihu.com/p/81529423)
 
+#### 插件
+
+[nprogress](https://www.npmjs.com/package/nprogress)
+
+[js-cookie](https://www.npmjs.com/package/js-cookie)
+
+#### Bug
+
 ### Java
 
-#### 面试
+#### Bug
+
+##### doc
+
+#### Hadoop
+
+#### Zookeeper
+
+#### Hive
+
+#### HBase
+
+#### Redis
+
+#### Kafka
+
+#### Scala
+
+#### Spark
+
+#### Flink
+
+##### 面试
 
 [JavaGuide](https://github.com/Snailclimb/JavaGuide)
 
@@ -255,7 +447,9 @@
 
 [Java面试题汇总](https://www.php.cn/java/interview?p=1)
 
-#### 知识点
+##### link
+
+[2021最全大数据学习路线（建议收藏）](https://zhuanlan.zhihu.com/p/371820843)
 
 [List集合与Array数组之间的互相转换]([https://www.cnblogs.com/Dream2hc/p/java51713565.html](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.cnblogs.com%2FDream2hc%2Fp%2Fjava51713565.html))
 
@@ -434,6 +628,8 @@
 [org.apache.ibatis.binding.BindingException: Type interface com.tedu.dao.EmpMapper is not known to...](https://www.jianshu.com/p/8ef36fafa77b)
 
 ### Python
+
+[python自动化测试学习路线](https://zhuanlan.zhihu.com/p/138273884)
 
 [interview_python](https://github.com/taizilongxu/interview_python)
 

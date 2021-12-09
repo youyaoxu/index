@@ -1,0 +1,16 @@
+// 测试手机显示html5区域的宽高
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试手机的宽度和高度</title>
+</head>
+<body>
+    <script>
+        var width=document.documentElement.clientWidth||document.body.clientWidth;
+        var height=document.documentElement.clientHeight||document.body.clientHeight;
+        var devicePixelRatio = window.devicePixelRatio;
+        alert("屏幕的宽度为: "+ width + " 屏幕的高度为: "+height+" 手机的dpr: "+devicePixelRatio );
+    </script>
+</body>
+</html>

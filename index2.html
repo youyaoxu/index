@@ -1,1745 +1,763 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/wodecss.css">
-	<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=1280, maximum-scale=3, user-scalable=yes">
+    <title>导航</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/b.css?v=20180708" />
+    <style type="text/css">
+        .fbox {
+            background-color: rgb(255, 255, 255);
+        }
 
-	<script>
-		var user_data = null;
-		//存放图片路径的数组
-		var imgSrcArr = [
-			'./images/pic/36kr.png',
-			'./images/pic/80s.png',
-			'./images/pic/acfun.png',
-			'./images/pic/aiqiyi.png',
-			'./images/pic/alibaba.png',
-			'./images/pic/aliyun.png',
-			'./images/pic/baiduditu.png',
-			'./images/pic/baidufanyi.png',
-			'./images/pic/baiduyun.png',
-			'./images/pic/baijiahao.png',
-			'./images/pic/bilibili.png',
-			'./images/pic/bing.png',
-			'./images/pic/chengxuyuandaohang.png',
-			'./images/pic/chouti.png',
-			'./images/pic/dashenwang.png',
-			'./images/pic/dazhongdianping.png',
-			'./images/pic/dianyingtiantang.png',
-			'./images/pic/douban.png',
-			'./images/pic/douyu.png',
-			'./images/pic/fenghuang.png',
-			'./images/pic/github.png',
-			'./images/pic/gitlab.png',
-			'./images/pic/gugefanyi.png',
-			'./images/pic/guojiadili.png',
-			'./images/pic/hao123.png',
-			'./images/pic/haoqixinribao.png',
-			'./images/pic/hupu.png',
-			'./images/pic/huxiu.png',
-			'./images/pic/huya.png',
-			'./images/pic/imdb.png',
-			'./images/pic/jianshu.png',
-			'./images/pic/jingdong.png',
-			'./images/pic/kexuesongshuhui.png',
-			'./images/pic/lanfanqie.png',
-			'./images/pic/lanrentuku.png',
-			'./images/pic/lianjia.png',
-			'./images/pic/mafengwo.png',
-			'./images/pic/mangguotv.png',
-			'./images/pic/mukewang.png',
-			'./images/pic/qichezhijia.png',
-			'./images/pic/qingting.png',
-			'./images/pic/qiongyou.png',
-			'./images/pic/qiushibaike.png',
-			'./images/pic/qq.png',
-			'./images/pic/qqyinyue.png',
-			'./images/pic/qqyouxiang.png',
-			'./images/pic/quantianhoukeji.png',
-			'./images/pic/shiguang.png',
-			'./images/pic/sina.png',
-			'./images/pic/taimeiti.png',
-			'./images/pic/taobao.png',
-			'./images/pic/tianmao.png',
-			'./images/pic/tieba.png',
-			'./images/pic/tinypng.png',
-			'./images/pic/toutiao.jpg',
-			'./images/pic/txshipin.png',
-			'./images/pic/wangyi.png',
-			'./images/pic/wangyigongkaike.png',
-			'./images/pic/wangyiyun.png',
-			'./images/pic/wangyiyunketang.png',
-			'./images/pic/weibo.png',
-			'./images/pic/weijibaike.png',
-			'./images/pic/weiyun.png',
-			'./images/pic/ximalaya.png',
-			'./images/pic/yamaxun.png',
-			'./images/pic/yidianzixun.png',
-			'./images/pic/yinxiangbiji.png',
-			'./images/pic/youku.png',
-			'./images/pic/zhanku.png',
-			'./images/pic/zhihu.png',
-			'./images/pic/zhongguoguojiadili.png',
-			'./images/pic/zhongguomoocdaxue.png',
-			'./images/logo/dengpao.png',
-			'./images/logo/gongju.png',
-			'./images/logo/shiyanshi.png',
-			'./images/logo/wendang.png',
-		];
-		var imgWrap = [];
+        .myweb:hover {
+            background-color: #f3faff
+        }
 
-		function preloadImg(arr) {
-			for (var i = 0; i < arr.length; i++) {
-				imgWrap[i] = new Image();
-				imgWrap[i].src = arr[i];
-			}
-		}
-		preloadImg(imgSrcArr);
-		//或者延迟的文档加载完毕在加载图片
-		$(function () {
-			preloadImg(imgSrcArr);
-		})
-	</script>
-	<title>轻导航</title>
+        .welcome {
+            height: 30px;
+            line-height: 30px;
+            cursor: default;
+        }
+
+        .myweb_site {
+            margin: 0 20px;
+        }
+
+        .newnavlist a {
+            color: #fff;
+        }
+    </style>
 </head>
 
-<body class="night-mode">
-	<div class="framework">
-		<div class="top-section">
-			<div class="useful-links">
-				<div id="search" class="search">
-					<div class="logo-box">
-						<a class="header_wrap" href="javascript:void(0)">
-							<div id="header-box" class="header_img"></div>
-						</a>
-					</div>
-					<div class="search-wrapper">
-						<form id="search-form" action="//www.baidu.com/baidu" target="_blank">
-							<input id="q-btn" type="submit" name="btnG" value="谷歌一下" class="button2">
-							<input name="q" type="hidden" id="q-word" />
-							<input type="text" id="b-word" name="word" size="40" class="input2">
-							<input type="submit" id="b-btn" value="百度几下" class="button button-hook">
-						</form>
-					</div>
-				</div>
-				<!-- 常用网站 -->
-				<ul class="recommonds">
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cn.bing.com//" title="必应" target="_blank">
-							<img class="img-links2" src="./images/pic/bing.png"
-								style="box-shadow: rgba(210, 17, 20, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">必 应</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.ifeng.com/" title="凤凰网" target="_blank">
-							<img class="img-links2" src="./images/pic/fenghuang.png"
-								style="box-shadow: rgba(210, 17, 20, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">凤凰网</span>
-						</a>
-					</li>
-					<li class="sigleRecommond">
-						<span old_del="1" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.163.com/" title="网易" target="_blank">
-							<img class="img-links2" src="./images/pic/wangyi.png"
-								style="box-shadow: rgba(210, 17, 20, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">网 易</span>
-						</a>
-					</li>
-					<li data_old="3" class="sigleRecommond">
-						<span old_del="3" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.sina.com.cn/" title="新浪" target="_blank">
-							<img class="img-links2" src="./images/pic/sina.png"
-								style="box-shadow: rgba(204, 204, 204, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">新 浪</span>
-						</a>
-					</li>
-					<li data_old="5" class="sigleRecommond">
-						<span old_del="5" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.qq.com/" title="腾讯" target="_blank">
-							<img class="img-links2" src="./images/pic/qq.png"
-								style="box-shadow: rgba(175, 187, 214, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">腾 讯</span>
-						</a>
-					</li>
-					<li data_old="4" class="sigleRecommond">
-						<span old_del="4" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://toutiao.com/" title="今日头条" target="_blank">
-							<img class="img-links2" src="./images/pic/toutiao.jpg"
-								style="box-shadow: rgba(220, 156, 156, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">今日头条</span>
-						</a>
-					</li>
+<body>
+    <div id="content_area">
+        <div class="fbox fbox_shadow" style="margin-top:30px;margin-bottom:30px;">
+            <div id="clock">
+                <span id="datenow">0000.0.0 </span>
+                <span id="week">星期一</span>
+                <span id="hour">00:00</span>
+                <span id="sec">00</span>
+            </div>
+            <div id="search">
+                <div class="search_area">
+                    <form action="https://www.baidu.com/baidu" target="_blank" id="form">
+                        <div class="inputbox">
+                            <input type="text" id="invalue" name="word" class="invalue" value="" />
+                        </div>
+                        <button id="baid" type="submit" class="sbtn">百度几下</button>
+                        <button id="biying" type="submit" class="sbtn">必应两下</button>
+                        <button id="guge" type="submit" class="sbtn">谷歌一下</button>
+                    </form>
+                </div>
+                <div class="zhelitext" id="zhelitext_area">伟人之所以伟大，是因为他与别人共处逆境时，别人失去了信心，他却下决心实现自己的目标。</div>
+            </div>
+            <div id="newnav" style="display: block;">
+                <div class="newnavlist"><a href="https://www.huxiu.com/" target="_blank" title="虎嗅">虎嗅</a></div>
+                <div class="newnavlist"><a href="https://www.zhihu.com/" target="_blank" title="知乎">知乎</a></div>
+                <div class="newnavlist"><a href="https://www.douban.com/" target="_blank" title="豆瓣">豆瓣</a></div>
+                <div class="newnavlist"><a href="https://tophub.today/" target="_blank" title="今日热榜">今日热榜</a></div>
+                <div class="newnavlist"><a href="http://guozhivip.com/rank/" target="_blank" title="果汁排行">果汁排行</a></div>
+                <div class="newnavlist"><a href="https://guiderank-app.com/" target="_blank" title="盖得排行">盖得排行</a></div>
+                <div class="newnavlist"><a href="https://www.google.com/earth/" target="_blank" title="谷歌地球">谷歌地球</a>
+                </div>
+            </div>
+            <div id="webpop" style="display: none;">
+                <a title="" sid="11" class="topsite_a" href="http://www.taobao.com" target="_blank">
+                    <div class="sitebg s_taobao">
+                        <div class="siteimg siteimg_taobao"></div>
+                    </div>
+                    <div class="sitename">淘宝</div>
+                </a>
+            </div>
+            <div class="user_webs">
+                <div class="web_fav_user_des">
+                    <div class="web_fav_user_des_title">
+                        <span class="web_fav_user_des_name">[许山]</span>
+                        <span class="web_fav_user_des_remark">，行成于思,毁于随</span>
+                    </div>
+                    <div class="web_fav_user_des_statistics" id="web_fav_user_des_statistics">
+                        <div id="web_fav_user_des_statistics_fav_area">
+                            <span class="web_fav_user_des_statistics_fav no-select">点赞</span>
+                            <span class="web_fav_user_des_statistics_num">0</span>
+                        </div>
+                        <span class="separator_vertical_moulding">|</span>
+                        <span>最近更新 2022-05-25</span>
+                        <span class="separator_vertical_moulding" style="display: none;">|</span>
+                    </div>
+                </div>
+                <div id="user_fav_area">
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Web</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/5613593.html"
+                                    target="_blank" class="myweb_site_name" title="">js-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/js/js-tutorial.html" target="_blank"
+                                    class="myweb_site_name" title="">js-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/ajax/ajax-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">ajax-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://webpack.js.org/" target="_blank"
+                                    class="myweb_site_name" title="">webpack</a></div>
+                            <div class="myweb_site"><a href="https://es6.ruanyifeng.com/" target="_blank"
+                                    class="myweb_site_name" title="">es6</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/7423751.html"
+                                    target="_blank" class="myweb_site_name" title="">移动端-火柴</a></div>   
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Vue</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/vue2/vue-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">vue2-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/7356084.html"
+                                    target="_blank" class="myweb_site_name" title="">vue-火柴</a></div>
+                            <div class="myweb_site"><a href="https://v3.vuejs.org/" target="_blank"
+                                    class="myweb_site_name" title="">vue3</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/vue3/vue3-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">vue3-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/7356084.html"
+                                    target="_blank" class="myweb_site_name" title="">vue3-cn</a></div>
+                            <div class="myweb_site"><a href="https://next.router.vuejs.org/)   [vue-route"
+                                    target="_blank" class="myweb_site_name" title="">next-vue-router</a></div>
+                            <div class="myweb_site"><a href="https://cli.vuejs.org/zh/" target="_blank"
+                                    class="myweb_site_name" title="">vue-cli</a></div>
+                            <div class="myweb_site"><a href="https://www.nuxtjs.cn/" target="_blank"
+                                    class="myweb_site_name" title="">nuxtjs</a></div>
+                            <div class="myweb_site"><a href="https://cn.vitejs.dev/" target="_blank"
+                                    class="myweb_site_name" title="">vite-zh</a></div>
+                            <div class="myweb_site"><a href="https://github.com/axios/axios" target="_blank"
+                                    class="myweb_site_name" title="">axios-zh</a></div>
+                            <div class="myweb_site"><a href="https://element.eleme.cn/" target="_blank"
+                                    class="myweb_site_name" title="">element-ui</a></div>
+                            <div class="myweb_site"><a href="https://antdv.com/docs/vue/introduce-cn/" target="_blank"
+                                    class="myweb_site_name" title="">antd-design-vue</a></div>
+                            <div class="myweb_site"><a href="https://vant-contrib.gitee.io/vant/v3/#/zh-CN"
+                                    target="_blank" class="myweb_site_name" title="">vant</a></div>
+                            <div class="myweb_site"><a
+                                    href="https://element-plus.org/zh-CN/#/zh-CN/component/installation" target="_blank"
+                                    class="myweb_site_name" title="">element-plus</a></div>
+                            <div class="myweb_site"><a href="https://github.com/hug-sun/element3" target="_blank"
+                                    class="myweb_site_name" title="">element3</a></div>
+                            <div class="myweb_site"><a href="https://github.com/airyland/vux" target="_blank"
+                                    class="myweb_site_name" title="">vux</a></div>
+                            <div class="myweb_site"><a href="https://github.com/iview/iview" target="_blank"
+                                    class="myweb_site_name" title="">iview</a></div>
+                            <div class="myweb_site"><a href="https://muse-ui.org/" target="_blank"
+                                    class="myweb_site_name" title="">muse-ui</a></div>
+                            <div class="myweb_site"><a href="https://bootstrap-vue.org/" target="_blank"
+                                    class="myweb_site_name" title="">bootstrap-vue</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/clipboard" target="_blank"
+                                    class="myweb_site_name" title="">clipboard</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/vuedraggable" target="_blank"
+                                    class="myweb_site_name" title="">vue-draggable</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/vue-dompurify-html"
+                                    target="_blank" class="myweb_site_name" title="">vue-dompurify-html</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/vue-clipboard2"
+                                    target="_blank" class="myweb_site_name" title="">vue-clipboard2</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/@fortawesome/vue-fontawesome"
+                                    target="_blank" class="myweb_site_name" title="">vue-fontawesome</a></div>
+                            <div class="myweb_site"><a href="https://github.com/anncwb/vue-vben-admin" target="_blank"
+                                    class="myweb_site_name" title="">vue-vben-admin</a></div>
+                            <div class="myweb_site"><a href="https://github.com/RainManGO/vue3-composition-admin"
+                                    target="_blank" class="myweb_site_name" title="">vue3-composition-admin</a></div>
+                            <div class="myweb_site"><a href="https://github.com/newbee-ltd/newbee-mall-vue3-app"
+                                    target="_blank" class="myweb_site_name" title="">newbee-mall-vue3-app</a></div>
+                            <div class="myweb_site"><a href="https://github.com/geekskai/vue3-jd-h5" target="_blank"
+                                    class="myweb_site_name" title="">vue3-jd-h5</a></div>
+                            <div class="myweb_site"><a href="https://github.com/Ewall1106/vue-h5-template"
+                                    target="_blank" class="myweb_site_name" title="">vue-h5-template</a></div>
+                            <div class="myweb_site"><a href="https://github.com/littlematch0123/blog-client"
+                                    target="_blank" class="myweb_site_name" title="">blog-client</a></div>
+                            <div class="myweb_site"><a href="https://github.com/bailicangdu/vue2-elm" target="_blank"
+                                    class="myweb_site_name" title="">vue2-elm</a></div>
+                            <div class="myweb_site"><a href="https://github.com/Wscats/vue-cli" target="_blank"
+                                    class="myweb_site_name" title="">vue-cli</a></div>
+                            <div class="myweb_site"><a href="https://github.com/harsima/vue-backend"
+                                    target="_blank" class="myweb_site_name" title="">vue-backend</a></div>
+                            <div class="myweb_site"><a href="https://github.com/bailicangdu/vue2-elm" target="_blank"
+                                    class="myweb_site_name" title="">vue2-elm</a></div>
+                            <div class="myweb_site"><a href="https://github.com/PanJiaChen/vue-element-admin"
+                                    target="_blank" class="myweb_site_name" title="">vue-element-admin</a></div>
+                            <div class="myweb_site"><a href="https://github.com/bailicangdu/vue2-manage" target="_blank"
+                                    class="myweb_site_name" title="">vue2-manage</a></div>
+                            <div class="myweb_site"><a href="https://github.com/koel/koel"
+                                    target="_blank" class="myweb_site_name" title="">koel</a></div>
+                            <div class="myweb_site"><a href="https://github.com/lybenson/bilibili-vue" target="_blank"
+                                    class="myweb_site_name" title="">bilibili-vue</a></div>
+                            <div class="myweb_site"><a href="https://github.com/vuejs/vue" target="_blank"
+                                    class="myweb_site_name" title="">vue2-源码</a></div>
+                            <div class="myweb_site"><a href="https://vue-js.com/learn-vue" target="_blank"
+                                    class="myweb_site_name" title="">vue2-源码</a></div>
+                            <div class="myweb_site"><a href="https://vue3js.cn/start" target="_blank"
+                                    class="myweb_site_name" title="">vue3-源码</a></div>
+                            <div class="myweb_site"><a href="https://github.com/febobo/web-interview" target="_blank"
+                                    class="myweb_site_name" title="">vue-面试</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">React</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://zh-hans.reactjs.org/" target="_blank"
+                                    class="myweb_site_name" title="">react</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/react/react-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">react-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/8794894.html"
+                                    target="_blank" class="myweb_site_name" title="">react-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.nextjs.cn/" target="_blank"
+                                    class="myweb_site_name" title="">nextjs</a></div>
+                            <div class="myweb_site"><a href="https://procomponents.ant.design/" target="_blank"
+                                    class="myweb_site_name" title="">ant-desing-pro-components</a></div>
+                            <div class="myweb_site"><a href="https://pro.ant.design/zh-CN/" target="_blank"
+                                    class="myweb_site_name" title="">ant-design-pro</a></div>
+                            <div class="myweb_site"><a href="https://charts.ant.design/" target="_blank"
+                                    class="myweb_site_name" title="">ant-design-charts</a></div>
+                            <div class="myweb_site"><a href="https://fusion.design/pc/?themeid=2" target="_blank"
+                                    class="myweb_site_name" title="">fusion-design</a></div>
+                            <div class="myweb_site"><a href="https://github.com/alibaba/BizCharts" target="_blank"
+                                    class="myweb_site_name" title="">BizCharts</a></div>
+                            <div class="myweb_site"><a href="https://mobile.ant.design/zh" target="_blank"
+                                    class="myweb_site_name" title="">ant-design-mobile</a></div>
+                            <div class="myweb_site"><a href="https://motion.ant.design/index-cn" target="_blank"
+                                    class="myweb_site_name" title="">ant-motion</a></div>
+                            <div class="myweb_site"><a href="https://alibaba.github.io/ice/" target="_blank"
+                                    class="myweb_site_name" title="">ice</a></div>
+                            <div class="myweb_site"><a href="https://react.docschina.org/docs/hooks-intro.html"
+                                    target="_blank" class="myweb_site_name" title="">Hook</a></div>
+                            <div class="myweb_site"><a href="https://github.com/ant-design/ant-design" target="_blank"
+                                    class="myweb_site_name" title="">ant-design</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">组件</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/typescript/ts-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">typescript-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.tslang.cn/" target="_blank"
+                                    class="myweb_site_name" title="">typescript</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">bootstrap3-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/bootstrap4/bootstrap4-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">bootstrap4-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/bootstrap5/bootstrap5-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">bootstrap5-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/7097376.html"
+                                    target="_blank" class="myweb_site_name" title="">bootstrap-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.underscorejs.com.cn/" target="_blank"
+                                    class="myweb_site_name" title="">underscorejs</a></div>
+                            <div class="myweb_site"><a href="https://highlightjs.org/" target="_blank"
+                                    class="myweb_site_name" title="">highlight.js</a></div>
+                            <div class="myweb_site"><a href="https://fusejs.io/" target="_blank" class="myweb_site_name"
+                                    title="">fusejs</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/file-saver" target="_blank"
+                                    class="myweb_site_name" title="">file-saver</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/echarts-wordcloud"
+                                    target="_blank" class="myweb_site_name" title="">echarts-wordcloud</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/echarts-stat" target="_blank"
+                                    class="myweb_site_name" title="">echarts-stat</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/dhtmlx-scheduler"
+                                    target="_blank" class="myweb_site_name" title="">dhtmlx-scheduler</a></div>
+                            <div class="myweb_site"><a href="https://www.npmjs.com/package/core-js" target="_blank"
+                                    class="myweb_site_name" title="">core-js</a></div>
+                            <div class="myweb_site"><a href="https://antv-g2.gitee.io/zh/docs/manual/about-g2"
+                                    target="_blank" class="myweb_site_name" title="">antv-g2</a></div>
+                            <div class="myweb_site"><a href="https://github.com/antvis/data-set" target="_blank"
+                                    class="myweb_site_name" title="">data-set</a></div>
+                            <div class="myweb_site"><a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free"
+                                    target="_blank" class="myweb_site_name" title="">fontawesome</a></div>
+                            <div class="myweb_site"><a href="https://lodash.com/" target="_blank"
+                                    class="myweb_site_name" title="">loadsh</a></div>
+                            <div class="myweb_site"><a href="https://www.lodashjs.com/" target="_blank"
+                                    class="myweb_site_name" title="">loadsh-zh</a></div>
+                            <div class="myweb_site"><a href="https://echarts.apache.org/zh/index.html" target="_blank"
+                                    class="myweb_site_name" title="">echarts</a></div>
+                            <div class="myweb_site"><a href="http://momentjs.cn/" target="_blank"
+                                    class="myweb_site_name" title="">momentjs</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Node</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/6940560.html"
+                                    target="_blank" class="myweb_site_name" title="">node-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/nodejs/nodejs-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">node-菜鸟</a></div>
+                            <div class="myweb_site"><a href="http://expressjs.com/" target="_blank"
+                                    class="myweb_site_name" title="">expressjs</a></div>
+                            <div class="myweb_site"><a href="https://koajs.com/" target="_blank" class="myweb_site_name"
+                                    title="">koajs</a></div>
+                            <div class="myweb_site"><a href="https://eggjs.org/zh-cn/intro/" target="_blank"
+                                    class="myweb_site_name" title="">eggjs</a></div>
+                            <div class="myweb_site"><a href="https://nestjs.com/" target="_blank"
+                                    class="myweb_site_name" title="">nestjs</a></div>
+                            <div class="myweb_site"><a href="https://docs.nestjs.cn/" target="_blank"
+                                    class="myweb_site_name" title="">nestjs-zh</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">HTML</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/html/html-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">html-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/html/html5-intro.html"
+                                    target="_blank" class="myweb_site_name" title="">html5-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/5203223.html"
+                                    target="_blank" class="myweb_site_name" title="">html-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/htmldom/htmldom-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">html-dom-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/jquery/jquery-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">jQuery-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/6489658.html"
+                                    target="_blank" class="myweb_site_name" title="">jQuery-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/echarts/echarts-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">echarts-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/json/json-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">json-菜鸟</a></div>
+                            <div class="myweb_site"><a
+                                    href="https://www.runoob.com/font-awesome/fontawesome-icons-brand.html"
+                                    target="_blank" class="myweb_site_name" title="">fontawesome-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">CSS</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/css/css-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">css-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/css3/css3-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">css3-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/5249139.html"
+                                    target="_blank" class="myweb_site_name" title="">css-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.sasscss.com/documentation" target="_blank"
+                                    class="myweb_site_name" title="">Sass-zh</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">三方对接</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://open.work.weixin.qq.com/api/doc/90000/90135/90664"
+                                    target="_blank" class="myweb_site_name" title="">企业微信-服务端API</a></div>
+                            <div class="myweb_site"><a href="https://open.work.weixin.qq.com/api/doc/90000/90136/92455"
+                                    target="_blank" class="myweb_site_name" title="">企业微信-客户端API</a></div>
+                            <div class="myweb_site"><a
+                                    href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html"
+                                    target="_blank" class="myweb_site_name" title="">微信云开发</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">小程序 | App</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://uniapp.dcloud.io/" target="_blank"
+                                    class="myweb_site_name" title="">uni-app</a></div>
+                            <div class="myweb_site"><a href="https://www.electronjs.org/"
+                                    target="_blank" class="myweb_site_name" title="">electronjs</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">开源项目</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://github.com/tengshe789/SpringCloud-miaosha"
+                                    target="_blank" class="myweb_site_name" title="">SpringCloud-miaosha</a></div>
+                            <div class="myweb_site"><a href="https://github.com/paascloud/paascloud-master"
+                                    target="_blank" class="myweb_site_name" title="">paascloud-master</a></div>
+                            <div class="myweb_site"><a href="https://github.com/2227324689/gpmall" target="_blank"
+                                    class="myweb_site_name" title="">gpmall</a></div>
+                            <div class="myweb_site"><a href="https://github.com/zhoutaoo/SpringCloud" target="_blank"
+                                    class="myweb_site_name" title="">SpringCloud</a></div>
+                            <div class="myweb_site"><a href="https://github.com/macrozheng/mall-admin-web"
+                                    target="_blank" class="myweb_site_name" title="">mall-admin-web</a></div>
+                            <div class="myweb_site"><a href="https://github.com/kamranahmedse/developer-roadmap"
+                                    target="_blank" class="myweb_site_name" title="">developer-roadmap</a></div>
+                            <div class="myweb_site"><a href="https://github.com/scutan90/DeepLearning-500-questions"
+                                    target="_blank" class="myweb_site_name" title="">DeepLearning-500-questions</a>
+                            </div>
+                            <div class="myweb_site"><a href="https://github.com/CyC2018/CS-Notes" target="_blank"
+                                    class="myweb_site_name" title="">CS-Notes</a></div>
+                            <div class="myweb_site"><a href="https://github.com/charlax/professional-programming"
+                                    target="_blank" class="myweb_site_name" title="">professional-programming</a></div>
+                            <div class="myweb_site"><a href="https://github.com/MisterBooo/LeetCodeAnimation"
+                                    target="_blank" class="myweb_site_name" title="">LeetCodeAnimation</a></div>
+                            <div class="myweb_site"><a href="https://github.com/coderiver-org" target="_blank"
+                                    class="myweb_site_name" title="">CodeRiver</a></div>
+                            <div class="myweb_site"><a href="https://gitee.com/smallc/SpringBlade" target="_blank"
+                                    class="myweb_site_name" title="">SpringBlade</a></div>
+                            <div class="myweb_site"><a href="https://gitee.com/smallc/Sword" target="_blank"
+                                    class="myweb_site_name" title="">Sword</a></div>
+                            <div class="myweb_site"><a href="https://gitee.com/smallc/Saber" target="_blank"
+                                    class="myweb_site_name" title="">Saber</a></div>
+                            <div class="myweb_site"><a href="https://github.com/chillzhuang/blade-tool" target="_blank"
+                                    class="myweb_site_name" title="">blade-tool</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">工具</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.yarnpkg.cn/" target="_blank"
+                                    class="myweb_site_name" title="">yarn-zh</a></div>
+                            <div class="myweb_site"><a href="https://git-scm.com/book/zh/v2" target="_blank"
+                                    class="myweb_site_name" title="">git-zh</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/git/git-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">git-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/git/git-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">git-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/svn/svn-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">svn-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/markdown/md-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">markdown-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/http/http-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">http-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/6392010.html"
+                                    target="_blank" class="myweb_site_name" title="">http-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/tcpip/tcpip-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">tcp-ip-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/eclipse/eclipse-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">eclipse-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://gitcode.net/explore" target="_blank"
+                                    class="myweb_site_name" title="">gitcode</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Java</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.jhipster.tech/cn/" target="_blank"
+                                    class="myweb_site_name" title="">jhipster</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/java/java-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">java-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/servlet/servlet-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">servlet-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/jsp/jsp-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">jsp-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/maven/maven-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">maven-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/docker/docker-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">docker-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.docker.com/" target="_blank"
+                                    class="myweb_site_name" title="">docker</a></div>
+                            <div class="myweb_site"><a href="https://spring.io/projects/spring-boot" target="_blank"
+                                    class="myweb_site_name" title="">spring-boot</a></div>
+                            <div class="myweb_site"><a href="https://spring.io/projects/spring-framework"
+                                    target="_blank" class="myweb_site_name" title="">spring-framework</a></div>
+                            <div class="myweb_site"><a href="https://spring.io/projects/spring-cloud" target="_blank"
+                                    class="myweb_site_name" title="">spring-cloud</a></div>
+                            <div class="myweb_site"><a href="https://spring.io/projects/spring-security" target="_blank"
+                                    class="myweb_site_name" title="">spring-security</a></div>
+                            <div class="myweb_site"><a href="https://mybatis.org/mybatis-3/" target="_blank"
+                                    class="myweb_site_name" title="">mybatis-3</a></div>
+                            <div class="myweb_site"><a href="https://tomcat.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">tomcat</a></div>
+                            <div class="myweb_site"><a href="http://www.eclipse.org/jetty/" target="_blank"
+                                    class="myweb_site_name" title="">jetty</a></div>
+                            <div class="myweb_site"><a href="https://www.rabbitmq.com/" target="_blank"
+                                    class="myweb_site_name" title="">rabbitmq</a></div>
+                            <div class="myweb_site"><a href="http://nginx.org/" target="_blank" class="myweb_site_name"
+                                    title="">nginx</a></div>
+                            <div class="myweb_site"><a href="http://hibernate.org/" target="_blank"
+                                    class="myweb_site_name" title="">hibernate</a></div>
+                            <div class="myweb_site"><a href="https://www.liquibase.org/" target="_blank"
+                                    class="myweb_site_name" title="">liquibase</a></div>
+                            <div class="myweb_site"><a href="https://gradle.org/" target="_blank"
+                                    class="myweb_site_name" title="">gradle</a></div>
+                            <div class="myweb_site"><a
+                                    href="https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html"
+                                    target="_blank" class="myweb_site_name" title="">elasticsearch</a></div>
+                            <div class="myweb_site"><a href="https://dubbo.apache.org/zh/" target="_blank"
+                                    class="myweb_site_name" title="">dubbo</a></div>
+                            <div class="myweb_site"><a href="https://www.aliyun.com/product/oss/" target="_blank"
+                                    class="myweb_site_name" title="">阿里云OSS</a></div>
+                            <div class="myweb_site"><a href="https://swagger.io/" target="_blank"
+                                    class="myweb_site_name" title="">swagger</a></div>
 
 
-					<li data_old="15" class="sigleRecommond">
-						<span old_del="15" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.weibo.com/" title="微博" target="_blank">
-							<img class="img-links2" src="./images/pic/weibo.png"
-								style="box-shadow: 0 10px 10px -6px rgba(255, 223, 128, 0.75);">
-							<span class="text-links">微 博</span>
-						</a>
-					</li>
-					<li data_old="16" class="sigleRecommond">
-						<span old_del="16" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.taobao.com/" title="淘宝网" target="_blank">
-							<img class="img-links2" src="./images/pic/taobao.png"
-								style="box-shadow: 0 10px 10px -6px rgba(252, 67, 0, 0.75);">
-							<span class="text-links">淘宝网</span>
-						</a>
-					</li>
-					<li data_old="26" class="sigleRecommond">
-						<span old_del="26" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.jd.com/" title="京东商城" target="_blank">
-							<img class="img-links2" src="./images/pic/jingdong.png"
-								style="box-shadow: 0 10px 10px -6px rgba(249, 52, 61, 0.75);">
-							<span class="text-links">京东</span>
-						</a>
-					</li>
-					<li data_old="25" class="sigleRecommond">
-						<span old_del="25" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.Amazon.cn" title="亚马逊" target="_blank">
-							<img class="img-links2" src="./images/pic/yamaxun.png"
-								style="box-shadow: 0 10px 10px -6px rgba(118, 173, 210, 0.75);">
-							<span class="text-links">亚马逊</span>
-						</a>
-					</li>
-					<li data_old="17" class="sigleRecommond">
-						<span old_del="17" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.tmall.com/" title="天猫" target="_blank">
-							<img class="img-links2" src="./images/pic/tianmao.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">天 猫</span>
-						</a>
-					</li>
+                            <div class="myweb_site"><a href="https://github.com/Netflix/eureka" target="_blank"
+                                    class="myweb_site_name" title="">eureka</a></div>
+                            <div class="myweb_site"><a href="https://github.com/topics/rbac" target="_blank"
+                                    class="myweb_site_name" title="">rbac</a></div>
+                            <div class="myweb_site"><a href="https://dubbo.apache.org/zh/" target="_blank"
+                                    class="myweb_site_name" title="">dubbo</a></div>
+                            <div class="myweb_site"><a href="https://github.com/Netflix/Hystrix" target="_blank"
+                                    class="myweb_site_name" title="">Hystrix</a></div>
+                            <div class="myweb_site"><a href="https://nacos.io/zh-cn/" target="_blank"
+                                    class="myweb_site_name" title="">nacos</a></div>
+                            <div class="myweb_site"><a href="https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D" target="_blank"
+                                    class="myweb_site_name" title="">Sentinel</a></div>
+                            <div class="myweb_site"><a href="https://kubernetes.io/" target="_blank"
+                                    class="myweb_site_name" title="">k8s</a></div>
+                            <div class="myweb_site"><a href="http://www.mycat.org.cn/" target="_blank"
+                                    class="myweb_site_name" title="">mycat</a></div>
+                            <div class="myweb_site"><a href="https://shardingsphere.apache.org/document/legacy/4.x/document/cn/quick-start/sharding-jdbc-quick-start/" target="_blank"
+                                    class="myweb_site_name" title="">sharding-jdbc</a></div>
+                            <div class="myweb_site"><a href="https://oauth.net/2/" target="_blank"
+                                    class="myweb_site_name" title="">oauth2</a></div>
+                            <div class="myweb_site"><a href="https://shiro.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">shiro</a></div>
+                            <div class="myweb_site"><a href="https://docs.spring.io/spring-security/reference/index.html" target="_blank"
+                                    class="myweb_site_name" title="">spring-security</a></div>
+                            <div class="myweb_site"><a href="https://unity.cn/" target="_blank"
+                                    class="myweb_site_name" title="">Unity-3D</a></div>
+                            <div class="myweb_site"><a href="https://www.cocos.com/" target="_blank"
+                                    class="myweb_site_name" title="">cocos</a></div>
+                            <div class="myweb_site"><a href="https://www.aliyun.com/product/pts" target="_blank"
+                                    class="myweb_site_name" title="">阿里pts</a></div>
+                            <div class="myweb_site"><a href="https://locust.io/" target="_blank"
+                                    class="myweb_site_name" title="">locust</a></div>
+                            <div class="myweb_site"><a href="https://www.microfocus.com/zh-cn/products/loadrunner-professional/overview" target="_blank"
+                                    class="myweb_site_name" title="">loadrunner</a></div>
+                            <div class="myweb_site"><a href="https://gitee.com/mirrors/wrk" target="_blank"
+                                    class="myweb_site_name" title="">wrk</a></div>
+                            <div class="myweb_site"><a href="https://httpd.apache.org/docs/2.4/programs/ab.html" target="_blank"
+                                    class="myweb_site_name" title="">apache bench</a></div>
+                            <div class="myweb_site"><a href="https://jmeter.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">jmeter</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">大数据</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://sqoop.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">sqoop</a></div>
+                            <div class="myweb_site"><a href="https://flume.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">flume</a></div>
+                            <div class="myweb_site"><a href="https://hbase.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">hbase</a></div>
+                            <div class="myweb_site"><a href="http://zookeeper.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">zookeeper</a></div>
+                            <div class="myweb_site"><a href="https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html" target="_blank"
+                                class="myweb_site_name" title="">yarn</a></div> 
+                            <div class="myweb_site"><a href="http://spark.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">spark</a></div>
+                            <div class="myweb_site"><a href="https://storm.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">storm</a></div>
+                            <div class="myweb_site"><a href="https://flink.apache.org/" target="_blank"
+                                class="myweb_site_name" title="">flink</a></div>
+                            <div class="myweb_site"><a href="http://hadoop.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">hadoop</a></div>
+                            <div class="myweb_site"><a href="https://cassandra.apache.org/_/index.html" target="_blank"
+                                    class="myweb_site_name" title="">cassandra</a></div>
+                            <div class="myweb_site"><a href="https://impala.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">impala</a></div>
+                            <div class="myweb_site"><a href="https://clickhouse.com/" target="_blank"
+                                    class="myweb_site_name" title="">clickhouse</a></div>
+                            <div class="myweb_site"><a href="http://hive.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">hive</a></div>
+                            <div class="myweb_site"><a href="http://kafka.apache.org/" target="_blank"
+                                    class="myweb_site_name" title="">kafka</a></div>
+                            <div class="myweb_site"><a href="https://scala-lang.org/" target="_blank"
+                                    class="myweb_site_name" title="">scala</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/scala/scala-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">scala-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Devops</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/linux/linux-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">linux-菜鸟</a></div>
+                            <div class="myweb_site"><a href="http://linux.vbird.org/" target="_blank"
+                                    class="myweb_site_name" title="">linux-鸟哥</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/linux/linux-shell.html"
+                                    target="_blank" class="myweb_site_name" title="">shell-菜鸟</a></div>
+                                    <div class="myweb_site"><a href="https://www.jenkins.io/zh/" target="_blank"
+                                        class="myweb_site_name" title="">jenkins</a></div>
+                                <div class="myweb_site"><a href="https://travis-ci.org/" target="_blank"
+                                        class="myweb_site_name" title="">travis-ci</a></div>
+                                <div class="myweb_site"><a href="https://docs.gitlab.com/ee/ci/" target="_blank"
+                                        class="myweb_site_name" title="">gitlab-ci-cd</a></div>
+                                <div class="myweb_site"><a href="https://circleci.com/" target="_blank"
+                                        class="myweb_site_name" title="">circleci</a></div>
+                                <div class="myweb_site"><a
+                                        href="https://azure.microsoft.com/zh-cn/services/devops/pipelines/" target="_blank"
+                                        class="myweb_site_name" title="">azure-pipelines</a></div>
+                                <div class="myweb_site"><a
+                                        href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions"
+                                        target="_blank" class="myweb_site_name" title="">github-workflow</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="myweb">
+                        <a class="myweb_title" title="">数据库</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/sql/sql-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">sql-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/6081482.html"
+                                    target="_blank" class="myweb_site_name" title="">mysql-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/mysql/mysql-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">mysql-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/7372243.html"
+                                    target="_blank" class="myweb_site_name" title="">mongodb-火柴</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/mongodb/mongodb-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">mongodb-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/postgresql/postgresql-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">postgresql-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/redis/redis-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">redis-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/Memcached/Memcached-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">Memcached-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://mariadb.org/" target="_blank"
+                                    class="myweb_site_name" title="">mariadb</a></div>
+                            <div class="myweb_site"><a href="https://www.elastic.co/cn/elasticsearch/" target="_blank"
+                                    class="myweb_site_name" title="">elasticsearch</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">其他</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a
+                                href="https://www.runoob.com/design-pattern/design-pattern-tutorial.html"
+                                target="_blank" class="myweb_site_name" title="">设计模式-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/regexp/regexp-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">正则表达式-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Python</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/python3/python3-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">python3-菜鸟</a></div>
+                            <div class="myweb_site"><a href="https://www.runoob.com/python/python-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">python2-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Go</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank"
+                                    class="myweb_site_name" title="">go-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Rust</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/rust/rust-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">rust-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">Ruby</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/ruby/ruby-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">ruby-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">PHP</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/php/php-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">php-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">IOS</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.runoob.com/swift/swift-tutorial.html"
+                                    target="_blank" class="myweb_site_name" title="">swift-菜鸟</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="机器人流程自动化">RPA</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.uipath.com.cn/" target="_blank"
+                                    class="myweb_site_name" title="官网">uipath</a></div>
+                            <div class="myweb_site"><a href="https://www.automationanywhere.cn/" target="_blank"
+                                    class="myweb_site_name" title="官网">automationanywhere</a></div>
+                            <div class="myweb_site"><a href="https://tagui.readthedocs.io/en/latest/" target="_blank"
+                                class="myweb_site_name" title="官网">tagui</a></div>
+                            <div class="myweb_site"><a href="https://oliveai.com/" target="_blank"
+                                class="myweb_site_name" title="官网">oliveai</a></div>
+                            <div class="myweb_site"><a href="https://powerautomate.microsoft.com/zh-cn/" target="_blank"
+                                class="myweb_site_name" title="官网">powerautomate</a></div>
+                        </div>
+                    </div>
+                    <div class="myweb">
+                        <a class="myweb_title" title="">设计</a>
+                        <div class="myweb_content">
+                            <div class="myweb_site"><a href="https://www.cnblogs.com/xiaohuochai/p/5657404.html"
+                                    target="_blank" class="myweb_site_name" title="">ps-火柴</a></div>
+                        </div>
+                    </div>
 
 
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.mafengwo.cn/" title="马蜂窝" target="_blank">
-							<img class="img-links2" src="./images/pic/mafengwo.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">马蜂窝</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.qyer.com/" title="穷游" target="_blank">
-							<img class="img-links2" src="./images/pic/qiongyou.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">穷 游</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://sh.lianjia.com/" title="链家" target="_blank">
-							<img class="img-links2" src="./images/pic/lianjia.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">链 家</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://map.baidu.com/" title="百度地图" target="_blank">
-							<img class="img-links2" src="./images/pic/baiduditu.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">百度地图</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.dy2018.com/index.html" title="电影天堂" target="_blank">
-							<img class="img-links2" src="./images/pic/dianyingtiantang.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">电影天堂</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://songshuhui.net/" title="科学松鼠会" target="_blank">
-							<img class="img-links2" src="./images/pic/kexuesongshuhui.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">科学松鼠会</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.autohome.com.cn/shanghai/" title="汽车之家" target="_blank">
-							<img class="img-links2" src="./images/pic/qichezhijia.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">汽车之家</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://tieba.baidu.com/index.html" title="贴吧" target="_blank">
-							<img class="img-links2" src="./images/pic/tieba.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">贴吧</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.mtime.com/" title="时光网" target="_blank">
-							<img class="img-links2" src="./images/pic/shiguang.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">时光网</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.rottentomatoes.com/" title="烂番茄" target="_blank">
-							<img class="img-links2" src="./images/pic/lanfanqie.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">烂番茄</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.douban.com/" title="豆瓣" target="_blank">
-							<img class="img-links2" src="./images/pic/douban.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">豆瓣</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.imdb.com/" title="IMDB" target="_blank">
-							<img class="img-links2" src="./images/pic/imdb.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">IMDB</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.xiaolvji.com/u/xuxian" title="效率集" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">导航</span>
-							<span class="text-links">效率集</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.hao123.com/" title="好123" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">导航</span>
-							<span class="text-links">好123</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://code.giffox.com/" title="程序员导航" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">导航</span>
-							<span class="text-links">程序员导航</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://dama.lu/" title="大马路导航" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(42, 120, 220); box-shadow: rgba(42, 120, 220, 0.75) 0px 10px 10px -6px;">导航</span>
-							<span class="text-links">大马路</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://search.chongbuluo.com/" title="虫部落快搜" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">导航</span>
-							<span class="text-links">虫部落快搜</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="" title="" target="_blank">
-							<img class="img-links2" src="./images/pic/dazhongdianping.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">大众点评</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="" title="" target="_blank">
-							<img class="img-links2" src="./images/pic/weijibaike.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">维基百科</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="" title="" target="_blank">
-							<img class="img-links2" src="./images/pic/qiushibaike.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">糗事百科</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.nihaowua.com/" title="你好污啊" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">污</span>
-							<span class="text-links">你好污啊</span>
-						</a>
-					</li>
-					<li data_old="7" class="sigleRecommond">
-						<span old_del="7" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.zhihu.com/" title="知乎" target="_blank">
-							<img class="img-links2" src="./images/pic/zhihu.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">知 乎</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.huxiu.com/" title="虎嗅" target="_blank">
-							<img class="img-links2" src="./images/pic/huxiu.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">虎嗅</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.tmtpost.com/" title="钛媒体" target="_blank">
-							<img class="img-links2" src="./images/pic/taimeiti.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">钛媒体</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://awtmt.com/" title="全天候科技" target="_blank">
-							<img class="img-links2" src="./images/pic/quantianhoukeji.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">全天候科技</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://36kr.com/" title="36Kr" target="_blank">
-							<img class="img-links2" src="./images/pic/36kr.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">36Kr</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://news.baidu.com/" title="百家号" target="_blank">
-							<img class="img-links2" src="./images/pic/baijiahao.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">百家号</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.yidianzixun.com/" title="一点资讯" target="_blank">
-							<img class="img-links2" src="./images/pic/yidianzixun.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">一点资讯</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.jianshu.com/" title="简书" target="_blank">
-							<img class="img-links2" src="./images/pic/jianshu.png"
-								style="box-shadow: 0 10px 10px -6px rgba(34, 24, 22, 0.75);">
-							<span class="text-links">简书</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://bbs.hupu.com/" title="虎扑" target="_blank">
-							<img class="img-links2" src="./images/pic/hupu.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">虎扑</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.nationalgeographic.com/" title="国家地理" target="_blank">
-							<img class="img-links2" src="./images/pic/guojiadili.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">国家地理</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.dili360.com/" title="中国国家地理" target="_blank">
-							<img class="img-links2" src="./images/pic/zhongguoguojiadili.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">中国国家地理</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.80s.tw/" title="80s" target="_blank">
-							<img class="img-links2" src="./images/pic/80s.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">80s</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://sh.qq.com/" title="大申网" target="_blank">
-							<img class="img-links2" src="./images/pic/dashenwang.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">大申网</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://dig.chouti.com/" title="抽屉" target="_blank">
-							<img class="img-links2" src="./images/pic/chouti.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">抽屉</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.qdaily.com/" title="好奇心日报" target="_blank">
-							<img class="img-links2" src="./images/pic/haoqixinribao.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">好奇心日报</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href=" https://www.imooc.com/" title="慕课网" target="_blank">
-							<img class="img-links2" src="./images/pic/mukewang.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">慕课网</span>
-						</a>
-					</li>
-
-					<li data_old="19" class="sigleRecommond">
-						<span old_del="19" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.iqiyi.com/" title="爱奇艺" target="_blank">
-							<img class="img-links2" src="./images/pic/aiqiyi.png"
-								style="box-shadow: 0 10px 10px -6px rgba(7, 218, 0, 0.75);">
-							<span class="text-links">爱奇艺</span>
-						</a>
-					</li>
-					<li data_old="20" class="sigleRecommond">
-						<span old_del="20" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.youku.com/" title="优酷网" target="_blank">
-							<img class="img-links2" src="./images/pic/youku.png"
-								style="box-shadow: 0 10px 10px -6px rgba(213, 213, 213, 0.75);">
-							<span class="text-links">优酷网</span>
-						</a>
-					</li>
-					<li data_old="22" class="sigleRecommond">
-						<span old_del="22" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://v.qq.com/" title="腾讯视频" target="_blank">
-							<img class="img-links2" src="./images/pic/txshipin.png"
-								style="box-shadow: 0 10px 10px -6px rgb(164, 201, 185);">
-							<span class="text-links">腾讯视频</span>
-						</a>
-					</li>
-					<li data_old="23" class="sigleRecommond">
-						<span old_del="23" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.bilibili.com/" title="哔哩哔哩" target="_blank">
-							<img class="img-links2" src="./images/pic/bilibili.png"
-								style="box-shadow: 0 10px 10px -6px rgba(209, 80, 117, 0.75);">
-							<span class="text-links">哔哩哔哩</span>
-						</a>
-					</li>
-					<li data_old="24" class="sigleRecommond">
-						<span old_del="24" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://music.163.com/" title="网易云音乐" target="_blank">
-							<img class="img-links2" src="./images/pic/wangyiyun.png"
-								style="box-shadow: 0 10px 10px -6px rgba(241, 33, 0, 0.75);">
-							<span class="text-links">网易云音乐</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.acfun.cn/" title="AcFun" target="_blank">
-							<img class="img-links2" src="./images/pic/acfun.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">AcFun</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.douyu.com/" title="斗鱼" target="_blank">
-							<img class="img-links2" src="./images/pic/douyu.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">斗鱼</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.huya.com/" title="虎牙" target="_blank">
-							<img class="img-links2" src="./images/pic/huya.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">虎牙</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.mgtv.com/" title="芒果TV" target="_blank">
-							<img class="img-links2" src="./images/pic/mangguotv.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">芒果TV</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.qingting.fm/" title="蜻蜓" target="_blank">
-							<img class="img-links2" src="./images/pic/qingting.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">蜻蜓</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.ximalaya.com/" title="喜马拉雅" target="_blank">
-							<img class="img-links2" src="./images/pic/ximalaya.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">喜马拉雅</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://y.qq.com/" title="QQ音乐" target="_blank">
-							<img class="img-links2" src="./images/pic/qqyinyue.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">QQ音乐</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://open.163.com/" title="网易公开课" target="_blank">
-							<img class="img-links2" src="./images/pic/wangyigongkaike.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">网易公开课</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.icourse163.org/" title="中国Mooc大学" target="_blank">
-							<img class="img-links2" src="./images/pic/zhongguomoocdaxue.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">中国Mooc大学</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.guokr.com/group/close" title="果壳Moock学院" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">公开课</span>
-							<span class="text-links">果壳Moock学院</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://study.163.com/" title="网易云课堂" target="_blank">
-							<img class="img-links2" src="./images/pic/wangyiyunketang.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">网易云课堂</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.pluralsight.com/codeschool" title="codeschool" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">公开课</span>
-							<span class="text-links">codeschool</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.chungold.com/" title="chungold" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">公开课</span>
-							<span class="text-links">chungold</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://mail.qq.com/" title="QQ邮箱" target="_blank">
-							<img class="img-links2" src="./images/pic/qqyouxiang.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">QQ邮箱</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://translate.google.cn/" title="谷歌翻译" target="_blank">
-							<img class="img-links2" src="./images/pic/gugefanyi.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">谷歌翻译</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://fanyi.baidu.com/" title="百度翻译" target="_blank">
-							<img class="img-links2" src="./images/pic/baidufanyi.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">百度翻译</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://translate.alibaba.com/" title="阿里翻译" target="_blank">
-							<img class="img-links2" src="./images/pic/alibaba.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">阿里翻译</span>
-						</a>
-					</li>
-					<li data_old="2" class="sigleRecommond">
-						<span old_del="2" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="//pan.baidu.com/" title="百度云" target="_blank">
-							<img class="img-links2" src="./images/pic/baiduyun.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">百度云</span>
-						</a>
-					</li>
-					<li data_old="8" class="sigleRecommond">
-						<span old_del="8" class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.weiyun.com/" title="微云" target="_blank">
-							<img class="img-links2" src="./images/pic/weiyun.png"
-								style="box-shadow: rgba(0, 93, 185, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">微云</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.12306.cn/" title="12306" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">火车</span>
-							<span class="text-links">12306</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.12306bypass.com/" title="12306bypass" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">火车</span>
-							<span class="text-links">12306bypass</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.kuaidi100.com/" title="快递100" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">快递</span>
-							<span class="text-links">快递100</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://sobooks.cc/" title="sobooks" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">书</span>
-							<span class="text-links">sobooks</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.library.sh.cn/" title="上海图书馆" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">书</span>
-							<span class="text-links">上海图书馆</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.feng.com/" title="威锋" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(255, 223, 128); box-shadow: rgba(255, 223, 128, 0.75) 0px 10px 10px -6px;">书</span>
-							<span class="text-links">威锋</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.yuque.com/" title="语雀" target="_blank">
-							<img class="img-links2" src="./images/logo/wendang.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">语雀</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://docs.qq.com" title="腾讯文档" target="_blank">
-							<img class="img-links2" src="./images/logo/wendang.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">腾讯文档</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.yinxiang.com/" title="印象笔记" target="_blank">
-							<img class="img-links2" src="./images/logo/wendang.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">印象笔记</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://youyaoxu.github.io/blog/" title="blog" target="_blank">
-							<img class="img-links2" src="./images/logo/wendang.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">blog</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://tool.oschina.net/" title="在线工具" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">在线工具</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://qqe2.com/" title="qqe2" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">qqe2</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://mqtest.io/" title="mqtest" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">mqtest</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://transfonter.org/" title="transfonter" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">transfonter</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://gtmetrix.com/" title="gtmetrix" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">gtmetrix</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.mockplus.cn/" title="摹客" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">摹客</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://myjson.com/" title="myjson" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">myjson</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://tinypng.com/" title="tinypng" target="_blank">
-							<img class="img-links2" src="./images/pic/tinypng.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">tinypng</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.fancynode.com.cn/pxcook" title="在线工具" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">pxcook</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.bootcdn.cn/" title="bootcdn" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(136, 72, 152); box-shadow: rgba(136, 72, 152, 0.75) 0px 10px 10px -6px;">CDN</span>
-							<span class="text-links">bootcdn</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cdnjs.com/" title="cdnjs" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(136, 72, 152); box-shadow: rgba(136, 72, 152, 0.75) 0px 10px 10px -6px;">CDN</span>
-							<span class="text-links">cdnjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://http//cdn.code.baidu.com/" title="百度静态资源" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(136, 72, 152); box-shadow: rgba(136, 72, 152, 0.75) 0px 10px 10px -6px;">CDN</span>
-							<span class="text-links">百度静态资源</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.cutterman.cn/zh/cutterman" title="cutterman" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">cutterman</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.fancynode.com.cn/pxcook" title="pxcook" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">pxcook</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://unpkg.com/#/" title="unpkg" target="_blank">
-							<img class="img-links2" src="./images/logo/gongju.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">unpkg</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cssminifier.com/" title="css压缩" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">css</span>
-							<span class="text-links">css压缩</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.cleancss.com/" title="cleancss" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">css</span>
-							<span class="text-links">cleancss</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://redmine.teein.com" title="redmine.teein.com" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(136, 72, 152); box-shadow: rgba(136, 72, 152, 0.75) 0px 10px 10px -6px;">OA</span>
-							<span class="text-links">redmine</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://oa.t3c.com.cn/" title="t3cOA" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(136, 72, 152); box-shadow: rgba(136, 72, 152, 0.75) 0px 10px 10px -6px;">OA</span>
-							<span class="text-links">t3cOA</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.ruanyifeng.com" title="阮一峰" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">阮一峰</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">廖雪峰</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.zhangxinxu.com/" title="张鑫旭" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">张鑫旭</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://gitee.com/mumu-osc" title="大漠穷秋" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">大漠穷秋</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://damoqiongqiu.github.io/" title="大漠穷秋-github" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">大漠穷秋</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://jspang.com/" title="jspang" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">jspang</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://coolshell.cn/" title="coolshell" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">coolshell</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://mindhacks.cn/" title="刘未鹏" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">刘未鹏</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.cnblogs.com/vamei/" title="vamei" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">vamei</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.cnblogs.com/watsonyin/" title="西门吹雪" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">西门吹雪</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://linux.vbird.org/" title="鸟哥" target="_blank">
-							<img class="img-links2" src="./images/logo/houzi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">鸟哥</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://nec.netease.com/" title="网易nec" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">网易nec</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://fex.baidu.com/" title="百度fex" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">百度fex</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.alloyteam.com/" title="腾讯alloy" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">腾讯alloy</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://isux.tencent.com/" title="腾讯isux" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">腾讯isux</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://ued.ctrip.com/" title="携程ued" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">携程ued</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cdc.tencent.com/" title="腾讯cdc" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">腾讯cdc</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://ued.sina.com/" title="新浪ued" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">新浪ued</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://aotu.io/" title="凹凸实验室" target="_blank">
-							<img class="img-links2" src="./images/logo/shiyanshi.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">凹凸实验室</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://github.com/" title="github" target="_blank">
-							<img class="img-links2" src="./images/pic/github.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">github</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.cnblogs.com/" title="博客园" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">博客园</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://stackoverflow.com/" title="stackoverflow" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">stackoverflow</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://developer.mozilla.org/zh-CN/" title="MDN" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">MDN</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.w3cplus.com" title="w3cplus" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">w3cplus</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.w3school.com.cn/" title="w3school" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">w3school</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://segmentfault.com/" title="segmentfault" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">segmentfault</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://edu.csdn.net/" title="CSDN知识库" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">CSDN知识库</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://juejin.im/" title="掘金社区" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">掘金社区</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.runoob.com/" title="菜鸟教程" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">菜鸟教程</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://mp.weixin.qq.com/" title="微信公众平台" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">微信公众平台</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://caniuse.com/" title="caniuse" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">caniuse</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.qdfuns.com/" title="前端网" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">前端网</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://msdn.itellyou.cn/" title="itellyou" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">itellyou</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://msdn.microsoft.com/zh-cn/" title="msdn" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(32, 184, 173); box-shadow: rgba(32, 184, 173, 0.75) 0px 10px 10px -6px;">社区</span>
-							<span class="text-links">msdn</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://gitlab.com/" title="gitlab" target="_blank">
-							<img class="img-links2" src="./images/pic/gitlab.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">gitlab</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.jq22.com/" title="jQuery插件库" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">jQuery插件库</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.bootcss.com/" title="bootstrap中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">bootstrap中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://hemin.cn/jq/" title="jQuery手册" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">jQuery手册</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://sass.bootcss.com/" title="sass" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">sass</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://javascript.ruanyifeng.com/" title="js手册" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">js手册</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://es6.ruanyifeng.com/" title="es6" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">es6</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://nodejs.cn/" title="node中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">node中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.npmjs.com/" title="npm" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">npm</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.webpackjs.com/" title="webpack中文" target="_blank">
-							<<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-								<span class="text-links">webpack中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.tslang.cn/" title="typescript中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">typescript中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cn.vuejs.org/" title="vue" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">vue</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://react.docschina.org/" title="react中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">react中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.angular.cn/" title="xxx" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">angular中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://nodelover.gitbook.io/typescript" title="typescript文档" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">typescript文档</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://babeljs.io/" title="babel" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">babel</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.gulpjs.com.cn/" title="gulp" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">gulp</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://router.vuejs.org/zh/" title="xxx" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">vue-router</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.angularjs.net.cn/" title="angular1中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">angular1中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://npm.taobao.org/" title="淘宝镜像" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">淘宝镜像</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://handlebarsjs.com/" title="handlebarsjs" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">handlebarsjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://yeoman.io/" title="yeoman" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">yeoman</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://hammerjs.github.io/" title="hammerjs" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">hammerjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://browserify.org/" title="browserify" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">browserify</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cn.redux.js.org/" title="xxx" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">react-redux</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://cn.redux.js.org/" title="xxx" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">react-redux中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.lodashjs.com/" title="xxx" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">lodashjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://coffee-script.org/" title="coffeescript" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">coffeescript</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.telerik.com/kendo-ui" title="kendo-ui" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">kendo-ui</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.sencha.com/" title="extjs" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">extjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.treejs.cn/v3/main.php#_zTreeInfo" title="ztree" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">ztree</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://uniapp.dcloud.io/" title="uniapp" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">uniapp</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://vuex.vuejs.org/zh/guide/" title="vue-vuex" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">vue-vuex</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.axios.com/" title="axios" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">axios</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://weex.apache.org/cn/guide/" title="weex" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">weex</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://nuxtjs.org/" title="nuxtjs" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">nuxtjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.apicloud.com/" title="apicloud" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">apicloud</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://weui.io/" title="weui" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">weui</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://fis.baidu.com/" title="fis" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">fis</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.expressjs.com.cn/" title="expressjs" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">expressjs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://robomongo.org/" title="robomongo" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">robomongo</span>
-						</a>
-					</li>
-
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.bootcss.com/" title="bootstrap中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">bootstrap中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://sass.bootcss.com/" title="sass中文" target="_blank">
-							<img class="img-links2" src="./images/logo/dengpao.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">sass中文</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://element-cn.eleme.io/#/zh-CN/resource" title="element-admin"
-							target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">admin</span>
-							<span class="text-links">element-admin</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://ant.design/" title="ant-admin" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">admin</span>
-							<span class="text-links">ant-admin</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.socialed.cn/Account/Logon" title="xxx" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">admin</span>
-							<span class="text-links">易动</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://github.com/d2-projects/d2-admin" title="d2-admin" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">admin</span>
-							<span class="text-links">d2-admin</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://tomcat.apache.org/" title="tomcat" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">tomcat</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://mvnrepository.com/" title="java包仓库" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">java包仓库</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.oracle.com/index.html" title="oracle" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">oracle</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.mysql.com/" title="xxx" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">mysql</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://search.maven.org/#search" title="maven包" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">maven包</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://nginx.org/" title="nginx" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">nginx</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://w3techs.com/" title="w3techs" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">后端</span>
-							<span class="text-links">w3techs</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://emojisandearthporn.com/" title="emojisandearthporn" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">游戏</span>
-							<span class="text-links">emojisandearthporn</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://willyoupressthebutton.com/" title="willyoupressthebutton"
-							target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">游戏</span>
-							<span class="text-links">willyoupressthebutton</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://netease.im/" title="网易云信" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">公司</span>
-							<span class="text-links">网易云信</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://oa.t3c.com.cn/" title="xxx" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">公司</span>
-							<span class="text-links">t3cOA</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://redmine.teein.com/" title="redmine" target="_blank">
-							<span class="icon-box"
-								style="background-color: rgb(205, 202, 200); box-shadow: rgba(205, 202, 200, 0.75) 0px 10px 10px -6px;">公司</span>
-							<span class="text-links">redmine</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.iconfont.cn/" title="阿里图标" target="_blank">
-							<img class="img-links2" src="./images/pic/alibaba.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">阿里图标</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="http://www.lanrentuku.com/" title="懒人图库" target="_blank">
-							<img class="img-links2" src="./images/pic/lanrentuku.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">懒人图库</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.zcool.com.cn/" title="站酷" target="_blank">
-							<img class="img-links2" src="./images/pic/zhanku.png"
-								style="box-shadow: rgb(202, 202, 202) 0 10px 10px -6px;">
-							<span class="text-links">站酷</span>
-						</a>
-					</li>
-					<li class="item sigleRecommond">
-						<span class="del-flag glyphicon glyphicon-remove"></span>
-						<a class="singleLink" href="https://www.aliyun.com/" title="阿里云" target="_blank">
-							<img class="img-links2" src="./images/pic/aliyun.png"
-								style="box-shadow: rgba(22, 144, 244, 0.75) 0 10px 10px -6px;">
-							<span class="text-links">阿里云</span>
-						</a>
-					</li>
-				</ul>
-
-				<!-- 
-                    255, 223, 128
-                    134, 181, 124
-                    252, 67, 0
-                -->
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+            <div id="my_text_close" class="my_text_open" title="" style="display: none;">显示</div>
+            <div id="copyright">
+                <div style="width:218px;height:24px;line-height:24px;margin:0px auto;">
+                    Copyright © 2022 All Rights Reserved
+                </div>
+            </div>
+        </div>
+        <div class="back_top_area" id="back_top_botton">
+            <div class="back_top_img" title="返回顶部"></div>
+        </div>
+    </div>
 </body>
-<script type="text/javascript" src="js/sortable.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/comm.js?v=20180715"></script>
+<script type="text/javascript">
+    function time () {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var week = date.getDay();
+        var weekStr = "";
+        var dateStr = date.getDate();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        if (hour <= 9) {
+            hour = "0" + hour;
+        }
+        if (minute <= 9) {
+            minute = "0" + minute;
+        }
+        if (second <= 9) {
+            second = "0" + second;
+        }
+        switch (week) {
+            case 0:
+                weekStr = "星期日"
+                break;
+            case 1:
+                weekStr = "星期一"
+                break;
+            case 2:
+                weekStr = "星期二"
+                break;
+            case 3:
+                weekStr = "星期三"
+                break;
+            case 4:
+                weekStr = "星期四"
+                break;
+            case 5:
+                weekStr = "星期五"
+                break;
+            case 6:
+                weekStr = "星期六"
+                break;
+        }
+        document.getElementById("datenow").innerHTML = year + "." + month + "." + dateStr;
+        document.getElementById("hour").innerHTML = hour + ":" + minute;
+        document.getElementById("sec").innerHTML = second;
+        document.getElementById("week").innerHTML = weekStr;
+    }
+    setInterval(function () {
+        time();
+    }, 1000);
+    // https://www.google.com/search?q=123
+    // https://www.baidu.com/s?ie=utf-8&word=212
+    // https://cn.bing.com/search?q=123
+    document.getElementById("guge").onclick = function () {
+        document.getElementById("form").setAttribute("action", "https://www.google.com/search")
+        document.getElementById("invalue").setAttribute("name", "q")
+    };
+    document.getElementById("biying").onclick = function () {
+        document.getElementById("form").setAttribute("action", "https://cn.bing.com/search")
+        document.getElementById("invalue").setAttribute("name", "q")
+    };
+    document.getElementById("baid").onclick = function () {
+        document.getElementById("form").setAttribute("action", "https://www.baidu.com/s")
+        document.getElementById("invalue").setAttribute("name", "word")
+    };
+</script>
 
 </html>

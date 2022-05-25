@@ -7,11 +7,11 @@
 
 #### JavaScript
 
-[js-火柴](https://www.cnblogs.com/xiaohuochai/p/5613593.html)    [js-菜鸟](https://www.runoob.com/js/js-tutorial.html)    [ajax-菜鸟](https://www.runoob.com/ajax/ajax-tutorial.html)    [webpack](https://webpack.js.org/)    [es6](https://es6.ruanyifeng.com/)	    	    
+[js-小火柴](https://www.cnblogs.com/xiaohuochai/p/5613593.html)    [js-菜鸟](https://www.runoob.com/js/js-tutorial.html)    [ajax-菜鸟](https://www.runoob.com/ajax/ajax-tutorial.html)    [webpack](https://webpack.js.org/)    [es6](https://es6.ruanyifeng.com/)	    	    
 
 #### Vue
 
- [vue2-菜鸟](https://www.runoob.com/vue2/vue-tutorial.html)     [vue-火柴  ](https://www.cnblogs.com/xiaohuochai/p/7356084.html)   [vue3](https://v3.vuejs.org/)     [vue3-菜鸟](https://www.runoob.com/vue3/vue3-tutorial.html)  [ vue3-cn](https://www.cnblogs.com/xiaohuochai/p/7356084.html)   [next-vue-router](https://next.router.vuejs.org/)	[vue-router](https://router.vuejs.org/zh/)	[next-vuex](https://next.vuex.vuejs.org/)	[vuex](https://vuex.vuejs.org/zh/guide/)   [vue-cli](https://cli.vuejs.org/zh/)    [nuxtjs](https://www.nuxtjs.cn/)    [vite-zh](https://cn.vitejs.dev/)    [axios    axios-zh](https://github.com/axios/axios) 
+ [vue2-菜鸟](https://www.runoob.com/vue2/vue-tutorial.html)     [vue-火柴  ](https://www.cnblogs.com/xiaohuochai/p/7356084.html)   [vue3](https://v3.vuejs.org/)     [vue3-菜鸟](https://www.runoob.com/vue3/vue3-tutorial.html)  [ vue3-cn](https://www.cnblogs.com/xiaohuochai/p/7356084.html)   [next-vue-router](https://next.router.vuejs.org/)	[vue-router](https://router.vuejs.org/zh/)	[next-vuex](https://next.vuex.vuejs.org/)	[vuex](https://vuex.vuejs.org/zh/guide/)   [vue-cli](https://cli.vuejs.org/zh/)    [nuxtjs](https://www.nuxtjs.cn/)    [vite-zh](https://cn.vitejs.dev/)    [axios-zh](https://github.com/axios/axios) 
 
 [elementUI](https://element.eleme.cn/)    [antd-design-vue](https://antdv.com/docs/vue/introduce-cn/)    [vant](https://vant-contrib.gitee.io/vant/v3/#/zh-CN)    [element-plus](https://element-plus.org/zh-CN/#/zh-CN/component/installation)    [element3](https://github.com/hug-sun/element3)    [vux](https://github.com/airyland/vux)     [iview](https://github.com/iview/iview)	[muse-ui](https://muse-ui.org/)    [bootstrap-vue](https://bootstrap-vue.org/)
 

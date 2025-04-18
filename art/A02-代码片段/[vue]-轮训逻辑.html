@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x8f6e;&#x8bad;&#x903b;&#x8f91;","children":[{"content":"<pre data-lines=\"1,39\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span>{\n\t\t<span class=\"hljs-title function_\">data</span>(<span class=\"hljs-params\"></span>){\n\t\t\t<span class=\"hljs-keyword\">return</span> {\n\t\t\t\t<span class=\"hljs-attr\">resultStatus</span>: {\n\t        <span class=\"hljs-attr\">timer</span>: <span class=\"hljs-literal\">null</span>,\n\t        <span class=\"hljs-attr\">timeInterval</span>: <span class=\"hljs-number\">3000</span>,\n\t      },\n\t\t\t}\n\t\t},\n  \t<span class=\"hljs-comment\">// &#x8def;&#x7531;&#x8df3;&#x8f6c;&#x524d;&#xff0c;&#x6e05;&#x9664;&#x8f6e;&#x8be2;</span>\n  \t<span class=\"hljs-title function_\">beforeRouteLeave</span>(<span class=\"hljs-params\">to, <span class=\"hljs-keyword\">from</span>, next</span>) {  \n      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">closePollingResult</span>()\n      <span class=\"hljs-title function_\">next</span>()\n    },\n    <span class=\"hljs-title function_\">destoryed</span>(<span class=\"hljs-params\"></span>){\n        <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">closePollingResult</span>()\n    },\n\t  <span class=\"hljs-attr\">methods</span>:{\n\t    <span class=\"hljs-comment\">// &#x8f6e;&#x8bad;&#x67e5;&#x8be2;&#x8ba1;&#x7b97;&#x4e2d;&#x7ed3;&#x679c;</span>\n\t    <span class=\"hljs-title function_\">handlePollingResult</span>(<span class=\"hljs-params\"></span>) {\n\t      <span class=\"hljs-keyword\">const</span> {resultStatus} = <span class=\"hljs-variable language_\">this</span>\n\t      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">resultStatus</span>.<span class=\"hljs-property\">timer</span> = <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-built_in\">setInterval</span>(<span class=\"hljs-function\">() =&gt;</span> {\n\t        <span class=\"hljs-built_in\">setTimeout</span>(<span class=\"hljs-title function_\">async</span> () =&gt; {\n\t          \n\t        }, <span class=\"hljs-number\">0</span>)\n\t      }, resultStatus.<span class=\"hljs-property\">timeInterval</span>)\n\t    },\n\t    <span class=\"hljs-comment\">// &#x5173;&#x95ed;&#x8f6e;&#x8bad;&#x67e5;&#x8be2;&#x8ba1;&#x7b97;&#x4e2d;&#x7ed3;&#x679c;</span>\n\t    <span class=\"hljs-title function_\">closePollingResult</span>(<span class=\"hljs-params\"></span>) {\n\t      <span class=\"hljs-keyword\">const</span> {resultStatus} = <span class=\"hljs-variable language_\">this</span>\n\t      <span class=\"hljs-keyword\">if</span> (resultStatus.<span class=\"hljs-property\">timer</span>) {\n\t        <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-built_in\">clearInterval</span>(resultStatus.<span class=\"hljs-property\">timer</span>)\n\t      }\n\t    },\n\t  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,39"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[iphone]-X&#x673a;&#x578b;&#x8bbe;&#x5907;&#x517c;&#x5bb9;&#x6027;&#x5904;&#x7406;","children":[{"content":"&#x4e00;&#x3001; &#x8bbe;&#x7f6e;&#x7f51;&#x9875;&#x5728;&#x53ef;&#x89c6;&#x533a;&#x57df;&#x7684;&#x5e03;&#x5c40;&#x65b9;&#x5f0f;","children":[{"content":"<pre data-lines=\"4,7\"><code data-lines=\"4,7\">&#x65b0;&#x589e; viwe<span class=\"hljs-keyword\">port</span>-fit &#x5c5e;&#x6027;&#xff0c;&#x4f7f;&#x5f97;&#x9875;&#x9762;&#x5185;&#x5bb9;&#x5b8c;&#x5168;&#x8986;&#x76d6;&#x6574;&#x4e2a;&#x7a97;&#x53e3;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}},{"content":"<pre data-lines=\"10,13\"><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;viewport&quot;</span> <span class=\"hljs-attr\">content</span>=<span class=\"hljs-string\">&quot;width=device-width,initial-scale=1.0,viewport-fit=cover&quot;</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,13"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x4e8c;&#x3001;&#x8ba9;&#x4e3b;&#x4f53;&#x5185;&#x5bb9;&#x63a7;&#x5236;&#x5728;&#x5b89;&#x5168;&#x533a;&#x57df;&#x5185;","children":[{"content":"<pre data-lines=\"16,19\"><code data-lines=\"16,19\">&#x5047;&#x8bbe;&#x6211;&#x4eec;&#x7684;&#x5e95;&#x90e8;&#x6309;&#x94ae;&#x9ad8;&#x5ea6;&#x662f;50px&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,19"}},{"content":"<pre data-lines=\"22,31\"><code class=\"language-css\"><span class=\"hljs-selector-tag\">body</span> {\n  <span class=\"hljs-attribute\">padding-top</span>: <span class=\"hljs-built_in\">env</span>(safe-area-inset-top);\n  <span class=\"hljs-attribute\">padding-right</span>: <span class=\"hljs-built_in\">env</span>(safe-area-inset-right);\n  <span class=\"hljs-attribute\">padding-bottom</span>: <span class=\"hljs-number\">50px</span>;  <span class=\"hljs-comment\">/* &#x517c;&#x5bb9;&#x4e0d;&#x652f;&#x6301; env( ) &#x7684;&#x8bbe;&#x5907;  */</span>\n  <span class=\"hljs-attribute\">padding-bottom</span>: <span class=\"hljs-built_in\">calc</span>(<span class=\"hljs-built_in\">env</span>(safe-area-inset-bottom) + <span class=\"hljs-number\">50px</span>); <span class=\"hljs-comment\">/* &#x5728; iphone x + &#x4e2d;&#x672c;&#x53e5;&#x624d;&#x4f1a;&#x751f;&#x6548; */</span>\n  <span class=\"hljs-attribute\">padding-left</span>: <span class=\"hljs-built_in\">env</span>(safe-area-inset-left);\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,31"}}],"payload":{"tag":"h2","lines":"14,15"}},{"content":"&#x4e09;&#x3001;&#x5e95;&#x90e8;&#x6309;&#x94ae;&#x7684;&#x5904;&#x7406;","children":[{"content":"<pre data-lines=\"33,39\"><code data-lines=\"33,39\">&#x9996;&#x5148;&#x7ed9;&#x5e95;&#x90e8;&#x6309;&#x94ae;&#x4e00;&#x4e2a;&#x5916;&#x5c42;&#x5bb9;&#x5668; <span class=\"hljs-selector-class\">.btn-container</span> &#xff0c;&#x8bbe;&#x7f6e;&#x6837;&#x5f0f;&#x65f6;&#x5176;&#x4e2d;&#x6709;&#x51e0;&#x70b9;&#x6bd4;&#x8f83;&#x5173;&#x952e;&#xff1a;\n<span class=\"hljs-number\">1</span>&#x3001;&#x8bbe;&#x7f6e;<span class=\"hljs-attribute\">padding-bottom</span>: <span class=\"hljs-built_in\">env</span>(safe-area-inset-bottom);&#x589e;&#x52a0;&#x4e00;&#x4e2a; <span class=\"hljs-attribute\">padding</span> &#x503c;&#xff0c;&#x8ba9;&#x5e95;&#x90e8;&#x5411;&#x5916;&#x6269;&#x5c55;&#x4e00;&#x4e2a;&#x975e;&#x5b89;&#x5168;&#x533a;&#x57df;&#x7684;&#x8ddd;&#x79bb;&#x3002;\n<span class=\"hljs-number\">2</span>&#x3001;&#x8bbe;&#x7f6e;<span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#FFF</span> &#x8ba9;&#x6574;&#x4e2a; .btn-container &#x80cc;&#x666f;&#x4e3a;&#x767d;&#x8272;&#xff08;&#x5305;&#x62ec;&#x521a;&#x65b0;&#x589e;&#x7684; padding-bottom &#x7684;&#x533a;&#x57df;&#xff09;&#x8fd9;&#x6837;&#x5c31;&#x53ef;&#x4ee5;&#x906e;&#x6321;&#x4f4f;&#x4e86;&#x5e95;&#x90e8;&#x5185;&#x5bb9;&#x3002;\n<span class=\"hljs-number\">3</span>&#x3001;&#x8bbe;&#x7f6e; box-sizing: content-box; &#xff0c;&#x56e0;&#x4e3a;&#x5728;&#x901a;&#x5e38;&#x60c5;&#x51b5;&#x4e0b; css &#x5728; reset &#x9636;&#x6bb5;&#x4e00;&#x822c;&#x90fd;&#x8bbe;&#x7f6e;&#x4e86; * {<span class=\"hljs-attribute\">box-sizing</span>: border-box;} &#x8fd9;&#x6837;&#x4e00;&#x6765;&#x8bbe;&#x7f6e; <span class=\"hljs-attribute\">padding</span> &#x5c31;&#x4e0d;&#x80fd;&#x5411;&#x5916;&#x6269;&#x5c55;&#x8ddd;&#x79bb;&#x4e86;&#xff0c;&#x6240;&#x4ee5;&#x5728;&#x8fd9;&#x91cc;&#x6211;&#x4eec;&#x8981;&#x628a;&#x4ed6;&#x6539;&#x56de; <span class=\"hljs-attribute\">content</span>-box&#x3002; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,39"}},{"content":"<pre data-lines=\"42,65\"><code class=\"language-css\"><span class=\"hljs-selector-class\">.btn-container</span> {\n  <span class=\"hljs-attribute\">box-sizing</span>: content-box;\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">line-height</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#fff</span>;\n  <span class=\"hljs-attribute\">position</span>: fixed;\n  <span class=\"hljs-attribute\">bottom</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">left</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">right</span>: <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">text-align</span>: center;\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#FFF</span>;\n  <span class=\"hljs-attribute\">padding-bottom</span>: <span class=\"hljs-built_in\">env</span>(safe-area-inset-bottom);\n}\n\n<span class=\"hljs-selector-class\">.btn</span> {\n  <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">line-height</span>: <span class=\"hljs-number\">50px</span>;\n  <span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-number\">#00c340</span>;\n  <span class=\"hljs-attribute\">border</span>: none;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,65"}}],"payload":{"tag":"h2","lines":"31,32"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

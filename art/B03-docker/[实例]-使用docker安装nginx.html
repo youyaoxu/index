@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x5b9e;&#x4f8b;]-&#x4f7f;&#x7528;docker&#x5b89;&#x88c5;nginx","children":[{"content":"&#x547d;&#x4ee4;","children":[{"content":"<pre data-lines=\"3,9\"><code data-lines=\"3,9\">docker <span class=\"hljs-keyword\">search</span> nginx\ndocker pull nginx:lastest\ndocker images\ndocker <span class=\"hljs-keyword\">run</span> --name nginx-<span class=\"hljs-keyword\">test</span> -p 8080:80 -<span class=\"hljs-keyword\">d</span> nginx\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,9"}},{"content":"<pre data-lines=\"10,11\"><code>&#x53c2;&#x6570;&#x89e3;&#x91ca;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,11"}},{"content":"<pre data-lines=\"11,16\"><code data-lines=\"11,16\"><span class=\"hljs-deletion\">--name nginx-test&#xff1a;&#x5bb9;&#x5668;&#x540d;&#x79f0;&#x3002;</span>\n<span class=\"hljs-deletion\">-p 8080:80&#xff1a; &#x7aef;&#x53e3;&#x8fdb;&#x884c;&#x6620;&#x5c04;&#xff0c;&#x5c06;&#x672c;&#x5730; 8080 &#x7aef;&#x53e3;&#x6620;&#x5c04;&#x5230;&#x5bb9;&#x5668;&#x5185;&#x90e8;&#x7684; 80 &#x7aef;&#x53e3;&#x3002;</span>\n<span class=\"hljs-deletion\">-d nginx&#xff1a; &#x8bbe;&#x7f6e;&#x5bb9;&#x5668;&#x5728;&#x5728;&#x540e;&#x53f0;&#x4e00;&#x76f4;&#x8fd0;&#x884c;&#x3002;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,16"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x6d4b;&#x8bd5;","children":[{"content":"<pre data-lines=\"17,20\"><code data-lines=\"17,20\"><span class=\"hljs-number\">192.168.99.100:8080</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,20"}}],"payload":{"tag":"h2","lines":"16,17"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

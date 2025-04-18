@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-&#x5982;&#x4f55;&#x719f;&#x6089;&#x4e1a;&#x52a1;","children":[{"content":"\n<p data-lines=\"2,3\">&#x719f;&#x6089;&#x4e1a;&#x52a1;</p>","children":[],"payload":{"tag":"li","lines":"2,4"}},{"content":"\n<p data-lines=\"4,5\">&#x524d;&#x7aef; -&gt; &#x6a21;&#x5757; -&gt; &#x4e1a;&#x52a1; -&gt; &#x540e;&#x7aef; -&gt; &#x63a5;&#x53e3; -&gt; &#x4e1a;&#x52a1; -&gt; &#x8868;</p>","children":[],"payload":{"tag":"li","lines":"4,5"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

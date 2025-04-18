@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x5165;&#x95e8;]-useContext","children":[{"content":"<pre data-lines=\"2,49\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useContext, useState } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>;\n\n<span class=\"hljs-keyword\">const</span> themes = {\n  <span class=\"hljs-attr\">light</span>: {\n    <span class=\"hljs-attr\">foreground</span>: <span class=\"hljs-string\">&quot;#000000&quot;</span>,\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&quot;#eeeeee&quot;</span>\n  },\n  <span class=\"hljs-attr\">dark</span>: {\n    <span class=\"hljs-attr\">foreground</span>: <span class=\"hljs-string\">&quot;#ffffff&quot;</span>,\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&quot;#222222&quot;</span>\n  }\n};\n\n<span class=\"hljs-comment\">// &#x4e3a;&#x5f53;&#x524d; theme &#x521b;&#x5efa;&#x4e00;&#x4e2a; context</span>\n<span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">ThemeContext</span> = <span class=\"hljs-title class_\">React</span>.<span class=\"hljs-title function_\">createContext</span>();\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">Toolbar</span>(<span class=\"hljs-params\">props</span>) {\n  <span class=\"hljs-keyword\">const</span> [theme, setTheme] = <span class=\"hljs-title function_\">useState</span>(themes.<span class=\"hljs-property\">dark</span>);\n\n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">toggleTheme</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n    <span class=\"hljs-title function_\">setTheme</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">currentTheme</span> =&gt;</span> (\n      currentTheme === themes.<span class=\"hljs-property\">dark</span>\n        ? themes.<span class=\"hljs-property\">light</span>\n        : themes.<span class=\"hljs-property\">dark</span>\n    ));\n  };\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"hljs-comment\">// &#x4f7f;&#x7528; Provider &#x5c06;&#x5f53;&#x524d; props.value &#x4f20;&#x9012;&#x7ed9;&#x5185;&#x90e8;&#x7ec4;&#x4ef6;</span>\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">ThemeContext.Provider</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">{{theme,</span> <span class=\"hljs-attr\">toggleTheme</span>}}&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">ThemeButton</span> /&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">ThemeContext.Provider</span>&gt;</span></span>\n  );\n}\n\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">ThemeButton</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-comment\">// &#x901a;&#x8fc7; useContext &#x83b7;&#x53d6;&#x5f53;&#x524d; context &#x503c;</span>\n  <span class=\"hljs-keyword\">const</span> { theme, toggleTheme } = <span class=\"hljs-title function_\">useContext</span>(<span class=\"hljs-title class_\">ThemeContext</span>);\n  \n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{{background:</span> <span class=\"hljs-attr\">theme.background</span>, <span class=\"hljs-attr\">color:</span> <span class=\"hljs-attr\">theme.foreground</span> }} <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{toggleTheme}</span>&gt;</span>\n      Change the button&apos;s theme\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span></span>\n  );\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,49"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"url &#x6a21;&#x5757;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"4,8\"><code data-lines=\"4,8\">&#x76ee;&#x5f55;\nurl.<span class=\"hljs-built_in\">resolve</span>(<span class=\"hljs-built_in\">from</span>, <span class=\"hljs-built_in\">to</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,8"}},{"content":"<pre data-lines=\"9,10\"><code>url&#x6a21;&#x5757;&#x7528;&#x4e8e;&#x751f;&#x6210;&#x548c;&#x89e3;&#x6790;URL&#x3002;&#x8be5;&#x6a21;&#x5757;&#x4f7f;&#x7528;&#x524d;&#xff0c;&#x5fc5;&#x987b;&#x52a0;&#x8f7d;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,10"}},{"content":"<pre data-lines=\"11,14\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> url = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;url&apos;</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,14"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"url.resolve(from, to)","children":[{"content":"<pre data-lines=\"17,18\"><code>url.resolve&#x65b9;&#x6cd5;&#x7528;&#x4e8e;&#x751f;&#x6210;URL&#x3002;&#x5b83;&#x7684;&#x7b2c;&#x4e00;&#x4e2a;&#x53c2;&#x6570;&#x662f;&#x57fa;&#x51c6;URL&#xff0c;&#x5176;&#x4f59;&#x53c2;&#x6570;&#x4f9d;&#x6b21;&#x6839;&#x636e;&#x57fa;&#x51c6;URL&#xff0c;&#x751f;&#x6210;&#x5bf9;&#x5e94;&#x7684;&#x4f4d;&#x7f6e;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,18"}},{"content":"<pre data-lines=\"19,32\"><code class=\"language-js\">url.<span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&apos;/one/two/three&apos;</span>, <span class=\"hljs-string\">&apos;four&apos;</span>)\n<span class=\"hljs-comment\">// &apos;/one/two/four&apos;</span>\n\nurl.<span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&apos;http://example.com/&apos;</span>, <span class=\"hljs-string\">&apos;/one&apos;</span>)\n<span class=\"hljs-comment\">// &apos;http://example.com/one&apos;</span>\n\nurl.<span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&apos;http://example.com/one/&apos;</span>, <span class=\"hljs-string\">&apos;two&apos;</span>)\n<span class=\"hljs-comment\">// &apos;http://example.com/one/two&apos;</span>\n\nurl.<span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&apos;http://example.com/one&apos;</span>, <span class=\"hljs-string\">&apos;/two&apos;</span>)\n<span class=\"hljs-comment\">// &apos;http://example.com/two&apos;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,32"}},{"content":"<pre data-lines=\"34,38\"><code data-lines=\"34,38\">&#x76ee;&#x5f55;\nurl.<span class=\"hljs-built_in\">resolve</span>(<span class=\"hljs-built_in\">from</span>, <span class=\"hljs-built_in\">to</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,38"}}],"payload":{"tag":"h3","lines":"15,16"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

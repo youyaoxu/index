@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6eda;&#x52a8;&#x6761;&#x4f18;&#x5316;","children":[{"content":"<pre data-lines=\"3,23\"><code class=\"language-css\"><span class=\"hljs-selector-class\">.test-1</span>::-webkit-scrollbar {\n    <span class=\"hljs-comment\">/*&#x6eda;&#x52a8;&#x6761;&#x6574;&#x4f53;&#x6837;&#x5f0f;*/</span>\n    <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">10px</span>;\n    <span class=\"hljs-comment\">/*&#x9ad8;&#x5bbd;&#x5206;&#x522b;&#x5bf9;&#x5e94;&#x6a2a;&#x7ad6;&#x6eda;&#x52a8;&#x6761;&#x7684;&#x5c3a;&#x5bf8;*/</span>\n    <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">1px</span>;\n}\n<span class=\"hljs-selector-class\">.test-1</span>::-webkit-scrollbar-thumb {\n    <span class=\"hljs-comment\">/*&#x6eda;&#x52a8;&#x6761;&#x91cc;&#x9762;&#x5c0f;&#x65b9;&#x5757;*/</span>\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">10px</span>;\n    -webkit-<span class=\"hljs-attribute\">box-shadow</span>: inset <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">5px</span> <span class=\"hljs-built_in\">rgba</span>(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0.2</span>);\n    <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#535353</span>;\n}\n<span class=\"hljs-selector-class\">.test-1</span>::-webkit-scrollbar-track {\n    <span class=\"hljs-comment\">/*&#x6eda;&#x52a8;&#x6761;&#x91cc;&#x9762;&#x8f68;&#x9053;*/</span>\n    -webkit-<span class=\"hljs-attribute\">box-shadow</span>: inset <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">0</span> <span class=\"hljs-number\">5px</span> <span class=\"hljs-built_in\">rgba</span>(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">0.2</span>);\n    <span class=\"hljs-attribute\">border-radius</span>: <span class=\"hljs-number\">10px</span>;\n    <span class=\"hljs-attribute\">background</span>: transparent;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,23"}}],"payload":{"tag":"h1","lines":"1,2"}},{})</script>
+</body>
+</html>

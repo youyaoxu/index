@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"nginx-&#x5173;&#x4e8e;location&#x76f8;&#x5173;&#x7684;&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"2,6\"><code data-lines=\"2,6\">&#x53c2;&#x8003;\nhttps:<span class=\"hljs-regexp\">//</span>juejin.cn<span class=\"hljs-regexp\">/post/</span><span class=\"hljs-number\">7044438248495513614</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,6"}},{"content":"<pre data-lines=\"7,14\"><code data-lines=\"7,14\">nginx\n&#x5173;&#x4e8e;location&#x76f8;&#x5173;&#x7684;&#x8ba4;&#x8bc6;\n\n<span class=\"hljs-bullet\">1.</span> &#x8def;&#x5f84;&#x5c3e;&#x90e8;&#x8bbe;&#x7f6e;/&#x4e0e;&#x4e0d;&#x8bbe;&#x7f6e;&#x4e4b;&#x95f4;&#x7684;&#x533a;&#x522b;\n<span class=\"hljs-bullet\">2.</span> &#x8def;&#x5f84;&#x4e2d;&#x8bbe;&#x7f6e;.html&#x8fd9;&#x6837;&#x7279;&#x6b8a;&#x5b57;&#x6bb5;&#x7684;&#x533a;&#x522b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,14"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

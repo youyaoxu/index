@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x52a8;&#x753b;]-&#x8f93;&#x5165;&#x6846;&#x4e0d;&#x901a;&#x8fc7;&#x6296;&#x52a8;&#x6548;&#x679c;","children":[{"content":"<pre data-lines=\"3,71\"><code class=\"language-html\"><span class=\"hljs-meta\">&lt;!DOCTYPE <span class=\"hljs-keyword\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">&quot;en&quot;</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">&quot;UTF-8&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">http-equiv</span>=<span class=\"hljs-string\">&quot;X-UA-Compatible&quot;</span> <span class=\"hljs-attr\">content</span>=<span class=\"hljs-string\">&quot;IE=edge&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;viewport&quot;</span> <span class=\"hljs-attr\">content</span>=<span class=\"hljs-string\">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">title</span>&gt;</span>Document<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">title</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">style</span>&gt;</span><span class=\"language-css\">\n\t\t<span class=\"hljs-selector-tag\">body</span> {\n\t\t\t<span class=\"hljs-attribute\">background-color</span>: <span class=\"hljs-number\">#666</span>;\n\t\t}\n\n\t\t<span class=\"hljs-selector-class\">.inputBox</span> {\n\t\t\t<span class=\"hljs-attribute\">margin</span>: <span class=\"hljs-number\">120px</span>;\n\t\t}\n\n\t\t<span class=\"hljs-comment\">/* &#x5de6;&#x53f3;&#x79fb;&#x52a8;&#xff0c;&#x5373;&#x4e3a;&#x6296;&#x52a8; */</span>\n\t\t<span class=\"hljs-keyword\">@keyframes</span> donghua {\n\t\t\t<span class=\"hljs-number\">0%</span> {\n\t\t\t\t<span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">translateX</span>(<span class=\"hljs-number\">0</span>);\n\t\t\t}\n\n\t\t\t<span class=\"hljs-number\">25%</span> {\n\t\t\t\t<span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">translateX</span>(<span class=\"hljs-number\">0.5rem</span>);\n\t\t\t}\n\n\t\t\t<span class=\"hljs-number\">50%</span> {\n\t\t\t\t<span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">translateX</span>(<span class=\"hljs-number\">0</span>);\n\t\t\t}\n\n\t\t\t<span class=\"hljs-number\">75%</span> {\n\t\t\t\t<span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">translateX</span>(-<span class=\"hljs-number\">0.5rem</span>);\n\t\t\t}\n\n\t\t\t<span class=\"hljs-number\">100%</span> {\n\t\t\t\t<span class=\"hljs-attribute\">transform</span>: <span class=\"hljs-built_in\">translateX</span>(<span class=\"hljs-number\">0</span>);\n\t\t\t}\n\t\t}\n\n\t\t<span class=\"hljs-selector-tag\">input</span> {\n\t\t\t<span class=\"hljs-attribute\">outline</span>: none;\n\t\t}\n\n\t\t<span class=\"hljs-comment\">/* :invalid &#x9009;&#x62e9;&#x5668;&#x7528;&#x4e8e;&#x5728;&#x8868;&#x5355;&#x5143;&#x7d20;&#x4e2d;&#x7684;&#x503c;&#x662f;&#x975e;&#x6cd5;&#x65f6;&#x8bbe;&#x7f6e;&#x6307;&#x5b9a;&#x6837;&#x5f0f;&#xff08;&#x6821;&#x9a8c;&#x4e0d;&#x901a;&#x8fc7;&#x6307;&#x5b9a;&#x6837;&#x5f0f;&#xff09; */</span>\n\t\t<span class=\"hljs-selector-tag\">input</span><span class=\"hljs-selector-pseudo\">:invalid</span> {\n\t\t\t<span class=\"hljs-attribute\">color</span>: red;\n\t\t\t<span class=\"hljs-attribute\">animation</span>: donghua <span class=\"hljs-number\">0.2s</span> ease-in-out <span class=\"hljs-number\">2</span>;\n\t\t}\n\t</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">style</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;inputBox&quot;</span>&gt;</span>\n\t\t<span class=\"hljs-comment\">&lt;!-- pattern &#x5c5e;&#x6027;&#x53ef;&#x901a;&#x8fc7;&#x8bbe;&#x7f6e;&#x6b63;&#x5219;&#x53bb;&#x9a8c;&#x8bc1;&#x8f93;&#x5165;&#x6846;&#x7684;&#x5b57;&#x6bb5; --&gt;</span>\n\t\t<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;text&quot;</span> <span class=\"hljs-attr\">placeholder</span>=<span class=\"hljs-string\">&quot;&#x8bf7;&#x8f93;&#x5165;&#x6570;&#x5b57;&quot;</span> <span class=\"hljs-attr\">pattern</span>=<span class=\"hljs-string\">&quot;[0-9]*&quot;</span>&gt;</span>\n\t<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n\t<span class=\"hljs-comment\">&lt;!-- \n\t\t&#x601d;&#x8def;&#xff1a;\n\t\t\t&#x5f53;&#x6821;&#x9a8c;&#x4e0d;&#x901a;&#x8fc7;&#x65f6;input:invalid&#x65f6;&#xff0c;&#x89e6;&#x53d1;&#x52a8;&#x753b;&#xff0c;&#x52a8;&#x753b;&#x63a7;&#x5236;&#x8f93;&#x5165;&#x6846;&#x5de6;&#x53f3;&#x7684;&#x4f4d;&#x7f6e;\n\t\t\t&#x6765;&#x56de;&#x6c34;&#x5e73;&#x79fb;&#x52a8;&#x51e0;&#x6b21;&#xff0c;&#x6ce8;&#x610f;&#x539f;&#x751f;js&#x6807;&#x7b7e;&#x7684;pattern&#x5c5e;&#x6027;\n\t\t\t&#x53e6;&#x5916;&#xff0c;&#x901a;&#x8fc7;&#x8fd9;&#x4e2a;&#x601d;&#x8def;&#xff0c;&#x53ef;&#x4ee5;&#x8fdb;&#x4e00;&#x6b65;&#x5c06;&#x8fd9;&#x4e2a;&#x6548;&#x679c;&#x5c01;&#x88c5;&#x6210;&#x81ea;&#x5b9a;&#x4e49;&#x6307;&#x4ee4;&#x54e6;\n\t --&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,71"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

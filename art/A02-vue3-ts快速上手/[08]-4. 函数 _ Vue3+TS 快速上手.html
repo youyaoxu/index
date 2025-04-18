@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x51fd;&#x6570;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,6\"><code>&#x51fd;&#x6570;&#x662f; JavaScript &#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x7684;&#x57fa;&#x7840;&#xff0c;&#x5b83;&#x5e2e;&#x52a9;&#x4f60;&#x5b9e;&#x73b0;&#x62bd;&#x8c61;&#x5c42;&#xff0c;&#x6a21;&#x62df;&#x7c7b;&#xff0c;&#x4fe1;&#x606f;&#x9690;&#x85cf;&#x548c;&#x6a21;&#x5757;&#x3002;&#x5728; TypeScript &#x91cc;&#xff0c;&#x867d;&#x7136;&#x5df2;&#x7ecf;&#x652f;&#x6301;&#x7c7b;&#xff0c;&#x547d;&#x540d;&#x7a7a;&#x95f4;&#x548c;&#x6a21;&#x5757;&#xff0c;&#x4f46;&#x51fd;&#x6570;&#x4ecd;&#x7136;&#x662f;&#x4e3b;&#x8981;&#x7684;&#x5b9a;&#x4e49;&#x884c;&#x4e3a;&#x7684;&#x5730;&#x65b9;&#x3002;TypeScript &#x4e3a; JavaScript &#x51fd;&#x6570;&#x6dfb;&#x52a0;&#x4e86;&#x989d;&#x5916;&#x7684;&#x529f;&#x80fd;&#xff0c;&#x8ba9;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x66f4;&#x5bb9;&#x6613;&#x5730;&#x4f7f;&#x7528;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"<a href=\"#%E5%9F%BA%E6%9C%AC%E7%A4%BA%E4%BE%8B\">#</a> &#x57fa;&#x672c;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"10,13\"><code>&#x548c; JavaScript &#x4e00;&#x6837;&#xff0c;TypeScript &#x51fd;&#x6570;&#x53ef;&#x4ee5;&#x521b;&#x5efa;&#x6709;&#x540d;&#x5b57;&#x7684;&#x51fd;&#x6570;&#x548c;&#x533f;&#x540d;&#x51fd;&#x6570;&#x3002;&#x4f60;&#x53ef;&#x4ee5;&#x968f;&#x610f;&#x9009;&#x62e9;&#x9002;&#x5408;&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x7684;&#x65b9;&#x5f0f;&#xff0c;&#x4e0d;&#x8bba;&#x662f;&#x5b9a;&#x4e49;&#x4e00;&#x7cfb;&#x5217; API &#x51fd;&#x6570;&#x8fd8;&#x662f;&#x53ea;&#x4f7f;&#x7528;&#x4e00;&#x6b21;&#x7684;&#x51fd;&#x6570;&#x3002;\n\n&#x901a;&#x8fc7;&#x4e0b;&#x9762;&#x7684;&#x4f8b;&#x5b50;&#x53ef;&#x4ee5;&#x8fc5;&#x901f;&#x56de;&#x60f3;&#x8d77;&#x8fd9;&#x4e24;&#x79cd; JavaScript &#x4e2d;&#x7684;&#x51fd;&#x6570;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,13"}}],"payload":{"tag":"h2","lines":"7,9"}},{"content":"<a href=\"#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B\">#</a> &#x51fd;&#x6570;&#x7c7b;&#x578b;","children":[{"content":"<a href=\"#%E4%B8%BA%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B\">#</a> &#x4e3a;&#x51fd;&#x6570;&#x5b9a;&#x4e49;&#x7c7b;&#x578b;","children":[{"content":"<pre data-lines=\"19,22\"><code>&#x8ba9;&#x6211;&#x4eec;&#x4e3a;&#x4e0a;&#x9762;&#x90a3;&#x4e2a;&#x51fd;&#x6570;&#x6dfb;&#x52a0;&#x7c7b;&#x578b;&#xff1a;\n\n&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x7ed9;&#x6bcf;&#x4e2a;&#x53c2;&#x6570;&#x6dfb;&#x52a0;&#x7c7b;&#x578b;&#x4e4b;&#x540e;&#x518d;&#x4e3a;&#x51fd;&#x6570;&#x672c;&#x8eab;&#x6dfb;&#x52a0;&#x8fd4;&#x56de;&#x503c;&#x7c7b;&#x578b;&#x3002;TypeScript &#x80fd;&#x591f;&#x6839;&#x636e;&#x8fd4;&#x56de;&#x8bed;&#x53e5;&#x81ea;&#x52a8;&#x63a8;&#x65ad;&#x51fa;&#x8fd4;&#x56de;&#x503c;&#x7c7b;&#x578b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,22"}}],"payload":{"tag":"h3","lines":"17,18"}},{"content":"<a href=\"#%E4%B9%A6%E5%86%99%E5%AE%8C%E6%95%B4%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B\">#</a> &#x4e66;&#x5199;&#x5b8c;&#x6574;&#x51fd;&#x6570;&#x7c7b;&#x578b;","children":[{"content":"<pre data-lines=\"25,26\"><code>&#x73b0;&#x5728;&#x6211;&#x4eec;&#x5df2;&#x7ecf;&#x4e3a;&#x51fd;&#x6570;&#x6307;&#x5b9a;&#x4e86;&#x7c7b;&#x578b;&#xff0c;&#x4e0b;&#x9762;&#x8ba9;&#x6211;&#x4eec;&#x5199;&#x51fa;&#x51fd;&#x6570;&#x7684;&#x5b8c;&#x6574;&#x7c7b;&#x578b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,26"}}],"payload":{"tag":"h3","lines":"23,24"}}],"payload":{"tag":"h2","lines":"14,16"}},{"content":"<a href=\"#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0%E5%92%8C%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0\">#</a> &#x53ef;&#x9009;&#x53c2;&#x6570;&#x548c;&#x9ed8;&#x8ba4;&#x53c2;&#x6570;","children":[{"content":"<a href=\"#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0\">#</a> &#x5269;&#x4f59;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"38,41\"><code>&#x5fc5;&#x8981;&#x53c2;&#x6570;&#xff0c;&#x9ed8;&#x8ba4;&#x53c2;&#x6570;&#x548c;&#x53ef;&#x9009;&#x53c2;&#x6570;&#x6709;&#x4e2a;&#x5171;&#x540c;&#x70b9;&#xff1a;&#x5b83;&#x4eec;&#x8868;&#x793a;&#x67d0;&#x4e00;&#x4e2a;&#x53c2;&#x6570;&#x3002; &#x6709;&#x65f6;&#xff0c;&#x4f60;&#x60f3;&#x540c;&#x65f6;&#x64cd;&#x4f5c;&#x591a;&#x4e2a;&#x53c2;&#x6570;&#xff0c;&#x6216;&#x8005;&#x4f60;&#x5e76;&#x4e0d;&#x77e5;&#x9053;&#x4f1a;&#x6709;&#x591a;&#x5c11;&#x53c2;&#x6570;&#x4f20;&#x9012;&#x8fdb;&#x6765;&#x3002; &#x5728; JavaScript &#x91cc;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x4f7f;&#x7528; `arguments` &#x6765;&#x8bbf;&#x95ee;&#x6240;&#x6709;&#x4f20;&#x5165;&#x7684;&#x53c2;&#x6570;&#x3002;\n\n&#x5728; TypeScript &#x91cc;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x628a;&#x6240;&#x6709;&#x53c2;&#x6570;&#x6536;&#x96c6;&#x5230;&#x4e00;&#x4e2a;&#x53d8;&#x91cf;&#x91cc;&#xff1a; &#x5269;&#x4f59;&#x53c2;&#x6570;&#x4f1a;&#x88ab;&#x5f53;&#x505a;&#x4e2a;&#x6570;&#x4e0d;&#x9650;&#x7684;&#x53ef;&#x9009;&#x53c2;&#x6570;&#x3002; &#x53ef;&#x4ee5;&#x4e00;&#x4e2a;&#x90fd;&#x6ca1;&#x6709;&#xff0c;&#x540c;&#x6837;&#x4e5f;&#x53ef;&#x4ee5;&#x6709;&#x4efb;&#x610f;&#x4e2a;&#x3002; &#x7f16;&#x8bd1;&#x5668;&#x521b;&#x5efa;&#x53c2;&#x6570;&#x6570;&#x7ec4;&#xff0c;&#x540d;&#x5b57;&#x662f;&#x4f60;&#x5728;&#x7701;&#x7565;&#x53f7;&#xff08; `...`&#xff09;&#x540e;&#x9762;&#x7ed9;&#x5b9a;&#x7684;&#x540d;&#x5b57;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x5728;&#x51fd;&#x6570;&#x4f53;&#x5185;&#x4f7f;&#x7528;&#x8fd9;&#x4e2a;&#x6570;&#x7ec4;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"38,41"}}],"payload":{"tag":"h3","lines":"36,37"}}],"payload":{"tag":"h2","lines":"27,29"}},{"content":"<a href=\"#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD\">#</a> &#x51fd;&#x6570;&#x91cd;&#x8f7d;","children":[{"content":"<pre data-lines=\"45,46\"><code>&#x51fd;&#x6570;&#x91cd;&#x8f7d;: &#x51fd;&#x6570;&#x540d;&#x76f8;&#x540c;, &#x800c;&#x5f62;&#x53c2;&#x4e0d;&#x540c;&#x7684;&#x591a;&#x4e2a;&#x51fd;&#x6570; &#x5728; JS &#x4e2d;, &#x7531;&#x4e8e;&#x5f31;&#x7c7b;&#x578b;&#x7684;&#x7279;&#x70b9;&#x548c;&#x5f62;&#x53c2;&#x4e0e;&#x5b9e;&#x53c2;&#x53ef;&#x4ee5;&#x4e0d;&#x5339;&#x914d;, &#x662f;&#x6ca1;&#x6709;&#x51fd;&#x6570;&#x91cd;&#x8f7d;&#x8fd9;&#x4e00;&#x8bf4;&#x7684; &#x4f46;&#x5728; TS &#x4e2d;, &#x4e0e;&#x5176;&#x5b83;&#x9762;&#x5411;&#x5bf9;&#x8c61;&#x7684;&#x8bed;&#x8a00;(&#x5982; Java)&#x5c31;&#x5b58;&#x5728;&#x6b64;&#x8bed;&#x6cd5;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,46"}}],"payload":{"tag":"h2","lines":"42,44"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

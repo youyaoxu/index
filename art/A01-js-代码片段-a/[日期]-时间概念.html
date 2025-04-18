@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x65e5;&#x671f;]-&#x65f6;&#x95f4;&#x6982;&#x5ff5;","children":[{"content":"<pre data-lines=\"2,7\"><code data-lines=\"2,7\">&#x81ea;&#x7136;&#x5468;&#x5c31;&#x662f;&#x5468;&#x4e00;&#x5230;&#x5468;&#x65e5;&#x3002;&#x975e;&#x81ea;&#x7136;&#x5468;&#x5c31;&#x662f;&#x672c;&#x5468;&#x4e09;&#x5230;&#x4e0b;&#x5468;&#x4e09;&#x3002;&#x540c;&#x7406;&#xff0c;&#x81ea;&#x7136;&#x6708;&#x3002;\n\n&#x81ea;&#x7136;&#x5929;&#xff0c;&#x5c31;&#x662f;&#x4efb;&#x610f;&#x4e00;&#x5929;&#xff0c;&#x76f8;&#x5bf9;&#x7684;&#x5c31;&#x662f;&#x5de5;&#x4f5c;&#x65e5;&#xff0c;&#x4f11;&#x606f;&#x65e5;&#x3002;&#x6bd4;&#x5982;&#xff0c;&#x9001;&#x8d27;&#x5230;&#x5bb6;&#x9700;&#x8981;7&#x4e2a;&#x81ea;&#x7136;&#x5929;&#xff0c;&#x5c31;&#x662f;7&#x5929;&#x3002;7&#x4e2a;&#x5de5;&#x4f5c;&#x65e5;&#xff0c;&#x5c31;&#x662f;&#x9694;&#x8fc7;&#x5468;&#x672b;&#x548c;&#x6cd5;&#x5b9a;&#x8282;&#x5047;&#x65e5;&#x3002;&#x975e;&#x81ea;&#x7136;&#x6708;&#x662f;&#x76f8;&#x5bf9;&#x81ea;&#x7136;&#x6708;&#x800c;&#x8a00;&#x7684;&#x3002;&#x81ea;&#x7136;&#x6708;&#xff1a;&#x6bcf;&#x6708;&#x7684;&#x7b2c;&#x4e00;&#x5929;&#x5f00;&#x59cb;&#x5230;&#x6bcf;&#x6708;&#x7684;&#x6700;&#x540e;&#x4e00;&#x5929;&#x4e3a;&#x6b62;&#x4e3a;&#x4e00;&#x4e2a;&#x81ea;&#x7136;&#x6708;&#xff0c;&#x5982;3&#x6708;1&#x65e5;&#x5230;3&#x6708;31&#x65e5;&#x3002;&#x975e;&#x81ea;&#x7136;&#x6708;&#xff1a;&#x662f;&#x4ece;&#x4e00;&#x4e2a;&#x6708;&#x4efd;&#x4e2d;&#x7684;&#x4efb;&#x4e00;&#x5929;&#x5f00;&#x59cb;,&#x5230;&#x4e0b;&#x4e2a;&#x6708;&#x4efd;&#x7684;&#x76f8;&#x540c;&#x65e5;&#x671f;&#x7684;&#x90a3;&#x4e00;&#x5929;&#x4e3a;&#x6b62;,&#x4e5f;&#x7b97;&#x4e00;&#x4e2a;&#x6708;,&#x4f46;&#x5c31;&#x4e0d;&#x662f;&#x81ea;&#x7136;&#x6708;&#xff0c;&#x5982;3&#x6708;15 &#x65e5;&#x5230;4&#x6708;15&#x65e5;&#x4e3a;&#x4e00;&#x4e2a;&#x975e;&#x81ea;&#x7136;&#x6708;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,7"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

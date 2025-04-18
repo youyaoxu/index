@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"querystring &#x6a21;&#x5757;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"4,8\"><code data-lines=\"4,8\">&#x76ee;&#x5f55;\nquerystring.<span class=\"hljs-built_in\">parse</span>()\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,8"}},{"content":"<pre data-lines=\"9,10\"><code>querystring&#x6a21;&#x5757;&#x4e3b;&#x8981;&#x7528;&#x6765;&#x89e3;&#x6790;&#x67e5;&#x8be2;&#x5b57;&#x7b26;&#x4e32;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,10"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"querystring.parse()","children":[{"content":"<pre data-lines=\"13,14\"><code>querystring.parse()&#x65b9;&#x6cd5;&#x7528;&#x4e8e;&#x5c06;&#x4e00;&#x4e2a;&#x67e5;&#x8be2;&#x5b57;&#x7b26;&#x4e32;&#x89e3;&#x6790;&#x4e3a; JavaScript &#x5bf9;&#x8c61;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,14"}},{"content":"<pre data-lines=\"15,21\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> str = <span class=\"hljs-string\">&apos;foo=bar&amp;abc=xyz&amp;abc=123&apos;</span>;\n\nquerystring.<span class=\"hljs-title function_\">parse</span>(str)\n<span class=\"hljs-comment\">// { foo: &apos;bar&apos;, abc: [ &apos;xyz&apos;, &apos;123&apos; ] }</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,21"}},{"content":"<pre data-lines=\"22,34\"><code>parse&#x65b9;&#x6cd5;&#x4e00;&#x5171;&#x53ef;&#x4ee5;&#x63a5;&#x53d7;&#x56db;&#x4e2a;&#x53c2;&#x6570;&#x3002;\n\nquerystring.parse(str[, sep[, eq[, options]]])\n\n- str&#xff1a;&#x9700;&#x8981;&#x89e3;&#x6790;&#x7684;&#x67e5;&#x8be2;&#x5b57;&#x7b26;&#x4e32;\n\n- sep&#xff1a;&#x591a;&#x4e2a;&#x952e;&#x503c;&#x5bf9;&#x4e4b;&#x95f4;&#x7684;&#x5206;&#x9694;&#x7b26;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;&amp;\n\n- eq&#xff1a;&#x952e;&#x540d;&#x4e0e;&#x952e;&#x503c;&#x4e4b;&#x95f4;&#x7684;&#x5206;&#x9694;&#x7b26;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;=\n\n- options&#xff1a;&#x914d;&#x7f6e;&#x5bf9;&#x8c61;&#xff0c;&#x5b83;&#x6709;&#x4e24;&#x4e2a;&#x5c5e;&#x6027;&#xff0c;decodeURIComponent&#x5c5e;&#x6027;&#x662f;&#x4e00;&#x4e2a;&#x51fd;&#x6570;&#xff0c;&#x7528;&#x6765;&#x5c06;&#x7f16;&#x7801;&#x540e;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#x8fd8;&#x539f;&#xff0c;&#x9ed8;&#x8ba4;&#x662f;querystring.unescape()&#xff0c;maxKeys&#x5c5e;&#x6027;&#x6307;&#x5b9a;&#x6700;&#x591a;&#x89e3;&#x6790;&#x591a;&#x5c11;&#x4e2a;&#x5c5e;&#x6027;&#xff0c;&#x9ed8;&#x8ba4;&#x662f;1000&#xff0c;&#x5982;&#x679c;&#x8bbe;&#x4e3a;0&#x5c31;&#x8868;&#x793a;&#x4e0d;&#x9650;&#x5236;&#x5c5e;&#x6027;&#x7684;&#x6700;&#x5927;&#x6570;&#x91cf;&#x3002;\n&#x524d;&#x9762;&#x7684;&#x4f8b;&#x5b50;&#x7701;&#x7565;&#x4e86;&#x540e;&#x9762;&#x4e09;&#x4e2a;&#x53c2;&#x6570;&#xff0c;&#x5b8c;&#x6574;&#x7684;&#x8c03;&#x7528;&#x5f62;&#x5f0f;&#x5982;&#x4e0b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,34"}},{"content":"<pre data-lines=\"35,43\"><code class=\"language-js\">querystring.<span class=\"hljs-title function_\">parse</span>(\n  <span class=\"hljs-string\">&apos;w=%D6%D0%CE%C4&amp;foo=bar&apos;</span>,\n  <span class=\"hljs-literal\">null</span>,\n  <span class=\"hljs-literal\">null</span>,\n  { <span class=\"hljs-attr\">decodeURIComponent</span>: gbkDecodeURIComponent }\n)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,43"}},{"content":"<pre data-lines=\"44,45\"><code>parse&#x65b9;&#x6cd5;&#x4e5f;&#x53ef;&#x4ee5;&#x7528;&#x6765;&#x89e3;&#x6790;&#x4e00;&#x822c;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,45"}},{"content":"<pre data-lines=\"46,56\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> str = <span class=\"hljs-string\">&apos;name:Sophie;shape:fox;condition:new&apos;</span>;\n\nquerystring.<span class=\"hljs-title function_\">parse</span>(str, <span class=\"hljs-string\">&apos;;&apos;</span>, <span class=\"hljs-string\">&apos;:&apos;</span>)\n<span class=\"hljs-comment\">// {</span>\n<span class=\"hljs-comment\">//   name: &apos;Sophie&apos;,</span>\n<span class=\"hljs-comment\">//   shape: &apos;fox&apos;,</span>\n<span class=\"hljs-comment\">//   condition: &apos;new&apos;,</span>\n<span class=\"hljs-comment\">// }</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,56"}},{"content":"<pre data-lines=\"57,61\"><code data-lines=\"57,61\">&#x76ee;&#x5f55;\nquerystring.<span class=\"hljs-built_in\">parse</span>()\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"57,61"}}],"payload":{"tag":"h3","lines":"11,12"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x51fd;&#x6570;closure","children":[{"content":"<pre data-lines=\"1,25\"><code data-lines=\"1,25\">/*<span class=\"hljs-number\">1</span>. \nfunction <span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-title\">n</span></span>,o){<span class=\"hljs-regexp\">//</span>&#x5916;&#x5c42;&#x51fd;&#x6570;\n  console.log(o);\n  <span class=\"hljs-keyword\">return</span> {\n    <span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>:<span class=\"hljs-title\">function</span></span>(m){<span class=\"hljs-regexp\">//</span>&#x5185;&#x5c42;&#x51fd;&#x6570; n\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-title\">m</span></span>,n);\n    }\n  }\n}\nvar a=<span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(0);<span class=\"hljs-title\">a</span></span>.<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">1</span>); a.<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">2</span>); a.<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">3</span>);\n  <span class=\"hljs-regexp\">//undefined</span>     <span class=\"hljs-number\">0</span>        <span class=\"hljs-number\">0</span>         <span class=\"hljs-number\">0</span>\n<span class=\"hljs-regexp\">//a</span>:{<span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>:<span class=\"hljs-title\">function</span></span>(m){<span class=\"hljs-regexp\">//</span>&#x5185;&#x5c42;&#x51fd;&#x6570; n=<span class=\"hljs-number\">0</span>\n      <span class=\"hljs-regexp\">//return</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-title\">m</span></span>,n);\n  <span class=\"hljs-regexp\">//</span>}\nvar a=<span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(0).<span class=\"hljs-title\">fun</span></span>(<span class=\"hljs-number\">1</span>).<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">2</span>).<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">3</span>);\n  <span class=\"hljs-regexp\">//undefined</span>   <span class=\"hljs-number\">0</span>      <span class=\"hljs-number\">1</span>      <span class=\"hljs-number\">2</span>\n<span class=\"hljs-regexp\">//</span>{<span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>:<span class=\"hljs-title\">function</span></span>(m){<span class=\"hljs-regexp\">//</span>&#x5185;&#x5c42;&#x51fd;&#x6570; n=<span class=\"hljs-number\">2</span>\n      <span class=\"hljs-regexp\">//return</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-title\">m</span></span>,n);\n  <span class=\"hljs-regexp\">//</span>}\nvar a=<span class=\"hljs-function\"><span class=\"hljs-keyword\">fun</span>(0).<span class=\"hljs-title\">fun</span></span>(<span class=\"hljs-number\">1</span>); a.<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">2</span>); a.<span class=\"hljs-keyword\">fun</span>(<span class=\"hljs-number\">3</span>);\n  <span class=\"hljs-regexp\">//undefined</span>    <span class=\"hljs-number\">0</span>       <span class=\"hljs-number\">1</span>        <span class=\"hljs-number\">1</span>\n*<span class=\"hljs-regexp\">/\n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"1,25"}},{"content":"<pre data-lines=\"25,37\"><code data-lines=\"25,37\"><span class=\"hljs-comment\">/*2\nvar a=0,b=0;\nfunction A(a){\n  A=function(b){alert(a+b++)};\n  alert(a);\n}\nA(1);//1\n//A:function(b){(a=1)alert(a+b++)};\nA(12);//13\n*/</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,37"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

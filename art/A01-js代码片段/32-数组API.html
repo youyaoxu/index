@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6570;&#x7ec4;API","children":[{"content":"&#x5c5e;&#x6027;","children":[{"content":"<pre data-lines=\"3,7\"><code data-lines=\"3,7\"><span class=\"hljs-keyword\">length</span>\n<span class=\"hljs-keyword\">prototype</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,7"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"&#x65b9;&#x6cd5;","children":[{"content":"Array.from()","children":[{"content":"<pre data-lines=\"17,22\"><code data-lines=\"17,22\"><span class=\"hljs-keyword\">Array</span>.<span class=\"hljs-keyword\">from</span>(<span class=\"hljs-string\">&apos;foo&apos;</span>); // [ &quot;f&quot;, &quot;o&quot;, &quot;o&quot; ]\nconsole.log(<span class=\"hljs-keyword\">Array</span>.<span class=\"hljs-keyword\">from</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>], x =&gt; x + x));\n// <span class=\"hljs-keyword\">Array</span> [<span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">6</span>]\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,22"}}],"payload":{"tag":"h4","lines":"16,17"}},{"content":"Array.isArray()","children":[{"content":"<pre data-lines=\"23,29\"><code data-lines=\"23,29\"><span class=\"hljs-built_in\">Array</span>.isArray([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>]);  <span class=\"hljs-comment\">// true</span>\n<span class=\"hljs-built_in\">Array</span>.isArray({<span class=\"hljs-attr\">foo</span>: <span class=\"hljs-number\">123</span>}); <span class=\"hljs-comment\">// false</span>\n<span class=\"hljs-built_in\">Array</span>.isArray(<span class=\"hljs-string\">&apos;foobar&apos;</span>);   <span class=\"hljs-comment\">// false</span>\n<span class=\"hljs-built_in\">Array</span>.isArray(<span class=\"hljs-literal\">undefined</span>);  <span class=\"hljs-comment\">// false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,29"}}],"payload":{"tag":"h4","lines":"22,23"}},{"content":"Array.of()","children":[{"content":"<pre data-lines=\"30,37\"><code data-lines=\"30,37\">Array<span class=\"hljs-selector-class\">.of</span>(<span class=\"hljs-number\">7</span>);       <span class=\"hljs-comment\">// [7] </span>\nArray<span class=\"hljs-selector-class\">.of</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>); <span class=\"hljs-comment\">// [1, 2, 3]</span>\n\n<span class=\"hljs-built_in\">Array</span>(<span class=\"hljs-number\">7</span>);          <span class=\"hljs-comment\">// [ , , , , , , ]</span>\n<span class=\"hljs-built_in\">Array</span>(<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>);    <span class=\"hljs-comment\">// [1, 2, 3]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,37"}}],"payload":{"tag":"h4","lines":"29,30"}},{"content":"join","children":[{"content":"<pre data-lines=\"39,44\"><code data-lines=\"39,44\"><span class=\"hljs-attribute\">var</span> arr=[<span class=\"hljs-number\">11</span>,<span class=\"hljs-number\">22</span>,<span class=\"hljs-number\">33</span>,<span class=\"hljs-number\">44</span>,<span class=\"hljs-number\">55</span>];\n<span class=\"hljs-attribute\">var</span> str=arr.join(<span class=\"hljs-string\">&quot;,&quot;</span>);\n<span class=\"hljs-attribute\">console</span>.log(str) // <span class=\"hljs-number\">11</span>,<span class=\"hljs-number\">22</span>,<span class=\"hljs-number\">33</span>,<span class=\"hljs-number\">44</span>,<span class=\"hljs-number\">55</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"39,44"}}],"payload":{"tag":"h4","lines":"37,38"}},{"content":"split","children":[{"content":"<pre data-lines=\"46,49\"><code data-lines=\"46,49\">\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,49"}}],"payload":{"tag":"h4","lines":"44,45"}},{"content":"","children":[],"payload":{"tag":"h4","lines":"49,50"}}],"payload":{"tag":"h3","lines":"7,8"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

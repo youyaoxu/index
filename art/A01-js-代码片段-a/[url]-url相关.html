@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Qs&#x5e93;&#x4f7f;&#x7528;","children":[{"content":"qs.parse","children":[{"content":"<pre data-lines=\"3,12\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">Qs</span> = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;qs&apos;</span>);\n\n<span class=\"hljs-keyword\">let</span> url = <span class=\"hljs-string\">&apos;method=query_sql_dataset_data&amp;projectId=85&amp;appToken=7d22e38e-5717-11e7-907b-a6006ad3dba0&apos;</span>;\n\n<span class=\"hljs-title class_\">Qs</span>.<span class=\"hljs-title function_\">parse</span>(url);\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Qs</span>.<span class=\"hljs-title function_\">parse</span>(url));\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,12"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"qs.stringify","children":[{"content":"<pre data-lines=\"14,33\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> <span class=\"hljs-title class_\">Qs</span> = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;qs&apos;</span>);\n\n<span class=\"hljs-keyword\">let</span> obj= {\n\n    <span class=\"hljs-attr\">method</span>: <span class=\"hljs-string\">&quot;query_sql_dataset_data&quot;</span>,\n\n    <span class=\"hljs-attr\">projectId</span>: <span class=\"hljs-string\">&quot;85&quot;</span>,\n\n    <span class=\"hljs-attr\">appToken</span>: <span class=\"hljs-string\">&quot;7d22e38e-5717-11e7-907b-a6006ad3dba0&quot;</span>,\n\n    <span class=\"hljs-attr\">datasetId</span>: <span class=\"hljs-string\">&quot; 12564701&quot;</span>\n\n};\n\n<span class=\"hljs-title class_\">Qs</span>.<span class=\"hljs-title function_\">parse</span>(url);\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Qs</span>.<span class=\"hljs-title function_\">parse</span>(url));\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,33"}}],"payload":{"tag":"h2","lines":"13,14"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

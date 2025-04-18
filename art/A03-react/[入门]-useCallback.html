@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"useCallback&#x5165;&#x95e8;","children":[{"content":"<pre data-lines=\"2,43\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useState, useCallback } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>;\n\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">SubmitButton</span>(<span class=\"hljs-params\">props</span>) {\n  <span class=\"hljs-keyword\">const</span> { onButtonClick, children } = props;\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">`<span class=\"hljs-subst\">&#x24;{children}</span> updated`</span>);\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{onButtonClick}</span>&gt;</span>{children}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span></span>\n  );\n}\n<span class=\"hljs-comment\">// &#x4f7f;&#x7528; React.memo &#x68c0;&#x67e5; props &#x53d8;&#x66f4;&#xff0c;&#x590d;&#x7528;&#x6700;&#x8fd1;&#x4e00;&#x6b21;&#x6e32;&#x67d3;&#x7ed3;&#x679c;</span>\n<span class=\"hljs-title class_\">SubmitButton</span> = <span class=\"hljs-title class_\">React</span>.<span class=\"hljs-title function_\">memo</span>(submitButton);\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">CallbackForm</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> [count1, setCount1] = <span class=\"hljs-title function_\">useState</span>(<span class=\"hljs-number\">0</span>);\n  <span class=\"hljs-keyword\">const</span> [count2, setCount2] = <span class=\"hljs-title function_\">useState</span>(<span class=\"hljs-number\">0</span>);\n\n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">handleAdd1</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n    <span class=\"hljs-title function_\">setCount1</span>(count1 + <span class=\"hljs-number\">1</span>);\n  }\n\n  <span class=\"hljs-comment\">// &#x8c03;&#x7528; useCallback &#x8fd4;&#x56de;&#x4e00;&#x4e2a; memoized &#x56de;&#x8c03;&#xff0c;&#x8be5;&#x56de;&#x8c03;&#x5728;&#x4f9d;&#x8d56;&#x9879;&#x66f4;&#x65b0;&#x65f6;&#x624d;&#x4f1a;&#x66f4;&#x65b0;</span>\n  <span class=\"hljs-keyword\">const</span> handleAdd2 = <span class=\"hljs-title function_\">useCallback</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    <span class=\"hljs-title function_\">setCount2</span>(count2 + <span class=\"hljs-number\">1</span>);\n  }, [count2]);\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>count1: {count1}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">SubmitButton</span> <span class=\"hljs-attr\">onButtonClick</span>=<span class=\"hljs-string\">{handleAdd1}</span>&gt;</span>button1<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">SubmitButton</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>count2: {count2}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">SubmitButton</span> <span class=\"hljs-attr\">onButtonClick</span>=<span class=\"hljs-string\">{handleAdd2}</span>&gt;</span>button2<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">SubmitButton</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  )\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,43"}},{"content":"<pre data-lines=\"44,47\"><code data-lines=\"44,47\"><span class=\"hljs-function\"><span class=\"hljs-title\">useCallback</span><span class=\"hljs-params\">(fn, deps)</span></span> &#x76f8;&#x5f53;&#x4e8e; <span class=\"hljs-built_in\">useMemo</span>(() =&gt; fn, deps)&#xff0c;&#x4ee5;&#x4e0a; useCallback &#x53ef;&#x66ff;&#x6362;&#x6210; useMemo &#x7ed3;&#x679c;&#x5982;&#x4e0b;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,47"}},{"content":"<pre data-lines=\"49,54\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">const</span> handleAdd2 = <span class=\"hljs-title function_\">useMemo</span>(<span class=\"hljs-function\">() =&gt;</span> {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-function\">() =&gt;</span> <span class=\"hljs-title function_\">setCount2</span>(count2 + <span class=\"hljs-number\">1</span>);\n}, [count2]);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,54"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

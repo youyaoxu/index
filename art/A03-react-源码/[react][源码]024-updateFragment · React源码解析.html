@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"updateFragment","children":[{"content":"<pre data-lines=\"2,3\"><code>&#x4ec0;&#x4e48;&#x662f;`Fragment`&#xff0c;&#x90a3;&#x5c31;&#x662f;`React.Fragment`&#x3002;&#x6216;&#x8005;&#x4e0d;&#x77e5;&#x9053;&#x5404;&#x4f4d;&#x6709;&#x6ca1;&#x6709;&#x770b;&#x8fc7;&#x4e00;&#x79cd;&#x5199;&#x6cd5;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,3"}},{"content":"<pre data-lines=\"4,11\"><code data-lines=\"4,11\"><span class=\"hljs-section\">&lt;&gt;</span>\n  <span class=\"hljs-section\">&lt;Child1&gt;</span>\n  <span class=\"hljs-section\">&lt;Child2&gt;</span>\n<span class=\"hljs-section\">&lt;/&gt;</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,11"}},{"content":"<pre data-lines=\"12,15\"><code>`Fragment`&#x5bf9;&#x5e94;`Node`&#xff0c;&#x56e0;&#x4e3a;&#x4ed6;&#x4e0d;&#x662f;&#x4e00;&#x4e2a;&#x5355;&#x72ec;&#x7684;DOM&#x8282;&#x70b9;&#xff08;&#x6216;&#x8005;Fiber&#x8282;&#x70b9;&#xff09;&#xff0c;&#x800c;&#x662f;&#x4e00;&#x7ec4;&#x7247;&#x6bb5;&#x3002;&#x5bf9;&#x4e8e;`Fragment`&#x6765;&#x8bf4;&#xff0c;&#x4ed6;&#x672c;&#x8eab;&#x6ca1;&#x4ec0;&#x4e48;&#x4f5c;&#x7528;&#xff0c;&#x6240;&#x4ee5;&#x53ea;&#x9700;&#x8981;&#x5904;&#x7406;&#x5176;`Children`\n\n&#x5728;`reconcileChildFibers`&#x91cc;&#x9762;&#x6709;&#x8fd9;&#x4e48;&#x4e00;&#x6bb5;&#x4ee3;&#x7801;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,15"}},{"content":"<pre data-lines=\"16,27\"><code data-lines=\"16,27\">const isUnkeyedTopLevelFragment =\n  typeof newChild === <span class=\"hljs-string\">&apos;object&apos;</span> <span class=\"hljs-variable\">&amp;&amp;</span>\n  newChild !== <span class=\"hljs-keyword\">null</span> <span class=\"hljs-variable\">&amp;&amp;</span>\n  newChild.type === REACT_FRAGMENT_TYPE <span class=\"hljs-variable\">&amp;&amp;</span>\n  newChild.<span class=\"hljs-keyword\">key</span> === <span class=\"hljs-keyword\">null</span>;\n<span class=\"hljs-keyword\">if</span> (isUnkeyedTopLevelFragment) {\n  newChild = newChild.props.children;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,27"}},{"content":"<pre data-lines=\"28,29\"><code>&#x4e5f;&#x5c31;&#x662f;&#x8bf4;&#x5982;&#x679c;&#x4f60;&#x4f7f;&#x7528;`Fragment`&#x5e76;&#x4e14;&#x6ca1;&#x6709;&#x7ed9;&#x4ed6;&#x52a0;`key`&#xff0c;&#x5219;&#x4f1a;&#x53d8;&#x6210;&#x76f4;&#x63a5;&#x5904;&#x7406;&#x4ed6;&#x7684;`children`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,29"}},{"content":"<pre data-lines=\"30,45\"><code data-lines=\"30,45\"><span class=\"hljs-function\">function <span class=\"hljs-title\">updateFragment</span><span class=\"hljs-params\">(current, workInProgress)</span> </span>{\n  <span class=\"hljs-keyword\">const</span> nextChildren = workInProgress.pendingProps;\n  <span class=\"hljs-keyword\">if</span> (hasLegacyContextChanged()) {\n    \n    \n  } <span class=\"hljs-function\"><span class=\"hljs-keyword\">else</span> <span class=\"hljs-title\">if</span> <span class=\"hljs-params\">(workInProgress.memoizedProps === nextChildren)</span> </span>{\n    <span class=\"hljs-function\"><span class=\"hljs-keyword\">return</span> <span class=\"hljs-title\">bailoutOnAlreadyFinishedWork</span><span class=\"hljs-params\">(current, workInProgress)</span></span>;\n  }\n  reconcileChildren(current, workInProgress, nextChildren);\n  memoizeProps(workInProgress, nextChildren);\n  <span class=\"hljs-keyword\">return</span> workInProgress.child;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,45"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"46,47"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"50,51"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

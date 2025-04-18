@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"updatePortalComponent","children":[{"content":"<pre data-lines=\"2,5\"><code>[`portal`](https://react.jokcy.me/docs/core/portal)&#x662f;&#x4e00;&#x4e2a;&#x7279;&#x6b8a;&#x7684;`React Type`&#xff0c;&#x4ed6;&#x4f1a;&#x5305;&#x542b;&#x4e00;&#x4e2a;`container`&#x3002;\n\nportal&#x672c;&#x8eab;&#x6ca1;&#x6709;&#x4ec0;&#x4e48;&#x529f;&#x80fd;&#xff0c;&#x6240;&#x4ee5;&#x4e0d;&#x9700;&#x8981;&#x600e;&#x4e48;&#x5904;&#x7406;&#xff0c;&#x76f4;&#x63a5;`reconcileChildren`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,5"}},{"content":"<pre data-lines=\"6,38\"><code data-lines=\"6,38\"><span class=\"hljs-keyword\">function</span> updatePortalComponent(<span class=\"hljs-keyword\">current</span>, workInProgress, renderExpirationTime) {\n  pushHostContainer(workInProgress, workInProgress.stateNode.containerInfo);\n  const nextChildren = workInProgress.pendingProps;\n  <span class=\"hljs-keyword\">if</span> (hasLegacyContextChanged()) {\n    \n    \n  } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span> (workInProgress.memoizedProps === nextChildren) {\n    <span class=\"hljs-keyword\">return</span> bailoutOnAlreadyFinishedWork(<span class=\"hljs-keyword\">current</span>, workInProgress);\n  }\n\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">current</span> === <span class=\"hljs-keyword\">null</span>) {\n    \n    \n    \n    \n    \n    workInProgress.child = reconcileChildFibers(\n      workInProgress,\n      <span class=\"hljs-keyword\">null</span>,\n      nextChildren,\n      renderExpirationTime,\n    );\n    memoizeProps(workInProgress, nextChildren);\n  } <span class=\"hljs-keyword\">else</span> {\n    reconcileChildren(<span class=\"hljs-keyword\">current</span>, workInProgress, nextChildren);\n    memoizeProps(workInProgress, nextChildren);\n  }\n  <span class=\"hljs-keyword\">return</span> workInProgress.child;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,38"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"39,40"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"43,44"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

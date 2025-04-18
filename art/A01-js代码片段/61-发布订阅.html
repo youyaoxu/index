@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x53d1;&#x5e03;,&#x8ba2;&#x9605;&#x6a21;&#x5f0f;","children":[{"content":"<pre data-lines=\"4,65\"><code class=\"language-js\"><span class=\"hljs-keyword\">let</span> event={\n  <span class=\"hljs-attr\">list</span>:{},\n  <span class=\"hljs-title function_\">on</span>(<span class=\"hljs-params\">key,fn</span>){\n    <span class=\"hljs-keyword\">if</span>(!<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">list</span>(key)){\n      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">list</span>[key]=[];\n    }\n    <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">list</span>[key].<span class=\"hljs-title function_\">push</span>(fn)\n  },\n  <span class=\"hljs-title function_\">emit</span>(<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-keyword\">let</span> key=[].<span class=\"hljs-property\">shift</span>.<span class=\"hljs-title function_\">call</span>(<span class=\"hljs-variable language_\">arguments</span>),\n      fns=<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">list</span>[key];\n    <span class=\"hljs-keyword\">if</span>(!fns||fns.<span class=\"hljs-property\">length</span>===<span class=\"hljs-number\">0</span>){\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>;\n    }\n    fns.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">fn</span>=&gt;</span>{\n      fn.<span class=\"hljs-title function_\">apply</span>(<span class=\"hljs-variable language_\">this</span>,<span class=\"hljs-variable language_\">arguments</span>)\n    })\n  },\n  <span class=\"hljs-title function_\">remove</span>(<span class=\"hljs-params\">key,fn</span>){\n    <span class=\"hljs-comment\">// &#x53d6;&#x6d88;&#x8ba2;&#x9605;&#x7684;&#x65b9;&#x6cd5;</span>\n    <span class=\"hljs-keyword\">let</span> fns=<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">list</span>[key];\n    <span class=\"hljs-comment\">// &#x5982;&#x679c;&#x7f13;&#x5b58;&#x5217;&#x8868;&#x4e2d;&#x6ca1;&#x6709;&#x51fd;&#x6570;,&#x8fd4;&#x56de;false</span>\n    <span class=\"hljs-keyword\">if</span>(!fns)<span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>;\n    <span class=\"hljs-comment\">// &#x5982;&#x679c;&#x6ca1;&#x6709;&#x4f20;&#x5bf9;&#x5e94;&#x51fd;&#x6570;&#x7684;&#x8bdd;</span>\n    <span class=\"hljs-comment\">// &#x5c31;&#x4f1a;&#x5c06;key&#x503c;&#x5bf9;&#x5e94;&#x7f13;&#x5b58;&#x5217;&#x8868;&#x4e2d;&#x7684;&#x51fd;&#x6570;&#x90fd;&#x6e05;&#x7a7a;&#x6389;</span>\n    <span class=\"hljs-keyword\">if</span>(!fn){\n      fns&amp;&amp;fns.<span class=\"hljs-property\">length</span>=<span class=\"hljs-number\">0</span>;\n    }<span class=\"hljs-keyword\">else</span>{\n      <span class=\"hljs-comment\">// &#x904d;&#x5386;&#x7f13;&#x5b58;&#x5217;&#x8868;,&#x770b;&#x770b;&#x4f20;&#x5165;&#x7684;fn&#x4e0e;&#x90a3;&#x4e2a;&#x51fd;&#x6570;&#x76f8;&#x540c;</span>\n      <span class=\"hljs-comment\">// &#x5982;&#x679c;&#x76f8;&#x540c;&#x5c31;&#x76f4;&#x63a5;&#x4ece;&#x7f13;&#x5b58;&#x5217;&#x8868;&#x4e2d;&#x5220;&#x6389;&#x5373;&#x53ef;</span>\n      fns.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">cb,i</span>)=&gt;</span>{\n        <span class=\"hljs-keyword\">if</span>(cb==fn){\n          fns.<span class=\"hljs-title function_\">splice</span>(i,<span class=\"hljs-number\">1</span>)\n        }\n      })\n    }\n\n  }\n}\n\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">cat</span>(<span class=\"hljs-params\"></span>){\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;&#x4e00;&#x8d77;&#x55b5;&#x55b5;&#x55b5;&quot;</span>)\n}\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">dog</span>(<span class=\"hljs-params\"></span>){\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;&#x4e00;&#x8d77;&#x6c6a;&#x6c6a;&#x6c6a;&quot;</span>)\n}\nevent.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;pet&apos;</span>,<span class=\"hljs-function\"><span class=\"hljs-params\">data</span>=&gt;</span>{\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;&#x63a5;&#x53d7;&#x6570;&#x636e;&apos;</span>)\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(data)\n})\nevent.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;pet&apos;</span>,cat)\nevent.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;pet&apos;</span>,dog)\n<span class=\"hljs-comment\">// &#x53bb;&#x6389;dog&#x65b9;&#x6cd5;&#x7684;&#x8ba2;&#x9605;</span>\nevent.<span class=\"hljs-title function_\">remove</span>(<span class=\"hljs-string\">&apos;pet&apos;</span>,dog)\n<span class=\"hljs-comment\">// &#x53d1;&#x5e03;</span>\nevent.<span class=\"hljs-title function_\">emit</span>(<span class=\"hljs-string\">&apos;pet&apos;</span>,[<span class=\"hljs-string\">&apos;&#x4e8c;&#x54c8;&apos;</span>,<span class=\"hljs-string\">&apos;&#x6ce2;&#x65af;&#x732b;&apos;</span>])\n<span class=\"hljs-comment\">// &#x63a5;&#x53d7;&#x6570;&#x636e;</span>\n<span class=\"hljs-comment\">// [&apos;&#x4e8c;&#x54c8;&apos;,&apos;&#x6ce2;&#x65af;&#x732b;&apos;]</span>\n<span class=\"hljs-comment\">// &#x4e00;&#x8d77;&#x55b5;&#x55b5;&#x55b5;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,65"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

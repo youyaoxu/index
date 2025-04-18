@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"#_4-1-api%E7%9B%B8%E5%85%B3\">#</a> 4.1. API&#x76f8;&#x5173;","children":[{"content":"&#x5b57;&#x7b26;&#x4e32;&#x5012;&#x5e8f;","children":[{"content":"&#x8bed;&#x6cd5;: reverseString(str)","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"&#x529f;&#x80fd;: &#x751f;&#x6210;&#x4e00;&#x4e2a;&#x5012;&#x5e8f;&#x7684;&#x5b57;&#x7b26;&#x4e32;","children":[],"payload":{"tag":"li","lines":"5,6"}}],"payload":{"tag":"li","lines":"3,6"}},{"content":"&#x5b57;&#x7b26;&#x4e32;&#x662f;&#x5426;&#x662f;&#x56de;&#x6587;","children":[{"content":"&#x8bed;&#x6cd5;: palindrome(str)","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"&#x529f;&#x80fd;: &#x5982;&#x679c;&#x7ed9;&#x5b9a;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#x662f;&#x56de;&#x6587;&#xff0c;&#x5219;&#x8fd4;&#x56de; true &#xff1b;&#x5426;&#x5219;&#x8fd4;&#x56de; false","children":[],"payload":{"tag":"li","lines":"8,9"}}],"payload":{"tag":"li","lines":"6,9"}},{"content":"&#x622a;&#x53d6;&#x5b57;&#x7b26;&#x4e32;","children":[{"content":"&#x8bed;&#x6cd5;: truncate(str, num)","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"&#x529f;&#x80fd;: &#x5982;&#x679c;&#x5b57;&#x7b26;&#x4e32;&#x7684;&#x957f;&#x5ea6;&#x8d85;&#x8fc7;&#x4e86;num, &#x622a;&#x53d6;&#x524d;&#x9762;num&#x957f;&#x5ea6;&#x90e8;&#x5206;, &#x5e76;&#x4ee5;...&#x7ed3;&#x675f;","children":[],"payload":{"tag":"li","lines":"11,13"}}],"payload":{"tag":"li","lines":"9,13"}}],"payload":{"tag":"h2","lines":"0,2"}},{"content":"<a href=\"#_4-2-%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0\">#</a> 4.2. &#x7f16;&#x7801;&#x5b9e;&#x73b0;","children":[{"content":"<pre data-lines=\"18,42\"><code data-lines=\"18,42\">/* \n<span class=\"hljs-number\">1</span>. &#x5b57;&#x7b26;&#x4e32;&#x5012;&#x5e8f;: reverseString(str)  &#x751f;&#x6210;&#x4e00;&#x4e2a;&#x5012;&#x5e8f;&#x7684;&#x5b57;&#x7b26;&#x4e32;\n*/\nexport <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">reverseString</span>(str) {\n\t// <span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">str.split(&apos;&apos;).reverse().join(&apos;&apos;)</span>\n    // <span class=\"hljs-keyword\">return</span> [...str].<span class=\"hljs-keyword\">reverse</span>().join(&apos;&apos;)\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">Array</span>.from(str).<span class=\"hljs-keyword\">reverse</span>().join(&apos;&apos;)\n}\n\n/* \n<span class=\"hljs-number\">2</span>. &#x5b57;&#x7b26;&#x4e32;&#x662f;&#x5426;&#x662f;&#x56de;&#x6587;: palindrome(str) &#x5982;&#x679c;&#x7ed9;&#x5b9a;&#x7684;&#x5b57;&#x7b26;&#x4e32;&#x662f;&#x56de;&#x6587;&#xff0c;&#x5219;&#x8fd4;&#x56de; <span class=\"hljs-literal\">true</span> &#xff1b;&#x5426;&#x5219;&#x8fd4;&#x56de; <span class=\"hljs-literal\">false</span>\n*/\nexport <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">palindrome</span>(str) {\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">str</span> === reverseString(str)\n}\n\n/* \n<span class=\"hljs-number\">3</span>. &#x622a;&#x53d6;&#x5b57;&#x7b26;&#x4e32;: truncate(str, num) &#x5982;&#x679c;&#x5b57;&#x7b26;&#x4e32;&#x7684;&#x957f;&#x5ea6;&#x8d85;&#x8fc7;&#x4e86;num, &#x622a;&#x53d6;&#x524d;&#x9762;num&#x957f;&#x5ea6;&#x90e8;&#x5206;, &#x5e76;&#x4ee5;...&#x7ed3;&#x675f;\n*/\nexport <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">truncate</span>(str, num) {\n\t<span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">str.length</span> &gt; num ? str.slice(<span class=\"hljs-number\">0</span>, num) + &apos;...&apos; : <span class=\"hljs-type\">str</span>\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,42"}}],"payload":{"tag":"h2","lines":"13,15"}},{"content":"<a href=\"#_4-3-%E6%B5%8B%E8%AF%95\">#</a> 4.3.&#x6d4b;&#x8bd5;","children":[{"content":"<pre data-lines=\"46,61\"><code data-lines=\"46,61\"><span class=\"hljs-meta\">&lt;!DOCTYPE <span class=\"hljs-keyword\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">&quot;en&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">&quot;UTF-8&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">title</span>&gt;</span>&#x5b57;&#x7b26;&#x4e32;&#x5904;&#x7406;&#x7684;&#x7cfb;&#x5217;&#x65b9;&#x6cd5;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">title</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;../dist/atguigu-utils.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\"> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(aUtils.<span class=\"hljs-title function_\">reverseString</span>(<span class=\"hljs-string\">&apos;abcd&apos;</span>)) <span class=\"hljs-comment\">// dcba</span>\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(aUtils.<span class=\"hljs-title function_\">palindrome</span>(<span class=\"hljs-string\">&apos;abcb&apos;</span>), aUtils.<span class=\"hljs-title function_\">palindrome</span>(<span class=\"hljs-string\">&apos;abcba&apos;</span>)) <span class=\"hljs-comment\">// false true</span>\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(aUtils.<span class=\"hljs-title function_\">truncate</span>(<span class=\"hljs-string\">&apos;boomerang&apos;</span>, <span class=\"hljs-number\">7</span>)) <span class=\"hljs-comment\">// boomera... </span></span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,61"}}],"payload":{"tag":"h2","lines":"43,45"}}]},{})</script>
+</body>
+</html>

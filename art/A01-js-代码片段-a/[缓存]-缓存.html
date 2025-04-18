@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"sessionStorage&#x548c;localStorage&#x7684;&#x5c01;&#x88c5;","children":[{"content":"<pre data-lines=\"1,81\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> sessionCache = {\n  <span class=\"hljs-title function_\">set</span> (key, value) {\n    <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-variable language_\">sessionStorage</span>) {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">if</span> (key != <span class=\"hljs-literal\">null</span> &amp;&amp; value != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-variable language_\">sessionStorage</span>.<span class=\"hljs-title function_\">setItem</span>(key, value)\n    }\n  },\n  <span class=\"hljs-title function_\">get</span> (key) {\n    <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-variable language_\">sessionStorage</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>\n    }\n    <span class=\"hljs-keyword\">if</span> (key == <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>\n    }\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">sessionStorage</span>.<span class=\"hljs-title function_\">getItem</span>(key)\n  },\n  <span class=\"hljs-title function_\">setJSON</span> (key, jsonValue) {\n    <span class=\"hljs-keyword\">if</span> (jsonValue != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">set</span>(key, <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">stringify</span>(jsonValue))\n    }\n  },\n  <span class=\"hljs-title function_\">getJSON</span> (key) {\n    <span class=\"hljs-keyword\">const</span> value = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">get</span>(key)\n    <span class=\"hljs-keyword\">if</span> (value != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">parse</span>(value)\n    }\n  },\n  <span class=\"hljs-title function_\">remove</span> (key) {\n    <span class=\"hljs-variable language_\">sessionStorage</span>.<span class=\"hljs-title function_\">removeItem</span>(key);\n  }\n}\n<span class=\"hljs-keyword\">const</span> localCache = {\n  <span class=\"hljs-title function_\">set</span> (key, value) {\n    <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-variable language_\">localStorage</span>) {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">if</span> (key != <span class=\"hljs-literal\">null</span> &amp;&amp; value != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-variable language_\">localStorage</span>.<span class=\"hljs-title function_\">setItem</span>(key, value)\n    }\n  },\n  <span class=\"hljs-title function_\">get</span> (key) {\n    <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-variable language_\">localStorage</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>\n    }\n    <span class=\"hljs-keyword\">if</span> (key == <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>\n    }\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">localStorage</span>.<span class=\"hljs-title function_\">getItem</span>(key)\n  },\n  <span class=\"hljs-title function_\">setJSON</span> (key, jsonValue) {\n    <span class=\"hljs-keyword\">if</span> (jsonValue != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">set</span>(key, <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">stringify</span>(jsonValue))\n    }\n  },\n  <span class=\"hljs-title function_\">getJSON</span> (key) {\n    <span class=\"hljs-keyword\">const</span> value = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">get</span>(key)\n    <span class=\"hljs-keyword\">if</span> (value != <span class=\"hljs-literal\">null</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">parse</span>(value)\n    }\n  },\n  <span class=\"hljs-title function_\">remove</span> (key) {\n    <span class=\"hljs-variable language_\">localStorage</span>.<span class=\"hljs-title function_\">removeItem</span>(key);\n  }\n}\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> {\n  <span class=\"hljs-comment\">/**\n   * &#x4f1a;&#x8bdd;&#x7ea7;&#x7f13;&#x5b58;\n   */</span>\n  <span class=\"hljs-attr\">session</span>: sessionCache,\n  <span class=\"hljs-comment\">/**\n   * &#x672c;&#x5730;&#x7f13;&#x5b58;\n   */</span>\n  <span class=\"hljs-attr\">local</span>: localCache\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,81"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

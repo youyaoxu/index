@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"#%E7%BC%96%E5%86%99-ts-%E7%A8%8B%E5%BA%8F\">#</a> &#x7f16;&#x5199; TS &#x7a0b;&#x5e8f;","children":[{"content":"<pre data-lines=\"3,4\"><code>src/helloworld.ts\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,4"}}],"payload":{"tag":"h2","lines":"0,2"}},{"content":"<a href=\"#%E6%89%8B%E5%8A%A8%E7%BC%96%E8%AF%91%E4%BB%A3%E7%A0%81\">#</a> &#x624b;&#x52a8;&#x7f16;&#x8bd1;&#x4ee3;&#x7801;","children":[{"content":"<pre data-lines=\"8,17\"><code>&#x6211;&#x4eec;&#x4f7f;&#x7528;&#x4e86; `.ts` &#x6269;&#x5c55;&#x540d;&#xff0c;&#x4f46;&#x662f;&#x8fd9;&#x6bb5;&#x4ee3;&#x7801;&#x4ec5;&#x4ec5;&#x662f; JavaScript &#x800c;&#x5df2;&#x3002;\n\n&#x5728;&#x547d;&#x4ee4;&#x884c;&#x4e0a;&#xff0c;&#x8fd0;&#x884c; TypeScript &#x7f16;&#x8bd1;&#x5668;&#xff1a;\n\n&#x8f93;&#x51fa;&#x7ed3;&#x679c;&#x4e3a;&#x4e00;&#x4e2a; `helloworld.js` &#x6587;&#x4ef6;&#xff0c;&#x5b83;&#x5305;&#x542b;&#x4e86;&#x548c;&#x8f93;&#x5165;&#x6587;&#x4ef6;&#x4e2d;&#x76f8;&#x540c;&#x7684; JavsScript &#x4ee3;&#x7801;&#x3002;\n\n&#x5728;&#x547d;&#x4ee4;&#x884c;&#x4e0a;&#xff0c;&#x901a;&#x8fc7; Node.js &#x8fd0;&#x884c;&#x8fd9;&#x6bb5;&#x4ee3;&#x7801;&#xff1a;\n\n&#x63a7;&#x5236;&#x53f0;&#x8f93;&#x51fa;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,17"}}],"payload":{"tag":"h2","lines":"5,7"}},{"content":"<a href=\"#vscode-%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91\">#</a> vscode &#x81ea;&#x52a8;&#x7f16;&#x8bd1;","children":[],"payload":{"tag":"h2","lines":"18,20"}},{"content":"<a href=\"#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3\">#</a> &#x7c7b;&#x578b;&#x6ce8;&#x89e3;","children":[{"content":"<pre data-lines=\"24,33\"><code>&#x63a5;&#x4e0b;&#x6765;&#x8ba9;&#x6211;&#x4eec;&#x770b;&#x770b; TypeScript &#x5de5;&#x5177;&#x5e26;&#x6765;&#x7684;&#x9ad8;&#x7ea7;&#x529f;&#x80fd;&#x3002; &#x7ed9; `person` &#x51fd;&#x6570;&#x7684;&#x53c2;&#x6570;&#x6dfb;&#x52a0; `: string` &#x7c7b;&#x578b;&#x6ce8;&#x89e3;&#xff0c;&#x5982;&#x4e0b;&#xff1a;\n\nTypeScript &#x91cc;&#x7684;&#x7c7b;&#x578b;&#x6ce8;&#x89e3;&#x662f;&#x4e00;&#x79cd;&#x8f7b;&#x91cf;&#x7ea7;&#x7684;&#x4e3a;&#x51fd;&#x6570;&#x6216;&#x53d8;&#x91cf;&#x6dfb;&#x52a0;&#x7ea6;&#x675f;&#x7684;&#x65b9;&#x5f0f;&#x3002; &#x5728;&#x8fd9;&#x4e2a;&#x4f8b;&#x5b50;&#x91cc;&#xff0c;&#x6211;&#x4eec;&#x5e0c;&#x671b; `greeter` &#x51fd;&#x6570;&#x63a5;&#x6536;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x4e32;&#x53c2;&#x6570;&#x3002; &#x7136;&#x540e;&#x5c1d;&#x8bd5;&#x628a; `greeter` &#x7684;&#x8c03;&#x7528;&#x6539;&#x6210;&#x4f20;&#x5165;&#x4e00;&#x4e2a;&#x6570;&#x7ec4;&#xff1a;\n\n&#x91cd;&#x65b0;&#x7f16;&#x8bd1;&#xff0c;&#x4f60;&#x4f1a;&#x770b;&#x5230;&#x4ea7;&#x751f;&#x4e86;&#x4e00;&#x4e2a;&#x9519;&#x8bef;&#xff1a;\n\n&#x7c7b;&#x4f3c;&#x5730;&#xff0c;&#x5c1d;&#x8bd5;&#x5220;&#x9664; `greeter` &#x8c03;&#x7528;&#x7684;&#x6240;&#x6709;&#x53c2;&#x6570;&#x3002; TypeScript &#x4f1a;&#x544a;&#x8bc9;&#x4f60;&#x4f7f;&#x7528;&#x4e86;&#x975e;&#x671f;&#x671b;&#x4e2a;&#x6570;&#x7684;&#x53c2;&#x6570;&#x8c03;&#x7528;&#x4e86;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x3002; &#x5728;&#x8fd9;&#x4e24;&#x79cd;&#x60c5;&#x51b5;&#x4e2d;&#xff0c;TypeScript &#x63d0;&#x4f9b;&#x4e86;&#x9759;&#x6001;&#x7684;&#x4ee3;&#x7801;&#x5206;&#x6790;&#xff0c;&#x5b83;&#x53ef;&#x4ee5;&#x5206;&#x6790;&#x4ee3;&#x7801;&#x7ed3;&#x6784;&#x548c;&#x63d0;&#x4f9b;&#x7684;&#x7c7b;&#x578b;&#x6ce8;&#x89e3;&#x3002;\n\n&#x8981;&#x6ce8;&#x610f;&#x7684;&#x662f;&#x5c3d;&#x7ba1;&#x6709;&#x9519;&#x8bef;&#xff0c;`greeter.js` &#x6587;&#x4ef6;&#x8fd8;&#x662f;&#x88ab;&#x521b;&#x5efa;&#x4e86;&#x3002; &#x5c31;&#x7b97;&#x4f60;&#x7684;&#x4ee3;&#x7801;&#x91cc;&#x6709;&#x9519;&#x8bef;&#xff0c;&#x4f60;&#x4ecd;&#x7136;&#x53ef;&#x4ee5;&#x4f7f;&#x7528; TypeScript&#x3002;&#x4f46;&#x5728;&#x8fd9;&#x79cd;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;TypeScript &#x4f1a;&#x8b66;&#x544a;&#x4f60;&#x4ee3;&#x7801;&#x53ef;&#x80fd;&#x4e0d;&#x4f1a;&#x6309;&#x9884;&#x671f;&#x6267;&#x884c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"24,33"}}],"payload":{"tag":"h2","lines":"21,23"}},{"content":"<a href=\"#%E6%8E%A5%E5%8F%A3\">#</a> &#x63a5;&#x53e3;","children":[{"content":"<pre data-lines=\"37,38\"><code>&#x8ba9;&#x6211;&#x4eec;&#x7ee7;&#x7eed;&#x6269;&#x5c55;&#x8fd9;&#x4e2a;&#x793a;&#x4f8b;&#x5e94;&#x7528;&#x3002;&#x8fd9;&#x91cc;&#x6211;&#x4eec;&#x4f7f;&#x7528;&#x63a5;&#x53e3;&#x6765;&#x63cf;&#x8ff0;&#x4e00;&#x4e2a;&#x62e5;&#x6709; `firstName` &#x548c; `lastName` &#x5b57;&#x6bb5;&#x7684;&#x5bf9;&#x8c61;&#x3002; &#x5728; `TypeScript` &#x91cc;&#xff0c;&#x53ea;&#x5728;&#x4e24;&#x4e2a;&#x7c7b;&#x578b;&#x5185;&#x90e8;&#x7684;&#x7ed3;&#x6784;&#x517c;&#x5bb9;&#xff0c;&#x90a3;&#x4e48;&#x8fd9;&#x4e24;&#x4e2a;&#x7c7b;&#x578b;&#x5c31;&#x662f;&#x517c;&#x5bb9;&#x7684;&#x3002; &#x8fd9;&#x5c31;&#x5141;&#x8bb8;&#x6211;&#x4eec;&#x5728;&#x5b9e;&#x73b0;&#x63a5;&#x53e3;&#x65f6;&#x5019;&#x53ea;&#x8981;&#x4fdd;&#x8bc1;&#x5305;&#x542b;&#x4e86;&#x63a5;&#x53e3;&#x8981;&#x6c42;&#x7684;&#x7ed3;&#x6784;&#x5c31;&#x53ef;&#x4ee5;&#xff0c;&#x800c;&#x4e0d;&#x5fc5;&#x660e;&#x786e;&#x5730;&#x4f7f;&#x7528; `implements` &#x8bed;&#x53e5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,38"}}],"payload":{"tag":"h2","lines":"34,36"}},{"content":"<a href=\"#%E7%B1%BB\">#</a> &#x7c7b;","children":[{"content":"<pre data-lines=\"42,49\"><code>&#x6700;&#x540e;&#xff0c;&#x8ba9;&#x6211;&#x4eec;&#x4f7f;&#x7528;&#x7c7b;&#x6765;&#x6539;&#x5199;&#x8fd9;&#x4e2a;&#x4f8b;&#x5b50;&#x3002; TypeScript &#x652f;&#x6301; JavaScript &#x7684;&#x65b0;&#x7279;&#x6027;&#xff0c;&#x6bd4;&#x5982;&#x652f;&#x6301;&#x57fa;&#x4e8e;&#x7c7b;&#x7684;&#x9762;&#x5411;&#x5bf9;&#x8c61;&#x7f16;&#x7a0b;&#x3002;\n\n&#x8ba9;&#x6211;&#x4eec;&#x521b;&#x5efa;&#x4e00;&#x4e2a; `User` &#x7c7b;&#xff0c;&#x5b83;&#x5e26;&#x6709;&#x4e00;&#x4e2a;&#x6784;&#x9020;&#x51fd;&#x6570;&#x548c;&#x4e00;&#x4e9b;&#x516c;&#x5171;&#x5b57;&#x6bb5;&#x3002;&#x56e0;&#x4e3a;&#x7c7b;&#x7684;&#x5b57;&#x6bb5;&#x5305;&#x542b;&#x4e86;&#x63a5;&#x53e3;&#x6240;&#x9700;&#x8981;&#x7684;&#x5b57;&#x6bb5;&#xff0c;&#x6240;&#x4ee5;&#x4ed6;&#x4eec;&#x80fd;&#x5f88;&#x597d;&#x7684;&#x517c;&#x5bb9;&#x3002;\n\n&#x8fd8;&#x8981;&#x6ce8;&#x610f;&#x7684;&#x662f;&#xff0c;&#x6211;&#x5728;&#x7c7b;&#x7684;&#x58f0;&#x660e;&#x4e0a;&#x4f1a;&#x6ce8;&#x660e;&#x6240;&#x6709;&#x7684;&#x6210;&#x5458;&#x53d8;&#x91cf;&#xff0c;&#x8fd9;&#x6837;&#x6bd4;&#x8f83;&#x4e00;&#x76ee;&#x4e86;&#x7136;&#x3002;\n\n&#x91cd;&#x65b0;&#x8fd0;&#x884c; `tsc greeter.ts`&#xff0c;&#x4f60;&#x4f1a;&#x770b;&#x5230; TypeScript &#x91cc;&#x7684;&#x7c7b;&#x53ea;&#x662f;&#x4e00;&#x4e2a;&#x8bed;&#x6cd5;&#x7cd6;&#xff0c;&#x672c;&#x8d28;&#x4e0a;&#x8fd8;&#x662f; `JavaScript` &#x51fd;&#x6570;&#x7684;&#x5b9e;&#x73b0;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,49"}}],"payload":{"tag":"h2","lines":"39,41"}},{"content":"<a href=\"#%E6%80%BB%E7%BB%93\">#</a> &#x603b;&#x7ed3;","children":[{"content":"<pre data-lines=\"53,54\"><code>&#x5230;&#x8fd9;&#x91cc;&#xff0c;&#x4f60;&#x5df2;&#x7ecf;&#x5bf9; TypeScript &#x6709;&#x4e86;&#x4e00;&#x4e2a;&#x5927;&#x81f4;&#x7684;&#x5370;&#x8c61;&#xff0c;&#x90a3;&#x4e48;&#x4e0b;&#x4e00;&#x7ae0;&#x8ba9;&#x6211;&#x4eec;&#x6765;&#x4e00;&#x8d77;&#x5b66;&#x4e60; TypeScript &#x7684;&#x4e00;&#x4e9b;&#x5e38;&#x7528;&#x8bed;&#x6cd5;&#x5427;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"53,54"}}],"payload":{"tag":"h2","lines":"50,52"}}]},{})</script>
+</body>
+</html>

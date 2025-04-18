@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6570;&#x7ec4;&#x53bb;&#x91cd;-repeat","children":[{"content":"<pre data-lines=\"1,18\"><code data-lines=\"1,18\"><span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>,arr=[];i&lt;<span class=\"hljs-number\">100000</span>;i++){\n  arr[i]=Math.<span class=\"hljs-built_in\">floor</span>(Math.<span class=\"hljs-built_in\">random</span>()*<span class=\"hljs-number\">399</span>+<span class=\"hljs-number\">101</span>);\n}\n<span class=\"hljs-keyword\">var</span> arr1=[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>];\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">repeat1</span>(<span class=\"hljs-params\">arr</span>){\n  <span class=\"hljs-comment\">//&#x904d;&#x5386;arr&#x4e2d;&#x6bcf;&#x4e2a;&#x5143;&#x7d20;&#xff0c;&#x540c;&#x65f6;&#x58f0;&#x660e;&#x7a7a;&#x6570;&#x7ec4;arr2:</span>\n  <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>,arr2=[];i&lt;arr.<span class=\"hljs-built_in\">length</span>;i++){\n    <span class=\"hljs-comment\">//&#x5728;arr2&#x4e2d;&#x67e5;&#x627e;&#x662f;&#x5426;&#x5305;&#x542b;&#x5f53;&#x524d;&#x5143;&#x7d20;&#x503c;</span>\n      <span class=\"hljs-comment\">//&#x5982;&#x679c;&#x4e0d;&#x5305;&#x542b;&#xff0c;&#x5c31;&#x5728;arr2&#x4e2d;&#x538b;&#x5165;&#x5f53;&#x524d;&#x5143;&#x7d20;</span>\n    <span class=\"hljs-keyword\">if</span>(arr2.<span class=\"hljs-built_in\">indexOf</span>(arr[i])==<span class=\"hljs-number\">-1</span>){\n      arr2.<span class=\"hljs-built_in\">push</span>(arr[i]);\n    }\n  }<span class=\"hljs-comment\">//(&#x904d;&#x5386;&#x7ed3;&#x675f;)</span>\n  <span class=\"hljs-keyword\">return</span> arr2;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,18"}},{"content":"<pre data-lines=\"18,36\"><code data-lines=\"18,36\"><span class=\"hljs-comment\">//hash</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">repeat2</span>(<span class=\"hljs-params\">arr</span>){\n  <span class=\"hljs-comment\">//&#x904d;&#x5386;arr&#x4e2d;&#x6bcf;&#x4e2a;&#x5143;&#x7d20;&#xff0c;&#x540c;&#x65f6;&#x58f0;&#x660e;hash</span>\n  <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>,<span class=\"hljs-built_in\">hash</span>={};i&lt;arr.<span class=\"hljs-built_in\">length</span>;i++){\n    <span class=\"hljs-comment\">//hash&#x4e2d;&#x662f;&#x5426;&#x5305;&#x542b;&#x5f53;&#x524d;&#x5143;&#x7d20;&#x503c;&#x7684;&#x5efa;</span>\n      <span class=\"hljs-comment\">//&#x5982;&#x679c;&#x4e0d;&#x5305;&#x542b;,&#x5c31;hash&#x6dfb;&#x52a0;&#x4e00;&#x4e2a;&#x65b0;&#x5143;&#x7d20;&#xff0c;&#x4ee5;&#x5f53;&#x524d;&#x5143;&#x7d20;&#x503c;&#x4e3a;key&#xff0c;value&#x9ed8;&#x8ba4;&#x4e3a;1</span>\n    <span class=\"hljs-keyword\">if</span>(<span class=\"hljs-built_in\">hash</span>[arr[i]]===<span class=\"hljs-literal\">undefined</span>){\n      <span class=\"hljs-built_in\">hash</span>[arr[i]]=<span class=\"hljs-number\">1</span>;\n    }\n  }<span class=\"hljs-comment\">//(&#x904d;&#x5386;&#x7ed3;&#x675f;)</span>\n  <span class=\"hljs-comment\">//&#x5c06;hash&#x8f6c;&#x4e3a;&#x7d22;&#x5f15;:</span>\n  <span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-keyword\">var</span> arr2=[];\n  <span class=\"hljs-keyword\">for</span>(arr2[i++] <span class=\"hljs-keyword\">in</span> <span class=\"hljs-built_in\">hash</span>);\n  <span class=\"hljs-keyword\">return</span> arr2;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,36"}},{"content":"<pre data-lines=\"36,47\"><code data-lines=\"36,47\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">repeat3</span>(<span class=\"hljs-params\">arr</span>){\n  <span class=\"hljs-keyword\">return</span> arr.<span class=\"hljs-built_in\">sort</span>()\n            .join(<span class=\"hljs-string\">&quot;,,&quot;</span>)\n            .<span class=\"hljs-built_in\">replace</span>(\n            <span class=\"hljs-regexp\">/(^|,,)([^,]+)(,,\\2)*/g</span>,\n            <span class=\"hljs-string\">&quot;&#x24;1&#x24;2&quot;</span>)\n            .<span class=\"hljs-built_in\">split</span>(<span class=\"hljs-string\">&quot;,,&quot;</span>);\n}\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(repeat3(arr1));\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,47"}},{"content":"<pre data-lines=\"47,60\"><code data-lines=\"47,60\">/*\nconsole.time(<span class=\"hljs-string\">&quot;repeat1&quot;</span>)<span class=\"hljs-comment\">;</span>\nrepeat1(arr)<span class=\"hljs-comment\">;</span>\nconsole.timeEnd(<span class=\"hljs-string\">&quot;repeat1&quot;</span>)<span class=\"hljs-comment\">;</span>\nconsole.time(<span class=\"hljs-string\">&quot;repeat2&quot;</span>)<span class=\"hljs-comment\">;</span>\nrepeat2(arr)<span class=\"hljs-comment\">;</span>\nconsole.timeEnd(<span class=\"hljs-string\">&quot;repeat2&quot;</span>)<span class=\"hljs-comment\">;</span>\nconsole.time(<span class=\"hljs-string\">&quot;repeat3&quot;</span>)<span class=\"hljs-comment\">;</span>\nrepeat3(arr)<span class=\"hljs-comment\">;</span>\nconsole.timeEnd(<span class=\"hljs-string\">&quot;repeat3&quot;</span>)<span class=\"hljs-comment\">;</span>\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,60"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

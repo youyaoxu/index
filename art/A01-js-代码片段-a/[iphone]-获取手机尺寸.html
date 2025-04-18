@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[iphone]-&#x83b7;&#x53d6;&#x624b;&#x673a;&#x5c3a;&#x5bf8;","children":[{"content":"<pre data-lines=\"2,10\"><code class=\"language-js\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getViewportSize</span> (<span class=\"hljs-params\"></span>) {\n    <span class=\"hljs-keyword\">return</span> {\n        <span class=\"hljs-attr\">width</span>: <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">innerWidth</span> || <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">documentElement</span>.<span class=\"hljs-property\">clientWidth</span> || <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-property\">clientWidth</span>,\n        <span class=\"hljs-attr\">height</span>: <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">innerHeight</span> || <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">documentElement</span>.<span class=\"hljs-property\">clientHeight</span> || <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-property\">clientHeight</span>\n    };\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,10"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

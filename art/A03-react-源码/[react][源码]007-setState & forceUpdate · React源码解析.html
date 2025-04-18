@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"setState &amp; forceUpdate","children":[{"content":"<pre data-lines=\"2,9\"><code>`setState`&#x8c03;&#x7528;`updater.enqueueSetState`&#xff0c;&#x6211;&#x4eec;&#x5148;&#x4e0d;&#x7ba1;&#x8fd9;&#x4e2a;&#x5bf9;&#x8c61;&#x4ec0;&#x4e48;&#x65f6;&#x5019;&#x8bbe;&#x7f6e;&#x8fdb;&#x6765;&#x7684;&#xff0c;&#x5148;&#x6765;&#x770b;&#x4e00;&#x4e0b;&#x4ee3;&#x7801;\n\n`setState`&#x548c;`forceUpdate`&#x7684;&#x4ee3;&#x7801;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x770b;&#x5230;&#xff0c;&#x51e0;&#x4e4e;&#x662f;&#x4e00;&#x6a21;&#x4e00;&#x6837;&#x7684;&#x3002;&#x552f;&#x4e00;&#x7684;&#x533a;&#x522b;&#x662f;`Update.tag`\n\n&#x5173;&#x4e8e;`Update`&#x548c;`UpdateQueue`&#x7684;&#x6570;&#x636e;&#x7ed3;&#x6784;&#x53ef;&#x4ee5;&#x770b;[&#x8fd9;&#x91cc;](https://react.jokcy.me/book/api/react-structure.html)\n\n&#x5728;&#x5f53;&#x524d;&#x8282;&#x70b9;&#x5bf9;&#x5e94;&#x7684;`Fiber`&#x5bf9;&#x8c61;&#x4e0a;&#x521b;&#x5efa;&#x4e86;`Update`&#x4e4b;&#x540e;&#xff0c;&#x8fdb;&#x5c31;&#x5982;`scheduleWork`&#x8c03;&#x5ea6;&#x9636;&#x6bb5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,9"}},{"content":"<pre data-lines=\"10,46\"><code data-lines=\"10,46\">const classComponentUpdater = {\n  \n  enqueueSetState(inst, payload, callback) {\n    const fiber = ReactInstanceMap.get(inst)\n    const currentTime = requestCurrent<span class=\"hljs-meta\">Time</span>()\n    const expirationTime = computeExpirationForFiber(currentTime, fiber)\n\n    const <span class=\"hljs-keyword\">update</span> = createUp<span class=\"hljs-meta\">date</span>(expirationTime)\n    <span class=\"hljs-keyword\">update</span>.payload = payload\n    <span class=\"hljs-keyword\">if</span> (callback !== undefined <span class=\"hljs-variable\">&amp;&amp;</span> callback !== <span class=\"hljs-keyword\">null</span>) {\n      <span class=\"hljs-keyword\">update</span>.callback = callback\n    }\n\n    enqueueUp<span class=\"hljs-meta\">date</span>(fiber, <span class=\"hljs-keyword\">update</span>)\n    scheduleWork(fiber, expirationTime)\n  },\n  \n  enqueueForceUp<span class=\"hljs-meta\">date</span>(inst, callback) {\n    const fiber = ReactInstanceMap.get(inst)\n    const currentTime = requestCurrent<span class=\"hljs-meta\">Time</span>()\n    const expirationTime = computeExpirationForFiber(currentTime, fiber)\n\n    const <span class=\"hljs-keyword\">update</span> = createUp<span class=\"hljs-meta\">date</span>(expirationTime)\n    <span class=\"hljs-keyword\">update</span>.tag = ForceUpdate\n\n    <span class=\"hljs-keyword\">if</span> (callback !== undefined <span class=\"hljs-variable\">&amp;&amp;</span> callback !== <span class=\"hljs-keyword\">null</span>) {\n      <span class=\"hljs-keyword\">update</span>.callback = callback\n    }\n\n    enqueueUp<span class=\"hljs-meta\">date</span>(fiber, <span class=\"hljs-keyword\">update</span>)\n    scheduleWork(fiber, expirationTime)\n  },\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,46"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"47,48"}},{"content":"<pre data-lines=\"49,50\"><code>&#x626b;&#x7801;&#x6dfb;&#x52a0;Jokcy&#xff0c;&#x66f4;&#x591a;&#x66f4;&#x65b0;&#x66f4;&#x4f18;&#x8d28;&#x7684;&#x524d;&#x7aef;&#x5b66;&#x4e60;&#x5185;&#x5bb9;&#x4e0d;&#x65ad;&#x66f4;&#x65b0;&#x4e2d;&#xff0c;&#x671f;&#x5f85;&#x4e0e;&#x4f60;&#x4e00;&#x8d77;&#x6210;&#x957f;&#xff01;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,50"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"51,52"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

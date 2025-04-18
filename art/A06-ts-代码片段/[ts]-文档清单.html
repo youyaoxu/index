@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[ts]-&#x6587;&#x6863;&#x6e05;&#x5355;","children":[{"content":"&#x4e3a; JavaScript &#x7a0b;&#x5e8f;&#x5458;&#x51c6;&#x5907;&#x7684; TypeScript","children":[{"content":"<pre data-lines=\"3,11\"><code data-lines=\"3,11\"><span class=\"hljs-bullet\">1.</span> &#x7c7b;&#x578b;&#x63a8;&#x65ad;\n<span class=\"hljs-bullet\">2.</span> &#x5b9a;&#x4e49;&#x7c7b;&#x578b;\n<span class=\"hljs-bullet\">3.</span> &#x7ec4;&#x5408;&#x7c7b;&#x578b;\n<span class=\"hljs-code\">    &#x8054;&#x5408;\n    &#x6cdb;&#x578b;\n4. &#x7ed3;&#x6784;&#x5316;&#x7684;&#x7c7b;&#x578b;&#x7cfb;&#x7edf;&#xff08;structural type system&#xff09;\n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"3,11"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x624b;&#x518c;&#x6307;&#x5357;","children":[{"content":"&#x57fa;&#x7840;&#x7c7b;&#x578b;","children":[{"content":"<pre data-lines=\"14,30\"><code data-lines=\"14,30\"><span class=\"hljs-bullet\">1.</span> &#x4ecb;&#x7ecd;\n<span class=\"hljs-bullet\">2.</span> &#x5e03;&#x5c14;&#x503c;\n<span class=\"hljs-bullet\">3.</span> &#x6570;&#x5b57;\n<span class=\"hljs-bullet\">4.</span> &#x5b57;&#x7b26;&#x4e32;\n<span class=\"hljs-bullet\">5.</span> &#x6570;&#x7ec4;\n<span class=\"hljs-bullet\">6.</span> &#x5143;&#x7ec4; Tuple <span class=\"hljs-strong\">***\n7. &#x679a;&#x4e3e; **</span>*\n<span class=\"hljs-bullet\">8.</span> Any\n<span class=\"hljs-bullet\">9.</span> Void\n<span class=\"hljs-bullet\">10.</span> Null &#x548c; Undefined\n<span class=\"hljs-bullet\">11.</span> Never <span class=\"hljs-strong\">***\n12. Object\n13. &#x7c7b;&#x578b;&#x65ad;&#x8a00; **</span><span class=\"hljs-strong\">***\n14. &#x5173;&#x4e8e;let\n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"14,30"}}],"payload":{"tag":"h3","lines":"13,14"}},{"content":"&#x53d8;&#x91cf;&#x58f0;&#x660e;","children":[{"content":"<pre data-lines=\"31,49\"><code data-lines=\"31,49\"><span class=\"hljs-attribute\">1</span>. &#x53d8;&#x91cf;&#x58f0;&#x660e;\n<span class=\"hljs-attribute\">2</span>. var &#x58f0;&#x660e;\n<span class=\"hljs-attribute\">3</span>. &#x6355;&#x83b7;&#x53d8;&#x91cf;&#x602a;&#x5f02;&#x4e4b;&#x5904;\n<span class=\"hljs-attribute\">4</span>. let &#x58f0;&#x660e;\n<span class=\"hljs-attribute\">4</span>.<span class=\"hljs-number\">1</span> &#x5757;&#x4f5c;&#x7528;&#x57df;\n<span class=\"hljs-attribute\">4</span>.<span class=\"hljs-number\">2</span> &#x91cd;&#x5b9a;&#x4e49;&#x53ca;&#x5c4f;&#x853d;\n<span class=\"hljs-attribute\">4</span>.<span class=\"hljs-number\">3</span> &#x5757;&#x7ea7;&#x4f5c;&#x7528;&#x57df;&#x53d8;&#x91cf;&#x7684;&#x83b7;&#x53d6;\n<span class=\"hljs-attribute\">5</span>. const &#x58f0;&#x660e;\n<span class=\"hljs-attribute\">6</span>. let vs. const\n<span class=\"hljs-attribute\">7</span>. &#x89e3;&#x6784;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">1</span> &#x89e3;&#x6784;&#x6570;&#x7ec4;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">2</span> &#x5bf9;&#x8c61;&#x89e3;&#x6784;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">3</span> &#x5c5e;&#x6027;&#x91cd;&#x547d;&#x540d;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">4</span> &#x9ed8;&#x8ba4;&#x503c;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">5</span> &#x51fd;&#x6570;&#x58f0;&#x660e;\n<span class=\"hljs-attribute\">7</span>.<span class=\"hljs-number\">6</span> &#x5c55;&#x5f00;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,49"}}],"payload":{"tag":"h3","lines":"30,31"}},{"content":"&#x63a5;&#x53e3;","children":[{"content":"<pre data-lines=\"50,65\"><code data-lines=\"50,65\"><span class=\"hljs-bullet\">1.</span> &#x4ecb;&#x7ecd;\n<span class=\"hljs-bullet\">2.</span> &#x63a5;&#x53e3;&#x521d;&#x63a2;\n<span class=\"hljs-bullet\">3.</span> &#x53ef;&#x9009;&#x5c5e;&#x6027;\n<span class=\"hljs-bullet\">4.</span> &#x53ea;&#x8bfb;&#x5c5e;&#x6027;\n<span class=\"hljs-bullet\">5.</span> readonly vs const\n<span class=\"hljs-bullet\">6.</span> &#x989d;&#x5916;&#x7684;&#x5c5e;&#x6027;&#x68c0;&#x67e5;\n<span class=\"hljs-bullet\">7.</span> &#x51fd;&#x6570;&#x7c7b;&#x578b;\n<span class=\"hljs-bullet\">8.</span> &#x53ef;&#x7d22;&#x5f15;&#x7684;&#x7c7b;&#x578b;\n<span class=\"hljs-bullet\">9.</span> &#x7c7b;&#x7c7b;&#x578b;\n9.1 &#x5b9e;&#x73b0;&#x63a5;&#x53e3;\n9.2 &#x7c7b;&#x9759;&#x6001;&#x90e8;&#x5206;&#x4e0e;&#x5b9e;&#x4f8b;&#x90e8;&#x5206;&#x7684;&#x533a;&#x522b;\n9.3 &#x7ee7;&#x627f;&#x63a5;&#x53e3;\n9.4 &#x63a5;&#x53e3;&#x7ee7;&#x627f;&#x7c7b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"50,65"}}],"payload":{"tag":"h3","lines":"49,50"}}],"payload":{"tag":"h2","lines":"11,12"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

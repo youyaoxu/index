@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5f39;&#x6846;","children":[{"content":"alert","children":[{"content":"<pre data-lines=\"2,10\"><code class=\"language-js\">&lt;div id=<span class=\"hljs-string\">&quot;myDiv&quot;</span>&gt;&#x70b9;&#x51fb;&#x6b64;&#x5904;&lt;/div&gt;\n<span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\nmyDiv.<span class=\"hljs-property\">onclick</span> = <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-title function_\">alert</span>([<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>]);<span class=\"hljs-comment\">//&apos;1,2,3&apos;</span>\n}\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,10"}}],"payload":{"tag":"h4","lines":"1,2"}},{"content":"confirm","children":[{"content":"<pre data-lines=\"11,24\"><code class=\"language-js\">&lt;div id=<span class=\"hljs-string\">&quot;myDiv&quot;</span>&gt;&#x70b9;&#x51fb;&#x6b64;&#x5904;&lt;/div&gt;\n<span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\nmyDiv.<span class=\"hljs-property\">onclick</span> = <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-keyword\">if</span>(<span class=\"hljs-title function_\">confirm</span>(<span class=\"hljs-string\">&apos;&#x662f;&#x5426;&#x6dfb;&#x52a0;&#x80cc;&#x666f;&#x989c;&#x8272;&#xff1f;&apos;</span>)){\n        myDiv.<span class=\"hljs-property\">style</span>.<span class=\"hljs-property\">backgroundColor</span> = <span class=\"hljs-string\">&apos;pink&apos;</span>;\n    }<span class=\"hljs-keyword\">else</span>{\n        myDiv.<span class=\"hljs-property\">style</span>.<span class=\"hljs-property\">backgroundColor</span> = <span class=\"hljs-string\">&apos;transparent&apos;</span>;\n        <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&apos;&#x597d;&#x5427;&#xff0c;&#x90a3;&#x5c31;&#x4e0d;&#x52a0;&#x80cc;&#x666f;&#x989c;&#x8272;&#x4e86;&#x3002;&apos;</span>)\n    }\n}\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,24"}}],"payload":{"tag":"h4","lines":"10,11"}},{"content":"prompt()","children":[{"content":"<pre data-lines=\"25,42\"><code class=\"language-js\">&lt;div id=<span class=\"hljs-string\">&quot;myDiv&quot;</span>&gt;&#x70b9;&#x51fb;&#x6b64;&#x5904;&lt;/div&gt;\n<span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\nmyDiv.<span class=\"hljs-property\">onclick</span> = <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-keyword\">var</span> result = <span class=\"hljs-title function_\">prompt</span>(<span class=\"hljs-string\">&quot;&#x80fd;&#x544a;&#x8bc9;&#x4f60;&#x53eb;&#x4ec0;&#x4e48;&#x5417;?&quot;</span> ,<span class=\"hljs-string\">&quot;&#x706b;&#x67f4;&quot;</span>);\n    <span class=\"hljs-keyword\">if</span>(result != <span class=\"hljs-literal\">null</span>){\n        <span class=\"hljs-keyword\">if</span>(result == <span class=\"hljs-string\">&apos;&#x706b;&#x67f4;&apos;</span>){\n            <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&apos;&#x706b;&#x67f4;&#x662f;&#x6211;&#x7684;&#x540d;&#x5b57;&#x54e6;&apos;</span>);\n        }<span class=\"hljs-keyword\">else</span>{\n            <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&quot;&#x6b22;&#x8fce;&#x4f60;,&quot;</span>+result); \n        }\n    }<span class=\"hljs-keyword\">else</span>{\n        <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&apos;&#x597d;&#x5427;&#xff0c;&#x6b22;&#x8fce;&#x4f60;&#xff0c;&#x533f;&#x540d;&#x3002;&#x6211;&#x4ee5;&#x524d;&#x4e00;&#x76f4;&#x4ee5;&#x4e3a;&#x533f;&#x540d;&#x662f;&#x4e2a;&#x4f5c;&#x5bb6;&#x7684;&#x540d;&#x5b57;&apos;</span>);\n    }\n}\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,42"}}],"payload":{"tag":"h4","lines":"24,25"}},{"content":"print()","children":[{"content":"<pre data-lines=\"43,51\"><code class=\"language-js\">&lt;div id=<span class=\"hljs-string\">&quot;myDiv&quot;</span>&gt;&#x70b9;&#x51fb;&#x6b64;&#x5904;&lt;/div&gt;\n<span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\nmyDiv.<span class=\"hljs-property\">onclick</span> = <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">print</span>();\n}\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,51"}}],"payload":{"tag":"h4","lines":"42,43"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

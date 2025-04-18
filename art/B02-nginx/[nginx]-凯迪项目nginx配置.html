@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"nginx &#x5165;&#x95e8;","children":[{"content":"<pre data-lines=\"2,38\"><code class=\"language-conf\">\nserver{\n\tlisten: 80;\n\tserver_name localhost;\n\tlocation / {\n\t\troot /opt;\n\t\tindex index.html index.htm;\n\t}\n\n\terror_page 500 502 503 504 /50x.html\n\n\tlocation = /50x.html{\n\t\troot html;\n\t}\n\n\tlocation /prod-api/ {\n\t\t# header\n\n\t\tproxy_set_header Cookie &#x24;http_cookie;\n\t\tproxy_set_header X-Forwarded-Host &#x24;host;\n\t\tproxy_set_header X-Forwarded-Server &#x24;host;\n\t\tproxy_set_header X-Forwarded-For &#x24;proxy_add_x_forward_for;\n\t\tproxy_pass https://gateway-old.dia.ink/\n\t}\n\n\tlocation /services/ {\n\t\t# header\n\t\tproxy_set_header Cookie &#x24;http_cookie;\n\t\tproxy_set_header X-Forwarded-Forward-Host &#x24;host;\n\t\tproxy_set_header X-Forwarded-Server &#x24;host;\n\t\tproxy_set_header X-Forwarded-For &#x24;proxy_add_x_forward_for;\n\t\tproxy_pass http://p02-gateway.pass-p.svc.cluster.local:8080;\n\t}\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,38"}}],"payload":{"tag":"h3","lines":"1,2"}},{})</script>
+</body>
+</html>

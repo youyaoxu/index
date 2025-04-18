@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Cookie&#x64cd;&#x4f5c;","children":[{"content":"<pre data-lines=\"2,40\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * &#x8bbe;&#x7f6e;cookie\n * <span class=\"hljs-doctag\">@param</span> name &#x5b57;&#x6bb5;&#x540d;\n * <span class=\"hljs-doctag\">@param</span> value &#x503c;\n * <span class=\"hljs-doctag\">@param</span> seconds &#x5931;&#x6548;&#x65f6;&#x957f;\n * setCookie(name, &quot;&quot;, -1);   &#x5220;&#x9664;cookie\n */</span>\n <span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">setCookie</span>(<span class=\"hljs-params\">name, value, seconds</span>) {\n    seconds = seconds || <span class=\"hljs-number\">0</span>; <span class=\"hljs-comment\">// seconds&#x6709;&#x503c;&#x5c31;&#x76f4;&#x63a5;&#x8d4b;&#x503c;&#xff0c;&#x6ca1;&#x6709;&#x4e3a;0</span>\n    <span class=\"hljs-keyword\">let</span> expires = <span class=\"hljs-string\">&apos;&apos;</span>;\n    <span class=\"hljs-keyword\">if</span> (seconds !== <span class=\"hljs-number\">0</span>) {\n      <span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;cookie&#x751f;&#x5b58;&#x65f6;&#x95f4;</span>\n      <span class=\"hljs-keyword\">const</span> date = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>();\n      date.<span class=\"hljs-title function_\">setTime</span>(date.<span class=\"hljs-title function_\">getTime</span>() + seconds * <span class=\"hljs-number\">1000</span>);\n      expires = <span class=\"hljs-string\">&apos;; expires=&apos;</span> + date[<span class=\"hljs-string\">&apos;toGMTString&apos;</span>]();\n    }\n    <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span> = name + <span class=\"hljs-string\">&apos;=&apos;</span> + <span class=\"hljs-built_in\">escape</span>(value) + expires + <span class=\"hljs-string\">&apos;; path=/&apos;</span>;\n  }\n  \n<span class=\"hljs-comment\">/**\n * &#x83b7;&#x53d6;cookie\n * <span class=\"hljs-doctag\">@param</span> name &#x5b57;&#x6bb5;&#x540d;\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getCookie</span>(<span class=\"hljs-params\">name</span>) {\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span>.<span class=\"hljs-property\">length</span> &gt; <span class=\"hljs-number\">0</span>) {\n    <span class=\"hljs-keyword\">let</span> start = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span>.<span class=\"hljs-title function_\">indexOf</span>(name + <span class=\"hljs-string\">&apos;=&apos;</span>);\n    <span class=\"hljs-keyword\">if</span> (start !== -<span class=\"hljs-number\">1</span>) {\n      start = start + name.<span class=\"hljs-property\">length</span> + <span class=\"hljs-number\">1</span>;\n      <span class=\"hljs-keyword\">let</span> end = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span>.<span class=\"hljs-title function_\">indexOf</span>(<span class=\"hljs-string\">&apos;;&apos;</span>, start);\n      <span class=\"hljs-keyword\">if</span> (end === -<span class=\"hljs-number\">1</span>) end = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span>.<span class=\"hljs-property\">length</span>;\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">unescape</span>(<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">cookie</span>.<span class=\"hljs-title function_\">substring</span>(start, end)).<span class=\"hljs-title function_\">replace</span>(<span class=\"hljs-regexp\">/&apos;/g</span>, <span class=\"hljs-string\">&apos;&apos;</span>);\n    }\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,40"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

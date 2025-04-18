@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"&#x83b7;&#x53d6;style","children":[{"content":"<pre data-lines=\"2,16\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x4f9d;&#x8d56; getStyle</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getStyle</span>(<span class=\"hljs-params\">dom, name</span>) {\n  <span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">getComputedStyle</span>) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-title function_\">getComputedStyle</span>(dom, <span class=\"hljs-literal\">null</span>)[name]\n    }\n    <span class=\"hljs-comment\">//</span>\n    <span class=\"hljs-keyword\">return</span> dom.<span class=\"hljs-property\">currentStyle</span>[name]\n  } <span class=\"hljs-keyword\">catch</span> (e) {\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,16"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"&#x83b7;&#x53d6;&#x5bbd;&#x5ea6;","children":[{"content":"<pre data-lines=\"18,27\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getWidth</span>(<span class=\"hljs-params\">dom</span>) {\n  <span class=\"hljs-keyword\">let</span> width = <span class=\"hljs-title function_\">_getStyle</span>(dom, <span class=\"hljs-string\">&apos;width&apos;</span>)\n  <span class=\"hljs-keyword\">if</span> (width === <span class=\"hljs-string\">&apos;auto&apos;</span>) {\n    width = dom.<span class=\"hljs-property\">offsetWidth</span>\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">parseFloat</span>(width)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,27"}}],"payload":{"tag":"h2","lines":"17,18"}},{"content":"&#x83b7;&#x53d6;&#x9ad8;&#x5ea6;","children":[{"content":"<pre data-lines=\"29,38\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getHeight</span>(<span class=\"hljs-params\">dom</span>) {\n  <span class=\"hljs-keyword\">let</span> height = <span class=\"hljs-title function_\">_getStyle</span>(dom, <span class=\"hljs-string\">&apos;height&apos;</span>)\n  <span class=\"hljs-keyword\">if</span> (height === <span class=\"hljs-string\">&apos;auto&apos;</span>) {\n    height = dom.<span class=\"hljs-property\">offsetHeight</span>\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-built_in\">parseFloat</span>(height)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,38"}}],"payload":{"tag":"h2","lines":"28,29"}}]},{})</script>
+</body>
+</html>

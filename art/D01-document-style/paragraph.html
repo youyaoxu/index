@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6bb5;&#x843d;","children":[{"content":"&#x539f;&#x5219;","children":[{"content":"&#x4e00;&#x4e2a;&#x6bb5;&#x843d;&#x53ea;&#x80fd;&#x6709;&#x4e00;&#x4e2a;&#x4e3b;&#x9898;&#xff0c;&#x6216;&#x4e00;&#x4e2a;&#x4e2d;&#x5fc3;&#x53e5;&#x5b50;&#x3002;","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"&#x6bb5;&#x843d;&#x7684;&#x4e2d;&#x5fc3;&#x53e5;&#x5b50;&#x653e;&#x5728;&#x6bb5;&#x9996;&#xff0c;&#x5bf9;&#x5168;&#x6bb5;&#x5185;&#x5bb9;&#x8fdb;&#x884c;&#x6982;&#x8ff0;&#x3002;&#x540e;&#x9762;&#x9648;&#x8ff0;&#x7684;&#x53e5;&#x5b50;&#x4e3a;&#x4e2d;&#x5fc3;&#x53e5;&#x5b50;&#x670d;&#x52a1;&#x3002;","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"&#x4e00;&#x4e2a;&#x6bb5;&#x843d;&#x7684;&#x957f;&#x5ea6;&#x4e0d;&#x80fd;&#x8d85;&#x8fc7;&#x4e03;&#x884c;&#xff0c;&#x6700;&#x4f73;&#x6bb5;&#x843d;&#x957f;&#x5ea6;&#x5c0f;&#x4e8e;&#x7b49;&#x4e8e;&#x56db;&#x884c;&#x3002;","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"&#x6bb5;&#x843d;&#x7684;&#x53e5;&#x5b50;&#x8bed;&#x6c14;&#x8981;&#x4f7f;&#x7528;&#x9648;&#x8ff0;&#x548c;&#x80af;&#x5b9a;&#x8bed;&#x6c14;&#xff0c;&#x907f;&#x514d;&#x4f7f;&#x7528;&#x611f;&#x53f9;&#x8bed;&#x6c14;&#x3002;","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"&#x6bb5;&#x843d;&#x4e4b;&#x95f4;&#x4f7f;&#x7528;&#x4e00;&#x4e2a;&#x7a7a;&#x884c;&#x9694;&#x5f00;&#x3002;","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"&#x6bb5;&#x843d;&#x5f00;&#x5934;&#x4e0d;&#x8981;&#x7559;&#x51fa;&#x7a7a;&#x767d;&#x5b57;&#x7b26;&#x3002;","children":[],"payload":{"tag":"li","lines":"9,11"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x5f15;&#x7528;","children":[{"content":"<pre data-lines=\"13,14\"><code>&#x5f15;&#x7528;&#x7b2c;&#x4e09;&#x65b9;&#x5185;&#x5bb9;&#x65f6;&#xff0c;&#x5e94;&#x6ce8;&#x660e;&#x51fa;&#x5904;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,14"}},{"content":"<pre data-lines=\"15,18\"><code data-lines=\"15,18\">One <span class=\"hljs-keyword\">man</span>&#x2019;s constant <span class=\"hljs-keyword\">is</span> another <span class=\"hljs-keyword\">man</span>&#x2019;s variable. &#x2014; Alan Perlis\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,18"}},{"content":"<pre data-lines=\"19,20\"><code>&#x5982;&#x679c;&#x662f;&#x5168;&#x7bc7;&#x8f6c;&#x8f7d;&#xff0c;&#x8bf7;&#x5728;&#x5168;&#x6587;&#x5f00;&#x5934;&#x663e;&#x8457;&#x4f4d;&#x7f6e;&#x6ce8;&#x660e;&#x4f5c;&#x8005;&#x548c;&#x51fa;&#x5904;&#xff0c;&#x5e76;&#x94fe;&#x63a5;&#x81f3;&#x539f;&#x6587;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,20"}},{"content":"<pre data-lines=\"21,24\"><code data-lines=\"21,24\">&#x672c;&#x6587;&#x8f6c;&#x8f7d;&#x81ea; WikiQuote\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,24"}},{"content":"<pre data-lines=\"25,26\"><code>&#x4f7f;&#x7528;&#x5916;&#x90e8;&#x56fe;&#x7247;&#x65f6;&#xff0c;&#x5fc5;&#x987b;&#x5728;&#x56fe;&#x7247;&#x4e0b;&#x65b9;&#x6216;&#x6587;&#x672b;&#x6807;&#x660e;&#x6765;&#x6e90;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,26"}},{"content":"<pre data-lines=\"27,30\"><code data-lines=\"27,30\">&#x672c;&#x6587;&#x90e8;&#x5206;&#x56fe;&#x7247;&#x6765;&#x81ea; Wikipedia\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,30"}}],"payload":{"tag":"h2","lines":"11,12"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

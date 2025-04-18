@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6570;&#x7ec4;&#x6392;&#x5e8f;-sort","children":[{"content":"<pre data-lines=\"1,22\"><code data-lines=\"1,22\"><span class=\"hljs-keyword\">var</span> arr=[<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">4</span>,<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">3</span>];\n<span class=\"hljs-comment\">//&#x63d2;&#x5165;&#x6392;&#x5e8f;:</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">insertSort</span>(<span class=\"hljs-params\">arr</span>){\n  <span class=\"hljs-comment\">//&#x904d;&#x5386;arr&#x4e2d;&#x6bcf;&#x4e2a;&#x5143;&#x7d20;(i&#x4ece;1&#x5f00;&#x59cb;)</span>\n  <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">1</span>;i&lt;arr.<span class=\"hljs-built_in\">length</span>;i++){\n    <span class=\"hljs-comment\">//&#x5c06;&#x5f53;&#x524d;&#x5143;&#x7d20;&#x4e34;&#x65f6;&#x4fdd;&#x5b58;&#x5728;&#x53d8;&#x91cf;t&#x4e2d;</span>\n    <span class=\"hljs-keyword\">var</span> t=arr[i];\n    <span class=\"hljs-keyword\">var</span> p=i<span class=\"hljs-number\">-1</span>;<span class=\"hljs-comment\">//&#x58f0;&#x660e;&#x53d8;&#x91cf;p=i-1</span>\n    <span class=\"hljs-comment\">//&#x5faa;&#x73af;:(arr[p]&gt;t&amp;&amp;p&gt;=0){</span>\n    <span class=\"hljs-keyword\">while</span>(arr[p]&gt;t&amp;&amp;p&gt;=<span class=\"hljs-number\">0</span>){\n      <span class=\"hljs-comment\">//&#x5c06;p&#x4f4d;&#x7f6e;&#x7684;&#x503c;&#xff0c;&#x8d4b;&#x503c;&#x7ed9;p+1&#x4f4d;&#x7f6e;</span>\n      arr[p+<span class=\"hljs-number\">1</span>]=arr[p];\n      p--;<span class=\"hljs-comment\">//p--</span>\n    }<span class=\"hljs-comment\">//(&#x5faa;&#x73af;&#x7ed3;&#x675f;)</span>\n    arr[p+<span class=\"hljs-number\">1</span>]=t;<span class=\"hljs-comment\">//&#x5c06;t&#x653e;&#x5728;p+1&#x7684;&#x4f4d;&#x7f6e;&#x4e0a;</span>\n  }<span class=\"hljs-comment\">//(&#x5faa;&#x73af;&#x7ed3;&#x675f;)</span>\n}\ninsertSort(arr);\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(String(arr));\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,22"}},{"content":"<pre data-lines=\"22,49\"><code data-lines=\"22,49\"><span class=\"hljs-comment\">//&#x5feb;&#x901f;&#x6392;&#x5e8f;:</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">quickSort</span>(<span class=\"hljs-params\">arr</span>){\n  <span class=\"hljs-comment\">//&#x5982;&#x679c;arr&#x7684;length&lt;=1</span>\n  <span class=\"hljs-keyword\">if</span>(arr.<span class=\"hljs-built_in\">length</span>&lt;=<span class=\"hljs-number\">1</span>){\n    <span class=\"hljs-keyword\">return</span> arr;<span class=\"hljs-comment\">//&#x5c31;&#x76f4;&#x63a5;&#x8fd4;&#x56de;arr</span>\n  }\n  <span class=\"hljs-comment\">//&#x8ba1;&#x7b97;&#x53c2;&#x7167;&#x4f4d;p</span>\n  <span class=\"hljs-keyword\">var</span> p=Math.<span class=\"hljs-built_in\">floor</span>(arr.<span class=\"hljs-built_in\">length</span>/<span class=\"hljs-number\">2</span>);\n  <span class=\"hljs-keyword\">var</span> <span class=\"hljs-built_in\">left</span>=[];\n  <span class=\"hljs-keyword\">var</span> <span class=\"hljs-built_in\">right</span>=[];\n  <span class=\"hljs-comment\">//&#x5220;&#x9664;p&#x4f4d;&#x7f6e;&#x7684;&#x5143;&#x7d20;</span>\n  <span class=\"hljs-keyword\">var</span> center=arr.<span class=\"hljs-built_in\">splice</span>(p,<span class=\"hljs-number\">1</span>)[<span class=\"hljs-number\">0</span>];\n  <span class=\"hljs-comment\">//&#x904d;&#x5386;arr&#x4e2d;&#x6bcf;&#x4e2a;&#x5143;&#x7d20;</span>\n  <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>;i&lt;arr.<span class=\"hljs-built_in\">length</span>;i++){\n    <span class=\"hljs-keyword\">if</span>(arr[i]&gt;=center){\n      <span class=\"hljs-built_in\">right</span>.<span class=\"hljs-built_in\">push</span>(arr[i]);\n    }<span class=\"hljs-keyword\">else</span>{\n      <span class=\"hljs-built_in\">left</span>.<span class=\"hljs-built_in\">push</span>(arr[i]);\n    }\n  }\n  <span class=\"hljs-keyword\">return</span> quickSort(<span class=\"hljs-built_in\">left</span>)\n          .concat(center,quickSort(<span class=\"hljs-built_in\">right</span>))\n}\n<span class=\"hljs-keyword\">var</span> sortedArr=quickSort(arr);\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(String(sortedArr));\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,49"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

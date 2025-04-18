@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5bf9;&#x8c61;-01_&#x5173;&#x4e8e;&#x5bf9;&#x8c61;&#x904d;&#x5386;","children":[{"content":"Object.keys()","children":[{"content":"<pre data-lines=\"4,14\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-string\">&apos;a&apos;</span>, <span class=\"hljs-string\">&apos;b&apos;</span>, <span class=\"hljs-string\">&apos;c&apos;</span>]\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(arr)) <span class=\"hljs-comment\">// [&apos;0&apos;, &apos;1&apos;, &apos;2&apos;]</span>\n\n<span class=\"hljs-keyword\">const</span> obj = { <span class=\"hljs-number\">0</span>: <span class=\"hljs-string\">&apos;a&apos;</span>, <span class=\"hljs-number\">1</span>: <span class=\"hljs-string\">&apos;b&apos;</span>, <span class=\"hljs-number\">2</span>: <span class=\"hljs-string\">&apos;c&apos;</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(obj)) <span class=\"hljs-comment\">// [&apos;0&apos;, &apos;1&apos;, &apos;2&apos;]</span>\n\n<span class=\"hljs-keyword\">const</span> obj2 = { <span class=\"hljs-number\">100</span>: <span class=\"hljs-string\">&apos;a&apos;</span>, <span class=\"hljs-number\">2</span>: <span class=\"hljs-string\">&apos;b&apos;</span>, <span class=\"hljs-number\">7</span>: <span class=\"hljs-string\">&apos;c&apos;</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(obj2)) <span class=\"hljs-comment\">// [&apos;2&apos;, &apos;7&apos;, &apos;100&apos;]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,14"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Object.values()","children":[{"content":"<pre data-lines=\"17,24\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> obj1 = { <span class=\"hljs-attr\">foo</span>: <span class=\"hljs-string\">&apos;bar&apos;</span>, <span class=\"hljs-attr\">baz</span>: <span class=\"hljs-number\">42</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">values</span>(obj1)) <span class=\"hljs-comment\">// [&apos;bar&apos;, 42]</span>\n\n<span class=\"hljs-keyword\">const</span> obj2 = { <span class=\"hljs-number\">0</span>: <span class=\"hljs-string\">&apos;a&apos;</span>, <span class=\"hljs-number\">1</span>: <span class=\"hljs-string\">&apos;b&apos;</span>, <span class=\"hljs-number\">2</span>: <span class=\"hljs-string\">&apos;c&apos;</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">values</span>(obj2)) <span class=\"hljs-comment\">// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,24"}}],"payload":{"tag":"h2","lines":"15,16"}},{"content":"Object.entries()","children":[{"content":"<pre data-lines=\"27,46\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> obj1 = {\n  <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&apos;dengke&apos;</span>,\n  <span class=\"hljs-attr\">age</span>: <span class=\"hljs-number\">18</span>\n};\n\n<span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> [key, value] <span class=\"hljs-keyword\">of</span> <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">entries</span>(obj1)) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">`<span class=\"hljs-subst\">&#x24;{key}</span>: <span class=\"hljs-subst\">&#x24;{value}</span>`</span>);\n}\n<span class=\"hljs-comment\">// &quot;name: dengke&quot;</span>\n<span class=\"hljs-comment\">// &quot;age: 18&quot;</span>\n\n<span class=\"hljs-keyword\">const</span> obj2 = { <span class=\"hljs-attr\">foo</span>: <span class=\"hljs-string\">&apos;bar&apos;</span>, <span class=\"hljs-attr\">baz</span>: <span class=\"hljs-number\">42</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">entries</span>(obj2)) <span class=\"hljs-comment\">// [ [&apos;foo&apos;, &apos;bar&apos;], [&apos;baz&apos;, 42] ]</span>\n\n<span class=\"hljs-keyword\">const</span> obj3 = { <span class=\"hljs-number\">0</span>: <span class=\"hljs-string\">&apos;a&apos;</span>, <span class=\"hljs-number\">1</span>: <span class=\"hljs-string\">&apos;b&apos;</span>, <span class=\"hljs-number\">2</span>: <span class=\"hljs-string\">&apos;c&apos;</span> }\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">entries</span>(obj3)) <span class=\"hljs-comment\">// [ [&apos;0&apos;, &apos;a&apos;], [&apos;1&apos;, &apos;b&apos;], [&apos;2&apos;, &apos;c&apos;] ]</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,46"}}],"payload":{"tag":"h2","lines":"25,26"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

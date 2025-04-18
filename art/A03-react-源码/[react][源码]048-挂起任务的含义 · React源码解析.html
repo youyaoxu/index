@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6302;&#x8d77;&#x4efb;&#x52a1;&#x7684;&#x542b;&#x4e49;","children":[{"content":"onTimeout","children":[{"content":"<pre data-lines=\"83,96\"><code>`root.timeoutHandler`&#x7528;&#x6765;&#x8bb0;&#x5f55;&#x5b50;&#x6811;&#x4e2d;&#x9700;&#x8981;`timeout`&#x6267;&#x884c;&#x7684;&#x4efb;&#x52a1;&#xff0c;&#x8fd9;&#x7c7b;&#x4efb;&#x52a1;&#x88ab;&#x6302;&#x8d77;&#x7684;&#x539f;&#x56e0;&#x4e00;&#x822c;&#x662f;&#x56e0;&#x4e3a;&#x629b;&#x51fa;&#x4e86;`promise`&#xff0c;&#x5e76;&#x4e14;&#x81ea;&#x4e0a;&#x6b21;&#x63d0;&#x4ea4;&#x7ecf;&#x8fc7;&#x4e86;`maxDruation`&#x65f6;&#x95f4;&#x7684;&#x4efb;&#x52a1;&#xff0c;`nextLatestAbsoluteTimeoutMs`&#x5c31;&#x662f;&#x7528;&#x6765;&#x8bb0;&#x5f55;&#x5b50;&#x6811;&#x4e2d;&#x4f18;&#x5148;&#x7ea7;&#x6700;&#x9ad8;&#x7684;&#x9700;&#x8981;&#x63d0;&#x4ea4;&#x7684;&#x88ab;&#x6302;&#x8d77;&#x7684;&#x4efb;&#x52a1;&#x7684;&#x3002;&#x88ab;&#x6302;&#x8d77;&#x4ee3;&#x8868;&#x4e86;&#x4efb;&#x52a1;&#x5df2;&#x7ecf;&#x66f4;&#x65b0;&#x5b8c;&#x6210;&#xff0c;&#x4f46;&#x662f;&#x56e0;&#x4e3a;&#x4e00;&#x4e9b;&#x539f;&#x56e0;&#x4e0d;&#x9700;&#x8981;&#x7acb;&#x9a6c;&#x63d0;&#x4ea4;&#xff0c;&#x6bd4;&#x5982;&#xff1a;\n\n*   &#x6709;&#x9519;&#x8bef;&#x51fa;&#x73b0;&#xff0c;&#x5e76;&#x4e14;&#x6709;&#x4f4e;&#x4f18;&#x5148;&#x7ea7;&#x7684;&#x66f4;&#x65b0;&#xff0c;&#x90a3;&#x4e48;&#x53ef;&#x4ee5;&#x8ddf;&#x4f4e;&#x4f18;&#x5148;&#x7ea7;&#x7684;&#x66f4;&#x65b0;&#x4e00;&#x8d77;&#x88ab;&#x63d0;&#x4ea4;\n*   &#x6709;&#x9519;&#x8bef;&#x4f46;&#x662f;&#x6ca1;&#x6709;&#x4f4e;&#x4f18;&#x5148;&#x7ea7;&#x7684;&#x4efb;&#x52a1;&#xff0c;&#x53d1;&#x8d77;&#x4e00;&#x6b21;&#x540c;&#x6b65;&#x7684;&#x66f4;&#x65b0;&#xff0c;&#x518d;&#x6b21;&#x6267;&#x884c;&#x88ab;&#x6302;&#x8d77;&#x7684;&#x4f18;&#x5148;&#x7ea7;&#x7684;&#x4efb;&#x52a1;\n*   `Suspense`&#x7ec4;&#x4ef6;&#x63a5;&#x6536;&#x5230;&#x5f02;&#x5e38;&#x7684;&#x60c5;&#x51b5;&#xff0c;&#x6839;&#x636e;&#x60c5;&#x51b5;&#x6302;&#x8d77;&#x4e00;&#x4e9b;&#x65f6;&#x95f4;&#xff0c;&#x6700;&#x957f;&#x4e3a;&#x4f18;&#x5148;&#x7ea7;&#x6700;&#x9ad8;&#x7684;&#x4efb;&#x52a1;&#x7684;&#x8fc7;&#x671f;&#x65f6;&#x95f4;&#xff0c;&#x5982;&#x679c;&#x8d85;&#x65f6;&#x4f1a;&#x6267;&#x884c;`flushRoot`&#x5f3a;&#x5236;&#x63d0;&#x4ea4;\n\n&#x9700;&#x8981;&#x6ce8;&#x610f;&#x7684;&#x662f;&#xff0c;&#x88ab;&#x6302;&#x8d77;&#x7684;&#x4efb;&#x52a1;&#x53ea;&#x6709;`Suspense`&#x7684;&#x60c5;&#x51b5;&#x662f;&#x8bbe;&#x7f6e;&#x4e86;`timeout`&#x7684;&#xff0c;&#x4f46;&#x662f;&#x4e0d;&#x4ee3;&#x8868;&#x4ed6;&#x4e00;&#x5b9a;&#x8981;&#x7b49;&#x5230;`timeout`&#x624d;&#x4f1a;&#x88ab;&#x63d0;&#x4ea4;&#xff0c;&#x4ee5;&#x4e0b;&#x60c5;&#x51b5;&#x90fd;&#x4f1a;&#x63d0;&#x65e9;&#x63d0;&#x4ea4;&#xff1a;\n\n*   &#x6709;&#x4efb;&#x52a1;&#x7684;`expirationTime`&#x5c0f;&#x4e8e;`timeout`&#x7684;&#x65f6;&#x957f;\n*   &#x5728;`timeout`&#x671f;&#x95f4;&#x540c;&#x4e00;&#x5b50;&#x6811;&#x4ea7;&#x751f;&#x4e86;&#x65b0;&#x7684;&#x66f4;&#x65b0;&#xff0c;&#x8fde;&#x540c;`Suspense`&#x7ec4;&#x4ef6;&#x4e00;&#x8d77;&#x66f4;&#x65b0;&#x4e86;\n*   `Promise`&#x72b6;&#x6001;&#x6539;&#x53d8;&#xff0c;&#x8c03;&#x5ea6;&#x4e86;&#x65b0;&#x7684;&#x66f4;&#x65b0;\n\n&#x8bbe;&#x7f6e;&#x4e86;`timeoutHandler`&#x4e4b;&#x540e;&#xff0c;&#x5728;&#x4e0b;&#x4e00;&#x6b21;&#x5f00;&#x59cb;&#x66f4;&#x65b0;&#x4e4b;&#x524d;&#x4f1a;&#x6e05;&#x9664;`handler`&#xff0c;&#x5982;&#x679c;&#x65b0;&#x7684;&#x66f4;&#x65b0;&#x6539;&#x53d8;&#x4e86;`isExpire`&#x6216;&#x8005;`nextLatestAbsoluteTimeoutMs`&#xff0c;&#x90a3;&#x4e48;&#x4f1a;&#x5bfc;&#x81f4;`timeoutHandler`&#x53d8;&#x5316;&#xff0c;&#x751a;&#x81f3;&#x4e0d;&#x9700;&#x8981;`timeout`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"83,96"}}],"payload":{"tag":"h3","lines":"81,82"}},{"content":"retry","children":[{"content":"<pre data-lines=\"99,104\"><code>`retry`&#x53ea;&#x662f;&#x7b80;&#x5355;&#x5730;&#x53d1;&#x8d77;&#x4e00;&#x6b21;&#x65b0;&#x7684;&#x8c03;&#x5ea6;&#xff0c;&#x6240;&#x4ee5;&#x5e76;&#x4e0d;&#x5173;&#x5fc3;&#x65b0;&#x7684;&#x6e32;&#x67d3;&#x662f;&#x5426;&#x8fd8;&#x9700;&#x8981;&#x8fd9;&#x4e2a;`promise`&#x8fd4;&#x56de;&#x7684;&#x6570;&#x636e;&#x3002;\n\n&#x5728;`retry`&#x7684;&#x65f6;&#x5019;&#xff0c;&#x5982;&#x679c;&#x4ed6;&#x5904;&#x4e8e;`ConcurrentMode`&#xff0c;&#x90a3;&#x4e48;&#x53ea;&#x9700;&#x8981;&#x91cd;&#x65b0;&#x8bbe;&#x7f6e;&#x8282;&#x70b9;&#x7684;`expirationTime`&#x4e3a;`retryTime`&#x5373;&#x53ef;\n\n**&#x8fd9;&#x91cc;&#x6ce8;&#x610f;&#xff0c;&#x56e0;&#x4e3a;&#x540c;&#x6b65;&#x6a21;&#x5f0f;&#x4e0b;`Suspense`&#x7ec4;&#x4ef6;&#x76f4;&#x63a5;&#x6e32;&#x67d3;`null`&#xff0c;&#x4e0d;&#x4f1a;&#x50cf;&#x5f02;&#x6b65;&#x6a21;&#x5f0f;&#x4e0b;&#x4e00;&#x6837;&#x64cd;&#x4f5c;&#xff0c;&#x6240;&#x4ee5;&#x540c;&#x6b65;&#x6a21;&#x5f0f;&#x4e0b;&#x4ed6;&#x5df2;&#x7ecf;&#x6ca1;&#x6709;&#x66f4;&#x65b0;&#x4e86;&#xff0c;&#x6240;&#x4ee5;&#x9700;&#x8981;&#x521b;&#x5efa;&#x65b0;&#x7684;&#x66f4;&#x65b0;**\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"99,104"}}],"payload":{"tag":"h3","lines":"97,98"}},{"content":"error","children":[{"content":"<pre data-lines=\"107,108\"><code>&#x6ce8;&#x610f;&#x91cd;&#x65b0;&#x53d1;&#x8d77;&#x4e00;&#x6b21;&#x540c;&#x6b65;&#x8bf7;&#x6c42;&#x7684;&#x6761;&#x4ef6;&#x662f;&#x6bd4;&#x8f83;&#x82db;&#x523b;&#x7684;&#xff0c;&#x5c31;&#x662f;&#x8981;&#x7b26;&#x5408;`!root.didError`&#x548c;`!isExpire`&#xff0c;&#x4e5f;&#x5c31;&#x662f;&#x540c;&#x6b65;&#x4efb;&#x52a1;&#x662f;&#x4e0d;&#x4f1a;&#x8fdb;&#x5165;&#x8fd9;&#x4e2a;&#x5206;&#x652f;&#x7684;&#xff0c;&#x53ea;&#x4f1a;&#x76f4;&#x63a5;&#x63d0;&#x4ea4;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"107,108"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"109,110"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"113,114"}}],"payload":{"tag":"h3","lines":"105,106"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

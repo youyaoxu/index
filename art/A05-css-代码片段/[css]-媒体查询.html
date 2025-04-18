@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"<pre data-lines=\"0,23\"><code class=\"language-css\">// iPhoneX, XS, <span class=\"hljs-number\">11</span> Pro\n<span class=\"hljs-keyword\">@media</span> <span class=\"hljs-keyword\">only</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-width</span>: <span class=\"hljs-number\">375px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-height</span>: <span class=\"hljs-number\">812px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">-webkit-device-pixel-ratio</span>: <span class=\"hljs-number\">3</span>)  {\n    \n}\n// iPhone XR, <span class=\"hljs-number\">11</span> \n<span class=\"hljs-keyword\">@media</span> <span class=\"hljs-keyword\">only</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-width</span>: <span class=\"hljs-number\">414px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-height</span>: <span class=\"hljs-number\">896px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">-webkit-device-pixel-ratio</span>: <span class=\"hljs-number\">2</span>) {\n    \n}\n// iPhoneXS Max, <span class=\"hljs-number\">11</span> Pro Max\n<span class=\"hljs-keyword\">@media</span> <span class=\"hljs-keyword\">only</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-width</span>: <span class=\"hljs-number\">414px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-height</span>: <span class=\"hljs-number\">896px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">-webkit-device-pixel-ratio</span>: <span class=\"hljs-number\">3</span>) {\n    \n}\n// iPhone <span class=\"hljs-number\">12</span>&#xff0c;<span class=\"hljs-number\">12</span> pro\n<span class=\"hljs-keyword\">@media</span> <span class=\"hljs-keyword\">only</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-width</span>: <span class=\"hljs-number\">390px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-height</span>: <span class=\"hljs-number\">844px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">-webkit-device-pixel-ratio</span>: <span class=\"hljs-number\">3</span>){\n    \n}\n// iPhone <span class=\"hljs-number\">12</span> pro max\n<span class=\"hljs-keyword\">@media</span> <span class=\"hljs-keyword\">only</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-width</span>: <span class=\"hljs-number\">428px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">device-height</span>: <span class=\"hljs-number\">926px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">-webkit-device-pixel-ratio</span>: <span class=\"hljs-number\">3</span>){\n    \n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"0,23"}},{})</script>
+</body>
+</html>

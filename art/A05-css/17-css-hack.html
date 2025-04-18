@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"<a href=\"https://www.cnblogs.com/xiaohuochai/p/6383384.html\">CSS Hack</a><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVQ4T+2T4Q2CMBCFv27CBjgCG+gIjAAbOAIjOIJs4Ai6gRvIBpjXXCOp19T/8pJLoTneXcj3Ah91wAV4bu68xwXoAZ2EzEAmE9AWTB6AelRDyaAx9zgh0wE4ATczcTdIE7wl0oe7wX/8RMHigfQTB3fDdM1IEvYyONdIVEOSqDwCY2Z2NaS/UNbqMSQmvauUPlfbNKpBSdTUVyXSs/XyBlRCNBG20I28AAAAAElFTkSuQmCC\" alt=\"img\">","children":[{"content":"&#x524d;&#x9762;&#x7684;&#x8bdd;","children":[{"content":"<pre data-lines=\"4,5\"><code>&#x3000;&#x3000;CSS Hack&#x662f;&#x5b9e;&#x73b0;&#x6d4f;&#x89c8;&#x5668;&#x6837;&#x5f0f;&#x517c;&#x5bb9;&#x7684;&#x515c;&#x5e95;&#x529e;&#x6cd5;&#xff0c;&#x80fd;&#x4e0d;&#x7528;&#x5c31;&#x5c3d;&#x91cf;&#x4e0d;&#x8981;&#x4f7f;&#x7528;&#x3002;&#x4f46;&#x662f;&#xff0c;&#x9488;&#x5bf9;&#x4e00;&#x4e9b;&#x6d4f;&#x89c8;&#x5668;&#x7684;bug&#xff0c;&#x6bd4;&#x5982;&#x8001;&#x7248;&#x672c;IE&#x7684;bug&#xff0c;&#x6709;&#x65f6;&#x4f7f;&#x7528;CSS Hack&#x662f;&#x4e0d;&#x5f97;&#x5df2;&#x800c;&#x4e3a;&#x4e4b;&#x7684;&#x505a;&#x6cd5;&#x3002;&#x672c;&#x6587;&#x5c06;&#x8be6;&#x7ec6;&#x4ecb;&#x7ecd;CSS Hack&#x3002;CSS Hack&#x4e3b;&#x8981;&#x5206;&#x4e3a;&#x5c5e;&#x6027;&#x6807;&#x8bb0;&#x6cd5;&#x548c;&#x9009;&#x62e9;&#x5668;&#x524d;&#x7f00;&#x6cd5;&#x4e24;&#x79cd;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,5"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"&#x5c5e;&#x6027;&#x6807;&#x8bb0;&#x6cd5;","children":[{"content":"<pre data-lines=\"10,13\"><code>&#x3010;IE6-&#x3011;\n\n&#x3000;&#x3000;&#x5bf9;&#x4e8e;IE6-&#x6d4f;&#x89c8;&#x5668;&#x4e3b;&#x8981;&#x4f7f;&#x7528;&#x4e0b;&#x5212;&#x7ebf;_&#x548c;&#x4e2d;&#x5212;&#x7ebf;-&#x8fd9;&#x4e24;&#x79cd;&#x5b57;&#x7b26;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,13"}},{"content":"<pre data-lines=\"14,18\"><code data-lines=\"14,18\">_color:blue;\n-<span class=\"hljs-attribute\">color</span>:blue;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,18"}},{"content":"<pre data-lines=\"19,24\"><code>&#x3010;IE7-&#x3011;\n\n&#x3000;&#x3000;&#x5bf9;&#x4e8e;IE7-&#x6d4f;&#x89c8;&#x5668;&#x53ef;&#x4ee5;&#x4f7f;&#x7528;&#x975e;&#x5e38;&#x591a;&#x7684;&#x5b57;&#x7b26;&#xff0c;&#x5305;&#x62ec;`~!@#&#x24;%^&amp;*()=+{[]:&lt;&gt;,.?/\n\n&#x3000;&#x3000;&#x4f46;&#x662f;&#xff0c;&#x6bd4;&#x8f83;&#x5e38;&#x7528;&#x7684;&#x662f;&#x52a0;&#x53f7;+&#x548c;&#x661f;&#x53f7;*\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,24"}},{"content":"<pre data-lines=\"25,29\"><code data-lines=\"25,29\">+<span class=\"hljs-attribute\">color</span>:blue;\n*<span class=\"hljs-attribute\">color</span>:blue;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,29"}},{"content":"<pre data-lines=\"30,33\"><code>&#x3010;IE10-&#x3011;\n\n&#x3000;&#x3000;&#x4f7f;&#x7528;&#x540e;&#x7f00;\\9&#x53ef;&#x4ee5;&#x8bc6;&#x522b;&#x51fa;IE10-&#x6d4f;&#x89c8;&#x5668;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,33"}},{"content":"<pre data-lines=\"34,37\"><code data-lines=\"34,37\"><span class=\"hljs-attribute\">color</span>:blue\\<span class=\"hljs-number\">9</span>;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,37"}},{"content":"<pre data-lines=\"38,41\"><code>&#x3010;IE8+&#x3011;\n\n&#x3000;&#x3000;&#x4f7f;&#x7528;&#x540e;&#x7f00;\\0&#x53ef;&#x4ee5;&#x8bc6;&#x522b;&#x51fa;IE8+&#x6d4f;&#x89c8;&#x5668;&#x3000;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"38,41"}},{"content":"<pre data-lines=\"42,45\"><code data-lines=\"42,45\"><span class=\"hljs-attribute\">color</span>:blue\\<span class=\"hljs-number\">0</span>;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,45"}},{"content":"<pre data-lines=\"46,49\"><code>&#x3010;IE9&#x3001;IE10&#x3011;\n\n&#x3000;&#x3000;&#x4f7f;&#x7528;&#x540e;&#x7f00;\\9\\0&#x53ef;&#x4ee5;&#x8bc6;&#x522b;&#x51fa;IE9&#x3001;10&#x6d4f;&#x89c8;&#x5668;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,49"}},{"content":"<pre data-lines=\"50,53\"><code data-lines=\"50,53\"><span class=\"hljs-attribute\">color</span>:blue\\<span class=\"hljs-number\">9</span>\\<span class=\"hljs-number\">0</span>;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"50,53"}}],"payload":{"tag":"h3","lines":"8,9"}},{"content":"&#x9009;&#x62e9;&#x5668;&#x524d;&#x7f00;&#x6cd5;","children":[{"content":"<pre data-lines=\"58,63\"><code>&#x3010;IE6-&#x3011;\n\n&#x3000;&#x3000;&#x5728;&#x9009;&#x62e9;&#x5668;&#x524d;&#x9762;&#x6dfb;&#x52a0;* html&#xff0c;&#x53ef;&#x4ee5;&#x8bc6;&#x522b;IE6-&#x6d4f;&#x89c8;&#x5668;\n\n&#x3000;&#x3000;[&#x6ce8;&#x610f;]*&#x548c;html&#x4e4b;&#x95f4;&#x6709;&#x65e0;&#x7a7a;&#x683c;&#x90fd;&#x53ef;&#x4ee5;&#x751f;&#x6548;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"58,63"}},{"content":"<pre data-lines=\"64,67\"><code data-lines=\"64,67\">*<span class=\"hljs-selector-tag\">html</span> <span class=\"hljs-selector-tag\">div</span>{<span class=\"hljs-attribute\">color</span>:red}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"64,67"}},{"content":"<pre data-lines=\"68,73\"><code>&#x3010;IE7&#x3011;\n\n&#x3000;&#x3000;&#x5728;&#x9009;&#x62e9;&#x5668;&#x524d;&#x9762;&#x6dfb;&#x52a0;*+html&#xff0c;&#x53ef;&#x4ee5;&#x8bc6;&#x522b;IE7&#x6d4f;&#x89c8;&#x5668;\n\n&#x3000;&#x3000;[&#x6ce8;&#x610f;]*&#x3001;+&#x3001;html&#x4e4b;&#x95f4;&#x6709;&#x65e0;&#x7a7a;&#x683c;&#x90fd;&#x53ef;&#x4ee5;&#x751f;&#x6548;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"68,73"}},{"content":"<pre data-lines=\"74,77\"><code data-lines=\"74,77\">*+<span class=\"hljs-selector-tag\">html</span> <span class=\"hljs-selector-tag\">div</span>{<span class=\"hljs-attribute\">color</span>:red}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"74,77"}},{"content":"<pre data-lines=\"78,83\"><code>&#x3010;IE8&#x3011;\n\n&#x3000;&#x3000;&#x5728;&#x9009;&#x62e9;&#x5668;&#x5916;&#x5c42;&#x4f7f;&#x7528;@media \\0&#xff0c;&#x53ef;&#x4ee5;&#x8bc6;&#x522b;IE8&#x6d4f;&#x89c8;&#x5668;\n\n&#x3000;&#x3000;[&#x6ce8;&#x610f;]@media&#x548c;\\0&#x4e4b;&#x95f4;&#x5fc5;&#x987b;&#x6709;&#x7a7a;&#x683c;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"78,83"}},{"content":"<pre data-lines=\"84,89\"><code data-lines=\"84,89\"><span class=\"hljs-keyword\">@media</span> \\<span class=\"hljs-number\">0</span>{\n    <span class=\"hljs-selector-tag\">div</span>{<span class=\"hljs-attribute\">color</span>:red}\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"84,89"}},{"content":"<pre data-lines=\"90,93\"><code>&#x3010;IE9+&#x53ca;&#x5176;&#x4ed6;&#x975e;IE&#x6d4f;&#x89c8;&#x5668;&#x3011;\n\n&#x3000;&#x3000;&#x5728;&#x9009;&#x62e9;&#x5668;&#x524d;&#x9762;&#x6dfb;&#x52a0;:root&#xff0c;&#x53ef;&#x4ee5;&#x8bc6;&#x522b;IE9+&#x53ca;&#x5176;&#x4ed6;&#x975e;IE&#x6d4f;&#x89c8;&#x5668;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"90,93"}},{"content":"<pre data-lines=\"94,97\"><code data-lines=\"94,97\"><span class=\"hljs-meta\">:root div{color:red}</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"94,97"}}],"payload":{"tag":"h3","lines":"56,57"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

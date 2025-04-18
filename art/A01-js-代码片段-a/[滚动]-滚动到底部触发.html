@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6eda;&#x52a8;&#x5230;&#x5e95;&#x90e8;&#x51fa;&#x53d1;","children":[{"content":"<pre data-lines=\"2,22\"><code data-lines=\"2,22\"><span class=\"hljs-title function_\">handleScroll</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> scrollView = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">querySelectorAll</span>(<span class=\"hljs-string\">&quot;div.app-main-border&quot;</span>)[<span class=\"hljs-number\">0</span>]\n  <span class=\"hljs-keyword\">let</span> scrollTop = scrollView.<span class=\"hljs-property\">scrollTop</span>; <span class=\"hljs-comment\">//&#x6eda;&#x52a8;&#x6761;&#x5728;Y&#x8f74;&#x6eda;&#x52a8;&#x8fc7;&#x7684;&#x9ad8;&#x5ea6;</span>\n  <span class=\"hljs-keyword\">let</span> scrollHeight = scrollView.<span class=\"hljs-property\">scrollHeight</span>; <span class=\"hljs-comment\">//&#x6eda;&#x52a8;&#x6761;&#x7684;&#x9ad8;&#x5ea6;</span>\n  <span class=\"hljs-keyword\">let</span> clientHeight = scrollView.<span class=\"hljs-property\">clientHeight</span>; <span class=\"hljs-comment\">//&#x6d4f;&#x89c8;&#x5668;&#x7684;&#x53ef;&#x89c6;&#x9ad8;&#x5ea6;</span>\n  <span class=\"hljs-comment\">//so &#x5224;&#x65ad;&#x6eda;&#x52a8;&#x6761;&#x5230;&#x5e95;&#x90e8;&#x7684;&#x5224;&#x65ad;&#x6761;&#x4ef6;&#x5c31;&#x662f;</span>\n  <span class=\"hljs-comment\">//scrollTop+clientHeight==scrollHeight</span>\n  <span class=\"hljs-comment\">// console.log(&apos;&#x6eda;&#x52a8;&#x9ad8;&#x5ea6;&apos;,document.documentElement.scrollHeight)</span>\n  <span class=\"hljs-comment\">// console.log(&apos;&#x6d4f;&#x89c8;&#x5668;&#x7684;&#x53ef;&#x89c6;&#x9ad8;&#x5ea6;&apos;,document.documentElement.clientHeight)</span>\n  <span class=\"hljs-comment\">// console.log(&apos;&#x8ddd;&#x79bb;&#x9876;&#x90e8;&#x7684;&#x9ad8;&#x5ea6;u&apos;,scrollTop)</span>\n  <span class=\"hljs-keyword\">if</span> (scrollTop + clientHeight == scrollHeight) {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(scrollTop, clientHeight, scrollHeight)\n    <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">pageNum</span> ++\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-title class_\">Math</span>.<span class=\"hljs-title function_\">ceil</span>(<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">totalAnaBi</span> / <span class=\"hljs-number\">4</span>)  &gt;= <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">pageNum</span>)\n    <span class=\"hljs-comment\">// console.log(&quot;&#x6eda;&#x52a8;&#x5230;&#x5e95;&#x90e8;&#x4e86;&quot;);</span>\n    <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">getAnaList</span>()\n  }\n},\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

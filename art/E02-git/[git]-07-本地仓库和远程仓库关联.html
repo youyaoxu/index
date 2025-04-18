@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[git]-&#x672c;&#x5730;&#x4ed3;&#x5e93;&#x548c;&#x8fdc;&#x7a0b;&#x4ed3;&#x5e93;&#x5173;&#x8054;","children":[{"content":"&#x5168;&#x5c40;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"3,7\"><code class=\"language-bash\">git config --global user.name <span class=\"hljs-string\">&quot;youyaoxu&quot;</span>\ngit config --global user.email <span class=\"hljs-string\">&quot;903652259@qq.com&quot;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,7"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x521b;&#x5efa;git&#x4ed3;&#x5e93;","children":[{"content":"<pre data-lines=\"10,20\"><code class=\"language-bash\"><span class=\"hljs-built_in\">mkdir</span> fsg-ai\n<span class=\"hljs-built_in\">cd</span> fsg-ai\ngit init \n<span class=\"hljs-built_in\">touch</span> README.md\ngit add README.md\ngit commit -m <span class=\"hljs-string\">&quot;first commit&quot;</span>\ngit remote add origin https://gitee.com/youyaoxu/fsg-ai.git\ngit push -u origin <span class=\"hljs-string\">&quot;master&quot;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,20"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"&#x5df2;&#x6709;&#x4ed3;&#x5e93;","children":[{"content":"<pre data-lines=\"23,29\"><code class=\"language-bash\"><span class=\"hljs-built_in\">cd</span> existing_git_repo\ngit remote add origin https://gitee.com/youyaoxu/fsg-ai.git\n<span class=\"hljs-comment\"># -u &#x53c2;&#x6570;&#x662f; --set-upstream &#x7684;&#x7f29;&#x5199;&#xff0c;&#x5176;&#x6838;&#x5fc3;&#x4f5c;&#x7528;&#x662f;&#x5efa;&#x7acb;&#x672c;&#x5730;&#x5206;&#x652f;&#x4e0e;&#x8fdc;&#x7a0b;&#x5206;&#x652f;&#x7684;&#x8ffd;&#x8e2a;&#x5173;&#x7cfb;</span>\ngit push -u origin master \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,29"}}],"payload":{"tag":"h2","lines":"21,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"normalize","children":[{"content":"<pre data-lines=\"2,21\"><code class=\"language-json\"><span class=\"hljs-punctuation\">{</span>\n  <span class=\"hljs-attr\">&quot;id&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;123&quot;</span><span class=\"hljs-punctuation\">,</span>\n  <span class=\"hljs-attr\">&quot;author&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">&quot;id&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;1&quot;</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">&quot;name&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;Paul&quot;</span>\n  <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n  <span class=\"hljs-attr\">&quot;title&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;My awesome blog post&quot;</span><span class=\"hljs-punctuation\">,</span>\n  <span class=\"hljs-attr\">&quot;comments&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n      <span class=\"hljs-attr\">&quot;id&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;324&quot;</span><span class=\"hljs-punctuation\">,</span>\n      <span class=\"hljs-attr\">&quot;commenter&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">&quot;id&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;2&quot;</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">&quot;name&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;Nicole&quot;</span>\n      <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span>\n  <span class=\"hljs-punctuation\">]</span>\n<span class=\"hljs-punctuation\">}</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,21"}},{"content":"<pre data-lines=\"22,41\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> { normalize, schema } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;normalizr&apos;</span>;\n\n<span class=\"hljs-comment\">// Define a users schema</span>\n<span class=\"hljs-keyword\">const</span> user = <span class=\"hljs-keyword\">new</span> schema.<span class=\"hljs-title class_\">Entity</span>(<span class=\"hljs-string\">&apos;users&apos;</span>);\n\n<span class=\"hljs-comment\">// Define your comments schema</span>\n<span class=\"hljs-keyword\">const</span> comment = <span class=\"hljs-keyword\">new</span> schema.<span class=\"hljs-title class_\">Entity</span>(<span class=\"hljs-string\">&apos;comments&apos;</span>, {\n  <span class=\"hljs-attr\">commenter</span>: user\n});\n\n<span class=\"hljs-comment\">// Define your article</span>\n<span class=\"hljs-keyword\">const</span> article = <span class=\"hljs-keyword\">new</span> schema.<span class=\"hljs-title class_\">Entity</span>(<span class=\"hljs-string\">&apos;articles&apos;</span>, {\n  <span class=\"hljs-attr\">author</span>: user,\n  <span class=\"hljs-attr\">comments</span>: [comment]\n});\n\n<span class=\"hljs-keyword\">const</span> normalizedData = <span class=\"hljs-title function_\">normalize</span>(originalData, article);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,41"}},{"content":"<pre data-lines=\"42,64\"><code class=\"language-json\">{\n  result: &quot;123&quot;,\n  entities: {\n    &quot;articles&quot;: {\n      &quot;123&quot;: {\n        id: &quot;123&quot;,\n        author: &quot;1&quot;,\n        title: &quot;My awesome blog post&quot;,\n        comments: [ &quot;324&quot; ]\n      }\n    },\n    &quot;users&quot;: {\n      &quot;1&quot;: { &quot;id&quot;: &quot;1&quot;, &quot;name&quot;: &quot;Paul&quot; },\n      &quot;2&quot;: { &quot;id&quot;: &quot;2&quot;, &quot;name&quot;: &quot;Nicole&quot; }\n    },\n    &quot;comments&quot;: {\n      &quot;324&quot;: { id: &quot;324&quot;, &quot;commenter&quot;: &quot;2&quot; }\n    }\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,64"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

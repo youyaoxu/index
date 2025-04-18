@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x7b2c;&#x5341;&#x56db;&#x7ae0; JDK&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"14.1&#x3001;JDK5&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"1. &#x81ea;&#x52a8;&#x88c5;&#x7bb1;&#x3001;&#x62c6;&#x7bb1;","children":[],"payload":{"tag":"li","lines":"6,7","listIndex":1}},{"content":"2. &#x9759;&#x6001;&#x5bfc;&#x5165;","children":[],"payload":{"tag":"li","lines":"7,8","listIndex":2}},{"content":"3. &#x589e;&#x5f3a;for&#x5faa;&#x73af;","children":[],"payload":{"tag":"li","lines":"8,9","listIndex":3}},{"content":"4. &#x53ef;&#x53d8;&#x53c2;&#x6570;","children":[],"payload":{"tag":"li","lines":"9,10","listIndex":4}},{"content":"5. &#x679a;&#x4e3e;","children":[],"payload":{"tag":"li","lines":"10,11","listIndex":5}},{"content":"6. &#x6cdb;&#x578b;","children":[],"payload":{"tag":"li","lines":"11,12","listIndex":6}},{"content":"7. &#x5143;&#x6570;&#x636e;","children":[],"payload":{"tag":"li","lines":"12,14","listIndex":7}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"14.2&#x3001;JDK7&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"1. &#x5bf9;Java&#x96c6;&#x5408;&#xff08;Collections&#xff09;&#x7684;&#x589e;&#x5f3a;&#x652f;&#x6301;","children":[],"payload":{"tag":"li","lines":"17,18","listIndex":1}},{"content":"2. &#x5728;switch&#x4e2d;&#x53ef;&#x7528;String","children":[],"payload":{"tag":"li","lines":"18,19","listIndex":2}},{"content":"3. &#x6570;&#x503c;&#x53ef;&#x52a0;&#x4e0b;&#x5212;&#x7ebf;","children":[],"payload":{"tag":"li","lines":"19,20","listIndex":3}},{"content":"4. &#x652f;&#x6301;&#x4e8c;&#x8fdb;&#x5236;&#x6587;&#x5b57;","children":[],"payload":{"tag":"li","lines":"20,21","listIndex":4}},{"content":"5. &#x6cdb;&#x578b;&#x7b80;&#x5316;","children":[],"payload":{"tag":"li","lines":"21,22","listIndex":5}},{"content":"6. &#x5f02;&#x5e38;&#x7684;&#x591a;&#x4e2a;catch&#x5408;&#x5e76;","children":[],"payload":{"tag":"li","lines":"22,23","listIndex":6}},{"content":"7. &#x81ea;&#x52a8;&#x8d44;&#x6e90;&#x7ba1;&#x7406;","children":[],"payload":{"tag":"li","lines":"23,25","listIndex":7}}],"payload":{"tag":"h2","lines":"14,16"}},{"content":"14.3&#x3001;JDK8&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"1. Lambda&#x8868;&#x8fbe;&#x5f0f;","children":[],"payload":{"tag":"li","lines":"28,29","listIndex":1}},{"content":"2. &#x51fd;&#x6570;&#x5f0f;&#x63a5;&#x53e3;","children":[],"payload":{"tag":"li","lines":"29,30","listIndex":2}},{"content":"3. &#x65b9;&#x6cd5;&#x5f15;&#x7528;&#x4e0e;&#x6784;&#x9020;&#x5668;&#x5f15;&#x7528;","children":[],"payload":{"tag":"li","lines":"30,31","listIndex":3}},{"content":"4. Stream API","children":[],"payload":{"tag":"li","lines":"31,32","listIndex":4}},{"content":"5. Optional&#x5bb9;&#x5668;&#x7c7b;","children":[],"payload":{"tag":"li","lines":"32,33","listIndex":5}},{"content":"6. &#x63a5;&#x53e3;&#x4e2d;&#x7684;&#x9ed8;&#x8ba4;&#x65b9;&#x6cd5;&#x4e0e;&#x9759;&#x6001;&#x65b9;&#x6cd5;","children":[],"payload":{"tag":"li","lines":"33,34","listIndex":6}},{"content":"7. &#x65b0;&#x65f6;&#x95f4;&#x65e5;&#x671f; API","children":[],"payload":{"tag":"li","lines":"34,35","listIndex":7}},{"content":"8. &#x91cd;&#x590d;&#x6ce8;&#x89e3;","children":[],"payload":{"tag":"li","lines":"35,36","listIndex":8}}],"payload":{"tag":"h2","lines":"25,27"}}],"payload":{"tag":"h1","lines":"1,3"}},{})</script>
+</body>
+</html>

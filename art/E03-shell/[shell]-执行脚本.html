@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6267;&#x884c;&#x811a;&#x672c;","children":[{"content":"&#x6267;&#x884c;&#x65b9;&#x5f0f;","children":[{"content":"&#x65b9;&#x5f0f;&#x4e00;","children":[{"content":"<pre data-lines=\"5,8\"><code class=\"language-sh\">sh createFile.sh\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}}],"payload":{"tag":"h3","lines":"3,4"}},{"content":"&#x65b9;&#x5f0f;&#x4e8c;","children":[{"content":"<pre data-lines=\"11,16\"><code class=\"language-sh\"><span class=\"hljs-built_in\">chmod</span> +x createFile.sh\n\n./createFile.sh\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,16"}},{"content":"<pre data-lines=\"17,21\"><code data-lines=\"17,21\">&#x4e24;&#x79cd;&#x6267;&#x884c;&#x65b9;&#x5f0f;&#x7684;&#x533a;&#x522b;\n<span class=\"hljs-section\">&#x6ce8;: &#x7b2c;&#x4e00;&#x79cd;&#x6267;&#x884c;&#x65b9;&#x6cd5;&#x672c;&#x8d28;&#x662f;bash&#x89e3;&#x6790;&#x5668;&#x5e2e;&#x4f60;&#x6267;&#x884c;&#x811a;&#x672c;&#xff0c;&#x6240;&#x4ee5;&#x811a;&#x672c;&#x672c;&#x8eab;&#x4e0d;&#x9700;&#x8981;&#x6267;&#x884c;&#x6743;&#x9650;&#xff0c;&#x800c;&#x7b2c;&#x4e8c;&#x79cd;&#x6267;&#x884c;&#x65b9;&#x6cd5;&#x672c;&#x8d28;&#x662f;&#x811a;&#x672c;&#x9700;&#x8981;&#x81ea;&#x5df1;&#x6267;&#x884c;&#xff0c;&#x6240;&#x4ee5;&#x9700;&#x8981;&#x6267;&#x884c;&#x6743;&#x9650;&#x3002;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,21"}}],"payload":{"tag":"h3","lines":"9,10"}}],"payload":{"tag":"h2","lines":"2,3"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

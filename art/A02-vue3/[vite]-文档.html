@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"vite&#x6587;&#x6863;&#x9605;&#x8bfb;","children":[{"content":"&#x5f00;&#x59cb;","children":[{"content":"&#x603b;&#x89c8;","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"&#x6d4f;&#x89c8;&#x5668;&#x652f;&#x6301;","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"&#x5728;&#x7ebf;&#x8bd5;&#x7528;vite","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"&#x642d;&#x5efa;&#x7b2c;&#x4e00;&#x4e2a;vite","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"&#x793e;&#x533a;&#x6a21;&#x677f;","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"index.html&#x4e0e;&#x9879;&#x76ee;&#x6839;&#x76ee;&#x5f55;","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"&#x547d;&#x4ee4;&#x884c;&#x754c;&#x9762;","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"&#x4f7f;&#x7528;&#x672a;&#x53d1;&#x5e03;&#x7684;&#x529f;&#x80fd;","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"&#x793e;&#x533a;","children":[],"payload":{"tag":"li","lines":"12,14"}}],"payload":{"tag":"li","lines":"3,14"}},{"content":"","children":[{"content":"&#x529f;&#x80fd;","children":[{"content":"npm&#x4f9d;&#x8d56;&#x89e3;&#x6790;&#x548c;&#x9884;&#x6784;&#x5efa;","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"TypeScript","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"&#x6a21;&#x5757;&#x70ed;&#x66ff;&#x6362;","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"Vue","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"JSX","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"CSS","children":[{"content":"@import&#x5185;&#x8054;&#x548c;&#x53d8;&#x57fa;","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"PostCSS","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"CSS Modules","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"CSS &#x9884;&#x5904;&#x7406;&#x5668;","children":[],"payload":{"tag":"li","lines":"26,27"}}],"payload":{"tag":"li","lines":"22,27"}},{"content":"&#x9759;&#x6001;&#x8d44;&#x6e90;&#x5904;&#x7406;","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"JSON","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"Glob&#x5bfc;&#x5165;","children":[{"content":"import.meta.glob","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"glob &#x5bfc;&#x5165;&#x5f62;&#x5f0f;","children":[],"payload":{"tag":"li","lines":"31,32"}},{"content":"&#x591a;&#x4e2a;&#x5339;&#x914d;&#x6a21;&#x5f0f;","children":[],"payload":{"tag":"li","lines":"32,33"}},{"content":"&#x53cd;&#x9762;&#x5339;&#x914d;&#x6a21;&#x5f0f;","children":[],"payload":{"tag":"li","lines":"33,34"}}],"payload":{"tag":"li","lines":"29,34"}},{"content":"&#x52a8;&#x6001;&#x5bfc;&#x5165;","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"WebAssembly","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Web Worker","children":[{"content":"&#x901a;&#x8fc7;&#x6784;&#x9020;&#x5668;&#x5bfc;&#x5165;","children":[],"payload":{"tag":"li","lines":"37,38"}},{"content":"&#x5e26;&#x6709;&#x67e5;&#x8be2;&#x540e;&#x7f00;&#x7684;&#x5bfc;&#x5165;","children":[],"payload":{"tag":"li","lines":"38,39"}}],"payload":{"tag":"li","lines":"36,39"}},{"content":"&#x6784;&#x5efa;&#x4f18;&#x5316;","children":[{"content":"CSS&#x4ee3;&#x7801;&#x5206;&#x5272;","children":[{"content":"&#x9884;&#x52a0;&#x8f7d;&#x6307;&#x4ee4;&#x751f;&#x6210;","children":[],"payload":{"tag":"li","lines":"41,42"}}],"payload":{"tag":"li","lines":"40,42"}},{"content":"&#x5f02;&#x6b65;chunk&#x52a0;&#x8f7d;&#x4f18;&#x5316;","children":[],"payload":{"tag":"li","lines":"42,43"}}],"payload":{"tag":"li","lines":"39,43"}}],"payload":{"tag":"li","lines":"16,43"}},{"content":"&#x4f7f;&#x7528;&#x63d2;&#x4ef6;","children":[{"content":"&#x6dfb;&#x52a0;&#x4e00;&#x4e2a;&#x63d2;&#x4ef6;","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"&#x67e5;&#x627e;&#x63d2;&#x4ef6;","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"&#x5f3a;&#x5236;&#x63d2;&#x4ef6;&#x6392;&#x5e8f;","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"&#x6309;&#x9700;&#x5e94;&#x7528;","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"&#x521b;&#x5efa;&#x63d2;&#x4ef6;","children":[],"payload":{"tag":"li","lines":"48,49"}}],"payload":{"tag":"li","lines":"43,49"}},{"content":"&#x4f9d;&#x8d56;&#x9884;&#x6784;&#x5efa;","children":[{"content":"&#x539f;&#x56e0;","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"&#x81ea;&#x52a8;&#x4f9d;&#x8d56;&#x641c;&#x5bfb;","children":[],"payload":{"tag":"li","lines":"51,52"}},{"content":"Monorepo&#x548c;&#x94fe;&#x63a5;&#x4f9d;&#x8d56;","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"&#x81ea;&#x5b9a;&#x4e49;&#x884c;&#x4e3a;","children":[],"payload":{"tag":"li","lines":"53,54"}},{"content":"&#x7f13;&#x5b58;","children":[{"content":"&#x6587;&#x4ef6;&#x7cfb;&#x7edf;&#x7f13;&#x5b58;","children":[],"payload":{"tag":"li","lines":"55,56"}},{"content":"&#x6d4f;&#x89c8;&#x5668;&#x7f13;&#x5b58;","children":[],"payload":{"tag":"li","lines":"56,57"}}],"payload":{"tag":"li","lines":"54,57"}}],"payload":{"tag":"li","lines":"49,57"}},{"content":"&#x9759;&#x6001;&#x8d44;&#x6e90;&#x5904;&#x7406;","children":[{"content":"&#x5c06;&#x9759;&#x6001;&#x8d44;&#x6e90;&#x5f15;&#x5165;&#x4e3a;URL","children":[{"content":"&#x663e;&#x793a;URL","children":[],"payload":{"tag":"li","lines":"59,60"}},{"content":"&#x5c06;&#x8d44;&#x6e90;&#x5f15;&#x5165;&#x4e3a;&#x5b57;&#x7b26;&#x4e32;","children":[],"payload":{"tag":"li","lines":"60,61"}},{"content":"&#x5bfc;&#x5165;&#x811a;&#x672c;&#x4f5c;&#x4e3a;Worker","children":[],"payload":{"tag":"li","lines":"61,62"}}],"payload":{"tag":"li","lines":"58,62"}},{"content":"new URL()","children":[{"content":"import.meta.url","children":[],"payload":{"tag":"li","lines":"63,66"}}],"payload":{"tag":"li","lines":"62,66"}}],"payload":{"tag":"li","lines":"57,66"}}],"payload":{"tag":"ul","lines":"16,66"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

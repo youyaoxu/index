@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x56fe;&#x7247;]-&#x5982;&#x4f55;&#x5c06;base64&#x8f6c;&#x4e3a;url","children":[{"content":"&#x6b65;&#x9aa4;1","children":[{"content":"<pre data-lines=\"3,6\"><code data-lines=\"3,6\">src&#x652f;&#x6301;<span class=\"hljs-built_in\">base64</span>&#x56fe;&#x7247;&#xff0c;&#x6b63;&#x5e38;<span class=\"hljs-built_in\">base64</span>&#x56fe;&#x7247;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x590d;&#x5236;&#x5230;&#x56fe;&#x7247;src&#xff0c;&#x4e5f;&#x53ef;&#x4ee5;&#x5c06;&#x5176;&#x8f6c;&#x4e3a;URL\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,6"}},{"content":"<pre data-lines=\"8,30\"><code class=\"language-js\"><span class=\"hljs-comment\">// data</span>\n<span class=\"hljs-attr\">url</span>: <span class=\"hljs-string\">&apos;XXXXXXXX&apos;</span> <span class=\"hljs-comment\">// base64&#x7f16;&#x7801;</span>\n<span class=\"hljs-attr\">imgUrl</span>: <span class=\"hljs-string\">&apos;&apos;</span> <span class=\"hljs-comment\">// &#x56fe;&#x7247;&#x8def;&#x5f84;</span>\n\n<span class=\"hljs-comment\">// methods</span>\n<span class=\"hljs-title function_\">base64ImgtoFile</span> (dataurl, filename = <span class=\"hljs-string\">&apos;file&apos;</span>) {\n  <span class=\"hljs-keyword\">const</span> arr = dataurl.<span class=\"hljs-title function_\">split</span>(<span class=\"hljs-string\">&apos;,&apos;</span>)\n  <span class=\"hljs-keyword\">const</span> mime = arr[<span class=\"hljs-number\">0</span>].<span class=\"hljs-title function_\">match</span>(<span class=\"hljs-regexp\">/:(.*?);/</span>)[<span class=\"hljs-number\">1</span>]\n  <span class=\"hljs-keyword\">const</span> suffix = mime.<span class=\"hljs-title function_\">split</span>(<span class=\"hljs-string\">&apos;/&apos;</span>)[<span class=\"hljs-number\">1</span>]\n  <span class=\"hljs-keyword\">const</span> bstr = <span class=\"hljs-title function_\">atob</span>(arr[<span class=\"hljs-number\">1</span>])\n  <span class=\"hljs-keyword\">let</span> n = bstr.<span class=\"hljs-property\">length</span>\n  <span class=\"hljs-keyword\">const</span> u8arr = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Uint8Array</span>(n)\n  <span class=\"hljs-keyword\">while</span> (n--) {\n    u8arr[n] = bstr.<span class=\"hljs-title function_\">charCodeAt</span>(n)\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">File</span>([u8arr], <span class=\"hljs-string\">`<span class=\"hljs-subst\">&#x24;{filename}</span>.<span class=\"hljs-subst\">&#x24;{suffix}</span>`</span>, {\n    <span class=\"hljs-attr\">type</span>: mime\n  })\n},\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,30"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x6b65;&#x9aa4;2","children":[{"content":"<pre data-lines=\"32,35\"><code data-lines=\"32,35\">&#x6253;&#x5370;&#x5f97;&#x5230;<span class=\"hljs-built_in\">File</span>&#x6587;&#x4ef6;&#xff0c;&#x518d;&#x8f6c;&#x4e3a;png&#x56fe;&#x7247;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,35"}},{"content":"<pre data-lines=\"37,43\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> img = <span class=\"hljs-string\">&apos;data:image/png;base64,&apos;</span> + img\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">file</span> = <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">base64ImgtoFile</span>(img) <span class=\"hljs-comment\">// &#x5f97;&#x5230;File&#x5bf9;&#x8c61;</span>\n<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">imgUrl</span> = <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">webkitURL</span>.<span class=\"hljs-title function_\">createObjectURL</span>(file) || <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">URL</span>.<span class=\"hljs-title function_\">createObjectURL</span>(file) <span class=\"hljs-comment\">// imgUrl&#x56fe;&#x7247;&#x7f51;&#x7edc;&#x8def;&#x5f84;</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,43"}}],"payload":{"tag":"h2","lines":"31,32"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

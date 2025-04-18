@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6b63;&#x5219;&#x7edf;&#x8ba1;-regexp","children":[{"content":"<pre data-lines=\"1,11\"><code data-lines=\"1,11\"><span class=\"hljs-comment\">//1. &quot;ryan is not a good man&quot;</span>\n<span class=\"hljs-comment\">//   &quot;ryan5 is6 not7 a8 good9 man10&quot;\\</span>\n<span class=\"hljs-keyword\">var</span> n=<span class=\"hljs-number\">5</span>;\n<span class=\"hljs-keyword\">var</span> str=<span class=\"hljs-string\">&quot;ryan is not a good man&quot;</span>;\nstr=str.<span class=\"hljs-built_in\">replace</span>(<span class=\"hljs-regexp\">/\\b[a-z]+\\b/g</span>,<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">kw</span>){\n  <span class=\"hljs-keyword\">return</span> kw+n++;\n});\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(str);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,11"}},{"content":"<pre data-lines=\"11,25\"><code data-lines=\"11,25\"><span class=\"hljs-comment\">//2. &#x7edf;&#x8ba1;&#x5b57;&#x7b26;&#x4e32;&#x4e2d;&#x6bcf;&#x79cd;&#x5b57;&#x7b26;&#x51fa;&#x73b0;&#x7684;&#x6b21;&#x6570;</span>\n<span class=\"hljs-comment\">//   &#x51fa;&#x73b0;&#x6b21;&#x6570;&#x6700;&#x591a;&#x7684;&#x662f;? &#x51fa;&#x73b0;?&#x6b21;</span>\n<span class=\"hljs-keyword\">var</span> str=<span class=\"hljs-string\">&quot;helloworld&quot;</span>;\n<span class=\"hljs-comment\">//&#x7528;hash</span>\n<span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>,<span class=\"hljs-built_in\">hash</span>={};i&lt;str.<span class=\"hljs-built_in\">length</span>;i++){\n  <span class=\"hljs-keyword\">if</span>(<span class=\"hljs-built_in\">hash</span>[str[i]]){\n    <span class=\"hljs-built_in\">hash</span>[str[i]]++\n  }<span class=\"hljs-keyword\">else</span>{\n    <span class=\"hljs-built_in\">hash</span>[str[i]]=<span class=\"hljs-number\">1</span>;\n  }\n}\n<span class=\"hljs-built_in\">console</span>.dir(<span class=\"hljs-built_in\">hash</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,25"}},{"content":"<pre data-lines=\"25,42\"><code data-lines=\"25,42\"><span class=\"hljs-comment\">//&#x7528;&#x6b63;&#x5219;</span>\n<span class=\"hljs-keyword\">var</span> arr=str.<span class=\"hljs-built_in\">split</span>(<span class=\"hljs-string\">&quot;&quot;</span>)\n          .<span class=\"hljs-built_in\">sort</span>()\n          .join(<span class=\"hljs-string\">&quot;&quot;</span>)\n          .match(<span class=\"hljs-regexp\">/([a-z])\\1*/g</span>)\n          .<span class=\"hljs-built_in\">sort</span>(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">a,b</span>){\n            <span class=\"hljs-keyword\">return</span> b.<span class=\"hljs-built_in\">length</span>-a.<span class=\"hljs-built_in\">length</span>;\n        })\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(<span class=\"hljs-string\">&quot;&#x51fa;&#x73b0;&#x6700;&#x591a;&#x7684;&#x662f;: &quot;</span>+arr[<span class=\"hljs-number\">0</span>][<span class=\"hljs-number\">0</span>]\n          +<span class=\"hljs-string\">&quot;&#x5171;&quot;</span>+arr[<span class=\"hljs-number\">0</span>].<span class=\"hljs-built_in\">length</span>+<span class=\"hljs-string\">&quot;&#x6b21;&quot;</span>);\n<span class=\"hljs-keyword\">var</span> <span class=\"hljs-built_in\">hash</span>={};\narr.forEach(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">val</span>){\n  <span class=\"hljs-built_in\">hash</span>[val[<span class=\"hljs-number\">0</span>]]=val.<span class=\"hljs-built_in\">length</span>;\n});\n<span class=\"hljs-built_in\">console</span>.dir(<span class=\"hljs-built_in\">hash</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,42"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

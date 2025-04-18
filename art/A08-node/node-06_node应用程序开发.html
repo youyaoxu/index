@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Node&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x5f00;&#x53d1;","children":[{"content":"<pre data-lines=\"2,6\"><code data-lines=\"2,6\">&#x76ee;&#x5f55;\n&#x542f;&#x52a8;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,6"}},{"content":"<pre data-lines=\"7,9\"><code>&#x542f;&#x52a8;\n&#x901a;&#x5e38;&#xff0c;&#x6211;&#x4eec;&#x5728;Shell&#x542f;&#x52a8;Node&#x811a;&#x672c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,9"}},{"content":"<pre data-lines=\"10,13\"><code class=\"language-bash\">&#x24; node /path/to/your/script.js\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,13"}},{"content":"<pre data-lines=\"14,17\"><code>&#x4f46;&#x662f;&#xff0c;&#x8fd9;&#x4e2a;Shell&#x968f;&#x7740;&#x4f60;&#x9000;&#x51fa;Shell&#x5c31;&#x81ea;&#x52a8;&#x7ed3;&#x675f;&#x4e86;&#x3002;\n\n&#x4e3a;&#x4e86;&#x957f;&#x671f;&#x8fd0;&#x884c;&#xff0c;Node&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x53ef;&#x4ee5;&#x5728;&#x540e;&#x53f0;&#x8fd0;&#x884c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,17"}},{"content":"<pre data-lines=\"18,21\"><code class=\"language-bash\">&#x24; node /path/to/your/script.js &amp;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,21"}},{"content":"<pre data-lines=\"22,29\"><code>&#x4f46;&#x662f;&#xff0c;&#x5728;&#x9000;&#x51fa;Shell&#x4ee5;&#x540e;&#xff0c;&#x5982;&#x679c;Node&#x8fdb;&#x7a0b;&#x8981;&#x5728;console&#x8f93;&#x51fa;&#x5185;&#x5bb9;&#xff0c;&#x4f46;console&#x5df2;&#x7ecf;&#x5173;&#x4e86;&#xff08;&#x5373;STDOUT&#x5df2;&#x7ecf;&#x4e0d;&#x5b58;&#x5728;&#xff09;&#xff0c;&#x8fd9;&#x65f6;&#x8fdb;&#x7a0b;&#x5c31;&#x4f1a;&#x9000;&#x51fa;&#x3002;&#x4e5f;&#x6ca1;&#x6709;&#x529e;&#x6cd5;&#x91cd;&#x65b0;&#x542f;&#x52a8;&#x3002;\n\n&#x4e3a;&#x4e86;&#x8ba9;Node&#x8fdb;&#x7a0b;&#x5728;&#x540e;&#x53f0;&#x957f;&#x671f;&#x542f;&#x52a8;&#xff0c;&#x9700;&#x8981;&#x4e00;&#x4e2a;daemon&#xff08;&#x5373;&#x5e38;&#x9a7b;&#x7684;&#x670d;&#x52a1;&#x8fdb;&#x7a0b;&#xff09;&#x3002;&#x6709;&#x51e0;&#x79cd;&#x65b9;&#x6cd5;&#x53ef;&#x4ee5;&#x5b9e;&#x73b0;&#x3002;\n\n&#xff08;1&#xff09;forever\n\nforever&#x662f;&#x4e00;&#x4e2a;Node&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#xff0c;&#x7528;&#x4e8e;&#x4e00;&#x4e2a;&#x5b50;&#x8fdb;&#x7a0b;&#x610f;&#x5916;&#x9000;&#x51fa;&#x65f6;&#xff0c;&#x81ea;&#x52a8;&#x91cd;&#x542f;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,29"}},{"content":"<pre data-lines=\"30,45\"><code class=\"language-bash\"><span class=\"hljs-comment\"># &#x542f;&#x52a8;&#x8fdb;&#x7a0b;</span>\n&#x24; forever start example.js\n\n<span class=\"hljs-comment\"># &#x5217;&#x51fa;&#x6240;&#x6709;forever&#x542f;&#x52a8;&#x7684;&#x6b63;&#x5728;&#x8fd0;&#x884c;&#x7684;&#x8fdb;&#x7a0b;</span>\n&#x24; forever list\n\n<span class=\"hljs-comment\"># &#x505c;&#x6b62;&#x8fdb;&#x7a0b;</span>\n&#x24; forever stop example.js\n<span class=\"hljs-comment\"># &#x6216;&#x8005;</span>\n&#x24; forever stop 0\n\n<span class=\"hljs-comment\"># &#x505c;&#x6b62;&#x6240;&#x6709;&#x6b63;&#x5728;&#x8fd0;&#x884c;&#x7684;&#x8fdb;&#x7a0b;</span>\n&#x24; forever stopall\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,45"}},{"content":"<pre data-lines=\"46,50\"><code data-lines=\"46,50\">&#x76ee;&#x5f55;\n&#x542f;&#x52a8;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,50"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

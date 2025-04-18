@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"hooks API&#x5f00;&#x59cb;","children":[{"content":"prepareToUseHooks","children":[{"content":"<pre data-lines=\"132,133\"><code>&#x8fd9;&#x4e2a;&#x65b9;&#x6cd5;&#x6765;&#x81ea;`ReactFiberHooks.js`&#xff0c;&#x660e;&#x663e;&#x53ea;&#x662f;&#x521d;&#x59cb;&#x5316;&#x4e00;&#x4e9b;&#x6a21;&#x5757;&#x5185;&#x7684;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"132,133"}},{"content":"<pre data-lines=\"134,146\"><code data-lines=\"134,146\">export <span class=\"hljs-keyword\">function</span> prepareToUseHooks(\n  <span class=\"hljs-keyword\">current</span>: Fiber | <span class=\"hljs-keyword\">null</span>,\n  workInProgress: Fiber,\n  nextRenderExpirationTime: ExpirationTime,\n): <span class=\"hljs-type\">void</span> {\n  renderExpirationTime = nextRenderExpirationTime;\n  currentlyRenderingFiber = workInProgress;\n  firstCurrentHook = <span class=\"hljs-keyword\">current</span> !== <span class=\"hljs-keyword\">null</span> ? <span class=\"hljs-keyword\">current</span>.memoizedState : <span class=\"hljs-keyword\">null</span>;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"134,146"}}],"payload":{"tag":"h3","lines":"130,131"}},{"content":"finishHooks","children":[{"content":"<pre data-lines=\"151,156\"><code>&#x76f8;&#x6bd4;&#x4e4b;&#x4e0b;`finishHooks`&#x5219;&#x590d;&#x6742;&#x5f88;&#x591a;&#xff0c;&#x4e00;&#x8fdb;&#x6765;&#x5c31;&#x6709;&#x4e00;&#x4e2a;`while`&#x5faa;&#x73af;&#xff0c;&#x8fd9;&#x4e2a;&#x5faa;&#x73af;&#x662f;&#x56e0;&#x4e3a;Hooks&#x63d0;&#x4f9b;&#x4e86;&#x6211;&#x4eec;&#x4e00;&#x4e2a;&#x529f;&#x80fd;&#xff1a;**&#x5982;&#x679c;&#x5728;&#x4e00;&#x6b21;&#x66f4;&#x65b0;&#x4e2d;&#xff08;&#x4e5f;&#x5c31;&#x662f;&#x8c03;&#x7528;`FunctionalComponent`&#x7684;&#x8fc7;&#x7a0b;&#x4e2d;&#xff09;&#x5982;&#x679c;&#x76f4;&#x63a5;&#x8c03;&#x7528;&#x4e86;&#x7c7b;&#x4f3c;`setState`&#x7684;Hooks API&#x4ea7;&#x751f;&#x4e86;&#x65b0;&#x7684;&#x66f4;&#x65b0;&#xff0c;&#x5219;&#x4f1a;&#x5728;&#x5f53;&#x524d;&#x7684;&#x6e32;&#x67d3;&#x5468;&#x671f;&#x4e2d;&#x76f4;&#x63a5;&#x6267;&#x884c;&#x66f4;&#x65b0;&#x3002;** &#x8fd9;&#x4e2a;&#x5927;&#x5bb6;&#x53ef;&#x4ee5;&#x5148;&#x4e86;&#x89e3;&#x4e00;&#x4e0b;&#xff0c;&#x540e;&#x9762;&#x6211;&#x4eec;&#x5177;&#x4f53;&#x8bb2;Hooks&#x7684;&#x5b9e;&#x73b0;&#x4f1a;&#x518d;&#x5177;&#x4f53;&#x8bb2;&#x5230;&#x3002;\n\n&#x540e;&#x9762;&#x8bbe;&#x7f6e;&#x4e86;`renderedWork.updateQueue`&#xff0c;&#x5c31;&#x975e;&#x5e38;&#x7c7b;&#x4f3c;&#x4e8e;`HostComponent`&#x548c;`ClassComponent`&#x4e86;&#xff0c;&#x672c;&#x6765;`FunctionalComponent`&#x5728;`commit`&#x9636;&#x6bb5;&#x662f;&#x5b8c;&#x5168;&#x6ca1;&#x6709;&#x66f4;&#x65b0;&#x7684;&#xff0c;&#x4f46;&#x662f;&#x73b0;&#x5728;Hooks&#x7ed9;&#x4e86;&#x4ed6;&#x4ea7;&#x751f;`side effect`&#x7684;&#x80fd;&#x529b;&#xff0c;&#x6240;&#x4ee5;&#x8fd9;&#x5c31;&#x662f;&#x8bb0;&#x5f55;&#x8fd9;&#x4e9b;`side effect`&#x7684;`queue`&#x3002;\n\n&#x540e;&#x9762;&#x5c31;&#x662f;&#x521d;&#x59cb;&#x5316;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x4e86;&#xff0c;&#x5c31;&#x5148;&#x4e0d;&#x591a;&#x8bb2;&#x4e86;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"151,156"}},{"content":"<pre data-lines=\"157,202\"><code data-lines=\"157,202\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">finishHooks</span>(<span class=\"hljs-params\">\n  <span class=\"hljs-title class_\">Component</span>: <span class=\"hljs-built_in\">any</span>,\n  <span class=\"hljs-attr\">props</span>: <span class=\"hljs-built_in\">any</span>,\n  <span class=\"hljs-attr\">children</span>: <span class=\"hljs-built_in\">any</span>,\n  <span class=\"hljs-attr\">refOrContext</span>: <span class=\"hljs-built_in\">any</span>,\n</span>): <span class=\"hljs-built_in\">any</span> {\n  <span class=\"hljs-keyword\">while</span> (didScheduleRenderPhaseUpdate) {\n    didScheduleRenderPhaseUpdate = <span class=\"hljs-literal\">false</span>;\n    numberOfReRenders += <span class=\"hljs-number\">1</span>;\n\n    \n    currentHook = <span class=\"hljs-literal\">null</span>;\n    workInProgressHook = <span class=\"hljs-literal\">null</span>;\n    componentUpdateQueue = <span class=\"hljs-literal\">null</span>;\n\n    children = <span class=\"hljs-title class_\">Component</span>(props, refOrContext);\n  }\n  renderPhaseUpdates = <span class=\"hljs-literal\">null</span>;\n  numberOfReRenders = <span class=\"hljs-number\">0</span>;\n\n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-attr\">renderedWork</span>: <span class=\"hljs-title class_\">Fiber</span> = (<span class=\"hljs-attr\">currentlyRenderingFiber</span>: <span class=\"hljs-built_in\">any</span>);\n\n  renderedWork.<span class=\"hljs-property\">memoizedState</span> = firstWorkInProgressHook;\n  renderedWork.<span class=\"hljs-property\">expirationTime</span> = remainingExpirationTime;\n  renderedWork.<span class=\"hljs-property\">updateQueue</span> = (<span class=\"hljs-attr\">componentUpdateQueue</span>: <span class=\"hljs-built_in\">any</span>);\n\n  <span class=\"hljs-keyword\">const</span> didRenderTooFewHooks =\n    currentHook !== <span class=\"hljs-literal\">null</span> &amp;&amp; currentHook.<span class=\"hljs-property\">next</span> !== <span class=\"hljs-literal\">null</span>;\n\n  renderExpirationTime = <span class=\"hljs-title class_\">NoWork</span>;\n  currentlyRenderingFiber = <span class=\"hljs-literal\">null</span>;\n\n  firstCurrentHook = <span class=\"hljs-literal\">null</span>;\n  currentHook = <span class=\"hljs-literal\">null</span>;\n  firstWorkInProgressHook = <span class=\"hljs-literal\">null</span>;\n  workInProgressHook = <span class=\"hljs-literal\">null</span>;\n\n  remainingExpirationTime = <span class=\"hljs-title class_\">NoWork</span>;\n  componentUpdateQueue = <span class=\"hljs-literal\">null</span>;\n\n  <span class=\"hljs-keyword\">return</span> children;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"157,202"}},{"content":"<pre data-lines=\"205,206\"><code>&#x63a5;&#x4e0b;&#x53bb;&#x6211;&#x4eec;&#x5c31;&#x6765;&#x770b;&#x5177;&#x4f53;&#x7684;Hooks API&#x7684;&#x5b9e;&#x73b0;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"205,206"}}],"payload":{"tag":"h3","lines":"149,150"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

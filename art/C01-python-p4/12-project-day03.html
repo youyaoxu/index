@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"12-project-day03","children":[{"content":"<pre data-lines=\"2,16\"><code data-lines=\"2,16\">&#x5b89;&#x88c5;django-redis\n\npip3 <span class=\"hljs-keyword\">freeze</span>|grep redis  &#x68c0;&#x67e5;&#x662f;&#x5426;&#x5df2;&#x7ecf;&#x5b89;&#x88c5;\n&#x5982;&#x679c;&#x8f93;&#x51fa;&#x4e2d; &#x6ca1;&#x6709;  django-redis==<span class=\"hljs-number\">4.10</span><span class=\"hljs-number\">.0</span> &#x5219;&#x9700;&#x8981;&#x6267;&#x884c;&#x5b89;&#x88c5;\n\n\n&#x628a;&#x590d;&#x5236;&#x5230;&#x865a;&#x62df;&#x4e2d;\ntar -zxvf django-redis<span class=\"hljs-number\">-4.10</span><span class=\"hljs-number\">.0</span>.tar.gz\ncd django-redis<span class=\"hljs-number\">-4.10</span><span class=\"hljs-number\">.0</span>\nsudo python3 setup.py install\n\npip3 <span class=\"hljs-keyword\">freeze</span>|grep redis\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,16"}},{"content":"<pre data-lines=\"16,44\"><code data-lines=\"16,44\">&#x7f13;&#x5b58; - redis\n<span class=\"hljs-number\">1</span>, &#x539f;&#x751f;redis&#x5ba2;&#x6237;&#x7aef;&#x73a9;&#x6cd5;  \n   import redis\n   r = redis.Redis()\n   r.hset(...)\n\n   redis <span class=\"hljs-keyword\">set</span> py&#x7684;[]\n   a <span class=\"hljs-comment\">= [</span><span class=\"hljs-comment\">&apos;1&apos;</span><span class=\"hljs-comment\">,</span> <span class=\"hljs-comment\">&apos;2&apos;</span><span class=\"hljs-comment\">,</span> <span class=\"hljs-comment\">&apos;3&apos;</span><span class=\"hljs-comment\">]</span>\n   r.<span class=\"hljs-keyword\">set</span>(<span class=\"hljs-string\">&apos;key&apos;</span>, json.dumps(a))\n\n\n\n2&#xff0c;django-redis &#x7ec4;&#x4ef6;\n   settings.py &#x8bbe;&#x7f6e; \n   CACHES <span class=\"hljs-comment\">= {</span>\n      <span class=\"hljs-string\">&apos;default&apos;</span>: {\n\t  \n\t  <span class=\"hljs-string\">&apos;BACKEND&apos;</span>: <span class=\"hljs-string\">&apos;django_redis.cache.RedisCache&apos;</span> }\n\n   }\n\n   1, \n     cache.<span class=\"hljs-keyword\">set</span>(<span class=\"hljs-string\">&apos;key&apos;</span>, [<span class=\"hljs-string\">&apos;1&apos;</span>, <span class=\"hljs-string\">&apos;2&apos;</span>, <span class=\"hljs-string\">&apos;3&apos;</span>])\n   2, \n     from <span class=\"hljs-comment\">django_redis import get_redis_connection</span>\n     r <span class=\"hljs-comment\">= get_redis_connection(</span><span class=\"hljs-comment\">&apos;default&apos;</span><span class=\"hljs-comment\">) #</span>&#x7b49;&#x4ef7;&#x4e8e;<span class=\"hljs-comment\">r = redis.Redis()</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,44"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

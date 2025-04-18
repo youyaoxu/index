@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x8bbe;&#x7f6e;&#x65e5;&#x671f;&#x7684;&#x8d77;&#x6b62;&#x65f6;&#x95f4;","children":[{"content":"<pre data-lines=\"2,20\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;&#x5f00;&#x59cb;&#x65f6;&#x95f4;</span>\n<span class=\"hljs-comment\">// Mon Jan 23 2023 00:00:00 GMT+0800 (&#x4e2d;&#x56fd;&#x6807;&#x51c6;&#x65f6;&#x95f4;)</span>\n<span class=\"hljs-title function_\">setDayStartTime</span>(<span class=\"hljs-params\">date</span>){\n  <span class=\"hljs-keyword\">if</span>(!lodash.<span class=\"hljs-title function_\">isDate</span>(date)){\n    <span class=\"hljs-keyword\">return</span> date\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(date).<span class=\"hljs-title function_\">toLocaleDateString</span>()).<span class=\"hljs-title function_\">getTime</span>())\n},\n<span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;&#x7ed3;&#x675f;&#x65f6;&#x95f4;</span>\n<span class=\"hljs-comment\">// Mon Jan 23 2023 23:59:59 GMT+0800 (&#x4e2d;&#x56fd;&#x6807;&#x51c6;&#x65f6;&#x95f4;)</span>\n<span class=\"hljs-title function_\">setDayEndTime</span>(<span class=\"hljs-params\">date</span>){\n  <span class=\"hljs-keyword\">if</span>(!lodash.<span class=\"hljs-title function_\">isDate</span>(date)){\n    <span class=\"hljs-keyword\">return</span> date\n  }\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(date).<span class=\"hljs-title function_\">toLocaleDateString</span>()).<span class=\"hljs-title function_\">getTime</span>() + <span class=\"hljs-number\">24</span> * <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">1000</span> - <span class=\"hljs-number\">1</span>)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

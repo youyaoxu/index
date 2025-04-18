@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"react-scheduler","children":[{"content":"isHostCallbackScheduled","children":[{"content":"<pre data-lines=\"314,315\"><code>&#x662f;&#x5426;&#x5df2;&#x7ecf;&#x5f00;&#x59cb;&#x8c03;&#x5ea6;&#x4e86;&#xff0c;&#x5728;`ensureHostCallbackIsScheduled`&#x8bbe;&#x7f6e;&#x4e3a;`true`&#xff0c;&#x5728;&#x7ed3;&#x675f;&#x6267;&#x884c;`callback`&#x4e4b;&#x540e;&#x8bbe;&#x7f6e;&#x4e3a;`false`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"314,315"}}],"payload":{"tag":"h4","lines":"312,313"}},{"content":"scheduledHostCallback","children":[{"content":"<pre data-lines=\"318,319\"><code>&#x5728;`requestHostCallback`&#x8bbe;&#x7f6e;&#xff0c;&#x503c;&#x4e00;&#x822c;&#x4e3a;`flushWork`&#xff0c;&#x4ee3;&#x8868;&#x4e0b;&#x4e00;&#x4e2a;&#x8c03;&#x5ea6;&#x8981;&#x505a;&#x7684;&#x4e8b;&#x60c5;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"318,319"}}],"payload":{"tag":"h4","lines":"316,317"}},{"content":"isMessageEventScheduled","children":[{"content":"<pre data-lines=\"322,323\"><code>&#x662f;&#x5426;&#x5df2;&#x7ecf;&#x53d1;&#x9001;&#x8c03;&#x7528;`idleTick`&#x7684;&#x6d88;&#x606f;&#xff0c;&#x5728;`animationTick`&#x4e2d;&#x8bbe;&#x7f6e;&#x4e3a;`true`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"322,323"}}],"payload":{"tag":"h4","lines":"320,321"}},{"content":"timeoutTime","children":[{"content":"<pre data-lines=\"326,327\"><code>&#x8868;&#x793a;&#x8fc7;&#x671f;&#x4efb;&#x52a1;&#x7684;&#x65f6;&#x95f4;&#xff0c;&#x5728;`idleTick`&#x4e2d;&#x53d1;&#x73b0;&#x7b2c;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x7684;&#x65f6;&#x95f4;&#x5df2;&#x7ecf;&#x8fc7;&#x671f;&#x7684;&#x65f6;&#x5019;&#x8bbe;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"326,327"}}],"payload":{"tag":"h4","lines":"324,325"}},{"content":"isAnimationFrameScheduled","children":[{"content":"<pre data-lines=\"330,331\"><code>&#x662f;&#x5426;&#x5df2;&#x7ecf;&#x5f00;&#x59cb;&#x8c03;&#x7528;`requestAnimationFrame`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"330,331"}}],"payload":{"tag":"h4","lines":"328,329"}},{"content":"activeFrameTime","children":[{"content":"<pre data-lines=\"334,335\"><code>&#x7ed9;&#x4e00;&#x5e27;&#x6e32;&#x67d3;&#x7528;&#x7684;&#x65f6;&#x95f4;&#xff0c;&#x9ed8;&#x8ba4;&#x662f; 33&#xff0c;&#x4e5f;&#x5c31;&#x662f; 1 &#x79d2; 30 &#x5e27;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"334,335"}}],"payload":{"tag":"h4","lines":"332,333"}},{"content":"frameDeadline","children":[{"content":"<pre data-lines=\"338,339\"><code>&#x8bb0;&#x5f55;&#x5f53;&#x524d;&#x5e27;&#x7684;&#x5230;&#x671f;&#x65f6;&#x95f4;&#xff0c;&#x4ed6;&#x7b49;&#x4e8e;`currentTime + activeFraeTime`&#xff0c;&#x4e5f;&#x5c31;&#x662f;`requestAnimationFrame`&#x56de;&#x8c03;&#x4f20;&#x5165;&#x7684;&#x65f6;&#x95f4;&#xff0c;&#x52a0;&#x4e0a;&#x4e00;&#x5e27;&#x7684;&#x65f6;&#x95f4;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"338,339"}}],"payload":{"tag":"h4","lines":"336,337"}},{"content":"isFlushingHostCallback","children":[{"content":"<pre data-lines=\"342,343\"><code>&#x662f;&#x5426;&#x6b63;&#x5728;&#x6267;&#x884c;`callback`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"342,343"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"344,345"}},{"content":"<pre data-lines=\"346,347\"><code>&#x626b;&#x7801;&#x6dfb;&#x52a0;Jokcy&#xff0c;&#x66f4;&#x591a;&#x66f4;&#x65b0;&#x66f4;&#x4f18;&#x8d28;&#x7684;&#x524d;&#x7aef;&#x5b66;&#x4e60;&#x5185;&#x5bb9;&#x4e0d;&#x65ad;&#x66f4;&#x65b0;&#x4e2d;&#xff0c;&#x671f;&#x5f85;&#x4e0e;&#x4f60;&#x4e00;&#x8d77;&#x6210;&#x957f;&#xff01;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"346,347"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"348,349"}}],"payload":{"tag":"h4","lines":"340,341"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

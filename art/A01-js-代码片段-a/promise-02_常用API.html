@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Promise&#x5e38;&#x7528;API","children":[{"content":"Promise.resolve","children":[{"content":"<pre data-lines=\"4,9\"><code class=\"language-js\"><span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&quot;aaa&quot;</span>);\n<span class=\"hljs-comment\">// &#x7b49;&#x4ef7;&#x4e8e;</span>\n<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">resolve</span> =&gt;</span> <span class=\"hljs-title function_\">resolve</span>(<span class=\"hljs-string\">&quot;aaa&quot;</span>))\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,9"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Promise.reject","children":[{"content":"<pre data-lines=\"12,17\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> p = <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">reject</span>(<span class=\"hljs-string\">&quot;error&quot;</span>)\n<span class=\"hljs-comment\">// &#x7b49;&#x4ef7;&#x4e8e;</span>\n<span class=\"hljs-keyword\">const</span> p = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve, reject</span>) =&gt;</span><span class=\"hljs-title function_\">reject</span>(<span class=\"hljs-string\">&quot;error&quot;</span>))\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,17"}}],"payload":{"tag":"h2","lines":"10,11"}},{"content":"Promise.then","children":[],"payload":{"tag":"h2","lines":"18,19"}},{"content":"Promise.all","children":[{"content":"<pre data-lines=\"22,25\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> p = <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">all</span>([p1, p2, p3])\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,25"}}],"payload":{"tag":"h2","lines":"20,21"}},{"content":"Promise.race","children":[{"content":"<pre data-lines=\"30,33\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> p = <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">race</span>([p1, p2, p3])\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,33"}}],"payload":{"tag":"h2","lines":"26,27"}},{"content":"Promise.allSettled","children":[{"content":"<pre data-lines=\"36,49\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> p1 = <span class=\"hljs-title function_\">ajax</span>(<span class=\"hljs-string\">&quot;https://xiongmaoyouxuan.com/api/tabs&quot;</span>);\n<span class=\"hljs-keyword\">const</span> p2 = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Promise</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">resolve, reject</span>) =&gt;</span> {\n <span class=\"hljs-built_in\">setTimeout</span>(<span class=\"hljs-function\">() =&gt;</span> {\n     <span class=\"hljs-title function_\">reject</span>(<span class=\"hljs-string\">&quot;&#x8d85;&#x65f6;&#xff01;&quot;</span>);\n }, <span class=\"hljs-number\">2000</span>)\n})\n<span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">allSettled</span>([p1, p2]).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">res</span> =&gt;</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(res) <span class=\"hljs-comment\">// &#x662f;&#x4e00;&#x4e2a;&#x8fd4;&#x56de;&#x7684;&#x6570;&#x7ec4;&#xff0c;&#x5305;&#x62ec;&#x72b6;&#x6001;&#x548c;&#x8fd4;&#x56de;&#x7ed3;&#x679c;</span>\n}).<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">err</span> =&gt;</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(err)\n})\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,49"}},{"content":"<pre data-lines=\"50,53\"><code data-lines=\"50,53\">&#x8fd4;&#x56de;&#x503c;&#x8bb0;&#x5f55;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"50,53"}},{"content":"<pre data-lines=\"54,62\"><code class=\"language-json\">[\n    {\n        status:&apos;fulfilled&apos;,\n        value:{code:200,data:{}}\n    },\n]\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,62"}}],"payload":{"tag":"h2","lines":"34,35"}},{"content":"Promise.any","children":[],"payload":{"tag":"h2","lines":"63,64"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

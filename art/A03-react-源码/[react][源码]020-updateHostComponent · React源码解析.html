@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"updateHostComponent","children":[{"content":"<pre data-lines=\"2,7\"><code>`hostComponent`&#x5373;&#x6307;&#x539f;&#x751f;&#x7684;HTML&#x6807;&#x7b7e;&#x3002;\n\n`context`&#x76f8;&#x5173;&#x7684;&#x770b;[&#x8fd9;&#x91cc;](https://react.jokcy.me/book/basic/context.html)\n\n`tryToClaimNextHydratableInstance`&#x662f;&#x8fdb;&#x884c;`hydrate`&#x7684;&#x64cd;&#x4f5c;&#xff0c;&#x4e5f;&#x5c31;&#x662f;&#x590d;&#x7528;&#x539f;&#x672c;&#x5b58;&#x5728;&#x7684;`root`&#x7684;&#x5185;&#x90e8;&#x7684;DOM&#x8282;&#x70b9;&#xff0c;&#x8be6;&#x7ec6;&#x53ef;&#x4ee5;&#x770b;[&#x8fd9;&#x91cc;](https://react.jokcy.me/book/basic/hydrate.html)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,7"}},{"content":"<pre data-lines=\"8,14\"><code data-lines=\"8,14\">export <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">shouldDeprioritizeSubtree</span>(type: string, props: Props): boolean {\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">!!props.hidden</span>;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,14"}},{"content":"<pre data-lines=\"15,20\"><code>`shouldDeprioritizeSubtree`&#x5224;&#x65ad;&#x4e86;&#x662f;&#x5426;&#x6709;`hidden`&#x8fd9;&#x4e2a;`prop`&#xff0c;&#x5982;&#x679c;&#x8fd9;&#x4e2a;&#x8282;&#x70b9;&#x662f;`AsyncMode`&#x7684;&#x5e76;&#x4e14;&#x6709;`hidden`&#xff0c;&#x5c31;&#x8bbe;&#x7f6e;`expirationTime`&#x4e3a;`Never`&#x3002;\n\n&#x8bbe;&#x7f6e;&#x4e3a;`Never`&#x662f;&#x4ec0;&#x4e48;&#x610f;&#x601d;&#xff1f;&#x610f;&#x5473;&#x7740;&#x4ed6;&#x7684;&#x4f18;&#x5148;&#x7ea7;&#x662f;&#x6700;&#x4f4e;&#x7684;&#xff0c;&#x77e5;&#x9053;&#x6ca1;&#x6709;&#x4efb;&#x4f55;&#x5176;&#x4ed6;&#x4efb;&#x52a1;&#x7684;&#x65f6;&#x5019;&#x8fd9;&#x4e2a;&#x624d;&#x4f1a;&#x88ab;&#x6267;&#x884c;&#xff0c;&#x8be6;&#x89c1;[&#x8fd9;&#x91cc;](https://react.jokcy.me/docs/scheduler/react-schduler.html)\n\n&#x7136;&#x540e;&#x5c31;&#x662f;&#x5e38;&#x89c4;&#x7684;&#x5904;&#x7406;`children`&#x7684;&#x903b;&#x8f91;&#xff0c;&#x5c31;&#x4e0d;&#x8be6;&#x7ec6;&#x8bb2;&#x4e86;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,20"}},{"content":"<pre data-lines=\"21,73\"><code data-lines=\"21,73\"><span class=\"hljs-keyword\">function</span> updateHostComponent(<span class=\"hljs-keyword\">current</span>, workInProgress, renderExpirationTime) {\n  pushHostContext(workInProgress);\n\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">current</span> === <span class=\"hljs-keyword\">null</span>) {\n    tryToClaimNextHydratableInstance(workInProgress);\n  }\n\n  const <span class=\"hljs-keyword\">type</span> = workInProgress.<span class=\"hljs-keyword\">type</span>;\n  const nextProps = workInProgress.pendingProps;\n  const prevProps = <span class=\"hljs-keyword\">current</span> !== <span class=\"hljs-keyword\">null</span> ? <span class=\"hljs-keyword\">current</span>.memoizedProps : <span class=\"hljs-keyword\">null</span>;\n\n  let nextChildren = nextProps.children;\n  const isDirectTextChild = shouldSetTextContent(<span class=\"hljs-keyword\">type</span>, nextProps);\n\n  <span class=\"hljs-keyword\">if</span> (isDirectTextChild) {\n    \n    \n    \n    \n    nextChildren = <span class=\"hljs-keyword\">null</span>;\n  } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span> (prevProps !== <span class=\"hljs-keyword\">null</span> &amp;&amp; shouldSetTextContent(<span class=\"hljs-keyword\">type</span>, prevProps)) {\n    \n    \n    workInProgress.effectTag |= ContentReset;\n  }\n\n  markRef(<span class=\"hljs-keyword\">current</span>, workInProgress);\n\n  \n  <span class=\"hljs-keyword\">if</span> (\n    renderExpirationTime !== Never &amp;&amp;\n    workInProgress.mode &amp; AsyncMode &amp;&amp;\n    shouldDeprioritizeSubtree(<span class=\"hljs-keyword\">type</span>, nextProps)\n  ) {\n    \n    workInProgress.expirationTime = Never;\n    workInProgress.memoizedProps = nextProps;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">null</span>;\n  }\n\n  reconcileChildren(\n    <span class=\"hljs-keyword\">current</span>,\n    workInProgress,\n    nextChildren,\n    renderExpirationTime,\n  );\n  memoizeProps(workInProgress, nextProps);\n  <span class=\"hljs-keyword\">return</span> workInProgress.child;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,73"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"74,75"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"78,79"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

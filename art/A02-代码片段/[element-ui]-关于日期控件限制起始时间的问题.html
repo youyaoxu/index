@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[element-ui]-&#x5173;&#x4e8e;&#x65e5;&#x671f;&#x63a7;&#x4ef6;&#x9650;&#x5236;&#x8d77;&#x59cb;&#x65f6;&#x95f4;&#x7684;&#x95ee;&#x9898;.md","children":[{"content":"&#x4ee3;&#x7801;&#x7247;&#x6bb5;","children":[{"content":"<pre data-lines=\"3,14\"><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-date-picker</span>\n\t<span class=\"hljs-attr\">v-model</span>=<span class=\"hljs-string\">&quot;dialogForm.date&quot;</span>\n\t<span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">&quot;width: 100%;&quot;</span>\n\t<span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;date&quot;</span>\n\t<span class=\"hljs-attr\">placeholder</span>=<span class=\"hljs-string\">&quot;&#x9009;&#x62e9;&#x65e5;&#x671f;&#x65f6;&#x95f4;&quot;</span>\n\t<span class=\"hljs-attr\">format</span>=<span class=\"hljs-string\">&quot;yyyy-MM-dd&quot;</span>\n\t<span class=\"hljs-attr\">:picker-options</span>=<span class=\"hljs-string\">&quot;dialogConfig.pickerOptions&quot;</span>\n\t<span class=\"hljs-attr\">:default-value</span>=<span class=\"hljs-string\">&quot;dialogConfig.defaultDate&quot;</span>\n/&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,14"}},{"content":"<pre data-lines=\"15,24\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> dialogConfig = <span class=\"hljs-title function_\">reactive</span>({\n  <span class=\"hljs-attr\">pickerOptions</span>: {\n    <span class=\"hljs-title function_\">disabledDate</span>(<span class=\"hljs-params\">v</span>) {\n      <span class=\"hljs-keyword\">return</span> v.<span class=\"hljs-title function_\">getTime</span>() &lt; (<span class=\"hljs-title class_\">Date</span>.<span class=\"hljs-title function_\">now</span>() + <span class=\"hljs-number\">86400000</span>) <span class=\"hljs-comment\">// &#x9ed8;&#x8ba4;&#x53ef;&#x9009;&#x4eca;&#x5929;&#x53ca;&#x4ee5;&#x540e;&#x7684;&#x65f6;&#x95f4;</span>\n    }\n  },\n  <span class=\"hljs-attr\">defaultDate</span>:<span class=\"hljs-title function_\">moment</span>().<span class=\"hljs-title function_\">add</span>(<span class=\"hljs-string\">&apos;15&apos;</span>,<span class=\"hljs-string\">&quot;d&quot;</span>).<span class=\"hljs-title function_\">toISOString</span>()\n})<span class=\"hljs-string\">``</span><span class=\"hljs-string\">`</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"15,24"}}],"payload":{"tag":"h2","lines":"2,3"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

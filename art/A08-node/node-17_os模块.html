@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"os&#x6a21;&#x5757;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"3,12\"><code data-lines=\"3,12\">&#x76ee;&#x5f55;\n\nAPI\n    <span class=\"hljs-built_in\">os</span>.EOL\n    <span class=\"hljs-built_in\">os</span>.arch()\n    <span class=\"hljs-built_in\">os</span>.tmpdir()\nSocket&#x901a;&#x4fe1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,12"}},{"content":"<pre data-lines=\"13,14\"><code>os&#x6a21;&#x5757;&#x63d0;&#x4f9b;&#x4e0e;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x76f8;&#x5173;&#x7684;&#x65b9;&#x6cd5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,14"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"API","children":[{"content":"os.EOL","children":[{"content":"<pre data-lines=\"19,20\"><code>os.EOL&#x5c5e;&#x6027;&#x662f;&#x4e00;&#x4e2a;&#x5e38;&#x91cf;&#xff0c;&#x8fd4;&#x56de;&#x5f53;&#x524d;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x7684;&#x6362;&#x884c;&#x7b26;&#xff08;Windows&#x7cfb;&#x7edf;&#x662f;\\r\\n&#xff0c;&#x5176;&#x4ed6;&#x7cfb;&#x7edf;&#x662f;\\n&#xff09;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,20"}},{"content":"<pre data-lines=\"21,39\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> fs = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">`fs`</span>);\n\n<span class=\"hljs-comment\">// bad</span>\nfs.<span class=\"hljs-title function_\">readFile</span>(<span class=\"hljs-string\">&apos;./myFile.txt&apos;</span>, <span class=\"hljs-string\">&apos;utf8&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">err, data</span>) =&gt;</span> {\n  data.<span class=\"hljs-title function_\">split</span>(<span class=\"hljs-string\">&apos;\\r\\n&apos;</span>).<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">line</span> =&gt;</span> {\n    <span class=\"hljs-comment\">// do something</span>\n  });\n});\n\n<span class=\"hljs-comment\">// good</span>\n<span class=\"hljs-keyword\">const</span> os = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;os&apos;</span>);\nfs.<span class=\"hljs-title function_\">readFile</span>(<span class=\"hljs-string\">&apos;./myFile.txt&apos;</span>, <span class=\"hljs-string\">&apos;utf8&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">err, data</span>) =&gt;</span> {\n  data.<span class=\"hljs-title function_\">split</span>(os.<span class=\"hljs-property\">EOL</span>).<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">line</span> =&gt;</span> {\n    <span class=\"hljs-comment\">// do something</span>\n  });\n});\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,39"}}],"payload":{"tag":"h3","lines":"17,18"}},{"content":"os.arch()","children":[{"content":"<pre data-lines=\"42,43\"><code>os.arch&#x65b9;&#x6cd5;&#x8fd4;&#x56de;&#x5f53;&#x524d;&#x8ba1;&#x7b97;&#x673a;&#x7684;&#x67b6;&#x6784;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,43"}},{"content":"<pre data-lines=\"44,48\"><code class=\"language-js\"><span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">`os`</span>).<span class=\"hljs-title function_\">arch</span>()\n<span class=\"hljs-comment\">// &quot;x64&quot;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,48"}}],"payload":{"tag":"h3","lines":"40,41"}},{"content":"os.tmpdir()","children":[{"content":"<pre data-lines=\"51,52\"><code>os.tmpdir&#x65b9;&#x6cd5;&#x8fd4;&#x56de;&#x64cd;&#x4f5c;&#x7cfb;&#x7edf;&#x9ed8;&#x8ba4;&#x7684;&#x4e34;&#x65f6;&#x6587;&#x4ef6;&#x76ee;&#x5f55;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,52"}}],"payload":{"tag":"h3","lines":"49,50"}}],"payload":{"tag":"h2","lines":"15,16"}},{"content":"Socket&#x901a;&#x4fe1;","children":[{"content":"<pre data-lines=\"55,56\"><code>&#x4e0b;&#x9762;&#x4f8b;&#x5b50;&#x5217;&#x51fa;&#x5f53;&#x524d;&#x7cfb;&#x5217;&#x7684;&#x6240;&#x6709;IP&#x5730;&#x5740;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,56"}},{"content":"<pre data-lines=\"57,74\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> os = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;os&apos;</span>);\n<span class=\"hljs-keyword\">var</span> interfaces = os.<span class=\"hljs-title function_\">networkInterfaces</span>();\n\n<span class=\"hljs-keyword\">for</span> (item <span class=\"hljs-keyword\">in</span> interfaces) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;Network interface name: &apos;</span> + item);\n  <span class=\"hljs-keyword\">for</span> (att <span class=\"hljs-keyword\">in</span> interfaces[item]) {\n    <span class=\"hljs-keyword\">var</span> address = interfaces[item][att];\n\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;Family: &apos;</span> + address.<span class=\"hljs-property\">family</span>);\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;IP Address: &apos;</span> + address.<span class=\"hljs-property\">address</span>);\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;Is Internal: &apos;</span> + address.<span class=\"hljs-property\">internal</span>);\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;&apos;</span>);\n  }\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;==================================&apos;</span>);\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"57,74"}},{"content":"<pre data-lines=\"76,85\"><code data-lines=\"76,85\">&#x76ee;&#x5f55;\n\nAPI\n<span class=\"hljs-built_in\">os</span>.EOL\n<span class=\"hljs-built_in\">os</span>.arch()\n<span class=\"hljs-built_in\">os</span>.tmpdir()\nSocket&#x901a;&#x4fe1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"76,85"}}],"payload":{"tag":"h2","lines":"53,54"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x521b;&#x5efa;&#x81ea;&#x5b9a;&#x4e49; Hook","children":[{"content":"<pre data-lines=\"1,27\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> { useEffect, useState } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;react&quot;</span>\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">useMouse</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n  <span class=\"hljs-keyword\">const</span> [position, setPosition] = <span class=\"hljs-title function_\">useState</span>({\n    <span class=\"hljs-attr\">x</span>: <span class=\"hljs-literal\">null</span>,\n    <span class=\"hljs-attr\">y</span>: <span class=\"hljs-literal\">null</span>\n  });\n\n  <span class=\"hljs-title function_\">useEffect</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">moveHandler</span> = (<span class=\"hljs-params\">e</span>) =&gt; {\n      <span class=\"hljs-title function_\">setPosition</span>({\n        <span class=\"hljs-attr\">x</span>: e.<span class=\"hljs-property\">screenX</span>,\n        <span class=\"hljs-attr\">y</span>: e.<span class=\"hljs-property\">screenY</span>\n      });\n    };\n\n    <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">addEventListener</span>(<span class=\"hljs-string\">&apos;mousemove&apos;</span>, moveHandler);\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-function\">() =&gt;</span> {\n      <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">removeEventListener</span>(<span class=\"hljs-string\">&apos;mousemove&apos;</span>, moveHandler);\n    };\n  }, []);\n\n  <span class=\"hljs-keyword\">return</span> position;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,27"}},{"content":"<pre data-lines=\"28,43\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span> <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>;\n<span class=\"hljs-keyword\">import</span> { useMouse } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;../hooks/useMouse&apos;</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">MouseMove</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> { x, y } = <span class=\"hljs-title function_\">useMouse</span>();\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>Move mouse to see changes<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>x position: {x}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>y position: {y}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  );\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,43"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

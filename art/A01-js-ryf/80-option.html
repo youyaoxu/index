@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"<option> &#x5143;&#x7d20;</option>","children":[{"content":"&#x5c5e;&#x6027;","children":[{"content":"<pre data-lines=\"8,18\"><code>&#x9664;&#x4e86;&#x7ee7;&#x627f; HTMLElement &#x63a5;&#x53e3;&#x7684;&#x5c5e;&#x6027;&#x548c;&#x65b9;&#x6cd5;&#xff0c;HTMLOptionElement &#x63a5;&#x53e3;&#x5177;&#x6709;&#x4e0b;&#x9762;&#x7684;&#x5c5e;&#x6027;&#x3002;\n\n- `disabled`&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9879;&#x662f;&#x5426;&#x53ef;&#x9009;&#x62e9;&#x3002;\n- `defaultSelected`&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9879;&#x662f;&#x5426;&#x9ed8;&#x8ba4;&#x9009;&#x4e2d;&#x3002;&#x4e00;&#x65e6;&#x8bbe;&#x4e3a;`true`&#xff0c;&#x8be5;&#x9879;&#x7684;&#x503c;&#x5c31;&#x662f;`&lt;select&gt;`&#x7684;&#x9ed8;&#x8ba4;&#x503c;&#x3002;\n- `form`&#xff1a;&#x8fd4;&#x56de;`&lt;option&gt;`&#x6240;&#x5728;&#x7684;&#x8868;&#x5355;&#x5143;&#x7d20;&#x3002;&#x5982;&#x679c;&#x4e0d;&#x5c5e;&#x4e8e;&#x4efb;&#x4f55;&#x8868;&#x5355;&#xff0c;&#x5219;&#x8fd4;&#x56de;`null`&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;\n- `index`&#xff1a;&#x6574;&#x6570;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9009;&#x9879;&#x5728;&#x6574;&#x4e2a;&#x4e0b;&#x62c9;&#x5217;&#x8868;&#x91cc;&#x9762;&#x7684;&#x4f4d;&#x7f6e;&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;\n- `label`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x5bf9;&#x8be5;&#x9009;&#x9879;&#x7684;&#x8bf4;&#x660e;&#x3002;&#x5982;&#x679c;&#x8be5;&#x5c5e;&#x6027;&#x672a;&#x8bbe;&#x7f6e;&#xff0c;&#x5219;&#x8fd4;&#x56de;&#x8be5;&#x9009;&#x9879;&#x7684;&#x6587;&#x672c;&#x5185;&#x5bb9;&#x3002;\n- `selected`&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9009;&#x9879;&#x662f;&#x5426;&#x9009;&#x4e2d;&#x3002;\n- `text`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8be5;&#x9009;&#x9879;&#x7684;&#x6587;&#x672c;&#x5185;&#x5bb9;&#x3002;\n- `value`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8be5;&#x9009;&#x9879;&#x7684;&#x503c;&#x3002;&#x8868;&#x5355;&#x63d0;&#x4ea4;&#x65f6;&#xff0c;&#x4e0a;&#x4f20;&#x7684;&#x5c31;&#x662f;&#x9009;&#x4e2d;&#x9879;&#x7684;&#x8fd9;&#x4e2a;&#x5c5e;&#x6027;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,18"}}],"payload":{"tag":"h2","lines":"6,7"}},{"content":"Option() &#x6784;&#x9020;&#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"21,22\"><code>&#x6d4f;&#x89c8;&#x5668;&#x539f;&#x751f;&#x63d0;&#x4f9b;`Option()`&#x6784;&#x9020;&#x51fd;&#x6570;&#xff0c;&#x7528;&#x6765;&#x751f;&#x6210; HTMLOptionElement &#x5b9e;&#x4f8b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,22"}},{"content":"<pre data-lines=\"23,26\"><code class=\"language-javascript\"><span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Option</span>(text, value, defaultSelected, selected)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,26"}},{"content":"<pre data-lines=\"27,33\"><code>&#x5b83;&#x63a5;&#x53d7;&#x56db;&#x4e2a;&#x53c2;&#x6570;&#xff0c;&#x90fd;&#x662f;&#x53ef;&#x9009;&#x7684;&#x3002;\n\n- text&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9009;&#x9879;&#x7684;&#x6587;&#x672c;&#x5185;&#x5bb9;&#x3002;&#x5982;&#x679c;&#x7701;&#x7565;&#xff0c;&#x8fd4;&#x56de;&#x7a7a;&#x5b57;&#x7b26;&#x4e32;&#x3002;\n- value&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9009;&#x9879;&#x7684;&#x503c;&#x3002;&#x5982;&#x679c;&#x7701;&#x7565;&#xff0c;&#x9ed8;&#x8ba4;&#x8fd4;&#x56de;`text`&#x5c5e;&#x6027;&#x7684;&#x503c;&#x3002;\n- defaultSelected&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9879;&#x662f;&#x5426;&#x9ed8;&#x8ba4;&#x9009;&#x4e2d;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;`false`&#x3002;&#x6ce8;&#x610f;&#xff0c;&#x5373;&#x4f7f;&#x8bbe;&#x4e3a;`true`&#xff0c;&#x4e5f;&#x4e0d;&#x4ee3;&#x8868;&#x8be5;&#x9879;&#x7684;`selected`&#x5c5e;&#x6027;&#x4e3a;`true`&#x3002;\n- selected&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x9879;&#x662f;&#x5426;&#x9009;&#x4e2d;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;`false`&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,33"}},{"content":"<pre data-lines=\"34,42\"><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> newOption = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Option</span>(<span class=\"hljs-string\">&apos;hello&apos;</span>, <span class=\"hljs-string\">&apos;world&apos;</span>, <span class=\"hljs-literal\">true</span>);\n\nnewOption.<span class=\"hljs-property\">text</span> <span class=\"hljs-comment\">// &quot;hello&quot;</span>\nnewOption.<span class=\"hljs-property\">value</span> <span class=\"hljs-comment\">// &quot;world&quot;</span>\nnewOption.<span class=\"hljs-property\">defaultSelected</span> <span class=\"hljs-comment\">// true</span>\nnewOption.<span class=\"hljs-property\">selected</span> <span class=\"hljs-comment\">// false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,42"}},{"content":"<pre data-lines=\"43,44\"><code>&#x4e0a;&#x9762;&#x4ee3;&#x7801;&#x4e2d;&#xff0c;`newOption`&#x7684;`defaultSelected`&#x5c5e;&#x6027;&#x4e3a;`true`&#xff0c;&#x4f46;&#x662f;&#x5b83;&#x6ca1;&#x6709;&#x88ab;&#x9009;&#x4e2d;&#xff08;&#x5373;`selected`&#x5c5e;&#x6027;&#x4e3a;`false`&#xff09;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,44"}}],"payload":{"tag":"h2","lines":"19,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

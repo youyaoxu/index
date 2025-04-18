@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"<a href=\"https://www.cnblogs.com/xiaohuochai/p/5464572.html\">CSS&#x9ed8;&#x8ba4;&#x53ef;&#x7ee7;&#x627f;&#x6837;&#x5f0f;</a><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVQ4T+2T4Q2CMBCFv27CBjgCG+gIjAAbOAIjOIJs4Ai6gRvIBpjXXCOp19T/8pJLoTneXcj3Ah91wAV4bu68xwXoAZ2EzEAmE9AWTB6AelRDyaAx9zgh0wE4ATczcTdIE7wl0oe7wX/8RMHigfQTB3fDdM1IEvYyONdIVEOSqDwCY2Z2NaS/UNbqMSQmvauUPlfbNKpBSdTUVyXSs/XyBlRCNBG20I28AAAAAElFTkSuQmCC\" alt=\"img\">","children":[{"content":"&#x524d;&#x9762;&#x7684;&#x8bdd;","children":[],"payload":{"tag":"h3","lines":"2,3"}},{"content":"&#x5e38;&#x7528;&#x53ef;&#x7ee7;&#x627f;&#x6837;&#x5f0f;","children":[{"content":"<pre data-lines=\"14,32\"><code data-lines=\"14,32\"><span class=\"hljs-attribute\">color</span>\n<span class=\"hljs-attribute\">cursor</span>\n<span class=\"hljs-attribute\">direction</span>\n<span class=\"hljs-attribute\">font</span>\n<span class=\"hljs-attribute\">letter-spacing</span>\n<span class=\"hljs-attribute\">line-height</span>\n<span class=\"hljs-attribute\">list-style</span>\n<span class=\"hljs-attribute\">text-align</span>\n<span class=\"hljs-attribute\">text-indent</span>\n<span class=\"hljs-attribute\">text-shadow</span>\n<span class=\"hljs-attribute\">text-transform</span>\n<span class=\"hljs-attribute\">white-space</span>\n<span class=\"hljs-attribute\">word-break</span>\n<span class=\"hljs-attribute\">word-spacing</span>\n<span class=\"hljs-attribute\">word-wrap</span>\n<span class=\"hljs-attribute\">writing-mode</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,32"}}],"payload":{"tag":"h3","lines":"10,11"}},{"content":"&#x4e0d;&#x5e38;&#x7528;&#x53ef;&#x7ee7;&#x627f;&#x6837;&#x5f0f;","children":[{"content":"<pre data-lines=\"41,50\"><code data-lines=\"41,50\"><span class=\"hljs-attribute\">caption-side</span>\n<span class=\"hljs-attribute\">empty-cells</span>\n<span class=\"hljs-attribute\">text-combine-upright</span>\n<span class=\"hljs-attribute\">text-orientation</span>\n<span class=\"hljs-attribute\">text-rendering</span>\n<span class=\"hljs-attribute\">text-underline-position</span>\n<span class=\"hljs-attribute\">widows</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,50"}}],"payload":{"tag":"h3","lines":"37,38"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

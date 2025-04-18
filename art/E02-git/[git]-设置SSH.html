@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"git&#x8bbe;&#x7f6e;ssh","children":[{"content":"<pre data-lines=\"2,69\"><code data-lines=\"2,69\"><span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x662f;&#x5426;&#x8bbe;&#x7f6e;ssh</span>\nopen ~/.ssh\n\n<span class=\"hljs-comment\"># &#x67e5;&#x770b;git&#x914d;&#x7f6e;</span>\ngit config --list\n\n<span class=\"hljs-comment\"># &#x914d;&#x7f6e;&#x8d26;&#x6237;</span>\ngit config --global user.name <span class=\"hljs-string\">&quot;youyao.xu&quot;</span>\ngit config --global user.email <span class=\"hljs-string\">&quot;903652259@qq.com&quot;</span>\n\n<span class=\"hljs-comment\"># &#x8bbe;&#x7f6e;&#x591a;&#x4e2a;ssh</span>\n\n<span class=\"hljs-comment\"># 1.&#x751f;&#x6210;gitee</span>\nssh-keygen -t rsa -C <span class=\"hljs-string\">&apos;903652259@qq.com&apos;</span> -f ~/.ssh/gitee_id_rsa\n\n<span class=\"hljs-comment\"># 2.&#x67e5;&#x770b;ssh key,&#x590d;&#x5236;&#x5230;gitee.com</span>\n<span class=\"hljs-built_in\">cat</span> ~/.ssh/gitee_id_rsa.pub\n\n<span class=\"hljs-comment\"># 3.&#x751f;&#x6210;github</span>\nssh-keygen -t rsa -C <span class=\"hljs-string\">&apos;903652259@qq.com&apos;</span> -f ~/.ssh/github_id_rsa\n\n<span class=\"hljs-comment\"># 4.&#x67e5;&#x770b;ssh key,&#x590d;&#x5236;&#x5230;github.com</span>\n<span class=\"hljs-built_in\">cat</span> ~/.ssh/github_id_rsa.pub\n\n<span class=\"hljs-comment\"># 5.&#x751f;&#x6210;&#x4e91;&#x6548;</span>\nssh-keygen -t rsa -C <span class=\"hljs-string\">&apos;youyao.xu@diact.com&apos;</span> -f ~/.ssh/yunxiao_id_rsa\n\n<span class=\"hljs-comment\"># 6.&#x67e5;&#x770b;ssh key,&#x590d;&#x5236;&#x5230;github.com</span>\n<span class=\"hljs-built_in\">cat</span> ~/.ssh/yunxiao_id_rsa.pub\n\n<span class=\"hljs-comment\"># 7.&#x521b;&#x5efa; SSH &#x7528;&#x6237;&#x914d;&#x7f6e;&#x6587;&#x4ef6; config</span>\n<span class=\"hljs-built_in\">touch</span> ~/.ssh/config\n\n<span class=\"hljs-comment\"># 8.&#x8bbe;&#x7f6e;config&#x6587;&#x4ef6;</span>\n<span class=\"hljs-comment\"># github</span>\nHost github.com\nHostName github.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/github_id_rsa\n<span class=\"hljs-comment\"># gitee</span>\nHost gitee.com\nHostName gitee.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/gitee_id_rsa\n<span class=\"hljs-comment\"># yunxiao</span>\nHost codeup.aliyun.com\nHostName codeup.aliyun.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/yunxiao_id_rsa\n\n\n<span class=\"hljs-comment\"># &#x6d4b;&#x8bd5;</span>\nssh -T git@github.com\n\nssh -T git@gitee.com\n\nssh -T git@codeup.aliyun.com\n\n<span class=\"hljs-comment\"># &#x9047;&#x5230;&#x4e86;&#x4e00;&#x4e2a;&#x95ee;&#x9898;&#xff1a;&#x4f7f;&#x7528;ssh&#x63a8;&#x9001;&#x4ee3;&#x7801;&#x5230;&#x8fdc;&#x7a0b;git&#x670d;&#x52a1;&#x5668;&#x62a5;&#x9519;&#xff0c;ssh &#x914d;&#x7f6e;&#x6b63;&#x5e38;&#x6ca1;&#x6709;&#x505a;&#x4efb;&#x4f55;&#x7684;&#x4fee;&#x6539;</span>\n\nssh: Could not resolve hostname [git.xxx.com](http://git.xxx.com): \nnodename nor servname provided, or not known\nfatal: &#x65e0;&#x6cd5;&#x8bfb;&#x53d6;&#x8fdc;&#x7a0b;&#x4ed3;&#x5e93;&#x3002;\n\nssh-keyscan -H git.github.com &gt;&gt; ~/.ssh/known_hosts\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,69"}}],"payload":{"tag":"h3","lines":"0,1"}},{})</script>
+</body>
+</html>

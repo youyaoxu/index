@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"java-se-15_JDK&#x65b0;&#x7279;&#x6027;","children":[{"content":"&#x7b2c;&#x5341;&#x56db;&#x7ae0; JDK&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"<pre data-lines=\"4,9\"><code data-lines=\"4,9\"><span class=\"hljs-attribute\">14</span>.<span class=\"hljs-number\">1</span>&#x3001;JDK5&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;\n<span class=\"hljs-attribute\">14</span>.<span class=\"hljs-number\">2</span>&#x3001;JDK7&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;\n<span class=\"hljs-attribute\">14</span>.<span class=\"hljs-number\">3</span>&#x3001;JDK8&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,9"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"14.1&#x3001;JDK5&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"<pre data-lines=\"12,21\"><code data-lines=\"12,21\">&#x81ea;&#x52a8;&#x88c5;&#x7bb1;&#x3001;&#x62c6;&#x7bb1;\n&#x9759;&#x6001;&#x5bfc;&#x5165;\n&#x589e;&#x5f3a;for&#x5faa;&#x73af;\n&#x53ef;&#x53d8;&#x53c2;&#x6570;\n&#x679a;&#x4e3e;\n&#x6cdb;&#x578b;\n&#x5143;&#x6570;&#x636e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,21"}}],"payload":{"tag":"h2","lines":"10,11"}},{"content":"14.2&#x3001;JDK7&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"<pre data-lines=\"26,35\"><code data-lines=\"26,35\">&#x5bf9;Java&#x96c6;&#x5408;&#xff08;Collections&#xff09;&#x7684;&#x589e;&#x5f3a;&#x652f;&#x6301;\n&#x5728;<span class=\"hljs-keyword\">switch</span>&#x4e2d;&#x53ef;&#x7528;<span class=\"hljs-type\">String</span>\n&#x6570;&#x503c;&#x53ef;&#x52a0;&#x4e0b;&#x5212;&#x7ebf;\n&#x652f;&#x6301;&#x4e8c;&#x8fdb;&#x5236;&#x6587;&#x5b57;\n&#x6cdb;&#x578b;&#x7b80;&#x5316;\n&#x5f02;&#x5e38;&#x7684;&#x591a;&#x4e2a;<span class=\"hljs-keyword\">catch</span>&#x5408;&#x5e76;\n&#x81ea;&#x52a8;&#x8d44;&#x6e90;&#x7ba1;&#x7406;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"26,35"}}],"payload":{"tag":"h2","lines":"24,25"}},{"content":"14.3&#x3001;JDK8&#x65b0;&#x7279;&#x6027;&#x56de;&#x987e;","children":[{"content":"<pre data-lines=\"40,50\"><code data-lines=\"40,50\">Lambda&#x8868;&#x8fbe;&#x5f0f;\n&#x51fd;&#x6570;&#x5f0f;&#x63a5;&#x53e3;\n&#x65b9;&#x6cd5;&#x5f15;&#x7528;&#x4e0e;&#x6784;&#x9020;&#x5668;&#x5f15;&#x7528;\n<span class=\"hljs-built_in\">Stream</span> API\nOptional&#x5bb9;&#x5668;&#x7c7b;\n&#x63a5;&#x53e3;&#x4e2d;&#x7684;&#x9ed8;&#x8ba4;&#x65b9;&#x6cd5;&#x4e0e;&#x9759;&#x6001;&#x65b9;&#x6cd5;\n&#x65b0;&#x65f6;&#x95f4;&#x65e5;&#x671f; API\n&#x91cd;&#x590d;&#x6ce8;&#x89e3;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"40,50"}}],"payload":{"tag":"h2","lines":"38,39"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

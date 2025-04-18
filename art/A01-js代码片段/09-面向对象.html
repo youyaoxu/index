@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x9762;&#x5411;&#x5bf9;&#x8c61;-oop","children":[{"content":"<pre data-lines=\"1,24\"><code data-lines=\"1,24\"><span class=\"hljs-operator\">/*</span>\nwindow.a<span class=\"hljs-operator\">=</span><span class=\"hljs-number\">300</span>;\n<span class=\"hljs-keyword\">function</span> fn1(){\n  this.a<span class=\"hljs-operator\">=</span><span class=\"hljs-number\">100</span>;\n  this.b<span class=\"hljs-operator\">=</span><span class=\"hljs-number\">200</span>;\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">function</span>(){\n            alert(this.a)\n          }.call(arguments[<span class=\"hljs-number\">0</span>])\n}\n<span class=\"hljs-keyword\">function</span> fn2(){ this.a<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">new</span> fn1(); }\nvar a<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">new</span> fn1().b;<span class=\"hljs-comment\">//300</span>\n<span class=\"hljs-comment\">//new fn1() //300</span>\n  <span class=\"hljs-comment\">//{a:100,b:200}.b</span>\n<span class=\"hljs-comment\">//a:200</span>\nvar v<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">new</span> fn1(fn2());<span class=\"hljs-comment\">//200 [object Object]</span>\n<span class=\"hljs-comment\">//fn2()</span>\n  <span class=\"hljs-comment\">//new fn1() //200</span>\n<span class=\"hljs-comment\">//a:{a:100,b:200}</span>\n<span class=\"hljs-comment\">//new fn1({a:100,b:200})</span>\n  <span class=\"hljs-comment\">//alert({a:100,b:200}); [object Object]</span>\n<span class=\"hljs-operator\">*/</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,24"}},{"content":"<pre data-lines=\"24,60\"><code data-lines=\"24,60\"><span class=\"hljs-comment\">/*2*/</span>\n<span class=\"hljs-comment\">//&#x5982;&#x679c;&#x6784;&#x9020;&#x51fd;&#x6570;return&#x7684;&#x662f;&#x4e00;&#x4e2a;&#x5f15;&#x7528;&#x7c7b;&#x578b;&#x7684;&#x5bf9;&#x8c61;&#xff0c;&#x5219;&#x4e0d;&#x518d;&#x521b;&#x5efa;&#x65b0;&#x5bf9;&#x8c61;&#x3002;</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">Human</span>(<span class=\"hljs-params\"></span>){\n  <span class=\"hljs-keyword\">var</span> c=<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){<span class=\"hljs-keyword\">var</span> a=<span class=\"hljs-number\">200</span>;}\n  <span class=\"hljs-keyword\">return</span> c;\n}\n<span class=\"hljs-keyword\">var</span> kang=<span class=\"hljs-keyword\">new</span> Human();\n<span class=\"hljs-keyword\">var</span> feng=<span class=\"hljs-keyword\">new</span> Human();\n<span class=\"hljs-keyword\">var</span> x=Human();\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(feng==x);<span class=\"hljs-comment\">//false</span>\n<span class=\"hljs-built_in\">console</span>.<span class=\"hljs-built_in\">log</span>(kang===feng);<span class=\"hljs-comment\">//false</span>\n<span class=\"hljs-comment\">/*3*/</span>\n<span class=\"hljs-keyword\">var</span> arr=[\n<span class=\"hljs-comment\">/*\n  x{fun:function(){alert(i)}},\n  x{fun:function(){alert(i)}},\n  x{fun:function(){alert(i)}},\n  x{fun:function(){alert(i)}},\n*/</span>\n];\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">fun</span>(<span class=\"hljs-params\"></span>){\n  <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-keyword\">var</span> i=<span class=\"hljs-number\">0</span>;i&lt;<span class=\"hljs-number\">4</span>;i++){\n    <span class=\"hljs-keyword\">var</span> x={};\n    x.no=i;\n    x.<span class=\"hljs-built_in\">text</span>=arr[i];\n    x.fun=<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>){alert(i)}\n    arr.<span class=\"hljs-built_in\">push</span>(x);\n  }<span class=\"hljs-comment\">//i=4</span>\n}\nfun();\narr[<span class=\"hljs-number\">0</span>].fun();<span class=\"hljs-comment\">//4</span>\narr[<span class=\"hljs-number\">1</span>].fun();<span class=\"hljs-comment\">//4</span>\narr[<span class=\"hljs-number\">2</span>].fun();<span class=\"hljs-comment\">//4</span>\narr[<span class=\"hljs-number\">3</span>].fun();<span class=\"hljs-comment\">//4</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"24,60"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

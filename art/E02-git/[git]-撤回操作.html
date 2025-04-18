@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[git]-&#x64a4;&#x56de;&#x64cd;&#x4f5c;","children":[{"content":"&#x64a4;&#x9500;&#x4fee;&#x6539;&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"3,6\"><code data-lines=\"3,6\">git checkout <span class=\"hljs-comment\">-- &#x6587;&#x4ef6;&#x8def;&#x5f84;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,6"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x64a4;&#x9500;git add&#x64cd;&#x4f5c;","children":[{"content":"<pre data-lines=\"8,11\"><code data-lines=\"8,11\"><span class=\"hljs-attribute\">git reset HEAD</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,11"}}],"payload":{"tag":"h2","lines":"7,8"}},{"content":"&#x64a4;&#x56de;git commit&#x64cd;&#x4f5c;","children":[{"content":"<pre data-lines=\"13,16\"><code data-lines=\"13,16\">git <span class=\"hljs-keyword\">reset</span> <span class=\"hljs-comment\">--soft HEAD^ </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,16"}}],"payload":{"tag":"h2","lines":"12,13"}},{"content":"&#x64a4;&#x56de;git push&#x64cd;&#x4f5c;","children":[{"content":"<pre data-lines=\"18,22\"><code data-lines=\"18,22\">git <span class=\"hljs-built_in\">log</span>\ngit <span class=\"hljs-built_in\">reset</span> xxxxxx\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,22"}}],"payload":{"tag":"h2","lines":"17,18"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

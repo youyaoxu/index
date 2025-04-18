@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"useReducer&#x4f7f;&#x7528;demo","children":[{"content":"<pre data-lines=\"1,29\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useReducer } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>\n\n<span class=\"hljs-keyword\">const</span> initialState = { <span class=\"hljs-attr\">count</span>: <span class=\"hljs-number\">0</span> };\n\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">reducer</span>(<span class=\"hljs-params\">state, action</span>) {\n  <span class=\"hljs-keyword\">switch</span> (action.<span class=\"hljs-property\">type</span>) {\n    <span class=\"hljs-keyword\">case</span> <span class=\"hljs-string\">&apos;increment&apos;</span>:\n      <span class=\"hljs-keyword\">return</span> {<span class=\"hljs-attr\">count</span>: state.<span class=\"hljs-property\">count</span> + <span class=\"hljs-number\">1</span>};\n    <span class=\"hljs-keyword\">case</span> <span class=\"hljs-string\">&apos;decrement&apos;</span>:\n      <span class=\"hljs-keyword\">return</span> {<span class=\"hljs-attr\">count</span>: state.<span class=\"hljs-property\">count</span> - <span class=\"hljs-number\">1</span>};\n    <span class=\"hljs-attr\">default</span>:\n      <span class=\"hljs-keyword\">throw</span> <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Error</span>();\n  }\n}\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">Counter</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> [state, dispatch] = <span class=\"hljs-title function_\">useReducer</span>(reducer, initialState);\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>Count: {state.count}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> dispatch({type: &apos;decrement&apos;})}&gt;-<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> dispatch({type: &apos;increment&apos;})}&gt;+<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  );\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,29"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"<form> &#x5143;&#x7d20;</form>","children":[{"content":"<pre data-lines=\"4,5\"><code>`&lt;form&gt;`&#x5143;&#x7d20;&#x4ee3;&#x8868;&#x4e86;&#x8868;&#x5355;&#xff0c;&#x7ee7;&#x627f;&#x4e86; HTMLFormElement &#x63a5;&#x53e3;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,5"}},{"content":"HTMLFormElement &#x7684;&#x5b9e;&#x4f8b;&#x5c5e;&#x6027;","children":[{"content":"<code>elements</code>&#xff1a;&#x8fd4;&#x56de;&#x4e00;&#x4e2a;&#x7c7b;&#x4f3c;&#x6570;&#x7ec4;&#x7684;&#x5bf9;&#x8c61;&#xff0c;&#x6210;&#x5458;&#x662f;&#x5c5e;&#x4e8e;&#x8be5;&#x8868;&#x5355;&#x7684;&#x6240;&#x6709;&#x63a7;&#x4ef6;&#x5143;&#x7d20;&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"<code>length</code>&#xff1a;&#x8fd4;&#x56de;&#x4e00;&#x4e2a;&#x6574;&#x6570;&#xff0c;&#x8868;&#x793a;&#x5c5e;&#x4e8e;&#x8be5;&#x8868;&#x5355;&#x7684;&#x63a7;&#x4ef6;&#x6570;&#x91cf;&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<code>name</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8be5;&#x8868;&#x5355;&#x7684;&#x540d;&#x79f0;&#x3002;","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"<code>method</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x63d0;&#x4ea4;&#x7ed9;&#x670d;&#x52a1;&#x5668;&#x65f6;&#x6240;&#x4f7f;&#x7528;&#x7684; HTTP &#x65b9;&#x6cd5;&#x3002;","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"<code>target</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8868;&#x5355;&#x63d0;&#x4ea4;&#x540e;&#xff0c;&#x670d;&#x52a1;&#x5668;&#x8fd4;&#x56de;&#x7684;&#x6570;&#x636e;&#x7684;&#x5c55;&#x793a;&#x4f4d;&#x7f6e;&#x3002;","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"<code>action</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8868;&#x5355;&#x63d0;&#x4ea4;&#x6570;&#x636e;&#x7684; URL&#x3002;","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"<code>enctype</code>&#xff08;&#x6216;<code>encoding</code>&#xff09;&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x8868;&#x5355;&#x63d0;&#x4ea4;&#x6570;&#x636e;&#x7684;&#x7f16;&#x7801;&#x65b9;&#x6cd5;&#xff0c;&#x53ef;&#x80fd;&#x7684;&#x503c;&#x6709;<code>application/x-www-form-urlencoded</code>&#x3001;<code>multipart/form-data</code>&#x548c;<code>text/plain</code>&#x3002;","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"<code>acceptCharset</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x670d;&#x52a1;&#x5668;&#x6240;&#x80fd;&#x63a5;&#x53d7;&#x7684;&#x5b57;&#x7b26;&#x7f16;&#x7801;&#xff0c;&#x591a;&#x4e2a;&#x7f16;&#x7801;&#x683c;&#x5f0f;&#x4e4b;&#x95f4;&#x4f7f;&#x7528;&#x9017;&#x53f7;&#x6216;&#x7a7a;&#x683c;&#x5206;&#x9694;&#x3002;","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"<code>autocomplete</code>&#xff1a;&#x5b57;&#x7b26;&#x4e32;<code>on</code>&#x6216;<code>off</code>&#xff0c;&#x8868;&#x793a;&#x6d4f;&#x89c8;&#x5668;&#x662f;&#x5426;&#x8981;&#x5bf9;<code>&lt;input&gt;</code>&#x63a7;&#x4ef6;&#x63d0;&#x4f9b;&#x81ea;&#x52a8;&#x8865;&#x5168;&#x3002;","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<code>noValidate</code>&#xff1a;&#x5e03;&#x5c14;&#x503c;&#xff0c;&#x8868;&#x793a;&#x662f;&#x5426;&#x5173;&#x95ed;&#x8868;&#x5355;&#x7684;&#x81ea;&#x52a8;&#x6821;&#x9a8c;&#x3002;","children":[],"payload":{"tag":"li","lines":"17,19"}}],"payload":{"tag":"h2","lines":"6,7"}},{"content":"HTMLFormElement &#x7684;&#x5b9e;&#x4f8b;&#x65b9;&#x6cd5;","children":[{"content":"<pre data-lines=\"21,26\"><code>- `submit()`&#xff1a;&#x63d0;&#x4ea4;&#x8868;&#x5355;&#xff0c;&#x4f46;&#x662f;&#x4e0d;&#x4f1a;&#x89e6;&#x53d1;`submit`&#x4e8b;&#x4ef6;&#x548c;&#x8868;&#x5355;&#x7684;&#x81ea;&#x52a8;&#x6821;&#x9a8c;&#x3002;\n- `reset()`&#xff1a;&#x91cd;&#x7f6e;&#x8868;&#x5355;&#x63a7;&#x4ef6;&#x7684;&#x503c;&#x4e3a;&#x9ed8;&#x8ba4;&#x503c;&#x3002;\n- `checkValidity()`&#xff1a;&#x5982;&#x679c;&#x63a7;&#x4ef6;&#x80fd;&#x591f;&#x901a;&#x8fc7;&#x81ea;&#x52a8;&#x6821;&#x9a8c;&#xff0c;&#x8fd4;&#x56de;`true`&#xff0c;&#x5426;&#x5219;&#x8fd4;&#x56de;`false`&#xff0c;&#x540c;&#x65f6;&#x89e6;&#x53d1;`invalid`&#x4e8b;&#x4ef6;&#x3002;\n\n&#x4e0b;&#x9762;&#x662f;&#x4e00;&#x4e2a;&#x521b;&#x5efa;&#x8868;&#x5355;&#x5e76;&#x63d0;&#x4ea4;&#x7684;&#x4f8b;&#x5b50;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,26"}},{"content":"<pre data-lines=\"27,34\"><code class=\"language-javascript\"><span class=\"hljs-keyword\">var</span> f = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">createElement</span>(<span class=\"hljs-string\">&apos;form&apos;</span>);\n<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-title function_\">appendChild</span>(f);\nf.<span class=\"hljs-property\">action</span> = <span class=\"hljs-string\">&apos;/cgi-bin/some.cgi&apos;</span>;\nf.<span class=\"hljs-property\">method</span> = <span class=\"hljs-string\">&apos;POST&apos;</span>;\nf.<span class=\"hljs-title function_\">submit</span>();\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,34"}}],"payload":{"tag":"h2","lines":"19,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

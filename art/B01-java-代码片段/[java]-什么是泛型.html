@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-&#x4ec0;&#x4e48;&#x662f;&#x6cdb;&#x578b;","children":[{"content":"<pre data-lines=\"2,5\"><code data-lines=\"2,5\">&#x6cdb;&#x578b;&#x7684;&#x672c;&#x8d28;&#x662f;&#x53c2;&#x6570;&#x5316;&#x7c7b;&#x578b;&#xff0c;&#x5373;&#x7ed9;&#x7c7b;&#x578b;&#x6307;&#x5b9a;&#x4e00;&#x4e2a;&#x53c2;&#x6570;&#xff0c;&#x7136;&#x540e;&#x5728;&#x4f7f;&#x7528;&#x65f6;&#x518d;&#x6307;&#x5b9a;&#x6b64;&#x53c2;&#x6570;&#x5177;&#x4f53;&#x7684;&#x503c;&#xff0c;&#x90a3;&#x6837;&#x8fd9;&#x4e2a;&#x7c7b;&#x578b;&#x5c31;&#x53ef;&#x4ee5;&#x5728;&#x4f7f;&#x7528;&#x65f6;&#x51b3;&#x5b9a;&#x4e86;&#x3002;&#x8fd9;&#x79cd;&#x53c2;&#x6570;&#x7c7b;&#x578b;&#x53ef;&#x4ee5;&#x7528;&#x5728;&#x7c7b;&#x3001;&#x63a5;&#x53e3;&#x548c;&#x65b9;&#x6cd5;&#x4e2d;&#xff0c;&#x5206;&#x522b;&#x88ab;&#x79f0;&#x4e3a;&#x6cdb;&#x578b;&#x7c7b;&#x3001;&#x6cdb;&#x578b;&#x63a5;&#x53e3;&#x3001;&#x6cdb;&#x578b;&#x65b9;&#x6cd5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,5"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

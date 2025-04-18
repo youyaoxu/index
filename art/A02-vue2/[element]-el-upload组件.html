@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[element]-el-upload&#x7ec4;&#x4ef6;.md","children":[{"content":"<pre data-lines=\"2,17\"><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-upload</span>\n    <span class=\"hljs-attr\">ref</span>=<span class=\"hljs-string\">&quot;uploader&quot;</span>\n    <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;avatar-uploader&quot;</span>\n    <span class=\"hljs-attr\">action</span>=<span class=\"hljs-string\">&quot;invalid&quot;</span>\n    <span class=\"hljs-attr\">:show-file-list</span>=<span class=\"hljs-string\">&quot;false&quot;</span>\n    <span class=\"hljs-attr\">:http-request</span>=<span class=\"hljs-string\">&quot;onHttpRequest&quot;</span>\n    <span class=\"hljs-attr\">:before-upload</span>=<span class=\"hljs-string\">&quot;onBeforeUpload&quot;</span>\n    <span class=\"hljs-attr\">:on-success</span>=<span class=\"hljs-string\">&quot;(response, file,fileList) =&gt; handleChange(response,file, fileList)&quot;</span>\n    <span class=\"hljs-attr\">:accept</span>=<span class=\"hljs-string\">&quot;imgTypeConfig.acceptTypes&quot;</span>\n  &gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">img</span> <span class=\"hljs-attr\">v-if</span>=<span class=\"hljs-string\">&quot;imgUrl&quot;</span> <span class=\"hljs-attr\">:src</span>=<span class=\"hljs-string\">&quot;imgUrl&quot;</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;avatar&quot;</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">v-else</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;el-icon-plus avatar-uploader-icon&quot;</span> /&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">el-upload</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,17"}},{"content":"<pre data-lines=\"19,34\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">onBeforeUpload</span> = <span class=\"hljs-keyword\">async</span> (<span class=\"hljs-params\">file</span>) =&gt; {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;-onBeforeUpload-file-&apos;</span>,file)\n  <span class=\"hljs-keyword\">if</span> (!imgTypeConfig.<span class=\"hljs-property\">acceptTypeList</span>.<span class=\"hljs-title function_\">includes</span>(file.<span class=\"hljs-property\">type</span>)) {\n    <span class=\"hljs-title function_\">fail</span>(<span class=\"hljs-string\">`&#x8bf7;&#x4e0a;&#x4f20;&#x683c;&#x5f0f;&#x4e3a;<span class=\"hljs-subst\">&#x24;{imgTypeConfig.acceptTypes}</span>&#x683c;&#x5f0f;&#x56fe;&#x7247;`</span>)\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">reject</span>(<span class=\"hljs-literal\">false</span>)\n  }\n  <span class=\"hljs-keyword\">if</span> (file.<span class=\"hljs-property\">size</span> &gt; maxSize) {\n    <span class=\"hljs-title function_\">fail</span>(<span class=\"hljs-string\">`&#x4e0a;&#x4f20;&#x56fe;&#x7247;&#x5927;&#x5c0f;&#x4e0d;&#x80fd;&#x8d85;&#x8fc7; 10MB`</span>)\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">Promise</span>.<span class=\"hljs-title function_\">reject</span>(<span class=\"hljs-literal\">false</span>)\n  }\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;-onBeforeUpload-end-&apos;</span>)\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">true</span>\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,34"}},{"content":"<pre data-lines=\"35,41\"><code data-lines=\"35,41\">&#x95ee;&#x9898;&#x662f;:\n&#x4f7f;&#x7528;<span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>&#x8fd4;&#x56de;&#x5e76;&#x6ca1;&#x6709;&#x751f;&#x6548;\n\n&#x4f7f;&#x7528;<span class=\"hljs-keyword\">return</span> Promise.reject(<span class=\"hljs-literal\">false</span>) &#x624d;&#x53ef;&#x4ee5;&#x751f;&#x6548;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,41"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

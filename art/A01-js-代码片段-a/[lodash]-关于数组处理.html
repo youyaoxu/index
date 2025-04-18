@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"1. findIndex","children":[{"content":"<pre data-lines=\"1,17\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> _findIndex <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;lodash/findIndex&apos;</span>\nusers = [\n     { <span class=\"hljs-string\">&apos;user&apos;</span>: <span class=\"hljs-string\">&apos;barney&apos;</span>, <span class=\"hljs-string\">&apos;active&apos;</span>: <span class=\"hljs-literal\">false</span> },\n     { <span class=\"hljs-string\">&apos;user&apos;</span>: <span class=\"hljs-string\">&apos;fred&apos;</span>, <span class=\"hljs-string\">&apos;active&apos;</span>: <span class=\"hljs-literal\">false</span> },\n     { <span class=\"hljs-string\">&apos;user&apos;</span>: <span class=\"hljs-string\">&apos;pebbles&apos;</span>, <span class=\"hljs-string\">&apos;active&apos;</span>: <span class=\"hljs-literal\">true</span> }\n ]\n\n<span class=\"hljs-title function_\">_findIndex</span>(array, <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">o</span>) { <span class=\"hljs-keyword\">return</span> o.<span class=\"hljs-property\">user</span> == <span class=\"hljs-string\">&apos;barney&apos;</span>; }) =&gt; <span class=\"hljs-number\">0</span>\n    \n<span class=\"hljs-title function_\">_findIndex</span>(array, { <span class=\"hljs-string\">&apos;user&apos;</span>: <span class=\"hljs-string\">&apos;fred&apos;</span>, <span class=\"hljs-string\">&apos;active&apos;</span>: <span class=\"hljs-literal\">false</span> }) =&gt; <span class=\"hljs-number\">1</span> <span class=\"hljs-comment\">//&#xff08;&#x63a8;&#x8350;&#x4f7f;&#x7528;&#xff09;</span>\n    \n<span class=\"hljs-title function_\">_findIndex</span>(array, [<span class=\"hljs-string\">&apos;active&apos;</span>, <span class=\"hljs-literal\">false</span>]) =&gt; <span class=\"hljs-number\">0</span> <span class=\"hljs-comment\">//&#xff08;&#x63a8;&#x8350;&#x4f7f;&#x7528;&#xff09;</span>\n\n<span class=\"hljs-title function_\">_findIndex</span>(array, <span class=\"hljs-string\">&apos;active&apos;</span>) =&gt; <span class=\"hljs-number\">2</span> <span class=\"hljs-comment\">//&#xff08;&#x63a8;&#x8350;&#x4f7f;&#x7528;&#xff09;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,17"}}],"payload":{"tag":"h3","lines":"0,1"}},{"content":"2. debounce &#x9632;&#x6296;&#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"19,23\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> _debounce <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;lodash/debounce&apos;</span><span class=\"hljs-comment\">// &#x5bfc;&#x51fa;</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,23"}}],"payload":{"tag":"h3","lines":"18,19"}},{"content":"3. difference","children":[{"content":"<pre data-lines=\"25,29\"><code class=\"language-js\">_.<span class=\"hljs-title function_\">difference</span>([<span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">1</span>], [<span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">2</span>]);\n<span class=\"hljs-comment\">// =&gt; [3, 1]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,29"}}],"payload":{"tag":"h3","lines":"24,25"}},{"content":"4. difference","children":[{"content":"<pre data-lines=\"33,39\"><code class=\"language-js\"><span class=\"hljs-keyword\">let</span> arr1=[<span class=\"hljs-number\">1</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>]\n<span class=\"hljs-keyword\">let</span> arr2=[<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">4</span>]\n<span class=\"hljs-keyword\">let</span> a1=_.<span class=\"hljs-title function_\">difference</span>(arr1,arr2) <span class=\"hljs-comment\">// [1]</span>\n<span class=\"hljs-keyword\">let</span> a2=_.<span class=\"hljs-title function_\">difference</span>(arr1,arr2) <span class=\"hljs-comment\">// [4]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,39"}}],"payload":{"tag":"h3","lines":"32,33"}},{"content":"5. isEmpty","children":[{"content":"<pre data-lines=\"41,45\"><code class=\"language-js\">_.<span class=\"hljs-title function_\">isEmpty</span>({})\n<span class=\"hljs-comment\">// false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,45"}}],"payload":{"tag":"h3","lines":"40,41"}},{"content":"6. cloneDeep","children":[{"content":"<pre data-lines=\"47,54\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> objects = [{ <span class=\"hljs-string\">&apos;a&apos;</span>: <span class=\"hljs-number\">1</span> }, { <span class=\"hljs-string\">&apos;b&apos;</span>: <span class=\"hljs-number\">2</span> }];\n \n<span class=\"hljs-keyword\">var</span> deep = _.<span class=\"hljs-title function_\">cloneDeep</span>(objects);\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(deep[<span class=\"hljs-number\">0</span>] === objects[<span class=\"hljs-number\">0</span>]);\n<span class=\"hljs-comment\">// =&gt; false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,54"}}],"payload":{"tag":"h3","lines":"46,47"}}]},{})</script>
+</body>
+</html>

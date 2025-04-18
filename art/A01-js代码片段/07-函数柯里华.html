@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x51fd;&#x6570;&#x67ef;&#x91cc;&#x534e;-currying","children":[{"content":"<pre data-lines=\"1,23\"><code data-lines=\"1,23\">/*<span class=\"hljs-number\">1</span>*/\n/*\n<span class=\"hljs-built_in\">var</span> f=function(){<span class=\"hljs-built_in\">var</span> a=b=<span class=\"hljs-number\">1</span>;}\nf();\nconsole.log(b);<span class=\"hljs-comment\">//1</span>\nconsole.log(a);<span class=\"hljs-comment\">//&#x62a5;&#x9519;</span>\n*/\n/*\n<span class=\"hljs-built_in\">var</span> f=function(){<span class=\"hljs-built_in\">var</span> a=b=<span class=\"hljs-number\">1</span>;}\nsetTimeout(f,<span class=\"hljs-number\">0</span>);\nconsole.log(b);<span class=\"hljs-comment\">//&#x62a5;&#x9519;</span>\n<span class=\"hljs-comment\">//f();</span>\n*/\n/*\n<span class=\"hljs-built_in\">var</span> a,b=<span class=\"hljs-number\">0</span>, fn=function(){<span class=\"hljs-built_in\">var</span> a=b=<span class=\"hljs-number\">2</span>;}\nfn();\nconsole.log(a);<span class=\"hljs-comment\">//undefined</span>\nconsole.log(b);<span class=\"hljs-comment\">//2</span>\n<span class=\"hljs-comment\">//&#x8fde;&#x7b49;&#x77ed;&#x53e5;</span>\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,23"}},{"content":"<pre data-lines=\"23,47\"><code data-lines=\"23,47\"><span class=\"hljs-operator\">/*</span><span class=\"hljs-number\">2.</span> &#x51fd;&#x6570;currying(&#x67ef;&#x91cc;&#x534e;)&#xff1a;&#x57fa;&#x4e8e;&#x4e00;&#x4e2a;&#x73b0;&#x6709;&#x51fd;&#x6570;&#x521b;&#x5efa;&#x4e00;&#x4e2a;&#x51fd;&#x6570;&#xff0c;&#x5728;&#x521b;&#x5efa;&#x65b0;&#x51fd;&#x6570;&#x662f;&#x63d0;&#x524d;&#x7ed1;&#x5b9a;&#x4e86;&#x90e8;&#x5206;&#x53c2;&#x6570;&#x3002;\n<span class=\"hljs-comment\">//&#x51fd;&#x6570;&#x53ef;&#x5148;&#x540e;&#x4f20;&#x5165;&#x591a;&#x4e2a;&#x53c2;&#x6570;&#xff0c;&#x6700;&#x540e;&#x6c47;&#x603b;&#x6267;&#x884c;&#x3002;</span>\nvar getN;\n<span class=\"hljs-keyword\">function</span> add(n){\n  getN<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">function</span>(){console.log(n);}\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">function</span>(m){\n    n<span class=\"hljs-operator\">+=</span>m;\n    arguments.callee.toString<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">function</span>(){\n      <span class=\"hljs-comment\">//&#x4e3a;&#x5f53;&#x524d;&#x51fd;&#x6570;&#x91cd;&#x5199;toString&#x65b9;&#x6cd5;</span>\n      <span class=\"hljs-keyword\">return</span> n;\n    }\n    <span class=\"hljs-keyword\">return</span> arguments.callee; <span class=\"hljs-comment\">//&#x51fd;&#x6570;&#x53ea;&#x8d1f;&#x8d23;</span>\n    &#x7d2f;&#x52a0;&#x4e0d;&#x80fd;&#x8f93;&#x51fa;&#xff0c;&#x6240;&#x6709;&#x6709;getN<span class=\"hljs-operator\">=</span><span class=\"hljs-keyword\">function</span>(){console.log(n)}\n  }\n}\nadd(<span class=\"hljs-number\">1</span>)(<span class=\"hljs-number\">2</span>)(<span class=\"hljs-number\">3</span>); getN();<span class=\"hljs-comment\">//6</span>\nadd(<span class=\"hljs-number\">1</span>)(<span class=\"hljs-number\">2</span>)(<span class=\"hljs-number\">3</span>)(<span class=\"hljs-number\">4</span>); getN();<span class=\"hljs-comment\">//10</span>\nalert(add(<span class=\"hljs-number\">1</span>)(<span class=\"hljs-number\">2</span>)(<span class=\"hljs-number\">3</span>));<span class=\"hljs-comment\">//6</span>\nalert(add(<span class=\"hljs-number\">1</span>)(<span class=\"hljs-number\">2</span>)(<span class=\"hljs-number\">3</span>)(<span class=\"hljs-number\">4</span>));<span class=\"hljs-comment\">//10</span>\n<span class=\"hljs-comment\">//alert()&#x7279;&#x6b8a;&#x7684;&#x5730;&#x65b9;&#x4f1a;&#x81ea;&#x52a8;&#x8c03;&#x7528;toString() &#x6700;&#x540e;&#x8fd4;&#x56de;&#x7684;&#x662f; &#x81ea;&#x5df1;&#xff08;&#x5185;&#x5c42;&#x51fd;&#x6570;&#x7684;&#x672c;&#x8eab;&#xff09;--&#x539f;&#x56e0;arguments.callee&#x5bfc;&#x81f4;&#x7684;&#x8fd4;&#x56de;&#x5185;&#x5c42;&#x51fd;&#x6570; &#x53e6;&#x5916;&#x8fd8;&#x4ea7;&#x751f;&#x4e00;&#x4e2a;&#x95ee;&#x9898;&#xff1a;&#x7528;&#x6765;&#x8fd4;&#x56de;&#x51fd;&#x6570;&#x65e0;&#x6cd5;&#x8fd4;&#x56de;&#x6570;&#x503c;&#x6240;&#x4ee5;&#x6709;getN&#x51fd;&#x6570;</span>\n\n<span class=\"hljs-operator\">*/</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,47"}},{"content":"<pre data-lines=\"47,66\"><code data-lines=\"47,66\">/*<span class=\"hljs-number\">3</span>\n<span class=\"hljs-built_in\">var</span> emp={\n  work:function(){<span class=\"hljs-comment\">//3,2,1</span>\n    <span class=\"hljs-built_in\">var</span> <span class=\"hljs-built_in\">sum</span>=<span class=\"hljs-number\">0</span>;<span class=\"hljs-comment\">//+3+2+1  +2+1    +1</span>\n    for(<span class=\"hljs-built_in\">var</span> i=<span class=\"hljs-number\">0</span>;\n      i&lt;arguments.length&amp;&amp;arguments[<span class=\"hljs-number\">0</span>]&gt;<span class=\"hljs-number\">0</span>;\n      i++){\n      <span class=\"hljs-built_in\">sum</span>+=arguments[i]\n          +arguments.callee(\n            --arguments[i]\n          );\n    }\n    return <span class=\"hljs-built_in\">sum</span>;\n  }\n}\nconsole.log(emp.work(<span class=\"hljs-number\">3</span>,<span class=\"hljs-number\">2</span>,<span class=\"hljs-number\">1</span>));<span class=\"hljs-comment\">//10</span>\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,66"}},{"content":"<pre data-lines=\"66,80\"><code data-lines=\"66,80\">//&#x8865;&#x5145;&#x9898;\n/*<span class=\"hljs-number\">1</span>\nvar f=<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\"></span>(){<span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">true}</span>;\nvar g=<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\"></span>(){<span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">false}</span>;\n(<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\"></span>(){\n    if((g()&amp;&amp;[])==![]){\n      var f=<span class=\"hljs-keyword\">function</span>(){<span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">false</span>;}\n      <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">g</span>(){<span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">true</span>;}\n    }\n})(); //&#x533f;&#x540d;&#x51fd;&#x6570;&#x4e5f;&#x662f;&#x4f5c;&#x7528;&#x57df;\nconsole.log(f()); //<span class=\"hljs-literal\">true</span>\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"66,80"}},{"content":"<pre data-lines=\"80,94\"><code data-lines=\"80,94\"><span class=\"hljs-comment\">/*\nvar a=0,b=0;\nfunction A(a){\n  A=function(b){\n    alert(a+b++);\n  }\n  alert(a);\n}\nA(1);\n//A&#x53d8;&#x4e3a; A:function(b){alert(a+b++)}; //a=1\nA(12);\n*/</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"80,94"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

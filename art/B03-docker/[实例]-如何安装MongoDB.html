@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x5b9e;&#x4f8b;]-&#x5982;&#x4f55;&#x5b89;&#x88c5;MongoDB","children":[{"content":"<pre data-lines=\"2,8\"><code data-lines=\"2,8\">docker search mongo\ndocker pull mongo:latest\ndocker <span class=\"hljs-built_in\">run</span> -itd <span class=\"hljs-comment\">--name mongo-test -p 27017:27017 mongo</span>\ndocker exec -<span class=\"hljs-keyword\">it</span> mongo-test /usr/bash <span class=\"hljs-comment\">--auth</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,8"}},{"content":"<pre data-lines=\"9,13\"><code data-lines=\"9,13\"><span class=\"hljs-deletion\">-p 27017:27017 &#xff1a;&#x6620;&#x5c04;&#x5bb9;&#x5668;&#x670d;&#x52a1;&#x7684; 27017 &#x7aef;&#x53e3;&#x5230;&#x5bbf;&#x4e3b;&#x673a;&#x7684; 27017 &#x7aef;&#x53e3;&#x3002;&#x5916;&#x90e8;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x901a;&#x8fc7; &#x5bbf;&#x4e3b;&#x673a; ip:27017 &#x8bbf;&#x95ee;&#x5230; mongo &#x7684;&#x670d;&#x52a1;&#x3002;</span>\n<span class=\"hljs-deletion\">--auth&#xff1a;&#x9700;&#x8981;&#x5bc6;&#x7801;&#x624d;&#x80fd;&#x8bbf;&#x95ee;&#x5bb9;&#x5668;&#x670d;&#x52a1;&#x3002;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,13"}},{"content":"<pre data-lines=\"14,17\"><code data-lines=\"14,17\">docker -<span class=\"hljs-keyword\">it</span> mongi-test mongo admin\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,17"}},{"content":"<pre data-lines=\"18,24\"><code data-lines=\"18,24\"><span class=\"hljs-comment\"># &#x521b;&#x5efa;&#x4e00;&#x4e2a;&#x540d;&#x4e3a; admin&#xff0c;&#x5bc6;&#x7801;&#x4e3a; 123456 &#x7684;&#x7528;&#x6237;&#x3002;</span>\n&gt;  db.<span class=\"hljs-title function_ invoke__\">createUser</span>({ <span class=\"hljs-attr\">user</span>:<span class=\"hljs-string\">&apos;admin&apos;</span>,<span class=\"hljs-attr\">pwd</span>:<span class=\"hljs-string\">&apos;123456&apos;</span>,<span class=\"hljs-attr\">roles</span>:[ { <span class=\"hljs-attr\">role</span>:<span class=\"hljs-string\">&apos;userAdminAnyDatabase&apos;</span>, <span class=\"hljs-attr\">db</span>: <span class=\"hljs-string\">&apos;admin&apos;</span>},<span class=\"hljs-string\">&quot;readWriteAnyDatabase&quot;</span>]});\n<span class=\"hljs-comment\"># &#x5c1d;&#x8bd5;&#x4f7f;&#x7528;&#x4e0a;&#x9762;&#x521b;&#x5efa;&#x7684;&#x7528;&#x6237;&#x4fe1;&#x606f;&#x8fdb;&#x884c;&#x8fde;&#x63a5;&#x3002;</span>\n&gt; db.<span class=\"hljs-title function_ invoke__\">auth</span>(<span class=\"hljs-string\">&apos;admin&apos;</span>, <span class=\"hljs-string\">&apos;123456&apos;</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,24"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

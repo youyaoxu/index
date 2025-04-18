@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"use &#x65b9;&#x6cd5;","children":[{"content":"use &#x521d;&#x59cb;&#x5316;&#x65b9;&#x6cd5;","children":[{"content":"<pre data-lines=\"3,22\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">initUse</span> (<span class=\"hljs-params\">Vue: GlobalAPI</span>) {\n <span class=\"hljs-title class_\">Vue</span>.<span class=\"hljs-property\">use</span> = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">plugin: <span class=\"hljs-built_in\">Function</span> | <span class=\"hljs-built_in\">Object</span></span>) {\n  <span class=\"hljs-keyword\">const</span> installedPlugins = (<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_installedPlugins</span> || (<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">_installedPlugins</span> = []))\n  <span class=\"hljs-keyword\">if</span> (installedPlugins.<span class=\"hljs-title function_\">indexOf</span>(plugin) &gt; -<span class=\"hljs-number\">1</span>) {\n   <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>\n  }\n  <span class=\"hljs-keyword\">const</span> args = <span class=\"hljs-title function_\">toArray</span>(<span class=\"hljs-variable language_\">arguments</span>, <span class=\"hljs-number\">1</span>)\n  args.<span class=\"hljs-title function_\">unshift</span>(<span class=\"hljs-variable language_\">this</span>)\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> plugin.<span class=\"hljs-property\">install</span> === <span class=\"hljs-string\">&apos;function&apos;</span>) {\n   plugin.<span class=\"hljs-property\">install</span>.<span class=\"hljs-title function_\">apply</span>(plugin, args)\n  } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> plugin === <span class=\"hljs-string\">&apos;function&apos;</span>) {\n   plugin.<span class=\"hljs-title function_\">apply</span>(<span class=\"hljs-literal\">null</span>, args)\n  }\n  installedPlugins.<span class=\"hljs-title function_\">push</span>(plugin)\n  <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>\n }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,22"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"&#x5982;&#x4f55;&#x4f7f;&#x7528;use api","children":[{"content":"<pre data-lines=\"24,29\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">Vue</span> <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;vue&apos;</span>\n<span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">Element</span> <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;element-ui&apos;</span>\n<span class=\"hljs-title class_\">Vue</span>.<span class=\"hljs-title function_\">use</span>(<span class=\"hljs-title class_\">Element</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"24,29"}}],"payload":{"tag":"h3","lines":"23,24"}},{"content":"&#x81ea;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x63d2;&#x4ef6;&#x65b9;&#x6cd5;","children":[{"content":"<pre data-lines=\"31,40\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> plugin = {\n  <span class=\"hljs-title function_\">install</span>(<span class=\"hljs-params\"></span>) {\n    <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&quot;&#x6211;&#x662f;install&#x5185;&#x7684;&#x4ee3;&#x7801;&quot;</span>)\n  },\n}\n<span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">Vue</span> <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;vue&quot;</span>\n<span class=\"hljs-title class_\">Vue</span>.<span class=\"hljs-title function_\">use</span>(plugin) <span class=\"hljs-comment\">// &#x9875;&#x9762;&#x663e;&#x793a;&quot;&#x6211;&#x662f;install&#x5185;&#x7684;&#x4ee3;&#x7801;&quot;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,40"}}],"payload":{"tag":"h3","lines":"30,31"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

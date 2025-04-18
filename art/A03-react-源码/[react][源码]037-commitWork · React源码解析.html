@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"commitWork","children":[{"content":"commitUpdate","children":[{"content":"<pre data-lines=\"4,18\"><code data-lines=\"4,18\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">commitUpdate</span><span class=\"hljs-params\">(\n  domElement: Instance,\n  updatePayload: <span class=\"hljs-keyword\">Array</span>&lt;mixed&gt;,\n  <span class=\"hljs-keyword\">type</span>: <span class=\"hljs-keyword\">string</span>,\n  oldProps: Props,\n  newProps: Props,\n  internalInstanceHandle: <span class=\"hljs-keyword\">Object</span>,\n)</span>:</span> void <span class=\"hljs-comment\">{\n  updateFiberProps(domElement, newProps)\n  updateProperties(domElement, updatePayload, type, oldProps, newProps)\n}</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,18"}},{"content":"<pre data-lines=\"19,20\"><code>&#x6839;&#x636e;&#x4e4b;&#x524d;&#x5728;`diffProperties`&#x8ba1;&#x7b97;&#x51fa;&#x6765;&#x7684;`updatePayloads`&#x6570;&#x7ec4;&#x8fdb;&#x884c; DOM &#x66f4;&#x65b0;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,20"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"commitTextUpdate","children":[{"content":"<pre data-lines=\"23,33\"><code data-lines=\"23,33\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-built_in\">function</span> commitTextUpdate(\n  textInstance: TextInstance,\n  oldText: <span class=\"hljs-built_in\">string</span>,\n  newText: <span class=\"hljs-built_in\">string</span>,\n): <span class=\"hljs-keyword\">void</span> {\n  textInstance.nodeValue = newText\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,33"}},{"content":"<pre data-lines=\"34,109\"><code data-lines=\"34,109\"><span class=\"hljs-function\">function <span class=\"hljs-title\">commitWork</span>(<span class=\"hljs-params\">current: Fiber | <span class=\"hljs-literal\">null</span>, finishedWork: Fiber</span>): <span class=\"hljs-keyword\">void</span></span> {\n  <span class=\"hljs-keyword\">if</span> (!supportsMutation) {\n    commitContainer(finishedWork)\n    <span class=\"hljs-keyword\">return</span>\n  }\n\n  <span class=\"hljs-keyword\">switch</span> (finishedWork.tag) {\n    <span class=\"hljs-keyword\">case</span> ClassComponent: {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostComponent: {\n      <span class=\"hljs-keyword\">const</span> instance: Instance = finishedWork.<span class=\"hljs-function\">stateNode\n      <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">instance != <span class=\"hljs-literal\">null</span></span>)</span> {\n        \n        <span class=\"hljs-keyword\">const</span> newProps = finishedWork.memoizedProps\n        \n        \n        \n        <span class=\"hljs-keyword\">const</span> oldProps = current !== <span class=\"hljs-literal\">null</span> ? current.memoizedProps : newProps\n        <span class=\"hljs-keyword\">const</span> type = finishedWork.type\n        \n        <span class=\"hljs-keyword\">const</span> updatePayload: <span class=\"hljs-literal\">null</span> | UpdatePayload = (finishedWork.updateQueue: any)\n        finishedWork.updateQueue = <span class=\"hljs-function\"><span class=\"hljs-literal\">null</span>\n        <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">updatePayload !== <span class=\"hljs-literal\">null</span></span>)</span> {\n          commitUpdate(\n            instance,\n            updatePayload,\n            type,\n            oldProps,\n            newProps,\n            finishedWork,\n          )\n        }\n      }\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostText: {\n      invariant(\n        finishedWork.stateNode !== <span class=\"hljs-literal\">null</span>,\n        <span class=\"hljs-string\">&apos;This should have a text node initialized. This error is likely &apos;</span> +\n          <span class=\"hljs-string\">&apos;caused by a bug in React. Please file an issue.&apos;</span>,\n      )\n      <span class=\"hljs-keyword\">const</span> textInstance: TextInstance = finishedWork.stateNode\n      <span class=\"hljs-keyword\">const</span> newText: <span class=\"hljs-built_in\">string</span> = finishedWork.memoizedProps\n      \n      \n      \n      <span class=\"hljs-keyword\">const</span> oldText: <span class=\"hljs-built_in\">string</span> = current !== <span class=\"hljs-literal\">null</span> ? current.memoizedProps : <span class=\"hljs-function\">newText\n      <span class=\"hljs-title\">commitTextUpdate</span>(<span class=\"hljs-params\">textInstance, oldText, newText</span>)\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostRoot:</span> {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> Profiler: {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> SuspenseComponent: {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> IncompleteClassComponent: {\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-literal\">default</span>: {\n      invariant(\n        <span class=\"hljs-literal\">false</span>,\n        <span class=\"hljs-string\">&apos;This unit of work tag should not have side-effects. This error is &apos;</span> +\n          <span class=\"hljs-string\">&apos;likely caused by a bug in React. Please file an issue.&apos;</span>,\n      )\n    }\n  }\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,109"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"110,111"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"114,115"}}],"payload":{"tag":"h3","lines":"21,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"updateProfiler","children":[{"content":"<pre data-lines=\"2,3\"><code>&#x5e94;&#x8be5;&#x8ddf;`timeoutComponent`&#x4e00;&#x6837;&#x662f;&#x4e0b;&#x4e2a;&#x7248;&#x672c;&#x7684;&#x529f;&#x80fd;&#xff0c;&#x76ee;&#x524d;&#x770b;&#x4e0d;&#x51fa;&#x6709;&#x4ec0;&#x4e48;&#x4f5c;&#x7528;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,3"}},{"content":"<pre data-lines=\"4,20\"><code data-lines=\"4,20\"><span class=\"hljs-keyword\">function</span> updateProfiler(<span class=\"hljs-keyword\">current</span>, workInProgress) {\n  const nextProps = workInProgress.pendingProps;\n  <span class=\"hljs-keyword\">if</span> (enableProfilerTimer) {\n    workInProgress.effectTag |= <span class=\"hljs-keyword\">Update</span>;\n  }\n  <span class=\"hljs-keyword\">if</span> (workInProgress.memoizedProps === nextProps) {\n    <span class=\"hljs-keyword\">return</span> bailoutOnAlreadyFinishedWork(<span class=\"hljs-keyword\">current</span>, workInProgress);\n  }\n  const nextChildren = nextProps.children;\n  reconcileChildren(<span class=\"hljs-keyword\">current</span>, workInProgress, nextChildren);\n  memoizeProps(workInProgress, nextProps);\n  <span class=\"hljs-keyword\">return</span> workInProgress.child;\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,20"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"21,22"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"25,26"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

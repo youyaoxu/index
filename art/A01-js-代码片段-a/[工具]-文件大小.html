@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6587;&#x4ef6;&#x76f8;&#x5173;","children":[{"content":"<pre data-lines=\"3,20\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">*</span>} size &#x6587;&#x4ef6;&#x5927;&#x5c0f;\n * <span class=\"hljs-doctag\">@description</span> &#x6839;&#x636e;&#x6587;&#x4ef6;&#x5927;&#x5c0f;&#x8bbe;&#x7f6e;&#x5bf9;&#x5e94;&#x7684;&#x6587;&#x4ef6;&#x5355;&#x4f4d;\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">setFileSizeUnit</span> = (<span class=\"hljs-params\">size</span>) =&gt; {\n  <span class=\"hljs-keyword\">const</span> fileSize =\n    size &gt;= <span class=\"hljs-number\">1024</span>\n      ? size / <span class=\"hljs-number\">1024</span> &gt;= <span class=\"hljs-number\">1024</span>\n        ? size / <span class=\"hljs-number\">1024</span> / <span class=\"hljs-number\">1024</span> &gt;= <span class=\"hljs-number\">1024</span>\n          ? (size / <span class=\"hljs-number\">1024</span> / <span class=\"hljs-number\">1024</span> / <span class=\"hljs-number\">1024</span>).<span class=\"hljs-title function_\">toFixed</span>(<span class=\"hljs-number\">2</span>) + <span class=\"hljs-string\">&apos;GB&apos;</span>\n          : (size / <span class=\"hljs-number\">1024</span> / <span class=\"hljs-number\">1024</span>).<span class=\"hljs-title function_\">toFixed</span>(<span class=\"hljs-number\">2</span>) + <span class=\"hljs-string\">&apos;MB&apos;</span>\n        : (size / <span class=\"hljs-number\">1024</span>).<span class=\"hljs-title function_\">toFixed</span>(<span class=\"hljs-number\">2</span>) + <span class=\"hljs-string\">&apos;kB&apos;</span>\n      : size.<span class=\"hljs-title function_\">toFixed</span>(<span class=\"hljs-number\">2</span>) + <span class=\"hljs-string\">&apos;B&apos;</span>;\n  <span class=\"hljs-keyword\">return</span> fileSize;\n};\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

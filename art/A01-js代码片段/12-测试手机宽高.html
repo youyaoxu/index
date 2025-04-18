@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6d4b;&#x8bd5;&#x624b;&#x673a;&#x5bbd;&#x9ad8;","children":[{"content":"<pre data-lines=\"1,19\"><code data-lines=\"1,19\">// &#x6d4b;&#x8bd5;&#x624b;&#x673a;&#x663e;&#x793a;html5&#x533a;&#x57df;&#x7684;&#x5bbd;&#x9ad8;\n<span class=\"hljs-meta\">&lt;!DOCTYPE <span class=\"hljs-keyword\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">&quot;en&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">&quot;UTF-8&quot;</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">title</span>&gt;</span>&#x6d4b;&#x8bd5;&#x624b;&#x673a;&#x7684;&#x5bbd;&#x5ea6;&#x548c;&#x9ad8;&#x5ea6;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">title</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\n        <span class=\"hljs-keyword\">var</span> width=<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">documentElement</span>.<span class=\"hljs-property\">clientWidth</span>||<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-property\">clientWidth</span>;\n        <span class=\"hljs-keyword\">var</span> height=<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">documentElement</span>.<span class=\"hljs-property\">clientHeight</span>||<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-property\">clientHeight</span>;\n        <span class=\"hljs-keyword\">var</span> devicePixelRatio = <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">devicePixelRatio</span>;\n        <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">&quot;&#x5c4f;&#x5e55;&#x7684;&#x5bbd;&#x5ea6;&#x4e3a;: &quot;</span>+ width + <span class=\"hljs-string\">&quot; &#x5c4f;&#x5e55;&#x7684;&#x9ad8;&#x5ea6;&#x4e3a;: &quot;</span>+height+<span class=\"hljs-string\">&quot; &#x624b;&#x673a;&#x7684;dpr: &quot;</span>+devicePixelRatio );\n    </span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,19"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

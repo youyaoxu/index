@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6570;&#x7ec4;&#x964d;&#x7ef4;","children":[{"content":"<pre data-lines=\"1,11\"><code data-lines=\"1,11\"><span class=\"hljs-comment\">//1. &#x6570;&#x7ec4;&#x964d;&#x7ef4;:</span>\n<span class=\"hljs-keyword\">var</span> arr=[\n  [<span class=\"hljs-meta\">0,0,0,0</span>],\n  [<span class=\"hljs-meta\">0,0,0,0</span>],\n  [<span class=\"hljs-meta\">0,0,0,0</span>],\n  [<span class=\"hljs-meta\">0,0,0,0</span>],\n];\n<span class=\"hljs-comment\">//console.log(String(arr));</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,11"}},{"content":"<pre data-lines=\"11,21\"><code data-lines=\"11,21\">/*<span class=\"hljs-function\"><span class=\"hljs-keyword\">method</span> 1:\n<span class=\"hljs-title\">for</span></span>(var r=0,arr1=[];r&lt;arr.length;r++){\n  <span class=\"hljs-keyword\">for</span>(var c=<span class=\"hljs-number\">0</span>;c&lt;arr[r].length;c++){\n    arr1.push(arr[r][c]);\n  }\n}\nconsole.dir(arr1);\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,21"}},{"content":"<pre data-lines=\"21,29\"><code data-lines=\"21,29\">/*<span class=\"hljs-function\"><span class=\"hljs-keyword\">method</span> 2: \n<span class=\"hljs-title\">for</span></span>(var r=0,arr2=[];r&lt;arr.length;r++){\n  arr2=arr2.concat(arr[r]);\n}\nconsole.dir(arr2);\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,29"}},{"content":"<pre data-lines=\"29,35\"><code data-lines=\"29,35\">/*<span class=\"hljs-function\"><span class=\"hljs-keyword\">method</span> 3:\n<span class=\"hljs-title\">var</span> <span class=\"hljs-title\">arr2</span>=[].<span class=\"hljs-title\">concat</span>.<span class=\"hljs-title\">apply</span></span>([],arr);\nconsole.dir(arr2);\n*/\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,35"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x4f7f;&#x7528;encrypt&#x8fdb;&#x884c;&#x52a0;&#x5bc6;/&#x89e3;&#x5bc6;","children":[{"content":"<pre data-lines=\"2,35\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">JSEncrypt</span> <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;jsencrypt/bin/jsencrypt.min&apos;</span>\n\n<span class=\"hljs-comment\">// &#x5bc6;&#x94a5;&#x5bf9;&#x751f;&#x6210; http://web.chacuo.net/netrsakeypair</span>\n\n<span class=\"hljs-keyword\">const</span> publicKey = <span class=\"hljs-string\">&apos;MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKoR8mX0rGKLqzcWmOzbfj64K8ZIgOdH\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;nzkXSOVOZbFu/TJhZ7rFAN+eaGkl3C4buccQd/EjEsj9ir7ijT7h96MCAwEAAQ==&apos;</span>\n\n<span class=\"hljs-keyword\">const</span> privateKey = <span class=\"hljs-string\">&apos;MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAqhHyZfSsYourNxaY\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;7Nt+PrgrxkiA50efORdI5U5lsW79MmFnusUA355oaSXcLhu5xxB38SMSyP2KvuKN\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;PuH3owIDAQABAkAfoiLyL+Z4lf4Myxk6xUDgLaWGximj20CUf+5BKKnlrK+Ed8gA\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;kM0HqoTt2UZwA5E2MzS4EI2gjfQhz5X28uqxAiEA3wNFxfrCZlSZHb0gn2zDpWow\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;cSxQAgiCstxGUoOqlW8CIQDDOerGKH5OmCJ4Z21v+F25WaHYPxCFMvwxpcw99Ecv\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;DQIgIdhDTIqD2jfYjPTY8Jj3EDGPbH2HHuffvflECt3Ek60CIQCFRlCkHpi7hthh\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;YhovyloRYsM+IS9h/0BzlEAuO0ktMQIgSPT3aFAgJYwKpqRYKlLDVcflZFCKY7u3\\n&apos;</span> +\n  <span class=\"hljs-string\">&apos;UP8iWi1Qw0Y=&apos;</span>\n\n<span class=\"hljs-comment\">// &#x52a0;&#x5bc6;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">encrypt</span>(<span class=\"hljs-params\">txt</span>) {\n  <span class=\"hljs-keyword\">const</span> encryptor = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">JSEncrypt</span>()\n  encryptor.<span class=\"hljs-title function_\">setPublicKey</span>(publicKey) <span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;&#x516c;&#x94a5;</span>\n  <span class=\"hljs-keyword\">return</span> encryptor.<span class=\"hljs-title function_\">encrypt</span>(txt) <span class=\"hljs-comment\">// &#x5bf9;&#x6570;&#x636e;&#x8fdb;&#x884c;&#x52a0;&#x5bc6;</span>\n}\n\n<span class=\"hljs-comment\">// &#x89e3;&#x5bc6;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">decrypt</span>(<span class=\"hljs-params\">txt</span>) {\n  <span class=\"hljs-keyword\">const</span> encryptor = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">JSEncrypt</span>()\n  encryptor.<span class=\"hljs-title function_\">setPrivateKey</span>(privateKey) <span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;&#x79c1;&#x94a5;</span>\n  <span class=\"hljs-keyword\">return</span> encryptor.<span class=\"hljs-title function_\">decrypt</span>(txt) <span class=\"hljs-comment\">// &#x5bf9;&#x6570;&#x636e;&#x8fdb;&#x884c;&#x89e3;&#x5bc6;</span>\n}\n\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,35"}}],"payload":{"tag":"h3","lines":"1,2"}},{})</script>
+</body>
+</html>

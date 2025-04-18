@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5c06;&#x4ece;github&#x514b;&#x9686;&#x4ed3;&#x5e93;&#x4e0e;&#x539f;&#x4ed3;&#x5e93;&#x65ad;&#x5f00;&#x8fde;&#x63a5;","children":[{"content":"<pre data-lines=\"2,8\"><code data-lines=\"2,8\">git remote <span class=\"hljs-built_in\">remove</span> <span class=\"hljs-built_in\">origin</span>\n\nrm -rf .git \n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,8"}},{"content":"<pre data-lines=\"11,14\"><code data-lines=\"11,14\">git remote <span class=\"hljs-built_in\">remove</span> <span class=\"hljs-built_in\">origin</span> &amp;&amp; rm -rf .git\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,14"}}],"payload":{"tag":"h2","lines":"1,2"}},{})</script>
+</body>
+</html>

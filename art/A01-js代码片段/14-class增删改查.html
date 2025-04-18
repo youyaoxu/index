@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"class&#x589e;&#x5220;&#x6539;&#x67e5;","children":[{"content":"classList","children":[],"payload":{"tag":"h4","lines":"2,3"}},{"content":"&#x64cd;&#x4f5c;","children":[{"content":"<pre data-lines=\"7,14\"><code data-lines=\"7,14\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;a b c&quot;</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;demo&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\">\n<span class=\"hljs-keyword\">var</span> demo=<span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">getElementById</span>(<span class=\"hljs-string\">&quot;demo&quot;</span>).<span class=\"hljs-property\">classList</span>;\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(demo)\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,14"}},{"content":"<pre data-lines=\"16,19\"><code data-lines=\"16,19\">demo.<span class=\"hljs-built_in\">add</span>(<span class=\"hljs-string\">&quot;style&quot;</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,19"}},{"content":"<pre data-lines=\"20,23\"><code data-lines=\"20,23\"><span class=\"hljs-built_in\">demo</span>.<span class=\"hljs-built_in\">remove</span>(<span class=\"hljs-string\">&quot;style&quot;</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,23"}},{"content":"<pre data-lines=\"24,28\"><code data-lines=\"24,28\"><span class=\"hljs-built_in\">var</span> <span class=\"hljs-built_in\">is</span>=<span class=\"hljs-built_in\">demo</span>.contains(<span class=\"hljs-string\">&quot;style&quot;</span>);\nconsole.<span class=\"hljs-built_in\">log</span>(<span class=\"hljs-built_in\">is</span>);//&#x8fd4;&#x56de;<span class=\"hljs-literal\">false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"24,28"}},{"content":"<pre data-lines=\"29,32\"><code data-lines=\"29,32\">demo.<span class=\"hljs-built_in\">add</span>(<span class=\"hljs-string\">&quot;style&quot;</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,32"}},{"content":"<pre data-lines=\"33,36\"><code data-lines=\"33,36\"><span class=\"hljs-built_in\">demo</span>.<span class=\"hljs-built_in\">length</span>;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,36"}},{"content":"<pre data-lines=\"37,40\"><code data-lines=\"37,40\">demo.item(<span class=\"hljs-number\">0</span>)<span class=\"hljs-comment\">;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,40"}}],"payload":{"tag":"h4","lines":"5,6"}},{"content":"&#x7ed9;&#x4e0d;&#x652f;&#x6301;classList&#x7684;&#x6d4f;&#x89c8;&#x5668;(ie9&#x4ee5;&#x53ca;&#x4ee5;&#x4e0b;)&#x7684;&#x5143;&#x7d20;&#x6dfb;&#x52a0;classList&#x5c5e;&#x6027;","children":[{"content":"<pre data-lines=\"42,85\"><code data-lines=\"42,85\"><span class=\"hljs-keyword\">if</span> (!(<span class=\"hljs-string\">&quot;classList&quot;</span> <span class=\"hljs-keyword\">in</span> document.documentElement)) {\n    Object.defineProperty(HTMLElement.prototype, <span class=\"hljs-string\">&apos;classList&apos;</span>, {\n        <span class=\"hljs-attr\">get</span>: <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) {\n            <span class=\"hljs-keyword\">var</span> self = this;\n            <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">update</span>(<span class=\"hljs-params\">fn</span>) {\n                <span class=\"hljs-keyword\">return</span> <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">value</span>) {\n                    <span class=\"hljs-keyword\">var</span> classes = self.className.<span class=\"hljs-built_in\">split</span>(<span class=\"hljs-regexp\">/\\s+/g</span>),\n                        index = classes.<span class=\"hljs-built_in\">indexOf</span>(value);\n\n                    fn(classes, index, value);\n                    self.className = classes.join(<span class=\"hljs-string\">&quot; &quot;</span>);\n                }\n            }\n\n            <span class=\"hljs-keyword\">return</span> {\n                <span class=\"hljs-attr\">add</span>: update(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">classes, index, value</span>) {\n                    <span class=\"hljs-keyword\">if</span> (!~index) classes.<span class=\"hljs-built_in\">push</span>(value);\n                }),\n\n                <span class=\"hljs-attr\">remove</span>: update(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">classes, index</span>) {\n                    <span class=\"hljs-keyword\">if</span> (~index) classes.<span class=\"hljs-built_in\">splice</span>(index, <span class=\"hljs-number\">1</span>);\n                }),\n\n                <span class=\"hljs-attr\">toggle</span>: update(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">classes, index, value</span>) {\n                    <span class=\"hljs-keyword\">if</span> (~index)\n                        classes.<span class=\"hljs-built_in\">splice</span>(index, <span class=\"hljs-number\">1</span>);\n                    <span class=\"hljs-keyword\">else</span>\n                        classes.<span class=\"hljs-built_in\">push</span>(value);\n                }),\n\n                <span class=\"hljs-attr\">contains</span>: <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">value</span>) {\n                    <span class=\"hljs-keyword\">return</span> !!~self.className.<span class=\"hljs-built_in\">split</span>(<span class=\"hljs-regexp\">/\\s+/g</span>).<span class=\"hljs-built_in\">indexOf</span>(value);\n                },\n\n                <span class=\"hljs-attr\">item</span>: <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">i</span>) {\n                    <span class=\"hljs-keyword\">return</span> self.className.<span class=\"hljs-built_in\">split</span>(<span class=\"hljs-regexp\">/\\s+/g</span>)[i] || <span class=\"hljs-literal\">null</span>;\n                }\n            };\n        }\n    });\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,85"}}],"payload":{"tag":"h4","lines":"41,42"}},{"content":"&#x4f7f;&#x7528;&#x6b63;&#x5219;&#x5339;&#x914d;class&#x7684;&#x65b9;&#x6cd5;","children":[],"payload":{"tag":"h4","lines":"86,87"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

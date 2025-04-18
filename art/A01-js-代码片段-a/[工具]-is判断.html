@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"is&#x76f8;&#x5173;","children":[{"content":"&#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x6570;&#x5b57;","children":[{"content":"<pre data-lines=\"4,12\"><code class=\"language-js\"><span class=\"hljs-comment\">/*\n* &#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x6570;&#x5b57;\n*/</span>\n<span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">isNumber</span>(<span class=\"hljs-params\">n</span>) {\n\t<span class=\"hljs-keyword\">return</span> !<span class=\"hljs-built_in\">isNaN</span>(<span class=\"hljs-built_in\">parseFloat</span>(n)) &amp;&amp; <span class=\"hljs-built_in\">isFinite</span>(n)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,12"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x672a;&#x5b9a;&#x4e49;","children":[{"content":"<pre data-lines=\"15,23\"><code class=\"language-js\"><span class=\"hljs-comment\">/*\n* &#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x672a;&#x5b9a;&#x4e49;\n*/</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">isUndef</span> (<span class=\"hljs-params\">v</span>) {\n  <span class=\"hljs-keyword\">return</span> v === <span class=\"hljs-literal\">undefined</span> || v === <span class=\"hljs-literal\">null</span>\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,23"}}],"payload":{"tag":"h2","lines":"13,14"}},{"content":"&#x5224;&#x65ad;&#x662f;&#x5426;&#x5b9a;&#x4e49;","children":[{"content":"<pre data-lines=\"26,32\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x5224;&#x65ad;&#x662f;&#x5426;&#x5b9a;&#x4e49;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">isDef</span> (<span class=\"hljs-params\">v: any</span>) {\n  <span class=\"hljs-keyword\">return</span> v !== <span class=\"hljs-literal\">undefined</span> &amp;&amp; v !== <span class=\"hljs-literal\">null</span>\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"26,32"}}],"payload":{"tag":"h2","lines":"24,25"}},{"content":"&#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x5bf9;&#x8c61;","children":[{"content":"<pre data-lines=\"35,41\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;&#x5bf9;&#x8c61;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">isObject</span> (<span class=\"hljs-params\">obj</span>) {\n  <span class=\"hljs-keyword\">return</span> obj !== <span class=\"hljs-literal\">null</span> &amp;&amp; <span class=\"hljs-keyword\">typeof</span> obj === <span class=\"hljs-string\">&apos;object&apos;</span>\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,41"}}],"payload":{"tag":"h2","lines":"33,34"}},{"content":"&#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;promise&#x7c7b;&#x578b;","children":[{"content":"<pre data-lines=\"44,54\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x5224;&#x65ad;&#x662f;&#x5426;&#x662f;promise&#x7c7b;&#x578b;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">isPromise</span> (<span class=\"hljs-params\">val: any</span>): boolean {\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"hljs-title function_\">isDef</span>(val) &amp;&amp;\n    <span class=\"hljs-keyword\">typeof</span> val.<span class=\"hljs-property\">then</span> === <span class=\"hljs-string\">&apos;function&apos;</span> &amp;&amp;\n    <span class=\"hljs-keyword\">typeof</span> val.<span class=\"hljs-property\">catch</span> === <span class=\"hljs-string\">&apos;function&apos;</span>\n  )\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,54"}}],"payload":{"tag":"h2","lines":"42,43"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"uniapp-&#x7edf;&#x4e00;&#x6837;&#x5f0f;","children":[{"content":"<pre data-lines=\"2,81\"><code class=\"language-css\">/**\n * &#x8fd9;&#x91cc;&#x662f;uni-app&#x5185;&#x7f6e;&#x7684;&#x5e38;&#x7528;&#x6837;&#x5f0f;&#x53d8;&#x91cf;\n *\n * uni-app &#x5b98;&#x65b9;&#x6269;&#x5c55;&#x63d2;&#x4ef6;&#x53ca;&#x63d2;&#x4ef6;&#x5e02;&#x573a;&#xff08;https://ext.dcloud.net.cn&#xff09;&#x4e0a;&#x5f88;&#x591a;&#x4e09;&#x65b9;&#x63d2;&#x4ef6;&#x5747;&#x4f7f;&#x7528;&#x4e86;&#x8fd9;&#x4e9b;&#x6837;&#x5f0f;&#x53d8;&#x91cf;\n * &#x5982;&#x679c;&#x4f60;&#x662f;&#x63d2;&#x4ef6;&#x5f00;&#x53d1;&#x8005;&#xff0c;&#x5efa;&#x8bae;&#x4f60;&#x4f7f;&#x7528;scss&#x9884;&#x5904;&#x7406;&#xff0c;&#x5e76;&#x5728;&#x63d2;&#x4ef6;&#x4ee3;&#x7801;&#x4e2d;&#x76f4;&#x63a5;&#x4f7f;&#x7528;&#x8fd9;&#x4e9b;&#x53d8;&#x91cf;&#xff08;&#x65e0;&#x9700; import &#x8fd9;&#x4e2a;&#x6587;&#x4ef6;&#xff09;&#xff0c;&#x65b9;&#x4fbf;&#x7528;&#x6237;&#x901a;&#x8fc7;&#x642d;&#x79ef;&#x6728;&#x7684;&#x65b9;&#x5f0f;&#x5f00;&#x53d1;&#x6574;&#x4f53;&#x98ce;&#x683c;&#x4e00;&#x81f4;&#x7684;App\n *\n */\n\n/**\n * &#x5982;&#x679c;&#x4f60;&#x662f;App&#x5f00;&#x53d1;&#x8005;&#xff08;&#x63d2;&#x4ef6;&#x4f7f;&#x7528;&#x8005;&#xff09;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x4fee;&#x6539;&#x8fd9;&#x4e9b;&#x53d8;&#x91cf;&#x6765;&#x5b9a;&#x5236;&#x81ea;&#x5df1;&#x7684;&#x63d2;&#x4ef6;&#x4e3b;&#x9898;&#xff0c;&#x5b9e;&#x73b0;&#x81ea;&#x5b9a;&#x4e49;&#x4e3b;&#x9898;&#x529f;&#x80fd;\n *\n * &#x5982;&#x679c;&#x4f60;&#x7684;&#x9879;&#x76ee;&#x540c;&#x6837;&#x4f7f;&#x7528;&#x4e86;scss&#x9884;&#x5904;&#x7406;&#xff0c;&#x4f60;&#x4e5f;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x5728;&#x4f60;&#x7684; scss &#x4ee3;&#x7801;&#x4e2d;&#x4f7f;&#x7528;&#x5982;&#x4e0b;&#x53d8;&#x91cf;&#xff0c;&#x540c;&#x65f6;&#x65e0;&#x9700; import &#x8fd9;&#x4e2a;&#x6587;&#x4ef6;\n */\n\n/* &#x989c;&#x8272;&#x53d8;&#x91cf; */\n\n/* &#x884c;&#x4e3a;&#x76f8;&#x5173;&#x989c;&#x8272; */\n&#x24;uni-color-primary: #007aff;\n&#x24;uni-color-success: #4cd964;\n&#x24;uni-color-warning: #f0ad4e;\n&#x24;uni-color-error: #dd524d;\n\n/* &#x6587;&#x5b57;&#x57fa;&#x672c;&#x989c;&#x8272; */\n&#x24;uni-text-color:#333;//&#x57fa;&#x672c;&#x8272;\n&#x24;uni-text-color-inverse:#fff;//&#x53cd;&#x8272;\n&#x24;uni-text-color-grey:#999;//&#x8f85;&#x52a9;&#x7070;&#x8272;&#xff0c;&#x5982;&#x52a0;&#x8f7d;&#x66f4;&#x591a;&#x7684;&#x63d0;&#x793a;&#x4fe1;&#x606f;\n&#x24;uni-text-color-placeholder: #808080;\n&#x24;uni-text-color-disable:#c0c0c0;\n\n/* &#x80cc;&#x666f;&#x989c;&#x8272; */\n&#x24;uni-bg-color:#ffffff;\n&#x24;uni-bg-color-grey:#f8f8f8;\n&#x24;uni-bg-color-hover:#f1f1f1;//&#x70b9;&#x51fb;&#x72b6;&#x6001;&#x989c;&#x8272;\n&#x24;uni-bg-color-mask:rgba(0, 0, 0, 0.4);//&#x906e;&#x7f69;&#x989c;&#x8272;\n\n/* &#x8fb9;&#x6846;&#x989c;&#x8272; */\n&#x24;uni-border-color:#c8c7cc;\n\n/* &#x5c3a;&#x5bf8;&#x53d8;&#x91cf; */\n\n/* &#x6587;&#x5b57;&#x5c3a;&#x5bf8; */\n&#x24;uni-font-size-sm:12px;\n&#x24;uni-font-size-base:14px;\n&#x24;uni-font-size-lg:16;\n\n/* &#x56fe;&#x7247;&#x5c3a;&#x5bf8; */\n&#x24;uni-img-size-sm:20px;\n&#x24;uni-img-size-base:26px;\n&#x24;uni-img-size-lg:40px;\n\n/* Border Radius */\n&#x24;uni-border-radius-sm: 2px;\n&#x24;uni-border-radius-base: 3px;\n&#x24;uni-border-radius-lg: 6px;\n&#x24;uni-border-radius-circle: 50%;\n\n/* &#x6c34;&#x5e73;&#x95f4;&#x8ddd; */\n&#x24;uni-spacing-row-sm: 5px;\n&#x24;uni-spacing-row-base: 10px;\n&#x24;uni-spacing-row-lg: 15px;\n\n/* &#x5782;&#x76f4;&#x95f4;&#x8ddd; */\n&#x24;uni-spacing-col-sm: 4px;\n&#x24;uni-spacing-col-base: 8px;\n&#x24;uni-spacing-col-lg: 12px;\n\n/* &#x900f;&#x660e;&#x5ea6; */\n&#x24;uni-opacity-disabled: 0.3; // &#x7ec4;&#x4ef6;&#x7981;&#x7528;&#x6001;&#x7684;&#x900f;&#x660e;&#x5ea6;\n\n/* &#x6587;&#x7ae0;&#x573a;&#x666f;&#x76f8;&#x5173; */\n&#x24;uni-color-title: #2C405A; // &#x6587;&#x7ae0;&#x6807;&#x9898;&#x989c;&#x8272;\n&#x24;uni-font-size-title:20px;\n&#x24;uni-color-subtitle: #555555; // &#x4e8c;&#x7ea7;&#x6807;&#x9898;&#x989c;&#x8272;\n&#x24;uni-font-size-subtitle:26px;\n&#x24;uni-color-paragraph: #3F536E; // &#x6587;&#x7ae0;&#x6bb5;&#x843d;&#x989c;&#x8272;\n&#x24;uni-font-size-paragraph:15px;\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,81"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

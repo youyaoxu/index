@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-&#x4ec0;&#x4e48;&#x662f;DAO","children":[{"content":"\n<p data-lines=\"2,3\">DAO&#x5373;Data-Access-Object&#xff0c;&#x76f4;&#x8bd1;&#x8fc7;&#x6765;&#x5c31;&#x662f;&#x6570;&#x636e;&#x8bbf;&#x95ee;&#x5bf9;&#x8c61;</p>","children":[],"payload":{"tag":"li","lines":"2,4"}},{"content":"\n<p data-lines=\"4,5\">&#x4e00;&#x4e2a;Model &#x5bf9;&#x5e94;&#x4e00;&#x4e2a;DAO&#x3002;&#x6bd4;&#x5982;Account &#x2013;&gt; AccountDAO; Book &#x2013;&gt; BookDAO</p>","children":[],"payload":{"tag":"li","lines":"4,6"}},{"content":"\n<p data-lines=\"6,7\">DAO&#x4e0d;&#x9650;&#x5236;identifier&#x65b9;&#x5f0f;&#x7684;&#x53c2;&#x6570;&#x3002;&#x6bd4;&#x5982;&#x4f60;&#x53ef;&#x4ee5;&#x5728;get&#x65b9;&#x6cd5;&#x4e0a;&#x5b9a;&#x4e49;String&#x53c2;&#x6570;&#x3002;&#x4e0e;&#x4e4b;&#x76f8;&#x5bf9;&#xff0c;Repository&#x4fa7;&#x91cd;&#x4e8e;&#x201d;&#x9886;&#x57df;(Domain)&#x201d;</p>","children":[],"payload":{"tag":"li","lines":"6,8"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5173;&#x4e8e;&#x5bf9;&#x8c61;&#x5408;&#x5e76;","children":[{"content":"<pre data-lines=\"2,5\"><code data-lines=\"2,5\">&#x5bf9;&#x8c61;&#x539f;&#x751f;&#x65b9;&#x6cd5;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,5"}},{"content":"<pre data-lines=\"8,24\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> obj1 = { <span class=\"hljs-attr\">a</span>: <span class=\"hljs-number\">1</span>, <span class=\"hljs-attr\">b</span>: <span class=\"hljs-number\">2</span> }\n<span class=\"hljs-keyword\">const</span> obj2 = { <span class=\"hljs-attr\">b</span>: <span class=\"hljs-number\">4</span>, <span class=\"hljs-attr\">c</span>: <span class=\"hljs-number\">5</span> }\n\n<span class=\"hljs-keyword\">const</span> obj3 = <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">assign</span>(obj1, obj2)\n\n<span class=\"hljs-keyword\">const</span> obj4 = <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">assign</span>({}, obj1) <span class=\"hljs-comment\">// &#x514b;&#x9686;&#x4e86;obj1&#x5bf9;&#x8c61;</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj1) <span class=\"hljs-comment\">// { a: 1, b: 4, c: 5 } &#x5bf9;&#x540c;&#x540d;&#x5c5e;&#x6027;b&#x8fdb;&#x884c;&#x4e86;&#x66ff;&#x6362; obj1&#x53d1;&#x751f;&#x6539;&#x53d8;&#x662f;&#x56e0;&#x4e3a;obj2&#x8d4b;&#x7ed9;&#x4e86;obj1</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj2) <span class=\"hljs-comment\">// { b: 4, c: 5 }</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj3) <span class=\"hljs-comment\">// { a: 1, b: 4, c: 5 }</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj4) <span class=\"hljs-comment\">// { a: 1, b: 4, c: 5 }</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,24"}},{"content":"<pre data-lines=\"25,28\"><code data-lines=\"25,28\">&#x5c01;&#x88c5;&#x7248;&#x672c;&#x5bf9;&#x8c61;&#x5408;&#x5e76;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,28"}},{"content":"<pre data-lines=\"31,56\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * Merges two objects, giving the last one precedence\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">Object</span>} <span class=\"hljs-variable\">target</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">(Object|Array)</span>} <span class=\"hljs-variable\">source</span>\n * <span class=\"hljs-doctag\">@returns</span> {<span class=\"hljs-type\">Object</span>}\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">objectMerge</span>(<span class=\"hljs-params\">target, source</span>) {\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> target !== <span class=\"hljs-string\">&quot;object&quot;</span>) {\n    target = {}\n  }\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-title class_\">Array</span>.<span class=\"hljs-title function_\">isArray</span>(source)) {\n    <span class=\"hljs-keyword\">return</span> source.<span class=\"hljs-title function_\">slice</span>()\n  }\n  <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(source).<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">property</span> =&gt;</span> {\n    <span class=\"hljs-keyword\">const</span> sourceProperty = source[property]\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> sourceProperty === <span class=\"hljs-string\">&quot;object&quot;</span>) {\n      target[property] = <span class=\"hljs-title function_\">objectMerge</span>(target[property], sourceProperty)\n    } <span class=\"hljs-keyword\">else</span> {\n      target[property] = sourceProperty\n    }\n  })\n  <span class=\"hljs-keyword\">return</span> target\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,56"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

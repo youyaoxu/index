@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x679c;&#x7136;&#x65b0;&#x9c9c;&#x7535;&#x5546;&#x7cfb;&#x7edf;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,8\"><code>&#x679c;&#x7136;&#x65b0;&#x9c9c;&#x7535;&#x5546;&#x7cfb;&#x7edf;&#x662f;&#x4e00;&#x4e2a;&#x7c7b;&#x4f3c;&#x5c0f;&#x7c73;&#x5546;&#x57ce;&#x7684;B2C&#x7535;&#x5546;&#x5e73;&#x53f0;&#xff0c;&#x53ef;&#x505a;&#x6bd5;&#x4e1a;&#x8bbe;&#x8ba1;&#x53c2;&#x8003;&#x3002;\n\n&#x8bbf;&#x95ee;&#x5730;&#x5740;&#xff1a;[https://gitee.com/caochenlei/fresh-parent](https://gitee.com/caochenlei/fresh-parent)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x7f51;&#x7ad9;&#x9996;&#x9875;","children":[{"content":"<pre data-lines=\"12,17\"><code>&#x672c;&#x5730;&#x8bbf;&#x95ee;&#xff1a;`http://manager.fresh.com:9101`\n\n&#x767b;&#x5f55;&#x8d26;&#x53f7;&#xff1a;`caochenlei`\n\n&#x767b;&#x5f55;&#x5bc6;&#x7801;&#xff1a;`123456`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,17"}},{"content":"<img src=\"https://img-blog.csdnimg.cn/img_convert/14d39ceb51d2f71020023d6abf2daa9b.png\" alt>","children":[],"payload":{"tag":"img","lines":"18,19"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x7f51;&#x7ad9;&#x540e;&#x53f0;","children":[{"content":"<pre data-lines=\"23,28\"><code>&#x672c;&#x5730;&#x8bbf;&#x95ee;&#xff1a;`http://fresh.com:9102`\n\n&#x767b;&#x5f55;&#x8d26;&#x53f7;&#xff1a;`admin`\n\n&#x767b;&#x5f55;&#x5bc6;&#x7801;&#xff1a;`123456`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,28"}},{"content":"<img src=\"https://img-blog.csdnimg.cn/img_convert/e346f40239ff36b72c16ca4ba759a38c.png\" alt>","children":[],"payload":{"tag":"img","lines":"29,30"}}],"payload":{"tag":"h2","lines":"20,22"}},{"content":"&#x670d;&#x52a1;&#x76d1;&#x6d4b;","children":[{"content":"<pre data-lines=\"34,39\"><code>&#x672c;&#x5730;&#x8bbf;&#x95ee;&#xff1a;`http://dubbo.fresh.com:8090/dubbo`\n\n&#x767b;&#x5f55;&#x8d26;&#x6237;&#xff1a;`root`\n\n&#x767b;&#x5f55;&#x5bc6;&#x7801;&#xff1a;`root`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,39"}},{"content":"<img src=\"https://img-blog.csdnimg.cn/img_convert/55a2d179cb23ddb50e1816a4b4a98800.png\" alt>","children":[],"payload":{"tag":"img","lines":"40,41"}},{"content":"<pre data-lines=\"42,44\"><code>&#x767e;&#x5ea6;&#x7f51;&#x76d8;&#x7684;&#x94fe;&#x63a5;&#xff1a;https://pan.baidu.com/s/1IY7QAPlSjgMU0f-tsAJcKg  \n&#x767e;&#x5ea6;&#x7f51;&#x76d8;&#x63d0;&#x53d6;&#x7801;&#xff1a;ns1e\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,44"}}],"payload":{"tag":"h2","lines":"31,33"}},{"content":"&#x3010;1&#x3011;&#x5b89;&#x88c5;&#x8f6f;&#x4ef6;&#x670d;&#x52a1;","children":[{"content":"<pre data-lines=\"48,73\"><code>**&#x89e3;&#x538b;&#x914d;&#x7f6e;&#xff1a;** \n\n1.  &#x5c06;&#x914d;&#x5957;&#x8d44;&#x6599;&#x4e2d;&#x7684;`fresh-software.zip`&#x89e3;&#x538b;&#x5230;C&#x76d8;&#x6839;&#x8def;&#x5f84;&#x5373;&#x53ef;&#xff0c;&#x4f8b;&#x5982;&#xff1a;`C:\\fresh-software`&#x3002;\n2.  &#x5c06;&#x89e3;&#x538b;&#x5b8c;&#x6210;&#x540e;&#x7684;`sms-0.0.1\\application.properties`&#x914d;&#x7f6e;&#x4f60;&#x81ea;&#x5df1;&#x7684;&#x963f;&#x91cc;&#x4e91;&#x77ed;&#x4fe1;&#x670d;&#x52a1;&#x7684;&#x5bc6;&#x94a5;&#x3002;\n\n**&#x542f;&#x52a8;&#x987a;&#x5e8f;&#xff1a;** \n\n1.  C:\\\\fresh-software\\\\zookeeper-3.5.9\\\\bin\\\\startup.bat\n2.  C:\\\\fresh-software\\\\redis-2.8.19\\\\startup.bat\n3.  C:\\\\fresh-software\\\\solr-4.10.3\\\\bin\\\\startup.bat\n4.  C:\\\\fresh-software\\\\dubbo-2.8.4\\\\bin\\\\startup.bat\n5.  C:\\\\fresh-software\\\\cas-4.0.0\\\\bin\\\\startup.bat\n6.  C:\\\\fresh-software\\\\mongodb-3.2.10\\\\Server\\\\3.2\\\\bin\\\\startup.bat\n7.  C:\\\\fresh-software\\\\activemq-5.16.0\\\\bin\\\\activemq.bat\n8.  C:\\\\fresh-software\\\\nginx-1.14.2\\\\startup.bat\n9.  C:\\\\fresh-software\\\\sms-0.0.1\\\\startup.bat\n\n&#x3010;2&#x3011;&#x5b89;&#x88c5;&#x56fe;&#x7247;&#x670d;&#x52a1;\n---------\n\n**&#x865a;&#x62df;&#x673a;&#x6253;&#x5f00;&#xff1a;** \n\n&#x5c06;&#x914d;&#x5957;&#x8d44;&#x6599;&#x4e2d;&#x7684;`fresh-image-server`&#x4f7f;&#x7528;&#x865a;&#x62df;&#x673a;&#x6253;&#x5f00;&#x5373;&#x53ef;&#x3002;\n\n**&#x865a;&#x62df;&#x673a;&#x914d;&#x7f6e;&#xff1a;** \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"48,73"}},{"content":"<img src=\"https://img-blog.csdnimg.cn/img_convert/c665c487de9cc68ff154ac3c55ad595e.png\" alt>","children":[],"payload":{"tag":"img","lines":"74,75"}},{"content":"<pre data-lines=\"76,79\"><code>**&#x865a;&#x62df;&#x673a;&#x542f;&#x52a8;&#xff1a;** \n\n&#x76f4;&#x63a5;&#x5c06;&#x865a;&#x62df;&#x673a;&#x542f;&#x52a8;&#x5c31;&#x884c;&#xff0c;&#x4e0d;&#x7528;&#x767b;&#x5f55;&#x8d26;&#x6237;&#xff0c;&#x9ed8;&#x8ba4;&#x8d26;&#x6237;&#x548c;&#x5bc6;&#x7801;&#x5747;&#x4e3a;`itcast`&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"76,79"}}],"payload":{"tag":"h2","lines":"45,47"}},{"content":"&#x3010;3&#x3011;&#x5b89;&#x88c5;&#x6570;&#x636e;&#x670d;&#x52a1;","children":[{"content":"<pre data-lines=\"83,86\"><code>&#x5c06;&#x914d;&#x5957;&#x8d44;&#x6599;&#x4e2d;&#x7684;`&#x9879;&#x76ee;&#x6240;&#x9700;&#x6570;&#x636e;`&#x76f4;&#x63a5;&#x5bfc;&#x5165;&#x5230;&#x672c;&#x5730;mysql&#x6570;&#x636e;&#x5e93;&#x4e2d;&#x5c31;&#x884c;&#xff0c;&#x7248;&#x672c;&#x4e3a;mysql5.x&#xff0c;&#x4e0d;&#x8981;&#x4f7f;&#x7528;mysql8.x&#x3002;\n\n&#x53e6;&#x5916;&#xff0c;&#x6570;&#x636e;&#x5e93;&#x7684;&#x8d26;&#x6237;&#x548c;&#x5bc6;&#x7801;&#x5fc5;&#x987b;&#x90fd;&#x4e3a;`root`&#xff0c;&#x5426;&#x5219;&#x5728;&#x542f;&#x52a8;&#x7a0b;&#x5e8f;&#x7684;&#x65f6;&#x5019;&#x4f1a;&#x62a5;&#x9519;&#xff0c;&#x5728;&#x7528;&#x6237;&#x8ba4;&#x8bc1;&#x767b;&#x5f55;&#x7684;&#x65f6;&#x5019;&#x4f1a;&#x62a5;&#x9519;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"83,86"}}],"payload":{"tag":"h2","lines":"80,82"}},{"content":"&#x3010;3&#x3011;&#x62f7;&#x8d1d;&#x672c;&#x5730;&#x57df;&#x540d;","children":[{"content":"<pre data-lines=\"90,91\"><code>&#x5c06;&#x914d;&#x5957;&#x8d44;&#x6599;&#x4e2d;&#x7684;`&#x9879;&#x76ee;&#x6240;&#x9700;&#x57df;&#x540d;`&#x4e2d;&#x7684;&#x6587;&#x4ef6;&#x62f7;&#x8d1d;&#x5230;&#x6307;&#x5b9a;&#x76ee;&#x5f55;&#x4e2d;&#xff1a;`C:\\Windows\\System32\\drivers\\etc`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"90,91"}}],"payload":{"tag":"h2","lines":"87,89"}},{"content":"&#x3010;4&#x3011;&#x62f7;&#x8d1d;&#x672c;&#x5730;&#x4f9d;&#x8d56;","children":[{"content":"<pre data-lines=\"95,98\"><code>&#x5c06;&#x914d;&#x5957;&#x8d44;&#x6599;&#x4e2d;&#x7684;`&#x9879;&#x76ee;&#x6240;&#x9700;&#x4f9d;&#x8d56;`&#x4e2d;&#x7684;&#x4f9d;&#x8d56;&#x89e3;&#x538b;&#x5230;&#x6307;&#x5b9a;&#x76ee;&#x5f55;&#x4e2d;&#xff1a;`C:\\Users\\&#x7528;&#x6237;&#x540d;`\n\nEmail&#xff1a;[774908833@qq.com](mailto:774908833@qq.com)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"95,98"}}],"payload":{"tag":"h2","lines":"92,94"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

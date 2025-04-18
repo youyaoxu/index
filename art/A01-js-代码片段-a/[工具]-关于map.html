@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5173;&#x4e8e;map","children":[{"content":"&#x5165;&#x95e8;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"4,9\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> obj ={<span class=\"hljs-attr\">name</span>:<span class=\"hljs-string\">&quot;&#x5c0f;&#x5982;&quot;</span>,<span class=\"hljs-attr\">age</span>:<span class=\"hljs-number\">9</span>}\n<span class=\"hljs-keyword\">let</span> map = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Map</span>()\nmap.<span class=\"hljs-title function_\">set</span>(obj,<span class=\"hljs-string\">&quot;111&quot;</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,9"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"map&#x5e38;&#x7528;&#x8bed;&#x6cd5;","children":[{"content":"<pre data-lines=\"12,31\"><code class=\"language-js\"><span class=\"hljs-comment\">//&#x521d;&#x59cb;&#x5316;`Map`&#x9700;&#x8981;&#x4e00;&#x4e2a;&#x4e8c;&#x7ef4;&#x6570;&#x7ec4;(&#x8bf7;&#x770b; Map &#x6570;&#x636e;&#x7ed3;&#x6784;)&#xff0c;&#x6216;&#x8005;&#x76f4;&#x63a5;&#x521d;&#x59cb;&#x5316;&#x4e00;&#x4e2a;&#x7a7a;`Map` </span>\n<span class=\"hljs-keyword\">let</span> map = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Map</span>();\n\n<span class=\"hljs-comment\">//&#x6dfb;&#x52a0;key&#x548c;value&#x503c;</span>\nmap.<span class=\"hljs-title function_\">set</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>,<span class=\"hljs-string\">&apos;&#x5973;&apos;</span>)\nmap.<span class=\"hljs-title function_\">set</span>(<span class=\"hljs-string\">&apos;liuQi&apos;</span>,<span class=\"hljs-string\">&apos;&#x7537;&apos;</span>)\n\n<span class=\"hljs-comment\">//&#x662f;&#x5426;&#x5b58;&#x5728;key&#xff0c;&#x5b58;&#x5728;&#x8fd4;&#x56de;true,&#x53cd;&#x4e4b;&#x4e3a;false</span>\nmap.<span class=\"hljs-title function_\">has</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>) <span class=\"hljs-comment\">//true</span>\nmap.<span class=\"hljs-title function_\">has</span>(<span class=\"hljs-string\">&apos;amy&apos;</span>) <span class=\"hljs-comment\">//false</span>\n\n<span class=\"hljs-comment\">//&#x6839;&#x636e;key&#x83b7;&#x53d6;value</span>\nmap.<span class=\"hljs-title function_\">get</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>) <span class=\"hljs-comment\">//&#x5973;</span>\n\n<span class=\"hljs-comment\">//&#x5220;&#x9664; key&#x4e3a;Amy&#x7684;value</span>\nmap.<span class=\"hljs-title function_\">delete</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>)\nmap.<span class=\"hljs-title function_\">get</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>) <span class=\"hljs-comment\">//undefined  &#x5220;&#x9664;&#x6210;&#x529f;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,31"}}],"payload":{"tag":"h3","lines":"10,11"}},{"content":"map&#x7684;key&#x548c;value&#x5bf9;&#x5e94;&#x95ee;&#x9898;","children":[{"content":"<pre data-lines=\"34,40\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> map =<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Map</span>\nmap.<span class=\"hljs-title function_\">set</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>,<span class=\"hljs-string\">&quot;&#x5973;&quot;</span>)\nmap.<span class=\"hljs-title function_\">set</span>(<span class=\"hljs-string\">&apos;Amy&apos;</span>,<span class=\"hljs-string\">&quot;&#x7537;&quot;</span>)\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(map) \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,40"}}],"payload":{"tag":"h3","lines":"32,33"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

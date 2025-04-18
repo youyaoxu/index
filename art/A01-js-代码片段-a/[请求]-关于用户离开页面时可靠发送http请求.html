@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5173;&#x4e8e;&#x7528;&#x6237;&#x79bb;&#x5f00;&#x9875;&#x9762;&#x65f6;&#x53ef;&#x9760;&#x53d1;&#x9001;http&#x8bf7;&#x6c42;","children":[{"content":"&#x5b9e;&#x73b0;&#x65b9;&#x5f0f;","children":[{"content":"<pre data-lines=\"6,20\"><code class=\"language-js\"><span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">getElementById</span>(<span class=\"hljs-string\">&apos;link&apos;</span>).<span class=\"hljs-title function_\">addEventListener</span>(<span class=\"hljs-string\">&apos;click&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">e</span>) =&gt;</span> {\n  <span class=\"hljs-title function_\">fetch</span>(<span class=\"hljs-string\">&quot;/log&quot;</span>, {\n    <span class=\"hljs-attr\">method</span>: <span class=\"hljs-string\">&quot;POST&quot;</span>,\n    <span class=\"hljs-attr\">headers</span>: {\n      <span class=\"hljs-string\">&quot;Content-Type&quot;</span>: <span class=\"hljs-string\">&quot;application/json&quot;</span>\n    }, \n    <span class=\"hljs-attr\">body</span>: <span class=\"hljs-title class_\">JSON</span>.<span class=\"hljs-title function_\">stringify</span>({\n      <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">&apos;FedJavaScript&apos;</span>\n    }),\n    <span class=\"hljs-attr\">keepalive</span>: <span class=\"hljs-literal\">true</span>\n  });\n});\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,20"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x53c2;&#x8003;","children":[],"payload":{"tag":"h2","lines":"21,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

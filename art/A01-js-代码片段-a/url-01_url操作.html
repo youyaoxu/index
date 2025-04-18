@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"url&#x62fc;&#x63a5;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"2,17\"><code class=\"language-js\"><span class=\"hljs-comment\">// url&#x62fc;&#x63a5;&#x53c2;&#x6570;</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">joinUrl</span>(<span class=\"hljs-params\">url, data</span>) {\n    <span class=\"hljs-keyword\">if</span> (!data || <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(data).<span class=\"hljs-property\">length</span> &lt; <span class=\"hljs-number\">1</span>) {\n        <span class=\"hljs-keyword\">return</span> url\n    }\n    url = url + <span class=\"hljs-string\">&apos;?&apos;</span>\n    <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">keys</span>(data).<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">v</span> =&gt;</span> {\n        <span class=\"hljs-keyword\">if</span> (data[v] != <span class=\"hljs-string\">&apos;&apos;</span> &amp;&amp; data[v] != <span class=\"hljs-literal\">undefined</span> &amp;&amp; data[v] != <span class=\"hljs-literal\">null</span>) {\n            url += <span class=\"hljs-string\">`<span class=\"hljs-subst\">&#x24;{v}</span>=<span class=\"hljs-subst\">&#x24;{data[v]}</span>&amp;`</span>\n        }\n    })\n    <span class=\"hljs-keyword\">return</span> url.<span class=\"hljs-title function_\">substr</span>(<span class=\"hljs-number\">0</span>, url.<span class=\"hljs-property\">length</span> - <span class=\"hljs-number\">1</span>)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,17"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"&#x6821;&#x9a8c;&#x4ee5;http&#x6216;&#x8005;https&#x5f00;&#x5934;&#x7684;url","children":[{"content":"<pre data-lines=\"19,26\"><code class=\"language-js\"><span class=\"hljs-comment\">//&#x6821;&#x9a8c; &#x4ee5; http &#x6216;&#x8005; https &#x5f00;&#x5934;&#x7684;url</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">verifyUrl</span> = url =&gt; {\n    <span class=\"hljs-keyword\">let</span> reUrl = <span class=\"hljs-regexp\">/(http|https):\\/\\/([\\w.]+\\/?)\\S*/</span>\n    <span class=\"hljs-keyword\">return</span> reUrl.<span class=\"hljs-title function_\">test</span>(url) <span class=\"hljs-comment\">// true /false</span>\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,26"}}],"payload":{"tag":"h2","lines":"18,19"}},{"content":"&#x83b7;&#x53d6;url&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"28,40\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getSearch</span>(<span class=\"hljs-params\"></span>) {\n    <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">location</span>.<span class=\"hljs-property\">search</span>) <span class=\"hljs-keyword\">return</span> {}\n    <span class=\"hljs-keyword\">let</span> search = <span class=\"hljs-variable language_\">window</span>.<span class=\"hljs-property\">location</span>.<span class=\"hljs-property\">search</span>.<span class=\"hljs-title function_\">slice</span>(<span class=\"hljs-number\">1</span>).<span class=\"hljs-title function_\">split</span>(<span class=\"hljs-string\">&apos;&amp;&apos;</span>)\n    <span class=\"hljs-keyword\">let</span> params = {}\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; search.<span class=\"hljs-property\">length</span>; i++) {\n        <span class=\"hljs-keyword\">let</span> param = search[i].<span class=\"hljs-title function_\">split</span>(<span class=\"hljs-string\">&apos;=&apos;</span>)\n        params[param[<span class=\"hljs-number\">0</span>]] = <span class=\"hljs-built_in\">decodeURIComponent</span>(param[<span class=\"hljs-number\">1</span>])\n    }\n    <span class=\"hljs-keyword\">return</span> params\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,40"}}],"payload":{"tag":"h2","lines":"27,28"}},{"content":"&#x83b7;&#x53d6;url&#x5b57;&#x7b26;&#x4e32;&#x65b9;&#x6cd5;&#x4e8c;","children":[{"content":"<pre data-lines=\"42,56\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> qs <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;query-string&apos;</span>\n<span class=\"hljs-comment\">/**\n * <span class=\"hljs-doctag\">@description</span>: &#x4f20;&#x5165;url&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x89e3;&#x6790;&#xff1f;&#x540e;&#x9762;&#x7684;query&#x53c2;&#x6570;\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">type</span>} <span class=\"hljs-variable\">string</span>\n * <span class=\"hljs-doctag\">@return</span>: object\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">getQueryVariable</span>(<span class=\"hljs-params\">url, variable</span>) {\n  <span class=\"hljs-keyword\">const</span> index = url.<span class=\"hljs-title function_\">lastIndexOf</span>(<span class=\"hljs-string\">&apos;?&apos;</span>)\n  <span class=\"hljs-keyword\">const</span> obj_index = url.<span class=\"hljs-title function_\">substring</span>(index + <span class=\"hljs-number\">1</span>)\n  <span class=\"hljs-keyword\">const</span> obj = qs.<span class=\"hljs-title function_\">parse</span>(obj_index)\n  <span class=\"hljs-keyword\">return</span> obj\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,56"}}],"payload":{"tag":"h2","lines":"41,42"}}]},{})</script>
+</body>
+</html>

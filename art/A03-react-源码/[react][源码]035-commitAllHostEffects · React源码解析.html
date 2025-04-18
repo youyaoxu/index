@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"commitAllHostEffects","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"4,5\"><code>&#x8fd9;&#x8fb9;&#x5c31;&#x662f;&#x5bf9;&#x4f5c;&#x7528;&#x4e8e;`HostComponent`&#x4e0a;&#x7684;&#x6240;&#x6709;`side effect`&#x8fdb;&#x884c;`commit`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,5"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"commitResetTextContent","children":[{"content":"<pre data-lines=\"8,9\"><code>&#x5c31;&#x662f;&#x628a;&#x8282;&#x70b9;&#x7684;&#x6587;&#x5b57;&#x5185;&#x5bb9;&#x8bbe;&#x7f6e;&#x4e3a;&#x7a7a;&#x5b57;&#x7b26;&#x4e32;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,9"}},{"content":"<pre data-lines=\"10,39\"><code data-lines=\"10,39\"><span class=\"hljs-keyword\">function</span> commitResetTextContent(current: Fiber) {\n  <span class=\"hljs-keyword\">if</span> (!supportsMutation) {\n    <span class=\"hljs-keyword\">return</span>\n  }\n  resetTextContent(current.stateNode)\n}\n\nexport <span class=\"hljs-keyword\">function</span> resetTextContent(domElement: Instance): void {\n  setTextContent(domElement, <span class=\"hljs-string\">&apos;&apos;</span>)\n}\n\n<span class=\"hljs-keyword\">let</span> setTextContent = <span class=\"hljs-keyword\">function</span>(node: Element, text:<span class=\"hljs-built_in\"> string</span>): void {\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-type\">text</span>) {\n    <span class=\"hljs-keyword\">let</span> firstChild = <span class=\"hljs-type\">node</span>.firstChild\n\n    <span class=\"hljs-keyword\">if</span> (\n      firstChild &amp;&amp;\n      firstChild === <span class=\"hljs-type\">node</span>.lastChild &amp;&amp;\n      firstChild.nodeType === TEXT_NODE\n    ) {\n      firstChild.nodeValue = <span class=\"hljs-type\">text</span>\n      <span class=\"hljs-keyword\">return</span>\n    }\n  }\n  <span class=\"hljs-type\">node</span>.textContent = <span class=\"hljs-type\">text</span>\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,39"}}],"payload":{"tag":"h3","lines":"6,7"}},{"content":"commitDetachRef","children":[{"content":"<pre data-lines=\"42,43\"><code>&#x628a;`ref`&#x7f6e;&#x7a7a;&#xff0c;&#x56e0;&#x4e3a;&#x8fd9;&#x4e2a;&#x7ec4;&#x4ef6;&#x540e;&#x7eed;&#x9700;&#x8981;&#x8bbe;&#x7f6e;`ref`&#xff0c;&#x6240;&#x4ee5;&#x4e4b;&#x524d;`ref`&#x4e0a;&#x7684;&#x503c;&#x9700;&#x8981;&#x5148;&#x6e05;&#x7a7a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,43"}},{"content":"<pre data-lines=\"44,57\"><code data-lines=\"44,57\"><span class=\"hljs-function\">function <span class=\"hljs-title\">commitDetachRef</span>(<span class=\"hljs-params\">current: Fiber</span>)</span> {\n  <span class=\"hljs-keyword\">const</span> currentRef = current.<span class=\"hljs-function\"><span class=\"hljs-keyword\">ref</span>\n  <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">currentRef !== <span class=\"hljs-literal\">null</span></span>)</span> {\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> currentRef === <span class=\"hljs-string\">&apos;function&apos;</span>) {\n      currentRef(<span class=\"hljs-literal\">null</span>)\n    } <span class=\"hljs-keyword\">else</span> {\n      currentRef.current = <span class=\"hljs-literal\">null</span>\n    }\n  }\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,57"}}],"payload":{"tag":"h3","lines":"40,41"}},{"content":"placement &amp; update &amp; deletion","children":[{"content":"<pre data-lines=\"60,63\"><code>*   [`commitPlacement`](https://react.jokcy.me/book/commit-phase/host-effects/CommitPlacement.html)\n*   [`commitWork`](https://react.jokcy.me/book/commit-phase/host-effects/CommitWork.html)\n*   [`commitDeletion`](https://react.jokcy.me/book/commit-phase/host-effects/CommitDeletion.html)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"60,63"}},{"content":"<pre data-lines=\"64,114\"><code data-lines=\"64,114\"><span class=\"hljs-function\">function <span class=\"hljs-title\">commitAllHostEffects</span>()</span> {\n  <span class=\"hljs-keyword\">while</span> (nextEffect !== <span class=\"hljs-literal\">null</span>) {\n    recordEffect()\n\n    <span class=\"hljs-keyword\">const</span> effectTag = nextEffect.<span class=\"hljs-function\">effectTag\n\n    <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">effectTag &amp; ContentReset</span>)</span> {\n      commitResetTextContent(nextEffect)\n    }\n\n    <span class=\"hljs-keyword\">if</span> (effectTag &amp; Ref) {\n      <span class=\"hljs-keyword\">const</span> current = nextEffect.<span class=\"hljs-function\">alternate\n      <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">current !== <span class=\"hljs-literal\">null</span></span>)</span> {\n        commitDetachRef(current)\n      }\n    }\n\n    <span class=\"hljs-keyword\">let</span> primaryEffectTag = effectTag &amp; (Placement | Update | Deletion)\n    <span class=\"hljs-keyword\">switch</span> (primaryEffectTag) {\n      <span class=\"hljs-keyword\">case</span> Placement: {\n        commitPlacement(nextEffect)\n        nextEffect.effectTag &amp;= ~Placement\n        <span class=\"hljs-keyword\">break</span>\n      }\n      <span class=\"hljs-keyword\">case</span> PlacementAndUpdate: {\n        \n        commitPlacement(nextEffect)\n        nextEffect.effectTag &amp;= ~Placement\n\n        \n        <span class=\"hljs-keyword\">const</span> current = nextEffect.<span class=\"hljs-function\">alternate\n        <span class=\"hljs-title\">commitWork</span>(<span class=\"hljs-params\">current, nextEffect</span>)\n        <span class=\"hljs-keyword\">break</span>\n      }\n      <span class=\"hljs-keyword\">case</span> Update:</span> {\n        <span class=\"hljs-keyword\">const</span> current = nextEffect.<span class=\"hljs-function\">alternate\n        <span class=\"hljs-title\">commitWork</span>(<span class=\"hljs-params\">current, nextEffect</span>)\n        <span class=\"hljs-keyword\">break</span>\n      }\n      <span class=\"hljs-keyword\">case</span> Deletion:</span> {\n        commitDeletion(nextEffect)\n        <span class=\"hljs-keyword\">break</span>\n      }\n    }\n    nextEffect = nextEffect.nextEffect\n  }\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"64,114"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"115,116"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"119,120"}}],"payload":{"tag":"h3","lines":"58,59"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"#%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6\">#</a> &#x58f0;&#x660e;&#x6587;&#x4ef6;","children":[],"payload":{"tag":"h2","lines":"0,2"}},{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,25\"><code>&#x5f53;&#x4f7f;&#x7528;&#x7b2c;&#x4e09;&#x65b9;&#x5e93;&#x65f6;&#xff0c;&#x6211;&#x4eec;&#x9700;&#x8981;&#x5f15;&#x7528;&#x5b83;&#x7684;&#x58f0;&#x660e;&#x6587;&#x4ef6;&#xff0c;&#x624d;&#x80fd;&#x83b7;&#x5f97;&#x5bf9;&#x5e94;&#x7684;&#x4ee3;&#x7801;&#x8865;&#x5168;&#x3001;&#x63a5;&#x53e3;&#x63d0;&#x793a;&#x7b49;&#x529f;&#x80fd;\n\n&#x4ec0;&#x4e48;&#x662f;&#x58f0;&#x660e;&#x8bed;&#x53e5;\n\n&#x5047;&#x5982;&#x6211;&#x4eec;&#x60f3;&#x4f7f;&#x7528;&#x7b2c;&#x4e09;&#x65b9;&#x5e93; jQuery&#xff0c;&#x4e00;&#x79cd;&#x5e38;&#x89c1;&#x7684;&#x65b9;&#x5f0f;&#x662f;&#x5728; html &#x4e2d;&#x901a;&#x8fc7; `&lt;script&gt;` &#x6807;&#x7b7e;&#x5f15;&#x5165; `jQuery`&#xff0c;&#x7136;&#x540e;&#x5c31;&#x53ef;&#x4ee5;&#x4f7f;&#x7528;&#x5168;&#x5c40;&#x53d8;&#x91cf; `&#x24;` &#x6216; `jQuery` &#x4e86;&#x3002;\n\n&#x4f46;&#x662f;&#x5728; ts &#x4e2d;&#xff0c;&#x7f16;&#x8bd1;&#x5668;&#x5e76;&#x4e0d;&#x77e5;&#x9053; &#x24; &#x6216; jQuery &#x662f;&#x4ec0;&#x4e48;&#x4e1c;&#x897f;\n\n&#x8fd9;&#x65f6;&#xff0c;&#x6211;&#x4eec;&#x9700;&#x8981;&#x4f7f;&#x7528; declare var &#x6765;&#x5b9a;&#x4e49;&#x5b83;&#x7684;&#x7c7b;&#x578b;\n\ndeclare var &#x5e76;&#x6ca1;&#x6709;&#x771f;&#x7684;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x53d8;&#x91cf;&#xff0c;&#x53ea;&#x662f;&#x5b9a;&#x4e49;&#x4e86;&#x5168;&#x5c40;&#x53d8;&#x91cf; jQuery &#x7684;&#x7c7b;&#x578b;&#xff0c;&#x4ec5;&#x4ec5;&#x4f1a;&#x7528;&#x4e8e;&#x7f16;&#x8bd1;&#x65f6;&#x7684;&#x68c0;&#x67e5;&#xff0c;&#x5728;&#x7f16;&#x8bd1;&#x7ed3;&#x679c;&#x4e2d;&#x4f1a;&#x88ab;&#x5220;&#x9664;&#x3002;&#x5b83;&#x7f16;&#x8bd1;&#x7ed3;&#x679c;&#x662f;&#xff1a;\n\n&#x4e00;&#x822c;&#x58f0;&#x660e;&#x6587;&#x4ef6;&#x90fd;&#x4f1a;&#x5355;&#x72ec;&#x5199;&#x6210;&#x4e00;&#x4e2a; `xxx.d.ts` &#x6587;&#x4ef6;\n\n&#x521b;&#x5efa; `01_jQuery.d.ts`, &#x5c06;&#x58f0;&#x660e;&#x8bed;&#x53e5;&#x5b9a;&#x4e49;&#x5176;&#x4e2d;, TS &#x7f16;&#x8bd1;&#x5668;&#x4f1a;&#x626b;&#x63cf;&#x5e76;&#x52a0;&#x8f7d;&#x9879;&#x76ee;&#x4e2d;&#x6240;&#x6709;&#x7684; TS &#x58f0;&#x660e;&#x6587;&#x4ef6;\n\n&#x5f88;&#x591a;&#x7684;&#x7b2c;&#x4e09;&#x65b9;&#x5e93;&#x90fd;&#x5b9a;&#x4e49;&#x4e86;&#x5bf9;&#x5e94;&#x7684;&#x58f0;&#x660e;&#x6587;&#x4ef6;&#x5e93;, &#x5e93;&#x6587;&#x4ef6;&#x540d;&#x4e00;&#x822c;&#x4e3a; `@types/xxx`, &#x53ef;&#x4ee5;&#x5728; `https://www.npmjs.com/package/package` &#x8fdb;&#x884c;&#x641c;&#x7d22;\n\n&#x6709;&#x7684;&#x7b2c;&#x4e09;&#x5e93;&#x5728;&#x4e0b;&#x8f7d;&#x65f6;&#x5c31;&#x4f1a;&#x81ea;&#x52a8;&#x4e0b;&#x8f7d;&#x5bf9;&#x5e94;&#x7684;&#x58f0;&#x660e;&#x6587;&#x4ef6;&#x5e93;(&#x6bd4;&#x5982;: webpack),&#x6709;&#x7684;&#x53ef;&#x80fd;&#x9700;&#x8981;&#x5355;&#x72ec;&#x4e0b;&#x8f7d;(&#x6bd4;&#x5982; jQuery/react)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,25"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"<a href=\"#%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1\">#</a> &#x5185;&#x7f6e;&#x5bf9;&#x8c61;","children":[{"content":"<pre data-lines=\"29,40\"><code>JavaScript &#x4e2d;&#x6709;&#x5f88;&#x591a;&#x5185;&#x7f6e;&#x5bf9;&#x8c61;&#xff0c;&#x5b83;&#x4eec;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x5728; TypeScript &#x4e2d;&#x5f53;&#x505a;&#x5b9a;&#x4e49;&#x597d;&#x4e86;&#x7684;&#x7c7b;&#x578b;&#x3002;\n\n&#x5185;&#x7f6e;&#x5bf9;&#x8c61;&#x662f;&#x6307;&#x6839;&#x636e;&#x6807;&#x51c6;&#x5728;&#x5168;&#x5c40;&#x4f5c;&#x7528;&#x57df;&#xff08;Global&#xff09;&#x4e0a;&#x5b58;&#x5728;&#x7684;&#x5bf9;&#x8c61;&#x3002;&#x8fd9;&#x91cc;&#x7684;&#x6807;&#x51c6;&#x662f;&#x6307; ECMAScript &#x548c;&#x5176;&#x4ed6;&#x73af;&#x5883;&#xff08;&#x6bd4;&#x5982; DOM&#xff09;&#x7684;&#x6807;&#x51c6;&#x3002;\n\n1.  ECMAScript &#x7684;&#x5185;&#x7f6e;&#x5bf9;&#x8c61;\n\n&gt; Boolean Number String Date RegExp Error\n\n2.  BOM &#x548c; DOM &#x7684;&#x5185;&#x7f6e;&#x5bf9;&#x8c61;\n\n&gt; Window Document HTMLElement DocumentFragment Event NodeList\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,40"}}],"payload":{"tag":"h2","lines":"26,28"}}]},{})</script>
+</body>
+</html>

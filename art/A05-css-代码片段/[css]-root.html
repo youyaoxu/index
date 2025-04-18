@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[css]-root","children":[{"content":"<pre data-lines=\"2,6\"><code data-lines=\"2,6\">&#x6982;&#x8ff0;\n<span class=\"hljs-meta\">:root &#x8fd9;&#x4e2a; CSS &#x4f2a;&#x7c7b;&#x5339;&#x914d;&#x6587;&#x6863;&#x6811;&#x7684;&#x6839;&#x5143;&#x7d20;&#x3002;&#x5bf9;&#x4e8e; HTML &#x6765;&#x8bf4;&#xff0c;:root</span> &#x8868;&#x793a; &lt;html&gt; &#x5143;&#x7d20;&#xff0c;&#x9664;&#x4e86;&#x4f18;&#x5148;&#x7ea7;&#x66f4;&#x9ad8;&#x4e4b;&#x5916;&#xff0c;&#x4e0e; html &#x9009;&#x62e9;&#x5668;&#x76f8;&#x540c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,6"}},{"content":"<pre data-lines=\"7,13\"><code class=\"language-css\"><span class=\"hljs-selector-pseudo\">:root</span> {\n  <span class=\"hljs-attr\">--main-color</span>: hotpink;\n  <span class=\"hljs-attr\">--pane-padding</span>: <span class=\"hljs-number\">5px</span> <span class=\"hljs-number\">42px</span>;\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,13"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

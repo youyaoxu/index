@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x4e0b;&#x8f7d;3","children":[{"content":"&#x8c03;&#x7528;&#x540e;&#x7aef;&#x63a5;&#x53e3;&#x5bfc;&#x51fa;&#x6587;&#x4ef6;","children":[{"content":"1.window.open(url)","children":[{"content":"<pre data-lines=\"4,8\"><code data-lines=\"4,8\">&#x4f1a;&#x6253;&#x5f00;&#x4e00;&#x4e2a;&#x65b0;&#x7a97;&#x53e3;&#xff0c;&#x5f00;&#x59cb;&#x4e0b;&#x8f7d;&#x540e;&#x4f1a;&#x81ea;&#x52a8;&#x5173;&#x95ed;&#x65b0;&#x7a97;&#x53e3;&#x3002;Safair &#x4e0b;&#x8f7d;&#x540e;&#x6ca1;&#x6709;&#x5173;&#x95ed;&#x65b0;&#x7a97;&#x53e3;&#x3002;\nChrome&#x3001;IE&#x3001;Safair&#x652f;&#x6301;&#xff0c;&#x8c8c;&#x4f3c;&#x706b;&#x72d0;&#x4e0d;&#x652f;&#x6301;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,8"}}],"payload":{"tag":"h3","lines":"3,4"}},{"content":"2.window.location=url","children":[{"content":"<pre data-lines=\"12,15\"><code data-lines=\"12,15\">&#x5728;&#x5f53;&#x524d;&#x7a97;&#x53e3;&#x4e0b;&#x8f7d;,Chrome&#x3001;Safair&#x652f;&#x6301;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,15"}}],"payload":{"tag":"h3","lines":"11,12"}},{"content":"3.iframe","children":[{"content":"<pre data-lines=\"19,31\"><code class=\"language-js\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">downloadByIframe</span> (<span class=\"hljs-params\">url</span>) {\n    <span class=\"hljs-keyword\">try</span> {\n        <span class=\"hljs-keyword\">const</span> iframe = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">createElement</span>(<span class=\"hljs-string\">&apos;iframe&apos;</span>);\n        iframe.<span class=\"hljs-property\">src</span> = url;\n        iframe.<span class=\"hljs-property\">style</span>.<span class=\"hljs-property\">display</span> = <span class=\"hljs-string\">&apos;none&apos;</span>;\n        <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-title function_\">appendChild</span>(iframe);\n    } <span class=\"hljs-keyword\">catch</span> (e) {\n        \n    }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,31"}},{"content":"<pre data-lines=\"32,35\"><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onclick</span>=<span class=\"hljs-string\">&quot;downloadByIframe(url)&quot;</span>&gt;</span>&#x4e0b;&#x8f7d;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,35"}}],"payload":{"tag":"h3","lines":"18,19"}},{"content":"a&#x6807;&#x7b7e;&#x4e0b;&#x8f7d;","children":[{"content":"<pre data-lines=\"37,52\"><code class=\"language-js\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">downloadByAElement</span> (<span class=\"hljs-params\">url, fileName</span>) {\n    <span class=\"hljs-keyword\">try</span> {\n        <span class=\"hljs-keyword\">const</span> element = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">createElement</span>(<span class=\"hljs-string\">&apos;a&apos;</span>);\n        element.<span class=\"hljs-property\">href</span> = url;\n        element.<span class=\"hljs-property\">download</span> = fileName;\n        <span class=\"hljs-keyword\">const</span> a = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-title function_\">appendChild</span>(element);\n        a.<span class=\"hljs-title function_\">click</span>();\n        <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">body</span>.<span class=\"hljs-title function_\">removeChild</span>(element);\n    } <span class=\"hljs-keyword\">catch</span> (e) {\n        \n    }\n}\n<span class=\"hljs-title function_\">downloadByAElement</span> (<span class=\"hljs-string\">&apos;https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/extension/0.3.9/package.crx~tplv-t2oaga2asx-image.image&apos;</span>, <span class=\"hljs-string\">&apos;test&apos;</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,52"}}],"payload":{"tag":"h3","lines":"36,37"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x524d;&#x7aef;&#x76f4;&#x63a5;&#x5bfc;&#x51fa;&#x6587;&#x4ef6;&#x5230;&#x672c;&#x5730;","children":[{"content":"<pre data-lines=\"55,58\"><code data-lines=\"55,58\"><span class=\"hljs-attribute\">TODO</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,58"}}],"payload":{"tag":"h2","lines":"53,54"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

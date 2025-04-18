@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"MessageBox&#x4e2d;message&#x663e;&#x793a;&#x6587;&#x6848;&#x5e76;&#x53ef;&#x4ee5;&#x8df3;&#x8f6c;","children":[{"content":"<pre data-lines=\"4,33\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x663e;&#x793a;&#x5bfc;&#x51fa;&#x63d0;&#x793a;</span>\n    <span class=\"hljs-title function_\">openExportAlert</span>(<span class=\"hljs-params\"></span>){\n      <span class=\"hljs-keyword\">const</span> h=<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">&#x24;createElement</span>\n      <span class=\"hljs-keyword\">let</span> message=<span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;p&apos;</span>, <span class=\"hljs-literal\">undefined</span>, [\n        <span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;span&apos;</span>, <span class=\"hljs-literal\">undefined</span>, <span class=\"hljs-string\">&apos;&#x60a8;&#x7684;&#x5bfc;&#x51fa;&#x8bf7;&#x6c42;&#x5df2;&#x5728;&#x961f;&#x5217;&#x4e2d;&apos;</span>),\n        <span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;br&apos;</span>, <span class=\"hljs-literal\">undefined</span>, <span class=\"hljs-literal\">undefined</span>),\n        <span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;span&apos;</span>, <span class=\"hljs-literal\">undefined</span>, <span class=\"hljs-string\">&apos;&#x60a8;&#x53ef;&#x4ee5;&#x5728;&apos;</span>),\n        <span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;span&apos;</span>, {\n          <span class=\"hljs-attr\">style</span>: <span class=\"hljs-string\">&apos;color: #4CBAA2;cursor:pointer;margin:0 3px;&apos;</span> ,\n          <span class=\"hljs-attr\">on</span>: {\n            <span class=\"hljs-attr\">click</span>: <span class=\"hljs-function\">() =&gt;</span> {\n              <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">toExportList</span>()\n            }\n          }}, <span class=\"hljs-string\">&apos;&#x7cfb;&#x7edf;&#x8bbe;&#x7f6e;-&#x5bfc;&#x51fa;&#x8bb0;&#x5f55;&apos;</span>),\n        <span class=\"hljs-title function_\">h</span>(<span class=\"hljs-string\">&apos;span&apos;</span>, <span class=\"hljs-literal\">undefined</span>, <span class=\"hljs-string\">&apos;&#x9875;&#x9762;&#x67e5;&#x770b;&#x8fdb;&#x5ea6;&#x53ca;&#x4e0b;&#x8f7d;&apos;</span>),\n      ])\n      <span class=\"hljs-variable language_\">this</span>.&#x24;alert(message, <span class=\"hljs-string\">&apos;&#x6570;&#x636e;&#x5bfc;&#x51fa;&apos;</span>, {\n        <span class=\"hljs-attr\">confirmButtonText</span>: <span class=\"hljs-string\">&apos;&#x786e;&#x5b9a;&apos;</span>,\n        <span class=\"hljs-attr\">dangerouslyUseHTMLString</span>:<span class=\"hljs-literal\">true</span>,\n        <span class=\"hljs-attr\">callback</span>: <span class=\"hljs-function\"><span class=\"hljs-params\">action</span> =&gt;</span> {}\n      })\n    },\n    <span class=\"hljs-comment\">// &#x8df3;&#x8f6c;&#x5230;&#x6587;&#x4ef6;&#x5bfc;&#x51fa;&#x9875;&#x9762;</span>\n    <span class=\"hljs-title function_\">toExportList</span>(<span class=\"hljs-params\"></span>){\n      <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&quot;-toExportList-&quot;</span>)\n      <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">&#x24;router</span>.<span class=\"hljs-title function_\">push</span>({<span class=\"hljs-attr\">path</span>:<span class=\"hljs-string\">&apos;settingMenu/system/derived&apos;</span>})\n    },\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,33"}}],"payload":{"tag":"h3","lines":"0,1"}},{})</script>
+</body>
+</html>

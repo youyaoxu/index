@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"01_es6&#x73af;&#x5883;&#x642d;&#x5efa;","children":[{"content":"&#x521b;&#x5efa;&#x521d;&#x59cb;&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"3,12\"><code data-lines=\"3,12\"><span class=\"hljs-built_in\">mkdir</span> src\n<span class=\"hljs-built_in\">mkdir</span> dist\n<span class=\"hljs-built_in\">cd</span>.&gt;index.html\n<span class=\"hljs-built_in\">cd</span>.&gt;gitignore\n<span class=\"hljs-built_in\">cd</span>.&gt;README.<span class=\"hljs-built_in\">md</span>\n<span class=\"hljs-built_in\">cd</span>.&gt;.babelrc\nnpm init -y\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,12"}}],"payload":{"tag":"h4","lines":"2,3"}},{"content":"&#x9879;&#x76ee;&#x4f9d;&#x8d56;&#x7684;babel","children":[{"content":"<pre data-lines=\"14,18\"><code data-lines=\"14,18\">npm <span class=\"hljs-selector-tag\">i</span> -<span class=\"hljs-selector-tag\">g</span> babel-cli\nnpm <span class=\"hljs-selector-tag\">i</span> babel-cli babel-preset-es2015 <span class=\"hljs-attr\">--save-dev</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,18"}},{"content":"<pre data-lines=\"18,21\"><code data-lines=\"18,21\"><span class=\"hljs-strong\">**&#x7f16;&#x8f91;.babelrc&#x6587;&#x4ef6;**</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,21"}},{"content":"<pre data-lines=\"21,27\"><code data-lines=\"21,27\">{\n  <span class=\"hljs-string\">&quot;presets&quot;</span>:[<span class=\"hljs-string\">&quot;es2015&quot;</span>],\n  <span class=\"hljs-string\">&quot;plugins&quot;</span>:[]\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,27"}}],"payload":{"tag":"h4","lines":"13,14"}},{"content":"&#x7f16;&#x8f91;package.json&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"29,34\"><code data-lines=\"29,34\">&quot;script&quot;:{\n  &quot;<span class=\"hljs-keyword\">build</span><span class=\"hljs-string\">&quot;:&quot;</span>babel src/<span class=\"hljs-keyword\">index</span>.js -o dist/<span class=\"hljs-keyword\">index</span>.js<span class=\"hljs-string\">&quot;\n}\n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"29,34"}}],"payload":{"tag":"h4","lines":"28,29"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x7b80;&#x5355;&#x4ecb;&#x7ecd;","children":[{"content":"node&#x7b80;&#x4ecb;","children":[{"content":"<pre data-lines=\"2,5\"><code>&#x5927;&#x91cf;&#x7684;&#x5e93;\nnodejs&#x5e94;&#x7528;&#x7a0b;&#x5e8f;&#x7684;&#x793a;&#x4f8b;\nnodejs&#x6846;&#x67b6;&#x548c;&#x5de5;&#x5177;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,5"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"nodejs&#x7b80;&#x53f2;","children":[{"content":"<pre data-lines=\"6,9\"><code>&#x4e00;&#x70b9;&#x5386;&#x53f2;\n\ntodo:nvm\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,9"}}],"payload":{"tag":"h2","lines":"5,6"}},{"content":"&#x5982;&#x4f55;&#x5b89;&#x88c5;nodejs","children":[],"payload":{"tag":"h2","lines":"9,10"}},{"content":"&#x4f7f;&#x7528;nodejs&#x9700;&#x8981;&#x4e86;&#x89e3;&#x591a;&#x5c11;js","children":[],"payload":{"tag":"h2","lines":"10,11"}},{"content":"nodejs&#x548c;&#x6d4f;&#x89c8;&#x5668;&#x7684;&#x533a;&#x522b;","children":[],"payload":{"tag":"h2","lines":"11,12"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5982;&#x4f55;&#x89c4;&#x907f;&#x9875;&#x9762;&#x4e2d;&#x5927;&#x91cf;useState","children":[{"content":"<pre data-lines=\"1,40\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useState } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>\n \n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">Test</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> [state, setState] = <span class=\"hljs-title function_\">useState</span>({\n    <span class=\"hljs-attr\">username</span>: <span class=\"hljs-string\">&apos;admin&apos;</span>,\n    <span class=\"hljs-attr\">password</span>: <span class=\"hljs-string\">&apos;123456&apos;</span>,\n  })\n \n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">handleInput</span> = (<span class=\"hljs-params\">e, field</span>) =&gt; {\n    <span class=\"hljs-title function_\">setState</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">prevState</span>) =&gt;</span> {\n      <span class=\"hljs-keyword\">return</span> { ...prevState, [field]: e.<span class=\"hljs-property\">target</span>.<span class=\"hljs-property\">value</span> }\n    })\n  }\n \n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">handleLogin</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n    <span class=\"hljs-keyword\">const</span> { username, password } = state\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(username, password)\n  }\n \n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span>\n          <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">{state.username}</span>\n          <span class=\"hljs-attr\">onChange</span>=<span class=\"hljs-string\">{(e)</span> =&gt;</span> handleInput(e, &apos;username&apos;)}\n        &gt;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">input</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span>\n          <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">{state.password}</span>\n          <span class=\"hljs-attr\">onChange</span>=<span class=\"hljs-string\">{(e)</span> =&gt;</span> handleInput(e, &apos;password&apos;)}\n        &gt;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">input</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{handleLogin}</span>&gt;</span>&#x767b;&#x5f55;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n  )\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,40"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[vue]-&#x5982;&#x4f55;&#x901a;&#x8fc7;ref&#x83b7;&#x53d6;&#x5143;&#x7d20;&#x9ad8;&#x5ea6;","children":[{"content":"vue2&#x83b7;&#x53d6;&#x9ad8;&#x5ea6;","children":[{"content":"<pre data-lines=\"4,7\"><code data-lines=\"4,7\"><span class=\"hljs-keyword\">this</span>.&#x24;<span class=\"hljs-built_in\">ref</span>s.offsetHeight\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"vue3&#x83b7;&#x53d6;&#x9ad8;&#x5ea6;","children":[{"content":"<pre data-lines=\"10,14\"><code data-lines=\"10,14\">let myRef=<span class=\"hljs-built_in\">ref</span>()\nmyRef<span class=\"hljs-selector-class\">.value</span><span class=\"hljs-selector-class\">.offsetHeight</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,14"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"&#x4e0d;&#x540c;&#x9ad8;&#x5ea6;&#x89e3;&#x91ca;","children":[{"content":"<pre data-lines=\"17,24\"><code data-lines=\"17,24\"><span class=\"hljs-attribute\">offsetHeight</span>\n&#x5305;&#x542b;&#x5782;&#x76f4;&#x5185;&#x8fb9;&#x8ddd;&#x548c;&#x8fb9;&#x6846;\n\nclientHeight\n&#x5305;&#x542b;&#x5185;&#x90e8;&#x9ad8;&#x5ea6;,&#x5185;&#x8fb9;&#x8ddd;,&#x4e0d;&#x5305;&#x542b;&#x6c34;&#x5e73;&#x6eda;&#x52a8;&#x6761;,&#x8fb9;&#x6846;&#x548c;&#x5916;&#x8fb9;&#x8ddd;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,24"}}],"payload":{"tag":"h2","lines":"15,16"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"01-pythonbase-day01","children":[{"content":"Base","children":[{"content":"<pre data-lines=\"6,10\"><code class=\"language-python\"><span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;&#x4f60;&#x597d;&#xff0c;&#x4e16;&#x754c;!&quot;</span>)\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,10"}},{"content":"<pre data-lines=\"11,14\"><code class=\"language-python\"><span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;hello world&quot;</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,14"}},{"content":"<pre data-lines=\"15,27\"><code class=\"language-python\"><span class=\"hljs-string\">&quot;&quot;&quot;\n    &#x6c47;&#x7387;&#x8f6c;&#x6362;&#x5668;\n&quot;&quot;&quot;</span>\n<span class=\"hljs-comment\"># 1. &#x83b7;&#x53d6;&#x6570;&#x636e; (&#x7f8e;&#x5143;)</span>\nusd = <span class=\"hljs-built_in\">input</span>(<span class=\"hljs-string\">&quot;&#x8bf7;&#x8f93;&#x5165;&#x7f8e;&#x5143;&#xff1a;&quot;</span>)\n<span class=\"hljs-comment\"># 2. &#x903b;&#x8f91;&#x8ba1;&#x7b97; (&#x7f8e;&#x5143; * 7.0254  --&gt; &#x4eba;&#x6c11;&#x5e01;)</span>\nrmb = <span class=\"hljs-built_in\">float</span>(usd) * <span class=\"hljs-number\">7.0254</span>\n<span class=\"hljs-comment\"># 3. &#x663e;&#x793a;&#x7ed3;&#x679c;</span>\n<span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;&#x4eba;&#x6c11;&#x5e01;&#x662f;&#xff1a;&quot;</span> + <span class=\"hljs-built_in\">str</span>(rmb))\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,27"}}],"payload":{"tag":"h3","lines":"2,3"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

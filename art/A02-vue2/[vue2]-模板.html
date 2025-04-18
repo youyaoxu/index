@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[vue2]-&#x6a21;&#x677f;.md","children":[{"content":"<pre data-lines=\"2,55\"><code class=\"language-vue\">&lt;template&gt;\n  &lt;div class=&quot;container&quot;&gt;\n    1\n  &lt;/div&gt;\n&lt;/template&gt;\n\n&lt;script&gt;\n//&#x8fd9;&#x91cc;&#x53ef;&#x4ee5;&#x5bfc;&#x5165;&#x5176;&#x4ed6;&#x6587;&#x4ef6;&#xff08;&#x6bd4;&#x5982;&#xff1a;&#x7ec4;&#x4ef6;&#xff0c;&#x5de5;&#x5177;js&#xff0c;&#x7b2c;&#x4e09;&#x65b9;&#x63d2;&#x4ef6;js&#xff0c;json&#x6587;&#x4ef6;&#xff0c;&#x56fe;&#x7247;&#x6587;&#x4ef6;&#x7b49;&#x7b49;&#xff09;\n//&#x4f8b;&#x5982;&#xff1a;import &#x300a;&#x7ec4;&#x4ef6;&#x540d;&#x79f0;&#x300b; from &apos;&#x300a;&#x7ec4;&#x4ef6;&#x8def;&#x5f84;&#x300b;&apos;;\n\nexport default {\n  //&#x53ea;&#x6709;&#x4f5c;&#x4e3a;&#x7ec4;&#x4ef6;&#x9009;&#x9879;&#x65f6;&#x8d77;&#x4f5c;&#x7528;\n  name: &apos;&apos;,\n  //import&#x5f15;&#x5165;&#x7684;&#x7ec4;&#x4ef6;&#x9700;&#x8981;&#x6ce8;&#x5165;&#x5230;&#x5bf9;&#x8c61;&#x4e2d;&#x624d;&#x80fd;&#x4f7f;&#x7528;\n  components: {},\n  //&#x8fd9;&#x91cc;&#x5b58;&#x653e;&#x7236;&#x7ec4;&#x4ef6;&#x7684;&#x4f20;&#x503c;\n  props: {},\n  data() {\n    //&#x8fd9;&#x91cc;&#x5b58;&#x653e;&#x6570;&#x636e;\n    return {}\n  },\n  //&#x76d1;&#x542c;&#x5c5e;&#x6027; &#x7c7b;&#x4f3c;&#x4e8e;data&#x6982;&#x5ff5;\n  computed: {},\n  //&#x76d1;&#x63a7;data&#x4e2d;&#x7684;&#x6570;&#x636e;&#x53d8;&#x5316;\n  watch: {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x521b;&#x5efa;&#x5b8c;&#x6210;&#xff08;&#x53ef;&#x4ee5;&#x8bbf;&#x95ee;&#x5f53;&#x524d;this&#x5b9e;&#x4f8b;&#xff09;\n  created() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x6302;&#x8f7d;&#x5b8c;&#x6210;&#xff08;&#x53ef;&#x4ee5;&#x8bbf;&#x95ee;DOM&#x5143;&#x7d20;&#xff09;\n  mounted() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x521b;&#x5efa;&#x4e4b;&#x524d;\n  beforeCreate() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x6302;&#x8f7d;&#x4e4b;&#x524d;\n  beforeMount() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x66f4;&#x65b0;&#x4e4b;&#x524d;\n  beforeUpdate() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x66f4;&#x65b0;&#x4e4b;&#x540e;\n  updated() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x9500;&#x6bc1;&#x4e4b;&#x524d;\n  beforeDestroy() {},\n  //&#x751f;&#x547d;&#x5468;&#x671f; - &#x9500;&#x6bc1;&#x5b8c;&#x6210;\n  destroyed() {},\n  //&#x5982;&#x679c;&#x9875;&#x9762;&#x6709;keep-alive&#x7f13;&#x5b58;&#x529f;&#x80fd;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4f1a;&#x89e6;&#x53d1;\n  activated() {},\n  //&#x65b9;&#x6cd5;&#x96c6;&#x5408;\n  methods: {}\n}\n&lt;/script&gt;\n\n&lt;style lang=&apos;scss&apos; scoped&gt;\n@import &quot;@/assets/styles/common.scss&quot;;\n&lt;/style&gt;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,55"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

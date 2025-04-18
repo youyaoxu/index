@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x65e5;&#x671f;]-&#x6bd4;&#x8f83;&#x4e24;&#x4e2a;&#x65e5;&#x671f;&#x7684;&#x5927;&#x5c0f;","children":[{"content":"<pre data-lines=\"2,13\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">compareDate</span> = (<span class=\"hljs-params\">date1, date2</span>) =&gt; {\n    <span class=\"hljs-keyword\">var</span> oDate1 = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(date1)\n    <span class=\"hljs-keyword\">var</span> oDate2 = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(date2)\n    <span class=\"hljs-keyword\">if</span> (oDate1.<span class=\"hljs-title function_\">getTime</span>() &gt; oDate2.<span class=\"hljs-title function_\">getTime</span>()) {\n        <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">true</span> <span class=\"hljs-comment\">//&#x7b2c;&#x4e00;&#x4e2a;&#x5927;</span>\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span> <span class=\"hljs-comment\">//&#x7b2c;&#x4e8c;&#x4e2a;&#x5927;</span>\n    }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,13"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

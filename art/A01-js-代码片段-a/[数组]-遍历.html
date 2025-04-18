@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6570;&#x7ec4;&#x904d;&#x5386;","children":[{"content":"for &#x5faa;&#x73af;","children":[{"content":"<pre data-lines=\"4,15\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nfor(let i = 0; i &lt; arr.length; i++) {\n    let value = arr[i];\n    console.log(value);\n}\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 1 2 3 4 5 6 7 8 9\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,15"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"for...in &#x5faa;&#x73af;","children":[{"content":"<pre data-lines=\"18,28\"><code class=\"language-js\">const arr: any = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nfor(const key in arr) {\n    console.log(key);\n}\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# &quot;0&quot; &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot; &quot;7&quot; &quot;8&quot;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,28"}}],"payload":{"tag":"h2","lines":"16,17"}},{"content":"for...of &#x5faa;&#x73af;","children":[{"content":"<pre data-lines=\"31,42\"><code class=\"language-js\">const arr:any = [1, 2, 3, 4, 5, 6, 7, 8, 9];\narr.name = 12;\n\nfor(const item of arr) {\n    console.log(item)\n}\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 1 2 3 4 5 6 7 8 9\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,42"}},{"content":"<pre data-lines=\"45,55\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nfor (let key of arr.keys()) {\n    console.log(key)\n}\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 0 1 2 3 4 5 6 7 8\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,55"}},{"content":"<pre data-lines=\"58,76\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nfor (let [key, val] of arr.entries()) {\n    console.log(key, val)\n}\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 0,  1 \n# 1,  2 \n# 2,  3 \n# 3,  4 \n# 4,  5 \n# 5,  6 \n# 6,  7 \n# 7,  8 \n# 8,  9 \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"58,76"}}],"payload":{"tag":"h2","lines":"29,30"}},{"content":"forEach","children":[{"content":"<pre data-lines=\"85,95\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\narr.forEach((item, index, arr) =&gt; {\n    console.log(item)\n});\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 1 2 3 4 5 6 7 8 9\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"85,95"}}],"payload":{"tag":"h2","lines":"77,78"}},{"content":"map","children":[{"content":"<pre data-lines=\"104,115\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.map((item,index,arr)=&gt;{\n    return item + 1\n})\nconsole.log(res)\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# [2, 3, 4, 5, 6, 7, 8, 9, 10] \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"104,115"}},{"content":"<pre data-lines=\"118,131\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.map(item=&gt;{\n    if(item &gt; 3) {\n        return item;\n    }\n})\nconsole.log(res)\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# [undefined, undefined, undefined, 4, 5, 6, 7, 8, 9] \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"118,131"}}],"payload":{"tag":"h2","lines":"96,97"}},{"content":"filter","children":[{"content":"<pre data-lines=\"138,149\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.filter((item,index,arr)=&gt;{\n    return item &gt; 3;\n});\nconsole.log(res)\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# [4, 5, 6, 7, 8, 9] \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"138,149"}}],"payload":{"tag":"h2","lines":"132,133"}},{"content":"some","children":[{"content":"<pre data-lines=\"154,165\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.some((item,index,arr)=&gt;{\n    return item &gt; 3\n})\nconsole.log(res)\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# true\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"154,165"}}],"payload":{"tag":"h2","lines":"150,151"}},{"content":"every","children":[{"content":"<pre data-lines=\"173,184\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.every((item,index,arr)=&gt;{\n    return item &gt; 3\n})\nconsole.log(res);\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# false\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"173,184"}}],"payload":{"tag":"h2","lines":"171,172"}},{"content":"reduce","children":[{"content":"<pre data-lines=\"192,203\"><code class=\"language-js\">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst res = arr.reduce((total,item,index,arr)=&gt;{\n    return total + item;\n}, 0)\nconsole.log(res)&#xff1b;\n\n# &#x8f93;&#x51fa;&#x7ed3;&#x679c;&#xff1a;\n# 45\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"192,203"}}],"payload":{"tag":"h2","lines":"190,191"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[css]-&#x6587;&#x5b57;&#x6ea2;&#x51fa;","children":[{"content":"<pre data-lines=\"2,33\"><code data-lines=\"2,33\"><span class=\"hljs-selector-class\">.textshow1</span> {\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">text-overflow</span>: ellipsis;\n  <span class=\"hljs-attribute\">white-space</span>: nowrap;\n}\n<span class=\"hljs-selector-class\">.textshow2</span> {\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">text-overflow</span>: ellipsis;\n  <span class=\"hljs-attribute\">display</span>: -webkit-box;\n  -webkit-<span class=\"hljs-attribute\">box-orient</span>: vertical;\n  -webkit-<span class=\"hljs-selector-tag\">line</span>-clamp: <span class=\"hljs-number\">2</span>;\n}\n<span class=\"hljs-selector-class\">.textshow3</span> {\n  <span class=\"hljs-attribute\">overflow</span>: hidden;\n  <span class=\"hljs-attribute\">text-overflow</span>: ellipsis;\n  <span class=\"hljs-attribute\">display</span>: -webkit-box;\n  -webkit-<span class=\"hljs-attribute\">box-orient</span>: vertical;\n  -webkit-<span class=\"hljs-selector-tag\">line</span>-clamp: <span class=\"hljs-number\">3</span>;\n}\n<span class=\"hljs-selector-class\">.clearfix</span> {\n  &amp;<span class=\"hljs-selector-pseudo\">:after</span> {\n    <span class=\"hljs-attribute\">visibility</span>: hidden;\n    <span class=\"hljs-attribute\">display</span>: block;\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">content</span>: <span class=\"hljs-string\">&apos; &apos;</span>;\n    <span class=\"hljs-attribute\">clear</span>: both;\n    <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">0</span>;\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,33"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x5bf9;&#x8c61;]-&#x5173;&#x4e8e;&#x5bf9;&#x8c61;&#x7c7b;&#x578b;&#x5224;&#x65ad;","children":[{"content":"Object.prototype.hasOwnProperty()","children":[{"content":"<pre data-lines=\"4,7\"><code data-lines=\"4,7\">&#x5224;&#x65ad;&#x662f;&#x5426;&#x5305;&#x542b;&#x67d0;&#x4e2a;&#x5c5e;&#x6027;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}},{"content":"<pre data-lines=\"10,18\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> obj1 = {};\nobj1.<span class=\"hljs-property\">property1</span> = <span class=\"hljs-number\">42</span>\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj1.<span class=\"hljs-title function_\">hasOwnProperty</span>(<span class=\"hljs-string\">&apos;property1&apos;</span>)) <span class=\"hljs-comment\">// true</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj1.<span class=\"hljs-title function_\">hasOwnProperty</span>(<span class=\"hljs-string\">&apos;toString&apos;</span>)) <span class=\"hljs-comment\">// false</span>\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(obj1.<span class=\"hljs-title function_\">hasOwnProperty</span>(<span class=\"hljs-string\">&apos;hasOwnProperty&apos;</span>)) <span class=\"hljs-comment\">// false</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,18"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Object.getOwnPropertyNames()","children":[{"content":"<pre data-lines=\"21,24\"><code data-lines=\"21,24\">&#x83b7;&#x53d6;&#x67d0;&#x4e2a;&#x5c5e;&#x6027;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,24"}},{"content":"<pre data-lines=\"27,55\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> arr = [<span class=\"hljs-string\">&quot;a&quot;</span>, <span class=\"hljs-string\">&quot;b&quot;</span>, <span class=\"hljs-string\">&quot;c&quot;</span>];\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">getOwnPropertyNames</span>(arr).<span class=\"hljs-title function_\">sort</span>()) <span class=\"hljs-comment\">// [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;length&quot;]</span>\n\n<span class=\"hljs-comment\">// &#x7c7b;&#x6570;&#x7ec4;&#x5bf9;&#x8c61;</span>\n<span class=\"hljs-keyword\">const</span> obj = { <span class=\"hljs-number\">0</span>: <span class=\"hljs-string\">&quot;a&quot;</span>, <span class=\"hljs-number\">1</span>: <span class=\"hljs-string\">&quot;b&quot;</span>, <span class=\"hljs-number\">2</span>: <span class=\"hljs-string\">&quot;c&quot;</span>};\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">getOwnPropertyNames</span>(obj).<span class=\"hljs-title function_\">sort</span>()) <span class=\"hljs-comment\">// [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;]</span>\n\n<span class=\"hljs-comment\">// &#x4f7f;&#x7528;Array.forEach&#x8f93;&#x51fa;&#x5c5e;&#x6027;&#x540d;&#x548c;&#x5c5e;&#x6027;&#x503c;</span>\n<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">getOwnPropertyNames</span>(obj).<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">val, idx, array</span>) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(val + <span class=\"hljs-string\">&quot; -&gt; &quot;</span> + obj[val]);\n})\n<span class=\"hljs-comment\">// 0 -&gt; a</span>\n<span class=\"hljs-comment\">// 1 -&gt; b</span>\n<span class=\"hljs-comment\">// 2 -&gt; c</span>\n\n<span class=\"hljs-comment\">// &#x4e0d;&#x53ef;&#x679a;&#x4e3e;&#x5c5e;&#x6027;</span>\n<span class=\"hljs-keyword\">const</span> my_obj = <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">create</span>({}, {\n  <span class=\"hljs-attr\">getFoo</span>: {\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) { <span class=\"hljs-keyword\">return</span> <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">foo</span>; },\n    <span class=\"hljs-attr\">enumerable</span>: <span class=\"hljs-literal\">false</span>\n  }\n});\nmy_obj.<span class=\"hljs-property\">foo</span> = <span class=\"hljs-number\">1</span>;\n\n<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">getOwnPropertyNames</span>(my_obj).<span class=\"hljs-title function_\">sort</span>())\n<span class=\"hljs-comment\">// [&quot;foo&quot;, &quot;getFoo&quot;]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,55"}}],"payload":{"tag":"h2","lines":"19,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

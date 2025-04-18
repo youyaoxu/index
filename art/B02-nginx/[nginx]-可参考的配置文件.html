@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x53ef;&#x53c2;&#x8003;&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"2,43\"><code data-lines=\"2,43\"><span class=\"hljs-comment\">########### &#x6bcf;&#x4e2a;&#x6307;&#x4ee4;&#x5fc5;&#x987b;&#x6709;&#x5206;&#x53f7;&#x7ed3;&#x675f;&#x3002;#################</span>\n<span class=\"hljs-comment\">#user administrator administrators;  #&#x914d;&#x7f6e;&#x7528;&#x6237;&#x6216;&#x8005;&#x7ec4;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;nobody nobody&#x3002;</span>\n<span class=\"hljs-comment\">#worker_processes 2;  #&#x5141;&#x8bb8;&#x751f;&#x6210;&#x7684;&#x8fdb;&#x7a0b;&#x6570;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;1</span>\n<span class=\"hljs-comment\">#pid /nginx/pid/nginx.pid;   #&#x6307;&#x5b9a;nginx&#x8fdb;&#x7a0b;&#x8fd0;&#x884c;&#x6587;&#x4ef6;&#x5b58;&#x653e;&#x5730;&#x5740;</span>\n<span class=\"hljs-attribute\">error_log</span> log/<span class=\"hljs-literal\">error</span>.log <span class=\"hljs-literal\">debug</span>;  <span class=\"hljs-comment\">#&#x5236;&#x5b9a;&#x65e5;&#x5fd7;&#x8def;&#x5f84;&#xff0c;&#x7ea7;&#x522b;&#x3002;&#x8fd9;&#x4e2a;&#x8bbe;&#x7f6e;&#x53ef;&#x4ee5;&#x653e;&#x5165;&#x5168;&#x5c40;&#x5757;&#xff0c;http&#x5757;&#xff0c;server&#x5757;&#xff0c;&#x7ea7;&#x522b;&#x4ee5;&#x6b64;&#x4e3a;&#xff1a;debug|info|notice|warn|error|crit|alert|emerg</span>\n<span class=\"hljs-section\">events</span> {\n    <span class=\"hljs-attribute\">accept_mutex</span> <span class=\"hljs-literal\">on</span>;   <span class=\"hljs-comment\">#&#x8bbe;&#x7f6e;&#x7f51;&#x8def;&#x8fde;&#x63a5;&#x5e8f;&#x5217;&#x5316;&#xff0c;&#x9632;&#x6b62;&#x60ca;&#x7fa4;&#x73b0;&#x8c61;&#x53d1;&#x751f;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;on</span>\n    <span class=\"hljs-attribute\">multi_accept</span> <span class=\"hljs-literal\">on</span>;  <span class=\"hljs-comment\">#&#x8bbe;&#x7f6e;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#x662f;&#x5426;&#x540c;&#x65f6;&#x63a5;&#x53d7;&#x591a;&#x4e2a;&#x7f51;&#x7edc;&#x8fde;&#x63a5;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;off</span>\n    <span class=\"hljs-comment\">#use epoll;      #&#x4e8b;&#x4ef6;&#x9a71;&#x52a8;&#x6a21;&#x578b;&#xff0c;select|poll|kqueue|epoll|resig|/dev/poll|eventport</span>\n    <span class=\"hljs-attribute\">worker_connections</span>  <span class=\"hljs-number\">1024</span>;    <span class=\"hljs-comment\">#&#x6700;&#x5927;&#x8fde;&#x63a5;&#x6570;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;512</span>\n}\n<span class=\"hljs-section\">http</span> {\n    <span class=\"hljs-attribute\">include</span>       mime.types;   <span class=\"hljs-comment\">#&#x6587;&#x4ef6;&#x6269;&#x5c55;&#x540d;&#x4e0e;&#x6587;&#x4ef6;&#x7c7b;&#x578b;&#x6620;&#x5c04;&#x8868;</span>\n    <span class=\"hljs-attribute\">default_type</span>  application/octet-stream; <span class=\"hljs-comment\">#&#x9ed8;&#x8ba4;&#x6587;&#x4ef6;&#x7c7b;&#x578b;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;text/plain</span>\n    <span class=\"hljs-comment\">#access_log off; #&#x53d6;&#x6d88;&#x670d;&#x52a1;&#x65e5;&#x5fd7;    </span>\n    <span class=\"hljs-attribute\">log_format</span> myFormat <span class=\"hljs-string\">&apos;<span class=\"hljs-variable\">&#x24;remote_addr</span>&#x2013;<span class=\"hljs-variable\">&#x24;remote_user</span> [<span class=\"hljs-variable\">&#x24;time_local</span>] <span class=\"hljs-variable\">&#x24;request</span> <span class=\"hljs-variable\">&#x24;status</span> <span class=\"hljs-variable\">&#x24;body_bytes_sent</span> <span class=\"hljs-variable\">&#x24;http_referer</span> <span class=\"hljs-variable\">&#x24;http_user_agent</span> <span class=\"hljs-variable\">&#x24;http_x_forwarded_for</span>&apos;</span>; <span class=\"hljs-comment\">#&#x81ea;&#x5b9a;&#x4e49;&#x683c;&#x5f0f;</span>\n    <span class=\"hljs-attribute\">access_log</span> log/access.log myFormat;  <span class=\"hljs-comment\">#combined&#x4e3a;&#x65e5;&#x5fd7;&#x683c;&#x5f0f;&#x7684;&#x9ed8;&#x8ba4;&#x503c;</span>\n    <span class=\"hljs-attribute\">sendfile</span> <span class=\"hljs-literal\">on</span>;   <span class=\"hljs-comment\">#&#x5141;&#x8bb8;sendfile&#x65b9;&#x5f0f;&#x4f20;&#x8f93;&#x6587;&#x4ef6;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;off&#xff0c;&#x53ef;&#x4ee5;&#x5728;http&#x5757;&#xff0c;server&#x5757;&#xff0c;location&#x5757;&#x3002;</span>\n    <span class=\"hljs-attribute\">sendfile_max_chunk</span> <span class=\"hljs-number\">100k</span>;  <span class=\"hljs-comment\">#&#x6bcf;&#x4e2a;&#x8fdb;&#x7a0b;&#x6bcf;&#x6b21;&#x8c03;&#x7528;&#x4f20;&#x8f93;&#x6570;&#x91cf;&#x4e0d;&#x80fd;&#x5927;&#x4e8e;&#x8bbe;&#x5b9a;&#x7684;&#x503c;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;0&#xff0c;&#x5373;&#x4e0d;&#x8bbe;&#x4e0a;&#x9650;&#x3002;</span>\n    <span class=\"hljs-attribute\">keepalive_timeout</span> <span class=\"hljs-number\">65</span>;  <span class=\"hljs-comment\">#&#x8fde;&#x63a5;&#x8d85;&#x65f6;&#x65f6;&#x95f4;&#xff0c;&#x9ed8;&#x8ba4;&#x4e3a;75s&#xff0c;&#x53ef;&#x4ee5;&#x5728;http&#xff0c;server&#xff0c;location&#x5757;&#x3002;</span>\n\n    <span class=\"hljs-section\">upstream</span> mysvr {   \n      <span class=\"hljs-attribute\">server</span> <span class=\"hljs-number\">127.0.0.1:7878</span>;\n      <span class=\"hljs-attribute\">server</span> <span class=\"hljs-number\">192.168.10.121:3333</span> backup;  <span class=\"hljs-comment\">#&#x70ed;&#x5907;</span>\n    }\n    <span class=\"hljs-attribute\">error_page</span> <span class=\"hljs-number\">404</span> https://www.baidu.com; <span class=\"hljs-comment\">#&#x9519;&#x8bef;&#x9875;</span>\n    <span class=\"hljs-section\">server</span> {\n        <span class=\"hljs-attribute\">keepalive_requests</span> <span class=\"hljs-number\">120</span>; <span class=\"hljs-comment\">#&#x5355;&#x8fde;&#x63a5;&#x8bf7;&#x6c42;&#x4e0a;&#x9650;&#x6b21;&#x6570;&#x3002;</span>\n        <span class=\"hljs-attribute\">listen</span>       <span class=\"hljs-number\">4545</span>;   <span class=\"hljs-comment\">#&#x76d1;&#x542c;&#x7aef;&#x53e3;</span>\n        <span class=\"hljs-attribute\">server_name</span>  <span class=\"hljs-number\">127.0.0.1</span>;   <span class=\"hljs-comment\">#&#x76d1;&#x542c;&#x5730;&#x5740;       </span>\n        <span class=\"hljs-section\">location</span>  ~*^.+&#x24; {       <span class=\"hljs-comment\">#&#x8bf7;&#x6c42;&#x7684;url&#x8fc7;&#x6ee4;&#xff0c;&#x6b63;&#x5219;&#x5339;&#x914d;&#xff0c;~&#x4e3a;&#x533a;&#x5206;&#x5927;&#x5c0f;&#x5199;&#xff0c;~*&#x4e3a;&#x4e0d;&#x533a;&#x5206;&#x5927;&#x5c0f;&#x5199;&#x3002;</span>\n           <span class=\"hljs-comment\">#root path;  #&#x6839;&#x76ee;&#x5f55;</span>\n           <span class=\"hljs-comment\">#index vv.txt;  #&#x8bbe;&#x7f6e;&#x9ed8;&#x8ba4;&#x9875;</span>\n           <span class=\"hljs-attribute\">proxy_pass</span>  http://mysvr;  <span class=\"hljs-comment\">#&#x8bf7;&#x6c42;&#x8f6c;&#x5411;mysvr &#x5b9a;&#x4e49;&#x7684;&#x670d;&#x52a1;&#x5668;&#x5217;&#x8868;</span>\n           <span class=\"hljs-attribute\">deny</span> <span class=\"hljs-number\">127.0.0.1</span>;  <span class=\"hljs-comment\">#&#x62d2;&#x7edd;&#x7684;ip</span>\n           <span class=\"hljs-attribute\">allow</span> <span class=\"hljs-number\">172.18.5.54</span>; <span class=\"hljs-comment\">#&#x5141;&#x8bb8;&#x7684;ip           </span>\n        } \n    }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,43"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

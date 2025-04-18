@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"#_3-1-%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7%E5%8C%85\">#</a> 3.1.&#x4e0b;&#x8f7d;&#x5de5;&#x5177;&#x5305;","children":[{"content":"<pre data-lines=\"3,7\"><code data-lines=\"3,7\"><span class=\"hljs-comment\"># &#x540d;&#x79f0;&#x662f;&#x4f60;&#x524d;&#x9762;&#x6307;&#x5b9a;&#x7684;&#x5e93;&#x7684;&#x540d;&#x79f0;</span>\nnpm <span class=\"hljs-keyword\">install</span> a-utils2 \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,7"}}],"payload":{"tag":"h2","lines":"0,2"}},{"content":"<a href=\"#_3-2-%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8\">#</a> 3.2.&#x7f51;&#x9875;&#x4e2d;&#x5f15;&#x5165;&#x5e76;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"11,15\"><code data-lines=\"11,15\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;./node_modules/a-utils2/dist/atguigu-utils.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span> aUtils.test() <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,15"}}],"payload":{"tag":"h2","lines":"8,10"}},{"content":"<a href=\"#_3-3-%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8\">#</a> 3.3.&#x6a21;&#x5757;&#x5316;&#x5f15;&#x5165;&#x5e76;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"19,28\"><code data-lines=\"19,28\"><span class=\"hljs-comment\">// &#x4f7f;&#x7528;ESM&#x5f15;&#x5165;</span>\nimport {test} from <span class=\"hljs-string\">&apos;a-utils2&apos;</span>\n<span class=\"hljs-function\"><span class=\"hljs-title\">test</span><span class=\"hljs-params\">()</span></span>\n\n<span class=\"hljs-comment\">// &#x4f7f;&#x7528;commonjs&#x5f15;&#x5165;</span>\nconst {test} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;a-utils2&apos;</span>)\n<span class=\"hljs-function\"><span class=\"hljs-title\">test</span><span class=\"hljs-params\">()</span></span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,28"}}],"payload":{"tag":"h2","lines":"16,18"}}]},{})</script>
+</body>
+</html>

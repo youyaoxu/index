@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x7528;&#x6237;&#x89d2;&#x8272;&#x6743;&#x9650;&#x5206;&#x914d;","children":[{"content":"<pre data-lines=\"1,54\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> useUserStore <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/store/modules/user&apos;</span>\n\n<span class=\"hljs-comment\">/**\n * &#x5b57;&#x7b26;&#x6743;&#x9650;&#x6821;&#x9a8c;\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">Array</span>} value &#x6821;&#x9a8c;&#x503c;\n * <span class=\"hljs-doctag\">@returns</span> {<span class=\"hljs-type\">Boolean</span>}\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">checkPermi</span>(<span class=\"hljs-params\">value</span>) {\n  <span class=\"hljs-keyword\">if</span> (value &amp;&amp; value <span class=\"hljs-keyword\">instanceof</span> <span class=\"hljs-title class_\">Array</span> &amp;&amp; value.<span class=\"hljs-property\">length</span> &gt; <span class=\"hljs-number\">0</span>) {\n    <span class=\"hljs-keyword\">const</span> permissions = <span class=\"hljs-title function_\">useUserStore</span>().<span class=\"hljs-property\">permissions</span>\n    <span class=\"hljs-keyword\">const</span> permissionDatas = value\n    <span class=\"hljs-keyword\">const</span> all_permission = <span class=\"hljs-string\">&quot;*:*:*&quot;</span>;\n\n    <span class=\"hljs-keyword\">const</span> hasPermission = permissions.<span class=\"hljs-title function_\">some</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">permission</span> =&gt;</span> {\n      <span class=\"hljs-keyword\">return</span> all_permission === permission || permissionDatas.<span class=\"hljs-title function_\">includes</span>(permission)\n    })\n\n    <span class=\"hljs-keyword\">if</span> (!hasPermission) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>\n    }\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">true</span>\n  } <span class=\"hljs-keyword\">else</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">`need roles! Like checkPermi=&quot;[&apos;system:user:add&apos;,&apos;system:user:edit&apos;]&quot;`</span>)\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>\n  }\n}\n\n<span class=\"hljs-comment\">/**\n * &#x89d2;&#x8272;&#x6743;&#x9650;&#x6821;&#x9a8c;\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">Array</span>} value &#x6821;&#x9a8c;&#x503c;\n * <span class=\"hljs-doctag\">@returns</span> {<span class=\"hljs-type\">Boolean</span>}\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">checkRole</span>(<span class=\"hljs-params\">value</span>) {\n  <span class=\"hljs-keyword\">if</span> (value &amp;&amp; value <span class=\"hljs-keyword\">instanceof</span> <span class=\"hljs-title class_\">Array</span> &amp;&amp; value.<span class=\"hljs-property\">length</span> &gt; <span class=\"hljs-number\">0</span>) {\n    <span class=\"hljs-keyword\">const</span> roles = <span class=\"hljs-title function_\">useUserStore</span>().<span class=\"hljs-property\">roles</span>\n    <span class=\"hljs-keyword\">const</span> permissionRoles = value\n    <span class=\"hljs-keyword\">const</span> super_admin = <span class=\"hljs-string\">&quot;admin&quot;</span>;\n\n    <span class=\"hljs-keyword\">const</span> hasRole = roles.<span class=\"hljs-title function_\">some</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">role</span> =&gt;</span> {\n      <span class=\"hljs-keyword\">return</span> super_admin === role || permissionRoles.<span class=\"hljs-title function_\">includes</span>(role)\n    })\n\n    <span class=\"hljs-keyword\">if</span> (!hasRole) {\n      <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>\n    }\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">true</span>\n  } <span class=\"hljs-keyword\">else</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">`need roles! Like checkRole=&quot;[&apos;admin&apos;,&apos;editor&apos;]&quot;`</span>)\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">false</span>\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,54"}}],"payload":{"tag":"h3","lines":"0,1"}},{})</script>
+</body>
+</html>

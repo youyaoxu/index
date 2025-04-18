@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[redux-&#x5165;&#x95e8;]-&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"2,19\"><code class=\"language-js\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">counterReducer</span>(<span class=\"hljs-params\">state={value:<span class=\"hljs-number\">0</span>},action</span>){\n\t<span class=\"hljs-keyword\">switch</span>(action.<span class=\"hljs-property\">type</span>){\n\t<span class=\"hljs-keyword\">case</span> <span class=\"hljs-string\">&apos;counter/incremented&apos;</span>:\n\t\t<span class=\"hljs-keyword\">return</span> {<span class=\"hljs-attr\">value</span>:state.<span class=\"hljs-property\">value</span>+<span class=\"hljs-number\">1</span>}\n\t<span class=\"hljs-keyword\">case</span> <span class=\"hljs-string\">&apos;counter/decremented&apos;</span>:\n\t\t<span class=\"hljs-keyword\">return</span> {<span class=\"hljs-attr\">value</span>:state.<span class=\"hljs-property\">value</span>-<span class=\"hljs-number\">1</span>}\n\t<span class=\"hljs-attr\">default</span>:\n\t\t<span class=\"hljs-keyword\">return</span> state\n\t}\n}\n\n<span class=\"hljs-keyword\">let</span> store=<span class=\"hljs-title function_\">createStore</span>(counterReducer)\nstroe.<span class=\"hljs-title function_\">subscribe</span>(<span class=\"hljs-function\">()=&gt;</span><span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(store.<span class=\"hljs-title function_\">getState</span>()))\n\nstore.<span class=\"hljs-title function_\">dispatch</span>({<span class=\"hljs-attr\">type</span>:<span class=\"hljs-string\">&apos;counter/incremented&apos;</span>})\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,19"}},{"content":"<pre data-lines=\"20,27\"><code data-lines=\"20,27\">action: &#x64cd;&#x4f5c;&#x884c;&#x4e3a;\n\n<span class=\"hljs-keyword\">state</span>: &#x72b6;&#x6001;\n\nreducer: &#x5c06;action&#x548c;<span class=\"hljs-keyword\">state</span>&#x8054;&#x7cfb;&#x8d77;&#x6765;,&#x63a5;&#x53d7;\taction&#x548c;<span class=\"hljs-keyword\">state</span>&#x4f5c;&#x4e3a;&#x5176;&#x53c2;&#x6570;,&#x5e76;&#x8fd4;&#x56de;&#x7ed9;&#x5e94;&#x7528;&#x65b0;&#x7684;<span class=\"hljs-keyword\">state</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,27"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

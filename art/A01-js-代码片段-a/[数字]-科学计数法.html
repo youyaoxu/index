@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x6570;&#x5b57;]-&#x79d1;&#x5b66;&#x8ba1;&#x6570;&#x6cd5;","children":[{"content":"&#x4f7f;&#x7528;&#x5343;&#x5206;&#x4f4d;&#x8868;&#x793a;&#x6cd5;&#x6570;&#x5b57;","children":[{"content":"&#x5b9e;&#x4f8b;","children":[{"content":"<pre data-lines=\"5,8\"><code class=\"language-txt\">999,999,999\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}}],"payload":{"tag":"h3","lines":"3,4"}},{"content":"&#x65b9;&#x6cd5;1","children":[{"content":"<pre data-lines=\"11,14\"><code class=\"language-js\"><span class=\"hljs-built_in\">parseFloat</span>(val).<span class=\"hljs-title function_\">toLocaleString</span>()\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,14"}}],"payload":{"tag":"h3","lines":"9,10"}},{"content":"&#x65b9;&#x6cd5;2","children":[{"content":"<pre data-lines=\"16,29\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">toThousands</span> = num =&gt; {\n    num = num + <span class=\"hljs-string\">&apos;&apos;</span>\n    <span class=\"hljs-keyword\">if</span> (!num.<span class=\"hljs-title function_\">includes</span>(<span class=\"hljs-string\">&apos;.&apos;</span>)) {\n        num += <span class=\"hljs-string\">&apos;.&apos;</span>\n    }\n    <span class=\"hljs-keyword\">return</span> num\n        .<span class=\"hljs-title function_\">replace</span>(<span class=\"hljs-regexp\">/(\\d)(?=(\\d{3})+\\.)/g</span>, <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">&#x24;0, &#x24;1</span>) {\n            <span class=\"hljs-keyword\">return</span> &#x24;1 + <span class=\"hljs-string\">&apos;,&apos;</span>\n        })\n        .<span class=\"hljs-title function_\">replace</span>(<span class=\"hljs-regexp\">/\\.&#x24;/</span>, <span class=\"hljs-string\">&apos;&apos;</span>)\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,29"}}],"payload":{"tag":"h3","lines":"14,15"}},{"content":"&#x65b9;&#x6cd5;3","children":[{"content":"<pre data-lines=\"32,57\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * &#x683c;&#x5f0f;&#x5316;&#x6570;&#x503c; &#x5343;&#x5206;&#x5316;\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">*</span>} fixedNum &#x4fdd;&#x5b58;&#x5c0f;&#x6570;&#x4f4d; &#x9ed8;&#x8ba4;&#x4fdd;&#x7559;2&#x4f4d;&#xff0c;&#x4f20;&#x5b57;&#x7b26;&#x4e32;&apos;auto&apos;&#x65f6;&#xff0c;&#x5c0f;&#x6570;&#x4f4d;&#x6839;&#x636e;&#x5b9e;&#x9645;&#x6570;&#x503c;&#x6765;&#xff0c;&#x6700;&#x591a;3&#x4f4d;\n */</span>\n<span class=\"hljs-title class_\">Vue</span>.<span class=\"hljs-title function_\">filter</span>(<span class=\"hljs-string\">&apos;NumberFormat&apos;</span>, <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">value, fixedNum = <span class=\"hljs-string\">&apos;auto&apos;</span></span>) {\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-keyword\">typeof</span> value === <span class=\"hljs-string\">&apos;undefined&apos;</span> || value === <span class=\"hljs-literal\">null</span> || value === <span class=\"hljs-string\">&apos;&apos;</span>) {\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-string\">&apos;-&apos;</span>\n  }\n  <span class=\"hljs-keyword\">if</span> (!value) {\n    value = <span class=\"hljs-number\">0</span>\n  }\n  <span class=\"hljs-keyword\">let</span> formatString\n  <span class=\"hljs-keyword\">if</span> (fixedNum === <span class=\"hljs-string\">&apos;auto&apos;</span>) {\n    formatString = <span class=\"hljs-string\">&apos;0,0.[0000000]&apos;</span>\n  } <span class=\"hljs-keyword\">else</span> {\n    formatString = fixedNum &gt; <span class=\"hljs-number\">0</span> ? <span class=\"hljs-string\">&apos;0,0.&apos;</span> : <span class=\"hljs-string\">&apos;0,0&apos;</span>\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">let</span> i = <span class=\"hljs-number\">0</span>; i &lt; fixedNum; i++) {\n      formatString += <span class=\"hljs-string\">&apos;0&apos;</span>\n    }\n  }\n  <span class=\"hljs-keyword\">const</span> intPartFormat = <span class=\"hljs-title function_\">numeral</span>(value).<span class=\"hljs-title function_\">format</span>(formatString)\n  <span class=\"hljs-keyword\">return</span> intPartFormat\n})\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,57"}}],"payload":{"tag":"h3","lines":"30,31"}}],"payload":{"tag":"h2","lines":"2,3"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

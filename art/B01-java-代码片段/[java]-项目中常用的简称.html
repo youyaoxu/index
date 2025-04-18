@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-&#x9879;&#x76ee;&#x4e2d;&#x5e38;&#x7528;&#x7684;&#x7b80;&#x79f0;.md","children":[{"content":"VO&#xff08;View Object&#xff09;","children":[{"content":"<pre data-lines=\"3,8\"><code data-lines=\"3,8\">&#x89c6;&#x56fe;&#x5bf9;&#x8c61;&#xff0c;&#x7528;&#x4e8e;&#x5c55;&#x793a;&#x5c42;&#xff0c;&#x5b83;&#x7684;&#x4f5c;&#x7528;&#x662f;&#x628a;&#x67d0;&#x4e2a;&#x6307;&#x5b9a;&#x9875;&#x9762;&#xff08;&#x6216;&#x7ec4;&#x4ef6;&#xff09;&#x7684;&#x6240;&#x6709;&#x6570;&#x636e;&#x5c01;&#x88c5;&#x8d77;&#x6765;&#x3002;\n\n&#x6211;&#x4eec;&#x901a;&#x5e38;&#x7528;&#x8fd9;&#x4e2a;&#x6765;,&#x4f20;&#x9012;&#x7ed9;&#x6a21;&#x5757;,&#x6216;&#x8005;&#x662f;&#x7ed9;&#x524d;&#x7aef;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,8"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"DTO&#xff08;Data Transfer Object&#xff09;&#xff1a;","children":[{"content":"<pre data-lines=\"12,17\"><code data-lines=\"12,17\">&#x6570;&#x636e;&#x4f20;&#x8f93;&#x5bf9;&#x8c61;&#xff0c;&#x8fd9;&#x4e2a;&#x6982;&#x5ff5;&#x6765;&#x6e90;&#x4e8e;<span class=\"hljs-keyword\">J2EE&#x7684;&#x8bbe;&#x8ba1;&#x6a21;&#x5f0f;&#xff0c;&#x539f;&#x6765;&#x7684;&#x76ee;&#x7684;&#x662f;&#x4e3a;&#x4e86;EJB&#x7684;&#x5206;&#x5e03;&#x5f0f;&#x5e94;&#x7528;&#x63d0;&#x4f9b;&#x7c97;&#x7c92;&#x5ea6;&#x7684;&#x6570;&#x636e;&#x5b9e;&#x4f53;&#xff0c;&#x4ee5;&#x51cf;&#x5c11;&#x5206;&#x5e03;&#x5f0f;&#x8c03;&#x7528;&#x7684;&#x6b21;&#x6570;&#xff0c;&#x4ece;&#x800c;&#x63d0;&#x9ad8;&#x5206;&#x5e03;&#x5f0f;&#x8c03;&#x7528;&#x7684;&#x6027;&#x80fd;&#x548c;&#x964d;&#x4f4e;&#x7f51;&#x7edc;&#x8d1f;&#x8f7d;&#xff0c;&#x4f46;&#x5728;&#x8fd9;&#x91cc;&#xff0c;&#x6211;&#x6cdb;&#x6307;&#x7528;&#x4e8e;&#x5c55;&#x793a;&#x5c42;&#x4e0e;&#x670d;&#x52a1;&#x5c42;&#x4e4b;&#x95f4;&#x7684;&#x6570;&#x636e;&#x4f20;&#x8f93;&#x5bf9;&#x8c61;&#x3002;\n</span>\n&#x4f20;&#x8f93;&#x7ed9;&#x5ba2;&#x6237;&#x7aef;&#x7684;&#x6570;&#x636e;&#x5bf9;&#x8c61;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,17"}}],"payload":{"tag":"h2","lines":"11,12"}},{"content":"DO&#xff08;Domain Object&#xff09;&#xff1a;","children":[{"content":"<pre data-lines=\"21,26\"><code data-lines=\"21,26\">&#x9886;&#x57df;&#x5bf9;&#x8c61;&#xff0c;&#x5c31;&#x662f;&#x4ece;&#x73b0;&#x5b9e;&#x4e16;&#x754c;&#x4e2d;&#x62bd;&#x8c61;&#x51fa;&#x6765;&#x7684;&#x6709;&#x5f62;&#x6216;&#x65e0;&#x5f62;&#x7684;&#x4e1a;&#x52a1;&#x5b9e;&#x4f53;&#x3002;\n\n&#x4ece;&#x663e;&#x793a;&#x4e16;&#x754c;&#x4e2d;&#x62bd;&#x8c61;&#x51fa;&#x6765;&#x7684;&#x5bf9;&#x8c61;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,26"}}],"payload":{"tag":"h2","lines":"20,21"}},{"content":"PO&#xff08;Persistent Object&#xff09;&#xff1a;","children":[{"content":"<pre data-lines=\"28,33\"><code data-lines=\"28,33\">&#x6301;&#x4e45;&#x5316;&#x5bf9;&#x8c61;&#xff0c;&#x5b83;&#x8ddf;&#x6301;&#x4e45;&#x5c42;&#xff08;&#x901a;&#x5e38;&#x662f;&#x5173;&#x7cfb;&#x578b;&#x6570;&#x636e;&#x5e93;&#xff09;&#x7684;&#x6570;&#x636e;&#x7ed3;&#x6784;&#x5f62;&#x6210;&#x4e00;&#x4e00;&#x5bf9;&#x5e94;&#x7684;&#x6620;&#x5c04;&#x5173;&#x7cfb;&#xff0c;&#x5982;&#x679c;&#x6301;&#x4e45;&#x5c42;&#x662f;&#x5173;&#x7cfb;&#x578b;&#x6570;&#x636e;&#x5e93;&#xff0c;&#x90a3;&#x4e48;&#xff0c;&#x6570;&#x636e;&#x8868;&#x4e2d;&#x7684;&#x6bcf;&#x4e2a;&#x5b57;&#x6bb5;&#xff08;&#x6216;&#x82e5;&#x5e72;&#x4e2a;&#xff09;&#x5c31;&#x5bf9;&#x5e94;PO&#x7684;&#x4e00;&#x4e2a;&#xff08;&#x6216;&#x82e5;&#x5e72;&#x4e2a;&#xff09;&#x5c5e;&#x6027;&#x3002;\n\n&#x7b80;&#x5355;&#x7406;&#x89e3;&#x4e3a;,&#x6570;&#x636e;&#x5e93;&#x67d0;&#x6761;&#x8bb0;&#x5f55;&#x7684;&#x6570;&#x636e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,33"}}],"payload":{"tag":"h2","lines":"27,28"}},{"content":"BO (business object)","children":[{"content":"<pre data-lines=\"38,43\"><code data-lines=\"38,43\">&#x591a;&#x4e2a;PO&#x7ec4;&#x5408;&#x8d77;&#x6765;&#x7684;&#x5bf9;&#x8c61;&#x79f0;&#x4e3a;<span class=\"hljs-keyword\">BO\n</span>\n&#x6bd4;&#x5982;&#x7b80;&#x5386;&#x4fe1;&#x606f;&#x5305;&#x542b;,&#x5de5;&#x4f5c;&#x7ecf;&#x5386;,&#x793e;&#x4f1a;&#x5173;&#x7cfb;,&#x6559;&#x80b2;&#x7ecf;&#x5386;,&#x4e2a;&#x4eba;&#x4fe1;&#x606f;,&#x6bcf;&#x4e00;&#x4e2a;&#x90fd;&#x662f;&#x4e00;&#x4e2a;PO,&#x591a;&#x4e2a;PO&#x5408;&#x5e76;&#x8d77;&#x6765;&#x662f;&#x4e00;&#x4e2a;<span class=\"hljs-keyword\">BO\n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"38,43"}}],"payload":{"tag":"h2","lines":"37,38"}},{"content":"QO ( query object )","children":[{"content":"<pre data-lines=\"47,50\"><code data-lines=\"47,50\">&#x67e5;&#x8be2;&#x5bf9;&#x8c61;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,50"}}],"payload":{"tag":"h2","lines":"46,47"}},{"content":"POJO ( plain ordinary java object )","children":[],"payload":{"tag":"h2","lines":"53,54"}},{"content":"VM","children":[{"content":"<pre data-lines=\"56,59\"><code data-lines=\"56,59\"><span class=\"hljs-keyword\">View</span> Model\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"56,59"}}],"payload":{"tag":"h2","lines":"55,56"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

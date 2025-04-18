@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5173;&#x4e8e;git reset&#x547d;&#x4ee4;&#x76f8;&#x5173;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"\n<p data-lines=\"4,5\">&#x4e86;&#x89e3;git reset --hard &#x548c; git reset --soft &#x4e4b;&#x95f4;&#x533a;&#x522b;</p>","children":[],"payload":{"tag":"li","lines":"4,6"}},{"content":"\n<p data-lines=\"6,7\">&#x9996;&#x5148;&#x8ba4;&#x8bc6;&#x4e0b;&#x4e00;&#x4e2a;&#x5173;&#x7cfb;: &#x5de5;&#x4f5c;&#x533a; &#x6682;&#x5b58;&#x533a; &#x672c;&#x5730;&#x7248;&#x672c;&#x5e93;</p>","children":[],"payload":{"tag":"li","lines":"6,8"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"<strong>git reset</strong>","children":[{"content":"mixed&#xff08;&#x6df7;&#x5408;&#xff09;reset&#x9ed8;&#x8ba4;&#x7684;&#xff0c;&#x4e0d;&#x6307;&#x5b9a;reset&#x7c7b;&#x578b;&#x5c31;&#x662f;&#x5b83;&#xff0c;&#x79fb;&#x52a8;&#x7248;&#x672c;&#x5e93;HEAD&#x6307;&#x9488;&#xff0c;&#x91cd;&#x7f6e;&#x6682;&#x5b58;&#x533a;&#xff0c;&#x4f46;&#x4e0d;&#x91cd;&#x7f6e;&#x5de5;&#x4f5c;&#x533a;&#x3002;&#x5c31;&#x6bd4;&#x5982;&#x8bf4;&#x4f60;&#x4ece;&#x5f53;&#x524d;&#x7248;&#x672c;&#x56de;&#x9000;&#x5230;&#x5386;&#x53f2;&#x7248;&#x672c;&#xff0c;&#x4f60;&#x5de5;&#x4f5c;&#x533a;&#x66f4;&#x6539;&#x7684;&#x6587;&#x4ef6;&#x548c;&#x4ee3;&#x7801;&#x90fd;&#x662f;&#x4e0d;&#x4f1a;&#x53d8;&#x6210;&#x5386;&#x53f2;&#x7248;&#x672c;&#x7684;&#x3002;","children":[],"payload":{"tag":"li","lines":"10,12"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"<strong>git reset --soft</strong>","children":[{"content":"\n<p data-lines=\"14,15\">soft &#xff08;&#x8f6f;&#xff09;&#xff0c;&#x4ec5;&#x4ec5;&#x79fb;&#x52a8;&#x7248;&#x672c;&#x5e93;HEAD&#x6307;&#x9488;&#xff0c;&#x5176;&#x4ed6;&#x4ec0;&#x4e48;&#x4e8b;&#x90fd;&#x4e0d;&#x505a;&#xff0c;&#x5373;&#x7d22;&#x5f15;&#x6587;&#x4ef6;&#xff08;&#x6682;&#x5b58;&#x533a;&#xff09;&#x3001;&#x5de5;&#x4f5c;&#x533a;&#x4e0d;&#x4f1a;&#x91cd;&#x7f6e;</p>","children":[],"payload":{"tag":"li","lines":"14,16"}},{"content":"\n<p data-lines=\"16,17\">soft&#xff1a;&#x4ec5;&#x4ec5;&#x5c06;HEAD&#x6307;&#x9488;&#x6307;&#x5411;&#x4e86;commit1&#xff0c;&#x6682;&#x5b58;&#x533a;&#x548c;&#x5de5;&#x4f5c;&#x533a;&#x8fd8;&#x7528;&#x7684;&#x662f;commit2&#x7684;&#x3002;git status&#x63d0;&#x793a;&#xff1a;&#x9700;&#x8981;&#x63d0;&#x4ea4;&#x7684;&#x66f4;&#x6539;&#x3002;&#x6682;&#x5b58;&#x533a;&#x8fd8;&#x662f;commit2&#x7684;&#xff0c;&#x6240;&#x4ee5;&#x5bf9;&#x4e8e;commit1&#x6765;&#x8bf4;&#x7b49;&#x4e8e;&#x662f;&#x5df2;&#x7ecf;add&#x5230;&#x6682;&#x5b58;&#x533a;&#xff0c;&#x4f46;&#x6ca1;commit&#x5230;&#x672c;&#x5730;&#x5e93;&#xff0c;&#x6240;&#x4ee5;&#x63d0;&#x793a;&#x53eb;&#x4f60;&#x63d0;&#x4ea4;&#x3002;</p>","children":[],"payload":{"tag":"li","lines":"16,18"}}],"payload":{"tag":"h2","lines":"12,13"}},{"content":"<strong>git reset --hard</strong>","children":[{"content":"hard&#xff08;&#x786c;&#xff09;&#xff0c;&#x79fb;&#x52a8;&#x7248;&#x672c;&#x5e93;HEAD&#x6307;&#x9488;&#xff0c;&#x91cd;&#x7f6e;&#x6682;&#x5b58;&#x533a;&#x548c;&#x5de5;&#x4f5c;&#x533a;&#x3002;&#x5f7b;&#x5e95;&#x56de;&#x9000;&#x5230;&#x67d0;&#x4e2a;&#x7248;&#x672c;&#xff0c;&#x672c;&#x5730;&#x7684;&#x4ee3;&#x7801;&#x4e5f;&#x4f1a;&#x53d8;&#x4e3a;&#x67d0;&#x4e2a;&#x7248;&#x672c;&#x7684;&#x5185;&#x5bb9;&#xff0c;&#x6b64;&#x547d;&#x4ee4;&#x614e;&#x7528;&#xff01; &#x5982;&#x679c;&#x771f;&#x8981;&#x4f7f;&#x7528;&#xff0c;&#x5efa;&#x8bae;&#x5148;commit&#x63d0;&#x4ea4;&#x4e00;&#x4efd;&#x5230;&#x672c;&#x5730;&#x5e93;&#x91cc;&#xff0c;&#x540e;&#x6094;&#x518d;git reset&#x56de;&#x53bb;","children":[],"payload":{"tag":"li","lines":"20,21"}}],"payload":{"tag":"h2","lines":"18,19"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

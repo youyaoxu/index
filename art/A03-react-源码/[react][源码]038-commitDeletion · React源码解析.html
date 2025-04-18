@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"commitDeletion","children":[{"content":"<code>HostComponent</code>","children":[{"content":"<pre data-lines=\"160,161\"><code>&#x5982;&#x679c;&#x6709;`ref`&#x5219;&#x8981;&#x5378;&#x8f7d;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"160,161"}}],"payload":{"tag":"h3","lines":"158,159"}},{"content":"ClassComponent","children":[{"content":"<pre data-lines=\"164,167\"><code>&#x5982;&#x679c;&#x6709;`ref`&#x5219;&#x8981;&#x5378;&#x8f7d;\n\n&#x5982;&#x679c;&#x6709;`componentWillUnmount`&#x751f;&#x547d;&#x5468;&#x671f;&#x65b9;&#x6cd5;&#xff0c;&#x5219;&#x8c03;&#x7528;&#x4e4b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"164,167"}}],"payload":{"tag":"h3","lines":"162,163"}},{"content":"HostPortal","children":[{"content":"<pre data-lines=\"170,171\"><code>&#x7ee7;&#x7eed;&#x8c03;&#x7528;`unmountHostComponents`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"170,171"}},{"content":"<pre data-lines=\"172,201\"><code data-lines=\"172,201\"><span class=\"hljs-keyword\">function</span> commitUnmount(<span class=\"hljs-keyword\">current</span>: Fiber): <span class=\"hljs-type\">void</span> {\n  onCommitUnmount(<span class=\"hljs-keyword\">current</span>)\n\n  switch (<span class=\"hljs-keyword\">current</span>.tag) {\n    <span class=\"hljs-keyword\">case</span> ClassComponent: {\n      safelyDetachRef(<span class=\"hljs-keyword\">current</span>)\n      const instance = <span class=\"hljs-keyword\">current</span>.stateNode\n      <span class=\"hljs-keyword\">if</span> (typeof instance.componentWillUnmount === <span class=\"hljs-string\">&apos;function&apos;</span>) {\n        safelyCallComponentWillUnmount(<span class=\"hljs-keyword\">current</span>, instance)\n      }\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostComponent: {\n      safelyDetachRef(<span class=\"hljs-keyword\">current</span>)\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostPortal: {\n      <span class=\"hljs-keyword\">if</span> (supportsMutation) {\n        unmountHostComponents(<span class=\"hljs-keyword\">current</span>)\n      } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span> (supportsPersistence) {\n        emptyPortalContainer(<span class=\"hljs-keyword\">current</span>)\n      }\n      <span class=\"hljs-keyword\">return</span>\n    }\n  }\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"172,201"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"202,203"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"206,207"}}],"payload":{"tag":"h3","lines":"168,169"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

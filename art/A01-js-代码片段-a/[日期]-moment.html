@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"moment&#x5e38;&#x7528;&#x603b;&#x7ed3;","children":[{"content":"<pre data-lines=\"1,11\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x52a0;</span>\nmoment.<span class=\"hljs-title function_\">add</span>(<span class=\"hljs-number\">7</span>,<span class=\"hljs-string\">&apos;days&apos;</span>) <span class=\"hljs-comment\">// &#x952e;</span>\n\nmoment.<span class=\"hljs-title function_\">add</span>(<span class=\"hljs-number\">7</span>,<span class=\"hljs-string\">&apos;d&apos;</span>) <span class=\"hljs-comment\">// &#x503c;</span>\n\nmoment.<span class=\"hljs-title function_\">add</span>(<span class=\"hljs-number\">7</span>,<span class=\"hljs-string\">&apos;days&apos;</span>).<span class=\"hljs-title function_\">add</span>(<span class=\"hljs-number\">1</span>,<span class=\"hljs-string\">&apos;months&apos;</span>) <span class=\"hljs-comment\">// &#x94fe;&#x5f0f;</span>\n\nmoment.<span class=\"hljs-title function_\">add</span>({<span class=\"hljs-attr\">days</span>:<span class=\"hljs-number\">7</span>,<span class=\"hljs-attr\">months</span>:<span class=\"hljs-number\">1</span>}) <span class=\"hljs-comment\">// &#x5bf9;&#x8c61;&#x5b57;&#x9762;&#x91cf;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,11"}},{"content":"<pre data-lines=\"12,16\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x51cf;</span>\nmoment.<span class=\"hljs-title function_\">substract</span>(<span class=\"hljs-number\">7</span>,<span class=\"hljs-string\">&apos;days&apos;</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,16"}},{"content":"<pre data-lines=\"16,20\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x683c;&#x5f0f;&#x5316;</span>\nmoment.<span class=\"hljs-title function_\">format</span>().<span class=\"hljs-title function_\">format</span>(<span class=\"hljs-string\">&apos;YYYY-MM-DD hh:mm:ss&apos;</span>)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,20"}},{"content":"<table data-lines=\"21,32\">\n<thead data-lines=\"21,22\">\n<tr data-lines=\"21,22\">\n<th>&#x952e;</th>\n<th>&#x503c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"23,32\">\n<tr data-lines=\"23,24\">\n<td>years</td>\n<td>y</td>\n</tr>\n<tr data-lines=\"24,25\">\n<td>quarters</td>\n<td>Q</td>\n</tr>\n<tr data-lines=\"25,26\">\n<td>months</td>\n<td>M</td>\n</tr>\n<tr data-lines=\"26,27\">\n<td>weeks</td>\n<td>w</td>\n</tr>\n<tr data-lines=\"27,28\">\n<td>days</td>\n<td>d</td>\n</tr>\n<tr data-lines=\"28,29\">\n<td>hours</td>\n<td>h</td>\n</tr>\n<tr data-lines=\"29,30\">\n<td>minutes</td>\n<td>m</td>\n</tr>\n<tr data-lines=\"30,31\">\n<td>seconds</td>\n<td>s</td>\n</tr>\n<tr data-lines=\"31,32\">\n<td>milliseconds</td>\n<td>ms</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"21,32"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

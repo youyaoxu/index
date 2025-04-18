@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"git&#x914d;&#x7f6e;","children":[{"content":"&#x7528;&#x6237;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"3,11\"><code data-lines=\"3,11\"><span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x914d;&#x7f6e;</span>\n<span class=\"hljs-string\">git</span> <span class=\"hljs-string\">config</span> <span class=\"hljs-built_in\">--list</span>\n\n<span class=\"hljs-comment\"># </span>\n<span class=\"hljs-string\">git</span> <span class=\"hljs-string\">config</span> <span class=\"hljs-built_in\">--global</span> <span class=\"hljs-string\">user</span>.<span class=\"hljs-string\">name</span> <span class=\"hljs-string\">&apos;youyao.xu&apos;</span>\n<span class=\"hljs-string\">git</span> <span class=\"hljs-string\">config</span> <span class=\"hljs-built_in\">--global</span> <span class=\"hljs-string\">user</span>.<span class=\"hljs-string\">email</span> <span class=\"hljs-string\">&apos;youyao.xu@diact.com&apos;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,11"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x5982;&#x4f55;&#x4f7f;&#x7528;git stash","children":[{"content":"<pre data-lines=\"13,23\"><code data-lines=\"13,23\"><span class=\"hljs-meta\"># &#x5b58;&#x50a8;&#x5f53;&#x524d;&#x4fee;&#x6539;</span>\ngit stash <span class=\"hljs-keyword\">save</span> &apos;&#x4e00;&#x6bb5;&#x63cf;&#x8ff0;&#x6587;&#x5b57;&apos;\n\n<span class=\"hljs-meta\"># &#x67e5;&#x770b;&#x73b0;&#x6709;&#x5b58;&#x50a8;</span>\ngit stash list\n\n<span class=\"hljs-meta\"># &#x53d6;&#x51fa;&#x5b58;&#x50a8;</span>\n git stash <span class=\"hljs-keyword\">pop</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,23"}}],"payload":{"tag":"h2","lines":"12,13"}},{"content":"&#x5982;&#x4f55;&#x4f7f;&#x7528;git tag","children":[{"content":"<pre data-lines=\"25,36\"><code data-lines=\"25,36\"><span class=\"hljs-comment\"># &#x7528; git tag -a v1.0 &#x547d;&#x4ee4;&#x7ed9;&#x6700;&#x65b0;&#x4e00;&#x6b21;&#x63d0;&#x4ea4;&#x6253;&#x4e0a;&#xff08;HEAD&#xff09;&quot;v1.0&quot;&#x7684;&#x6807;&#x7b7e;</span>\n<span class=\"hljs-comment\"># -a &#x9009;&#x9879;&#x610f;&#x4e3a;&quot;&#x521b;&#x5efa;&#x4e00;&#x4e2a;&#x5e26;&#x6ce8;&#x89e3;&#x7684;&#x6807;&#x7b7e;&quot;</span>\ngit <span class=\"hljs-keyword\">tag</span> <span class=\"hljs-title\">-a</span> v1.<span class=\"hljs-number\">0</span> \n\n<span class=\"hljs-comment\"># &#x5047;&#x8bbe;&#x6211;&#x4eec;&#x53d1;&#x5e03;&#x4e86;&#x63d0;&#x4ea4; 85fc7e7(&#x4e0a;&#x9762;&#x5b9e;&#x4f8b;&#x6700;&#x540e;&#x4e00;&#x884c;)&#xff0c;&#x4f46;&#x662f;&#x90a3;&#x65f6;&#x5019;&#x5fd8;&#x4e86;&#x7ed9;&#x5b83;&#x6253;&#x6807;&#x7b7e;</span>\ngit <span class=\"hljs-keyword\">tag</span> <span class=\"hljs-title\">-a</span> v0.<span class=\"hljs-number\">9</span> <span class=\"hljs-number\">85</span>fc7e7\n\n<span class=\"hljs-comment\"># &#x6307;&#x5b9a;&#x6807;&#x7b7e;&#x4fe1;&#x606f;&#x547d;&#x4ee4;</span>\ngit <span class=\"hljs-keyword\">tag</span> <span class=\"hljs-title\">-a</span> <span class=\"hljs-tag\">&lt;tagname&gt;</span> -m <span class=\"hljs-string\">&quot;runoob.com&#x6807;&#x7b7e;&quot;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,36"}}],"payload":{"tag":"h2","lines":"24,25"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

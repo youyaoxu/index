@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x5165;&#x95e8;]-useLayoutEffect","children":[{"content":"<pre data-lines=\"1,38\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useState, useEffect, useLayoutEffect } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">LayoutEffect</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> [width, setWidth] = <span class=\"hljs-title function_\">useState</span>(<span class=\"hljs-string\">&apos;100px&apos;</span>);\n\n  <span class=\"hljs-comment\">// useEffect &#x4f1a;&#x5728;&#x6240;&#x6709; DOM &#x6e32;&#x67d3;&#x5b8c;&#x6210;&#x540e;&#x6267;&#x884c; effect &#x56de;&#x8c03;</span>\n  <span class=\"hljs-title function_\">useEffect</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;effect width: &apos;</span>, width);\n  });\n  <span class=\"hljs-comment\">// useLayoutEffect &#x4f1a;&#x5728;&#x6240;&#x6709;&#x7684; DOM &#x53d8;&#x66f4;&#x4e4b;&#x540e;&#x540c;&#x6b65;&#x6267;&#x884c; effect &#x56de;&#x8c03;</span>\n  <span class=\"hljs-title function_\">useLayoutEffect</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;layoutEffect width: &apos;</span>, width);\n  });\n  \n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&apos;content&apos;</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{{</span> <span class=\"hljs-attr\">width</span>, <span class=\"hljs-attr\">background:</span> &apos;<span class=\"hljs-attr\">red</span>&apos; }}&gt;</span>&#x5185;&#x5bb9;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> setWidth(&apos;100px&apos;)}&gt;100px<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> setWidth(&apos;200px&apos;)}&gt;200px<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> setWidth(&apos;300px&apos;)}&gt;300px<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  );\n}\n\n<span class=\"hljs-comment\">// &#x4f7f;&#x7528; setTimeout &#x4fdd;&#x8bc1;&#x5728;&#x7ec4;&#x4ef6;&#x7b2c;&#x4e00;&#x6b21;&#x6e32;&#x67d3;&#x5b8c;&#x6210;&#x540e;&#x6267;&#x884c;&#xff0c;&#x83b7;&#x53d6;&#x5230;&#x5bf9;&#x5e94;&#x7684; DOM</span>\n<span class=\"hljs-built_in\">setTimeout</span>(<span class=\"hljs-function\">() =&gt;</span> {\n  <span class=\"hljs-keyword\">const</span> contentEl = <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-title function_\">getElementById</span>(<span class=\"hljs-string\">&apos;content&apos;</span>);\n  <span class=\"hljs-comment\">// &#x76d1;&#x89c6;&#x76ee;&#x6807; DOM &#x7ed3;&#x6784;&#x53d8;&#x66f4;&#xff0c;&#x4f1a;&#x5728; useLayoutEffect &#x56de;&#x8c03;&#x6267;&#x884c;&#x540e;&#xff0c;useEffect &#x56de;&#x8c03;&#x6267;&#x884c;&#x524d;&#x8c03;&#x7528;</span>\n  <span class=\"hljs-keyword\">const</span> observer = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">MutationObserver</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;content element layout updated&apos;</span>);\n  });\n  observer.<span class=\"hljs-title function_\">observe</span>(contentEl, {\n    <span class=\"hljs-attr\">attributes</span>: <span class=\"hljs-literal\">true</span>\n  });\n}, <span class=\"hljs-number\">1000</span>);\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,38"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

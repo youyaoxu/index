@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"screen","children":[{"content":"<pre data-lines=\"3,4\"><code>&gt; screen&#x5bf9;&#x8c61;,&#x6bd4;&#x8f83;&#x51b7;&#x95e8;,&#x8868;&#x660e;&#x5ba2;&#x6237;&#x7aef;&#x80fd;&#x529b;,&#x5176;&#x4e2d;&#x5305;&#x62ec;&#x6d4f;&#x89c8;&#x5668;&#x7a97;&#x53e3;&#x5916;&#x90e8;&#x663e;&#x793a;&#x5668;&#x7684;&#x4fe1;&#x606f;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,4"}},{"content":"&#x5c5e;&#x6027;","children":[{"content":"<pre data-lines=\"6,31\"><code data-lines=\"6,31\">&#x5c5e;&#x6027;              &#x8bf4;&#x660e;\n\n<span class=\"hljs-attribute\">height</span>            &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x9ad8;&#x5ea6;\n<span class=\"hljs-attribute\">width</span>             &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x5bbd;&#x5ea6;\navailHeight       &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x9ad8;&#x5ea6;&#x51cf;&#x53bb;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x9ad8;&#x5ea6;&#x4e4b;&#x540e;&#x7684;&#x503c;(&#x53ea;&#x8bfb;)\navailWidth        &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x5bbd;&#x5ea6;&#x51cf;&#x53bb;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x5bbd;&#x5ea6;&#x4e4b;&#x540e;&#x7684;&#x503c;(&#x53ea;&#x8bfb;)\n\n<span class=\"hljs-attribute\">left</span>              &#x5f53;&#x524d;&#x5c4f;&#x5e55;&#x8ddd;&#x5de6;&#x8fb9;&#x7684;&#x50cf;&#x7d20;&#x8ddd;&#x79bb;<span class=\"hljs-selector-attr\">[firefox&#x8fd4;&#x56de;0&#xff0c;chrome&#x548c;IE&#x4e0d;&#x652f;&#x6301;]</span>\n<span class=\"hljs-attribute\">top</span>               &#x5f53;&#x524d;&#x5c4f;&#x5e55;&#x8ddd;&#x4e0a;&#x65b9;&#x7684;&#x50cf;&#x7d20;&#x8ddd;&#x79bb;<span class=\"hljs-selector-attr\">[firefox&#x8fd4;&#x56de;0&#xff0c;chrome&#x548c;IE&#x4e0d;&#x652f;&#x6301;]</span>\navailLeft         &#x672a;&#x88ab;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x5360;&#x7528;&#x7684;&#x6700;&#x5de6;&#x4fa7;&#x7684;&#x50cf;&#x7d20;&#x503c;(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[chrome&#x548c;firefox&#x8fd4;&#x56de;0&#xff0c;IE&#x4e0d;&#x652f;&#x6301;]</span>\navailTop          &#x672a;&#x88ab;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x5360;&#x7528;&#x7684;&#x6700;&#x4e0a;&#x65b9;&#x7684;&#x50cf;&#x7d20;&#x503c;(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[chrome&#x548c;firefox&#x8fd4;&#x56de;0&#xff0c;IE&#x4e0d;&#x652f;&#x6301;]</span>\n\nbufferDepth       &#x8bfb;&#x3001;&#x5199;&#x7528;&#x4e8e;&#x5448;&#x73b0;&#x5c4f;&#x5916;&#x4f4d;&#x56fe;&#x7684;&#x4f4d;&#x6570;<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;0&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\ncolorDepth        &#x7528;&#x4e8e;&#x8868;&#x73b0;&#x989c;&#x8272;&#x7684;&#x4f4d;&#x6570;(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE8-&#x8fd4;&#x56de;32&#xff0c;&#x5176;&#x4ed6;&#x6d4f;&#x89c8;&#x5668;&#x8fd4;&#x56de;24]</span>\npixelDepth        &#x5c4f;&#x5e55;&#x7684;&#x4f4d;&#x6df1;(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE8-&#x4e0d;&#x652f;&#x6301;&#xff0c;&#x5176;&#x4ed6;&#x6d4f;&#x89c8;&#x5668;&#x8fd4;&#x56de;24]</span>\n\ndeviceXDPI        &#x5c4f;&#x5e55;&#x5b9e;&#x9645;&#x7684;&#x6c34;&#x5e73;<span class=\"hljs-built_in\">DPI</span>(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;96&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\ndeviceYDPI        &#x5c4f;&#x5e55;&#x5b9e;&#x9645;&#x7684;&#x5782;&#x76f4;<span class=\"hljs-built_in\">DPI</span>(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;96&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\nlogicalXDPI       &#x5c4f;&#x5e55;&#x903b;&#x8f91;&#x7684;&#x6c34;&#x5e73;<span class=\"hljs-built_in\">DPI</span>(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;96&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\nlogicalYDPI       &#x5c4f;&#x5e55;&#x903b;&#x8f91;&#x7684;&#x5782;&#x76f4;<span class=\"hljs-built_in\">DPI</span>(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;96&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\n\nupdateInterval      &#x8bfb;&#x3001;&#x5199;&#x4ee5;&#x6beb;&#x79d2;&#x8868;&#x793a;&#x7684;&#x5c4f;&#x5e55;&#x5237;&#x65b0;&#x65f6;&#x95f4;&#x95f4;&#x9694;<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;0&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\nfontSmoothingEnabled     &#x662f;&#x5426;&#x542f;&#x7528;&#x4e86;&#x5b57;&#x4f53;&#x5e73;&#x6ed1;(&#x53ea;&#x8bfb;)<span class=\"hljs-selector-attr\">[IE&#x8fd4;&#x56de;true&#xff0c;chrome&#x548c;firefox&#x4e0d;&#x652f;&#x6301;]</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,31"}}],"payload":{"tag":"h4","lines":"5,6"}},{"content":"&#x5e38;&#x7528;","children":[{"content":"<pre data-lines=\"33,54\"><code data-lines=\"33,54\">- availHeight\n  - &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x9ad8;&#x5ea6;&#x51cf;&#x53bb;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x9ad8;&#x5ea6;&#x4e4b;&#x540e;&#x7684;&#x503c;(&#x53ea;&#x8bfb;)&#xff0c;&#x4ee3;&#x8868;&#x5c4f;&#x5e55;&#x53ef;&#x7528;&#x9ad8;&#x5ea6;&#xff0c;&#x5355;&#x4f4d;&#x4e3a;&#x50cf;&#x7d20;\n- availWidth\n  - &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x5bbd;&#x5ea6;&#x51cf;&#x53bb;&#x7cfb;&#x7edf;&#x90e8;&#x4ef6;&#x5bbd;&#x5ea6;&#x4e4b;&#x540e;&#x7684;&#x503c;(&#x53ea;&#x8bfb;)&#xff0c;&#x4ee3;&#x8868;&#x5c4f;&#x5e55;&#x53ef;&#x7528;&#x5bbd;&#x5ea6;&#xff0c;&#x5355;&#x4f4d;&#x4e3a;&#x50cf;&#x7d20;\n  \n  console<span class=\"hljs-selector-class\">.log</span>(screen.availHeight);<span class=\"hljs-comment\">//1040</span>\n  console<span class=\"hljs-selector-class\">.log</span>(screen.availWidth);<span class=\"hljs-comment\">//1920</span>\n  \n- <span class=\"hljs-attribute\">height</span>\n  - &#x5c4f;&#x5e55;&#x7684;&#x50cf;&#x7d20;&#x9ad8;&#x5ea6;\n- <span class=\"hljs-attribute\">width</span>\n  - screen<span class=\"hljs-selector-class\">.height</span>&#x548c;screen<span class=\"hljs-selector-class\">.width</span>&#x4e24;&#x4e2a;&#x5c5e;&#x6027;&#xff0c;&#x4e00;&#x822c;&#x7528;&#x6765;&#x4e86;&#x89e3;&#x8bbe;&#x5907;&#x7684;&#x5206;&#x8fa8;&#x7387;&#x3002;&#x9664;&#x975e;&#x8c03;&#x6574;&#x663e;&#x793a;&#x5668;&#x7684;&#x5206;&#x8fa8;&#x7387;&#xff0c;&#x5426;&#x5219;&#x8fd9;&#x4e24;&#x4e2a;&#x503c;&#x53ef;&#x4ee5;&#x770b;&#x4f5c;&#x5e38;&#x91cf;&#xff0c;&#x4e0d;&#x4f1a;&#x53d1;&#x751f;&#x53d8;&#x5316;&#x3002;&#x663e;&#x793a;&#x5668;&#x7684;&#x5206;&#x8fa8;&#x7387;&#x4e0e;&#x6d4f;&#x89c8;&#x5668;&#x8bbe;&#x7f6e;&#x65e0;&#x5173;&#xff0c;&#x7f29;&#x653e;&#x7f51;&#x9875;&#x5e76;&#x4e0d;&#x4f1a;&#x6539;&#x53d8;&#x5206;&#x8fa8;&#x7387;\n  \n  if ((screen.width &lt;= <span class=\"hljs-number\">800</span>) &amp;&amp; (screen.height &lt;= <span class=\"hljs-number\">600</span>)) {\n    window<span class=\"hljs-selector-class\">.location</span><span class=\"hljs-selector-class\">.replace</span>(&apos;small.html&apos;);\n  } else {\n    window<span class=\"hljs-selector-class\">.location</span><span class=\"hljs-selector-class\">.replace</span>(&apos;wide.html&apos;);\n  }\n  \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,54"}}],"payload":{"tag":"h4","lines":"32,33"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

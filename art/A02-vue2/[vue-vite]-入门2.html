@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"API","children":[{"content":"&#x63d2;&#x4ef6;API","children":[{"content":"<pre data-lines=\"2,19\"><code>&#x81f4;&#x63d2;&#x4ef6;&#x521b;&#x4f5c;&#x8005;\n&#x7ea6;&#x5b9a;\n&#x63d2;&#x4ef6;&#x914d;&#x7f6e;\n&#x7b80;&#x5355;&#x793a;&#x4f8b;\n&#x5f15;&#x5165;&#x4e00;&#x4e2a;&#x865a;&#x62df;&#x6587;&#x4ef6;\n&#x8f6c;&#x6362;&#x81ea;&#x5b9a;&#x4e49;&#x6587;&#x4ef6;&#x7c7b;&#x578b;\n&#x901a;&#x7528;&#x94a9;&#x5b50;\nVite &#x72ec;&#x6709;&#x94a9;&#x5b50;\nconfig\nconfigResolved\nconfigureServer\ntransformIndexHtml\nhandleHotUpdate\n&#x63d2;&#x4ef6;&#x987a;&#x5e8f;\n&#x60c5;&#x666f;&#x5e94;&#x7528;\nRollup &#x63d2;&#x4ef6;&#x517c;&#x5bb9;&#x6027;\n&#x8def;&#x5f84;&#x89c4;&#x8303;&#x5316;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,19"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"HMR API","children":[{"content":"<pre data-lines=\"21,29\"><code>&#x5fc5;&#x9700;&#x7684;&#x6761;&#x4ef6;&#x5b88;&#x536b;\nhot.accept(cb)\nhot.accept(deps, cb)\nhot.dispose(cb)\nhot.data\nhot.decline()\nhot.invalidate()\nhot.on(event, cb)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,29"}}],"payload":{"tag":"h2","lines":"20,21"}},{"content":"JavaScript API","children":[{"content":"<pre data-lines=\"31,37\"><code>createServer\nInlineConfig\nViteDevServer\nbuild\nresolveConfig\ntransformWithEsbuild\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,37"}}],"payload":{"tag":"h2","lines":"30,31"}},{"content":"&#x914d;&#x7f6e;&#x53c2;&#x8003;","children":[],"payload":{"tag":"h2","lines":"37,38"}}],"payload":{"tag":"h1","lines":"0,1"}},{"content":"&#x914d;&#x7f6e;&#x6587;&#x4ef6;","children":[{"content":"&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x89e3;&#x6790;","children":[],"payload":{"tag":"h2","lines":"40,41"}},{"content":"&#x914d;&#x7f6e;&#x667a;&#x80fd;&#x63d0;&#x793a;","children":[],"payload":{"tag":"h2","lines":"41,42"}},{"content":"&#x60c5;&#x666f;&#x914d;&#x7f6e;","children":[],"payload":{"tag":"h2","lines":"42,43"}},{"content":"&#x5f02;&#x6b65;&#x914d;&#x7f6e;","children":[],"payload":{"tag":"h2","lines":"43,44"}},{"content":"&#x5171;&#x4eab;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"45,69\"><code>root\nbase\nmode\ndefine\nplugins\npublicDir\ncacheDir\nresolve.alias\nresolve.dedupe\nresolve.conditions\nresolve.mainFields\nresolve.extensions\nresolve.preserveSymlinks\ncss.modules\ncss.postcss\ncss.preprocessorOptions\njson.namedExports\njson.stringify\nesbuild\nassetsInclude\nlogLevel\nclearScreen\nenvDir\nenvPrefix\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,69"}}],"payload":{"tag":"h2","lines":"44,45"}},{"content":"&#x5f00;&#x53d1;&#x670d;&#x52a1;&#x5668;&#x9009;&#x9879;","children":[{"content":"<pre data-lines=\"71,85\"><code>server.host\nserver.port\nserver.strictPort\nserver.https\nserver.open\nserver.proxy\nserver.cors\nserver.force\nserver.hmr\nserver.watch\nserver.middlewareMode\nserver.fs.strict\nserver.fs.allow\nserver.origin\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"71,85"}}],"payload":{"tag":"h2","lines":"70,71"}},{"content":"&#x6784;&#x5efa;&#x9009;&#x9879;","children":[{"content":"<pre data-lines=\"87,108\"><code>build.target\nbuild.polyfillModulePreload\nbuild.outDir\nbuild.assetsDir\nbuild.assetsInlineLimit\nbuild.cssCodeSplit\nbuild.cssTarget\nbuild.sourcemap\nbuild.rollupOptions\nbuild.commonjsOptions\nbuild.dynamicImportVarsOptions\nbuild.lib\nbuild.manifest\nbuild.ssrManifest\nbuild.minify\nbuild.terserOptions\nbuild.write\nbuild.emptyOutDir\nbuild.brotliSize\nbuild.chunkSizeWarningLimit\nbuild.watch\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"87,108"}}],"payload":{"tag":"h2","lines":"86,87"}},{"content":"&#x4f9d;&#x8d56;&#x4f18;&#x5316;&#x9009;&#x9879;","children":[{"content":"<pre data-lines=\"110,114\"><code>optimizeDeps.entries\noptimizeDeps.exclude\noptimizeDeps.include\noptimizeDeps.keepNames\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"110,114"}}],"payload":{"tag":"h2","lines":"109,110"}},{"content":"SSR &#x9009;&#x9879;","children":[{"content":"<pre data-lines=\"116,119\"><code>ssr.external\nssr.noExternal\nssr.target\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"116,119"}}],"payload":{"tag":"h2","lines":"115,116"}}],"payload":{"tag":"h1","lines":"39,40"}}]},{})</script>
+</body>
+</html>

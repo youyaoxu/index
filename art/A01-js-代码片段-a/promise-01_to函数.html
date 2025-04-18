@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"promise-01_to&#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"2,27\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\"> Promise </span>} <span class=\"hljs-variable\">promise</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\"> Object= </span>} <span class=\"hljs-variable\">errorExt</span> - Additional Information you can pass to the err object\n * <span class=\"hljs-doctag\">@return</span> {<span class=\"hljs-type\"> Promise </span>}\n * <span class=\"hljs-doctag\">@example</span>\n * let [err,res]=await to(login({username:&apos;&apos;,password:&apos;&apos;}))\n *\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">to</span> (<span class=\"hljs-params\">\n  promise,\n  errorExt\n</span>) {\n  <span class=\"hljs-keyword\">return</span> promise\n    .<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">data</span>) =&gt;</span> [<span class=\"hljs-literal\">null</span>, data]) <span class=\"hljs-comment\">// &#x6267;&#x884c;&#x6210;&#x529f;&#xff0c;&#x8fd4;&#x56de;&#x6570;&#x7ec4;&#x7b2c;&#x4e00;&#x9879;&#x4e3a; null&#x3002;&#x7b2c;&#x4e8c;&#x4e2a;&#x662f;&#x7ed3;&#x679c;&#x3002;</span>\n    .<span class=\"hljs-title function_\">catch</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">err</span>) =&gt;</span> {\n      <span class=\"hljs-keyword\">if</span> (errorExt) {\n        <span class=\"hljs-title class_\">Object</span>.<span class=\"hljs-title function_\">assign</span>(err, errorExt)\n      }\n      <span class=\"hljs-keyword\">return</span> [err, <span class=\"hljs-literal\">undefined</span>] <span class=\"hljs-comment\">// &#x6267;&#x884c;&#x5931;&#x8d25;&#xff0c;&#x8fd4;&#x56de;&#x6570;&#x7ec4;&#x7b2c;&#x4e00;&#x9879;&#x4e3a;&#x9519;&#x8bef;&#x4fe1;&#x606f;&#xff0c;&#x7b2c;&#x4e8c;&#x9879;&#x4e3a; undefined</span>\n    })\n}\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> to\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,27"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

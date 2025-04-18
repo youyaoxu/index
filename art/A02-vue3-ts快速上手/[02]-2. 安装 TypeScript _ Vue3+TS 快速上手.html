@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5b89;&#x88c5;TS","children":[{"content":"<pre data-lines=\"2,3\"><code>&#x547d;&#x4ee4;&#x884c;&#x8fd0;&#x884c;&#x5982;&#x4e0b;&#x547d;&#x4ee4;&#xff0c;&#x5168;&#x5c40;&#x5b89;&#x88c5; TypeScript&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,3"}},{"content":"<pre data-lines=\"4,7\"><code data-lines=\"4,7\">npm <span class=\"hljs-keyword\">install</span> -g typescript \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}},{"content":"<pre data-lines=\"8,9\"><code>&#x5b89;&#x88c5;&#x5b8c;&#x6210;&#x540e;&#xff0c;&#x5728;&#x63a7;&#x5236;&#x53f0;&#x8fd0;&#x884c;&#x5982;&#x4e0b;&#x547d;&#x4ee4;&#xff0c;&#x68c0;&#x67e5;&#x5b89;&#x88c5;&#x662f;&#x5426;&#x6210;&#x529f;(3.x)&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,9"}},{"content":"<pre data-lines=\"10,13\"><code data-lines=\"10,13\"><span class=\"hljs-attribute\">tsc -V</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,13"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

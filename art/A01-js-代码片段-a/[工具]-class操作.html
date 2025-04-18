@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"class&#x64cd;&#x4f5c;","children":[{"content":"hasClass","children":[{"content":"<pre data-lines=\"3,14\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * Check if an element has a class\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">HTMLElement</span>} <span class=\"hljs-variable\">elm</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">string</span>} <span class=\"hljs-variable\">cls</span>\n * <span class=\"hljs-doctag\">@returns</span> {<span class=\"hljs-type\">boolean</span>}\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">hasClass</span>(<span class=\"hljs-params\">ele, cls</span>) {\n  <span class=\"hljs-keyword\">return</span> !!ele.<span class=\"hljs-property\">className</span>.<span class=\"hljs-title function_\">match</span>(<span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">RegExp</span>(<span class=\"hljs-string\">&quot;(\\\\s|^)&quot;</span> + cls + <span class=\"hljs-string\">&quot;(\\\\s|&#x24;)&quot;</span>))\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,14"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"addClass","children":[{"content":"<pre data-lines=\"16,26\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * Add class to element\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">HTMLElement</span>} <span class=\"hljs-variable\">elm</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">string</span>} <span class=\"hljs-variable\">cls</span>\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">addClass</span>(<span class=\"hljs-params\">ele, cls</span>) {\n  <span class=\"hljs-keyword\">if</span> (!<span class=\"hljs-title function_\">hasClass</span>(ele, cls)) ele.<span class=\"hljs-property\">className</span> += <span class=\"hljs-string\">&quot; &quot;</span> + cls\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,26"}}],"payload":{"tag":"h2","lines":"15,16"}},{"content":"removeClass","children":[{"content":"<pre data-lines=\"28,41\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * Remove class from element\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">HTMLElement</span>} <span class=\"hljs-variable\">elm</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">string</span>} <span class=\"hljs-variable\">cls</span>\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">removeClass</span>(<span class=\"hljs-params\">ele, cls</span>) {\n  <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-title function_\">hasClass</span>(ele, cls)) {\n    <span class=\"hljs-keyword\">const</span> reg = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">RegExp</span>(<span class=\"hljs-string\">&quot;(\\\\s|^)&quot;</span> + cls + <span class=\"hljs-string\">&quot;(\\\\s|&#x24;)&quot;</span>)\n    ele.<span class=\"hljs-property\">className</span> = ele.<span class=\"hljs-property\">className</span>.<span class=\"hljs-title function_\">replace</span>(reg, <span class=\"hljs-string\">&quot; &quot;</span>)\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,41"}}],"payload":{"tag":"h2","lines":"27,28"}},{"content":"toggleClass","children":[{"content":"<pre data-lines=\"43,64\"><code class=\"language-js\"><span class=\"hljs-comment\">/**\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">HTMLElement</span>} <span class=\"hljs-variable\">element</span>\n * <span class=\"hljs-doctag\">@param</span> {<span class=\"hljs-type\">string</span>} <span class=\"hljs-variable\">className</span>\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">toggleClass</span>(<span class=\"hljs-params\">element, className</span>) {\n  <span class=\"hljs-keyword\">if</span> (!element || !className) {\n    <span class=\"hljs-keyword\">return</span>\n  }\n  <span class=\"hljs-keyword\">let</span> classString = element.<span class=\"hljs-property\">className</span>\n  <span class=\"hljs-keyword\">const</span> nameIndex = classString.<span class=\"hljs-title function_\">indexOf</span>(className)\n  <span class=\"hljs-keyword\">if</span> (nameIndex === -<span class=\"hljs-number\">1</span>) {\n    classString += <span class=\"hljs-string\">&quot;&quot;</span> + className\n  } <span class=\"hljs-keyword\">else</span> {\n    classString =\n      classString.<span class=\"hljs-title function_\">substr</span>(<span class=\"hljs-number\">0</span>, nameIndex) +\n      classString.<span class=\"hljs-title function_\">substr</span>(nameIndex + className.<span class=\"hljs-property\">length</span>)\n  }\n  element.<span class=\"hljs-property\">className</span> = classString\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,64"}}],"payload":{"tag":"h2","lines":"42,43"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

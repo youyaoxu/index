@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"nginx&#x6587;&#x4ef6;&#x7ed3;&#x6784;","children":[{"content":"<pre data-lines=\"1,8\"><code data-lines=\"1,8\"><span class=\"hljs-number\">1</span>&#x3001;&#x5168;&#x5c40;&#x5757;&#xff1a;&#x914d;&#x7f6e;&#x5f71;&#x54cd;nginx&#x5168;&#x5c40;&#x7684;&#x6307;&#x4ee4;&#x3002;&#x4e00;&#x822c;&#x6709;&#x8fd0;&#x884c;nginx&#x670d;&#x52a1;&#x5668;&#x7684;&#x7528;&#x6237;&#x7ec4;&#xff0c;nginx&#x8fdb;&#x7a0b;pid&#x5b58;&#x653e;&#x8def;&#x5f84;&#xff0c;&#x65e5;&#x5fd7;&#x5b58;&#x653e;&#x8def;&#x5f84;&#xff0c;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x5f15;&#x5165;&#xff0c;&#x5141;&#x8bb8;&#x751f;&#x6210;worker process&#x6570;&#x7b49;&#x3002;\n<span class=\"hljs-number\">2</span>&#x3001;events&#x5757;&#xff1a;&#x914d;&#x7f6e;&#x5f71;&#x54cd;nginx&#x670d;&#x52a1;&#x5668;&#x6216;&#x4e0e;&#x7528;&#x6237;&#x7684;&#x7f51;&#x7edc;&#x8fde;&#x63a5;&#x3002;&#x6709;&#x6bcf;&#x4e2a;&#x8fdb;&#x7a0b;&#x7684;&#x6700;&#x5927;&#x8fde;&#x63a5;&#x6570;&#xff0c;&#x9009;&#x53d6;&#x54ea;&#x79cd;&#x4e8b;&#x4ef6;&#x9a71;&#x52a8;&#x6a21;&#x578b;&#x5904;&#x7406;&#x8fde;&#x63a5;&#x8bf7;&#x6c42;&#xff0c;&#x662f;&#x5426;&#x5141;&#x8bb8;&#x540c;&#x65f6;&#x63a5;&#x53d7;&#x591a;&#x4e2a;&#x7f51;&#x8def;&#x8fde;&#x63a5;&#xff0c;&#x5f00;&#x542f;&#x591a;&#x4e2a;&#x7f51;&#x7edc;&#x8fde;&#x63a5;&#x5e8f;&#x5217;&#x5316;&#x7b49;&#x3002;\n<span class=\"hljs-number\">3</span>&#x3001;http&#x5757;&#xff1a;&#x53ef;&#x4ee5;&#x5d4c;&#x5957;&#x591a;&#x4e2a;<span class=\"hljs-keyword\">server</span>&#xff0c;&#x914d;&#x7f6e;&#x4ee3;&#x7406;&#xff0c;&#x7f13;&#x5b58;&#xff0c;&#x65e5;&#x5fd7;&#x5b9a;&#x4e49;&#x7b49;&#x7edd;&#x5927;&#x591a;&#x6570;&#x529f;&#x80fd;&#x548c;&#x7b2c;&#x4e09;&#x65b9;&#x6a21;&#x5757;&#x7684;&#x914d;&#x7f6e;&#x3002;&#x5982;&#x6587;&#x4ef6;&#x5f15;&#x5165;&#xff0c;mime-<span class=\"hljs-keyword\">type</span>&#x5b9a;&#x4e49;&#xff0c;&#x65e5;&#x5fd7;&#x81ea;&#x5b9a;&#x4e49;&#xff0c;&#x662f;&#x5426;&#x4f7f;&#x7528;sendfile&#x4f20;&#x8f93;&#x6587;&#x4ef6;&#xff0c;&#x8fde;&#x63a5;&#x8d85;&#x65f6;&#x65f6;&#x95f4;&#xff0c;&#x5355;&#x8fde;&#x63a5;&#x8bf7;&#x6c42;&#x6570;&#x7b49;&#x3002;\n<span class=\"hljs-number\">4</span>&#x3001;<span class=\"hljs-keyword\">server</span>&#x5757;&#xff1a;&#x914d;&#x7f6e;&#x865a;&#x62df;&#x4e3b;&#x673a;&#x7684;&#x76f8;&#x5173;&#x53c2;&#x6570;&#xff0c;&#x4e00;&#x4e2a;http&#x4e2d;&#x53ef;&#x4ee5;&#x6709;&#x591a;&#x4e2a;<span class=\"hljs-keyword\">server</span>&#x3002;\n<span class=\"hljs-number\">5</span>&#x3001;<span class=\"hljs-keyword\">location</span>&#x5757;&#xff1a;&#x914d;&#x7f6e;&#x8bf7;&#x6c42;&#x7684;&#x8def;&#x7531;&#xff0c;&#x4ee5;&#x53ca;&#x5404;&#x79cd;&#x9875;&#x9762;&#x7684;&#x5904;&#x7406;&#x60c5;&#x51b5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,8"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

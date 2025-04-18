@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"#_8-1-api%E8%AF%B4%E6%98%8E\">#</a> 8.1.API&#x8bf4;&#x660e;","children":[{"content":"1. eventBus: &#x5305;&#x542b;&#x6240;&#x6709;&#x529f;&#x80fd;&#x7684;&#x4e8b;&#x4ef6;&#x603b;&#x7ebf;&#x5bf9;&#x8c61;","children":[],"payload":{"tag":"li","lines":"3,4","listIndex":1}},{"content":"2. eventBus.on(eventName, listener): &#x7ed1;&#x5b9a;&#x4e8b;&#x4ef6;&#x76d1;&#x542c;","children":[],"payload":{"tag":"li","lines":"4,5","listIndex":2}},{"content":"3. eventBus.emit(eventName, data): &#x5206;&#x53d1;&#x4e8b;&#x4ef6;","children":[],"payload":{"tag":"li","lines":"5,6","listIndex":3}},{"content":"4. eventBus.off(eventName): &#x89e3;&#x7ed1;&#x6307;&#x5b9a;&#x4e8b;&#x4ef6;&#x540d;&#x7684;&#x4e8b;&#x4ef6;&#x76d1;&#x542c;, &#x5982;&#x679c;&#x6ca1;&#x6709;&#x6307;&#x5b9a;&#x89e3;&#x7ed1;&#x6240;&#x6709;","children":[],"payload":{"tag":"li","lines":"6,8","listIndex":4}}],"payload":{"tag":"h2","lines":"0,2"}},{"content":"<a href=\"#_8-2-%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0\">#</a> 8.2.&#x7f16;&#x7801;&#x5b9e;&#x73b0;","children":[{"content":"<pre data-lines=\"13,61\"><code data-lines=\"13,61\"><span class=\"hljs-keyword\">const</span> eventBus = {}\n\n<span class=\"hljs-comment\">/* \n{\n  add:  [callback1, callback2]\n  delete: [callback3]\n}\n*/</span>\n<span class=\"hljs-keyword\">let</span> callbacksObj = {}\n\n<span class=\"hljs-comment\">/* \n&#x7ed1;&#x5b9a;&#x4e8b;&#x4ef6;&#x76d1;&#x542c;\n*/</span>\neventBus.<span class=\"hljs-property\">on</span> = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">eventName, callback</span>) {\n  <span class=\"hljs-keyword\">const</span> callbacks = callbacksObj[eventName]\n  <span class=\"hljs-keyword\">if</span> (callbacks) {\n    callbacks.<span class=\"hljs-title function_\">push</span>(callback)\n  } <span class=\"hljs-keyword\">else</span> {\n    callbacksObj[eventName] = [callback]\n  }\n}\n\n<span class=\"hljs-comment\">/* \n&#x5206;&#x53d1;&#x4e8b;&#x4ef6;\n*/</span>\neventBus.<span class=\"hljs-property\">emit</span> = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">eventName, data</span>) {\n  <span class=\"hljs-keyword\">const</span> callbacks = callbacksObj[eventName]\n  <span class=\"hljs-keyword\">if</span> (callbacks &amp;&amp; callbacks.<span class=\"hljs-property\">length</span> &gt; <span class=\"hljs-number\">0</span>) {\n    callbacks.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">callback</span> =&gt;</span> {\n      <span class=\"hljs-title function_\">callback</span>(data)\n    })\n  }\n}\n\n<span class=\"hljs-comment\">/* \n&#x79fb;&#x9664;&#x4e8b;&#x4ef6;&#x76d1;&#x542c;\n*/</span>\neventBus.<span class=\"hljs-property\">off</span> = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\">eventName</span>) {\n  <span class=\"hljs-keyword\">if</span> (eventName) {\n    <span class=\"hljs-keyword\">delete</span> callbacksObj[eventName]\n  } <span class=\"hljs-keyword\">else</span> {\n    callbacksObj = {}\n  }\n}\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> eventBus \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,61"}}],"payload":{"tag":"h2","lines":"8,10"}},{"content":"<a href=\"#_8-3-%E6%B5%8B%E8%AF%95\">#</a> 8.3.&#x6d4b;&#x8bd5;","children":[{"content":"<pre data-lines=\"65,94\"><code data-lines=\"65,94\"><span class=\"hljs-meta\">&lt;!DOCTYPE <span class=\"hljs-keyword\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">&quot;en&quot;</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">&quot;UTF-8&quot;</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">title</span>&gt;</span>&#x624b;&#x5199;&#x4e8b;&#x4ef6;&#x603b;&#x7ebf;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">title</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;../dist/atguigu-utils.js&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"language-javascript\"> <span class=\"hljs-keyword\">const</span> { eventBus } = aUtils\n    eventBus.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;add&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">data</span>) =&gt;</span> {\n      <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;add&apos;</span>, data)\n    })\n    eventBus.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;add&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">data</span>) =&gt;</span> {\n      <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;add2&apos;</span>, data)\n    })\n    eventBus.<span class=\"hljs-title function_\">on</span>(<span class=\"hljs-string\">&apos;delete&apos;</span>, <span class=\"hljs-function\">(<span class=\"hljs-params\">data</span>) =&gt;</span> {\n      <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">&apos;delete&apos;</span>, data)\n    })\n\n    <span class=\"hljs-comment\">// eventBus.off(&apos;add&apos;)</span>\n    <span class=\"hljs-comment\">// eventBus.off()</span>\n\n    eventBus.<span class=\"hljs-title function_\">emit</span>(<span class=\"hljs-string\">&apos;add&apos;</span>, <span class=\"hljs-number\">123</span>)\n    eventBus.<span class=\"hljs-title function_\">emit</span>(<span class=\"hljs-string\">&apos;delete&apos;</span>, <span class=\"hljs-string\">&apos;abc&apos;</span>) </span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"65,94"}}],"payload":{"tag":"h2","lines":"62,64"}}]},{})</script>
+</body>
+</html>

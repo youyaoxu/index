@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"sass&#x5e38;&#x7528;&#x8bed;&#x6cd5;","children":[{"content":"<pre data-lines=\"2,29\"><code data-lines=\"2,29\"><span class=\"hljs-number\">1.</span> &#x5b9a;&#x4e49;&#x53d8;&#x91cf;\n    &#x4f7f;&#x7528;&#x53d8;&#x91cf;\n<span class=\"hljs-number\">2.</span> &#x5b89;&#x88c5;\n<span class=\"hljs-number\">3.</span> <span class=\"hljs-symbol\">@chartset</span>\n<span class=\"hljs-number\">4.</span> &#x53d8;&#x91cf;\n&#x24;color_1:<span class=\"hljs-meta\">#333<span class=\"hljs-comment\">;</span></span>\n\n<span class=\"hljs-number\">4.1</span> !<span class=\"hljs-keyword\">global</span>: &#x5173;&#x952e;&#x8bcd;&#x6765;&#x8bbe;&#x7f6e;&#x53d8;&#x91cf;&#x662f;&#x5168;&#x5c40;&#x7684;\n    &#x6240;&#x6709;&#x7684;&#x5168;&#x5c40;&#x53d8;&#x91cf;&#x6211;&#x4eec;&#x4e00;&#x822c;&#x5b9a;&#x4e49;&#x5728;&#x540c;&#x4e00;&#x4e2a;&#x6587;&#x4ef6;&#xff0c;&#x5982;&#xff1a;_ globals.scss&#xff0c;&#x7136;&#x540e;&#x6211;&#x4eec;&#x4f7f;&#x7528; <span class=\"hljs-symbol\">@include</span> &#x6765;&#x5305;&#x542b;&#x8be5;&#x6587;&#x4ef6;\n<span class=\"hljs-number\">5.</span> &#x5d4c;&#x5957;&#x89c4;&#x5219;&#x4e0e;&#x5c5e;&#x6027;\n   \n<span class=\"hljs-number\">6.</span> <span class=\"hljs-symbol\">@import</span>\n    &#x76f8;&#x5173;&#x6587;&#x4ef6;:&#x53d8;&#x91cf;,&#x989c;&#x8272;,&#x5b57;&#x4f53;\n    \n\n<span class=\"hljs-number\">6.1</span> Partials\n    &#x5bfc;&#x5165;&#x8bed;&#x53e5;&#x4e2d;&#x6211;&#x4eec;&#x4e0d;&#x9700;&#x8981;&#x6dfb;&#x52a0;&#x4e0b;&#x5212;&#x7ebf;\n    \n<span class=\"hljs-number\">7.</span> <span class=\"hljs-symbol\">@mixin</span> &#x4e0e; <span class=\"hljs-symbol\">@include</span>\n<span class=\"hljs-number\">8.</span> <span class=\"hljs-symbol\">@extend</span> &#x4e0e; &#x7ee7;&#x627f;\n<span class=\"hljs-number\">9.</span> &#x51fd;&#x6570;: &#x5b57;&#x7b26;&#x4e32;,&#x6570;&#x5b57;,&#x5217;&#x8868;,&#x6620;&#x5c04;,&#x9009;&#x62e9;&#x5668;,Introsspection,&#x989c;&#x8272;\n    <span class=\"hljs-symbol\">@use</span> <span class=\"hljs-string\">&apos;sass:color&apos;</span><span class=\"hljs-comment\">; // &#x5f15;&#x5165;scss&#x5bf9;&#x5e94;&#x7684;color&#x51fd;&#x6570;</span>\n<span class=\"hljs-number\">10.</span> !<span class=\"hljs-literal\">default</span>\n&#x5728;&#x53d8;&#x91cf;&#x8d4b;&#x503c;&#x4e4b;&#x524d;&#xff0c; &#x5229;&#x7528;!<span class=\"hljs-literal\">default</span>&#x4e3a;&#x53d8;&#x91cf;&#x6307;&#x5b9a;&#x9ed8;&#x8ba4;&#x503c;&#x3002;\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,29"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

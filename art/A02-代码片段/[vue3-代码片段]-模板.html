@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[vue3-&#x4ee3;&#x7801;&#x7247;&#x6bb5;]-&#x6a21;&#x677f;.md","children":[{"content":"<pre data-lines=\"2,31\"><code class=\"language-html\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;container&quot;</span>&gt;</span>\n    1\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">setup</span>&gt;</span><span class=\"language-javascript\">\n<span class=\"hljs-keyword\">import</span> {reactive, defineExpose, defineProps, watch, defineEmits} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;vue&quot;</span>\n<span class=\"hljs-keyword\">import</span> {to, errorInfo, success, fail} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;@/utils/to&quot;</span>\n\n<span class=\"hljs-keyword\">const</span> emits = <span class=\"hljs-title function_\">defineEmits</span>([<span class=\"hljs-string\">&apos;listenEmit&apos;</span>])\n<span class=\"hljs-keyword\">const</span> props = <span class=\"hljs-title function_\">defineProps</span>({\n  <span class=\"hljs-attr\">data</span>: {\n    <span class=\"hljs-attr\">type</span>: <span class=\"hljs-title class_\">Object</span>,\n    <span class=\"hljs-attr\">default</span>: <span class=\"hljs-function\">() =&gt;</span> {\n    }\n  },\n  <span class=\"hljs-attr\">flag</span>: {\n    <span class=\"hljs-attr\">type</span>: <span class=\"hljs-title class_\">Boolean</span>,\n    <span class=\"hljs-attr\">default</span>: <span class=\"hljs-literal\">false</span>,\n    <span class=\"hljs-attr\">required</span>:<span class=\"hljs-literal\">true</span>\n  },\n})\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">style</span> <span class=\"hljs-attr\">lang</span>=<span class=\"hljs-string\">&quot;scss&quot;</span> <span class=\"hljs-attr\">scoped</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">style</span>&gt;</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,31"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

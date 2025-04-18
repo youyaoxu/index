@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"useRef&#x5165;&#x95e8;","children":[{"content":"&#x7ed1;&#x5b9a;DOM&#x5143;&#x7d20;","children":[{"content":"<pre data-lines=\"2,19\"><code class=\"language-jsx\"><span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useRef } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">FocusButton</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> inputEl = <span class=\"hljs-title function_\">useRef</span>(<span class=\"hljs-literal\">null</span>);\n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">onButtonClick</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n    inputEl.<span class=\"hljs-property\">current</span>.<span class=\"hljs-title function_\">focus</span>();\n  };\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">ref</span>=<span class=\"hljs-string\">{inputEl}</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">&quot;text&quot;</span> /&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{onButtonClick}</span>&gt;</span>Focus the input<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  );\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,19"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"&#x7ed1;&#x5b9a;&#x53ef;&#x53d8;&#x503c;","children":[{"content":"<pre data-lines=\"21,49\"><code class=\"language-jsx\">\n<span class=\"hljs-keyword\">import</span> <span class=\"hljs-title class_\">React</span>, { useState, useRef, useEffect } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react&apos;</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">Counter</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> [count, setCount] = <span class=\"hljs-title function_\">useState</span>(<span class=\"hljs-number\">0</span>);\n\n  <span class=\"hljs-keyword\">const</span> currentCount = <span class=\"hljs-title function_\">useRef</span>();\n  <span class=\"hljs-comment\">// &#x4f7f;&#x7528; useEffect &#x83b7;&#x53d6;&#x5f53;&#x524d; count</span>\n  <span class=\"hljs-title function_\">useEffect</span>(<span class=\"hljs-function\">() =&gt;</span> {\n    currentCount.<span class=\"hljs-property\">current</span> = count;\n  }, [count]);\n\n  <span class=\"hljs-keyword\">const</span> <span class=\"hljs-title function_\">alertCount</span> = (<span class=\"hljs-params\"></span>) =&gt; {\n    <span class=\"hljs-built_in\">setTimeout</span>(<span class=\"hljs-function\">() =&gt;</span> {\n      <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">`Current count is: <span class=\"hljs-subst\">&#x24;{currentCount.current}</span>, Real count is: <span class=\"hljs-subst\">&#x24;{count}</span>`</span>);\n    }, <span class=\"hljs-number\">3000</span>);\n  }\n\n  <span class=\"hljs-keyword\">return</span> (\n    <span class=\"language-xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>count: {count}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> setCount(count + 1)}&gt;Count add<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{alertCount}</span>&gt;</span>Alert current Count<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/&gt;</span></span>\n  );\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,49"}}],"payload":{"tag":"h2","lines":"20,21"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

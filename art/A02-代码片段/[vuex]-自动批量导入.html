@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x539f;&#x578b;&#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"2,6\"><code class=\"language-js\"><span class=\"hljs-comment\">// &#x627e;&#x5230;directory&#x76ee;&#x5f55;&#x4e0b;&#x7684;&#x6240;&#x6709;&#x6ee1;&#x8db3;regExp&#x6761;&#x4ef6;&#x7684;&#x6a21;&#x5757;</span>\n<span class=\"hljs-built_in\">require</span>.<span class=\"hljs-title function_\">context</span>(directory,useSubdirectories,regExp,mode)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,6"}},{"content":"<pre data-lines=\"12,23\"><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> files = <span class=\"hljs-built_in\">require</span>.<span class=\"hljs-title function_\">context</span>(<span class=\"hljs-string\">&apos;.&apos;</span>, <span class=\"hljs-literal\">false</span>, <span class=\"hljs-regexp\">/\\.js&#x24;/</span>)\n<span class=\"hljs-keyword\">const</span> modules = {}\n\nfiles.<span class=\"hljs-title function_\">keys</span>().<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">key</span> =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (key === <span class=\"hljs-string\">&apos;./index.js&apos;</span>) <span class=\"hljs-keyword\">return</span>\n  modules[key.<span class=\"hljs-title function_\">replace</span>(<span class=\"hljs-regexp\">/(\\.\\/|\\.js)/g</span>, <span class=\"hljs-string\">&apos;&apos;</span>)] = <span class=\"hljs-title function_\">files</span>(key).<span class=\"hljs-property\">default</span>\n})\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> modules\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,23"}}],"payload":{"tag":"h2","lines":"0,1"}},{})</script>
+</body>
+</html>

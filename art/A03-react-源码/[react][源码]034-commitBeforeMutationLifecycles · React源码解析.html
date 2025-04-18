@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"commitBeforeMutationLifecycles","children":[{"content":"<pre data-lines=\"3,6\"><code>&#x8fd9;&#x91cc;&#x5728;`ReactFiberScheduler.js`&#x91cc;&#x9762;&#x58f0;&#x660e;&#x4e86;&#x8fd9;&#x4e2a;&#x65b9;&#x6cd5;&#xff0c;&#x4f46;&#x8fd8;&#x4ece;`ReactFiberCommitWork`&#x5f15;&#x5165;&#x4e86;&#x4e00;&#x4e2a;&#x540c;&#x540d;&#x65b9;&#x6cd5;&#xff0c;&#x55ef;~~~\n\n&#x8fd9;&#x5176;&#x5b9e;&#x5c31;&#x662f;&#x8c03;&#x7528;`getSnapshotBeforeUpdate`&#xff0c;&#x5728;&#x540e;&#x9762;&#x8c03;&#x7528;`componentDidUpdate`&#x58f0;&#x660e;&#x5468;&#x671f;&#x65b9;&#x6cd5;&#x7684;&#x65f6;&#x5019;&#xff0c;&#x4f1a;&#x4f20;&#x5165;&#x8fd9;&#x91cc;&#x8ba1;&#x7b97;&#x51fa;&#x6765;&#x7684;&#x503c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,6"}},{"content":"<pre data-lines=\"7,65\"><code data-lines=\"7,65\"><span class=\"hljs-function\">function <span class=\"hljs-title\">commitBeforeMutationLifecycles</span>()</span> {\n  <span class=\"hljs-keyword\">while</span> (nextEffect !== <span class=\"hljs-literal\">null</span>) {\n    <span class=\"hljs-keyword\">const</span> effectTag = nextEffect.<span class=\"hljs-function\">effectTag\n    <span class=\"hljs-title\">if</span> (<span class=\"hljs-params\">effectTag &amp; Snapshot</span>)</span> {\n      recordEffect()\n      <span class=\"hljs-keyword\">const</span> current = nextEffect.<span class=\"hljs-function\">alternate\n      <span class=\"hljs-title\">commitBeforeMutationLifeCycles</span>(<span class=\"hljs-params\">current, nextEffect</span>)\n    }\n\n    \n    \n    nextEffect</span> = nextEffect.nextEffect\n  }\n}\n\n<span class=\"hljs-function\">function <span class=\"hljs-title\">commitBeforeMutationLifeCycles</span>(<span class=\"hljs-params\">\n  current: Fiber | <span class=\"hljs-literal\">null</span>,\n  finishedWork: Fiber,\n</span>): <span class=\"hljs-keyword\">void</span></span> {\n  <span class=\"hljs-keyword\">switch</span> (finishedWork.tag) {\n    <span class=\"hljs-keyword\">case</span> ClassComponent: {\n      <span class=\"hljs-keyword\">if</span> (finishedWork.effectTag &amp; Snapshot) {\n        <span class=\"hljs-keyword\">if</span> (current !== <span class=\"hljs-literal\">null</span>) {\n          <span class=\"hljs-keyword\">const</span> prevProps = current.memoizedProps\n          <span class=\"hljs-keyword\">const</span> prevState = current.<span class=\"hljs-function\">memoizedState\n          <span class=\"hljs-title\">startPhaseTimer</span>(<span class=\"hljs-params\">finishedWork, <span class=\"hljs-string\">&apos;getSnapshotBeforeUpdate&apos;</span></span>)\n          <span class=\"hljs-keyword\">const</span> instance</span> = finishedWork.stateNode\n          instance.props = finishedWork.memoizedProps\n          instance.state = finishedWork.memoizedState\n          <span class=\"hljs-keyword\">const</span> snapshot = instance.getSnapshotBeforeUpdate(\n            prevProps,\n            prevState,\n          )\n          instance.__reactInternalSnapshotBeforeUpdate = <span class=\"hljs-function\">snapshot\n          <span class=\"hljs-title\">stopPhaseTimer</span>()\n        }\n      }\n      <span class=\"hljs-keyword\">return</span>\n    }\n    <span class=\"hljs-keyword\">case</span> HostRoot:\n    <span class=\"hljs-keyword\">case</span> HostComponent:\n    <span class=\"hljs-keyword\">case</span> HostText:\n    <span class=\"hljs-keyword\">case</span> HostPortal:\n    <span class=\"hljs-keyword\">case</span> IncompleteClassComponent:\n      \n      <span class=\"hljs-keyword\">return</span>\n    <span class=\"hljs-literal\">default</span>:</span> {\n      invariant(\n        <span class=\"hljs-literal\">false</span>,\n        <span class=\"hljs-string\">&apos;This unit of work tag should not have side-effects. This error is &apos;</span> +\n          <span class=\"hljs-string\">&apos;likely caused by a bug in React. Please file an issue.&apos;</span>,\n      )\n    }\n  }\n}\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,65"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"66,67"}},{"content":"<img src=\"https://static.coursebetter.com/202112/Jokcy%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.png\" alt>","children":[],"payload":{"tag":"img","lines":"70,71"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

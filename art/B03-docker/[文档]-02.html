@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"docker&#x76f8;&#x5173;","children":[{"content":"&#x5bb9;&#x5668;&#x7684;&#x72b6;&#x6001;","children":[{"content":"<pre data-lines=\"4,11\"><code data-lines=\"4,11\"><span class=\"hljs-bullet\">- </span>Created &#x5bb9;&#x5668;&#x5df2;&#x88ab;&#x521b;&#x5efa;,&#x4f46;&#x5c1a;&#x672a;&#x88ab;&#x542f;&#x52a8;\n<span class=\"hljs-bullet\">- </span>Running &#x5bb9;&#x5668;&#x6b63;&#x5728;&#x8fd0;&#x884c;\n<span class=\"hljs-bullet\">- </span>Paused &#x5bb9;&#x5668;&#x88ab;&#x6682;&#x505c;\n<span class=\"hljs-bullet\">- </span>Restarting &#x5bb9;&#x5668;&#x6b63;&#x5728;&#x91cd;&#x542f;\n<span class=\"hljs-bullet\">- </span>exited &#x5bb9;&#x5668;&#x5df2;&#x505c;&#x6b62;&#x8fd0;&#x884c;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,11"}},{"content":"<pre data-lines=\"12,16\"><code class=\"language-sh\"><span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x5bb9;&#x5668;&#x72b6;&#x6001;</span>\ndocker ps\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,16"}},{"content":"<pre data-lines=\"17,21\"><code class=\"language-sh\"><span class=\"hljs-comment\"># &#x505c;&#x6b62;&#x4e00;&#x4e2a;&#x5bb9;&#x5668;</span>\ndocker stop <span class=\"hljs-variable\">&#x24;CONTAINER_ID</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,21"}},{"content":"<pre data-lines=\"22,28\"><code class=\"language-sh\"><span class=\"hljs-comment\"># &#x542f;&#x52a8;&#x4e00;&#x4e2a;&#x5bb9;&#x5668;</span>\ndocker start <span class=\"hljs-variable\">&#x24;CONTAINER_ID</span>\n<span class=\"hljs-comment\"># &#x91cd;&#x542f;&#x4e00;&#x4e2a;&#x5bb9;&#x5668;</span>\ndocker restart <span class=\"hljs-variable\">&#x24;CONTAINER_ID</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,28"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x5bb9;&#x5668;&#x521b;&#x5efa;","children":[{"content":"&#x5bb9;&#x5668;&#x521b;&#x5efa;&#x5b9e;&#x4f8b;","children":[{"content":"<pre data-lines=\"36,44\"><code data-lines=\"36,44\"><span class=\"hljs-bullet\">- </span>docker &#x547d;&#x4ee4;\n<span class=\"hljs-bullet\">- </span>build &#x7f16;&#x8bd1;\n<span class=\"hljs-bullet\">- </span>-t &#x955c;&#x50cf;&#x7684;&#x540d;&#x5b57;&#x53ca;tag,&#x901a;&#x5e38;name:tag&#x6216;&#x8005;name&#x683c;&#x5f0f;;&#x53ef;&#x4ee5;&#x5728;&#x4e00;&#x6b21;&#x6784;&#x5efa;&#x4e2d;&#x4e3a;&#x4e00;&#x4e2a;&#x955c;&#x50cf;&#x8bbe;&#x7f6e;&#x591a;&#x4e2a;tag\n<span class=\"hljs-bullet\">- </span>nginx-upload &#x751f;&#x6210;&#x955c;&#x50cf;&#x7684;&#x540d;&#x79f0;\n<span class=\"hljs-bullet\">- </span>v1.0 &#x751f;&#x6210;&#x955c;&#x50cf;&#x7684;&#x7248;&#x672c;&#x53f7;\n<span class=\"hljs-bullet\">- </span>. &#x6307;&#x5b9a;&#x955c;&#x50cf;&#x6784;&#x5efa;&#x8fc7;&#x7a0b;&#x4e2d;&#x7684;&#x4e0a;&#x4e0b;&#x6587;&#x73af;&#x5883;&#x7684;&#x76ee;&#x5f55;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,44"}},{"content":"<pre data-lines=\"45,48\"><code class=\"language-sh\">docker run -itd --name=upload-platform -v /app/dist:/usr/share/nginx/html/upload-platform -p 17999:17999 nginx-upload:v1.0\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,48"}}],"payload":{"tag":"h3","lines":"35,36"}},{"content":"&#x5bb9;&#x5668;&#x521b;&#x5efa;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"51,64\"><code data-lines=\"51,64\"><span class=\"hljs-bullet\">- </span>-d &#x540e;&#x53f0;&#x8fd0;&#x884c;&#x5e76;&#x8fd4;&#x56de;&#x5bb9;&#x5668;id\n<span class=\"hljs-bullet\">- </span>-it &#x4ea4;&#x4e92;&#x5f0f;&#x8fd0;&#x884c;&#x5bb9;&#x5668;,&#x5206;&#x914d;&#x4e00;&#x4e2a;&#x4f2a;&#x7ec8;&#x7aef; Bash shell\n<span class=\"hljs-bullet\">- </span>--name &#x7ed9;&#x5bb9;&#x5668;&#x6307;&#x5b9a;&#x4e00;&#x4e2a;&#x540d;&#x79f0;\n<span class=\"hljs-bullet\">- </span>-v &#x6302;&#x8f7d;&#x5377;,&#x683c;&#x5f0f;&#x4f2a;host<span class=\"hljs-emphasis\">_dir:container_dir\n- -p &#x7aef;&#x53e3;&#x6620;&#x5c04;,&#x683c;&#x5f0f;&#x4f2a;host_port:container_</span>port\n<span class=\"hljs-bullet\">- </span>&#x4f7f;&#x7528;&#x7684;&#x955c;&#x50cf;&#x4ee5;&#x53ca;&#x7248;&#x672c;\n<span class=\"hljs-bullet\">- </span>-rm &#x5bb9;&#x5668;&#x505c;&#x6b62;&#x540e;&#x81ea;&#x52a8;&#x5220;&#x9664;&#x5bb9;&#x5668;\n<span class=\"hljs-bullet\">- </span>--env &#x6216; -e &#x8bbe;&#x7f6e;&#x73af;&#x5883;&#x53d8;&#x91cf;\n<span class=\"hljs-bullet\">- </span>--network &#x6307;&#x5b9a;&#x5bb9;&#x5668;&#x7684;&#x7f51;&#x7edc;&#x6a21;&#x5f0f;\n<span class=\"hljs-bullet\">- </span>--restart &#x5bb9;&#x5668;&#x7684;&#x91cd;&#x542f;&#x7b56;&#x7565; no on-failure always unless-stopped\n<span class=\"hljs-bullet\">- </span>-u &#x6307;&#x5b9a;&#x7528;&#x6237;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,64"}},{"content":"<pre data-lines=\"65,72\"><code class=\"language-sh\"><span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x6240;&#x6709;&#x955c;&#x50cf;</span>\ndocker images\n\n<span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x6240;&#x6709;&#x955c;&#x50cf;,&#x5305;&#x62ec;&#x4e2d;&#x95f4;&#x5c42;&#x955c;&#x50cf;</span>\ndocker images -a\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"65,72"}}],"payload":{"tag":"h3","lines":"49,50"}}],"payload":{"tag":"h2","lines":"29,30"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

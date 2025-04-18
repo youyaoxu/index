@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[git]-&#x5982;&#x4f55;&#x6253;&#x6807;&#x7b7e;.md","children":[{"content":"<pre data-lines=\"2,20\"><code data-lines=\"2,20\"><span class=\"hljs-attribute\">git</span> tag -a v3.<span class=\"hljs-number\">9</span>.<span class=\"hljs-number\">10</span> -m &apos;S34&#x8fed;&#x4ee3;&#x4e0a;&#x7ebf;,&#x65f6;&#x95f4;:<span class=\"hljs-number\">2023</span>/<span class=\"hljs-number\">6</span>/<span class=\"hljs-number\">15</span>&apos;\n\n<span class=\"hljs-comment\"># &#x63a8;&#x9001;&#x6307;&#x5b9a;tag&#x5230;&#x8fdc;&#x7a0b;&#x670d;&#x52a1;&#x5668;</span>\n<span class=\"hljs-attribute\">git</span> push origin v3.<span class=\"hljs-number\">9</span>.<span class=\"hljs-number\">10</span>\n\n<span class=\"hljs-comment\"># &#x63a8;&#x9001;&#x6240;&#x6709;&#x6807;&#x7b7e;&#x5230;&#x8fdc;&#x7a0b;&#x670d;&#x52a1;&#x5668;</span>\n<span class=\"hljs-attribute\">git</span> push origin --tags\n\n<span class=\"hljs-comment\"># &#x67e5;&#x770b;&#x6807;&#x7b7e;</span>\n<span class=\"hljs-attribute\">git</span> show v3.<span class=\"hljs-number\">9</span>.<span class=\"hljs-number\">10</span>\n\n<span class=\"hljs-comment\"># &#x5220;&#x9664;&#x6807;&#x7b7e;</span>\n<span class=\"hljs-attribute\">git</span> tag -d {&#x6807;&#x7b7e;&#x540d;}\n\n<span class=\"hljs-comment\"># &#x5220;&#x9664;&#x8fdc;&#x7a0b;&#x6807;&#x7b7e;&#x547d;&#x4ee4;</span>\n<span class=\"hljs-attribute\">git</span> push origin :refs/tags/{&#x6807;&#x7b7e;&#x540d;}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,20"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

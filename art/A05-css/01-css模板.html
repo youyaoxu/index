@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"CSS&#x6a21;&#x677f;","children":[{"content":"<pre data-lines=\"1,83\"><code data-lines=\"1,83\"> <span class=\"hljs-comment\">/*CSS Document */</span>\n*{-webkit-<span class=\"hljs-attribute\">margin</span>-collapse:separate;-webkit-<span class=\"hljs-attribute\">box-sizing</span>: border-box;<span class=\"hljs-attribute\">box-sizing</span>: border-box;}\n<span class=\"hljs-selector-tag\">body</span>, <span class=\"hljs-selector-tag\">ul</span>, <span class=\"hljs-selector-tag\">li</span>, <span class=\"hljs-selector-tag\">input</span>, <span class=\"hljs-selector-tag\">img</span>, <span class=\"hljs-selector-tag\">a</span>, <span class=\"hljs-selector-tag\">p</span>, <span class=\"hljs-selector-tag\">h1</span>, <span class=\"hljs-selector-tag\">h2</span>, <span class=\"hljs-selector-tag\">h3</span>, <span class=\"hljs-selector-tag\">h4</span>, <span class=\"hljs-selector-tag\">h5</span>, <span class=\"hljs-selector-tag\">h6</span>, <span class=\"hljs-selector-tag\">dl</span>, <span class=\"hljs-selector-tag\">dt</span>, <span class=\"hljs-selector-tag\">dd</span>, <span class=\"hljs-selector-tag\">textarea</span> {\n    <span class=\"hljs-attribute\">margin</span>: <span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">font-family</span>: Arial,<span class=\"hljs-string\">&quot;&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;&quot;</span>,Helvetica ;\n    <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#333</span>;\n    <span class=\"hljs-attribute\">font-weight</span>: normal;\n}\n<span class=\"hljs-selector-class\">.clear</span> {\n    <span class=\"hljs-attribute\">clear</span>: both;\n}\n<span class=\"hljs-selector-tag\">body</span> {\n    <span class=\"hljs-attribute\">position</span>: absolute;\n    <span class=\"hljs-attribute\">left</span>: <span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">top</span>: <span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n    <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">100%</span>;\n    <span class=\"hljs-attribute\">z-index</span>:<span class=\"hljs-number\">0</span>;\n    <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">12px</span>;   \n}\n<span class=\"hljs-selector-tag\">img</span> {\n    <span class=\"hljs-attribute\">border</span>: none;\n    <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n    <span class=\"hljs-attribute\">vertical-align</span>: middle;\n    <span class=\"hljs-attribute\">display</span>: block;\n}\n<span class=\"hljs-selector-tag\">input</span> {\n    <span class=\"hljs-attribute\">line-height</span>: normal;\n}\n<span class=\"hljs-selector-tag\">a</span> {\n    <span class=\"hljs-attribute\">text-decoration</span>: none;\n    <span class=\"hljs-attribute\">display</span>:inline-block;\n    <span class=\"hljs-attribute\">outline</span>: none;\n    <span class=\"hljs-attribute\">cursor</span>: pointer;\n}\n<span class=\"hljs-selector-tag\">a</span>,<span class=\"hljs-selector-tag\">button</span>,<span class=\"hljs-selector-tag\">input</span>,<span class=\"hljs-selector-tag\">div</span>{-webkit-tap-highlight-<span class=\"hljs-attribute\">color</span>:<span class=\"hljs-built_in\">rgba</span>(<span class=\"hljs-number\">255</span>,<span class=\"hljs-number\">0</span>,<span class=\"hljs-number\">0</span>,<span class=\"hljs-number\">0</span>);}\n<span class=\"hljs-selector-tag\">em</span>, <span class=\"hljs-selector-tag\">strong</span>, <span class=\"hljs-selector-tag\">i</span> {\n    <span class=\"hljs-attribute\">font-style</span>: normal;\n    <span class=\"hljs-attribute\">font-weight</span>: normal;\n}\n<span class=\"hljs-selector-tag\">ul</span> <span class=\"hljs-selector-tag\">li</span>, <span class=\"hljs-selector-tag\">li</span> {\n    <span class=\"hljs-attribute\">list-style-type</span>: none;\n}\n<span class=\"hljs-comment\">/*&#x9690;&#x85cf;&#x6eda;&#x52a8;&#x6761;*/</span>\n*::-webkit-scrollbar{<span class=\"hljs-attribute\">width</span>:<span class=\"hljs-number\">0px</span>;}\n<span class=\"hljs-comment\">/* &#x63d0;&#x9ad8;ios&#x7684;&#x6ed1;&#x52a8;&#x6d41;&#x7545;&#x5ea6; */</span>\n*{-webkit-<span class=\"hljs-attribute\">overflow</span>-scrolling:touch;}\n\n\n\n<span class=\"hljs-comment\">/*&#x5a92;&#x4f53;&#x67e5;&#x8be2;*/</span>\n<span class=\"hljs-comment\">/*iphone5*/</span>\n<span class=\"hljs-keyword\">@media</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">max-width</span>:<span class=\"hljs-number\">320px</span>){\n    <span class=\"hljs-selector-tag\">html</span>{<span class=\"hljs-attribute\">font-size</span>:<span class=\"hljs-number\">32px</span>;}\n\n}\n<span class=\"hljs-comment\">/*&#x9488;&#x5bf9;iphone4*/</span>\n<span class=\"hljs-comment\">/* @media screen and (min-width:321px) and (max-height:480px){\n\n} */</span>\n<span class=\"hljs-comment\">/*&#x9488;&#x5bf9;&#x5927;&#x90e8;&#x5206;android&#x624b;&#x673a;&#x8bbe;&#x5907;*/</span>\n<span class=\"hljs-keyword\">@media</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">min-width</span>:<span class=\"hljs-number\">321px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">max-width</span>:<span class=\"hljs-number\">374px</span>){\n    <span class=\"hljs-selector-tag\">html</span>{<span class=\"hljs-attribute\">font-size</span>:<span class=\"hljs-number\">36px</span>;}\n\n}\n<span class=\"hljs-comment\">/*&#x9488;&#x5bf9;&#x534e;&#x4e3a;&#x8bbe;&#x5907; &#x6b64;&#x9ad8;&#x5ea6;&#x4e3a;&#x5fae;&#x4fe1;&#x4e2d;H5*/</span>\n<span class=\"hljs-comment\">/* @media screen and (min-width:321px) and (max-width:374px) and (max-height:567px){\n    html{font-size:36px;}\n} */</span>\n<span class=\"hljs-comment\">/*iphone6*/</span>\n<span class=\"hljs-keyword\">@media</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">min-width</span>:<span class=\"hljs-number\">375px</span>) <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">max-width</span>:<span class=\"hljs-number\">400px</span>){\n    <span class=\"hljs-selector-tag\">html</span>{<span class=\"hljs-attribute\">font-size</span>:<span class=\"hljs-number\">37.5px</span>;}\n\n}\n<span class=\"hljs-comment\">/*iphone6Plus*/</span>\n <span class=\"hljs-keyword\">@media</span> screen <span class=\"hljs-keyword\">and</span> (<span class=\"hljs-attribute\">min-width</span>:<span class=\"hljs-number\">401px</span>){\n    <span class=\"hljs-selector-tag\">html</span>{<span class=\"hljs-attribute\">font-size</span>:<span class=\"hljs-number\">41.4px</span>;}\n\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"1,83"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

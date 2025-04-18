@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"use&#x5165;&#x95e8;","children":[{"content":"useDict","children":[{"content":"<pre data-lines=\"3,29\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> useDictStore <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/store/modules/dict&apos;</span>\n<span class=\"hljs-keyword\">import</span> { getDicts } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/api/system/dict/data&apos;</span>\n\n<span class=\"hljs-comment\">/**\n * &#x83b7;&#x53d6;&#x5b57;&#x5178;&#x6570;&#x636e;\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">useDict</span>(<span class=\"hljs-params\">...args</span>) {\n  <span class=\"hljs-keyword\">const</span> res = <span class=\"hljs-title function_\">ref</span>({});\n  <span class=\"hljs-keyword\">return</span> (<span class=\"hljs-function\">() =&gt;</span> {\n    args.<span class=\"hljs-title function_\">forEach</span>(<span class=\"hljs-function\">(<span class=\"hljs-params\">dictType, index</span>) =&gt;</span> {\n      res.<span class=\"hljs-property\">value</span>[dictType] = [];\n      <span class=\"hljs-keyword\">const</span> dicts = <span class=\"hljs-title function_\">useDictStore</span>().<span class=\"hljs-title function_\">getDict</span>(dictType);\n      <span class=\"hljs-keyword\">if</span> (dicts) {\n        res.<span class=\"hljs-property\">value</span>[dictType] = dicts;\n      } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-title function_\">getDicts</span>(dictType).<span class=\"hljs-title function_\">then</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">resp</span> =&gt;</span> {\n          res.<span class=\"hljs-property\">value</span>[dictType] = resp.<span class=\"hljs-property\">data</span>.<span class=\"hljs-title function_\">map</span>(<span class=\"hljs-function\"><span class=\"hljs-params\">p</span> =&gt;</span> ({ <span class=\"hljs-attr\">label</span>: p.<span class=\"hljs-property\">dictLabel</span>, <span class=\"hljs-attr\">value</span>: p.<span class=\"hljs-property\">dictValue</span>, <span class=\"hljs-attr\">elTagType</span>: p.<span class=\"hljs-property\">listClass</span>, <span class=\"hljs-attr\">elTagClass</span>: p.<span class=\"hljs-property\">cssClass</span> }))\n          <span class=\"hljs-title function_\">useDictStore</span>().<span class=\"hljs-title function_\">setDict</span>(dictType, res.<span class=\"hljs-property\">value</span>[dictType]);\n        })\n      }\n    })\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-title function_\">toRefs</span>(res.<span class=\"hljs-property\">value</span>);\n  })()\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,29"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"useDynamicTitle","children":[{"content":"<pre data-lines=\"31,48\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> store <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/store&apos;</span>\n<span class=\"hljs-keyword\">import</span> defaultSettings <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/settings&apos;</span>\n<span class=\"hljs-keyword\">import</span> useSettingsStore <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;@/store/modules/settings&apos;</span>\n\n<span class=\"hljs-comment\">/**\n * &#x52a8;&#x6001;&#x4fee;&#x6539;&#x6807;&#x9898;\n */</span>\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">function</span> <span class=\"hljs-title function_\">useDynamicTitle</span>(<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">const</span> settingsStore = <span class=\"hljs-title function_\">useSettingsStore</span>();\n  <span class=\"hljs-keyword\">if</span> (settingsStore.<span class=\"hljs-property\">dynamicTitle</span>) {\n    <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">title</span> = settingsStore.<span class=\"hljs-property\">title</span> + <span class=\"hljs-string\">&apos; - &apos;</span> + defaultSettings.<span class=\"hljs-property\">title</span>;\n  } <span class=\"hljs-keyword\">else</span> {\n    <span class=\"hljs-variable language_\">document</span>.<span class=\"hljs-property\">title</span> = defaultSettings.<span class=\"hljs-property\">title</span>;\n  }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,48"}}],"payload":{"tag":"h3","lines":"30,31"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

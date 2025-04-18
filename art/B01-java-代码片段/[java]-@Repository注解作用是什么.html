@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-@Repository&#x6ce8;&#x89e3;&#x4f5c;&#x7528;&#x662f;&#x4ec0;&#x4e48;","children":[{"content":"<pre data-lines=\"4,7\"><code data-lines=\"4,7\">@Repository&#x7528;&#x5728;&#x6301;&#x4e45;&#x5c42;&#x7684;&#x63a5;&#x53e3;&#x4e0a;&#xff0c;&#x8fd9;&#x4e2a;&#x6ce8;&#x89e3;&#x662f;&#x5c06;&#x63a5;&#x53e3;&#x7684;&#x4e00;&#x4e2a;&#x5b9e;&#x73b0;&#x7c7b;&#x4ea4;&#x7ed9;<span class=\"hljs-keyword\">spring</span>&#x7ba1;&#x7406;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}},{"content":"&#x4e3a;&#x4ec0;&#x4e48;&#x6709;&#x65f6;&#x5019;&#x6211;&#x4eec;&#x4e0d;&#x7528;@Repository&#x6765;&#x6ce8;&#x89e3;&#x63a5;&#x53e3;,&#x6211;&#x4eec;&#x7167;&#x6837;&#x53ef;&#x4ee5;&#x6ce8;&#x5165;&#x5230;&#x8fd9;&#x4e2a;&#x63a5;&#x53e3;&#x7684;&#x5b9e;&#x73b0;&#x7c7b;&#x5462;?","children":[{"content":"\n<p data-lines=\"10,11\">spring&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x914d;&#x7f6e;&#x4e86;MapperScannerConfigurer&#x8fd9;&#x4e2a;bean&#xff0c;&#x5b83;&#x4f1a;&#x626b;&#x63cf;&#x6301;&#x4e45;&#x5c42;&#x63a5;&#x53e3;&#x521b;&#x5efa;&#x5b9e;&#x73b0;&#x7c7b;&#x5e76;&#x4ea4;&#x7ed9;spring&#x7ba1;&#x7406;&#x3002;</p>","children":[],"payload":{"tag":"li","lines":"10,12"}},{"content":"\n<p data-lines=\"12,13\">&#x63a5;&#x53e3;&#x4e0a;&#x4f7f;&#x7528;&#x4e86;@Mapper&#x6ce8;&#x89e3;&#x6216;&#x8005;springboot&#x4e2d;&#x4e3b;&#x7c7b;&#x4e0a;&#x4f7f;&#x7528;&#x4e86;@MapperScan&#x6ce8;&#x89e3;&#xff0c;&#x548c;MapperScannerConfigurer&#x4f5c;&#x7528;&#x4e00;&#x6837;&#x3002;</p>","children":[],"payload":{"tag":"li","lines":"12,14"}}],"payload":{"tag":"h2","lines":"8,9"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

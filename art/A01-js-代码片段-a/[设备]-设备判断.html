@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[&#x8bbe;&#x5907;]-&#x8bbe;&#x5907;&#x5224;&#x65ad;","children":[{"content":"&#x5224;&#x65ad;&#x5f53;&#x524d;&#x8bbe;&#x7f6e;&#x662f;&#x624b;&#x673a;/&#x5e73;&#x677f;/PC&#x8bbe;&#x5907;","children":[{"content":"<pre data-lines=\"4,39\"><code class=\"language-js\"><span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">const</span> isPcOrMobileOrTablet = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\"></span>) {\n  <span class=\"hljs-keyword\">let</span> device=<span class=\"hljs-string\">&apos;&apos;</span>\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(navigator.<span class=\"hljs-property\">userAgent</span>);\n  <span class=\"hljs-keyword\">var</span> os = <span class=\"hljs-keyword\">function</span> (<span class=\"hljs-params\"></span>){\n    <span class=\"hljs-keyword\">var</span> ua = navigator.<span class=\"hljs-property\">userAgent</span>,\n    isWindowsPhone = <span class=\"hljs-regexp\">/(?:Windows Phone)/</span>.<span class=\"hljs-title function_\">test</span>(ua),\n    isSymbian = <span class=\"hljs-regexp\">/(?:SymbianOS)/</span>.<span class=\"hljs-title function_\">test</span>(ua) || isWindowsPhone,\n    isAndroid = <span class=\"hljs-regexp\">/(?:Android)/</span>.<span class=\"hljs-title function_\">test</span>(ua),\n    isFireFox = <span class=\"hljs-regexp\">/(?:Firefox)/</span>.<span class=\"hljs-title function_\">test</span>(ua),\n    isChrome = <span class=\"hljs-regexp\">/(?:Chrome|CriOS)/</span>.<span class=\"hljs-title function_\">test</span>(ua),\n    isTablet = <span class=\"hljs-regexp\">/(?:iPad|PlayBook)/</span>.<span class=\"hljs-title function_\">test</span>(ua) || (isAndroid &amp;&amp; !<span class=\"hljs-regexp\">/(?:Mobile)/</span>.<span class=\"hljs-title function_\">test</span>(ua)) || (isFireFox &amp;&amp; <span class=\"hljs-regexp\">/(?:Tablet)/</span>.<span class=\"hljs-title function_\">test</span>(ua)),\n    isPhone = <span class=\"hljs-regexp\">/(?:iPhone)/</span>.<span class=\"hljs-title function_\">test</span>(ua) &amp;&amp; !isTablet,\n    isPc = !isPhone &amp;&amp; !isAndroid &amp;&amp; !isSymbian;\n    <span class=\"hljs-keyword\">return</span> {\n        <span class=\"hljs-attr\">isTablet</span>: isTablet,\n        <span class=\"hljs-attr\">isPhone</span>: isPhone,\n        <span class=\"hljs-attr\">isAndroid</span>: isAndroid,\n        <span class=\"hljs-attr\">isPc</span>: isPc\n    };\n  }();\n\n  <span class=\"hljs-keyword\">if</span> (os.<span class=\"hljs-property\">isAndroid</span> || os.<span class=\"hljs-property\">isPhone</span>) {\n    <span class=\"hljs-comment\">// console.log(&quot;&#x624b;&#x673a;&quot;)</span>\n    device=<span class=\"hljs-string\">&apos;mobile&apos;</span>\n  } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span> (os.<span class=\"hljs-property\">isTablet</span>) {\n    <span class=\"hljs-comment\">// console.log(&quot;&#x5e73;&#x677f;&quot;)</span>\n    device=<span class=\"hljs-string\">&apos;tablet&apos;</span>\n  } <span class=\"hljs-keyword\">else</span> <span class=\"hljs-keyword\">if</span>(os.<span class=\"hljs-property\">isPc</span>) {\n    <span class=\"hljs-comment\">// console.log(&quot;&#x7535;&#x8111;&quot;)</span>\n    device=<span class=\"hljs-string\">&apos;pc&apos;</span>\n  }\n  <span class=\"hljs-keyword\">return</span> device\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,39"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x5224;&#x65ad;&#x5f53;&#x524d;&#x8bbe;&#x7f6e;&#x662f;ios/android&#x8bbe;&#x5907;","children":[{"content":"&#x5224;&#x65ad;&#x662f;&#x5fae;&#x4fe1;&#x8fd8;&#x662f;&#x4f01;&#x4e1a;&#x5fae;&#x4fe1;","children":[{"content":"<pre data-lines=\"59,63\"><code class=\"language-js\"><span class=\"hljs-keyword\">var</span> isWXWork = ua.<span class=\"hljs-title function_\">match</span>(<span class=\"hljs-regexp\">/wxwork/i</span>) == <span class=\"hljs-string\">&apos;wxwork&apos;</span>;\n<span class=\"hljs-keyword\">var</span> isWeixin = !isWXWork &amp;&amp; ua.<span class=\"hljs-title function_\">match</span>(<span class=\"hljs-regexp\">/micromessenger/i</span>) == <span class=\"hljs-string\">&apos;micromessenger&apos;</span>;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"59,63"}}],"payload":{"tag":"h3","lines":"58,59"}}],"payload":{"tag":"h2","lines":"40,41"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

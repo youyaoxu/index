@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[vuex]-&#x4ee3;&#x7801;&#x7247;&#x6bb5;","children":[{"content":"<pre data-lines=\"2,10\"><code class=\"language-js\"><span class=\"hljs-keyword\">import</span> { mapState } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;vuex&apos;</span>\n\n...<span class=\"hljs-title function_\">mapState</span>({\n      <span class=\"hljs-attr\">userRole</span>: <span class=\"hljs-function\">(<span class=\"hljs-params\">state</span>) =&gt;</span> state.<span class=\"hljs-property\">user</span>.<span class=\"hljs-property\">userRole</span>,\n      <span class=\"hljs-attr\">userInfo</span>: <span class=\"hljs-function\">(<span class=\"hljs-params\">state</span>) =&gt;</span> state.<span class=\"hljs-property\">user</span>.<span class=\"hljs-property\">userInfo</span>,\n    }),\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,10"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

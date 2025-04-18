@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"12-project-day06","children":[{"content":"<pre data-lines=\"2,17\"><code data-lines=\"2,17\">day06&#x56de;&#x987e;\n<span class=\"hljs-number\">1</span>&#xff0c;Oauth2.<span class=\"hljs-number\">0</span>\n<span class=\"hljs-number\">2</span>, &#x6570;&#x636e;&#x5e93;&#x8bbe;&#x8ba1;-&#x8303;&#x5f0f;-&#x6d88;&#x9664;&#x5197;&#x4f59;/&#x89c4;&#x907f;&#x6f5c;&#x5728;&#x95ee;&#x9898;&#x3010;&#x63d2;&#x5165;&#x5f02;&#x5e38;&#xff0c;&#x66f4;&#x65b0;&#x5f02;&#x5e38;&#x3002;&#x3002;&#x3002;&#x3011; \n<span class=\"hljs-number\">1</span>NF <span class=\"hljs-number\">2</span>NF <span class=\"hljs-number\">3</span>NF\n<span class=\"hljs-number\">3</span>&#xff0c;&#x5546;&#x54c1;\n<span class=\"hljs-number\">4</span>&#xff0c;imageFiled - &#x4e0a;&#x4f20;&#x56fe;&#x7247; - &#x6570;&#x636e;&#x5e93;&#x4e2d;&#x5b58;&#x50a8;&#x56fe;&#x7247;&#x6240;&#x5728;&#x8def;&#x5f84;&#xff1b;&#x56fe;&#x7247;&#x5185;&#x5bb9;&#x5b58;&#x50a8;&#x5728;&#x670d;&#x52a1;&#x5668;&#x4e0a;\n   &#x914d;&#x7f6e;&#xff1a;\n        <span class=\"hljs-number\">1</span>&#xff0c;settings.py  \n\t\t   MEDI<span class=\"hljs-built_in\">A_ROOT</span> -&gt; &#x5b58;&#x50a8;&#x5230;&#x54ea;&#x91cc;\n\t\t   MEDI<span class=\"hljs-built_in\">A_URL</span> -&gt; &#x6807;&#x660e;&#x4ec0;&#x4e48;&#x6837;&#x7684;&#x8bf7;&#x6c42;&#xff0c;&#x662f;media&#x8d44;&#x6e90;&#x8bf7;&#x6c42;\n        <span class=\"hljs-number\">2</span>&#xff0c;&#x4e3b;&#x8def;&#x7531;&#x91cc;&#x9762; &#x6dfb;&#x52a0; static(MEDAI_URL, MEDI<span class=\"hljs-built_in\">A_ROOT</span>)\n<span class=\"hljs-number\">5</span>, &#x62bd;&#x8c61;&#x7c7b;\n<span class=\"hljs-number\">6</span>&#xff0c;python3 manage.py dumpdata/loaddata\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,17"}},{"content":"<pre data-lines=\"17,21\"><code data-lines=\"17,21\">&#x8d2d;&#x7269;&#x8f66;&#x6a21;&#x5757;\n&#x600e;&#x4e48;&#x505a;&#xff1f;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,21"}},{"content":"<pre data-lines=\"21,56\"><code data-lines=\"21,56\"><span class=\"hljs-number\">1</span>&#xff0c;&#x72ec;&#x7acb;&#x5e94;&#x7528; carts\n<span class=\"hljs-number\">2</span>,\n   &#x975e;&#x767b;&#x5f55;&#x72b6;&#x6001;&#x4e0b; &#x53ef;&#x4ee5;&#x4f7f;&#x7528;&#x8d2d;&#x7269;&#x8f66;\n   &#x524d;&#x7aef;&#x6d4f;&#x89c8;&#x5668;&#x8d1f;&#x8d23;&#x5b58;&#x50a8; &#x6570;&#x636e;\n   <span class=\"hljs-number\">1</span>&#xff0c;&#x4f53;&#x91cf;&#x4e0d;&#x5c0f;  <span class=\"hljs-number\">2</span>&#xff0c;&#x4ef7;&#x503c;&#x672a;&#x5fc5;&#x4f1a;&#x5f88;&#x5927;\n\n\n   &#x767b;&#x5f55;&#x72b6;&#x6001;&#x4e0b;\n   &#x540e;&#x7aef;&#x670d;&#x52a1;&#x5668;&#x8d1f;&#x8d23;&#x5b58;&#x50a8; &#x6570;&#x636e;\n   <span class=\"hljs-number\">1</span>,mysql / redis\n    &#x6570;&#x636e;&#x8bf7;&#x6c42;&#x91cf;/&#x6570;&#x636e;&#x5b89;&#x5168;&#x6027; -&gt; redis&#x7968;&#x6570; + <span class=\"hljs-number\">1</span>\n\tuid <span class=\"hljs-number\">1</span> -&gt; {sku_id:{count:<span class=\"hljs-number\">1</span>,select:<span class=\"hljs-number\">1</span>} } -&gt; redis\n\n   <span class=\"hljs-number\">2</span>, redis &#x600e;&#x4e48;&#x7528;\n      <span class=\"hljs-number\">1</span>&#xff0c; django  cache&#x5bf9;&#x8c61; -&gt; cache.set/get (string)\n\t      &#x4f18;&#x70b9;&#xff1a;&#x4e0d;&#x7528;&#x8003;&#x8651; &#x5e8f;&#x5217;&#x5316;\n\t\t  django&#x4e5f;&#x80fd;&#x914d;&#x7f6e;&#x538b;&#x7f29;\n\n\t  <span class=\"hljs-number\">2</span>,  r = redis.Redis<span class=\"hljs-function\"><span class=\"hljs-params\">()</span> -&gt;</span> r.get/set <span class=\"hljs-keyword\">or</span> hash\n\t      &#x7f3a;&#x70b9;&#xff1a;&#x8003;&#x8651;&#x5e8f;&#x5217;&#x5316; - json\n\t      &#x4f18;&#x70b9;&#xff1a;hash&#x53ef;&#x538b;&#x7f29;\n\n\n&#x5e8f;&#x5217;&#x5316;  &#x5bf9;&#x8c61; -&gt;  &#x5b57;&#x7b26;&#x4e32;   json.dumps({}) - <span class=\"hljs-string\">&quot;{}&quot;</span>\n&#x53cd;&#x5e8f;&#x5217;&#x5316;  &#x5b57;&#x7b26;&#x4e32; -&gt; &#x5bf9;&#x8c61;  json.loads<span class=\"hljs-function\"><span class=\"hljs-params\">(<span class=\"hljs-string\">&quot;{}&quot;</span>)</span> -&gt;</span> {}\n\n\n   &#x4e24;&#x8fb9;&#x90fd;&#x6709;&#x6570;&#x636e;&#xff1f; &#x4e0d;&#x4f1a;&#x4e71;&#x4e48;&#xff1f;\n   &#x6d4f;&#x89c8;&#x5668; &#x6709;&#x4e00;&#x4efd; &#x6570;&#x636e;  &amp; &#x670d;&#x52a1;&#x5668; redis &#x8fd8;&#x6709;&#x4e00;&#x4efd;&#x6570;&#x636e;\n   &#x767b;&#x9646; - &gt; &#x5408;&#x5e76; -&gt; &#x524d;&#x7aef;&#x8981;&#x4e0a;&#x4f20; &#x6d4f;&#x89c8;&#x5668;&#x8d2d;&#x7269;&#x8f66;&#x6570;&#x636e;\n   &#x6ce8;&#x518c; - &gt; &#x5408;&#x5e76;\n\n{<span class=\"hljs-string\">&quot;username&quot;</span>:<span class=\"hljs-string\">&quot;guoxiaonao&quot;</span>,<span class=\"hljs-string\">&quot;password&quot;</span>:<span class=\"hljs-string\">&quot;123456&quot;</span>,<span class=\"hljs-string\">&quot;carts&quot;</span>:[{<span class=\"hljs-string\">&quot;id&quot;</span>:<span class=\"hljs-string\">&quot;3&quot;</span>,<span class=\"hljs-string\">&quot;count&quot;</span>:<span class=\"hljs-string\">&quot;1&quot;</span>,<span class=\"hljs-string\">&quot;name&quot;</span>:<span class=\"hljs-string\">&quot;&#x84dd;&#x8272;&#x5c0f;&#x5c3a;&#x5bf8;&quot;</span>,<span class=\"hljs-string\">&quot;default_image_url&quot;</span>:<span class=\"hljs-string\">&quot;sku/3_1Dc1Us9.png&quot;</span>,<span class=\"hljs-string\">&quot;price&quot;</span>:<span class=\"hljs-number\">167</span>,<span class=\"hljs-string\">&quot;selected&quot;</span>:<span class=\"hljs-literal\">true</span>,<span class=\"hljs-string\">&quot;sku_sale_attr_name&quot;</span>:[<span class=\"hljs-string\">&quot;&#x5b89;&#x8e0f;B/&#x5c3a;&#x5bf8;&#xff1a;&quot;</span>,<span class=\"hljs-string\">&quot;&#x5b89;&#x8e0f;B/&#x989c;&#x8272;&#xff1a;&quot;</span>],<span class=\"hljs-string\">&quot;sku_sale_attr_val&quot;</span>:[<span class=\"hljs-string\">&quot;15&#x5bf8;&quot;</span>,<span class=\"hljs-string\">&quot;&#x84dd;&#x8272;&quot;</span>]}]}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,56"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

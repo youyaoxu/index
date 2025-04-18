@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"[java]-@MapperScan&#x4f5c;&#x7528;&#x662f;&#x4ec0;&#x4e48;","children":[{"content":"<pre data-lines=\"2,5\"><code data-lines=\"2,5\">&#x4f5c;&#x7528;&#xff1a;&#x6307;&#x5b9a;&#x8981;&#x53d8;&#x6210;&#x5b9e;&#x73b0;&#x7c7b;&#x7684;&#x63a5;&#x53e3;&#x6240;&#x5728;&#x7684;&#x5305;&#xff0c;&#x7136;&#x540e;&#x5305;&#x4e0b;&#x9762;&#x7684;&#x6240;&#x6709;&#x63a5;&#x53e3;&#x5728;&#x7f16;&#x8bd1;&#x4e4b;&#x540e;&#x90fd;&#x4f1a;&#x751f;&#x6210;&#x76f8;&#x5e94;&#x7684;&#x5b9e;&#x73b0;&#x7c7b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"2,5"}},{"content":"<pre data-lines=\"9,19\"><code class=\"language-java\"><span class=\"hljs-meta\">@SpringBootApplication</span>\n<span class=\"hljs-meta\">@MapperScan(&quot;com.winter.dao&quot;)</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">SpringbootMybatisDemoApplication</span> {\n\n    <span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">static</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title function_\">main</span><span class=\"hljs-params\">(String[] args)</span> {\n        SpringApplication.run(SpringbootMybatisDemoApplication.class, args);\n    }\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,19"}},{"content":"<pre data-lines=\"20,23\"><code data-lines=\"20,23\">&#x6dfb;&#x52a0;@<span class=\"hljs-built_in\">MapperScan</span>(&#x201c;com<span class=\"hljs-selector-class\">.winter</span>.dao&#x201d;)&#x6ce8;&#x89e3;&#x4ee5;&#x540e;&#xff0c;com<span class=\"hljs-selector-class\">.winter</span>.dao&#x5305;&#x4e0b;&#x9762;&#x7684;&#x63a5;&#x53e3;&#x7c7b;&#xff0c;&#x5728;&#x7f16;&#x8bd1;&#x4e4b;&#x540e;&#x90fd;&#x4f1a;&#x751f;&#x6210;&#x76f8;&#x5e94;&#x7684;&#x5b9e;&#x73b0;&#x7c7b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,23"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

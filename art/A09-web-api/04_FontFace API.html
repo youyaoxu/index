@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"FontFace API","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,8\"><code>FontFace API &#x7528;&#x6765;&#x63a7;&#x5236;&#x5b57;&#x4f53;&#x52a0;&#x8f7d;&#x3002;\n\n&#x8fd9;&#x4e2a; API &#x63d0;&#x4f9b;&#x4e00;&#x4e2a;&#x6784;&#x9020;&#x51fd;&#x6570;`FontFace()`&#xff0c;&#x8fd4;&#x56de;&#x4e00;&#x4e2a;&#x5b57;&#x4f53;&#x5bf9;&#x8c61;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}},{"content":"<pre data-lines=\"9,12\"><code data-lines=\"9,12\"><span class=\"hljs-keyword\">new</span> FontFace(family, <span class=\"hljs-keyword\">source</span>, descriptors) \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,12"}},{"content":"<pre data-lines=\"13,18\"><code>`FontFace()`&#x6784;&#x9020;&#x51fd;&#x6570;&#x63a5;&#x53d7;&#x4e09;&#x4e2a;&#x53c2;&#x6570;&#x3002;\n\n*   `family`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x5b57;&#x4f53;&#x540d;&#xff0c;&#x5199;&#x6cd5;&#x4e0e; CSS &#x7684;`@font-face`&#x7684;`font-family`&#x5c5e;&#x6027;&#x76f8;&#x540c;&#x3002;\n*   `source`&#xff1a;&#x5b57;&#x4f53;&#x6587;&#x4ef6;&#x7684; URL&#xff08;&#x5fc5;&#x987b;&#x5305;&#x62ec; CSS &#x7684;`url()`&#x65b9;&#x6cd5;&#xff09;&#xff0c;&#x6216;&#x8005;&#x662f;&#x4e00;&#x4e2a;&#x5b57;&#x4f53;&#x7684; ArrayBuffer &#x5bf9;&#x8c61;&#x3002;\n*   `descriptors`&#xff1a;&#x5bf9;&#x8c61;&#xff0c;&#x7528;&#x6765;&#x5b9a;&#x5236;&#x5b57;&#x4f53;&#x6587;&#x4ef6;&#x3002;&#x8be5;&#x53c2;&#x6570;&#x53ef;&#x9009;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,18"}},{"content":"<pre data-lines=\"19,27\"><code data-lines=\"19,27\"><span class=\"hljs-keyword\">var</span> fontFace = <span class=\"hljs-keyword\">new</span> FontFace(\n  <span class=\"hljs-string\">&apos;Roboto&apos;</span>,\n  <span class=\"hljs-string\">&apos;url(https://fonts.example.com/roboto.woff2)&apos;</span>\n);\n\nfontFace.family \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,27"}},{"content":"<pre data-lines=\"28,44\"><code>`FontFace()`&#x8fd4;&#x56de;&#x7684;&#x662f;&#x4e00;&#x4e2a;&#x5b57;&#x4f53;&#x5bf9;&#x8c61;&#xff0c;&#x8fd9;&#x4e2a;&#x5bf9;&#x8c61;&#x5305;&#x542b;&#x5b57;&#x4f53;&#x4fe1;&#x606f;&#x3002;&#x6ce8;&#x610f;&#xff0c;&#x8fd9;&#x65f6;&#x5b57;&#x4f53;&#x6587;&#x4ef6;&#x8fd8;&#x6ca1;&#x6709;&#x5f00;&#x59cb;&#x52a0;&#x8f7d;&#x3002;\n\n&#x5b57;&#x4f53;&#x5bf9;&#x8c61;&#x5305;&#x542b;&#x4ee5;&#x4e0b;&#x5c5e;&#x6027;&#x3002;\n\n*   `FontFace.family`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x5b57;&#x4f53;&#x7684;&#x540d;&#x5b57;&#xff0c;&#x7b49;&#x540c;&#x4e8e; CSS &#x7684;`font-family`&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.display`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x6307;&#x5b9a;&#x5b57;&#x4f53;&#x52a0;&#x8f7d;&#x671f;&#x95f4;&#x5982;&#x4f55;&#x5c55;&#x793a;&#xff0c;&#x7b49;&#x540c;&#x4e8e; CSS &#x7684;`font-display`&#x5c5e;&#x6027;&#x3002;&#x5b83;&#x6709;&#x4e94;&#x4e2a;&#x53ef;&#x80fd;&#x7684;&#x503c;&#xff1a;`auto`&#xff08;&#x7531;&#x6d4f;&#x89c8;&#x5668;&#x51b3;&#x5b9a;&#xff09;&#x3001;`block`&#xff08;&#x5b57;&#x4f53;&#x52a0;&#x8f7d;&#x671f;&#x95f4;&#xff0c;&#x524d;3&#x79d2;&#x4f1a;&#x663e;&#x793a;&#x4e0d;&#x51fa;&#x5185;&#x5bb9;&#xff0c;&#x7136;&#x540e;&#x53ea;&#x8981;&#x8fd8;&#x6ca1;&#x5b8c;&#x6210;&#x52a0;&#x8f7d;&#xff0c;&#x5c31;&#x4e00;&#x76f4;&#x663e;&#x793a;&#x540e;&#x5907;&#x5b57;&#x4f53;&#xff09;&#x3001;`fallback`&#xff08;&#x524d;100&#x6beb;&#x79d2;&#x663e;&#x793a;&#x4e0d;&#x51fa;&#x5185;&#x5bb9;&#xff0c;&#x540e;3&#x79d2;&#x663e;&#x793a;&#x540e;&#x5907;&#x5b57;&#x4f53;&#xff0c;&#x7136;&#x540e;&#x53ea;&#x8981;&#x5b57;&#x4f53;&#x8fd8;&#x6ca1;&#x5b8c;&#x6210;&#x52a0;&#x8f7d;&#xff0c;&#x5c31;&#x4e00;&#x76f4;&#x663e;&#x793a;&#x540e;&#x5907;&#x5b57;&#x4f53;&#xff09;&#x3001;`optional`&#xff08;&#x524d;100&#x6beb;&#x79d2;&#x663e;&#x793a;&#x4e0d;&#x51fa;&#x5185;&#x5bb9;&#xff0c;&#x7136;&#x540e;&#x53ea;&#x8981;&#x5b57;&#x4f53;&#x8fd8;&#x6ca1;&#x6709;&#x5b8c;&#x6210;&#x52a0;&#x8f7d;&#xff0c;&#x5c31;&#x4e00;&#x76f4;&#x663e;&#x793a;&#x540e;&#x5907;&#x5b57;&#x4f53;&#xff09;&#xff0c;`swap`&#xff08;&#x53ea;&#x8981;&#x5b57;&#x4f53;&#x6ca1;&#x6709;&#x5b8c;&#x6210;&#x52a0;&#x8f7d;&#xff0c;&#x5c31;&#x4e00;&#x76f4;&#x663e;&#x793a;&#x540e;&#x5907;&#x5b57;&#x4f53;&#xff09;&#x3002;\n*   `FontFace.style`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e; CSS &#x7684;`font-style`&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.weight`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e; CSS &#x7684;`font-weight`&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.stretch`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e; CSS &#x7684;`font-strentch`&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.unicodeRange`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e;`descriptors`&#x5bf9;&#x8c61;&#x7684;&#x540c;&#x540d;&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.variant`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e;`descriptors`&#x5bf9;&#x8c61;&#x7684;&#x540c;&#x540d;&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.featureSettings`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7b49;&#x540c;&#x4e8e;`descriptors`&#x5bf9;&#x8c61;&#x7684;&#x540c;&#x540d;&#x5c5e;&#x6027;&#x3002;\n*   `FontFace.status`&#xff1a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x8868;&#x793a;&#x5b57;&#x4f53;&#x7684;&#x52a0;&#x8f7d;&#x72b6;&#x6001;&#xff0c;&#x6709;&#x56db;&#x4e2a;&#x53ef;&#x80fd;&#x7684;&#x503c;&#xff1a;`unloaded`&#x3001;`loading`&#x3001;`loaded`&#x3001;`error`&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;\n*   `FontFace.loaded`&#xff1a;&#x8fd4;&#x56de;&#x4e00;&#x4e2a; Promise &#x5bf9;&#x8c61;&#xff0c;&#x5b57;&#x4f53;&#x52a0;&#x8f7d;&#x6210;&#x529f;&#x6216;&#x5931;&#x8d25;&#xff0c;&#x4f1a;&#x5bfc;&#x81f4;&#x8be5; Promise &#x72b6;&#x6001;&#x6539;&#x53d8;&#x3002;&#x8be5;&#x5c5e;&#x6027;&#x53ea;&#x8bfb;&#x3002;\n\n&#x5b57;&#x4f53;&#x5bf9;&#x8c61;&#x7684;&#x65b9;&#x6cd5;&#xff0c;&#x53ea;&#x6709;&#x4e00;&#x4e2a;`FontFace.load()`&#xff0c;&#x8be5;&#x65b9;&#x6cd5;&#x4f1a;&#x771f;&#x6b63;&#x5f00;&#x59cb;&#x52a0;&#x8f7d;&#x5b57;&#x4f53;&#x3002;&#x5b83;&#x8fd4;&#x56de;&#x4e00;&#x4e2a; Promise &#x5bf9;&#x8c61;&#xff0c;&#x72b6;&#x6001;&#x7531;&#x5b57;&#x4f53;&#x52a0;&#x8f7d;&#x7684;&#x7ed3;&#x679c;&#x51b3;&#x5b9a;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,44"}},{"content":"<pre data-lines=\"45,52\"><code data-lines=\"45,52\"><span class=\"hljs-keyword\">var</span> f = <span class=\"hljs-keyword\">new</span> FontFace(<span class=\"hljs-string\">&apos;test&apos;</span>, <span class=\"hljs-string\">&apos;url(x)&apos;</span>);\n\nf.load().then(<span class=\"hljs-keyword\">function</span> <span class=\"hljs-params\">()</span> {\n  \n}); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,52"}}],"payload":{"tag":"h2","lines":"2,4"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

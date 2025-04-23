@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"deepseek4j&#x7b80;&#x4ecb;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,7\"><code>DeepSeek Java SDK - &#x7b80;&#x5355;&#x6613;&#x7528;&#x7684; DeepSeek API Java &#x5ba2;&#x6237;&#x7aef;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"deepseek4j &#x662f;&#x4ec0;&#x4e48;&#xff1f;","children":[{"content":"<pre data-lines=\"12,13\"><code>deepseek4j &#x662f;&#x9762;&#x5411; DeepSeek &#x63a8;&#x51fa;&#x7684; Java &#x5f00;&#x53d1; SDK&#xff0c;&#x652f;&#x6301; DeepSeek R1 &#x548c; V3 &#x5168;&#x7cfb;&#x5217;&#x6a21;&#x578b;&#x3002;&#x63d0;&#x4f9b;&#x5bf9;&#x8bdd;&#x63a8;&#x7406;&#x3001;&#x51fd;&#x6570;&#x8c03;&#x7528;&#x3001;JSON&#x7ed3;&#x6784;&#x5316;&#x8f93;&#x51fa;&#x3001;&#x4ee5;&#x53ca;&#x57fa;&#x4e8e; OpenAI &#x517c;&#x5bb9; API &#x534f;&#x8bae;&#x7684;&#x5d4c;&#x5165;&#x5411;&#x91cf;&#x751f;&#x6210;&#x80fd;&#x529b;&#x3002;&#x901a;&#x8fc7; Spring Boot Starter &#x6a21;&#x5757;&#xff0c;&#x5f00;&#x53d1;&#x8005;&#x53ef;&#x4ee5;&#x5feb;&#x901f;&#x4e3a; Spring Boot 2.x/3.x &#x4ee5;&#x53ca; Solon &#x7b49;&#x4e3b;&#x6d41; Java Web &#x6846;&#x67b6;&#x96c6;&#x6210; AI &#x80fd;&#x529b;&#xff0c;&#x63d0;&#x4f9b;&#x5f00;&#x7bb1;&#x5373;&#x7528;&#x7684;&#x914d;&#x7f6e;&#x4f53;&#x7cfb;&#x3001;&#x81ea;&#x52a8;&#x88c5;&#x914d;&#x7684;&#x5ba2;&#x6237;&#x7aef;&#x5b9e;&#x4f8b;&#xff0c;&#x4ee5;&#x53ca;&#x4fbf;&#x6377;&#x7684;&#x6d41;&#x5f0f;&#x54cd;&#x5e94;&#x652f;&#x6301;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,13"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1738929536.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x7279;&#x6027;","children":[{"content":"&#x5b8c;&#x6574;&#x7684; DeepSeek API &#x652f;&#x6301;&#xff0c;&#x652f;&#x6301;&#x8fd4;&#x56de;&#x601d;&#x7ef4;&#x94fe;&#x548c;&#x4f1a;&#x8bdd;&#x8d26;&#x5355;","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"&#x652f;&#x6301;&#x81ea;&#x5b9a;&#x4e49;&#x8fde;&#x63a5;&#x53c2;&#x6570;&#x3001;&#x4ee3;&#x7406;&#x914d;&#x7f6e;&#x3001;&#x8d85;&#x65f6;&#x8bbe;&#x7f6e;&#x3001;&#x8bf7;&#x6c42;&#x54cd;&#x5e94;&#x65e5;&#x5fd7;","children":[],"payload":{"tag":"li","lines":"26,27"}},{"content":"Reactor &#x54cd;&#x5e94;&#x5f0f;&#x652f;&#x6301;&#xff0c;&#x7b80;&#x5316;&#x6d41;&#x5f0f;&#x8fd4;&#x56de;&#x5f00;&#x53d1;","children":[],"payload":{"tag":"li","lines":"27,30"}}],"payload":{"tag":"h2","lines":"22,24"}},{"content":"&#x8bb8;&#x53ef;&#x8bc1;&#x4e0e;&#x81f4;&#x8c22;","children":[{"content":"<pre data-lines=\"33,40\"><code>&#x672c;&#x9879;&#x76ee;&#x57fa;&#x4e8e; [Apache License 2.0](LICENSE) &#x8bb8;&#x53ef;&#x8bc1;&#x5f00;&#x6e90;&#x3002;\n\n&#x9879;&#x76ee;&#x8bbe;&#x8ba1;&#x7075;&#x611f;&#x6765;&#x6e90;&#x4e8e; [OpenAI4J](https://github.com/ai-for-java/openai4j) &#x9879;&#x76ee;&#xff0c;&#x5728;&#x5176;&#x4f18;&#x79c0;&#x67b6;&#x6784;&#x8bbe;&#x8ba1;&#x7684;&#x57fa;&#x7840;&#x4e0a;&#xff1a;\n\n*   &#x6269;&#x5c55;&#x4e86; DeepSeek &#x7279;&#x6709;&#x529f;&#x80fd;\n*   &#x589e;&#x5f3a;&#x4e86; Reactor &#x54cd;&#x5e94;&#x5f0f;&#x652f;&#x6301;\n*   &#x63d0;&#x4f9b;&#x4e86;&#x66f4;&#x5b8c;&#x6574;&#x7684; Spring Boot &#x96c6;&#x6210;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,40"}}],"payload":{"tag":"h2","lines":"30,32"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

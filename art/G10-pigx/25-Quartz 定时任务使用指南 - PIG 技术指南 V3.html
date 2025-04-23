@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Quartz &#x5b9a;&#x65f6;&#x4efb;&#x52a1;&#x4f7f;&#x7528;&#x6307;&#x5357;","children":[{"content":"&#x4efb;&#x52a1;&#x7c7b;&#x578b;&#x6982;&#x8ff0;","children":[{"content":"<pre data-lines=\"5,11\"><code>`pig` &#x6846;&#x67b6;&#x652f;&#x6301;&#x4ee5;&#x4e0b;&#x56db;&#x79cd;&#x4efb;&#x52a1;&#x7c7b;&#x578b;&#xff1a;\n\n1.  **Spring Bean &#x7c7b;&#x578b;**&#xff1a;&#x5c06;&#x4efb;&#x52a1;&#x5b9a;&#x4e49;&#x4e3a; Spring Bean&#xff0c;&#x4fbf;&#x4e8e;&#x5728; Spring &#x5e94;&#x7528;&#x4e2d;&#x96c6;&#x6210;&#x548c;&#x4f7f;&#x7528;\n2.  **REST &#x7c7b;&#x578b;**&#xff1a;&#x5c06;&#x4efb;&#x52a1;&#x5c01;&#x88c5;&#x4e3a; REST &#x63a5;&#x53e3;&#xff0c;&#x901a;&#x8fc7; HTTP &#x8bf7;&#x6c42;&#x89e6;&#x53d1;&#x6267;&#x884c;&#xff0c;&#x9002;&#x7528;&#x4e8e;&#x8de8;&#x7cfb;&#x7edf;&#x4efb;&#x52a1;&#x8c03;&#x5ea6;\n3.  **Java &#x7c7b;&#x578b;&#xff08;&#x53cd;&#x5c04;&#xff09;**&#xff1a;&#x4ee5; Java &#x7c7b;&#x7684;&#x5f62;&#x5f0f;&#x5b9a;&#x4e49;&#x4efb;&#x52a1;&#xff0c;&#x901a;&#x8fc7;&#x53cd;&#x5c04;&#x673a;&#x5236;&#x6267;&#x884c;\n4.  **Jar &#x7c7b;&#x578b;&#xff08;java -jar&#xff09;**&#xff1a;&#x5c06;&#x4efb;&#x52a1;&#x6253;&#x5305;&#x4e3a;&#x53ef;&#x6267;&#x884c; Jar &#x6587;&#x4ef6;&#xff0c;&#x901a;&#x8fc7;&#x547d;&#x4ee4;&#x884c;&#x89e6;&#x53d1;&#x6267;&#x884c;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,11"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x8be6;&#x7ec6;&#x914d;&#x7f6e;&#x6307;&#x5357;","children":[{"content":"1. Spring Bean &#x7c7b;&#x578b;&#x4efb;&#x52a1;","children":[{"content":"<img src=\"https://minio.pigx.top/oss/202401/1704335335.png\" alt>","children":[],"payload":{"tag":"img","lines":"17,18"}},{"content":"<img src=\"https://minio.pigx.top/oss/1657725923.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"19,20"}},{"content":"<pre data-lines=\"21,22\"><code>**&#x53c2;&#x6570;&#x8bf4;&#x660e;**&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,22"}},{"content":"<table data-lines=\"23,30\">\n<thead data-lines=\"23,24\">\n<tr data-lines=\"23,24\">\n<th>&#x53c2;&#x6570;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"25,30\">\n<tr data-lines=\"25,26\">\n<td>&#x7c7b;&#x578b;</td>\n<td>&#x9009;&#x62e9; <code>spring bean</code></td>\n</tr>\n<tr data-lines=\"26,27\">\n<td>&#x6267;&#x884c;&#x8def;&#x5f84;</td>\n<td>&#x7559;&#x7a7a;</td>\n</tr>\n<tr data-lines=\"27,28\">\n<td>&#x6267;&#x884c;&#x6587;&#x4ef6;</td>\n<td>&#x586b;&#x5199; Spring Bean &#x7684;&#x540d;&#x79f0;&#xff0c;&#x5982; <code>demo</code></td>\n</tr>\n<tr data-lines=\"28,29\">\n<td>&#x6267;&#x884c;&#x65b9;&#x6cd5;</td>\n<td>&#x6307;&#x5b9a;&#x8981;&#x6267;&#x884c;&#x7684; Bean &#x65b9;&#x6cd5;&#x540d;&#x79f0;</td>\n</tr>\n<tr data-lines=\"29,30\">\n<td>&#x6267;&#x884c;&#x53c2;&#x6570;</td>\n<td>&#x65b9;&#x6cd5;&#x7684;&#x8f93;&#x5165;&#x53c2;&#x6570;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"23,30"}},{"content":"<img src=\"https://minio.pigx.top/oss/1657725937.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"31,32"}}],"payload":{"tag":"h3","lines":"15,16"}},{"content":"2. REST &#x8c03;&#x7528;&#x7c7b;&#x578b;","children":[{"content":"<img src=\"https://minio.pigx.top/oss/1657725947.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"35,36"}}],"payload":{"tag":"h3","lines":"33,34"}},{"content":"3. Jar &#x7c7b;&#x578b;&#x4efb;&#x52a1;","children":[{"content":"<pre data-lines=\"39,42\"><code>Jar &#x7c7b;&#x578b;&#x4efb;&#x52a1;&#x672c;&#x8d28;&#x662f;&#x5b9a;&#x65f6;&#x6267;&#x884c; `java -jar &#x6267;&#x884c;&#x8def;&#x5f84; &#x6267;&#x884c;&#x53c2;&#x6570;` &#x547d;&#x4ee4;&#x3002;\n\n**&#x53c2;&#x6570;&#x8bf4;&#x660e;**&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"39,42"}},{"content":"<table data-lines=\"43,50\">\n<thead data-lines=\"43,44\">\n<tr data-lines=\"43,44\">\n<th>&#x53c2;&#x6570;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"45,50\">\n<tr data-lines=\"45,46\">\n<td>&#x7c7b;&#x578b;</td>\n<td>&#x9009;&#x62e9; <code>jar</code></td>\n</tr>\n<tr data-lines=\"46,47\">\n<td>&#x6267;&#x884c;&#x8def;&#x5f84;</td>\n<td>&#x670d;&#x52a1;&#x5668;&#x4e0a; Jar &#x5305;&#x6240;&#x5728;&#x7684;&#x5b8c;&#x6574;&#x8def;&#x5f84;</td>\n</tr>\n<tr data-lines=\"47,48\">\n<td>&#x6267;&#x884c;&#x6587;&#x4ef6;</td>\n<td>&#x7559;&#x7a7a;</td>\n</tr>\n<tr data-lines=\"48,49\">\n<td>&#x6267;&#x884c;&#x65b9;&#x6cd5;</td>\n<td>&#x7559;&#x7a7a;</td>\n</tr>\n<tr data-lines=\"49,50\">\n<td>&#x6267;&#x884c;&#x53c2;&#x6570;</td>\n<td><code>java -jar</code> &#x6267;&#x884c;&#x65f6;&#x9700;&#x8981;&#x7684;&#x989d;&#x5916;&#x53c2;&#x6570;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"43,50"}},{"content":"<img src=\"https://minio.pigx.top/oss/1657725958.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"51,52"}}],"payload":{"tag":"h3","lines":"37,38"}},{"content":"4. Java &#x7c7b;&#x578b;&#x4efb;&#x52a1;&#xff08;&#x53cd;&#x5c04;&#x673a;&#x5236;&#xff09;","children":[{"content":"<pre data-lines=\"55,58\"><code>&#x901a;&#x8fc7;&#x53cd;&#x5c04;&#x673a;&#x5236;&#x8c03;&#x7528;&#x5e94;&#x7528;&#x4e2d;&#x7684;&#x6307;&#x5b9a;&#x7c7b;&#x548c;&#x65b9;&#x6cd5;&#x3002;\n\n**&#x53c2;&#x6570;&#x8bf4;&#x660e;**&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,58"}},{"content":"<table data-lines=\"59,66\">\n<thead data-lines=\"59,60\">\n<tr data-lines=\"59,60\">\n<th>&#x53c2;&#x6570;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"61,66\">\n<tr data-lines=\"61,62\">\n<td>&#x7c7b;&#x578b;</td>\n<td>&#x9009;&#x62e9; <code>java</code></td>\n</tr>\n<tr data-lines=\"62,63\">\n<td>&#x6267;&#x884c;&#x8def;&#x5f84;</td>\n<td>&#x7559;&#x7a7a;</td>\n</tr>\n<tr data-lines=\"63,64\">\n<td>&#x6267;&#x884c;&#x6587;&#x4ef6;</td>\n<td>&#x7c7b;&#x7684;&#x5168;&#x9650;&#x5b9a;&#x540d;&#xff08;&#x5305;&#x542b;&#x5305;&#x540d;&#xff09;</td>\n</tr>\n<tr data-lines=\"64,65\">\n<td>&#x6267;&#x884c;&#x65b9;&#x6cd5;</td>\n<td>&#x76ee;&#x6807;&#x7c7b;&#x4e2d;&#x7684;&#x65b9;&#x6cd5;&#x540d;</td>\n</tr>\n<tr data-lines=\"65,66\">\n<td>&#x6267;&#x884c;&#x53c2;&#x6570;</td>\n<td>&#x4e00;&#x4e2a; String &#x7c7b;&#x578b;&#x7684;&#x53c2;&#x6570;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"59,66"}},{"content":"<img src=\"https://minio.pigx.top/oss/1657725967.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"67,68"}}],"payload":{"tag":"h3","lines":"53,54"}}],"payload":{"tag":"h2","lines":"12,14"}},{"content":"&#x8c03;&#x8bd5;&#x4e0e;&#x6392;&#x67e5;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1713341701204-9c2c3a82-20d4-42b8-aff2-ad5c3783fedf.png\" alt>","children":[],"payload":{"tag":"img","lines":"74,75"}}],"payload":{"tag":"h2","lines":"69,71"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

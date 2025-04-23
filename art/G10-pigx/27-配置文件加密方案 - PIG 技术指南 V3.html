@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x52a0;&#x5bc6;&#x65b9;&#x6848;","children":[{"content":"&#x8bf4;&#x660e;","children":[{"content":"&#x914d;&#x7f6e;&#x6839;&#x5bc6;&#x94a5;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314749289-bfaea97c-0123-4935-b918-1d4b195d72ad.png\" alt>","children":[],"payload":{"tag":"img","lines":"11,12"}}],"payload":{"tag":"h3","lines":"9,10"}},{"content":"&#x5728;&#x7ebf;&#x52a0;&#x5bc6;&#x5de5;&#x5177;","children":[{"content":"<pre data-lines=\"15,16\"><code>&#x8bbf;&#x95ee; [enc.pig4cloud.com](https://enc.pig4cloud.com/) &#x8fdb;&#x884c;&#x5728;&#x7ebf;&#x52a0;&#x5bc6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,16"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1604763068210-d9be1a2b-dd26-489c-a286-ebbbda3939dc.png\" alt>","children":[],"payload":{"tag":"img","lines":"17,18"}}],"payload":{"tag":"h3","lines":"13,14"}},{"content":"&#x7279;&#x522b;&#x8bf4;&#x660e;","children":[{"content":"<pre data-lines=\"21,22\"><code>&#x6839;&#x5bc6;&#x94a5;&#x548c;&#x5bc6;&#x6587;&#x662f;&#x4e00;&#x5957;&#xff0c;&#x82e5;&#x5bc6;&#x94a5;&#x66f4;&#x6539;&#xff0c;&#x5219;&#x6240;&#x6709;&#x5bc6;&#x6587;&#x9700;&#x8981;&#x91cd;&#x65b0;&#x52a0;&#x5bc6;&#x914d;&#x7f6e;&#x3002;&#x4e14;&#x539f;&#x6587;&#x5185;&#x5bb9;&#x4e0d;&#x80fd;&#x968f;&#x610f;&#x4fee;&#x6539;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,22"}},{"content":"<pre data-lines=\"23,31\"><code data-lines=\"23,31\"><span class=\"hljs-meta\"># &#x5bc6;&#x6587;&#x3001;&#x6839;&#x5bc6;&#x94a5;&#x4e0d;&#x5339;&#x914d; &#x62a5;&#x9519;&#x5982;&#x4e0b; </span>\nDescription:\n\nFailed <span class=\"hljs-keyword\">to</span> bind properties under <span class=\"hljs-string\">&apos;security.oauth2.client.client-id&apos;</span> <span class=\"hljs-keyword\">to</span> java.lang.<span class=\"hljs-built_in\">String</span>:\n\n Reason: Failed <span class=\"hljs-keyword\">to</span> bind properties under <span class=\"hljs-string\">&apos;security.oauth2.client.client-id&apos;</span> <span class=\"hljs-keyword\">to</span> java.lang.<span class=\"hljs-built_in\">String</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,31"}}],"payload":{"tag":"h3","lines":"19,20"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x539f;&#x7406;&#x89e3;&#x6790;","children":[{"content":"1. Maven &#x4f9d;&#x8d56;","children":[{"content":"<pre data-lines=\"37,44\"><code data-lines=\"37,44\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.github.ulisesbocchio<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>jasypt-spring-boot-starter<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">version</span>&gt;</span>1.16<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">version</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,44"}}],"payload":{"tag":"h3","lines":"35,36"}},{"content":"2. &#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"47,52\"><code data-lines=\"47,52\"><span class=\"hljs-symbol\">jasypt:</span>\n<span class=\"hljs-symbol\"> encryptor:</span>\n<span class=\"hljs-symbol\"> password:</span> foo <span class=\"hljs-meta\">#&#x6839;&#x5bc6;&#x7801; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,52"}}],"payload":{"tag":"h3","lines":"45,46"}},{"content":"3. &#x4f7f;&#x7528; JAVA &#x65b9;&#x6cd5;&#x8c03;&#x7528;&#xff08;&#x4e0d;&#x4f9d;&#x8d56; spring &#x5bb9;&#x5668;&#xff09;","children":[{"content":"<pre data-lines=\"55,70\"><code data-lines=\"55,70\"><span class=\"hljs-comment\">/**\n * jasypt.encryptor.password &#x5bf9;&#x5e94; &#x914d;&#x7f6e;&#x4e2d;&#x5fc3; application-dev.yml &#x4e2d;&#x7684;&#x5bc6;&#x7801;\n */</span>\n@Test\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">testEnvironmentProperties</span>()</span> {\n System.setProperty(JASYPT_ENCRYPTOR_PASSWORD, <span class=\"hljs-string\">&quot;lengleng&quot;</span>);\n StringEncryptor stringEncryptor = <span class=\"hljs-keyword\">new</span> DefaultLazyEncryptor(<span class=\"hljs-keyword\">new</span> StandardEnvironment());\n\n <span class=\"hljs-comment\">//&#x52a0;&#x5bc6;&#x65b9;&#x6cd5;</span>\n System.<span class=\"hljs-keyword\">out</span>.println(stringEncryptor.encrypt(<span class=\"hljs-string\">&quot;123456&quot;</span>));\n <span class=\"hljs-comment\">//&#x89e3;&#x5bc6;&#x65b9;&#x6cd5;</span>\n System.<span class=\"hljs-keyword\">out</span>.println(stringEncryptor.decrypt(<span class=\"hljs-string\">&quot;saRv7ZnXsNAfsl3AL9OpCQ==&quot;</span>));\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,70"}}],"payload":{"tag":"h3","lines":"53,54"}},{"content":"4. &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x4f7f;&#x7528;&#x5bc6;&#x6587;","children":[{"content":"<pre data-lines=\"73,80\"><code data-lines=\"73,80\"><span class=\"hljs-symbol\">spring:</span>\n<span class=\"hljs-symbol\"> datasource:</span>\n<span class=\"hljs-symbol\"> password:</span> ENC(&#x5bc6;&#x6587;)\n<span class=\"hljs-symbol\">\nxxx:</span> ENC(&#x5bc6;&#x6587;) \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"73,80"}}],"payload":{"tag":"h3","lines":"71,72"}},{"content":"5. &#x5176;&#x4ed6;&#x914d;&#x7f6e;&#x53c2;&#x8003;","children":[],"payload":{"tag":"h3","lines":"81,82"}}],"payload":{"tag":"h2","lines":"32,34"}},{"content":"&#x603b;&#x7ed3;","children":[{"content":"1. Spring Cloud Config &#x63d0;&#x4f9b;&#x4e86;&#x7edf;&#x4e00;&#x7684;&#x52a0;&#x89e3;&#x5bc6;&#x65b9;&#x5f0f;&#xff0c;&#x65b9;&#x4fbf;&#x4f7f;&#x7528;&#xff0c;&#x4f46;&#x662f;&#x5982;&#x679c;&#x5e94;&#x7528;&#x914d;&#x7f6e;&#x6ca1;&#x6709;&#x8d70;&#x914d;&#x7f6e;&#x4e2d;&#x5fc3;&#xff0c;&#x90a3;&#x4e48;&#x52a0;&#x89e3;&#x5bc6;&#x8fc7;&#x6ee4;&#x662f;&#x65e0;&#x6548;&#x7684;&#xff1b;&#x4f9d;&#x8d56; JCE &#x5bf9;&#x4e8e;&#x4f4e;&#x7248;&#x672c; spring cloud &#x7684;&#x517c;&#x5bb9;&#x6027;&#x4e0d;&#x597d;&#x3002;","children":[],"payload":{"tag":"li","lines":"88,89","listIndex":1}},{"content":"2. jasypt &#x529f;&#x80fd;&#x66f4;&#x4e3a;&#x5f3a;&#x5927;&#xff0c;&#x652f;&#x6301;&#x7684;&#x52a0;&#x5bc6;&#x65b9;&#x5f0f;&#x66f4;&#x591a;&#xff0c;&#x4f46;&#x662f;&#x5982;&#x679c;&#x591a;&#x4e2a;&#x5fae;&#x670d;&#x52a1;&#xff0c;&#x9700;&#x8981;&#x6bcf;&#x4e2a;&#x670d;&#x52a1;&#x6a21;&#x5757;&#x5f15;&#x5165;&#x4f9d;&#x8d56;&#x914d;&#x7f6e;&#xff0c;&#x8f83;&#x4e3a;&#x9ebb;&#x70e6;&#xff1b;&#x4f46;&#x662f;&#x529f;&#x80fd;&#x5f3a;&#x5927;&#x3001;&#x7075;&#x6d3b;&#x3002;","children":[],"payload":{"tag":"li","lines":"89,90","listIndex":2}},{"content":"3. &#x4e2a;&#x4eba;&#x9009;&#x62e9; jasypt","children":[],"payload":{"tag":"li","lines":"90,91","listIndex":3}}],"payload":{"tag":"h2","lines":"85,87"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

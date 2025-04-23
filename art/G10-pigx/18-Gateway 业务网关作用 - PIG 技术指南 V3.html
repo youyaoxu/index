@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Gateway &#x4e1a;&#x52a1;&#x7f51;&#x5173;&#x4f5c;&#x7528;","children":[{"content":"&#x4ec0;&#x4e48;&#x662f;&#x4e1a;&#x52a1;&#x7f51;&#x5173;","children":[{"content":"<pre data-lines=\"11,15\"><code>*   **&#x8bf7;&#x6c42;&#x63a5;&#x5165;&#xff1a;**  &#x4f5c;&#x4e3a;&#x6240;&#x6709; API &#x63a5;&#x53e3;&#x670d;&#x52a1;&#x8bf7;&#x6c42;&#x7684;&#x63a5;&#x5165;&#x70b9;&#xff0c;&#x7ba1;&#x7406;&#x6240;&#x6709;&#x7684;&#x63a5;&#x5165;&#x8bf7;&#x6c42;&#xff1b;\n*   **&#x4e1a;&#x52a1;&#x805a;&#x5408;&#xff1a;**  &#x4f5c;&#x4e3a;&#x6240;&#x6709;&#x540e;&#x7aef;&#x4e1a;&#x52a1;&#x670d;&#x52a1;&#x7684;&#x805a;&#x5408;&#x70b9;&#xff0c;&#x6240;&#x6709;&#x7684;&#x4e1a;&#x52a1;&#x670d;&#x52a1;&#x90fd;&#x53ef;&#x4ee5;&#x5728;&#x8fd9;&#x91cc;&#x88ab;&#x8c03;&#x7528;&#xff1b;\n*   **&#x4e2d;&#x4ecb;&#x7b56;&#x7565;&#xff1a;**  &#x5b9e;&#x73b0;&#x5b89;&#x5168;&#x3001;&#x9a8c;&#x8bc1;&#x3001;&#x8def;&#x7531;&#x3001;&#x8fc7;&#x6ee4;&#x3001;&#x6d41;&#x63a7;&#xff0c;&#x7f13;&#x5b58;&#x7b49;&#x7b56;&#x7565;&#xff0c;&#x8fdb;&#x884c;&#x4e00;&#x4e9b;&#x5fc5;&#x8981;&#x7684;&#x4e2d;&#x4ecb;&#x5904;&#x7406;&#xff1b;\n*   **&#x7edf;&#x4e00;&#x7ba1;&#x7406;&#xff1a;**  &#x63d0;&#x4f9b;&#x914d;&#x7f6e;&#x7ba1;&#x7406;&#x5de5;&#x5177;&#xff0c;&#x5bf9;&#x6240;&#x6709; API &#x670d;&#x52a1;&#x7684;&#x8c03;&#x7528;&#x751f;&#x547d;&#x5468;&#x671f;&#x548c;&#x76f8;&#x5e94;&#x7684;&#x4e2d;&#x4ecb;&#x7b56;&#x7565;&#x8fdb;&#x884c;&#x7edf;&#x4e00;&#x7ba1;&#x7406;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,15"}}],"payload":{"tag":"h2","lines":"8,10"}},{"content":"Spring Cloud Gateway","children":[{"content":"<pre data-lines=\"19,20\"><code>&#x5ba2;&#x6237;&#x7aef;&#x5411; Spring Cloud Gateway &#x53d1;&#x51fa;&#x8bf7;&#x6c42;&#xff0c;&#x5982;&#x679c;&#x8bf7;&#x6c42;&#x4e0e;&#x7f51;&#x5173;&#x7a0b;&#x5e8f;&#x5b9a;&#x4e49;&#x7684;&#x8def;&#x7531;&#x5339;&#x914d;&#xff0c;&#x5219;&#x5c06;&#x5176;&#x53d1;&#x9001;&#x5230;&#x7f51;&#x5173; Web &#x5904;&#x7406;&#x7a0b;&#x5e8f;&#xff0c;&#x6b64;&#x5904;&#x7406;&#x7a0b;&#x5e8f;&#x8fd0;&#x884c;&#x7279;&#x5b9a;&#x7684;&#x8bf7;&#x6c42;&#x8fc7;&#x6ee4;&#x5668;&#x94fe;&#x3002;&#x8fc7;&#x6ee4;&#x5668;&#x4e4b;&#x95f4;&#x7528;&#x865a;&#x7ebf;&#x5206;&#x5f00;&#x7684;&#x539f;&#x56e0;&#x662f;&#x8fc7;&#x6ee4;&#x5668;&#x53ef;&#x80fd;&#x4f1a;&#x5728;&#x53d1;&#x9001;&#x4ee3;&#x7406;&#x8bf7;&#x6c42;&#x4e4b;&#x524d;&#x6216;&#x4e4b;&#x540e;&#x6267;&#x884c;&#x903b;&#x8f91;&#x3002;&#x6240;&#x6709; &#x201c;pre&#x201d; &#x8fc7;&#x6ee4;&#x5668;&#x903b;&#x8f91;&#x5148;&#x6267;&#x884c;&#xff0c;&#x7136;&#x540e;&#x6267;&#x884c;&#x4ee3;&#x7406;&#x8bf7;&#x6c42;&#xff0c;&#x4ee3;&#x7406;&#x8bf7;&#x6c42;&#x5b8c;&#x6210;&#x540e;&#xff0c;&#x6267;&#x884c; &#x201c;post&#x201d; &#x8fc7;&#x6ee4;&#x5668;&#x903b;&#x8f91;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,20"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1600614323118-6f2d5472-dea6-4410-a306-2eaa7615e75e.png\" alt>","children":[],"payload":{"tag":"img","lines":"21,22"}}],"payload":{"tag":"h2","lines":"16,18"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

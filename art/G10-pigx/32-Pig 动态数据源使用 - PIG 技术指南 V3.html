@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Pig &#x52a8;&#x6001;&#x6570;&#x636e;&#x6e90;&#x4f7f;&#x7528;","children":[{"content":"&#x52a8;&#x6001;&#x6570;&#x636e;&#x6e90;","children":[{"content":"<pre data-lines=\"7,8\"><code>Pig &#x7684;&#x591a;&#x6570;&#x636e;&#x914d;&#x7f6e;&#xff0c;&#x662f;&#x57fa;&#x4e8e; [dynamic-datasource-spring-boot-starter](https://github.com/baomidou/dynamic-datasource-spring-boot-starter/wiki) &#x5b9e;&#x73b0;&#xff0c;&#x7406;&#x8bba;&#x4e0a;&#x652f;&#x6301;&#x6b64;&#x7ec4;&#x4ef6;&#x7684;&#x5168;&#x90e8;&#x529f;&#x80fd;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x5982;&#x4f55;&#x4f7f;&#x7528;","children":[{"content":"1. &#x4e1a;&#x52a1;&#x670d;&#x52a1;&#x5f15;&#x5165;&#x52a8;&#x6001;&#x6570;&#x636e;&#x6e90;&#x670d;&#x52a1;","children":[{"content":"<pre data-lines=\"18,24\"><code data-lines=\"18,24\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.pig4cloud<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>pig-common-datasource<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,24"}}],"payload":{"tag":"h3","lines":"14,15"}},{"content":"2. &#x914d;&#x7f6e;&#x6570;&#x636e;&#x6e90;&#x4fe1;&#x606f;&#x6765;&#x6e90;&#xff08;JDBC &#x914d;&#x7f6e;&#xff09;","children":[{"content":"<pre data-lines=\"29,36\"><code data-lines=\"29,36\"><span class=\"hljs-comment\">## &#x9ed8;&#x8ba4;&#x67e5;&#x8be2;&#x672c;&#x670d;&#x52a1;&#x6570;&#x636e;&#x6e90; ` gen_datasource_conf`&#xff0c;&#x53ef;&#x53c2;&#x8003; `pig_codegen` &#x6a21;&#x5757;</span>\n<span class=\"hljs-attribute\">spring</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">datasource</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">druid</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">query-ds-sql</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&apos;select * from gen_datasource_conf where del_flag = 0&apos; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,36"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599315066287-0a240b69-3494-476e-8892-0f4abba9ff2c.png\" alt>","children":[],"payload":{"tag":"img","lines":"37,38"}}],"payload":{"tag":"h3","lines":"25,26"}},{"content":"3. &#x5f00;&#x542f;&#x52a8;&#x6001;&#x6570;&#x636e;&#x6e90;","children":[{"content":"<pre data-lines=\"43,51\"><code data-lines=\"43,51\">@EnableDynamicDataSource\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">App</span> {\n <span class=\"hljs-function\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">static</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">main</span>(<span class=\"hljs-params\">String[] <span class=\"hljs-keyword\">args</span></span>)</span> {\n SpringApplication.run(App.<span class=\"hljs-keyword\">class</span>, <span class=\"hljs-keyword\">args</span>);\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,51"}}],"payload":{"tag":"h3","lines":"39,40"}},{"content":"4. &#x4f7f;&#x7528;&#x52a8;&#x6001;&#x6570;&#x636e;&#x6e90;&#x67e5;&#x8be2;","children":[{"content":"<pre data-lines=\"54,55\"><code>Mapper &#x5c42; `@DS(&quot;#last&quot;)` &#x56fa;&#x5b9a;&#x5199;&#x6cd5;&#xff0c;&#x6700;&#x540e;&#x4e00;&#x4e2a;&#x53c2;&#x6570;&#x4e3a;&#x6307;&#x5b9a;&#x6570;&#x636e;&#x6e90;&#xff08;&#x5fc5;&#x987b;&#x6709;&#xff09;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,55"}},{"content":"<pre data-lines=\"58,65\"><code data-lines=\"58,65\"><span class=\"hljs-meta\">@Mapper</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\"><span class=\"hljs-keyword\">interface</span> <span class=\"hljs-title\">DemoMapper</span> <span class=\"hljs-keyword\"><span class=\"hljs-keyword\">extends</span> <span class=\"hljs-type\">BaseMapper</span></span>&lt;<span class=\"hljs-title\">Demo</span>&gt; </span>{\n <span class=\"hljs-meta\">@DS</span>(<span class=\"hljs-string\">&quot;#last&quot;</span>)\n Map selectDs(<span class=\"hljs-keyword\">String</span> dsName);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"58,65"}},{"content":"<pre data-lines=\"66,67\"><code>**Service &#x5c42;&#x8c03;&#x7528;**\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"66,67"}},{"content":"<pre data-lines=\"70,80\"><code data-lines=\"70,80\"><span class=\"hljs-meta\">@Service</span>\npublic <span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">DemoServiceImpl</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">ServiceImpl&lt;DemoMapper</span>, <span class=\"hljs-title\">Demo&gt;</span> <span class=\"hljs-title\">implements</span> <span class=\"hljs-title\">DemoService</span> </span>{\n <span class=\"hljs-meta\">@Override</span>\n public <span class=\"hljs-type\">Object</span> getByDs(<span class=\"hljs-type\">Integer</span> id) {\n <span class=\"hljs-comment\">// &#x6b64;&#x5904; dsName &#x4e3a;&#x4ee5;&#x4e0a; gen_datasource_conf &#x52a0;&#x8f7d;&#x6570;&#x636e;&#x6e90; name &#x5b57;&#x6bb5;</span>\n <span class=\"hljs-keyword\">return</span> baseMapper.selectDs(<span class=\"hljs-string\">&quot;pigxx_core&quot;</span>);\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"70,80"}}],"payload":{"tag":"h3","lines":"52,53"}}],"payload":{"tag":"h2","lines":"11,13"}},{"content":"&#x6269;&#x5c55;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"84,93\"><code>[&#x53ef;&#x4ee5;&#x53c2;&#x8003;&#x5b98;&#x65b9;&#x6587;&#x6863;&#xff1a;&#x52a8;&#x6001;&#x53c2;&#x6570;&#x89e3;&#x6790;&#x6570;&#x636e;&#x6e90;](https://github.com/baomidou/dynamic-datasource-spring-boot-starter/wiki/Dynamic-Analysis-DataSource)\n\n&#x4ece;session&#x83b7;&#x53d6;\n\n&#x4ece;header&#x83b7;&#x53d6;\n\n&#x4ece;&#x53c2;&#x6570;&#x83b7;&#x53d6;\n\n&#x4ece;&#x590d;&#x6742;&#x53c2;&#x6570;&#x83b7;&#x53d6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"84,93"}},{"content":"<pre data-lines=\"96,102\"><code data-lines=\"96,102\"><span class=\"hljs-meta\">@DS</span>(<span class=\"hljs-string\">&quot;#session.tenantName&quot;</span>)\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-function\">List <span class=\"hljs-title\">selectSpelBySession</span><span class=\"hljs-params\">()</span> </span>{\n <span class=\"hljs-function\"><span class=\"hljs-keyword\">return</span> userMapper.<span class=\"hljs-title\">selectUsers</span><span class=\"hljs-params\">()</span></span>;\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"96,102"}}],"payload":{"tag":"h2","lines":"81,83"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

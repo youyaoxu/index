@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; JeeSite &#x5355;&#x70b9;&#x767b;&#x5f55;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x6307;&#x5bfc;&#x5982;&#x4f55;&#x914d;&#x7f6e; PIG &#x4e0e; JeeSite &#x7cfb;&#x7edf;&#x8fdb;&#x884c;&#x5355;&#x70b9;&#x767b;&#x5f55;&#x96c6;&#x6210;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"JeeSite &#x6539;&#x9020;&#x540e;&#x6e90;&#x7801;","children":[{"content":"<pre data-lines=\"11,15\"><code>&#x6539;&#x9020;&#x540e;&#x7684; JeeSite &#x6e90;&#x7801;&#x53ef;&#x5728;&#x4ee5;&#x4e0b;&#x4ed3;&#x5e93;&#x83b7;&#x53d6;&#xff1a;\n\n*   [JeeSite5 &#x540e;&#x7aef;&#x4ee3;&#x7801;](https://github.com/pig-mesh/jeesite5)\n*   [JeeSite Vue &#x524d;&#x7aef;&#x4ee3;&#x7801;](https://github.com/pig-mesh/jeesite-vue)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,15"}}],"payload":{"tag":"h2","lines":"8,10"}},{"content":"PIG &#x6574;&#x5408;&#x524d;&#x540e;&#x7aef;&#x5206;&#x79bb;&#x9879;&#x76ee;&#x767b;&#x5f55;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/jeesite-sso/project-overview.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}},{"content":"<pre data-lines=\"22,25\"><code>PIG&#x4e0e;JeeSite&#x6574;&#x5408;&#x6982;&#x89c8;\n\n&#x5728; PIG &#x7cfb;&#x7edf;&#x4e2d;&#x914d;&#x7f6e; OAuth2 &#x5ba2;&#x6237;&#x7aef;&#xff0c;&#x6dfb;&#x52a0; JeeSite &#x76f8;&#x5173;&#x53c2;&#x6570;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,25"}},{"content":"<pre data-lines=\"28,41\"><code data-lines=\"28,41\">INSERT INTO `pig`.`sys_oauth_client_details`(\n `client_id`, `resource_ids`, `client_secret`, `scope`, \n `authorized_grant_types`, `web_server_redirect_uri`, `authorities`, \n `access_token_validity`, `refresh_token_validity`, `additional_information`, \n `autoapprove`, `create_time`, `update_time`, `create_by`, `update_by`\n) VALUES (\n &apos;jeesite&apos;, &apos;&apos;, &apos;jeesite&apos;, &apos;server&apos;, \n<span class=\"hljs-title\"> &apos;authorization_code&apos;, &apos;http://127.0.0.1:</span><span class=\"hljs-number\">3100</span>/sso&apos;, &apos;&apos;, \n<span class=\"hljs-built_in\"> 168000000,</span> <span class=\"hljs-number\">168000000</span>, &apos;&apos;, &apos;<span class=\"hljs-literal\">false</span>&apos;, \n<span class=\"hljs-title\"> &apos;2023-01-17 08:31:46&apos;, &apos;2023-01-17 09:32:</span><span class=\"hljs-number\">06</span>&apos;, &apos;admin&apos;, &apos;admin&apos;\n)<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,41"}}],"payload":{"tag":"h2","lines":"17,19"}},{"content":"&#x540e;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"46,52\"><code>&#x914d;&#x7f6e;&#x8bf4;&#x660e;&#xff1a;\n\n*   &#x9700;&#x914d;&#x7f6e; JeeSite &#x524d;&#x7aef;&#x5730;&#x5740;&#xff08;&#x9ed8;&#x8ba4; 3100 &#x7aef;&#x53e3;&#xff09;\n*   &#x9700;&#x914d;&#x7f6e; PIG &#x7f51;&#x5173;&#x5730;&#x5740;\n\n&#x589e;&#x52a0; SSO &#x7684;&#x914d;&#x7f6e;:\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,52"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/jeesite-sso/backend-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"53,54"}},{"content":"<pre data-lines=\"55,56\"><code>&#x540e;&#x7aef;SSO&#x914d;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,56"}}],"payload":{"tag":"h2","lines":"43,45"}},{"content":"&#x524d;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"&#x767b;&#x5f55;&#x9875;&#x9762;&#x914d;&#x7f6e;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/jeesite-sso/login-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"64,65"}},{"content":"<pre data-lines=\"66,67\"><code>&#x767b;&#x5f55;&#x9875;&#x9762;&#x914d;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"66,67"}}],"payload":{"tag":"h3","lines":"62,63"}},{"content":"&#x589e;&#x52a0; SSO &#x9875;&#x9762;","children":[{"content":"<pre data-lines=\"70,71\"><code>&#x4e3a;&#x5904;&#x7406;&#x56de;&#x8c03;&#x548c; code &#x53c2;&#x6570;&#x521b;&#x5efa; SSO &#x9875;&#x9762;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"70,71"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/jeesite-sso/sso-callback.png\" alt>","children":[],"payload":{"tag":"img","lines":"72,73"}},{"content":"<pre data-lines=\"74,75\"><code>SSO&#x56de;&#x8c03;&#x9875;&#x9762;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"74,75"}}],"payload":{"tag":"h3","lines":"68,69"}},{"content":"&#x9000;&#x51fa;&#x7cfb;&#x7edf;&#x914d;&#x7f6e;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/jeesite-sso/logout-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"78,79"}}],"payload":{"tag":"h3","lines":"76,77"}}],"payload":{"tag":"h2","lines":"57,59"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

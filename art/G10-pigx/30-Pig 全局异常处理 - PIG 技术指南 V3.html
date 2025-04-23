@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Pig &#x5168;&#x5c40;&#x5f02;&#x5e38;&#x5904;&#x7406;","children":[{"content":"GlobalBizExceptionHandler","children":[{"content":"<pre data-lines=\"13,20\"><code>&#x5173;&#x952e;&#x914d;&#x7f6e;&#x8bf4;&#x660e;\n\n1.  &#x4f7f;&#x7528; `@RestControllerAdvice` &#x6ce8;&#x89e3;&#x5f00;&#x542f;&#x5168;&#x5c40;&#x5f02;&#x5e38;&#x6355;&#x83b7;\n2.  &#x4f7f;&#x7528; `@ExceptionHandler` &#x6ce8;&#x89e3;&#x5904;&#x7406;&#x5177;&#x4f53;&#x7684;&#x5f02;&#x5e38;&#x7c7b;&#x578b;\n3.  &#x4f7f;&#x7528; `Tracer.trace(e)` &#x628a;&#x5f02;&#x5e38;&#x4fe1;&#x606f;&#x4ea4;&#x7ed9; sentinel &#x8fdb;&#x884c;&#x8bb0;&#x5f55;&#xff0c;&#x4f5c;&#x4e3a;&#x7194;&#x65ad;&#x7b49;&#x7684;&#x91cd;&#x8981;&#x6307;&#x6807;\n\n&#x786e;&#x4fdd;&#x6b63;&#x786e;&#x914d;&#x7f6e; `Tracer.trace(e)` &#x975e;&#x5e38;&#x91cd;&#x8981;&#xff0c;&#x8fd9;&#x662f;&#x5b9e;&#x73b0;&#x7194;&#x65ad;&#x7b49;&#x529f;&#x80fd;&#x7684;&#x5fc5;&#x8981;&#x6307;&#x6807;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,20"}}],"payload":{"tag":"h2","lines":"7,9"}},{"content":"&#x914d;&#x7f6e;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"25,31\"><code>1.  &#x4f7f;&#x7528; `@RestControllerAdvice` &#x6ce8;&#x89e3;&#x5f00;&#x542f;&#x5168;&#x5c40;&#x5f02;&#x5e38;&#x6355;&#x83b7;\n2.  &#x4f7f;&#x7528; `@ExceptionHandler` &#x6ce8;&#x89e3;&#x5904;&#x7406;&#x5177;&#x4f53;&#x7684;&#x5f02;&#x5e38;&#x7c7b;&#x578b;\n3.  &#x4f7f;&#x7528; `Tracer.trace(e)` &#x628a;&#x5f02;&#x5e38;&#x4fe1;&#x606f;&#x4ea4;&#x7ed9; sentinel &#x8fdb;&#x884c;&#x8bb0;&#x5f55;&#xff0c;&#x4f5c;&#x4e3a;&#x7194;&#x65ad;&#x7b49;&#x7684;&#x91cd;&#x8981;&#x6307;&#x6807;\n\n*   &#x5f02;&#x5e38;&#x5904;&#x7406;&#x793a;&#x4f8b;\n*   &#x4f7f;&#x7528;&#x8bf4;&#x660e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,31"}},{"content":"<pre data-lines=\"34,44\"><code data-lines=\"34,44\"><span class=\"hljs-meta\">@RestControllerAdvice</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">GlobalBizExceptionHandler</span> {\n <span class=\"hljs-meta\">@ExceptionHandler(Exception.class)</span>\n <span class=\"hljs-keyword\">public</span> R handleException(Exception e) {\n Tracer.trace(e);\n <span class=\"hljs-keyword\">return</span> R.failed(e.getMessage());\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"34,44"}},{"content":"<pre data-lines=\"47,57\"><code data-lines=\"47,57\"><span class=\"hljs-meta\">@RestControllerAdvice</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">GlobalBizExceptionHandler</span> {\n <span class=\"hljs-meta\">@ExceptionHandler(Exception.class)</span>\n <span class=\"hljs-keyword\">public</span> R handleException(Exception e) {\n Tracer.trace(e);\n <span class=\"hljs-keyword\">return</span> R.failed(e.getMessage());\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,57"}},{"content":"<pre data-lines=\"58,61\"><code>1.  &#x786e;&#x4fdd;&#x6b63;&#x786e;&#x914d;&#x7f6e; `Tracer.trace(e)` &#x4f5c;&#x4e3a;&#x7194;&#x65ad;&#x6307;&#x6807;\n2.  &#x6839;&#x636e;&#x4e1a;&#x52a1;&#x9700;&#x6c42;&#x81ea;&#x5b9a;&#x4e49;&#x5f02;&#x5e38;&#x5904;&#x7406;&#x903b;&#x8f91;\n3.  &#x5408;&#x7406;&#x4f7f;&#x7528; `@ExceptionHandler` &#x5904;&#x7406;&#x4e0d;&#x540c;&#x7c7b;&#x578b;&#x7684;&#x5f02;&#x5e38;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"58,61"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1609989943240-6c850e2f-b790-4ae7-806a-d4fd6113d80b.png\" alt>","children":[],"payload":{"tag":"img","lines":"62,63"}}],"payload":{"tag":"h2","lines":"22,24"}},{"content":"&#x914d;&#x7f6e;&#x8981;&#x70b9;","children":[{"content":"<pre data-lines=\"71,78\"><code>SpringBoot &#x63d0;&#x4f9b; `@RestControllerAdvice` &#x6ce8;&#x89e3;&#xff0c;&#x4f7f;&#x7528;&#x8be5;&#x6ce8;&#x89e3;&#x8868;&#x793a;&#x5f00;&#x542f;&#x4e86;&#x5168;&#x5c40;&#x5f02;&#x5e38;&#x7684;&#x6355;&#x83b7;&#xff0c;&#x6211;&#x4eec;&#x53ea;&#x9700;&#x5728;&#x81ea;&#x5b9a;&#x4e49;&#x4e00;&#x4e2a;&#x65b9;&#x6cd5;&#x4f7f;&#x7528; `@ExceptionHandler` &#x6ce8;&#x89e3;&#x7136;&#x540e;&#x5b9a;&#x4e49;&#x6355;&#x83b7;&#x5f02;&#x5e38;&#x7684;&#x7c7b;&#x578b;&#x5373;&#x53ef;&#x5bf9;&#x8fd9;&#x4e9b;&#x6355;&#x83b7;&#x7684;&#x5f02;&#x5e38;&#x8fdb;&#x884c;&#x7edf;&#x4e00;&#x7684;&#x5904;&#x7406;&#x3002;\n\n&#x4e3b;&#x8981;&#x914d;&#x7f6e;&#x6b65;&#x9aa4;&#xff1a;\n\n1.  &#x4f7f;&#x7528; `@RestControllerAdvice` &#x5f00;&#x542f;&#x5168;&#x5c40;&#x5f02;&#x5e38;&#x6355;&#x83b7;\n2.  &#x4f7f;&#x7528; `@ExceptionHandler` &#x5904;&#x7406;&#x5177;&#x4f53;&#x7684;&#x5f02;&#x5e38;&#x7c7b;&#x578b;\n3.  &#x4f7f;&#x7528; `Tracer.trace(e)` &#x628a;&#x5f02;&#x5e38;&#x4fe1;&#x606f;&#x4ea4;&#x7ed9; sentinel &#x8fdb;&#x884c;&#x8bb0;&#x5f55;&#xff0c;&#x4f5c;&#x4e3a;&#x7194;&#x65ad;&#x7b49;&#x7684;&#x91cd;&#x8981;&#x6307;&#x6807;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"71,78"}}],"payload":{"tag":"h2","lines":"68,70"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

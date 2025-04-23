@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x51fd;&#x6570;&#x8c03;&#x7528;","children":[{"content":"&#x57fa;&#x7840;&#x4f7f;&#x7528;&#x793a;&#x4f8b;","children":[{"content":"1. &#x5b9a;&#x4e49;&#x5de5;&#x5177;&#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"11,12\"><code>&#x9996;&#x5148;&#xff0c;&#x9700;&#x8981;&#x5b9a;&#x4e49;&#x5de5;&#x5177;&#x51fd;&#x6570;&#x7684;&#x7ed3;&#x6784;&#x3002;&#x63a8;&#x8350;&#x4f7f;&#x7528; JsonSchema &#x65b9;&#x5f0f;&#x5b9a;&#x4e49;&#x53c2;&#x6570;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,12"}},{"content":"<pre data-lines=\"15,32\"><code data-lines=\"15,32\">Function WEATHER_FUNCTION = Function<span class=\"hljs-number\">.</span>builder()\n<span class=\"hljs-meta\"> .name</span>(<span class=\"hljs-string\">&quot;get_current_weather&quot;</span>)\n<span class=\"hljs-meta\"> .description</span>(<span class=\"hljs-string\">&quot;Get the current weather in a given location&quot;</span>)\n<span class=\"hljs-meta\"> .parameters</span>(JsonObjectSchema<span class=\"hljs-number\">.</span>builder()\n<span class=\"hljs-meta\"> .properties</span>(new LinkedHashMap&lt;String, JsonSchemaElement&gt;() {{\n put(<span class=\"hljs-string\">&quot;location&quot;</span>, JsonStringSchema<span class=\"hljs-number\">.</span>builder()\n<span class=\"hljs-meta\"> .description</span>(<span class=\"hljs-string\">&quot;The city name&quot;</span>)\n<span class=\"hljs-meta\"> .build</span>())<span class=\"hljs-comment\">;</span>\n }})\n<span class=\"hljs-meta\"> .required</span>(asList(<span class=\"hljs-string\">&quot;location&quot;</span>, <span class=\"hljs-string\">&quot;unit&quot;</span>))\n<span class=\"hljs-meta\"> .build</span>())\n<span class=\"hljs-meta\"> .build</span>()<span class=\"hljs-comment\">;</span>\n\n// &#x5c06; Function &#x8f6c;&#x6362;&#x4e3a; Tool\nTool WEATHER_TOOL = Tool<span class=\"hljs-number\">.</span>from(WEATHER_FUNCTION)<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,32"}}],"payload":{"tag":"h3","lines":"9,10"}},{"content":"2. &#x521b;&#x5efa;&#x8bf7;&#x6c42;","children":[{"content":"<pre data-lines=\"37,56\"><code data-lines=\"37,56\">String prompt = <span class=\"hljs-string\">&quot;&#x5317;&#x4eac;&#x5929;&#x6c14;&#x600e;&#x4e48;&#x6837;&#xff1f;&quot;</span>\nChatCompletionRequest request = ChatCompletionRequest.builder<span class=\"hljs-params\">()</span>\n <span class=\"hljs-string\">.model</span><span class=\"hljs-params\">(ChatCompletionModel.DEEPSEEK_CHAT)</span> <span class=\"hljs-string\">//</span> &#x8bf7;&#x6ce8;&#x610f;&#x53ea;&#x652f;&#x6301;Chat&#x6a21;&#x578b;\n <span class=\"hljs-string\">.addUserMessage</span><span class=\"hljs-params\">(&quot;prompt&quot;)</span>\n <span class=\"hljs-string\">.tools</span><span class=\"hljs-params\">(WEATHER_TOOL)</span>  <span class=\"hljs-string\">//</span> &#x6dfb;&#x52a0;&#x5de5;&#x5177;&#x51fd;&#x6570;\n <span class=\"hljs-string\">.build</span><span class=\"hljs-params\">()</span>;\n\n<span class=\"hljs-string\">//</span> &#x53d1;&#x9001;&#x8bf7;&#x6c42;&#x5e76;&#x83b7;&#x53d6;&#x54cd;&#x5e94;\nChatCompletionResponse response = deepSeekClient.chatCompletion<span class=\"hljs-params\">(request)</span><span class=\"hljs-string\">.execute</span><span class=\"hljs-params\">()</span>;\n\n<span class=\"hljs-string\">//</span> &#x83b7;&#x53d6;&#x5de5;&#x5177;&#x8c03;&#x7528;&#x4fe1;&#x606f;\nAssistantMessage assistantMessage = response.choices<span class=\"hljs-params\">()</span><span class=\"hljs-string\">.get</span><span class=\"hljs-params\">(0)</span><span class=\"hljs-string\">.message</span><span class=\"hljs-params\">()</span>;\nToolCall toolCall = assistantMessage.toolCalls<span class=\"hljs-params\">()</span><span class=\"hljs-string\">.get</span><span class=\"hljs-params\">(0)</span>;\n\n<span class=\"hljs-string\">//</span> &#x89e3;&#x6790;&#x51fd;&#x6570;&#x8c03;&#x7528;&#x53c2;&#x6570;\nFunctionCall functionCall = toolCall.function<span class=\"hljs-params\">()</span>;\nString arguments = functionCall.arguments<span class=\"hljs-params\">()</span>; <span class=\"hljs-string\">//</span> {<span class=\"hljs-string\">&quot;location&quot;</span>: <span class=\"hljs-string\">&quot;&#x5317;&#x4eac;&quot;</span>} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,56"}}],"payload":{"tag":"h3","lines":"33,34"}},{"content":"3. &#x5904;&#x7406;&#x6a21;&#x578b;&#x54cd;&#x5e94;&#x5e76;&#x8fd4;&#x56de;&#x7ed9;&#x5927;&#x6a21;&#x578b;","children":[{"content":"<pre data-lines=\"61,81\"><code data-lines=\"61,81\"> <span class=\"hljs-comment\">// &#x6267;&#x884c;&#x51fd;&#x6570;&#x83b7;&#x53d6;&#x7ed3;&#x679c; &#x6839;&#x636e; arguments &#x53c2;&#x6570;&#x7684;&#x5730;&#x70b9; &#x67e5;&#x8be2;api&#x8fd4;&#x56de;&#x7ed3;&#x6784;</span>\n<span class=\"hljs-built_in\">Map</span> <span class=\"hljs-built_in\">map</span> = Json.<span class=\"hljs-built_in\">fromJson</span>(arguments, <span class=\"hljs-built_in\">Map</span>.class);<span class=\"hljs-comment\">// {&quot;location&quot;: &quot;&#x5317;&#x4eac;&quot;}</span>\nString weatherResult = <span class=\"hljs-built_in\">map</span>.get(<span class=\"hljs-string\">&quot;location&quot;</span>) + <span class=\"hljs-string\">&quot;&#x6c14;&#x6e29; 20&#xb0;&quot;</span>;\n\n<span class=\"hljs-comment\">// &#x521b;&#x5efa;&#x5de5;&#x5177;&#x6d88;&#x606f;</span>\nToolMessage toolMessage = ToolMessage.from(toolCall.id(), weatherResult);\n\n<span class=\"hljs-comment\">// &#x7ee7;&#x7eed;&#x5bf9;&#x8bdd;</span>\nChatCompletionRequest followUpRequest = ChatCompletionRequest.builder()\n .model(ChatCompletionModel.DEEPSEEK_CHAT)\n .messages(\n UserMessage.from(prompt),\n assistantMessage,\n toolMessage <span class=\"hljs-comment\">// &#x6dfb;&#x52a0;&#x5de5;&#x5177;&#x6d88;&#x606f;</span>\n )\n .build();\n\n<span class=\"hljs-keyword\">return</span> deepSeekClient.chatFluxCompletion(followUpRequest); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"61,81"}}],"payload":{"tag":"h3","lines":"57,58"}}],"payload":{"tag":"h2","lines":"4,6"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

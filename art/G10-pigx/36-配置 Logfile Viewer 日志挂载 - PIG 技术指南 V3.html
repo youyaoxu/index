@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x914d;&#x7f6e; Logfile Viewer &#x65e5;&#x5fd7;&#x6302;&#x8f7d;","children":[{"content":"<pre data-lines=\"5,6\"><code>&#x5f00;&#x542f;&#x540e;&#x53ef;&#x4ee5;&#x5728;&#x6d4f;&#x89c8;&#x5668;&#x5b9e;&#x65f6;&#x67e5;&#x770b;&#x5f53;&#x524d;&#x65e5;&#x5fd7;&#x8f93;&#x51fa;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}},{"content":"pig &#x9ed8;&#x8ba4;&#x6ca1;&#x6709;&#x5f00;&#x542f; Logfile viewer","children":[{"content":"<pre data-lines=\"9,14\"><code>*   &#x914d;&#x7f6e; logback-spring.xml\n\n&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x590d;&#x5236; **pig-upms/pig-upms-biz/src/main/resources/logback-spring.xml** &#x6587;&#x4ef6;&#xff0c;&#x5230;&#x65b0;&#x589e;&#x670d;&#x52a1;&#x7684; resources &#x76ee;&#x5f55;&#x3002;\n\n*   &#x9ed8;&#x8ba4;&#x8def;&#x5f84;&#x4f1a;&#x81ea;&#x52a8;&#x52a0;&#x8f7d;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,14"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1619492131597-da4aec01-363b-4fd4-b386-834084f5f26a.png\" alt>","children":[],"payload":{"tag":"img","lines":"15,16"}},{"content":"<pre data-lines=\"17,20\"><code>*   &#x5176;&#x4ed6;&#x8def;&#x5f84;&#x65e5;&#x5fd7;&#x6302;&#x8f7d; &#x914d;&#x7f6e; logging.file.name\n\n&#x5728; bootstrap.yml &#x914d;&#x7f6e; logging.file &#x7684;&#x914d;&#x7f6e;&#x5373;&#x53ef;&#x5f00;&#x542f; Logfile view\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,20"}},{"content":"<pre data-lines=\"23,29\"><code data-lines=\"23,29\"><span class=\"hljs-comment\"># &#x914d;&#x7f6e; Logfile Viewer &#x65e5;&#x5fd7;&#x6302;&#x8f7d;</span>\n<span class=\"hljs-params\">logging:</span>\n <span class=\"hljs-params\">file:</span>\n <span class=\"hljs-params\">name:</span> logs<span class=\"hljs-operator\">/</span>&#x24;{spring.application.name}<span class=\"hljs-symbol\">/debug.log</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,29"}}],"payload":{"tag":"h3","lines":"7,8"}},{"content":"&#x542f;&#x52a8; pig-monitor","children":[{"content":"<pre data-lines=\"32,33\"><code>*   &#x9009;&#x4e2d; &#x76ee;&#x6807;&#x670d;&#x52a1;  \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,33"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314949078-f693fbd2-5275-460a-9a65-07995315e187.png\" alt>","children":[],"payload":{"tag":"img","lines":"34,35"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314949075-d33d2329-9359-42f9-b0df-70d96cb45322.png\" alt>","children":[],"payload":{"tag":"img","lines":"36,37"}}],"payload":{"tag":"h3","lines":"30,31"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

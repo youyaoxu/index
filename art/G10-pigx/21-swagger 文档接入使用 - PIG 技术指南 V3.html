@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"swagger &#x6587;&#x6863;&#x63a5;&#x5165;&#x4f7f;&#x7528;","children":[{"content":"&#x670d;&#x52a1;&#x6dfb;&#x52a0; swagger &#x4f9d;&#x8d56;","children":[{"content":"<pre data-lines=\"9,16\"><code data-lines=\"9,16\"><span class=\"hljs-comment\">&lt;!--&#x63a5;&#x53e3;&#x6587;&#x6863;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.pig4cloud<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>pig-common-swagger<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,16"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x914d;&#x7f6e; EnablePigDoc &#x6ce8;&#x89e3;","children":[{"content":"<pre data-lines=\"21,22\"><code>value &#x548c; pig-gateway-dev.yml &#x91cc;&#x9762;&#x8def;&#x7531;&#x524d;&#x7f00;&#x914d;&#x7f6e;&#x5bf9;&#x5e94;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,22"}},{"content":"<img src=\"https://minio.pigx.top/oss/202308/1693272437.png\" alt>","children":[],"payload":{"tag":"img","lines":"23,24"}}],"payload":{"tag":"h2","lines":"18,20"}},{"content":"&#x91cd;&#x542f;&#x7f51;&#x5173;&#x670d;&#x52a1;","children":[{"content":"&#x529f;&#x80fd;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"31,32\"><code>Controller &#x63a5;&#x53e3;&#x4e0a;&#x8fb9;&#x5fc5;&#x987b;&#x589e;&#x52a0; `@SecurityRequirement(name = HttpHeaders.AUTHORIZATION)`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,32"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1648806396932-bb15d848-c7bc-4d8c-8451-05e3490fa2f2.png\" alt>","children":[],"payload":{"tag":"img","lines":"33,34"}}],"payload":{"tag":"h3","lines":"29,30"}},{"content":"&#x5e38;&#x7528;&#x6ce8;&#x89e3;","children":[{"content":"<pre data-lines=\"37,38\"><code>&#x8be6;&#x7ec6;&#x6ce8;&#x89e3;&#x53ef;&#x4ee5;&#x53c2;&#x8003;&#xff1a;[https://blog.csdn.net/weixin\\_44768189/article/details/115055784](https://blog.csdn.net/weixin_44768189/article/details/115055784)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,38"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1648806259602-add9c677-a602-443b-8060-f4d1e72f5cd6.png\" alt>","children":[],"payload":{"tag":"img","lines":"39,40"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"26,28"}},{"content":"&#x5173;&#x95ed; swagger &#x63a5;&#x53e3;&#x6587;&#x6863;","children":[{"content":"<pre data-lines=\"45,46\"><code>nacos/application-dev.yml &#x914d;&#x7f6e;&#x5173;&#x95ed;&#x5c5e;&#x6027;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,46"}},{"content":"<pre data-lines=\"49,54\"><code data-lines=\"49,54\"><span class=\"hljs-params\">springdoc:</span>\n <span class=\"hljs-params\">api-docs:</span>\n <span class=\"hljs-params\">enabled:</span> <span class=\"hljs-literal\">false</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,54"}}],"payload":{"tag":"h2","lines":"42,44"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

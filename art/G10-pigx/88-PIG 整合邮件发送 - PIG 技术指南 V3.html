@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408;&#x90ae;&#x4ef6;&#x53d1;&#x9001;","children":[{"content":"&#x7b80;&#x4ecb;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x6211;&#x4eec;&#x5229;&#x7528; spring-boot &#x7684;&#x5b50;&#x6a21;&#x5757; [spring-boot-starter-mail-starter](https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot-starters/spring-boot-starter-mail) &#x5c31;&#x53ef;&#x4ee5;&#x65b9;&#x4fbf;&#x7684;&#x8fdb;&#x884c;&#x90ae;&#x4ef6;&#x7684;&#x6574;&#x5408;&#x4e0e;&#x53d1;&#x9001;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"13,14\"><code>&#x901a;&#x8fc7; maven &#x5f15;&#x5165;&#x4ee5;&#x4e0b;&#x4f9d;&#x8d56;&#x5750;&#x6807;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,14"}},{"content":"<pre data-lines=\"17,24\"><code data-lines=\"17,24\"><span class=\"hljs-comment\">&lt;!--spring boot &#x90ae;&#x4ef6;&#x5feb;&#x901f;&#x542f;&#x52a8;&#x5668;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>org.springframework.boot<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>spring-boot-starter-mail<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,24"}}],"payload":{"tag":"h2","lines":"10,12"}},{"content":"&#x914d;&#x7f6e;","children":[{"content":"&#x5fc5;&#x9700;&#x914d;&#x7f6e;","children":[{"content":"<table data-lines=\"34,40\">\n<thead data-lines=\"34,35\">\n<tr data-lines=\"34,35\">\n<th>&#x914d;&#x7f6e;&#x9879;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"36,40\">\n<tr data-lines=\"36,37\">\n<td>spring.mail.host</td>\n<td></td>\n<td>SMTP &#x670d;&#x52a1;&#x5668;&#x4e3b;&#x673a;&#x3002;&#x4f8b;&#x5982;&#xff0c;&#x201c;smtp.example.com&#x201d;</td>\n</tr>\n<tr data-lines=\"37,38\">\n<td>spring.mail.port</td>\n<td></td>\n<td>SMTP &#x670d;&#x52a1;&#x5668;&#x7aef;&#x53e3;</td>\n</tr>\n<tr data-lines=\"38,39\">\n<td>spring.mail.username</td>\n<td></td>\n<td>SMTP &#x670d;&#x52a1;&#x5668;&#x767b;&#x5f55;&#x7528;&#x6237;&#x540d;</td>\n</tr>\n<tr data-lines=\"39,40\">\n<td>spring.mail.password</td>\n<td></td>\n<td>SMTP &#x670d;&#x52a1;&#x5668;&#x767b;&#x5f55;&#x5bc6;&#x7801;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"34,40"}}],"payload":{"tag":"h3","lines":"32,33"}},{"content":"&#x53ef;&#x9009;&#x914d;&#x7f6e;","children":[{"content":"<table data-lines=\"43,48\">\n<thead data-lines=\"43,44\">\n<tr data-lines=\"43,44\">\n<th>&#x914d;&#x7f6e;&#x9879;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"45,48\">\n<tr data-lines=\"45,46\">\n<td>spring.mail.protocol</td>\n<td>smtp</td>\n<td>SMTP &#x670d;&#x52a1;&#x5668;&#x4f7f;&#x7528;&#x7684;&#x534f;&#x8bae;</td>\n</tr>\n<tr data-lines=\"46,47\">\n<td>spring.mail.default-encoding</td>\n<td>UTF-8</td>\n<td>&#x9ed8;&#x8ba4; MimeMessage &#x7f16;&#x7801;</td>\n</tr>\n<tr data-lines=\"47,48\">\n<td>spring.mail.jndi-name</td>\n<td></td>\n<td>&#x4f1a;&#x8bdd; JNDI &#x540d;&#x79f0;&#x3002;&#x8bbe;&#x7f6e;&#x540e;&#xff0c;&#x4f18;&#x5148;&#x4e8e;&#x5176;&#x4ed6;&#x4f1a;&#x8bdd;&#x8bbe;&#x7f6e;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"43,48"}}],"payload":{"tag":"h3","lines":"41,42"}}],"payload":{"tag":"h2","lines":"29,31"}},{"content":"&#x53d1;&#x9001;&#x90ae;&#x4ef6;","children":[{"content":"<pre data-lines=\"54,55\"><code>&#x6ce8;&#x5165; `org.springframework.mail.MailSender` &#x5bf9;&#x8c61;&#x5373;&#x53ef;&#x8f7b;&#x677e;&#x5730;&#x53d1;&#x9001;&#x90ae;&#x4ef6;&#xff0c;&#x793a;&#x4f8b;&#x4ee3;&#x7801;&#x5982;&#x4e0b;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,55"}},{"content":"<pre data-lines=\"58,85\"><code data-lines=\"58,85\"><span class=\"hljs-keyword\">import</span> lombok.RequiredArgsConstructor;\n<span class=\"hljs-keyword\">import</span> lombok.extern.slf4j.Slf4j;\n<span class=\"hljs-keyword\">import</span> org.springframework.mail.MailSender;\n<span class=\"hljs-keyword\">import</span> org.springframework.mail.SimpleMailMessage;\n<span class=\"hljs-keyword\">import</span> org.springframework.stereotype.Service;\n\n<span class=\"hljs-meta\">@Slf</span>4j\n<span class=\"hljs-meta\">@Service</span>\n<span class=\"hljs-meta\">@RequiredArgsConstructor</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">EmailTriggerService</span> </span>{\n    \n <span class=\"hljs-keyword\">private</span> <span class=\"hljs-keyword\">final</span> MailSender mailSender;\n\n <span class=\"hljs-keyword\">public</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">triggerEmail</span><span class=\"hljs-params\">()</span> </span>{\n SimpleMailMessage message = <span class=\"hljs-keyword\">new</span> SimpleMailMessage();\n message.setText(<span class=\"hljs-string\">&quot;Hello World From Spring Boot Application&quot;</span>);\n message.setTo(<span class=\"hljs-string\">&quot;to_user@gmail.com&quot;</span>);\n message.setFrom(<span class=\"hljs-string\">&quot;from_user@gmail.com&quot;</span>);\n <span class=\"hljs-keyword\">try</span> {\n mailSender.send(message);\n } <span class=\"hljs-keyword\">catch</span> (Exception e) {\n log.<span class=\"hljs-keyword\">error</span>(<span class=\"hljs-string\">&quot;&#x53d1;&#x9001;&#x90ae;&#x4ef6;&#x51fa;&#x9519;&#xff0c;&#x9519;&#x8bef;&#x4fe1;&#x606f;&#x4e3a;:[{}]&quot;</span>,e.getMessage(),e);\n }\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"58,85"}}],"payload":{"tag":"h2","lines":"51,53"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

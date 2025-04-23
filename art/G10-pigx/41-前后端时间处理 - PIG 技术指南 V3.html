@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"&#x524d;&#x540e;&#x7aef;&#x65f6;&#x95f4;&#x5904;&#x7406;","children":[],"payload":{"tag":"h1","lines":"0,2"}},{"content":"&#x524d;&#x540e;&#x7aef;&#x65f6;&#x95f4;&#x5904;&#x7406;","children":[{"content":"&#x524d;&#x7aef;&#x4f20;&#x53c2; String &#x540e;&#x7aef;&#x53cd;&#x5e8f;&#x5217;&#x6210; Date &#x5bf9;&#x8c61;","children":[{"content":"&#x4e2a;&#x6027;&#x5316;&#x5b57;&#x7b26;&#x4e32; &#x8f6c;&#x6362;","children":[{"content":"<pre data-lines=\"47,48\"><code>*   &#x65b9;&#x5f0f;&#x4e00;&#xff1a;&#x524d;&#x7aef;&#x8f6c;&#x6362; | &#x82e5;&#x4f7f;&#x7528; element&#x3001;avue &#x7b49;&#x5747;&#x6709;&#x6b64;&#x5c5e;&#x6027;&#x5bf9;&#x63d0;&#x4ea4;&#x7684;&#x503c;&#x8fdb;&#x884c;&#x683c;&#x5f0f;&#x5316;&#xff0c;&#x53ea;&#x8981;&#x683c;&#x5f0f;&#x5316;&#x6210;&#x5982;&#x4e0a;&#x683c;&#x5f0f;&#x5373;&#x53ef;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,48"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1602300278038-cc6b3bfa-2f71-4176-b4d9-e034e07e0ffa.png\" alt>","children":[],"payload":{"tag":"img","lines":"49,50"}},{"content":"<pre data-lines=\"51,52\"><code>*   &#x65b9;&#x5f0f;&#x4e8c;&#xff1a;&#x540e;&#x7aef;&#x8f6c;&#x6362; | &#x603b;&#x6709;&#x4e9b;&#x573a;&#x666f;&#x4e0a;&#x9001;&#x7684;&#x65e5;&#x671f;&#x53c2;&#x6570;&#x662f;&#x6ca1;&#x6709;&#x65b9;&#x6cd5;&#x901a;&#x8fc7;&#x524d;&#x7aef;&#x683c;&#x5f0f;&#x5316;&#xff08;&#x6bd4;&#x5982;&#x5176;&#x4ed6;&#x7b2c;&#x4e09;&#x65b9;&#x4e0a;&#x9001;&#x7684;&#x62a5;&#x6587;&#xff09;&#x6b64;&#x65f6;&#x9700;&#x8981;&#x5728;&#x540e;&#x7aef;&#x8fdb;&#x884c;&#x683c;&#x5f0f;&#x5316;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,52"}},{"content":"<pre data-lines=\"55,63\"><code data-lines=\"55,63\"><span class=\"hljs-comment\">// &#x524d;&#x7aef;&#x4e0a;&#x9001; 2020 &#x5e74; 10 &#x6708; 10 &#x65e5; 11 &#x65f6; 17 &#x5206; 31 &#x79d2;</span>\n<span class=\"hljs-meta\">@Data</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">DemoDTO</span> {\n <span class=\"hljs-meta\">@DateTimeFormat(pattern = <span class=\"hljs-string\">&quot;yyyy &#x5e74; MM &#x6708; dd &#x65e5; HH &#x65f6; mm &#x5206; ss &#x79d2;&quot;</span>)</span>\n <span class=\"hljs-keyword\">private</span> LocalDateTime fieldName;\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,63"}}],"payload":{"tag":"h3","lines":"45,46"}}],"payload":{"tag":"h2","lines":"34,36"}},{"content":"&#x540e;&#x7aef;&#x5e8f;&#x5217;&#x5316; Date &#x8f93;&#x51fa; Json &#x65e5;&#x671f;&#x683c;&#x5f0f;","children":[{"content":"&#x9ed8;&#x8ba4;&#x8f93;&#x51fa;&#x683c;&#x5f0f;","children":[{"content":"<pre data-lines=\"70,73\"><code>*   LocalDateTime &#x2014;&gt; &#x201c;yyyy-MM-dd HH:mm:ss&#x201d;\n*   LocalDate &#x2014;&gt; &#x201c;yyyy-MM-dd&#x201d;\n*   LocalTime &#x2014;&gt; &#x201c;HH:mm:ss&#x201d;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"70,73"}}],"payload":{"tag":"h3","lines":"68,69"}},{"content":"&#x4e2a;&#x6027;&#x5316;&#x8f93;&#x51fa;","children":[{"content":"<pre data-lines=\"78,85\"><code data-lines=\"78,85\"><span class=\"hljs-variable\">@Data</span>\npublic <span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">DemoDTO</span> </span>{\n <span class=\"hljs-variable\">@JsonFormat</span>(pattern = <span class=\"hljs-string\">&quot;yyyy &#x5e74; MM &#x6708; dd &#x65e5; HH &#x65f6; mm &#x5206; ss &#x79d2;&quot;</span>)\n private LocalDateTime fieldName;\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"78,85"}}],"payload":{"tag":"h3","lines":"74,75"}}],"payload":{"tag":"h2","lines":"65,67"}}],"payload":{"tag":"h1","lines":"5,7"}}]},{})</script>
+</body>
+</html>

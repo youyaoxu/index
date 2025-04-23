@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; JeeCG &#x5355;&#x70b9;&#x767b;&#x5f55;","children":[{"content":"JeeCG &#x6539;&#x9020;&#x540e;&#x6e90;&#x7801;","children":[{"content":"<pre data-lines=\"7,11\"><code>&#x6e90;&#x7801;&#x5730;&#x5740;&#xff1a;\n\n*   [JeeCG Boot &#x540e;&#x7aef;](https://github.com/pig-mesh/jeecg-boot)\n*   [JeeCG Boot Vue3 &#x524d;&#x7aef;](https://github.com/pig-mesh/jeecgboot-vue3)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,11"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"PIG &#x6574;&#x5408;&#x524d;&#x540e;&#x7aef;&#x5206;&#x79bb;&#x9879;&#x76ee;&#x767b;&#x5f55;","children":[{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/a073deb5969c26e2e59f7c9327b9fa41.png\" alt>","children":[],"payload":{"tag":"img","lines":"17,18"}},{"content":"<pre data-lines=\"19,20\"><code>&#x6dfb;&#x52a0;OAuth&#x5ba2;&#x6237;&#x7aef;&#x914d;&#x7f6e;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,20"}},{"content":"<pre data-lines=\"23,42\"><code data-lines=\"23,42\">INSERT INTO `pig`.`sys_oauth_client_details`(\n `client_id`, `resource_ids`, `client_secret`, \n `scope`, `authorized_grant_types`, \n `web_server_redirect_uri`, `authorities`, \n `access_token_validity`, `refresh_token_validity`, \n `additional_information`, `autoapprove`, \n `create_time`, `update_time`, \n `create_by`, `update_by`\n) VALUES (\n &apos;jeecg-boot&apos;, &apos;&apos;, &apos;jeecg-boot&apos;, \n &apos;server&apos;, &apos;authorization_code&apos;, \n<span class=\"hljs-title\"> &apos;http://127.0.0.1:</span><span class=\"hljs-number\">3100</span>/sso&apos;, &apos;&apos;, \n<span class=\"hljs-built_in\"> 168000000,</span> <span class=\"hljs-number\">168000000</span>, \n &apos;&apos;, &apos;<span class=\"hljs-literal\">false</span>&apos;, \n<span class=\"hljs-title\"> &apos;2023-01-17 08:31:46&apos;, &apos;2023-01-17 09:32:</span><span class=\"hljs-number\">06</span>&apos;, \n &apos;admin&apos;, &apos;admin&apos;\n)<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,42"}}],"payload":{"tag":"h2","lines":"14,16"}},{"content":"&#x540e;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"47,51\"><code>*   &#x914d;&#x7f6e; JeeCG-Boot &#x524d;&#x7aef;&#x5730;&#x5740;&#xff08;&#x9ed8;&#x8ba4; 3100 &#x7aef;&#x53e3;&#xff09;\n*   &#x914d;&#x7f6e; PIG &#x7f51;&#x5173;&#x5730;&#x5740;\n\n1 &#x589e;&#x52a0; SSO &#x914d;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,51"}},{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/841f482b05aa263356b941a5301b0f5c.png\" alt>","children":[],"payload":{"tag":"img","lines":"52,53"}},{"content":"<pre data-lines=\"54,55\"><code>2 &#x589e;&#x52a0;&#x767b;&#x5f55;&#x65b9;&#x5f0f;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,55"}},{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/d479312b9c2ab8569b19fd8f84d7d6fa.png\" alt>","children":[],"payload":{"tag":"img","lines":"56,57"}}],"payload":{"tag":"h2","lines":"44,46"}},{"content":"&#x524d;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"61,64\"><code>&#x524d;&#x7aef;&#x9879;&#x76ee;&#x5730;&#x5740;&#xff1a;[JeeCG Boot Vue3](https://github.com/pig-mesh/jeecgboot-vue3)\n\n1 &#x767b;&#x5f55;&#x9875;&#x9762;&#x914d;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"61,64"}},{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/7c61cb04d291a39c026205bafc25e3c5.png\" alt>","children":[],"payload":{"tag":"img","lines":"65,66"}},{"content":"<pre data-lines=\"67,68\"><code>2 &#x589e;&#x52a0; SSO &#x9875;&#x9762;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"67,68"}},{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/d6eb64a260f87cae36740c7e7cf7abf4.png\" alt>","children":[],"payload":{"tag":"img","lines":"69,70"}},{"content":"<pre data-lines=\"71,74\"><code>&#x6b64;&#x9875;&#x9762;&#x7528;&#x4e8e;&#x5904;&#x7406;&#x56de;&#x8c03;&#x548c;Code&#x53c2;&#x6570;\n\n3 &#x9000;&#x51fa;&#x7cfb;&#x7edf;&#x914d;&#x7f6e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"71,74"}},{"content":"<img src=\"https://minio.pigx.vip/alei/2023/01/ecd7091d1ebf3cba98baa8db3ba48aad.png\" alt>","children":[],"payload":{"tag":"img","lines":"75,76"}}],"payload":{"tag":"h2","lines":"58,60"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

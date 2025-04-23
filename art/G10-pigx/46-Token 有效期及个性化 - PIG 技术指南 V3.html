@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Token &#x6709;&#x6548;&#x671f;&#x53ca;&#x4e2a;&#x6027;&#x5316;","children":[{"content":"&#x9ed8;&#x8ba4; Token &#x6709;&#x6548;&#x671f;&#x8bf4;&#x660e;","children":[{"content":"<pre data-lines=\"5,11\"><code data-lines=\"5,11\"><span class=\"hljs-comment\">// &#x9ed8;&#x8ba4;&#x5237;&#x65b0; token &#x7684;&#x6709;&#x6548;&#x671f;</span>\n<span class=\"hljs-keyword\">private</span> <span class=\"hljs-built_in\">int</span> <span class=\"hljs-built_in\">ref</span>reshTokenValiditySeconds = <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">24</span> * <span class=\"hljs-number\">30</span>; <span class=\"hljs-comment\">// default 30 days.</span>\n<span class=\"hljs-comment\">// &#x9ed8;&#x8ba4; token &#x7684;&#x6709;&#x6548;&#x671f;</span>\n<span class=\"hljs-keyword\">private</span> <span class=\"hljs-built_in\">int</span> accessTokenValiditySeconds = <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">60</span> * <span class=\"hljs-number\">12</span>; <span class=\"hljs-comment\">// default 12 hours.</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,11"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x4fee;&#x6539; Token &#x6709;&#x6548;&#x671f;","children":[{"content":"<pre data-lines=\"15,18\"><code>&#x6bcf;&#x4e2a;&#x7ec8;&#x7aef;&#x914d;&#x7f6e;&#x4e3a;&#x7a7a;&#xff0c;&#x53d6;&#x9ed8;&#x8ba4;&#x7684;&#x65f6;&#x95f4;&#x8bbe;&#x7f6e; &#x5237;&#x65b0; token 30 &#x5929;&#xff0c;&#x4ee4;&#x724c; 12 &#x5c0f;&#x65f6;&#x3002;\n\n&#x524d;&#x7aef;&#x4f7f;&#x7528;&#x7684;&#x5ba2;&#x6237;&#x7aef;&#x662f; pig&#xff0c;&#x8bbe;&#x7f6e;&#x4ee4;&#x724c;&#x5931;&#x6548;&#x7b49;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,18"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314159653-f0977281-a56c-4ddf-bd2f-001db5f387b6.png\" alt>","children":[],"payload":{"tag":"img","lines":"19,20"}}],"payload":{"tag":"h2","lines":"12,14"}},{"content":"sys_oauth_client_details &#x8868;","children":[{"content":"<table data-lines=\"24,37\">\n<thead data-lines=\"24,25\">\n<tr data-lines=\"24,25\">\n<th>&#x5b57;&#x6bb5;&#x540d;&#x79f0;</th>\n<th>&#x63cf;&#x8ff0;</th>\n</tr>\n</thead>\n<tbody data-lines=\"26,37\">\n<tr data-lines=\"26,27\">\n<td>client_id</td>\n<td>&#x4e3b;&#x952e;&#xff0c;&#x5ba2;&#x6237;&#x7aef; ID</td>\n</tr>\n<tr data-lines=\"27,28\">\n<td>resource_ids</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x6240;&#x80fd;&#x8bbf;&#x95ee;&#x7684;&#x8d44;&#x6e90; id &#x96c6;&#x5408;&#xff0c;&#x591a;&#x4e2a;&#x8d44;&#x6e90;&#x65f6;&#x7528;&#x9017;&#x53f7; (,) &#x5206;&#x9694;</td>\n</tr>\n<tr data-lines=\"28,29\">\n<td>client_secret</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x8bbf;&#x95ee;&#x5bc6;&#x5319;</td>\n</tr>\n<tr data-lines=\"29,30\">\n<td>scope</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x7533;&#x8bf7;&#x7684;&#x6743;&#x9650;&#x8303;&#x56f4;&#xff0c;&#x53ef;&#x9009;&#x503c;&#x5305;&#x62ec; read,write,trust;&#x82e5;&#x6709;&#x591a;&#x4e2a;&#x6743;&#x9650;&#x8303;&#x56f4;&#x7528;&#x9017;&#x53f7; (,) &#x5206;&#x9694;</td>\n</tr>\n<tr data-lines=\"30,31\">\n<td>authorized_grant_types</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x652f;&#x6301;&#x7684;&#x6388;&#x6743;&#x8bb8;&#x53ef;&#x7c7b;&#x578b; (grant_type)&#xff0c;&#x53ef;&#x9009;&#x503c;&#x5305;&#x62ec; authorization_code,password,refresh_token,implicit,client_credentials&#xff0c;&#x82e5;&#x652f;&#x6301;&#x591a;&#x4e2a;&#x6388;&#x6743;&#x8bb8;&#x53ef;&#x7c7b;&#x578b;&#x7528;&#x9017;&#x53f7; (,) &#x5206;&#x9694;</td>\n</tr>\n<tr data-lines=\"31,32\">\n<td>web_server_redirect_uri</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x91cd;&#x5b9a;&#x5411; URI&#xff0c;&#x5f53; grant_type &#x4e3a; authorization_code &#x6216; implicit &#x65f6;&#xff0c;&#x5728; Oauth &#x7684;&#x6d41;&#x7a0b;&#x4e2d;&#x4f1a;&#x4f7f;&#x7528;&#x5e76;&#x68c0;&#x67e5;&#x4e0e;&#x6570;&#x636e;&#x5e93;&#x5185;&#x7684; redirect_uri &#x662f;&#x5426;&#x4e00;&#x81f4;</td>\n</tr>\n<tr data-lines=\"32,33\">\n<td>authorities</td>\n<td>&#x5ba2;&#x6237;&#x7aef;&#x6240;&#x62e5;&#x6709;&#x7684; Spring Security &#x7684;&#x6743;&#x9650;&#x503c;&#xff0c;&#x53ef;&#x9009;&#xff0c;&#x82e5;&#x6709;&#x591a;&#x4e2a;&#x6743;&#x9650;&#x503c;&#xff0c;&#x7528;&#x9017;&#x53f7; (,) &#x5206;&#x9694;</td>\n</tr>\n<tr data-lines=\"33,34\">\n<td>access_token_validity</td>\n<td>&#x8bbe;&#x5b9a;&#x5ba2;&#x6237;&#x7aef;&#x7684; access_token &#x7684;&#x6709;&#x6548;&#x65f6;&#x95f4;&#x503c; (&#x5355;&#x4f4d;&#xff1a;&#x79d2;)&#xff0c;&#x82e5;&#x4e0d;&#x8bbe;&#x5b9a;&#x503c;&#x5219;&#x4f7f;&#x7528;&#x9ed8;&#x8ba4;&#x7684;&#x6709;&#x6548;&#x65f6;&#x95f4;&#x503c; (60 * 60 * 12, 12 &#x5c0f;&#x65f6;)</td>\n</tr>\n<tr data-lines=\"34,35\">\n<td>refresh_token_validity</td>\n<td>&#x8bbe;&#x5b9a;&#x5ba2;&#x6237;&#x7aef;&#x7684; refresh_token &#x7684;&#x6709;&#x6548;&#x65f6;&#x95f4;&#x503c; (&#x5355;&#x4f4d;&#xff1a;&#x79d2;)&#xff0c;&#x82e5;&#x4e0d;&#x8bbe;&#x5b9a;&#x503c;&#x5219;&#x4f7f;&#x7528;&#x9ed8;&#x8ba4;&#x7684;&#x6709;&#x6548;&#x65f6;&#x95f4;&#x503c; (60 * 60 * 24 * 30, 30 &#x5929;)</td>\n</tr>\n<tr data-lines=\"35,36\">\n<td>additional_information</td>\n<td>&#x8fd9;&#x662f;&#x4e00;&#x4e2a;&#x9884;&#x7559;&#x7684;&#x5b57;&#x6bb5;&#xff0c;&#x5728; Oauth &#x7684;&#x6d41;&#x7a0b;&#x4e2d;&#x6ca1;&#x6709;&#x5b9e;&#x9645;&#x7684;&#x4f7f;&#x7528;&#xff0c;&#x53ef;&#x9009;&#xff0c;&#x4f46;&#x82e5;&#x8bbe;&#x7f6e;&#x503c;&#xff0c;&#x5fc5;&#x987b;&#x662f; JSON &#x683c;&#x5f0f;&#x7684;&#x6570;&#x636e;</td>\n</tr>\n<tr data-lines=\"36,37\">\n<td>autoapprove</td>\n<td>&#x8bbe;&#x7f6e;&#x7528;&#x6237;&#x662f;&#x5426;&#x81ea;&#x52a8;&#x6279;&#x51c6;&#x6388;&#x4e88;&#x6743;&#x9650;&#x64cd;&#x4f5c;&#xff0c;&#x9ed8;&#x8ba4;&#x503c;&#x4e3a; &#x2018;false&#x2019;, &#x53ef;&#x9009;&#x503c;&#x5305;&#x62ec; &#x2018;true&#x2019;,&#x2018;false&#x2019;, &#x2018;read&#x2019;,&#x2018;write&#x2019;.</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"24,37"}}],"payload":{"tag":"h2","lines":"21,23"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x5b57;&#x5178;&#x529f;&#x80fd;","children":[{"content":"useDict &#x51fd;&#x6570;","children":[{"content":"<pre data-lines=\"7,8\"><code>&#x5b57;&#x5178;&#x7c7b;&#x578b;&#x5bf9;&#x5e94; `sys_dict` &#x8868;&#x4e2d;&#x5b57;&#x5178;&#x6570;&#x636e;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}},{"content":"<pre data-lines=\"11,16\"><code data-lines=\"11,16\"><span class=\"hljs-keyword\">import</span> { useDict } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;/@/hooks/dict&apos;</span>;\n\n<span class=\"hljs-keyword\">const</span> { &#x5b57;&#x5178;&#x7c7b;&#x578b;A, &#x5b57;&#x5178;&#x7c7b;&#x578b;B } = <span class=\"hljs-title function_\">useDict</span>(<span class=\"hljs-string\">&apos;&#x5b57;&#x5178;&#x7c7b;&#x578b; A&apos;</span>, <span class=\"hljs-string\">&apos;&#x5b57;&#x5178;&#x7c7b;&#x578b; B&apos;</span>); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,16"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x9875;&#x9762;&#x4f7f;&#x7528; dict-tag","children":[{"content":"<pre data-lines=\"23,30\"><code data-lines=\"23,30\">&lt;el-table-column&gt;\n &lt;template <span class=\"hljs-comment\">#default=&quot;scope&quot;&gt;</span>\n &lt;dict-tag <span class=\"hljs-symbol\">:options=<span class=\"hljs-string\">&quot;&#x5b57;&#x5178;&#x7c7b;&#x578b;&quot;</span></span> <span class=\"hljs-symbol\">:value=<span class=\"hljs-string\">&quot;scope.row.xx&quot;</span>&gt;&lt;/dict-tag&gt;</span>\n &lt;/template&gt;\n&lt;/el-table-column&gt; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,30"}}],"payload":{"tag":"h2","lines":"18,20"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

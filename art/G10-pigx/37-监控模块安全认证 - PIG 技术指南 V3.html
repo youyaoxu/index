@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x76d1;&#x63a7;&#x6a21;&#x5757;&#x5b89;&#x5168;&#x8ba4;&#x8bc1;","children":[{"content":"&#x4e3a;&#x4ec0;&#x4e48;&#x8981;&#x505a;&#x4e8c;&#x6b21;&#x8ba4;&#x8bc1;","children":[{"content":"<pre data-lines=\"7,8\"><code>spring boot admin &#x9ed8;&#x8ba4;&#x6ca1;&#x6709;&#x5f00;&#x542f;&#x8ba4;&#x8bc1;&#xff0c;&#x4e5f;&#x662f;&#x5c31;&#x662f;&#x522b;&#x4eba;&#x77e5;&#x9053;&#x4e86;&#x76d1;&#x63a7;&#x6a21;&#x5757;&#x7684; IP:PORT &#x5373;&#x53ef;&#x8bbf;&#x95ee;&#x3002;&#x76d1;&#x63a7;&#x529f;&#x80fd;&#x5728;&#x751f;&#x4ea7;&#x4e0a;&#x53c8;&#x662f;&#x5fc5;&#x8981;&#x7684;&#x529f;&#x80fd;&#xff0c;&#x6240;&#x4ee5;&#x9700;&#x8981;&#x6709;&#x4e8c;&#x6b21;&#x8ba4;&#x8bc1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}}],"payload":{"tag":"h3","lines":"5,6"}},{"content":"&#x5b9e;&#x73b0;&#x539f;&#x7406;","children":[{"content":"<pre data-lines=\"11,12\"><code>*   &#x5f15;&#x5165; spring security\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,12"}},{"content":"<pre data-lines=\"15,22\"><code data-lines=\"15,22\"><span class=\"hljs-comment\">&lt;!--security--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>org.springframework.boot<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>spring-boot-starter-security<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,22"}},{"content":"<pre data-lines=\"23,24\"><code>*   &#x914d;&#x7f6e; spring security &#x5373;&#x53ef;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,24"}},{"content":"<pre data-lines=\"27,63\"><code data-lines=\"27,63\"><span class=\"hljs-meta\">@Configuration</span>\npublic <span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">WebSecurityConfigurer</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">WebSecurityConfigurerAdapter</span> </span>{\n <span class=\"hljs-keyword\">private</span> <span class=\"hljs-keyword\">final</span> <span class=\"hljs-type\">String</span> adminContextPath;\n\n public <span class=\"hljs-type\">WebSecurityConfigurer</span>(<span class=\"hljs-type\">AdminServerProperties</span> adminServerProperties) {\n <span class=\"hljs-keyword\">this</span>.adminContextPath = adminServerProperties.getContextPath();\n }\n\n <span class=\"hljs-meta\">@Override</span>\n <span class=\"hljs-keyword\">protected</span> void configure(<span class=\"hljs-type\">HttpSecurity</span> http) <span class=\"hljs-keyword\">throws</span> <span class=\"hljs-type\">Exception</span> {\n <span class=\"hljs-comment\">// @formatter:off</span>\n <span class=\"hljs-type\">SavedRequestAwareAuthenticationSuccessHandler</span> successHandler = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-type\">SavedRequestAwareAuthenticationSuccessHandler</span>();\n successHandler.setTargetUrlParameter(<span class=\"hljs-string\">&quot;redirectTo&quot;</span>);\n successHandler.setDefaultTargetUrl(adminContextPath + <span class=\"hljs-string\">&quot;/&quot;</span>);\n\n http\n .headers().frameOptions().disable()\n .and().authorizeRequests()\n .antMatchers(adminContextPath + <span class=\"hljs-string\">&quot;/assets/**&quot;</span>\n , adminContextPath + <span class=\"hljs-string\">&quot;/login&quot;</span>\n , adminContextPath + <span class=\"hljs-string\">&quot;/actuator/**&quot;</span>\n ).permitAll()\n .anyRequest().authenticated()\n .and()\n .formLogin().loginPage(adminContextPath + <span class=\"hljs-string\">&quot;/login&quot;</span>)\n .successHandler(successHandler).and()\n .logout().logoutUrl(adminContextPath + <span class=\"hljs-string\">&quot;/logout&quot;</span>)\n .and()\n .httpBasic().and()\n .csrf()\n .disable();\n <span class=\"hljs-comment\">// @formatter:on</span>\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,63"}},{"content":"<pre data-lines=\"64,67\"><code>*   &#x5728;&#x5bf9;&#x5e94;&#x7684; pig-monitor-dev.yml &#x914d;&#x7f6e;&#x7528;&#x6237;\n\npig &#x9ed8;&#x8ba4;&#x7684;&#x767b;&#x5f55;&#x7528;&#x6237; pig/pig&#xff0c;&#x53ef;&#x4ee5;&#x53c2;&#x8003;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x52a0;&#x89e3;&#x5bc6;&#x7ae0;&#x8282;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"64,67"}},{"content":"<pre data-lines=\"70,77\"><code data-lines=\"70,77\"><span class=\"hljs-symbol\">spring:</span>\n<span class=\"hljs-symbol\"> security:</span>\n<span class=\"hljs-symbol\"> user:</span>\n<span class=\"hljs-symbol\"> name:</span> ENC(<span class=\"hljs-number\">8</span>Hk2ILNJM8UTOuW/Xi75<span class=\"hljs-attr\">qg</span><span class=\"hljs-operator\">=</span>=)     <span class=\"hljs-meta\"># pig</span>\n<span class=\"hljs-symbol\"> password:</span> ENC(o6cuPFfUevmTbkmBnE67Ow====) <span class=\"hljs-meta\"># pig </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"70,77"}}],"payload":{"tag":"h3","lines":"9,10"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

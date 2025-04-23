@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6d3e;&#x6b27; API &#x5bf9;&#x63a5;&#x1f525;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,9\"><code>&#x76ee;&#x524d;&#x5b9e;&#x6d4b;&#x6d3e;&#x6b27;&#x7684;R1 &#x54cd;&#x5e94;&#x6700;&#x5feb;&#xff0c;&#x5e76;&#x4e14;&#x6ce8;&#x518c;&#x8d60;&#x9001; 5000&#x4e07; &#x7684;token&#xff0c;&#x4e0d;&#x7528;&#x5b9e;&#x540d;&#x3002;\n\n&#x672c;&#x6587;&#x5c06;&#x4ecb;&#x7ecd;&#x5982;&#x4f55;&#x4f7f;&#x7528; deepseek4j &#x63a5;&#x5165; &#x6d3e;&#x6b27;&#x7684; R1 &#x6a21;&#x578b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,9"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x6d3e;&#x6b27; &#x914d;&#x7f6e;&#x51c6;&#x5907;","children":[{"content":"&#x83b7;&#x53d6; &#x6d3e;&#x6b27; &#x8bbf;&#x95ee;&#x51ed;&#x8bc1;","children":[{"content":"<pre data-lines=\"16,18\"><code>*   1.  &#x767b;&#x5f55; [&#x6d3e;&#x6b27; &#x63a7;&#x5236;&#x53f0;](https://ppinfra.com/user/register?invited_by=KFWGG9)\n*   2.  &#x521b;&#x5efa;&#x65b0;&#x7684; API &#x5bc6;&#x94a5;&#x5e76;&#x4fdd;&#x5b58;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,18"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1739860940.png\" alt>","children":[],"payload":{"tag":"img","lines":"19,20"}}],"payload":{"tag":"h3","lines":"14,15"}}],"payload":{"tag":"h2","lines":"11,13"}},{"content":"deepseek4j &#x914d;&#x7f6e;","children":[{"content":"1. &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8bbe;&#x7f6e;","children":[{"content":"<pre data-lines=\"27,30\"><code>&#x5728; `application.properties` &#x6216; `application.yml` &#x4e2d;&#x6dfb;&#x52a0;&#x4ee5;&#x4e0b;&#x914d;&#x7f6e;&#xff1a;\n\n&#x6ce8;&#x610f;&#x6a21;&#x578b;&#x540d;&#x79f0;&#xff1a;deepseek/deepseek-r1/community\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,30"}},{"content":"<pre data-lines=\"33,39\"><code data-lines=\"33,39\"><span class=\"hljs-params\">deepseek:</span>\n <span class=\"hljs-params\">base-url:</span> https:<span class=\"hljs-symbol\">//api.ppinfra.com/v3/openai</span>\n <span class=\"hljs-params\">api-key:</span> sk_xxx\n <span class=\"hljs-params\">model:</span> deepseek<span class=\"hljs-symbol\">/deepseek-r1/community</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,39"}}],"payload":{"tag":"h3","lines":"25,26"}},{"content":"2. &#x4ee3;&#x7801;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"44,53\"><code data-lines=\"44,53\"><span class=\"hljs-meta\">@Autowired</span>\n<span class=\"hljs-keyword\">private</span> <span class=\"hljs-title class_\">DeepSeekClient</span> deepSeekClient;\n\n<span class=\"hljs-meta\">@GetMapping</span>(value = <span class=\"hljs-string\">&quot;/chat&quot;</span>, produces = <span class=\"hljs-title class_\">MediaType</span>.<span class=\"hljs-property\">TEXT_EVENT_STREAM_VALUE</span>)\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">Flux</span>&lt;<span class=\"hljs-title class_\">ChatCompletionResponse</span>&gt; <span class=\"hljs-title function_\">chat</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">String</span> prompt</span>) {\n <span class=\"hljs-keyword\">return</span> deepSeekClient.<span class=\"hljs-title function_\">chatFluxCompletion</span>(prompt);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"44,53"}}],"payload":{"tag":"h3","lines":"40,41"}}],"payload":{"tag":"h2","lines":"22,24"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

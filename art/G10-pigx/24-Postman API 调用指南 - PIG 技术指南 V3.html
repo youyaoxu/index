@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Postman API &#x8c03;&#x7528;&#x6307;&#x5357;","children":[{"content":"&#x4e00;&#x3001;&#x5b89;&#x88c5; Apifox","children":[{"content":"<pre data-lines=\"5,8\"><code>Apifox &#x662f; API &#x6587;&#x6863;&#x3001;API &#x8c03;&#x8bd5;&#x3001;API Mock&#x3001;API &#x81ea;&#x52a8;&#x5316;&#x6d4b;&#x8bd5;&#x4e00;&#x4f53;&#x5316;&#x534f;&#x4f5c;&#x5e73;&#x53f0;&#xff0c;&#x5b9a;&#x4f4d; Postman + Swagger + Mock + JMeter&#x3002;&#x901a;&#x8fc7;&#x4e00;&#x5957;&#x7cfb;&#x7edf;&#x3001;&#x4e00;&#x4efd;&#x6570;&#x636e;&#xff0c;&#x89e3;&#x51b3;&#x591a;&#x4e2a;&#x7cfb;&#x7edf;&#x4e4b;&#x95f4;&#x7684;&#x6570;&#x636e;&#x540c;&#x6b65;&#x95ee;&#x9898;&#x3002;&#x53ea;&#x8981;&#x5b9a;&#x4e49;&#x597d; API &#x6587;&#x6863;&#xff0c;API &#x8c03;&#x8bd5;&#x3001;API &#x6570;&#x636e; Mock&#x3001;API &#x81ea;&#x52a8;&#x5316;&#x6d4b;&#x8bd5;&#x5c31;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x4f7f;&#x7528;&#xff0c;&#x65e0;&#x9700;&#x518d;&#x6b21;&#x5b9a;&#x4e49;&#xff1b;API &#x6587;&#x6863;&#x548c; API &#x5f00;&#x53d1;&#x8c03;&#x8bd5;&#x4f7f;&#x7528;&#x540c;&#x4e00;&#x4e2a;&#x5de5;&#x5177;&#xff0c;API &#x8c03;&#x8bd5;&#x5b8c;&#x6210;&#x540e;&#x5373;&#x53ef;&#x4fdd;&#x8bc1;&#x548c; API &#x6587;&#x6863;&#x5b9a;&#x4e49;&#x5b8c;&#x5168;&#x4e00;&#x81f4;&#x3002;&#x9ad8;&#x6548;&#x3001;&#x53ca;&#x65f6;&#x3001;&#x51c6;&#x786e;&#xff01;\n\n&#x4e0b;&#x8f7d;&#x5730;&#x5740;&#xff1a;[https://apifox.cn](https://apifox.cn/a1pig4cloud)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x4e8c;&#x3001;&#x5bfc;&#x5165; Apifox &#x811a;&#x672c;","children":[{"content":"1. &#x4e0b;&#x8f7d;&#x811a;&#x672c;&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"15,17\"><code>*   v3.7.4+: [pig\\_3\\_7\\_4.apifox.json](https://nkq7e81q30.feishu.cn/file/MkPAbPipmoCM2RxJARGcpFr0nHf?from=from_copylink)\n*   &#x5176;&#x4ed6;&#x7248;&#x672c;&#xff1a;[pig.apifox.json](https://nkq7e81q30.feishu.cn/file/WK3Lb4eyboBudCxMneHcTNHMnRe?from=from_copylink)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,17"}}],"payload":{"tag":"h3","lines":"13,14"}},{"content":"2. &#x5bfc;&#x5165;&#x5df2;&#x4e0b;&#x8f7d;&#x811a;&#x672c;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661930400658-1da2a19f-f9aa-436e-a9a7-da2d42cc32f4.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h3","lines":"18,19"}}],"payload":{"tag":"h2","lines":"10,12"}},{"content":"&#x4e09;&#x3001;&#x4f7f;&#x7528; Apifox &#x8c03;&#x8bd5;&#x63a5;&#x53e3;","children":[{"content":"1. &#x83b7;&#x53d6;&#x5bc6;&#x7801;&#x6a21;&#x5f0f;&#x4ee4;&#x724c;","children":[{"content":"<img src=\"https://minio.pigx.vip/oss/202504/1744422609.png\" alt>","children":[],"payload":{"tag":"img","lines":"29,30"}}],"payload":{"tag":"h3","lines":"27,28"}},{"content":"2. &#x5237;&#x65b0;&#x4ee4;&#x724c;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661930525039-5ba47594-7369-4c54-99c1-7534c5070eeb.png\" alt>","children":[],"payload":{"tag":"img","lines":"33,34"}}],"payload":{"tag":"h3","lines":"31,32"}},{"content":"3. &#x4f7f;&#x7528;&#x4ee4;&#x724c;&#x8c03;&#x7528;&#x63a5;&#x53e3;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661930575181-b32fbf6b-3e7b-4ca1-b69b-fb9eb93954d9.png\" alt>","children":[],"payload":{"tag":"img","lines":"37,38"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"24,26"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x914d;&#x7f6e;&#x8bf4;&#x660e;","children":[{"content":"&#x57fa;&#x7840;&#x914d;&#x7f6e;","children":[{"content":"<table data-lines=\"6,12\">\n<thead data-lines=\"6,7\">\n<tr data-lines=\"6,7\">\n<th>&#x914d;&#x7f6e;&#x9879;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"8,12\">\n<tr data-lines=\"8,9\">\n<td><code>deepseek.base-url</code></td>\n<td><a href=\"https://api.deepseek.com/v1\">https://api.deepseek.com/v1</a></td>\n<td>DeepSeek API &#x7684;&#x57fa;&#x7840; URL</td>\n</tr>\n<tr data-lines=\"9,10\">\n<td><code>deepseek.api-key</code></td>\n<td>-</td>\n<td>API &#x5bc6;&#x94a5;&#xff0c;&#x5fc5;&#x586b;&#x9879;</td>\n</tr>\n<tr data-lines=\"10,11\">\n<td><code>deepseek.model</code></td>\n<td>-</td>\n<td>&#x4f7f;&#x7528;&#x7684;&#x6a21;&#x578b;&#x540d;&#x79f0;</td>\n</tr>\n<tr data-lines=\"11,12\">\n<td><code>deepseek.default-system-prompt</code></td>\n<td>true</td>\n<td>&#x662f;&#x5426;&#x4f7f;&#x7528;&#x9ed8;&#x8ba4;&#x7684;&#x7cfb;&#x7edf;&#x63d0;&#x793a;&#x8bcd;&#xff0c;&#x9ed8;&#x8ba4;&#x5f00;&#x542f;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"6,12"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x65e5;&#x5fd7;&#x914d;&#x7f6e;","children":[{"content":"<table data-lines=\"22,27\">\n<thead data-lines=\"22,23\">\n<tr data-lines=\"22,23\">\n<th>&#x914d;&#x7f6e;&#x9879;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"24,27\">\n<tr data-lines=\"24,25\">\n<td><code>deepseek.log-requests</code></td>\n<td>false</td>\n<td>&#x662f;&#x5426;&#x8bb0;&#x5f55;&#x8bf7;&#x6c42;&#x65e5;&#x5fd7;</td>\n</tr>\n<tr data-lines=\"25,26\">\n<td><code>deepseek.log-responses</code></td>\n<td>false</td>\n<td>&#x662f;&#x5426;&#x8bb0;&#x5f55;&#x54cd;&#x5e94;&#x65e5;&#x5fd7;</td>\n</tr>\n<tr data-lines=\"26,27\">\n<td><code>deepseek.log-level</code></td>\n<td>DEBUG</td>\n<td>&#x65e5;&#x5fd7;&#x7ea7;&#x522b;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"22,27"}}],"payload":{"tag":"h2","lines":"19,21"}},{"content":"&#x7f51;&#x7edc;&#x914d;&#x7f6e;","children":[{"content":"<table data-lines=\"35,41\">\n<thead data-lines=\"35,36\">\n<tr data-lines=\"35,36\">\n<th>&#x914d;&#x7f6e;&#x9879;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"37,41\">\n<tr data-lines=\"37,38\">\n<td><code>deepseek.proxy</code></td>\n<td>-</td>\n<td>&#x4ee3;&#x7406;&#x8bbe;&#x7f6e;</td>\n</tr>\n<tr data-lines=\"38,39\">\n<td><code>deepseek.connect-timeout</code></td>\n<td>-</td>\n<td>&#x8fde;&#x63a5;&#x8d85;&#x65f6;&#x65f6;&#x95f4;&#xff08;&#x79d2;&#xff09;</td>\n</tr>\n<tr data-lines=\"39,40\">\n<td><code>deepseek.read-timeout</code></td>\n<td>-</td>\n<td>&#x8bfb;&#x53d6;&#x8d85;&#x65f6;&#x65f6;&#x95f4;&#xff08;&#x79d2;&#xff09;</td>\n</tr>\n<tr data-lines=\"40,41\">\n<td><code>deepseek.call-timeout</code></td>\n<td>-</td>\n<td>&#x8c03;&#x7528;&#x8d85;&#x65f6;&#x65f6;&#x95f4;&#xff08;&#x79d2;&#xff09;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"35,41"}}],"payload":{"tag":"h2","lines":"32,34"}},{"content":"&#x914d;&#x7f6e;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"49,63\"><code class=\"language-java\">\ndeepseek:\n base-url: https:<span class=\"hljs-comment\">//api.deepseek.com/v1</span>\n api-key: your-api-key-here\n model: deepseek-chat\n <span class=\"hljs-keyword\">default</span>-system-prompt: <span class=\"hljs-literal\">true</span>\n log-requests: <span class=\"hljs-literal\">true</span>\n log-responses: <span class=\"hljs-literal\">true</span>\n log-level: DEBUG\n connect-timeout: <span class=\"hljs-number\">30</span>\n read-timeout: <span class=\"hljs-number\">30</span>\n call-timeout: <span class=\"hljs-number\">60</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,63"}},{"content":"<pre data-lines=\"64,70\"><code>&#x6ce8;&#x610f;&#xff1a;\n\n1.  `api-key` &#x662f;&#x5fc5;&#x9700;&#x7684;&#x914d;&#x7f6e;&#x9879;&#xff0c;&#x9700;&#x8981;&#x4ece; DeepSeek &#x5b98;&#x65b9;&#x83b7;&#x53d6;\n2.  &#x8d85;&#x65f6;&#x65f6;&#x95f4;&#x5355;&#x4f4d;&#x4e3a;&#x79d2;\n3.  &#x4ee3;&#x7406;&#x914d;&#x7f6e;&#x53ef;&#x4ee5;&#x5e2e;&#x52a9;&#x5728;&#x7279;&#x5b9a;&#x7f51;&#x7edc;&#x73af;&#x5883;&#x4e0b;&#x8bbf;&#x95ee; API\n4.  &#x5efa;&#x8bae;&#x5728;&#x5f00;&#x53d1;&#x73af;&#x5883;&#x4e0b;&#x5f00;&#x542f;&#x65e5;&#x5fd7;&#x914d;&#x7f6e;&#xff0c;&#x65b9;&#x4fbf;&#x8c03;&#x8bd5;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"64,70"}}],"payload":{"tag":"h2","lines":"46,48"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

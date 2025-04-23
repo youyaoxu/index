@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x670d;&#x52a1;&#x4e2d;&#x83b7;&#x53d6;&#x5f53;&#x524d;&#x7528;&#x6237;","children":[{"content":"&#x83b7;&#x53d6;&#x5f53;&#x524d;&#x7528;&#x6237;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x76f4;&#x63a5;&#x5728;&#x4e1a;&#x52a1;&#x65b9;&#x6cd5;&#x4e2d;&#x83b7;&#x53d6; `SecurityUtils.getUser()`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}},{"content":"<pre data-lines=\"10,19\"><code data-lines=\"10,19\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">PigUser</span> <span class=\"hljs-title function_\">getUser</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">Authentication</span> authentication</span>) {\n <span class=\"hljs-title class_\">Object</span> principal = authentication.<span class=\"hljs-title function_\">getPrincipal</span>();\n <span class=\"hljs-keyword\">if</span> (principal <span class=\"hljs-keyword\">instanceof</span> <span class=\"hljs-title class_\">PigUser</span>) {\n <span class=\"hljs-keyword\">return</span> (<span class=\"hljs-title class_\">PigUser</span>) principal;\n }\n <span class=\"hljs-keyword\">return</span> <span class=\"hljs-literal\">null</span>;\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,19"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x524d;&#x7aef;&#x83b7;&#x53d6;&#x5f53;&#x524d;&#x7528;&#x6237;","children":[{"content":"<pre data-lines=\"27,32\"><code data-lines=\"27,32\">import { useUserInfo } <span class=\"hljs-keyword\">from</span> &apos;/@/stores/<span class=\"hljs-keyword\">user</span>Info&apos;;\n\n<span class=\"hljs-keyword\">const</span> <span class=\"hljs-keyword\">user</span> = useUserInfo().<span class=\"hljs-keyword\">user</span>Infos.<span class=\"hljs-keyword\">user</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,32"}}],"payload":{"tag":"h2","lines":"22,24"}},{"content":"&#x7279;&#x522b;&#x8bf4;&#x660e;","children":[{"content":"<pre data-lines=\"36,37\"><code>&#x5fc5;&#x987b;&#x662f;&#x5e26; `token` &#x8bf7;&#x6c42;&#x7684;&#x65b9;&#x6cd5;&#x624d;&#x53ef;&#x4ee5;&#x83b7;&#x53d6;&#x5230;&#x5f53;&#x524d;&#x7528;&#x6237;&#x4fe1;&#x606f;&#xff0c;&#x82e5;&#x662f;&#x76f4;&#x63a5;&#x5bf9;&#x5916;&#x66b4;&#x9732;&#x7684;&#x63a5;&#x53e3;&#x5219;&#x65e0;&#x6cd5;&#x83b7;&#x53d6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,37"}}],"payload":{"tag":"h2","lines":"33,35"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

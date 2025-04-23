@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x767e;&#x70bc; API &#x5bf9;&#x63a5;","children":[{"content":"&#x767e;&#x70bc;&#x5e73;&#x53f0;&#x914d;&#x7f6e;&#x51c6;&#x5907;","children":[{"content":"1. &#x83b7;&#x53d6;&#x767e;&#x70bc;&#x5e73;&#x53f0;&#x8bbf;&#x95ee;&#x51ed;&#x8bc1;","children":[{"content":"<pre data-lines=\"9,11\"><code>1.  &#x767b;&#x5f55; [&#x963f;&#x91cc;&#x4e91;&#x767e;&#x70bc;&#x5e73;&#x53f0;&#x63a7;&#x5236;&#x53f0;](https://bailian.console.aliyun.com/?apiKey=1#/api-key)\n2.  &#x5728;&#x8bbf;&#x95ee;&#x63a7;&#x5236;&#x9875;&#x9762;&#x521b;&#x5efa;&#x65b0;&#x7684; API Key &#x5e76;&#x4fdd;&#x5b58;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,11"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1739002171.png\" alt>","children":[],"payload":{"tag":"img","lines":"12,13"}}],"payload":{"tag":"h3","lines":"7,8"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"deepseek4j &#x914d;&#x7f6e;","children":[{"content":"1. &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8bbe;&#x7f6e;","children":[{"content":"<pre data-lines=\"29,34\"><code data-lines=\"29,34\"><span class=\"hljs-attr\">deepseek.base-url</span>=https://dashscope.aliyuncs.com/compatible-mode/v1\n<span class=\"hljs-attr\">deepseek.model</span>=deepseek-r1\n<span class=\"hljs-attr\">deepseek.api-key</span>=sk-xxx \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,34"}}],"payload":{"tag":"h3","lines":"21,22"}},{"content":"2. &#x4ee3;&#x7801;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"39,48\"><code data-lines=\"39,48\"><span class=\"hljs-meta\">@Autowired</span>\n<span class=\"hljs-keyword\">private</span> <span class=\"hljs-title class_\">DeepSeekClient</span> deepSeekClient;\n\n<span class=\"hljs-meta\">@GetMapping</span>(value = <span class=\"hljs-string\">&quot;/chat&quot;</span>, produces = <span class=\"hljs-title class_\">MediaType</span>.<span class=\"hljs-property\">TEXT_EVENT_STREAM_VALUE</span>)\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">Flux</span>&lt;<span class=\"hljs-title class_\">ChatCompletionResponse</span>&gt; <span class=\"hljs-title function_\">chat</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">String</span> prompt</span>) {\n <span class=\"hljs-keyword\">return</span> deepSeekClient.<span class=\"hljs-title function_\">chatFluxCompletion</span>(prompt);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"39,48"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"18,20"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x5b9e;&#x65f6;&#x8c03;&#x6574;&#x670d;&#x52a1;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;","children":[{"content":"<pre data-lines=\"4,7\"><code>pig &#x9ed8;&#x8ba4;&#x7684;&#x8f93;&#x51fa;&#x7684;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#x662f; INFO&#xff0c;&#x751f;&#x4ea7;&#x4e2d;&#x5efa;&#x8bae;&#x4f7f;&#x7528; ERROR &#x7ea7;&#x522b;&#x3002;\n\n&#x5f53;&#x6211;&#x4eec;&#x9047;&#x5230;&#x67d0;&#x4e9b; bug &#x65f6;&#xff0c;&#x52a8;&#x6001;&#x8c03;&#x6574; log &#x8f93;&#x51fa;&#x65e5;&#x5fd7;&#x975e;&#x5e38;&#x6709;&#x6548;&#xff0c;spring boot admin &#x63d0;&#x4f9b;&#x4e86;&#x8fd9;&#x6837;&#x7684;&#x529f;&#x80fd;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,7"}},{"content":"","children":[{"content":"<pre data-lines=\"12,15\"><code>&#x542f;&#x52a8; pig-monitor\n\n*   &#x9009;&#x4e2d; PIG-UPMS &#x670d;&#x52a1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,15"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314988462-93e37aa0-35c9-4930-b1a7-cb7151780b97.png\" alt>","children":[],"payload":{"tag":"img","lines":"16,17"}},{"content":"<pre data-lines=\"18,19\"><code>*   &#x9009;&#x62e9; Loggers, &#x5373;&#x53ef;&#x5b9e;&#x73b0;&#x52a8;&#x6001;&#x5207;&#x6362;&#x65e5;&#x5fd7;&#x7ea7;&#x522b;&#x7684;&#x9700;&#x6c42;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,19"}},{"content":"<img src=\"https://gitee.com/pig4cloud/oss/raw/master/2020-9/20200901153228.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h3","lines":"8,9"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

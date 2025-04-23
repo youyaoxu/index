@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x767b;&#x5f55;&#x540e;&#x7f6e;&#x5904;&#x7406;","children":[{"content":"<pre data-lines=\"3,6\"><code>&#x7528;&#x6237;&#x767b;&#x5f55;&#x6210;&#x529f;&#x3001;&#x5931;&#x8d25;&#x540e;&#xff0c;pig &#x6355;&#x83b7;&#x4e86; spring security &#x53d1;&#x51fa;&#x7684;&#x5bf9;&#x5e94;&#x4e8b;&#x4ef6;&#x3002;\n\n*   &#x7528;&#x6237;&#x767b;&#x5f55;&#x6210;&#x529f;&#x65f6;&#xff0c;&#x53d1;&#x5e03; AuthenticationSuccessEvent &#x4e8b;&#x4ef6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"3,6"}},{"content":"<pre data-lines=\"9,25\"><code data-lines=\"9,25\">public <span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">PigAuthenticationSuccessEventHandler</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">AuthenticationSuccessEventHandler</span> </span>{\n\n <span class=\"hljs-comment\">/**\n * &#x5904;&#x7406;&#x767b;&#x5f55;&#x6210;&#x529f;&#x65b9;&#x6cd5;\n * &lt;p&gt;\n * &#x83b7;&#x53d6;&#x5230;&#x767b;&#x5f55;&#x7684; authentication &#x5bf9;&#x8c61;\n *\n * @param authentication &#x767b;&#x5f55;&#x5bf9;&#x8c61;\n */</span>\n <span class=\"hljs-meta\">@Override</span>\n public void handle(<span class=\"hljs-type\">Authentication</span> authentication) {\n log.info(<span class=\"hljs-string\">&quot;&#x7528;&#x6237;&#xff1a;{} &#x767b;&#x5f55;&#x6210;&#x529f;&quot;</span>, authentication.getPrincipal());\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,25"}},{"content":"<pre data-lines=\"26,28\"><code>*   &#x7528;&#x6237;&#x767b;&#x5f55;&#x5931;&#x8d25;&#x65f6;  \n    AuthenticationException &#xa0;&#x662f;&#x767b;&#x5f55;&#x5f02;&#x5e38;&#x4fe1;&#x606f;&#xff0c;&#x5305;&#x62ec;&#x5e38;&#x89c1;&#x7684;&#x7528;&#x6237;&#x5bc6;&#x7801;&#x4e0d;&#x6b63;&#x786e;&#xff0c;&#x7528;&#x6237;&#x4fe1;&#x606f;&#x4e0d;&#x6b63;&#x786e;&#xff0c;&#x7528;&#x6237;&#x72b6;&#x6001;&#x4e0d;&#x6b63;&#x786e;&#x7b49;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"26,28"}},{"content":"<pre data-lines=\"31,49\"><code data-lines=\"31,49\"><span class=\"hljs-variable\">@Slf4j</span>\n<span class=\"hljs-variable\">@Component</span>\npublic class PigAuthenticationFailureEvenHandler extends AuthenticationFailureEvenHandler {\n\n <span class=\"hljs-comment\">/**\n * &#x5904;&#x7406;&#x767b;&#x5f55;&#x5931;&#x8d25;&#x65b9;&#x6cd5;\n * &lt;p&gt;\n *\n * @param authenticationException &#x767b;&#x5f55;&#x7684; authentication &#x5bf9;&#x8c61;\n * @param authentication          &#x767b;&#x5f55;&#x7684; authenticationException &#x5bf9;&#x8c61;\n */</span>\n <span class=\"hljs-variable\">@Override</span>\n public void <span class=\"hljs-built_in\">handle</span>(AuthenticationException authenticationException, Authentication authentication) {\n <span class=\"hljs-selector-tag\">log</span><span class=\"hljs-selector-class\">.info</span>(<span class=\"hljs-string\">&quot;&#x7528;&#x6237;&#xff1a;{} &#x767b;&#x5f55;&#x5931;&#x8d25;&#xff0c;&#x5f02;&#x5e38;&#xff1a;{}&quot;</span>, authentication.<span class=\"hljs-built_in\">getPrincipal</span>(), authenticationException.<span class=\"hljs-built_in\">getLocalizedMessage</span>());\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,49"}},{"content":"<pre data-lines=\"50,51\"><code>*   Authentication &#x7528;&#x6237;&#x8eab;&#x4efd;&#x8ba4;&#x8bc1;&#x4fe1;&#x606f;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"50,51"}},{"content":"<pre data-lines=\"54,73\"><code data-lines=\"54,73\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-class\"><span class=\"hljs-keyword\">interface</span> <span class=\"hljs-title\">Authentication</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">Principal</span>, <span class=\"hljs-title\">Serializable</span> </span>{\n    \n <span class=\"hljs-comment\">// &#x7528;&#x6237;&#x89d2;&#x8272; + &#x6743;&#x9650;&#x4fe1;&#x606f;&#xff08;&#x4f1a;&#x5305;&#x542b;&#x7528;&#x6237;&#x7684;&#x6743;&#x9650;&#x6807;&#x5fd7;&#xff09;</span>\n Collection&lt;? <span class=\"hljs-keyword\">extends</span> GrantedAuthority&gt; getAuthorities();\n    \n <span class=\"hljs-comment\">// &#x7528;&#x6237;&#x5bc6;&#x7801;&#x52a0;&#x5bc6;&#x4e32;</span>\n <span class=\"hljs-function\">Object <span class=\"hljs-title\">getCredentials</span><span class=\"hljs-params\">()</span></span>;\n    \n <span class=\"hljs-comment\">// &#x7528;&#x6237;&#x540d;&#x6216;&#x8005;&#x7528;&#x6237;&#x5168;&#x90e8;&#x4fe1;&#x606f;&#xff08;&#x53c2;&#x8003;&#x8d44;&#x6e90;&#x670d;&#x52a1;&#x914d;&#x7f6e;&#x7ae0;&#x8282;&#x8bf4;&#x660e;&#xff09;</span>\n <span class=\"hljs-function\">Object <span class=\"hljs-title\">getPrincipal</span><span class=\"hljs-params\">()</span></span>;\n    \n <span class=\"hljs-comment\">// &#x662f;&#x5426;&#x8ba4;&#x8bc1;</span>\n <span class=\"hljs-function\"><span class=\"hljs-keyword\">boolean</span> <span class=\"hljs-title\">isAuthenticated</span><span class=\"hljs-params\">()</span></span>;\n\t\n ...\n\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,73"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

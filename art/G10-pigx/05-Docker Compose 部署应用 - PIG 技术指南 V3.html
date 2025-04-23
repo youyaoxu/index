@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Docker Compose &#x90e8;&#x7f72;&#x5e94;&#x7528;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,7\"><code>&#x7531;&#x4e8e; PIG v3 &#x4f7f;&#x7528;&#x955c;&#x50cf;&#x5206;&#x5c42;&#x6280;&#x672f;&#xff0c;Docker &#x7248;&#x672c;&#x5fc5;&#x987b;&#x4e3a; 19.x+ &#x4ee5;&#x4e0a;&#x7248;&#x672c;&#x3002;  \n&#x672c;&#x6559;&#x7a0b;&#x73af;&#x5883;&#x8981;&#x6c42;&#xff1a;Linux CentOS 7 / 2 &#x6838; 8G &#x5185;&#x5b58;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,7"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/docker-deployment/docker-overview.png\" alt>","children":[],"payload":{"tag":"img","lines":"8,9"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x5b98;&#x65b9;&#x955c;&#x50cf;&#x90e8;&#x7f72;","children":[{"content":"<pre data-lines=\"13,19\"><code data-lines=\"13,19\">curl -o docker-compose.yaml <span class=\"hljs-keyword\">https</span>://<span class=\"hljs-keyword\">try</span>.pig4cloud.com\n\n<span class=\"hljs-comment\"># &#x7b49;&#x5f85; 5 &#x5206;&#x949f;</span>\ndocker compose up \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,19"}}],"payload":{"tag":"h2","lines":"10,12"}},{"content":"&#x81ea;&#x7f16;&#x8bd1;&#x6e90;&#x7801;&#x90e8;&#x7f72;","children":[{"content":"1. &#x5b89;&#x88c5; Docker","children":[{"content":"<pre data-lines=\"25,38\"><code data-lines=\"25,38\"><span class=\"hljs-comment\"># step 1: &#x5b89;&#x88c5;&#x5fc5;&#x8981;&#x7684;&#x4e00;&#x4e9b;&#x7cfb;&#x7edf;&#x5de5;&#x5177;</span>\n<span class=\"hljs-built_in\">sudo</span> yum install -y yum-utils device-mapper-persistent-data lvm2\n<span class=\"hljs-comment\"># Step 2: &#x6dfb;&#x52a0;&#x8f6f;&#x4ef6;&#x6e90;&#x4fe1;&#x606f;</span>\n<span class=\"hljs-built_in\">sudo</span> yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo\n<span class=\"hljs-comment\"># Step 3: &#x66f4;&#x65b0;&#x5e76;&#x5b89;&#x88c5; Docker-CE</span>\n<span class=\"hljs-built_in\">sudo</span> yum makecache fast\n<span class=\"hljs-built_in\">sudo</span> yum -y install docker-ce\n<span class=\"hljs-comment\"># Step 4: &#x5f00;&#x542f; Docker &#x670d;&#x52a1;</span>\n<span class=\"hljs-built_in\">sudo</span> service docker start\n<span class=\"hljs-comment\"># &#x7531;&#x4e8e; pig v3 &#x4f7f;&#x7528;&#x955c;&#x50cf;&#x5206;&#x5c42;&#x6280;&#x672f;&#xff0c;Docker &#x7248;&#x672c;&#x5fc5;&#x987b;&#x4e3a; 19.x+</span>\ndocker --version \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,38"}}],"payload":{"tag":"h3","lines":"23,24"}},{"content":"2. &#x6253;&#x5305;&#x90e8;&#x7f72;&#x670d;&#x52a1;&#x7aef;&#x4ee3;&#x7801;","children":[{"content":"<pre data-lines=\"41,48\"><code data-lines=\"41,48\"><span class=\"hljs-comment\"># &#x5fae;&#x670d;&#x52a1;&#x7248;&#x672c;&#x6253;&#x5305;</span>\nmvn clean <span class=\"hljs-keyword\">install</span> -Pcloud\n\n<span class=\"hljs-comment\"># &#x5355;&#x4f53;&#x7248;&#x672c;&#x6253;&#x5305;</span>\nmvn clean <span class=\"hljs-keyword\">install</span> -Pboot \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,48"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/docker-deployment/build-result.png\" alt>","children":[],"payload":{"tag":"img","lines":"49,50"}},{"content":"<pre data-lines=\"51,58\"><code data-lines=\"51,58\"><span class=\"hljs-comment\"># &#x6784;&#x5efa;&#x955c;&#x50cf;</span>\ndocker compose <span class=\"hljs-keyword\">build\n</span>\n<span class=\"hljs-comment\"># &#x542f;&#x52a8;&#x5bb9;&#x5668;&#xff08;-d &#x540e;&#x53f0;&#x542f;&#x52a8;&#xff0c;&#x5efa;&#x8bae;&#x7b2c;&#x4e00;&#x6b21;&#x4e0d;&#x8981;&#x52a0;&#xff0c;&#x65b9;&#x4fbf;&#x770b;&#x9519;&#x8bef;&#xff09;</span>\ndocker compose up -d \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,58"}}],"payload":{"tag":"h3","lines":"39,40"}},{"content":"3. &#x7b49;&#x5f85; 3 &#x5206;&#x949f;&#x67e5;&#x770b;&#x540e;&#x7aef;","children":[{"content":"<pre data-lines=\"61,62\"><code>&#x8bbf;&#x95ee; CentOS7 &#x5bbf;&#x4e3b;&#x673a; IP:8848 &#x67e5;&#x770b; Nacos &#x72b6;&#x6001;&#xff0c;&#x786e;&#x5b9a;&#x6240;&#x6709;&#x670d;&#x52a1;&#x5168;&#x90e8;&#x542f;&#x52a8;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"61,62"}}],"payload":{"tag":"h3","lines":"59,60"}},{"content":"4. &#x524d;&#x7aef;&#x6784;&#x5efa;&#x751f;&#x6210;&#x5305;","children":[{"content":"<pre data-lines=\"65,72\"><code data-lines=\"65,72\"><span class=\"hljs-comment\"># &#x5b89;&#x88c5;&#x4f9d;&#x8d56;</span>\n<span class=\"hljs-built_in\">npm</span> install\n\n<span class=\"hljs-comment\"># &#x6267;&#x884c;&#x6253;&#x5305;&#x547d;&#x4ee4;</span>\n<span class=\"hljs-built_in\">npm</span> run build:docker \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"65,72"}},{"content":"<pre data-lines=\"73,80\"><code>**&#x6253;&#x5305;&#x8fc7;&#x7a0b;**\n\nwebpack &#x4f1a;&#x751f;&#x6210;&#x76f8;&#x5e94;&#x7684;&#x76ee;&#x5f55;&#x7ed3;&#x6784; (&#x538b;&#x7f29;&#x548c;&#x6df7;&#x6dc6;&#x7684;&#x4ee3;&#x7801;)\n\n**&#x6253;&#x5305;&#x4ea7;&#x7269;**\n\npig-ui/docker/dist &#x76ee;&#x5f55;&#x4f1a;&#x751f;&#x6210;&#x6253;&#x5305;&#x540e;&#x7684;&#x9875;&#x9762;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"73,80"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/docker-deployment/frontend-dist.png\" alt>","children":[],"payload":{"tag":"img","lines":"81,82"}}],"payload":{"tag":"h3","lines":"63,64"}},{"content":"5. &#x8fd0;&#x884c;&#x524d;&#x7aef;","children":[{"content":"<pre data-lines=\"85,91\"><code data-lines=\"85,91\"><span class=\"hljs-built_in\">cd</span> pig-ui/docker\n\n<span class=\"hljs-comment\"># &#x542f;&#x52a8;&#x8bf7;&#x786e;&#x4fdd;&#x5df2;&#x7ecf;&#x542f;&#x52a8;&#x4e86;&#x540e;&#x7aef;&#x5e94;&#x7528;</span>\ndocker compose up -d \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"85,91"}}],"payload":{"tag":"h3","lines":"83,84"}}],"payload":{"tag":"h2","lines":"20,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

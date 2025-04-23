@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x8def;&#x7531;&#x7ba1;&#x7406;","children":[{"content":"&#x9002;&#x7528;&#x573a;&#x666f;","children":[{"content":"<pre data-lines=\"6,9\"><code>&#x70b9;&#x51fb;&#x9875;&#x9762;&#x4e0a;&#x7684;&#x6309;&#x94ae;&#x53ef;&#x4ee5;&#x6253;&#x5f00;&#x65b0;&#x7684; Tagsview &#x6807;&#x7b7e;&#x9875;&#xff0c;&#x540c;&#x65f6;&#x4e5f;&#x53ef;&#x4ee5;&#x4f20;&#x9012;&#x53c2;&#x6570;&#x3002;\n\n&#x4ee5;&#x4e0b;&#x662f;&#x4e00;&#x4e2a;&#x9002;&#x7528;&#x573a;&#x666f;&#x7684;&#x4f8b;&#x5b50;&#xff0c;&#x5f53;&#x70b9;&#x51fb;&#x201d;&#x65b0;&#x589e;&#x6587;&#x7ae0;&#x201d;&#x6309;&#x94ae;&#x65f6;&#xff0c;&#x4f1a;&#x6253;&#x5f00;&#x4e00;&#x4e2a;&#x65b0;&#x7684;&#x53d1;&#x5e03;&#x6587;&#x7ae0;&#x9875;&#x9762;&#xff0c;&#x65b9;&#x4fbf;&#x8fdb;&#x884c;&#x64cd;&#x4f5c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,9"}},{"content":"<img src=\"https://minio.pigx.top/oss/202308/1692178174.png\" alt>","children":[],"payload":{"tag":"img","lines":"10,11"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x4ee3;&#x7801;&#x5b9e;&#x73b0;&#x65b9;&#x5f0f;","children":[{"content":"&#x2460; &#x83dc;&#x5355;&#x7ba1;&#x7406;&#x4e2d;&#x5b9a;&#x4e49;&#x9690;&#x85cf;&#x83dc;&#x5355;","children":[{"content":"<pre data-lines=\"18,19\"><code>&#x6ce8;&#x610f;&#x4e3a;&#x89d2;&#x8272;&#x5206;&#x914d;&#x8be5;&#x83dc;&#x5355;&#x7684;&#x6743;&#x9650;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,19"}},{"content":"<img src=\"https://minio.pigx.top/oss/202308/1692178433.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h3","lines":"16,17"}},{"content":"&#x2461; &#x70b9;&#x51fb;&#x76ee;&#x6807;&#x6309;&#x94ae;&#x89e6;&#x53d1;&#x8def;&#x7531;&#x8df3;&#x8f6c;","children":[{"content":"<pre data-lines=\"26,34\"><code data-lines=\"26,34\"><span class=\"hljs-keyword\">const</span> <span class=\"hljs-variable constant_\">click</span> = () =&gt; {\n router.<span class=\"hljs-title function_ invoke__\">push</span>({\n <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">&apos;/app/appArticle/form&apos;</span>,\n <span class=\"hljs-attr\">query</span>: { <span class=\"hljs-attr\">tagsViewName</span>: <span class=\"hljs-string\">&apos;&#x52a8;&#x6001;&#x8def;&#x7531;&#x6d4b;&#x8bd5;&apos;</span> },\n });\n}; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"26,34"}}],"payload":{"tag":"h3","lines":"22,23"}},{"content":"&#x2462; &#x5728;&#x8df3;&#x8f6c;&#x7684;&#x9875;&#x9762;&#x83b7;&#x53d6;&#x8bf7;&#x6c42;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"39,46\"><code data-lines=\"39,46\">const route <span class=\"hljs-operator\">=</span> useRoute()<span class=\"hljs-comment\">;</span>\n\nonMounted(() <span class=\"hljs-operator\">=</span>&gt; {\n console.log(route.query.tagsViewName)<span class=\"hljs-comment\">;</span>\n})<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"39,46"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"13,15"}},{"content":"&#x83dc;&#x5355;&#x914d;&#x7f6e;&#x65b9;&#x5f0f;","children":[{"content":"&#x2460; &#x914d;&#x7f6e;&#x83dc;&#x5355;","children":[{"content":"<pre data-lines=\"60,67\"><code data-lines=\"60,67\">AAA  /<span class=\"hljs-keyword\">admin</span>/<span class=\"hljs-keyword\">user</span>/<span class=\"hljs-keyword\">index</span>/:<span class=\"hljs-number\">1</span>\n\nBBB  /<span class=\"hljs-keyword\">admin</span>/<span class=\"hljs-keyword\">user</span>/<span class=\"hljs-keyword\">index</span>/:<span class=\"hljs-number\">2</span>\n\nCCC  /<span class=\"hljs-keyword\">admin</span>/<span class=\"hljs-keyword\">user</span>/<span class=\"hljs-keyword\">index</span>/:<span class=\"hljs-number\">3</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"60,67"}}],"payload":{"tag":"h3","lines":"56,57"}},{"content":"&#x2461; &#x9875;&#x9762;&#x83b7;&#x53d6;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"72,80\"><code data-lines=\"72,80\"><span class=\"hljs-keyword\">const</span> <span class=\"hljs-keyword\">route</span> = useRoute();\n\n<span class=\"hljs-keyword\">on</span>Mounted(() =&gt; {\n <span class=\"hljs-keyword\">const</span> { <span class=\"hljs-number\">0</span>: value } = Object.values(<span class=\"hljs-keyword\">route</span>.params);\n console.<span class=\"hljs-keyword\">log</span>(value);\n}); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"72,80"}},{"content":"<pre data-lines=\"81,82\"><code>&#x6ce8;&#x610f; tagviewName &#x4f1a;&#x83b7;&#x53d6;&#x4ee5;&#x83dc;&#x5355;&#x6392;&#x5e8f;&#x7b2c;&#x4e00;&#x4e2a;&#x7684;&#x540d;&#x79f0;&#x4e3a;&#x51c6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"81,82"}}],"payload":{"tag":"h3","lines":"68,69"}}],"payload":{"tag":"h2","lines":"51,53"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

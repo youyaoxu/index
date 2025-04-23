@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"SSE &#x6d41;&#x5f0f;&#x8f93;&#x51fa;","children":[{"content":"&#x5199;&#x5728;&#x6700;&#x524d;&#xff1a;&#x95ee;&#x9898;&#x54a8;&#x8be2;&#x8bf7;&#x76f4;&#x63a5;&#x70b9;&#x51fb;&#x6b64;&#x5904;&#x63d0;&#x4ea4; ISSUE","children":[{"content":"&#x4f7f;&#x7528;&#x6b65;&#x9aa4;","children":[{"content":"<pre data-lines=\"32,34\"><code>1.  &#x53cc;&#x51fb;&#x8fd0;&#x884c;&#x9879;&#x76ee;&#x6839;&#x76ee;&#x5f55;&#x7684; `sse.html` &#x6587;&#x4ef6;\n2.  &#x5728;&#x9875;&#x9762;&#x9876;&#x90e8;&#x8f93;&#x5165;&#x6846;&#x4e2d;&#x586b;&#x5165;&#x540e;&#x7aef; SSE &#x63a5;&#x53e3;&#x5730;&#x5740;&#xff0c;&#x4f8b;&#x5982;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,34"}},{"content":"<pre data-lines=\"36,39\"><code data-lines=\"36,39\">http://localhost:8080/chat?prompt=&#x4f60;&#x7684;&#x95ee;&#x9898; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,39"}},{"content":"<pre data-lines=\"40,43\"><code>3.  &#x70b9;&#x51fb;&#x201d;&#x8fde;&#x63a5;&#x201d;&#x6309;&#x94ae;&#x5f00;&#x59cb;&#x4e0e;&#x540e;&#x7aef;&#x4ea4;&#x4e92;\n4.  &#x5b9e;&#x65f6;&#x89c2;&#x5bdf;&#x63a8;&#x7406;&#x8fc7;&#x7a0b;&#x548c;&#x7ed3;&#x679c;\n5.  &#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x201d;&#x65ad;&#x5f00;&#x201d;&#x6309;&#x94ae;&#x7ec8;&#x6b62;&#x8fde;&#x63a5;&#xff0c;&#x201c;&#x6e05;&#x7a7a;&#x201d;&#x6309;&#x94ae;&#x6e05;&#x9664;&#x5386;&#x53f2;&#x8bb0;&#x5f55;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"40,43"}}],"payload":{"tag":"h3","lines":"30,31"}},{"content":"&#x914d;&#x7f6e;&#x8de8;&#x57df;","children":[{"content":"<pre data-lines=\"46,49\"><code>&#x5728; Spring Boot &#x540e;&#x7aef;&#x9700;&#x8981;&#x914d;&#x7f6e;&#x8de8;&#x57df;&#x652f;&#x6301;\n\n&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x5728;&#x63a5;&#x53e3;&#x7c7b;&#x4e0a;&#x6dfb;&#x52a0; `@CrossOrigin` &#x6ce8;&#x89e3;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"46,49"}},{"content":"<pre data-lines=\"51,58\"><code class=\"language-java\"><span class=\"hljs-meta\">@CrossOrigin(&quot;*&quot;)</span>\n<span class=\"hljs-meta\">@GetMapping(value = &quot;/chat&quot;, produces = MediaType.TEXT_EVENT_STREAM_VALUE)</span>\n<span class=\"hljs-keyword\">public</span> Flux&lt;String&gt; <span class=\"hljs-title function_\">chat</span><span class=\"hljs-params\">(String prompt)</span> {\n <span class=\"hljs-keyword\">return</span> deepSeekClient.chatFluxCompletion(prompt);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,58"}}],"payload":{"tag":"h3","lines":"44,45"}},{"content":"&#x524d;&#x7aef;&#x96c6;&#x6210;&#x53c2;&#x8003;","children":[{"content":"<pre data-lines=\"61,90\"><code>&#x8be5;&#x8c03;&#x8bd5;&#x9875;&#x9762;&#x63d0;&#x4f9b;&#x4e86;&#x5b8c;&#x6574;&#x7684;&#x524d;&#x7aef;&#x5b9e;&#x73b0;&#x4ee3;&#x7801;&#xff0c;&#x4f60;&#x53ef;&#x4ee5;&#x53c2;&#x8003;&#x4ee5;&#x4e0b;&#x5173;&#x952e;&#x90e8;&#x5206;&#x8fdb;&#x884c;&#x9879;&#x76ee;&#x96c6;&#x6210;&#xff1a;\n\n1.  SSE &#x8fde;&#x63a5;&#x5efa;&#x7acb;&#xff1a;\n\n```js\nconst eventSource = new EventSource(url); \n```\n\n2.  &#x6d88;&#x606f;&#x5904;&#x7406;&#xff1a;\n\n```js\neventSource.onmessage = (event) =&gt; {\n const data = JSON.parse(event.data);\n // &#x5904;&#x7406;&#x6570;&#x636e;\n}; \n```\n\n3.  &#x9519;&#x8bef;&#x5904;&#x7406;&#xff1a;\n\n```js\n\n```\neventSource.onerror = (error) =&gt; {\n // &#x5904;&#x7406;&#x9519;&#x8bef;\n}; \n```\n\n\n&#x5b8c;&#x6574;&#x7684;&#x5b9e;&#x73b0;&#x4ee3;&#x7801;&#x53ef;&#x4ee5;&#x5728;&#x9879;&#x76ee;&#x6839;&#x76ee;&#x5f55;&#x7684; `sse.html` &#x6587;&#x4ef6;&#x4e2d;&#x627e;&#x5230;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"61,90"}}],"payload":{"tag":"h3","lines":"59,60"}}],"payload":{"tag":"h2","lines":"11,13"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

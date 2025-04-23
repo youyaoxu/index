@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"&#x706b;&#x5c71;&#x5f15;&#x64ce; API &#x5bf9;&#x63a5;","children":[{"content":"&#x53c2;&#x6570;&#x83b7;&#x53d6;","children":[{"content":"1. &#x83b7;&#x53d6; API key","children":[{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1738984582.png\" alt>","children":[],"payload":{"tag":"img","lines":"8,9"}}],"payload":{"tag":"h3","lines":"6,7"}},{"content":"2. &#x83b7;&#x53d6;&#x63a5;&#x5165;&#x6a21;&#x578b;&#x540d;&#x79f0;","children":[{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1738984901.png\" alt>","children":[],"payload":{"tag":"img","lines":"12,13"}},{"content":"<pre data-lines=\"14,15\"><code>&#x597d;&#x522b;&#x626d;&#xff0c;&#x8fd9;&#x4e00;&#x6bb5;&#x624d;&#x662f;&#x6a21;&#x578b;&#x540d;&#x79f0;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,15"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202502/1738984964.png\" alt>","children":[],"payload":{"tag":"img","lines":"16,17"}}],"payload":{"tag":"h3","lines":"10,11"}}],"payload":{"tag":"h2","lines":"3,5"}}],"payload":{"tag":"h1","lines":"0,2"}},{"content":"deepseek4j &#x914d;&#x7f6e;","children":[{"content":"1. &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x8bbe;&#x7f6e;","children":[{"content":"<pre data-lines=\"27,30\"><code>&#x5728; `application.properties` &#x6216; `application.yml` &#x4e2d;&#x6dfb;&#x52a0;&#x4ee5;&#x4e0b;&#x914d;&#x7f6e;&#xff1a;\n\n&#x6ce8;&#x610f;&#x6a21;&#x578b;&#x540d;&#x79f0;&#x548c;&#x4e0a;&#x8fb9;&#x56fe;&#x7247;&#x521b;&#x5efa;&#x7684;&#x63a5;&#x5165;&#x70b9;&#x4e00;&#x81f4;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,30"}},{"content":"<pre data-lines=\"33,38\"><code data-lines=\"33,38\"><span class=\"hljs-attr\">deepseek.base-url</span>=https://ark.cn-beijing.volces.com/api/v3\n<span class=\"hljs-attr\">deepseek.model</span>=&#x548c;&#x4e0a;&#x56fe;&#x63a5;&#x5165;&#x70b9;&#x4e00;&#x81f4;\n<span class=\"hljs-attr\">deepseek.api-key</span>=your-api-key \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,38"}}],"payload":{"tag":"h3","lines":"25,26"}},{"content":"2. &#x4ee3;&#x7801;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"43,52\"><code data-lines=\"43,52\"><span class=\"hljs-meta\">@Autowired</span>\n<span class=\"hljs-keyword\">private</span> <span class=\"hljs-title class_\">DeepSeekClient</span> deepSeekClient;\n\n<span class=\"hljs-meta\">@GetMapping</span>(value = <span class=\"hljs-string\">&quot;/chat&quot;</span>, produces = <span class=\"hljs-title class_\">MediaType</span>.<span class=\"hljs-property\">TEXT_EVENT_STREAM_VALUE</span>)\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">Flux</span>&lt;<span class=\"hljs-title class_\">ChatCompletionResponse</span>&gt; <span class=\"hljs-title function_\">chat</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">String</span> prompt</span>) {\n <span class=\"hljs-keyword\">return</span> deepSeekClient.<span class=\"hljs-title function_\">chatFluxCompletion</span>(prompt);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,52"}}],"payload":{"tag":"h3","lines":"39,40"}}],"payload":{"tag":"h1","lines":"22,24"}}]},{})</script>
+</body>
+</html>

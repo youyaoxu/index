@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; SkyWalking &#x94fe;&#x8def;&#x76d1;&#x63a7;","children":[{"content":"&#x4e0b;&#x8f7d; SkyWalking","children":[{"content":"<pre data-lines=\"7,8\"><code>SkyWalking &#x4e2a;&#x4eba;&#x5efa;&#x8bae;&#x76f4;&#x63a5;&#x4e0b;&#x8f7d;&#x5b98;&#x65b9;&#x7f16;&#x8bd1;&#x597d;&#x7684;&#xff0c;[&#x4e0b;&#x8f7d;&#x5730;&#x5740;](http://skywalking.apache.org/downloads/)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x542f;&#x52a8; SkyWalking","children":[{"content":"<pre data-lines=\"16,19\"><code data-lines=\"16,19\"><span class=\"hljs-built_in\">sudo</span> bin/startup.sh \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,19"}},{"content":"<pre data-lines=\"20,21\"><code>&#x8bbf;&#x95ee;&#x5730;&#x5740;&#xff1a;[http://ip:8080](http://ip:8080)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,21"}}],"payload":{"tag":"h2","lines":"11,13"}},{"content":"&#x5173;&#x95ed; SkyWalking","children":[{"content":"<pre data-lines=\"28,31\"><code data-lines=\"28,31\">ps -ef | grep sky | awk <span class=\"hljs-string\">&apos;{print &#x24;2}&apos;</span> | <span class=\"hljs-built_in\">sudo</span> xargs <span class=\"hljs-built_in\">kill</span> -9 \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,31"}}],"payload":{"tag":"h2","lines":"23,25"}},{"content":"Java Agent","children":[{"content":"java -jar &#x542f;&#x52a8;&#x589e;&#x52a0;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"45,52\"><code data-lines=\"45,52\"><span class=\"hljs-attribute\">nohup</span> java -Xms512m -Xmx3500m -javaagent:skywalking-agent.jar <span class=\"hljs-punctuation\">\\\n</span> -Dskywalking.agent.service_name=pig-upms <span class=\"hljs-punctuation\">\\\n</span> -Dskywalking.collector.backend_service=ip:<span class=\"hljs-number\">11800</span> <span class=\"hljs-punctuation\">\\\n</span> -jar pig-upms-biz.jar <span class=\"hljs-punctuation\">\\\n</span> -Djava.security.egd=file:/dev/./urandom <span class=\"hljs-number\">2</span>&gt;&amp;<span class=\"hljs-number\">1</span> &amp; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,52"}}],"payload":{"tag":"h3","lines":"41,42"}},{"content":"&#x672c;&#x5730; IDEA &#x6dfb;&#x52a0;&#x53c2;&#x6570;&#x5f62;&#x5f0f;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599470275127-f41885b1-eb26-4512-9a20-528630234da1.png\" alt>","children":[],"payload":{"tag":"img","lines":"55,56"}}],"payload":{"tag":"h3","lines":"53,54"}}],"payload":{"tag":"h2","lines":"36,38"}},{"content":"&#x95ee;&#x9898; Redis/ Spring Cloud Gateway &#x76d1;&#x63a7;&#x4e0d;&#x5230;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599470275202-57509b4d-d1ff-47bf-9c3a-41648ab88ff2.png\" alt>","children":[],"payload":{"tag":"img","lines":"62,63"}}],"payload":{"tag":"h2","lines":"59,61"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

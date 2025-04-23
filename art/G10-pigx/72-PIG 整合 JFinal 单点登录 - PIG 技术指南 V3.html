@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"&#x73af;&#x5883;&#x8bf4;&#x660e;","children":[{"content":"pig 2.10","children":[],"payload":{"tag":"li","lines":"2,3"}},{"content":"jpress 3.0","children":[],"payload":{"tag":"li","lines":"3,5"}}],"payload":{"tag":"h2","lines":"0,1"}},{"content":"&#x4ee3;&#x7801;&#x65b0;&#x589e;","children":[{"content":"_AdminController &#x65b0;&#x589e; SSO &#x7aef;&#x70b9;","children":[{"content":"<pre data-lines=\"9,10\"><code>&#x6388;&#x6743;&#x7801;&#x6a21;&#x5f0f;&#x4e0b;&#x56de;&#x8c03;&#x5730;&#x5740;&#x4e0d;&#x80fd;&#x4f7f;&#x7528; `localhost`&#xff0c;&#x53ef;&#x4ee5;&#x4f7f;&#x7528; `127.0.0.1`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,10"}},{"content":"<pre data-lines=\"11,47\"><code class=\"language-java\"><span class=\"hljs-meta\">@Clear(PermissionInterceptor.class)</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title function_\">sso</span><span class=\"hljs-params\">(String code)</span> {\n    <span class=\"hljs-keyword\">if</span> (StrUtil.isBlank(code)) {\n        <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">url</span> <span class=\"hljs-operator\">=</span> String.format(<span class=\"hljs-string\">&quot;%s?response_type=code&amp;scope=%s&amp;client_id=%s&amp;state=%s&amp;redirect_uri=%s&quot;</span>,\n                <span class=\"hljs-string\">&quot;http://192.168.0.33:3000/oauth/authorize&quot;</span>,\n                <span class=\"hljs-string\">&quot;server&quot;</span>,\n                <span class=\"hljs-string\">&quot;jfinal&quot;</span>,\n                <span class=\"hljs-string\">&quot;jfinal&quot;</span>,\n                URLEncoder.encode(<span class=\"hljs-string\">&quot;http://127.0.0.1:8080/admin/sso&quot;</span>));\n        redirect(url);\n        <span class=\"hljs-keyword\">return</span>;\n    }\n\n    <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">template</span> <span class=\"hljs-operator\">=</span> <span class=\"hljs-string\">&quot;http://192.168.0.33:3000/oauth/token?grant_type=authorization_code&amp;scope=%s&amp;code=%s&amp;redirect_uri=%s&quot;</span>;\n    <span class=\"hljs-keyword\">final</span> <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">url</span> <span class=\"hljs-operator\">=</span> String.format(template, <span class=\"hljs-string\">&quot;server&quot;</span>, code, URLEncoder.encode(<span class=\"hljs-string\">&quot;http://127.0.0.1:8080/admin/sso&quot;</span>));\n\n    <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">body</span> <span class=\"hljs-operator\">=</span> HttpRequest.get(url)\n            .basicAuth(<span class=\"hljs-string\">&quot;jfinal&quot;</span>, <span class=\"hljs-string\">&quot;jfinal&quot;</span>)\n            .execute()\n            .body();\n\n    <span class=\"hljs-type\">JSONObject</span> <span class=\"hljs-variable\">parse</span> <span class=\"hljs-operator\">=</span> JSONUtil.parseObj(body);\n    <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">username</span> <span class=\"hljs-operator\">=</span> parse.getStr(<span class=\"hljs-string\">&quot;username&quot;</span>);\n    <span class=\"hljs-comment\">//&#x767b;&#x5f55;&#x5e76;&#x521b;&#x5efa; token</span>\n    <span class=\"hljs-type\">User</span> <span class=\"hljs-variable\">user</span> <span class=\"hljs-operator\">=</span> userService.findFistByUsername(username);\n\n    <span class=\"hljs-type\">Ret</span> <span class=\"hljs-variable\">ret</span> <span class=\"hljs-operator\">=</span> Ret.ok().set(<span class=\"hljs-string\">&quot;user_id&quot;</span>, user.getId());\n\n    <span class=\"hljs-keyword\">if</span> (ret.isOk()) {\n        SessionUtils.record(user.getId());\n        CookieUtil.put(<span class=\"hljs-built_in\">this</span>, JPressConsts.COOKIE_UID, user.getId());\n    }\n    redirect(<span class=\"hljs-string\">&quot;/admin&quot;</span>);\n}\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,47"}}],"payload":{"tag":"h3","lines":"7,8"}}],"payload":{"tag":"h2","lines":"5,6"}},{"content":"AdminInterceptor &#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"51,52\"><code>&#x9700;&#x8981;&#x66b4;&#x9732; SSO &#x7aef;&#x70b9;&#xff0c;&#x914d;&#x7f6e;&#x793a;&#x4f8b;&#x5982;&#x4e0b;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,52"}}],"payload":{"tag":"h2","lines":"49,50"}},{"content":"&#x524d;&#x7aef;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"55,56\"><code>&#x8bbf;&#x95ee;&#x5730;&#x5740;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,56"}},{"content":"<pre data-lines=\"57,60\"><code class=\"language-bash\">http://127.0.0.1:8080/admin/sso\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"57,60"}}],"payload":{"tag":"h2","lines":"53,54"}},{"content":"&#x9000;&#x51fa;&#x529f;&#x80fd;","children":[],"payload":{"tag":"h2","lines":"61,62"}}]},{})</script>
+</body>
+</html>

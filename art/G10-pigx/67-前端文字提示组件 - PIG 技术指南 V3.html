@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x6587;&#x5b57;&#x63d0;&#x793a;&#x7ec4;&#x4ef6;","children":[{"content":"&#x63d0;&#x793a;&#x7ec4;&#x4ef6;","children":[{"content":"<pre data-lines=\"5,10\"><code data-lines=\"5,10\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-form-item</span> <span class=\"hljs-attr\">label</span>=<span class=\"hljs-string\">&quot;&#x521d;&#x59cb;&#x6d4f;&#x89c8;&#x91cf;&quot;</span> <span class=\"hljs-attr\">prop</span>=<span class=\"hljs-string\">&quot;visit&quot;</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">label</span>&gt;</span>&#x6d4f;&#x89c8;&#x91cf;<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">tip</span> <span class=\"hljs-attr\">content</span>=<span class=\"hljs-string\">&quot;&#x521d;&#x59cb;&#x503c;&quot;</span> /&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">el-form-item</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,10"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x5c5e;&#x6027;&#x8bf4;&#x660e;","children":[{"content":"<table data-lines=\"16,20\">\n<thead data-lines=\"16,17\">\n<tr data-lines=\"16,17\">\n<th>&#x5c5e;&#x6027;&#x540d;&#x79f0;</th>\n<th>&#x63cf;&#x8ff0;</th>\n<th>&#x7c7b;&#x578b;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"18,20\">\n<tr data-lines=\"18,19\">\n<td>content</td>\n<td>&#x5185;&#x5bb9;</td>\n<td>String</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"19,20\">\n<td>placement</td>\n<td>&#x653e;&#x7f6e;&#x4f4d;&#x7f6e;</td>\n<td>String</td>\n<td>&#x2019;top-start&#x2019;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"16,20"}}],"payload":{"tag":"h2","lines":"13,15"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

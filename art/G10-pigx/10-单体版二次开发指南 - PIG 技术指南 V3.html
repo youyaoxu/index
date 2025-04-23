@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"10-&#x5355;&#x4f53;&#x7248;&#x4e8c;&#x6b21;&#x5f00;&#x53d1;&#x6307;&#x5357; - PIG &#x6280;&#x672f;&#x6307;&#x5357; V3","children":[{"content":"1. &#x521b;&#x5efa;&#x6d4b;&#x8bd5;&#x8868;","children":[{"content":"<pre data-lines=\"5,22\"><code data-lines=\"5,22\"><span class=\"hljs-comment\">-- &#x521b;&#x5efa;&#x6d4b;&#x8bd5;&#x5e93;</span>\nUSE pig;\n\n<span class=\"hljs-keyword\">SET NAMES</span> utf8mb4;\n<span class=\"hljs-keyword\">SET</span> FOREIGN_KEY_CHECKS = <span class=\"hljs-number\">0</span>;\n\n<span class=\"hljs-comment\">-- &#x521b;&#x5efa;&#x6d4b;&#x8bd5;&#x8868;</span>\n<span class=\"hljs-keyword\">DROP</span> <span class=\"hljs-keyword\">TABLE</span> <span class=\"hljs-keyword\">IF</span> <span class=\"hljs-keyword\">EXISTS</span> `demo`;\n<span class=\"hljs-keyword\">CREATE</span> <span class=\"hljs-keyword\">TABLE</span> `demo` (\n `id` <span class=\"hljs-type\">bigint</span> <span class=\"hljs-keyword\">NOT</span> <span class=\"hljs-keyword\">NULL</span> <span class=\"hljs-keyword\">COMMENT</span> <span class=\"hljs-string\">&apos;&#x7f16;&#x53f7;&apos;</span>,\n `username` <span class=\"hljs-type\">varchar</span>(<span class=\"hljs-number\">255</span>) <span class=\"hljs-type\">CHARACTER</span> <span class=\"hljs-keyword\">SET</span> utf8mb4 <span class=\"hljs-keyword\">COLLATE</span> utf8mb4_bin <span class=\"hljs-keyword\">DEFAULT</span> <span class=\"hljs-keyword\">NULL</span> <span class=\"hljs-keyword\">COMMENT</span> <span class=\"hljs-string\">&apos;&#x7528;&#x6237;&#x540d;&apos;</span>,\n `<span class=\"hljs-keyword\">password</span>` <span class=\"hljs-type\">varchar</span>(<span class=\"hljs-number\">255</span>) <span class=\"hljs-type\">CHARACTER</span> <span class=\"hljs-keyword\">SET</span> utf8mb4 <span class=\"hljs-keyword\">COLLATE</span> utf8mb4_bin <span class=\"hljs-keyword\">DEFAULT</span> <span class=\"hljs-keyword\">NULL</span> <span class=\"hljs-keyword\">COMMENT</span> <span class=\"hljs-string\">&apos;&#x5bc6;&#x7801;&apos;</span>,\n `del_flag` <span class=\"hljs-type\">char</span>(<span class=\"hljs-number\">1</span>) <span class=\"hljs-type\">CHARACTER</span> <span class=\"hljs-keyword\">SET</span> utf8mb4 <span class=\"hljs-keyword\">COLLATE</span> utf8mb4_bin <span class=\"hljs-keyword\">DEFAULT</span> <span class=\"hljs-string\">&apos;0&apos;</span> <span class=\"hljs-keyword\">COMMENT</span> <span class=\"hljs-string\">&apos;&#x5220;&#x9664;&#x6807;&#x8bb0;&apos;</span>,\n <span class=\"hljs-keyword\">PRIMARY KEY</span> (`id`)\n) ENGINE=InnoDB <span class=\"hljs-keyword\">DEFAULT</span> CHARSET=utf8mb4 <span class=\"hljs-keyword\">COLLATE</span>=utf8mb4_bin ROW_FORMAT=DYNAMIC <span class=\"hljs-keyword\">COMMENT</span>=<span class=\"hljs-string\">&apos;demo &#x8868;&apos;</span>; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,22"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"2. &#x4ee3;&#x7801;&#x751f;&#x6210;","children":[{"content":"2.1 &#x6570;&#x636e;&#x6e90;&#x65b0;&#x589e;","children":[{"content":"<pre data-lines=\"28,31\"><code data-lines=\"28,31\">jdbc:mysql://pig-mysql:<span class=\"hljs-number\">3306</span>/pig?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=<span class=\"hljs-literal\">false</span>&amp;useJDBCCompliantTimezoneShift=<span class=\"hljs-literal\">true</span>&amp;useLegacyDatetimeCode=<span class=\"hljs-literal\">false</span>&amp;serverTimezone=GMT%<span class=\"hljs-number\">2B8</span>&amp;allowMultiQueries=<span class=\"hljs-literal\">true</span>&amp;allowPublicKeyRetrieval=<span class=\"hljs-literal\">true</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,31"}},{"content":"<img src=\"https://minio.pigx.top/oss/202307/1688311202.png\" alt>","children":[],"payload":{"tag":"img","lines":"32,33"}}],"payload":{"tag":"h3","lines":"26,27"}},{"content":"2.2 &#x9009;&#x62e9;&#x76ee;&#x6807;&#x8868;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1724736747002-9fd05a31-65a8-4185-9f6c-4245d0adec31.png\" alt>","children":[],"payload":{"tag":"img","lines":"36,37"}}],"payload":{"tag":"h3","lines":"34,35"}},{"content":"2.3 &#x751f;&#x6210;&#x4ee3;&#x7801;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"40,43\"><code>1.  &#x5bf9;&#x5e94; Maven module &#x540d;&#x79f0; **admin**&#xff08;&#x56fa;&#x5b9a;&#x503c;&#xff09;\n2.  &#x5bf9;&#x5e94;&#x65b0;&#x589e;&#x670d;&#x52a1;&#x7aef; upms-biz &#x6a21;&#x5757;&#x7684;&#x8def;&#x5f84;&#xff08;&#x4ee3;&#x7801;&#x653e;&#x5728; upms-biz &#x76ee;&#x5f55;&#xff09;\n3.  &#x5bf9;&#x5e94;&#x524d;&#x7aef; UI &#x7684;&#x8def;&#x5f84;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"40,43"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1724736679009-e218956c-ef8e-40ae-92eb-22643515ce6e.png\" alt>","children":[],"payload":{"tag":"img","lines":"44,45"}}],"payload":{"tag":"h3","lines":"38,39"}},{"content":"2.4 &#x6267;&#x884c; SQL &#x811a;&#x672c;","children":[{"content":"<pre data-lines=\"48,49\"><code>&#x6267;&#x884c;&#x4ee3;&#x7801;&#x751f;&#x6210;&#x5305;&#xff08;2.2 &#x4e2d;&#x7684; demo\\_menu.sql&#xff09;&#x4e2d;&#x7684; SQL &#x811a;&#x672c;&#xff08;&#x5728; upms-biz/menu &#x76ee;&#x5f55;&#xff09;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"48,49"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1724736815336-8dce895a-0b62-43e2-9d3c-795c261ee132.png\" alt>","children":[],"payload":{"tag":"img","lines":"50,51"}}],"payload":{"tag":"h3","lines":"46,47"}},{"content":"2.5 &#x89d2;&#x8272;&#x5206;&#x914d;&#x6743;&#x9650;","children":[{"content":"<pre data-lines=\"54,55\"><code>&#x6700;&#x91cd;&#x8981;&#x7684;&#x4e00;&#x6b65;&#xff1a;&#x7ed9;&#x89d2;&#x8272;&#x5206;&#x914d;&#x6743;&#x9650;&#xff08;&#x89d2;&#x8272;&#x7ba1;&#x7406; &gt; &#x6743;&#x9650;&#xff09;&#x3002;&#x5728;&#x91cd;&#x65b0;&#x542f;&#x52a8;&#x524d;&#x7aef;&#x5e76;&#x91cd;&#x65b0;&#x767b;&#x5f55;&#x540e;&#xff0c;&#x8bf7;&#x5f3a;&#x5236;&#x5237;&#x65b0;&#x6d4f;&#x89c8;&#x5668;&#xff0c;&#x67e5;&#x770b; demo &#x529f;&#x80fd;&#x662f;&#x5426;&#x751f;&#x6548;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"54,55"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1704604236898-e653151a-94fb-4194-a63c-cfc7af5a6227.png\" alt>","children":[],"payload":{"tag":"img","lines":"56,57"}}],"payload":{"tag":"h3","lines":"52,53"}}],"payload":{"tag":"h2","lines":"23,25"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

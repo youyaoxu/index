@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG OSS &#x6587;&#x4ef6;&#x4e0a;&#x4f20;","children":[{"content":"","children":[{"content":"&#x4e0b;&#x8f7d;&#x90e8;&#x7f72; minio","children":[{"content":"<pre data-lines=\"19,26\"><code data-lines=\"19,26\"><span class=\"hljs-comment\"># &#x6ce8;&#x610f;&#x7248;&#x672c;&#x53f7;&#xff0c;&#x6b64;&#x7248;&#x672c;&#x4e3a; Apache 2.0 &#x534f;&#x8bae;&#x53ef;&#x4ee5;&#x5546;&#x7528;</span>\n<span class=\"hljs-attribute\">docker</span> run -p <span class=\"hljs-number\">9000</span>:<span class=\"hljs-number\">9000</span> --name minio1 <span class=\"hljs-punctuation\">\\\n</span> -e <span class=\"hljs-string\">&quot;MINIO_ROOT_USER=lengleng&quot;</span> <span class=\"hljs-punctuation\">\\\n</span> -e <span class=\"hljs-string\">&quot;MINIO_ROOT_PASSWORD=lengleng&quot;</span> <span class=\"hljs-punctuation\">\\\n</span> minio/minio:RELEASE.<span class=\"hljs-number\">2021</span>-<span class=\"hljs-number\">04</span>-<span class=\"hljs-number\">22</span>T15-<span class=\"hljs-number\">44</span>-<span class=\"hljs-number\">28</span>Z server /data \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,26"}}],"payload":{"tag":"h4","lines":"15,16"}},{"content":"&#x8bbf;&#x95ee;&#x9a8c;&#x8bc1;","children":[{"content":"<pre data-lines=\"29,30\"><code>&#x5b89;&#x88c5;&#x540e;&#x4f7f;&#x7528;&#x6d4f;&#x89c8;&#x5668;&#x8bbf;&#x95ee; [http://ip:9000&#xff0c;&#x5982;&#x679c;&#x53ef;&#x4ee5;&#x8bbf;&#x95ee;&#xff0c;&#x5219;&#x8868;&#x793a;](http://ip:9000%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%EF%BC%8C%E5%88%99%E8%A1%A8%E7%A4%BA) minio &#x5df2;&#x7ecf;&#x5b89;&#x88c5;&#x6210;&#x529f;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,30"}},{"content":"<img src=\"https://minio.pigx.vip/oss/1634624805.png\" alt>","children":[],"payload":{"tag":"img","lines":"31,32"}},{"content":"<pre data-lines=\"33,34\"><code>&#x8d26;&#x53f7;/&#x5bc6;&#x7801;&#x4e3a; minioadmin minioadmin\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,34"}}],"payload":{"tag":"h4","lines":"27,28"}},{"content":"&#x521b;&#x5efa; Bucket&#xff08;&#x5b58;&#x50a8;&#x7a7a;&#x95f4;&#xff09;","children":[{"content":"<img src=\"https://minio.pigx.vip/oss/1631164105.png\" alt>","children":[],"payload":{"tag":"img","lines":"37,38"}}],"payload":{"tag":"h4","lines":"35,36"}}],"payload":{"tag":"h3","lines":"5,6"}},{"content":"&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x914d;&#x7f6e; minio &#x4fe1;&#x606f;","children":[{"content":"<pre data-lines=\"41,42\"><code>nacos/pig-upms-dev.yml\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,42"}},{"content":"<pre data-lines=\"45,54\"><code data-lines=\"45,54\"><span class=\"hljs-params\">file:</span>\n <span class=\"hljs-params\">bucketName:</span> s3demo <span class=\"hljs-comment\"># &#x4e0a;&#x6587;&#x521b;&#x5efa;&#x7684;&#x6876;&#x540d;&#x79f0;</span>\n <span class=\"hljs-params\">oss:</span>\n <span class=\"hljs-params\">enable:</span> <span class=\"hljs-literal\">true</span>\n <span class=\"hljs-params\">endpoint:</span> http:<span class=\"hljs-operator\">//</span>IP:<span class=\"hljs-number\">9000</span>\n <span class=\"hljs-params\">access-key:</span> xxx <span class=\"hljs-comment\"># &#x4e0a;&#x6587;&#x521b;&#x5efa;&#x7684; AK</span>\n <span class=\"hljs-params\">secret-key:</span> xxx <span class=\"hljs-comment\"># &#x4e0a;&#x6587;&#x521b;&#x5efa;&#x7684; SK </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,54"}}],"payload":{"tag":"h3","lines":"39,40"}},{"content":"&#x5176;&#x4ed6;&#x6a21;&#x5757;&#x4e0a;&#x4f20;&#x4ee3;&#x7801;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"59,66\"><code data-lines=\"59,66\"><span class=\"hljs-comment\">&lt;!--&#x6587;&#x4ef6;&#x7cfb;&#x7edf;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.pig4cloud<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>pig-common-oss<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"59,66"}},{"content":"<pre data-lines=\"69,76\"><code data-lines=\"69,76\"><span class=\"hljs-comment\">// &#x4f4e;&#x7248;&#x672c;&#x6ce8;&#x5165; OssTemplate</span>\n<span class=\"hljs-keyword\">@Autowired</span>\n<span class=\"hljs-keyword\">private</span> FileTemplate <span class=\"hljs-keyword\">template</span>;\n\n<span class=\"hljs-keyword\">template</span>.putObject(<span class=\"hljs-string\">&quot;s3demo&quot;</span>, fileName, file.getInputStream()); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"69,76"}}],"payload":{"tag":"h3","lines":"55,56"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

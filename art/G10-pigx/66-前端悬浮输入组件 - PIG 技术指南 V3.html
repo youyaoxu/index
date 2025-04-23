@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x60ac;&#x6d6e;&#x8f93;&#x5165;&#x7ec4;&#x4ef6;","children":[{"content":"&#x7ec4;&#x4ef6;&#x5f15;&#x5165;","children":[{"content":"<pre data-lines=\"11,16\"><code data-lines=\"11,16\">const PopoverInput = defineAsyncComponent(\n <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&quot;/@/components/PopoverInput/index.vue&quot;</span>)\n); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,16"}}],"payload":{"tag":"h2","lines":"6,8"}},{"content":"&#x57fa;&#x672c;&#x7528;&#x6cd5;","children":[{"content":"<pre data-lines=\"24,31\"><code data-lines=\"24,31\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">popover-input</span> @<span class=\"hljs-attr\">confirm</span>=<span class=\"hljs-string\">&quot;onConfirm&quot;</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">default</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-button</span>&gt;</span>&#x70b9;&#x51fb;&#x8f93;&#x5165;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">el-button</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">popover-input</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"24,31"}}],"payload":{"tag":"h2","lines":"19,21"}},{"content":"&#x5c5e;&#x6027;&#x8bf4;&#x660e;","children":[{"content":"<table data-lines=\"36,48\">\n<thead data-lines=\"36,37\">\n<tr data-lines=\"36,37\">\n<th>&#x5c5e;&#x6027;</th>\n<th>&#x8bf4;&#x660e;</th>\n<th>&#x7c7b;&#x578b;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"38,48\">\n<tr data-lines=\"38,39\">\n<td>value</td>\n<td>&#x503c;</td>\n<td>String</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"39,40\">\n<td>type</td>\n<td>&#x7c7b;&#x578b;</td>\n<td>String</td>\n<td>&#x2019;text&#x2019;</td>\n</tr>\n<tr data-lines=\"40,41\">\n<td>width</td>\n<td>&#x5bbd;&#x5ea6;</td>\n<td>Number</td>\n<td>String</td>\n</tr>\n<tr data-lines=\"41,42\">\n<td>placeholder</td>\n<td>&#x63d0;&#x793a;&#x6587;&#x5b57;</td>\n<td>String</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"42,43\">\n<td>disabled</td>\n<td>&#x662f;&#x5426;&#x7981;&#x7528;</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr data-lines=\"43,44\">\n<td>options</td>\n<td>&#x9009;&#x9879;&#x5217;&#x8868;</td>\n<td>Array<any></any></td>\n<td>[]</td>\n</tr>\n<tr data-lines=\"44,45\">\n<td>size</td>\n<td>&#x5927;&#x5c0f;</td>\n<td>&#x2019;default&#x2019;</td>\n<td>&#x2018;small&#x2019;</td>\n</tr>\n<tr data-lines=\"45,46\">\n<td>limit</td>\n<td>&#x5b57;&#x7b26;&#x9650;&#x5236;</td>\n<td>Number</td>\n<td>200</td>\n</tr>\n<tr data-lines=\"46,47\">\n<td>showLimit</td>\n<td>&#x662f;&#x5426;&#x663e;&#x793a;&#x5b57;&#x7b26;&#x9650;&#x5236;</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr data-lines=\"47,48\">\n<td>teleported</td>\n<td>&#x662f;&#x5426;&#x4f7f;&#x7528;&#x4f20;&#x9001;&#x95e8;&#xff08;teleport&#xff09;&#x8fdb;&#x884c;&#x6e32;&#x67d3;</td>\n<td>Boolean</td>\n<td>true</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"36,48"}}],"payload":{"tag":"h2","lines":"33,35"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

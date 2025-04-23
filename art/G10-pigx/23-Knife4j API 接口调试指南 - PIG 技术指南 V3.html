@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Knife4j API &#x63a5;&#x53e3;&#x8c03;&#x8bd5;&#x6307;&#x5357;","children":[{"content":"&#x7acb;&#x5373;&#x4f7f;&#x7528;","children":[{"content":"1. &#x8bbf;&#x95ee;&#x63a5;&#x53e3;&#x6587;&#x6863;&#x9875;&#x9762;","children":[{"content":"<pre data-lines=\"7,10\"><code data-lines=\"7,10\"><span class=\"hljs-symbol\">http:</span><span class=\"hljs-comment\">//127.0.0.1:9999/doc.html </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,10"}}],"payload":{"tag":"h4","lines":"5,6"}},{"content":"2. &#x586b;&#x5199;&#x8ba4;&#x8bc1;&#x53c2;&#x6570;","children":[{"content":"<pre data-lines=\"13,19\"><code data-lines=\"13,19\"><span class=\"hljs-symbol\">username:</span> admin\n<span class=\"hljs-symbol\">password:</span> YehdBPev\n<span class=\"hljs-symbol\">client_id:</span> test\n<span class=\"hljs-symbol\">client_secret:</span> test \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,19"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1692113318275-5c885c24-be28-4fdc-bc12-c7a0a4487872.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h4","lines":"11,12"}}],"payload":{"tag":"h2","lines":"2,4"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

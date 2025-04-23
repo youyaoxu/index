@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"RAG &#x8fdb;&#x9636;","children":[{"content":"&#x4ec0;&#x4e48;&#x662f;office2md","children":[{"content":"<pre data-lines=\"7,8\"><code>&#x8fd9;&#x662f;&#x4e00;&#x9879;&#x57fa;&#x4e8e; Markdown &#x683c;&#x5f0f;&#x7684;&#x591a;&#x529f;&#x80fd;&#x8f6c;&#x6362;&#x670d;&#x52a1;&#xff0c;&#x652f;&#x6301;&#x5c06; PowerPoint&#x3001;Word&#x3001;Excel&#x3001;&#x56fe;&#x50cf;&#x3001;&#x97f3;&#x9891;&#x548c; HTML &#x7b49;&#x6587;&#x4ef6;&#x8f6c;&#x5316;&#x4e3a; Markdown &#x683c;&#x5f0f;&#x3002;&#x540c;&#x65f6;&#xff0c;&#x670d;&#x52a1;&#x6574;&#x5408;&#x4e86; Gitee AI &#x548c;&#x667a;&#x8c31; AI &#x63d0;&#x4f9b;&#x7684; GLM-4V &#x6a21;&#x578b;&#xff0c;&#x4ee5;&#x53ca;&#x963f;&#x91cc;&#x4e91;&#x767e;&#x70bc;&#x5e73;&#x53f0;&#x7684; Qwen-VL-Max &#x6a21;&#x578b;&#xff0c;&#x7528;&#x4e8e;&#x56fe;&#x7247;&#x548c; PDF &#x6587;&#x4ef6;&#x7684;&#x9ad8;&#x6548;&#x6587;&#x672c;&#x8bc6;&#x522b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"Docker &#x4f7f;&#x7528;&#x8bf4;&#x660e;","children":[{"content":"1. &#x5feb;&#x901f;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"28,32\"><code data-lines=\"28,32\"><span class=\"hljs-comment\"># &#x5185;&#x7f6e;&#x4e86;GLM-4V-FLASH&#x89c6;&#x89c9;&#x6a21;&#x578b;&#xff0c;&#x4ec5;&#x4f9b;&#x6d4b;&#x8bd5;&#x4f7f;&#x7528;</span>\n<span class=\"hljs-attribute\">docker</span> run -p <span class=\"hljs-number\">8000</span>:<span class=\"hljs-number\">8000</span> registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/markitdown \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,32"}}],"payload":{"tag":"h3","lines":"24,25"}},{"content":"2. &#x4f7f;&#x7528; Gitee AI","children":[{"content":"<pre data-lines=\"37,45\"><code data-lines=\"37,45\"><span class=\"hljs-attribute\">docker</span> run -d <span class=\"hljs-punctuation\">\\\n</span> -p <span class=\"hljs-number\">8000</span>:<span class=\"hljs-number\">8000</span> <span class=\"hljs-punctuation\">\\\n</span> -e API_KEY=gitee_ai_key <span class=\"hljs-punctuation\">\\\n</span> -e MODEL=InternVL2_5-<span class=\"hljs-number\">26</span>B <span class=\"hljs-punctuation\">\\\n</span> -e BASE_URL=https://ai.gitee.com/v1 <span class=\"hljs-punctuation\">\\\n</span> registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/markitdown \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,45"}}],"payload":{"tag":"h3","lines":"33,34"}},{"content":"3. &#x4f7f;&#x7528;&#x963f;&#x91cc;&#x4e91;&#x767e;&#x70bc;&#x5e73;&#x53f0;","children":[{"content":"<pre data-lines=\"50,58\"><code data-lines=\"50,58\">docker <span class=\"hljs-built_in\">run</span> -d \\\n -p 8000:8000 \\\n -e <span class=\"hljs-attribute\">API_KEY</span>=your_aliyun_api_key \\\n -e <span class=\"hljs-attribute\">MODEL</span>=qwen-vl-max \\\n -e <span class=\"hljs-attribute\">BASE_URL</span>=https://dashscope.aliyuncs.com/api/v1 \\\n registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/markitdown \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"50,58"}}],"payload":{"tag":"h3","lines":"46,47"}}],"payload":{"tag":"h2","lines":"21,23"}},{"content":"&#x73af;&#x5883;&#x53d8;&#x91cf;&#x8bf4;&#x660e;","children":[{"content":"&#x652f;&#x6301;&#x7684;&#x6a21;&#x578b;&#x914d;&#x7f6e;","children":[{"content":"&#x667a;&#x8c31; AI","children":[{"content":"<pre data-lines=\"80,82\"><code>*   MODEL=glm-4v-flash\n*   BASE\\_URL=[https://open.bigmodel.cn/api/paas/v4](https://open.bigmodel.cn/api/paas/v4)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"80,82"}}],"payload":{"tag":"h4","lines":"78,79"}},{"content":"Gitee AI","children":[{"content":"<pre data-lines=\"85,87\"><code>*   MODEL=InternVL2\\_5-26B\n*   BASE\\_URL=[https://ai.gitee.com/v1](https://ai.gitee.com/v1)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"85,87"}}],"payload":{"tag":"h4","lines":"83,84"}},{"content":"&#x963f;&#x91cc;&#x4e91;&#x767e;&#x70bc;","children":[{"content":"<pre data-lines=\"90,92\"><code>*   MODEL=qwen-vl-max\n*   BASE\\_URL=[https://dashscope.aliyuncs.com/compatible-mode/v1](https://dashscope.aliyuncs.com/compatible-mode/v1)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"90,92"}}],"payload":{"tag":"h4","lines":"88,89"}}],"payload":{"tag":"h3","lines":"76,77"}}],"payload":{"tag":"h2","lines":"63,65"}},{"content":"API &#x63a5;&#x53e3;","children":[{"content":"1. &#x4e0a;&#x4f20;&#x56fe;&#x7247;&#x5e76;&#x63d0;&#x53d6;&#x6587;&#x672c;","children":[{"content":"<pre data-lines=\"102,111\"><code>**Endpoint:** POST /upload/\n\n**&#x8bf7;&#x6c42;&#x683c;&#x5f0f;:** multipart/form-data\n\n**&#x53c2;&#x6570;:**\n\n*   file: &#x56fe;&#x7247;&#x6587;&#x4ef6;\n\n**&#x54cd;&#x5e94;&#x793a;&#x4f8b;:**\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"102,111"}},{"content":"<pre data-lines=\"114,119\"><code data-lines=\"114,119\">{\n &quot;<span class=\"hljs-selector-tag\">text</span>&quot;: <span class=\"hljs-string\">&quot;&#x63d0;&#x53d6;&#x7684;&#x6587;&#x672c;&#x5185;&#x5bb9;&quot;</span>\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"114,119"}}],"payload":{"tag":"h3","lines":"100,101"}},{"content":"2. &#x6587;&#x6863;&#x56fe;&#x50cf;&#x77eb;&#x6b63;","children":[{"content":"<pre data-lines=\"122,139\"><code>**Endpoint:** POST /uvdoc/unwarp\n\n**&#x8bf7;&#x6c42;&#x683c;&#x5f0f;:** multipart/form-data\n\n**&#x53c2;&#x6570;:**\n\n*   file: &#x9700;&#x8981;&#x8fdb;&#x884c;&#x5c55;&#x5e73;&#x5904;&#x7406;&#x7684;&#x6587;&#x6863;&#x56fe;&#x7247;&#x6587;&#x4ef6;\n\n**&#x54cd;&#x5e94;&#x683c;&#x5f0f;:** image/png\n\n**&#x8bf4;&#x660e;:**\n\n*   &#x8be5;&#x63a5;&#x53e3;&#x7528;&#x4e8e;&#x5904;&#x7406;&#x5f2f;&#x66f2;&#x53d8;&#x5f62;&#x7684;&#x6587;&#x6863;&#x56fe;&#x7247;&#xff0c;&#x8fd4;&#x56de;&#x5c55;&#x5e73;&#x540e;&#x7684;&#x56fe;&#x7247;\n*   &#x652f;&#x6301;&#x5e38;&#x89c1;&#x56fe;&#x7247;&#x683c;&#x5f0f;&#xff08;PNG&#x3001;JPEG&#x7b49;&#xff09;\n*   &#x8fd4;&#x56de;&#x7684;&#x662f;&#x5c55;&#x5e73;&#x540e;&#x7684;PNG&#x683c;&#x5f0f;&#x56fe;&#x7247;&#x6570;&#x636e;\n\n**&#x9519;&#x8bef;&#x54cd;&#x5e94;:**\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"122,139"}},{"content":"<pre data-lines=\"142,147\"><code data-lines=\"142,147\"><span class=\"hljs-punctuation\">{</span>\n <span class=\"hljs-attr\">&quot;detail&quot;</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">&quot;Error message&quot;</span>\n<span class=\"hljs-punctuation\">}</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"142,147"}}],"payload":{"tag":"h3","lines":"120,121"}}],"payload":{"tag":"h2","lines":"97,99"}},{"content":"&#x6e90;&#x7801;&#x8fd0;&#x884c;","children":[{"content":"<pre data-lines=\"157,171\"><code data-lines=\"157,171\">git <span class=\"hljs-built_in\">clone</span> https://gitee.com/log4j/office2md.git\n\n<span class=\"hljs-built_in\">cd</span> office2md \n\npython3 -m venv venvdev\n\n<span class=\"hljs-built_in\">source</span> venvdev/bin/activate\n\npip install -r requirements.txt\n\n<span class=\"hljs-comment\"># &#x542f;&#x52a8;&#x670d;&#x52a1;</span>\nuvicorn main:app --reload \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"157,171"}}],"payload":{"tag":"h2","lines":"152,154"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

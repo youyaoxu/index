@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"swagger &#x63a5;&#x53e3;&#x6587;&#x6863;&#x8c03;&#x8bd5;","children":[{"content":"&#x7acb;&#x5373;&#x4f7f;&#x7528;","children":[{"content":"1. &#x8bbf;&#x95ee; swagger-ui &#x9875;&#x9762;","children":[{"content":"<pre data-lines=\"7,10\"><code data-lines=\"7,10\"><span class=\"hljs-symbol\">http:</span><span class=\"hljs-comment\">//127.0.0.1:9999/swagger-ui.html </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,10"}}],"payload":{"tag":"h4","lines":"5,6"}},{"content":"2. &#x6a21;&#x62df;&#x767b;&#x9646;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1601182554167-bb3a82f8-d403-4d0d-8b96-1fbca6aa17e0.png\" alt>","children":[],"payload":{"tag":"img","lines":"13,14"}}],"payload":{"tag":"h4","lines":"11,12"}},{"content":"&#x586b;&#x5199;&#x5ba2;&#x6237;&#x7aef;&#x4fe1;&#x606f;","children":[{"content":"<pre data-lines=\"17,25\"><code data-lines=\"17,25\"><span class=\"hljs-symbol\">username:</span> admin\n\n<span class=\"hljs-symbol\">password:</span>  YehdBPev \n    \n<span class=\"hljs-symbol\">client_id:</span> test\nclient_secret &#xff1a;  test \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,25"}}],"payload":{"tag":"h4","lines":"15,16"}}],"payload":{"tag":"h2","lines":"2,4"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

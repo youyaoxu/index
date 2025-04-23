@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"JSON &#x6a21;&#x5f0f;","children":[{"content":"&#x57fa;&#x7840;&#x4f7f;&#x7528;&#x793a;&#x4f8b;","children":[{"content":"&#x7b80;&#x5355;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"13,14\"><code>&#x4ee5;&#x4e0b;&#x662f;&#x4e00;&#x4e2a;&#x7b80;&#x5355;&#x7684;&#x793a;&#x4f8b;&#xff0c;&#x5c55;&#x793a;&#x5982;&#x4f55;&#x4f7f;&#x7528; JSON &#x683c;&#x5f0f;&#x5316;&#x8f93;&#x51fa;&#x89e3;&#x6790;&#x8003;&#x8bd5;&#x6587;&#x672c;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"13,14"}},{"content":"<pre data-lines=\"17,40\"><code data-lines=\"17,40\"><span class=\"hljs-title class_\">String</span> <span class=\"hljs-variable\">systemPrompt</span> <span class=\"hljs-operator\">=</span> <span class=\"hljs-string\">&quot;   The user will provide some exam text. Please parse the <span class=\"hljs-char escape_\">\\&quot;</span>question<span class=\"hljs-char escape_\">\\&quot;</span> and <span class=\"hljs-char escape_\">\\&quot;</span>answer<span class=\"hljs-char escape_\">\\&quot;</span> and output them in JSON format.<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            <span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            EXAMPLE INPUT:<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            Which is the highest mountain in the world? Mount Everest.<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            <span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            EXAMPLE JSON OUTPUT:<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            {<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;                <span class=\"hljs-char escape_\">\\&quot;</span>question<span class=\"hljs-char escape_\">\\&quot;</span>: <span class=\"hljs-char escape_\">\\&quot;</span>Which is the highest mountain in the world?<span class=\"hljs-char escape_\">\\&quot;</span>,<span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;                <span class=\"hljs-char escape_\">\\&quot;</span>answer<span class=\"hljs-char escape_\">\\&quot;</span>: <span class=\"hljs-char escape_\">\\&quot;</span>Mount Everest<span class=\"hljs-char escape_\">\\&quot;</span><span class=\"hljs-char escape_\">\\n</span>&quot;</span> <span class=\"hljs-operator\">+</span>\n <span class=\"hljs-string\">&quot;            }&quot;</span>;\n\n<span class=\"hljs-title class_\">String</span> <span class=\"hljs-variable\">userPrompt</span> <span class=\"hljs-operator\">=</span> <span class=\"hljs-string\">&quot;Which is the longest river in the world? The Nile River.&quot;</span>;\n\n<span class=\"hljs-title class_\">ChatCompletionRequest</span> <span class=\"hljs-variable\">request</span> <span class=\"hljs-operator\">=</span> <span class=\"hljs-title class_\">ChatCompletionRequest</span>.<span class=\"hljs-property\">builder</span>()\n .<span class=\"hljs-property\">model</span>(<span class=\"hljs-title class_\">ChatCompletionModel</span>.<span class=\"hljs-property\">DEEPSEEK_CHAT</span>)\n .<span class=\"hljs-property\">addSystemMessage</span>(<span class=\"hljs-variable\">systemPrompt</span>)\n .<span class=\"hljs-property\">addUserMessage</span>(<span class=\"hljs-variable\">userPrompt</span>)\n .<span class=\"hljs-property\">responseFormat</span>(<span class=\"hljs-title class_\">ResponseFormatType</span>.<span class=\"hljs-property\">JSON_OBJECT</span>)\n .<span class=\"hljs-property\">build</span>();\n\n<span class=\"hljs-title class_\">ChatCompletionResponse</span> <span class=\"hljs-variable\">completionResponse</span> <span class=\"hljs-operator\">=</span> <span class=\"hljs-variable\">deepSeekClient</span>.<span class=\"hljs-property\">chatCompletion</span>(<span class=\"hljs-variable\">request</span>).<span class=\"hljs-property\">execute</span>(); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,40"}},{"content":"<pre data-lines=\"41,42\"><code>&#x9884;&#x671f;&#x8f93;&#x51fa;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,42"}},{"content":"<pre data-lines=\"45,51\"><code data-lines=\"45,51\">{\n <span class=\"hljs-comment\">&quot;question&quot;</span>: <span class=\"hljs-comment\">&quot;Which is the longest river in the world?&quot;</span>,\n <span class=\"hljs-comment\">&quot;answer&quot;</span>: <span class=\"hljs-comment\">&quot;The Nile River&quot;</span>\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,51"}}],"payload":{"tag":"h3","lines":"11,12"}}],"payload":{"tag":"h2","lines":"4,6"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

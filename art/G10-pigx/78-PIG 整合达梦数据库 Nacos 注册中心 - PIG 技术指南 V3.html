@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; Oracle &#x6570;&#x636e;&#x5e93; Nacos &#x6ce8;&#x518c;&#x4e2d;&#x5fc3;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,6\"><code>Nacos &#x4ece; 2.2.0 &#x7248;&#x672c;&#x5f00;&#x59cb;&#xff0c;&#x53ef;&#x901a;&#x8fc7; SPI &#x673a;&#x5236;&#x6ce8;&#x5165;&#x591a;&#x6570;&#x636e;&#x6e90;&#x5b9e;&#x73b0;&#x63d2;&#x4ef6;&#xff0c;&#x5e76;&#x5728;&#x5f15;&#x5165;&#x5bf9;&#x5e94;&#x6570;&#x636e;&#x6e90;&#x5b9e;&#x73b0;&#x540e;&#xff0c;&#x4fbf;&#x53ef;&#x5728; Nacos &#x542f;&#x52a8;&#x65f6;&#x901a;&#x8fc7;&#x8bfb;&#x53d6; application.properties &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d; spring.datasource.platform &#x914d;&#x7f6e;&#x9879;&#x9009;&#x62e9;&#x52a0;&#x8f7d;&#x5bf9;&#x5e94;&#x591a;&#x6570;&#x636e;&#x6e90;&#x63d2;&#x4ef6;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202212/1671179590.jpg\" alt>","children":[],"payload":{"tag":"img","lines":"7,8"}},{"content":"<pre data-lines=\"9,10\"><code>Nacos &#x5b98;&#x65b9;&#x9ed8;&#x8ba4;&#x5b9e;&#x73b0; MySQL&#x3001;Derby&#xff0c;&#x5176;&#x4ed6;&#x7c7b;&#x578b;&#x6570;&#x636e;&#x5e93;&#x63a5;&#x5165;&#x9700;&#x8981;&#x53c2;&#x8003;&#x4e0b;&#x6587;&#x81ea;&#x5df1;&#x6269;&#x5c55;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,10"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202212/1671180565.png\" alt>","children":[],"payload":{"tag":"img","lines":"11,12"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x81ea;&#x5b9a;&#x4e49; dm8 &#x63d2;&#x4ef6;","children":[{"content":"1.&#x589e;&#x52a0; dm8 &#x6570;&#x636e;&#x5e93;&#x63d2;&#x4ef6;","children":[{"content":"<pre data-lines=\"18,19\"><code>&#x4f9d;&#x8d56;&#x5df2;&#x4e0a;&#x4f20; maven &#x4e2d;&#x592e;&#x4ed3;&#x5e93;&#xff0c;&#x8bf7;&#x52ff;&#x4f7f;&#x7528;&#x963f;&#x91cc;&#x4e91;&#x4ee3;&#x7406;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,19"}},{"content":"<table data-lines=\"20,26\">\n<thead data-lines=\"20,21\">\n<tr data-lines=\"20,21\">\n<th>NACOS &#x7248;&#x672c;</th>\n<th>&#x63d2;&#x4ef6;&#x7248;&#x672c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"22,26\">\n<tr data-lines=\"22,23\">\n<td>2.2.0 - 2.3.0</td>\n<td>0.0.2</td>\n</tr>\n<tr data-lines=\"23,24\">\n<td>2.3.1 - 2.3.2</td>\n<td>0.0.3</td>\n</tr>\n<tr data-lines=\"24,25\">\n<td>2.4.0 - 2.4.1</td>\n<td>0.0.4</td>\n</tr>\n<tr data-lines=\"25,26\">\n<td>2.5.0+</td>\n<td>0.0.5</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"20,26"}},{"content":"<pre data-lines=\"27,41\"><code data-lines=\"27,41\"><span class=\"language-xml\"><span class=\"hljs-comment\">&lt;!--&#x8fbe;&#x68a6;&#x6570;&#x636e;&#x5e93;&#x63d2;&#x4ef6;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.pig4cloud.plugin<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>nacos-datasource-plugin-dm8<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">version</span>&gt;</span>&#x24;</span><span class=\"hljs-template-variable\">{VERSION}</span><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">version</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.dameng<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>DmJdbcDriver18<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">version</span>&gt;</span>8.1.1.193<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">version</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"27,41"}}],"payload":{"tag":"h3","lines":"16,17"}}],"payload":{"tag":"h2","lines":"13,15"}},{"content":"2.&#x5bfc;&#x5165; nacos dm8 &#x6570;&#x636e;&#x5e93;&#x811a;&#x672c;","children":[{"content":"<pre data-lines=\"45,47\"><code>&#x518d;&#x8fbe;&#x68a6;&#x6570;&#x636e;&#x5e93;&#x7ba1;&#x7406;&#x5de5;&#x5177;&#x4e0a;&#x521b;&#x5efa;&#x540d;&#x4e3a; `nacos` &#x7684;&#x8868;&#x7a7a;&#x95f4;&#xff0c;&#x5bfc;&#x5165;&#x4e00;&#x4e0b;&#x6570;&#x636e;&#x5e93;&#x811a;&#x672c;  \n[&#x6570;&#x636e;&#x5e93;&#x811a;&#x672c;](https://wiki.pig4cloud.com/dev/integration/sql/nacos.sql)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,47"}}],"payload":{"tag":"h2","lines":"42,44"}},{"content":"3.&#x914d;&#x7f6e; nacos &#x6570;&#x636e;&#x6e90;&#x94fe;&#x63a5;&#x4fe1;&#x606f;","children":[{"content":"<pre data-lines=\"51,62\"><code data-lines=\"51,62\"><span class=\"hljs-attribute\">db</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">num</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">1</span>\n <span class=\"hljs-attribute\">url</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">0</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">jdbc:dm://127.0.0.01:5236?schema=PIG_CONFIG</span>\n <span class=\"hljs-attribute\">user</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">SYSDBA</span>\n <span class=\"hljs-attribute\">password</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">SYSDBA</span>\n <span class=\"hljs-attribute\">pool</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">config</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">driver-class-name</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">dm.jdbc.driver.DmDriver </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,62"}}],"payload":{"tag":"h2","lines":"48,50"}},{"content":"4.&#x914d;&#x7f6e;&#x6570;&#x636e;&#x5e93;&#x5e73;&#x53f0;","children":[{"content":"<pre data-lines=\"66,71\"><code data-lines=\"66,71\"><span class=\"hljs-symbol\">spring:</span>\n<span class=\"hljs-symbol\"> datasource:</span>\n<span class=\"hljs-symbol\"> platform:</span> dameng \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"66,71"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202212/1671184577.png\" alt>","children":[],"payload":{"tag":"img","lines":"72,73"}}],"payload":{"tag":"h2","lines":"63,65"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

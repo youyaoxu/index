@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"&#x67b6;&#x6784;&#x8bbe;&#x8ba1;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1700533656634-26d87aae-31eb-44ce-a2e6-fc33e8184887.png\" alt>","children":[],"payload":{"tag":"img","lines":"3,4"}},{"content":"<pre data-lines=\"5,9\"><code>*   &#x5355;&#x4f53;&#x67b6;&#x6784;&#xff1a;&#x8be5;&#x89e3;&#x51b3;&#x65b9;&#x6848;&#x662f;&#x4e00;&#x4e2a;&#x5355;&#x4f53;&#x67b6;&#x6784;&#xff0c;&#x53ef;&#x4ee5;&#x5728;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#x4e2d;&#x8fd0;&#x884c;&#x3002;&#x76f8;&#x5bf9;&#x4e8e;&#x5206;&#x5e03;&#x5f0f;&#x7cfb;&#x7edf;&#x800c;&#x8a00;&#xff0c;&#x5355;&#x4f53;&#x67b6;&#x6784;&#x66f4;&#x52a0;&#x7b80;&#x5355;&#x6613;&#x7528;&#xff0c;&#x5bf9;&#x4e8e;&#x4e2d;&#x5c0f;&#x4f01;&#x4e1a;&#x800c;&#x8a00;&#xff0c;&#x51cf;&#x5c11;&#x590d;&#x6742;&#x5ea6;&#x53ef;&#x4ee5;&#x964d;&#x4f4e;&#x5f00;&#x53d1;&#x548c;&#x7ef4;&#x62a4;&#x6210;&#x672c;&#x3002;\n*   &#x5408;&#x7406;&#x7684;&#x5206;&#x5305;&#x8bbe;&#x8ba1;&#xff1a;&#x8be5;&#x89e3;&#x51b3;&#x65b9;&#x6848;&#x8fdb;&#x884c;&#x4e86;**&#x5408;&#x7406;&#x7684;&#x5206;&#x5305;&#x8bbe;&#x8ba1;**&#xff0c;&#x5c06;&#x4e1a;&#x52a1;&#x903b;&#x8f91;&#x3001;&#x6570;&#x636e;&#x8bbf;&#x95ee;&#x3001;&#x5de5;&#x5177;&#x7c7b;&#x7b49;&#x6a21;&#x5757;&#x5206;&#x5f00;&#xff0c;&#x63d0;&#x9ad8;&#x4e86;&#x4ee3;&#x7801;&#x7684;&#x53ef;&#x8bfb;&#x6027;&#x548c;&#x53ef;&#x7ef4;&#x62a4;&#x6027;&#xff0c;&#x540c;&#x65f6;&#x4e5f;&#x4e3a;&#x540e;&#x671f;&#x5c06;&#x7cfb;&#x7edf;&#x62c6;&#x5206;&#x4e3a;&#x5fae;&#x670d;&#x52a1;&#x505a;&#x597d;&#x4e86;&#x51c6;&#x5907;&#x3002;\n*   **&#x6613;&#x4e8e;&#x8fc1;&#x79fb;&#x4e3a; Spring Cloud &#x5fae;&#x670d;&#x52a1;&#x67b6;&#x6784;**&#xff1a;&#x8be5;&#x89e3;&#x51b3;&#x65b9;&#x6848;&#x5728;&#x8bbe;&#x8ba1;&#x65f6;&#x8003;&#x8651;&#x5230;&#x540e;&#x671f;&#x53ef;&#x80fd;&#x9700;&#x8981;&#x5c06;&#x7cfb;&#x7edf;&#x62c6;&#x5206;&#x4e3a;&#x5fae;&#x670d;&#x52a1;&#xff0c;&#x4e00;&#x65e6;&#x9700;&#x8981;&#x5c06;&#x7cfb;&#x7edf;&#x62c6;&#x5206;&#x4e3a;&#x5fae;&#x670d;&#x52a1;&#xff0c;&#x53ea;&#x9700;&#x8981;&#x5c06;&#x5355;&#x4f53;&#x5e94;&#x7528;&#x62c6;&#x5206;&#x4e3a;&#x591a;&#x4e2a;&#x670d;&#x52a1;&#xff0c;&#x5e76;&#x6dfb;&#x52a0; Spring Cloud &#x6ce8;&#x518c;&#x53d1;&#x73b0;&#x76f8;&#x5173;&#x7ec4;&#x4ef6;&#x5373;&#x53ef;&#x3002;\n*   **&#x5b8c;&#x5168;&#x517c;&#x5bb9; PIG &#x5fae;&#x670d;&#x52a1;&#x6280;&#x672f;&#x6808;**&#xff1a;&#x8be5;&#x89e3;&#x51b3;&#x65b9;&#x6848;&#x5b9e;&#x65bd;&#x6807;&#x51c6;&#x3001;&#x5f00;&#x53d1;&#x6b65;&#x9aa4;&#x3001;&#x5de5;&#x5177;&#x7c7b;&#x7b49;&#x5b8c;&#x5168;&#x517c;&#x5bb9; PIG &#x5fae;&#x670d;&#x52a1;&#x67b6;&#x6784;&#xff0c;&#x65b9;&#x4fbf;&#x7528;&#x6237;&#x5728;&#x5355;&#x4f53;&#x67b6;&#x6784;&#x3001;&#x5fae;&#x670d;&#x52a1;&#x67b6;&#x6784;&#x4e2d;&#x8fdb;&#x884c;&#x5207;&#x6362;&#x8fc7;&#x6e21;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,9"}}],"payload":{"tag":"h2","lines":"0,2"}},{"content":"&#x4e00;&#x3001;&#x8fd0;&#x884c;&#x670d;&#x52a1;&#x7aef;","children":[{"content":"&#x2460; &#x4e0b;&#x8f7d;&#x670d;&#x52a1;&#x7aef;&#x4ee3;&#x7801;","children":[],"payload":{"tag":"h3","lines":"13,14"}},{"content":"&#x2461; &#x6267;&#x884c; SQL &#x811a;&#x672c;","children":[],"payload":{"tag":"h3","lines":"15,16"}},{"content":"&#x2462; &#x52a0;&#x8f7d; pig-boot &#x6a21;&#x5757;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1713334205920-02749b6a-3a0a-4dee-acec-e3df113266e1.png\" alt>","children":[],"payload":{"tag":"img","lines":"19,20"}}],"payload":{"tag":"h3","lines":"17,18"}},{"content":"&#x2463; &#x8fd0;&#x884c; upms &#x6a21;&#x5757;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1712644523061-baa7c014-3a28-4b75-bf2a-d57149db8b46.png\" alt>","children":[],"payload":{"tag":"img","lines":"23,24"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1712644593758-49f0f659-d8c1-4277-a131-5bba3fa3f334.png\" alt>","children":[],"payload":{"tag":"img","lines":"25,26"}}],"payload":{"tag":"h3","lines":"21,22"}}],"payload":{"tag":"h2","lines":"10,12"}},{"content":"&#x4e8c;&#x3001;&#x8fd0;&#x884c;&#x524d;&#x7aef;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1700473026.png\" alt>","children":[],"payload":{"tag":"img","lines":"30,31"}}],"payload":{"tag":"h2","lines":"27,29"}},{"content":"&#x4e09;&#x3001;&#x8bbf;&#x95ee;&#x4f7f;&#x7528;","children":[],"payload":{"tag":"h2","lines":"32,34"}},{"content":"&#x56db;&#x3001;&#x5176;&#x4ed6;&#x8bf4;&#x660e;","children":[{"content":"&#x2460; &#x52a0;&#x5feb;&#x542f;&#x52a8;&#x901f;&#x5ea6;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1713335024964-cbefd3ba-4d5f-44ec-8158-d33a5cc57ed0.png\" alt>","children":[],"payload":{"tag":"img","lines":"40,41"}}],"payload":{"tag":"h3","lines":"38,39"}},{"content":"&#x2461; swagger &#x8c03;&#x8bd5;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1700527095040-b7284663-db53-4c11-a0c2-7b59c1cd2a08.png\" alt>","children":[],"payload":{"tag":"img","lines":"44,45"}}],"payload":{"tag":"h3","lines":"42,43"}}],"payload":{"tag":"h2","lines":"35,37"}}]},{})</script>
+</body>
+</html>

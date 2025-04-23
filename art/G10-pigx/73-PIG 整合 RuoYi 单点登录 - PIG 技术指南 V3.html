@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; RuoYi &#x5355;&#x70b9;&#x767b;&#x5f55;","children":[{"content":"&#x6e90;&#x7801;&#x5730;&#x5740;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x96c6;&#x6210;&#x540e;&#x7684;&#x6e90;&#x7801;&#x53ef;&#x5728;&#x4ee5;&#x4e0b;&#x5730;&#x5740;&#x67e5;&#x770b;&#x548c;&#x4e0b;&#x8f7d;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x5b9e;&#x73b0;&#x6982;&#x8ff0;","children":[{"content":"<pre data-lines=\"14,15\"><code>PIG &#x4f5c;&#x4e3a;&#x8ba4;&#x8bc1;&#x670d;&#x52a1;&#x5668;&#xff0c;&#x53ef;&#x4ee5;&#x4e3a; RuoYi &#x524d;&#x540e;&#x7aef;&#x5206;&#x79bb;&#x9879;&#x76ee;&#x63d0;&#x4f9b;&#x7edf;&#x4e00;&#x7684;&#x8eab;&#x4efd;&#x8ba4;&#x8bc1;&#x670d;&#x52a1;&#xff0c;&#x5b9e;&#x73b0;&#x5355;&#x70b9;&#x767b;&#x5f55;&#x529f;&#x80fd;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,15"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/sso-ruoyi-pig-overview.png\" alt>","children":[],"payload":{"tag":"img","lines":"16,17"}},{"content":"<pre data-lines=\"18,19\"><code>&#x5355;&#x70b9;&#x767b;&#x5f55;&#x96c6;&#x6210;&#x67b6;&#x6784;&#x56fe;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,19"}}],"payload":{"tag":"h2","lines":"11,13"}},{"content":"&#x914d;&#x7f6e;&#x6b65;&#x9aa4;","children":[{"content":"1. &#x6dfb;&#x52a0; OAuth2 &#x5ba2;&#x6237;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"26,27\"><code>&#x5728; PIG &#x7cfb;&#x7edf;&#x4e2d;&#x6dfb;&#x52a0; RuoYi &#x7684;&#x5ba2;&#x6237;&#x7aef;&#x914d;&#x7f6e;&#x4fe1;&#x606f;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"26,27"}},{"content":"<pre data-lines=\"30,46\"><code data-lines=\"30,46\">INSERT INTO `pig`.`sys_oauth_client_details`(\n `client_id`, `resource_ids`, `client_secret`, `scope`, \n `authorized_grant_types`, `web_server_redirect_uri`, \n `authorities`, `access_token_validity`, `refresh_token_validity`, \n `additional_information`, `autoapprove`, `create_time`, \n `update_time`, `create_by`, `update_by`\n) \nVALUES (\n &apos;ruoyi&apos;, &apos;&apos;, &apos;ruoyi&apos;, &apos;server&apos;, \n &apos;authorization_code&apos;, &apos;&apos;, &apos;&apos;, \n<span class=\"hljs-built_in\"> 17800000,</span> <span class=\"hljs-number\">17800000</span>, &apos;&apos;, &apos;<span class=\"hljs-literal\">false</span>&apos;, \n<span class=\"hljs-title\"> &apos;2023-01-17 10:37:32&apos;, &apos;2023-01-17 10:37:</span><span class=\"hljs-number\">32</span>&apos;, \n &apos;admin&apos;, &apos;admin&apos;\n)<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,46"}}],"payload":{"tag":"h3","lines":"24,25"}},{"content":"2. RuoYi &#x540e;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"49,53\"><code>&#x5728; RuoYi &#x540e;&#x7aef;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x8bbe;&#x7f6e;&#xff1a;\n\n*   RuoYi &#x524d;&#x7aef;&#x5730;&#x5740;&#xff08;&#x9ed8;&#x8ba4; 1024 &#x7aef;&#x53e3;&#xff09;\n*   PIG &#x8ba4;&#x8bc1;&#x4e2d;&#x5fc3;&#x5730;&#x5740;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,53"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/sso-ruoyi-backend-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"54,55"}},{"content":"<pre data-lines=\"56,57\"><code>RuoYi &#x540e;&#x7aef;&#x914d;&#x7f6e;&#x793a;&#x4f8b;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"56,57"}}],"payload":{"tag":"h3","lines":"47,48"}},{"content":"3. RuoYi &#x524d;&#x7aef;&#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"60,63\"><code>1 &#x767b;&#x5f55;&#x9875;&#x9762;&#x914d;&#x7f6e;\n\n&#x914d;&#x7f6e;&#x767b;&#x5f55;&#x9875;&#x9762;&#x4ee5;&#x4f7f;&#x7528; PIG &#x7684;&#x8ba4;&#x8bc1;&#x670d;&#x52a1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"60,63"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/sso-ruoyi-login-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"64,65"}},{"content":"<pre data-lines=\"66,69\"><code>2 &#x9000;&#x51fa;&#x9875;&#x9762;&#x914d;&#x7f6e;\n\n&#x914d;&#x7f6e;&#x9000;&#x51fa;&#x9875;&#x9762;&#x4ee5;&#x6b63;&#x786e;&#x5904;&#x7406;&#x5355;&#x70b9;&#x767b;&#x51fa;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"66,69"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/sso-ruoyi-logout-config.png\" alt>","children":[],"payload":{"tag":"img","lines":"70,71"}}],"payload":{"tag":"h3","lines":"58,59"}}],"payload":{"tag":"h2","lines":"21,23"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

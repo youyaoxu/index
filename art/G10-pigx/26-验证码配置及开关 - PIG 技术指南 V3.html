@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x9a8c;&#x8bc1;&#x7801;&#x914d;&#x7f6e;&#x53ca;&#x5f00;&#x5173;","children":[{"content":"&#x914d;&#x7f6e;&#x7ec8;&#x7aef;&#x4e0d;&#x6821;&#x9a8c;&#x9a8c;&#x8bc1;&#x7801;","children":[{"content":"<pre data-lines=\"5,6\"><code>&#x5728; `nacos` &#x7684; `pig-auth-dev.yml` &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#xff0c;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x4ee5;&#x4e0b;&#x914d;&#x7f6e;&#x6765;&#x8bbe;&#x7f6e;&#x4e0d;&#x6821;&#x9a8c;&#x9a8c;&#x8bc1;&#x7801;&#x7684;&#x7ec8;&#x7aef;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}},{"content":"<pre data-lines=\"7,13\"><code data-lines=\"7,13\"><span class=\"hljs-attribute\">security</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">ignore-clients</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-bullet\">-</span> <span class=\"hljs-string\">test</span>\n <span class=\"hljs-bullet\">-</span> <span class=\"hljs-string\">XXX </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,13"}},{"content":"<pre data-lines=\"14,15\"><code>&#x5c06;&#x9700;&#x8981;&#x5ffd;&#x7565;&#x9a8c;&#x8bc1;&#x7801;&#x6821;&#x9a8c;&#x7684;&#x5ba2;&#x6237;&#x7aef; ID &#x6dfb;&#x52a0;&#x5230; `ignore-clients` &#x5217;&#x8868;&#x4e2d;&#x5373;&#x53ef;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,15"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x524d;&#x7aef;&#x9a8c;&#x8bc1;&#x7801;&#x914d;&#x7f6e;","children":[{"content":"<img src=\"https://minio.pigx.vip/oss/202504/1744387860.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}}],"payload":{"tag":"h2","lines":"17,19"}},{"content":"&#x914d;&#x7f6e;&#x524d;&#x7aef;&#x5173;&#x95ed;&#x9a8c;&#x8bc1;&#x7801;","children":[{"content":"<pre data-lines=\"25,26\"><code>&#x5728; `env.ts` &#x6587;&#x4ef6;&#x4e2d;&#xff0c;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x914d;&#x7f6e; `VITE_VERIFY_ENABLE` &#x6765;&#x63a7;&#x5236;&#x662f;&#x5426;&#x663e;&#x793a;&#x9a8c;&#x8bc1;&#x7801;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,26"}},{"content":"<pre data-lines=\"27,30\"><code data-lines=\"27,30\"><span class=\"hljs-attr\">VITE_VERIFY_ENABLE</span> = <span class=\"hljs-literal\">false</span> // &#x662f;&#x5426;&#x5f00;&#x542f;&#x9a8c;&#x8bc1;&#x7801;&#x6821;&#x9a8c; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,30"}},{"content":"<pre data-lines=\"31,35\"><code>*   &#x5f53; `VITE_VERIFY_ENABLE = true` &#x65f6;&#xff0c;&#x7cfb;&#x7edf;&#x4f1a;&#x663e;&#x793a;&#x9a8c;&#x8bc1;&#x7801;\n*   &#x5f53; `VITE_VERIFY_ENABLE = false` &#x65f6;&#xff0c;&#x7cfb;&#x7edf;&#x5c06;&#x4e0d;&#x663e;&#x793a;&#x9a8c;&#x8bc1;&#x7801;\n\n&#x4fee;&#x6539;&#x914d;&#x7f6e;&#x540e;&#x9700;&#x8981;&#x91cd;&#x542f;&#x670d;&#x52a1;&#x624d;&#x80fd;&#x751f;&#x6548;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,35"}}],"payload":{"tag":"h2","lines":"22,24"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

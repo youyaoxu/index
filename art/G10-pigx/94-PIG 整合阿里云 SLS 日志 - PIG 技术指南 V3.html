@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408;&#x963f;&#x91cc;&#x4e91; SLS &#x65e5;&#x5fd7;","children":[{"content":"&#x4ec0;&#x4e48;&#x662f;&#x963f;&#x91cc;&#x4e91; SLS","children":[{"content":"<pre data-lines=\"7,10\"><code>&#x963f;&#x91cc;&#x4e91;&#x65e5;&#x5fd7;&#x670d;&#x52a1; SLS &#x4f5c;&#x4e3a;&#x53ef;&#x89c2;&#x6d4b;&#x6570;&#x636e;&#x5b58;&#x50a8;&#x4e0e;&#x5e94;&#x7528;&#x670d;&#x52a1;&#xff0c;&#x4e3a; Log&#x3001;Metric&#x3001;Trace &#x7b49;&#x53ef;&#x89c2;&#x6d4b;&#x6570;&#x636e;&#x63d0;&#x4f9b;&#x4e00;&#x7ad9;&#x5f0f;&#x91c7;&#x96c6;&#x3001;&#x52a0;&#x5de5;&#x3001;&#x67e5;&#x8be2;&#x4e0e;&#x5206;&#x6790;&#x3001;&#x53ef;&#x89c6;&#x5316;&#x4e0e;&#x544a;&#x8b66;&#x3001;&#x6d88;&#x8d39;&#x4e0e;&#x6295;&#x9012;&#x7b49;&#x529f;&#x80fd;&#xff0c;&#x63d0;&#x5347;&#x7814;&#x53d1;&#x3001;&#x8fd0;&#x7ef4;&#x3001;&#x8fd0;&#x8425;&#x3001;&#x5b89;&#x5168;&#x7b49;&#x573a;&#x666f;&#x5316;&#x667a;&#x80fd;&#x5e94;&#x7528;&#x80fd;&#x529b;&#x3002;\n\n&#x7b80;&#x5355;&#x6765;&#x8bf4;&#xff0c;SLS &#x662f;&#x963f;&#x91cc;&#x4e91;&#x63d0;&#x4f9b;&#x7684;&#x4e91;&#x7aef; ELK &#x670d;&#x52a1;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,10"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x914d;&#x7f6e;&#x63a5;&#x5165;","children":[{"content":"1. &#x4e1a;&#x52a1;&#x5fae;&#x670d;&#x52a1;&#x6dfb;&#x52a0;&#x4f9d;&#x8d56;","children":[{"content":"<pre data-lines=\"18,25\"><code data-lines=\"18,25\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.aliyun.openservices<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>aliyun-log-logback-appender<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">version</span>&gt;</span>0.1.26<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">version</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,25"}}],"payload":{"tag":"h3","lines":"14,15"}},{"content":"2. &#x4e1a;&#x52a1;&#x5fae;&#x670d;&#x52a1;&#x6dfb;&#x52a0; logback &#x914d;&#x7f6e;","children":[{"content":"<pre data-lines=\"30,57\"><code data-lines=\"30,57\"><span class=\"hljs-comment\">&lt;!--&#x4e3a;&#x4e86;&#x9632;&#x6b62;&#x8fdb;&#x7a0b;&#x9000;&#x51fa;&#x65f6;&#xff0c;&#x5185;&#x5b58;&#x4e2d;&#x7684;&#x6570;&#x636e;&#x4e22;&#x5931;&#xff0c;&#x8bf7;&#x52a0;&#x4e0a;&#x6b64;&#x9009;&#x9879;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">shutdownHook</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;ch.qos.logback.core.hook.DelayingShutdownHook&quot;</span>/&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!--&#x6253;&#x5370;&#x5341;&#x516d;&#x8fdb;&#x5236;&#x4fe1;&#x606f;/&#x5173;&#x95ed; STS &#x81ea;&#x8eab;&#x7684;&#x65e5;&#x5fd7;--&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">logger</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;org.apache.http&quot;</span> <span class=\"hljs-attr\">level</span>=<span class=\"hljs-string\">&quot;OFF&quot;</span> /&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">logger</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;com.aliyun.openservices.aliyun.log&quot;</span> <span class=\"hljs-attr\">level</span>=<span class=\"hljs-string\">&quot;OFF&quot;</span> /&gt;</span>\n\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">appender</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;aliyun&quot;</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;com.aliyun.openservices.log.logback.LoghubAppender&quot;</span>&gt;</span>\n <span class=\"hljs-comment\">&lt;!--&#x5fc5;&#x9009;&#x9879;--&gt;</span>\n <span class=\"hljs-comment\">&lt;!-- &#x8d26;&#x53f7;&#x53ca;&#x7f51;&#x7edc;&#x914d;&#x7f6e; --&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">endpoint</span>&gt;</span>cn-hangzhou.log.aliyuncs.com<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">endpoint</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">accessKeyId</span>&gt;</span>&#x963f;&#x91cc;&#x4e91;&#x7684;AK<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">accessKeyId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">accessKeySecret</span>&gt;</span>&#x963f;&#x91cc;&#x4e91;&#x7684;SK<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">accessKeySecret</span>&gt;</span>\n\n <span class=\"hljs-comment\">&lt;!-- sls &#x9879;&#x76ee;&#x914d;&#x7f6e; --&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">project</span>&gt;</span>pigx-upms<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">project</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">logStore</span>&gt;</span>pigx-upms01<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">logStore</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">maxBlockMs</span>&gt;</span>0<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">maxBlockMs</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">appender</span>&gt;</span>\n\n<span class=\"hljs-comment\">&lt;!-- Level: FATAL 0  ERROR 3  WARN 4  INFO 6  DEBUG 7 --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">root</span> <span class=\"hljs-attr\">level</span>=<span class=\"hljs-string\">&quot;debug&quot;</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">appender-ref</span> <span class=\"hljs-attr\">ref</span>=<span class=\"hljs-string\">&quot;console&quot;</span>/&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">appender-ref</span> <span class=\"hljs-attr\">ref</span>=<span class=\"hljs-string\">&quot;aliyun&quot;</span>/&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">root</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,57"}}],"payload":{"tag":"h3","lines":"26,27"}}],"payload":{"tag":"h2","lines":"11,13"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x767b;&#x5f55;&#x8bf7;&#x6c42;&#x52a0;&#x5bc6;","children":[{"content":"&#x524d;&#x7aef;&#x62a5;&#x6587;&#x52a0;&#x5bc6;&#x7684;&#x4e1a;&#x52a1;","children":[{"content":"<pre data-lines=\"7,8\"><code>&#x7528;&#x6237;&#x767b;&#x5f55;&#x65f6;&#xff0c;&#x5bf9;&#x767b;&#x5f55;&#x5bc6;&#x7801;&#x8fdb;&#x884c;&#x52a0;&#x5bc6;&#x4f20;&#x8f93;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}},{"content":"<img src=\"https://minio.pigx.vip/oss/202504/1744646005.png\" alt>","children":[],"payload":{"tag":"img","lines":"9,10"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x524d;&#x7aef;&#x52a0;&#x5bc6;&#x529f;&#x80fd;","children":[{"content":"<pre data-lines=\"16,19\"><code>&#x4fee;&#x6539;&#x5bc6;&#x94a5;&#x6ce8;&#x610f;&#x540c;&#x6b65;&#x4fee;&#x6539;&#x524d;&#x540e;&#x7aef;&#x7684; key&#xff0c;&#x5fc5;&#x987b;&#x4e3a; 16 &#x4f4d;\n\n*   &#x524d;&#x7aef; **env VITE\\_PWD\\_ENC\\_KEY** &#x63d0;&#x4f9b;&#x7b80;&#x5355;&#x7684; AES &#x5bf9;&#x79f0;&#x52a0;&#x5bc6;&#x7b97;&#x6cd5;&#xff0c;&#x6ce8;&#x610f; key &#x548c;&#x540e;&#x7aef;&#x7f51;&#x5173;&#x914d;&#x7f6e;&#x76f8;&#x540c;&#xff0c;&#x8fd9;&#x91cc;&#x6253;&#x5305;&#x6df7;&#x6dc6;&#x540e;&#xff0c;&#x76f8;&#x5bf9;&#x5b89;&#x5168;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,19"}},{"content":"<img src=\"https://minio.pigx.top/oss/202307/1690082310.png\" alt>","children":[],"payload":{"tag":"img","lines":"20,21"}},{"content":"<pre data-lines=\"22,25\"><code>&#x5bc6;&#x94a5;&#x914d;&#x7f6e;\n\n*   &#x5bf9;&#x5e94;&#x540e;&#x7aef;&#x4ee3;&#x7801;&#x89e3;&#x5bc6;&#x7684; key &#x5728; **nacos/pig-auth-dev.yml** &#x5b9a;&#x4e49;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,25"}},{"content":"<pre data-lines=\"28,32\"><code data-lines=\"28,32\"><span class=\"hljs-symbol\">security:</span>\n encode-<span class=\"hljs-keyword\">key</span>: <span class=\"hljs-comment\">&apos;thanks,pig4cloud&apos; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,32"}}],"payload":{"tag":"h2","lines":"13,15"}},{"content":"&#x901a;&#x8fc7;&#x5728;&#x7ebf;&#x670d;&#x52a1;&#x83b7;&#x53d6;&#x5bc6;&#x6587;","children":[{"content":"<pre data-lines=\"38,39\"><code>&#x4f7f;&#x7528;&#x5bc6;&#x7801;&#x52a0;&#x5bc6;&#x670d;&#x52a1;&#xff1a;[https://enc.pig4cloud.com](https://enc.pig4cloud.com)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"38,39"}},{"content":"<img src=\"https://minio.pigx.vip/oss/1638683003.png\" alt>","children":[],"payload":{"tag":"img","lines":"40,41"}},{"content":"<pre data-lines=\"42,43\"><code>&#x5bc6;&#x7801;&#x52a0;&#x5bc6;&#x670d;&#x52a1;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"42,43"}}],"payload":{"tag":"h2","lines":"35,37"}},{"content":"&#x603b;&#x7ed3;","children":[{"content":"<pre data-lines=\"48,49\"><code>&#x867d;&#x7136; AES &#x662f;&#x5bf9;&#x79f0;&#x52a0;&#x5bc6;&#xff0c;&#x4f46;&#x5728;&#x6b64;&#x573a;&#x666f;&#x4e2d;&#x63d0;&#x4f9b;&#x4e86;&#x57fa;&#x672c;&#x7684;&#x4f20;&#x8f93;&#x4fdd;&#x62a4;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"48,49"}}],"payload":{"tag":"h2","lines":"45,47"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Sentinel &#x6d41;&#x91cf;&#x63a7;&#x5236;&#x53f0;&#x4f7f;&#x7528;","children":[{"content":"&#x4e00;&#x3001;&#x90e8;&#x7f72; sentinel-dashboard","children":[{"content":"<pre data-lines=\"8,11\"><code data-lines=\"8,11\"><span class=\"hljs-attribute\">docker</span> run --name sentinel  -d -p <span class=\"hljs-number\">5020</span>:<span class=\"hljs-number\">8858</span> -d  royalwang/sentinel-dashboard:<span class=\"hljs-number\">1</span>.<span class=\"hljs-number\">8</span>.<span class=\"hljs-number\">4</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"8,11"}},{"content":"<pre data-lines=\"12,14\"><code>*   &#x6d4f;&#x89c8;&#x5668;&#x8bbf;&#x95ee; [http://localhost:5020](http://localhost:5020)\n*   &#x7528;&#x6237;&#x540d;/&#x5bc6;&#x7801; sentinel/sentinel\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,14"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x4e8c;&#x3001;&#x542f;&#x52a8; pig &#x6240;&#x6709;&#x7684;&#x5e94;&#x7528;","children":[{"content":"pig-regiser","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"pig-upms","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"pig-gateway","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"pig-auth","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"pig-ui","children":[],"payload":{"tag":"li","lines":"24,28"}}],"payload":{"tag":"h2","lines":"17,19"}},{"content":"&#x4e09;&#x3001;pig-ui &#x8bbf;&#x95ee; pc &#x7aef;&#x7684;&#x76f8;&#x5173;&#x529f;&#x80fd;","children":[{"content":"<pre data-lines=\"31,34\"><code>*   &#x6d4f;&#x89c8;&#x5668;&#x8bbf;&#x95ee; [http://localhost:5020&#xff0c;&#x67e5;&#x770b;&#x5b9e;&#x65f6;&#x6d41;&#x91cf;&#x548c;&#x70ed;&#x70b9;&#x63a7;&#x5236;&#x7b49;&#x64cd;&#x4f5c;](http://localhost:5020%EF%BC%8C%E6%9F%A5%E7%9C%8B%E5%AE%9E%E6%97%B6%E6%B5%81%E9%87%8F%E5%92%8C%E7%83%AD%E7%82%B9%E6%8E%A7%E5%88%B6%E7%AD%89%E6%93%8D%E4%BD%9C)\n\n&#x5e94;&#x7528;&#x53ea;&#x6709;&#x6709;&#x4e86;&#x8bf7;&#x6c42;&#x6d41;&#x91cf;&#xff0c;sentinel &#x63a7;&#x5236;&#x53f0; &#x624d;&#x4f1a;&#x663e;&#x793a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"31,34"}},{"content":"<img src=\"https://minio.pigx.top/oss/202312/1701844199.png\" alt>","children":[],"payload":{"tag":"img","lines":"35,36"}}],"payload":{"tag":"h2","lines":"28,30"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

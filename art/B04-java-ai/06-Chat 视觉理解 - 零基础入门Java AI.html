@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Chat &#x89c6;&#x89c9;&#x7406;&#x89e3;","children":[{"content":"&#x793a;&#x4f8b;&#x4ee3;&#x7801;&#xff1a;&#x57fa;&#x4e8e;Dashscope&#x7684;LangChain4j&#x89c6;&#x89c9;&#x7406;&#x89e3;","children":[{"content":"&#x6784;&#x5efa;&#x5927;&#x6a21;&#x578b;&#x5ba2;&#x6237;&#x7aef;","children":[{"content":"<pre data-lines=\"15,25\"><code data-lines=\"15,25\"><span class=\"hljs-meta\">@Bean</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">ChatLanguageModel</span> <span class=\"hljs-title function_\">chatLanguageModel</span>(<span class=\"hljs-params\"></span>) {\n<span class=\"hljs-keyword\">return</span> <span class=\"hljs-title class_\">OpenAiChatModel</span>.<span class=\"hljs-title function_\">builder</span>()\n .<span class=\"hljs-title function_\">apiKey</span>(<span class=\"hljs-title class_\">System</span>.<span class=\"hljs-title function_\">getenv</span>(<span class=\"hljs-string\">&quot;DASHSCOPE_KEY&quot;</span>))\n .<span class=\"hljs-title function_\">modelName</span>(<span class=\"hljs-string\">&quot;qwen-vl-max&quot;</span>)  <span class=\"hljs-comment\">// &#x8bbe;&#x7f6e;&#x4f7f;&#x7528;&#x7684;&#x6a21;&#x578b;&#x540d;&#x79f0;</span>\n .<span class=\"hljs-title function_\">baseUrl</span>(<span class=\"hljs-string\">&quot;https://dashscope.aliyuncs.com/compatible-mode/v1&quot;</span>)\n .<span class=\"hljs-title function_\">build</span>();\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,25"}}],"payload":{"tag":"h4","lines":"11,12"}},{"content":"&#x6784;&#x5efa; ImageContent","children":[{"content":"<pre data-lines=\"30,59\"><code data-lines=\"30,59\"> <span class=\"hljs-comment\">/**\n * &#x4f5c;&#x8005;: lengleng\n * &#x89c6;&#x89c9;&#x7406;&#x89e3;&#x793a;&#x4f8b; - &#x901a;&#x8fc7;Dashscope&#x8fdb;&#x884c;&#x56fe;&#x50cf;&#x5206;&#x6790;\n */</span>\n<span class=\"hljs-meta\">@SpringBootTest</span>\n<span class=\"hljs-keyword\">class</span> <span class=\"hljs-title class_\">LLMConfigTest</span> {\n <span class=\"hljs-meta\">@Autowired</span>\n <span class=\"hljs-keyword\">private</span> ChatLanguageModel chatLanguageModel;\n\n <span class=\"hljs-meta\">@Value(&quot;1.png&quot;)</span>\n <span class=\"hljs-keyword\">private</span> Resource resource;\n\n <span class=\"hljs-meta\">@Test</span>\n <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title function_\">chatLanguageModel</span><span class=\"hljs-params\">()</span> <span class=\"hljs-keyword\">throws</span> IOException {\n\n <span class=\"hljs-type\">byte</span>[] byteArray = resource.getContentAsByteArray();\n <span class=\"hljs-type\">String</span> <span class=\"hljs-variable\">encodeToString</span> <span class=\"hljs-operator\">=</span> Base64.getEncoder().encodeToString(byteArray);\n\n <span class=\"hljs-type\">UserMessage</span> <span class=\"hljs-variable\">userMessage</span> <span class=\"hljs-operator\">=</span> UserMessage.from(\n TextContent.from(<span class=\"hljs-string\">&quot;&#x63d0;&#x53d6;&#x56fe;&#x7247;&#x4e2d; 9&#x6708;30&#x53f7;&#x7684;&#x4e0a;&#x8bc1;&#x6307;&#x6570;&#x70b9;&#x6570;&quot;</span>)\n ,\n ImageContent.from(encodeToString, <span class=\"hljs-string\">&quot;image/png&quot;</span>)\n );\n Response&lt;AiMessage&gt; response = chatLanguageModel.generate(userMessage);\n System.out.println(response.content().text());\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"30,59"}}],"payload":{"tag":"h4","lines":"26,27"}}],"payload":{"tag":"h3","lines":"3,4"}},{"content":"&#x8bf4;&#x660e;&#xff1a;","children":[{"content":"1. <strong>&#x6a21;&#x578b;&#x9009;&#x62e9;</strong>&#xff1a;<code>qwen-vl-max</code> &#x662f;&#x4e00;&#x4e2a;&#x591a;&#x6a21;&#x6001;&#x5927;&#x6a21;&#x578b;&#xff0c;&#x652f;&#x6301;&#x56fe;&#x7247;&#x548c;&#x6587;&#x672c;&#x7684;&#x7ed3;&#x5408;&#x8f93;&#x5165;&#xff0c;&#x9002;&#x7528;&#x4e8e;&#x89c6;&#x89c9;-&#x8bed;&#x8a00;&#x4efb;&#x52a1;&#x3002;","children":[],"payload":{"tag":"li","lines":"62,63","listIndex":1}},{"content":"2. <strong>&#x56fe;&#x7247;&#x4e0a;&#x4f20;</strong>&#xff1a;&#x901a;&#x8fc7;<code>Base64</code>&#x7f16;&#x7801;&#x5c06;&#x56fe;&#x7247;&#x8f6c;&#x5316;&#x4e3a;&#x5b57;&#x7b26;&#x4e32;&#xff0c;&#x7ed3;&#x5408;<code>ImageContent</code>&#x548c;<code>TextContent</code>&#x4e00;&#x8d77;&#x53d1;&#x9001;&#x5230;&#x6a21;&#x578b;&#x8fdb;&#x884c;&#x5904;&#x7406;&#x3002;","children":[],"payload":{"tag":"li","lines":"63,64","listIndex":2}},{"content":"3. <strong>API&#x8c03;&#x7528;</strong>&#xff1a;&#x4f7f;&#x7528;<code>OpenAiChatModel</code>&#x6765;&#x6784;&#x5efa;&#x8bf7;&#x6c42;&#xff0c;&#x5e76;&#x901a;&#x8fc7;<code>chat()</code>&#x65b9;&#x6cd5;&#x8c03;&#x7528;&#x6a21;&#x578b;&#x3002;&#x8bf7;&#x6c42;&#x5185;&#x5bb9;&#x5305;&#x62ec;&#x6587;&#x672c;&#x63d0;&#x793a;&#x548c;&#x56fe;&#x7247;&#xff0c;&#x6a21;&#x578b;&#x4f1a;&#x6839;&#x636e;&#x8f93;&#x5165;&#x8fd4;&#x56de;&#x5206;&#x6790;&#x7ed3;&#x679c;&#x3002;","children":[],"payload":{"tag":"li","lines":"64,65","listIndex":3}},{"content":"4. <strong>&#x89e3;&#x6790;&#x4e0e;&#x8f93;&#x51fa;</strong>&#xff1a;&#x4ece;<code>ChatResponse</code>&#x4e2d;&#x83b7;&#x53d6;AI&#x7684;&#x56de;&#x590d;&#xff0c;&#x6253;&#x5370;&#x51fa;&#x5904;&#x7406;&#x540e;&#x7684;&#x7ed3;&#x679c;&#x3002;","children":[],"payload":{"tag":"li","lines":"65,67","listIndex":4}}],"payload":{"tag":"h3","lines":"60,61"}},{"content":"&#x5e94;&#x7528;&#x573a;&#x666f;&#xff1a;","children":[{"content":"<pre data-lines=\"69,73\"><code>*   **&#x56fe;&#x50cf;&#x6587;&#x5b57;&#x63d0;&#x53d6;**&#xff1a;&#x5982;&#x53d1;&#x7968;&#x4fe1;&#x606f;&#x7684;&#x63d0;&#x53d6;&#x3001;&#x8868;&#x5355;&#x4e2d;&#x7684;&#x6570;&#x636e;&#x4fe1;&#x606f;&#x8bc6;&#x522b;&#x7b49;&#x3002;\n*   **&#x56fe;&#x50cf;&#x6807;&#x6ce8;&#x548c;&#x7406;&#x89e3;**&#xff1a;&#x7ed3;&#x5408;&#x6587;&#x672c;&#x8f93;&#x5165;&#xff0c;&#x6839;&#x636e;&#x7279;&#x5b9a;&#x4f4d;&#x7f6e;&#x6216;&#x5185;&#x5bb9;&#x8981;&#x6c42;&#x5bf9;&#x56fe;&#x50cf;&#x8fdb;&#x884c;&#x8be6;&#x7ec6;&#x5206;&#x6790;&#x3002;\n\n&#x8fd9;&#x79cd;&#x65b9;&#x6cd5;&#x53ef;&#x4ee5;&#x5e94;&#x7528;&#x5728;&#x5b9e;&#x9645;&#x4e1a;&#x52a1;&#x4e2d;&#xff0c;&#x5982;OCR&#xff08;&#x5149;&#x5b66;&#x5b57;&#x7b26;&#x8bc6;&#x522b;&#xff09;&#x3001;&#x56fe;&#x50cf;&#x5ba1;&#x6838;&#x3001;&#x5408;&#x89c4;&#x6027;&#x68c0;&#x67e5;&#x7b49;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"69,73"}}],"payload":{"tag":"h3","lines":"67,68"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"LoadBalancer &#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x5668;&#x4f5c;&#x7528;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,6\"><code>Spring Cloud Load Balancer &#x662f; Spring &#x5b98;&#x65b9;&#x53d1;&#x5e03;&#x7684;&#x4e91;&#x4e2d;&#x95f4;&#x5c42;&#x670d;&#x52a1;&#x5f00;&#x6e90;&#x9879;&#x76ee;&#xff0c;&#x5176;&#x4e3b;&#x8981;&#x529f;&#x80fd;&#x662f;&#x63d0;&#x4f9b;**&#x5ba2;&#x6237;&#x7aef;&#x5b9e;&#x73b0;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7b97;&#x6cd5;**&#x3002;Spring Cloud Load Balancer &#x5ba2;&#x6237;&#x7aef;&#x7ec4;&#x4ef6;&#x63d0;&#x4f9b;&#x4e00;&#x7cfb;&#x5217;&#x5b8c;&#x5584;&#x7684;&#x914d;&#x7f6e;&#x9879;&#x5982;&#x8fde;&#x63a5;&#x8d85;&#x65f6;&#xff0c;&#x91cd;&#x8bd5;&#x7b49;&#x3002;&#x7b80;&#x5355;&#x7684;&#x8bf4;&#xff0c;Spring Cloud Load Balancer &#x662f;&#x4e00;&#x4e2a;&#x5ba2;&#x6237;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x5668;&#xff0c;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x5728;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d; Load Balancer &#x540e;&#x9762;&#x7684;&#x6240;&#x6709;&#x673a;&#x5668;&#xff0c;Spring Cloud Load Balancer &#x4f1a;&#x81ea;&#x52a8;&#x7684;&#x5e2e;&#x52a9;&#x4f60;&#x57fa;&#x4e8e;&#x67d0;&#x79cd;&#x89c4;&#x5219;&#xff08;&#x5982;&#x7b80;&#x5355;&#x8f6e;&#x8be2;&#xff0c;&#x968f;&#x673a;&#x8fde;&#x63a5;&#x7b49;&#xff09;&#x53bb;&#x8fde;&#x63a5;&#x8fd9;&#x4e9b;&#x673a;&#x5668;&#xff0c;&#x6211;&#x4eec;&#x4e5f;&#x5f88;&#x5bb9;&#x6613;&#x4f7f;&#x7528; Spring Cloud Load Balancer &#x5b9e;&#x73b0;&#x81ea;&#x5b9a;&#x4e49;&#x7684;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7b97;&#x6cd5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x670d;&#x52a1;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7b56;&#x7565;","children":[{"content":"<pre data-lines=\"10,14\"><code>&#x670d;&#x52a1;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;\n\n\n&#x670d;&#x52a1;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7531;&#x4e13;&#x95e8;&#x7684;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x8bbe;&#x5907;&#x6216;&#x8f6f;&#x4ef6;&#x5b8c;&#x6210;&#xff0c;&#x5ba2;&#x6237;&#x7aef;&#x65e0;&#x9700;&#x5173;&#x5fc3;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7684;&#x5b9e;&#x73b0;&#x7ec6;&#x8282;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,14"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1600613406328-a97edba4-3164-4e58-b6c0-c44927bd3178.png\" alt>","children":[],"payload":{"tag":"img","lines":"15,16"}}],"payload":{"tag":"h2","lines":"7,9"}},{"content":"&#x5ba2;&#x6237;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7b56;&#x7565;","children":[{"content":"<pre data-lines=\"20,24\"><code>&#x5ba2;&#x6237;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;\n\n\n&#x5ba2;&#x6237;&#x7aef;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7531;&#x5ba2;&#x6237;&#x7aef;&#x81ea;&#x8eab;&#x5b9e;&#x73b0;&#x8d1f;&#x8f7d;&#x5747;&#x8861;&#x7b97;&#x6cd5;&#xff0c;&#x76f4;&#x63a5;&#x9009;&#x62e9;&#x8981;&#x8c03;&#x7528;&#x7684;&#x670d;&#x52a1;&#x5b9e;&#x4f8b;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,24"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1600613431664-995fc1f6-c63f-4973-ab5d-596d4a44124e.png\" alt>","children":[],"payload":{"tag":"img","lines":"25,26"}}],"payload":{"tag":"h2","lines":"17,19"}},{"content":"&#x8c03;&#x7528;&#x793a;&#x4f8b;&#x56fe;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1621907915395-81c049bd-dbad-488b-8989-0d42baf6af30.png\" alt>","children":[],"payload":{"tag":"img","lines":"30,31"}}],"payload":{"tag":"h2","lines":"27,29"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

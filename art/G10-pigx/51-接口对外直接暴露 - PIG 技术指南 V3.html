@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x63a5;&#x53e3;&#x5bf9;&#x5916;&#x76f4;&#x63a5;&#x66b4;&#x9732;","children":[{"content":"&#x73b0;&#x8c61;","children":[{"content":"<pre data-lines=\"7,10\"><code>&#x5982;&#x679c;&#x5fae;&#x670d;&#x52a1;&#x63a5;&#x5165;&#x4e86;&#x8d44;&#x6e90;&#x670d;&#x52a1;&#x5668;&#xff0c;&#x90a3;&#x4e48;&#x5168;&#x90e8;&#x7684;&#x8d44;&#x6e90;&#x88ab; Spring Security OAuth &#x62e6;&#x622a;&#xff0c;&#x5982;&#x679c;&#x6ca1;&#x6709;&#x5408;&#x6cd5; token &#x76f4;&#x63a5;&#x4f1a;&#x88ab;&#x62d2;&#x7edd;&#x3002;\n\n&#x5982;&#x4e0b;&#x56fe;&#xff0c;&#x63d0;&#x793a;&#x5982;&#x4e0b;&#x9519;&#x8bef;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,10"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599313987030-1d13cd7b-bf62-4652-9345-9bc75cd14d35.jpeg\" alt>","children":[],"payload":{"tag":"img","lines":"11,12"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x65b9;&#x6848;&#x4e00;","children":[{"content":"<pre data-lines=\"17,18\"><code>&#x76f4;&#x63a5;&#x5728;&#x63a5;&#x53e3;&#x914d;&#x7f6e;&#xff0c;&#x82e5;&#x5c01;&#x88c5;&#x63a5;&#x53e3;&#xff08;&#x4f8b;&#x5982; Swagger &#x7b49;&#xff09;&#x65e0;&#x6cd5;&#x52a0;&#xff0c;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x53c2;&#x8003;&#x4e0b;&#x6587;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;&#x58f0;&#x660e;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,18"}},{"content":"<pre data-lines=\"21,28\"><code data-lines=\"21,28\"><span class=\"hljs-comment\">// &#x5982;&#x679c;&#x914d;&#x7f6e;&#x5728; controller &#x7c7b;&#x4e0a; &#x662f;&#x6574;&#x4e2a;&#x7c7b;&#x7684;&#x63a5;&#x53e3;&#x5bf9;&#x5916;&#x66b4;&#x9732;</span>\n<span class=\"hljs-variable\">@Inner</span>(value = false)\n<span class=\"hljs-variable\">@GetMapping</span>(<span class=\"hljs-string\">&quot;/&quot;</span>)\npublic R <span class=\"hljs-built_in\">api</span>() {\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,28"}}],"payload":{"tag":"h2","lines":"14,16"}},{"content":"&#x65b9;&#x6848;&#x4e8c;","children":[{"content":"<pre data-lines=\"33,34\"><code>&#x5728;&#x5bf9;&#x5e94;&#x5fae;&#x670d;&#x52a1;&#x6a21;&#x5757;&#x7684; Nacos &#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x4e2d;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"33,34"}},{"content":"<pre data-lines=\"37,44\"><code data-lines=\"37,44\"><span class=\"hljs-attribute\">security</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">oauth2</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">ignore</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">urls</span><span class=\"hljs-punctuation\">: </span>\n <span class=\"hljs-bullet\">-</span> <span class=\"hljs-string\">&#x76ee;&#x6807;&#x63a5;&#x53e3;&#x7684;Ant&#x8868;&#x8fbe;&#x5f0f;&#x5373;&#x53ef; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,44"}}],"payload":{"tag":"h2","lines":"30,32"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

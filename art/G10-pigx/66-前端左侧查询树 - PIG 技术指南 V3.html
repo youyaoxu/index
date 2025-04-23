@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x5de6;&#x4fa7;&#x67e5;&#x8be2;&#x6811;","children":[{"content":"&#x7ec4;&#x4ef6;&#x9884;&#x89c8;","children":[{"content":"<img src=\"https://minio.pigx.top/oss/202304/1681633931.png\" alt>","children":[],"payload":{"tag":"img","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x57fa;&#x672c;&#x7528;&#x6cd5;","children":[{"content":"<pre data-lines=\"14,18\"><code data-lines=\"14,18\">&lt;<span class=\"hljs-keyword\">query</span>-tree :<span class=\"hljs-keyword\">query</span>=<span class=\"hljs-string\">&quot;state.queryList&quot;</span> @node-click=<span class=\"hljs-string\">&quot;handleNodeClick&quot;</span>&gt;\n&lt;/<span class=\"hljs-keyword\">query</span>-tree&gt; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,18"}},{"content":"<pre data-lines=\"21,34\"><code data-lines=\"21,34\">const QueryTree = defineAsyncComponent(\n <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> <span class=\"hljs-keyword\">import</span>(<span class=\"hljs-string\">&quot;/@/components/QueryTree/index.vue&quot;</span>)\n);\nconst state = reactive({\n queryList: <span class=\"hljs-function\"><span class=\"hljs-params\">(name: <span class=\"hljs-built_in\">String</span>)</span> =&gt;</span> {\n <span class=\"hljs-keyword\">return</span> api({\n name: name,\n });\n },\n});\nconst handleNodeClick = <span class=\"hljs-function\"><span class=\"hljs-params\">(e: any)</span> =&gt;</span> {}; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,34"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x63d2;&#x69fd;&#x6269;&#x5c55;","children":[{"content":"<pre data-lines=\"40,45\"><code data-lines=\"40,45\"><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">query-tree</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">default</span>=<span class=\"hljs-string\">&quot;</span></span></span><span class=\"hljs-template-variable\">{ node, data }</span><span class=\"language-xml\"><span class=\"hljs-tag\"><span class=\"hljs-string\">&quot;</span>&gt;</span> <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">query-tree</span>&gt;</span> \n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"40,45"}}],"payload":{"tag":"h2","lines":"35,37"}},{"content":"&#x5c5e;&#x6027;&#x8bf4;&#x660e;","children":[{"content":"<table data-lines=\"50,56\">\n<thead data-lines=\"50,51\">\n<tr data-lines=\"50,51\">\n<th>&#x5c5e;&#x6027;</th>\n<th>&#x8bf4;&#x660e;</th>\n<th>&#x7c7b;&#x578b;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"52,56\">\n<tr data-lines=\"52,53\">\n<td>props</td>\n<td>&#x6811;&#x5f62;&#x7ed3;&#x6784;&#x7684;&#x5c5e;&#x6027;&#x914d;&#x7f6e;</td>\n<td>Object</td>\n<td><code>{ label: &apos;name&apos;, children: &apos;children&apos;, value: &apos;id&apos; }</code></td>\n</tr>\n<tr data-lines=\"53,54\">\n<td>placeholder</td>\n<td>&#x8f93;&#x5165;&#x6846;&#x7684;&#x5360;&#x4f4d;&#x7b26;</td>\n<td>String</td>\n<td>&#x201d;</td>\n</tr>\n<tr data-lines=\"54,55\">\n<td>loading</td>\n<td>&#x662f;&#x5426;&#x663e;&#x793a;&#x52a0;&#x8f7d;&#x72b6;&#x6001;</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr data-lines=\"55,56\">\n<td>query</td>\n<td>&#x5305;&#x542b;&#x67e5;&#x8be2;&#x65b9;&#x6cd5;&#x7684;&#x51fd;&#x6570;&#xff0c;&#x5fc5;&#x987b;&#x8fd4;&#x56de; Promise &#x7c7b;&#x578b;&#x7684;&#x6570;&#x636e;&#xff0c;&#x5e76;&#x5728;&#x7ec4;&#x4ef6;&#x4e2d;&#x88ab;&#x8c03;&#x7528;</td>\n<td>Function</td>\n<td>-</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"50,56"}}],"payload":{"tag":"h2","lines":"47,49"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

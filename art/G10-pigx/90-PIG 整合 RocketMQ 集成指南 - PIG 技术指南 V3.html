@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"PIG &#x6574;&#x5408; RocketMQ &#x96c6;&#x6210;&#x6307;&#x5357;","children":[{"content":"&#x5b89;&#x88c5; RocketMQ","children":[{"content":"<pre data-lines=\"7,8\"><code>&#x4e0b;&#x8f7d;&#x811a;&#x672c;&#x6587;&#x4ef6;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,8"}},{"content":"<pre data-lines=\"11,14\"><code data-lines=\"11,14\">git <span class=\"hljs-keyword\">clone</span> <span class=\"hljs-title\">https</span>://github.com/pig-mesh/rocketmq-docker-compose \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,14"}},{"content":"<pre data-lines=\"15,16\"><code>&#x4fee;&#x6539; IP &#x4e3a;&#x5bbf;&#x4e3b;&#x673a; IP\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,16"}},{"content":"<pre data-lines=\"19,22\"><code data-lines=\"19,22\"><span class=\"hljs-keyword\">vim</span> ./broker.<span class=\"hljs-keyword\">conf</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"19,22"}},{"content":"<img src=\"https://minio.pigx.vip/oss/1631422598.png\" alt>","children":[],"payload":{"tag":"img","lines":"23,24"}},{"content":"<pre data-lines=\"25,26\"><code>&#x6267;&#x884c;&#x542f;&#x52a8; rocketmq\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,26"}},{"content":"<pre data-lines=\"29,32\"><code data-lines=\"29,32\"><span class=\"hljs-attribute\">docker-compose up -d</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,32"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x4ee3;&#x7801;&#x6574;&#x5408;","children":[{"content":"<pre data-lines=\"37,38\"><code>&#x76ee;&#x6807;&#x670d;&#x52a1;&#x589e;&#x52a0; rocketmq &#x4f9d;&#x8d56; jar\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,38"}},{"content":"<pre data-lines=\"41,48\"><code data-lines=\"41,48\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">dependency</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">groupId</span>&gt;</span>com.pig4cloud.plugin<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">groupId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">artifactId</span>&gt;</span>rocketmq-spring-boot3-starter<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">artifactId</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">version</span>&gt;</span>2.2.3<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">version</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">dependency</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"41,48"}},{"content":"<pre data-lines=\"49,50\"><code>nacos **&#x5bf9;&#x5e94;&#x7684;&#x670d;&#x52a1;**&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x589e;&#x52a0;&#x94fe;&#x63a5;&#x76f8;&#x5173;&#x4fe1;&#x606f;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"49,50"}},{"content":"<pre data-lines=\"53,59\"><code data-lines=\"53,59\"><span class=\"hljs-attribute\">rocketmq</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">name-server</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">192.168.0.12:9876</span>\n <span class=\"hljs-attribute\">producer</span><span class=\"hljs-punctuation\">:</span>\n <span class=\"hljs-attribute\">group</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">test-group </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"53,59"}},{"content":"<pre data-lines=\"60,61\"><code>&#x914d;&#x7f6e;&#x961f;&#x5217;&#x76d1;&#x542c;&#x6d88;&#x8d39;&#x8005;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"60,61"}},{"content":"<pre data-lines=\"64,74\"><code data-lines=\"64,74\"><span class=\"hljs-variable\">@Slf4j</span>\n<span class=\"hljs-variable\">@Service</span>\n<span class=\"hljs-variable\">@RocketMQMessageListener</span>(topic = <span class=\"hljs-string\">&quot;test-topic-1&quot;</span>, consumerGroup = <span class=\"hljs-string\">&quot;test-group&quot;</span>)\npublic class MyConsumer1 implements RocketMQListener&lt;String&gt; {\n <span class=\"hljs-selector-tag\">public</span> <span class=\"hljs-selector-tag\">void</span> <span class=\"hljs-selector-tag\">onMessage</span>(String message) {\n <span class=\"hljs-selector-tag\">log</span><span class=\"hljs-selector-class\">.info</span>(<span class=\"hljs-string\">&quot;received message: {}&quot;</span>, message);\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"64,74"}},{"content":"<pre data-lines=\"75,76\"><code>&#x6d4b;&#x8bd5;&#x6d88;&#x606f;&#x53d1;&#x9001;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"75,76"}},{"content":"<pre data-lines=\"79,92\"><code data-lines=\"79,92\"><span class=\"hljs-variable\">@SpringBootTest</span>\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">DemoApplicationTests</span> </span>{\n\n <span class=\"hljs-variable\">@Autowired</span>\n private RocketMQTemplate rocketMQTemplate;\n\n <span class=\"hljs-variable\">@Test</span>\n void contextLoads() {\n rocketMQTemplate.convertAndSend(<span class=\"hljs-string\">&quot;test-topic-1&quot;</span>, <span class=\"hljs-string\">&quot;Hello, World!&quot;</span>);\n }\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"79,92"}}],"payload":{"tag":"h2","lines":"34,36"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

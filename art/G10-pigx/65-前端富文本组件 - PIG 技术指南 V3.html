@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x5bcc;&#x6587;&#x672c;&#x7ec4;&#x4ef6;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"5,8\"><code>Wangeditor &#x662f;&#x4e00;&#x6b3e;&#x57fa;&#x4e8e; Web &#x7684;&#x6240;&#x89c1;&#x5373;&#x6240;&#x5f97;&#x5bcc;&#x6587;&#x672c;&#x7f16;&#x8f91;&#x5668;&#xff0c;&#x5b83;&#x63d0;&#x4f9b;&#x4e86;&#x4e30;&#x5bcc;&#x7684;&#x5bcc;&#x6587;&#x672c;&#x7f16;&#x8f91;&#x529f;&#x80fd;&#xff0c;&#x652f;&#x6301;&#x63d2;&#x5165;&#x56fe;&#x7247;&#x3001;&#x97f3;&#x89c6;&#x9891;&#x7b49;&#x591a;&#x5a92;&#x4f53;&#x5185;&#x5bb9;&#xff0c;&#x5e76;&#x4e14;&#x53ef;&#x4ee5;&#x901a;&#x8fc7;&#x81ea;&#x5b9a;&#x4e49;&#x63d2;&#x4ef6;&#x6269;&#x5c55;&#x5176;&#x529f;&#x80fd;&#x3002;Wangeditor &#x652f;&#x6301;&#x8de8;&#x6d4f;&#x89c8;&#x5668;&#x548c;&#x8de8;&#x5e73;&#x53f0;&#xff0c;&#x540c;&#x65f6;&#x5177;&#x6709;&#x826f;&#x597d;&#x7684;&#x517c;&#x5bb9;&#x6027;&#x548c;&#x6027;&#x80fd;&#x8868;&#x73b0;&#xff0c;&#x6613;&#x4e8e;&#x96c6;&#x6210;&#x548c;&#x4f7f;&#x7528;&#x3002;\n\nWangeditor &#x91c7;&#x7528; HTML5 &#x548c; JavaScript &#x6280;&#x672f;&#x5b9e;&#x73b0;&#xff0c;&#x53ef;&#x4ee5;&#x76f4;&#x63a5;&#x5d4c;&#x5165;&#x5230;&#x7f51;&#x9875;&#x4e2d;&#x4f7f;&#x7528;&#xff0c;&#x4e5f;&#x53ef;&#x4ee5;&#x4f5c;&#x4e3a;&#x72ec;&#x7acb;&#x7684;&#x7f16;&#x8f91;&#x5668;&#x4f7f;&#x7528;&#x3002;&#x5728;&#x4f7f;&#x7528;&#x8fc7;&#x7a0b;&#x4e2d;&#xff0c;Wangeditor &#x63d0;&#x4f9b;&#x4e86;&#x7b80;&#x6d01;&#x7684; API &#x63a5;&#x53e3;&#x548c;&#x8be6;&#x7ec6;&#x7684;&#x6587;&#x6863;&#xff0c;&#x65b9;&#x4fbf;&#x5f00;&#x53d1;&#x4eba;&#x5458;&#x8fdb;&#x884c;&#x4e8c;&#x6b21;&#x5f00;&#x53d1;&#x548c;&#x6269;&#x5c55;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,8"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x9875;&#x9762;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"12,15\"><code data-lines=\"12,15\">&lt;editor v-<span class=\"hljs-built_in\">mod</span><span class=\"hljs-symbol\">el:ge</span><span class=\"hljs-built_in\">t</span>-html=<span class=\"hljs-string\">&quot;form.content&quot;</span> /&gt; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,15"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x5c5e;&#x6027;&#x8bf4;&#x660e;","children":[{"content":"<table data-lines=\"19,28\">\n<thead data-lines=\"19,20\">\n<tr data-lines=\"19,20\">\n<th>&#x5c5e;&#x6027;&#x540d;&#x79f0;</th>\n<th>&#x63cf;&#x8ff0;</th>\n<th>&#x7c7b;&#x578b;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n</tr>\n</thead>\n<tbody data-lines=\"21,28\">\n<tr data-lines=\"21,22\">\n<td>disable</td>\n<td>&#x662f;&#x5426;&#x7981;&#x7528;&#x7f16;&#x8f91;&#x5668;</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr data-lines=\"22,23\">\n<td>placeholder</td>\n<td>&#x7f16;&#x8f91;&#x5668;&#x9ed8;&#x8ba4;&#x5360;&#x4f4d;&#x7b26;</td>\n<td>String</td>\n<td>&#x201d;&#x8bf7;&#x8f93;&#x5165;&#x5185;&#x5bb9;&#x2026;&#x201c;</td>\n</tr>\n<tr data-lines=\"23,24\">\n<td>mode</td>\n<td>&#x7f16;&#x8f91;&#x5668;&#x6a21;&#x5f0f;&#xff0c;&#x53ef;&#x9009;&#x503c;&#x4e3a; default &#x6216; simple</td>\n<td>String</td>\n<td>default</td>\n</tr>\n<tr data-lines=\"24,25\">\n<td>height</td>\n<td>&#x7f16;&#x8f91;&#x5668;&#x9ad8;&#x5ea6;</td>\n<td>String</td>\n<td>&#x201d;310px&#x201d;</td>\n</tr>\n<tr data-lines=\"25,26\">\n<td>getHtml</td>\n<td>&#x53cc;&#x5411;&#x7ed1;&#x5b9a;&#x7684;&#x5c5e;&#x6027;&#xff0c;&#x7528;&#x4e8e;&#x83b7;&#x53d6;&#x7f16;&#x8f91;&#x5668;&#x4e2d; HTML &#x5185;&#x5bb9;</td>\n<td>String</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"26,27\">\n<td>getText</td>\n<td>&#x53cc;&#x5411;&#x7ed1;&#x5b9a;&#x7684;&#x5c5e;&#x6027;&#xff0c;&#x7528;&#x4e8e;&#x83b7;&#x53d6;&#x7f16;&#x8f91;&#x5668;&#x4e2d;&#x7eaf;&#x6587;&#x672c;&#x5185;&#x5bb9;</td>\n<td>String</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"27,28\">\n<td>uploadFileUrl</td>\n<td>&#x4e0a;&#x4f20;&#x6587;&#x4ef6;&#x7684;&#x63a5;&#x53e3;&#x5730;&#x5740;</td>\n<td>String</td>\n<td>&#x201d;/admin/sys-file/upload&#x201d;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"19,28"}}],"payload":{"tag":"h2","lines":"16,18"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

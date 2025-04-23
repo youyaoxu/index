@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x901a;&#x7528;&#x5de5;&#x5177;&#x51fd;&#x6570;","children":[{"content":"&#x70b9;&#x51fb;&#x590d;&#x5236;&#x6587;&#x672c;","children":[{"content":"<pre data-lines=\"9,12\"><code data-lines=\"9,12\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">button</span> @<span class=\"hljs-attr\">click</span>=<span class=\"hljs-string\">&quot;copyText(&apos;&#x6587;&#x6848;&#x5185;&#x5bb9;&apos;)&quot;</span>&gt;</span>&#x590d;&#x5236;<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">button</span>&gt;</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"9,12"}},{"content":"<pre data-lines=\"15,18\"><code data-lines=\"15,18\">const { copyText } <span class=\"hljs-operator\">=</span> commonFunction()<span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,18"}}],"payload":{"tag":"h2","lines":"4,6"}},{"content":"&#x683c;&#x5f0f;&#x5316;&#x65f6;&#x95f4;","children":[{"content":"<pre data-lines=\"23,24\"><code>*   html &#x4ee3;&#x7801;&#x4e2d;&#x76f4;&#x63a5;&#x4f7f;&#x7528; parseDate parseTime &#x8fdb;&#x884c;&#x683c;&#x5f0f;&#x5316;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,24"}},{"content":"<pre data-lines=\"27,47\"><code data-lines=\"27,47\"><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-table-column</span>\n <span class=\"hljs-attr\">:label</span>=<span class=\"hljs-string\">&quot;t(&apos;tenant.startTime&apos;)&quot;</span>\n <span class=\"hljs-attr\">prop</span>=<span class=\"hljs-string\">&quot;startTime&quot;</span>\n <span class=\"hljs-attr\">show-overflow-tooltip</span>\n&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">default</span>=<span class=\"hljs-string\">&quot;scope&quot;</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">span</span>&gt;</span></span><span class=\"hljs-template-variable\">{{ <span class=\"hljs-name\">parseDate</span>(<span class=\"hljs-name\">scope.row.startTime</span>) }}</span><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">span</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">el-table-column</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">el-table-column</span>\n <span class=\"hljs-attr\">:label</span>=<span class=\"hljs-string\">&quot;t(&apos;tenant.endTime&apos;)&quot;</span>\n <span class=\"hljs-attr\">prop</span>=<span class=\"hljs-string\">&quot;endTime&quot;</span>\n <span class=\"hljs-attr\">show-overflow-tooltip</span>\n&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">default</span>=<span class=\"hljs-string\">&quot;scope&quot;</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">span</span>&gt;</span></span><span class=\"hljs-template-variable\">{{ <span class=\"hljs-name\">parseTime</span>(<span class=\"hljs-name\">scope.row.endTime</span>) }}</span><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">span</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">el-table-column</span>&gt;</span> \n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"27,47"}},{"content":"<pre data-lines=\"48,49\"><code>*   ts &#x4e2d;&#x9700;&#x8981;&#x624b;&#x52a8;&#x5bfc;&#x5165;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"48,49"}},{"content":"<pre data-lines=\"52,55\"><code data-lines=\"52,55\"><span class=\"hljs-keyword\">import</span> { formatDate, parseDate } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&quot;/@/utils/formatTime&quot;</span>; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"52,55"}}],"payload":{"tag":"h2","lines":"20,22"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

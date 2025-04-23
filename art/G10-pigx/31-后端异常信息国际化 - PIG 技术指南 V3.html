@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x540e;&#x7aef;&#x5f02;&#x5e38;&#x4fe1;&#x606f;&#x56fd;&#x9645;&#x5316;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x9879;&#x76ee;&#x53ef;&#x80fd;&#x6d89;&#x53ca;&#x5230;&#x6237;&#x5bf9;&#x9879;&#x76ee;&#x8fdb;&#x884c;&#x8bbf;&#x95ee;&#x6216;&#x5728;&#x56fd;&#x5916;&#x90e8;&#xff0c;&#x90a3;&#x4e48;&#x5728;&#x9879;&#x76ee;&#x4e2d;&#xff0c;&#x4e3a;&#x5ba2;&#x6237;&#x5c55;&#x73b0;&#x7684;&#x9875;&#x9762;&#x6216;&#x8005;&#x64cd;&#x4f5c;&#x7684;&#x4fe1;&#x606f;&#x5c31;&#x9700;&#x8981;&#x4f7f;&#x7528;&#x4e0d;&#x540c;&#x7684;&#x8bed;&#x8a00;&#xff0c;&#x8fd9;&#x5c31;&#x662f;&#x6211;&#x4eec;&#x6240;&#x8bf4;&#x7684;&#x9879;&#x76ee;&#x56fd;&#x9645;&#x5316;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x914d;&#x7f6e; i18n &#x9519;&#x8bef;&#x6587;&#x6848;","children":[{"content":"<pre data-lines=\"12,13\"><code>&#x5728; `pig-common-core/resource/i18n/messages_zh_CN.properties` &#x6587;&#x4ef6;&#x4e2d;&#x914d;&#x7f6e;&#x9519;&#x8bef;&#x6587;&#x6848;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,13"}},{"content":"<pre data-lines=\"16,20\"><code data-lines=\"16,20\"><span class=\"hljs-attr\">sys.user.username.existing</span>={<span class=\"hljs-number\">0</span>} &#x7528;&#x6237;&#x540d;&#x5df2;&#x5b58;&#x5728;\n<span class=\"hljs-attr\">sys.user.userInfo.empty</span>={<span class=\"hljs-number\">0</span>} &#x7528;&#x6237;&#x4fe1;&#x606f;&#x4e3a;&#x7a7a; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,20"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x914d;&#x7f6e;&#x9519;&#x8bef;&#x7f16;&#x7801;","children":[{"content":"<pre data-lines=\"25,26\"><code>&#x5728; `ErrorCodes.java` &#x4e2d;&#x914d;&#x7f6e;&#x76f8;&#x5e94;&#x7f16;&#x7801;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"25,26"}},{"content":"<pre data-lines=\"29,33\"><code data-lines=\"29,33\">String SYS_USER_USERNAME_EXISTING <span class=\"hljs-operator\">=</span> <span class=\"hljs-string\">&quot;sys.user.username.existing&quot;</span><span class=\"hljs-comment\">;</span>\nString SYS_USER_USERINFO_EMPTY <span class=\"hljs-operator\">=</span> <span class=\"hljs-string\">&quot;sys.user.userInfo.empty&quot;</span><span class=\"hljs-comment\">; </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,33"}}],"payload":{"tag":"h2","lines":"22,24"}},{"content":"&#x4f7f;&#x7528; MsgUtils &#x83b7;&#x53d6;&#x56fd;&#x9645;&#x5316;&#x4fe1;&#x606f;","children":[{"content":"<pre data-lines=\"40,43\"><code data-lines=\"40,43\">MsgUtils<span class=\"hljs-selector-class\">.getMessage</span>(ErrorCodes.SYS_USER_USERNAME_EXISTING, username); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"40,43"}}],"payload":{"tag":"h2","lines":"36,38"}},{"content":"&#x7279;&#x522b;&#x8bf4;&#x660e;","children":[{"content":"MsgUtils &#x4f7f;&#x7528;&#x793a;&#x4f8b;","children":[{"content":"<pre data-lines=\"56,78\"><code data-lines=\"56,78\"><span class=\"hljs-comment\">/**\n * &#x901a;&#x8fc7; code &#x83b7;&#x53d6;&#x4e2d;&#x6587;&#x9519;&#x8bef;&#x4fe1;&#x606f;\n * <span class=\"hljs-doctag\">@param</span> code &#x9519;&#x8bef;&#x7801;\n * <span class=\"hljs-doctag\">@return</span> &#x9519;&#x8bef;&#x4fe1;&#x606f;\n */</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">String</span> <span class=\"hljs-title function_\">getMessage</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">String</span> code</span>) {\n <span class=\"hljs-title class_\">MessageSource</span> messageSource = <span class=\"hljs-title class_\">SpringUtil</span>.<span class=\"hljs-title function_\">getBean</span>(<span class=\"hljs-string\">&quot;messageSource&quot;</span>);\n <span class=\"hljs-keyword\">return</span> messageSource.<span class=\"hljs-title function_\">getMessage</span>(code, <span class=\"hljs-literal\">null</span>, <span class=\"hljs-title class_\">Locale</span>.<span class=\"hljs-property\">CHINA</span>);\n}\n\n<span class=\"hljs-comment\">/**\n * &#x901a;&#x8fc7; code &#x548c;&#x53c2;&#x6570;&#x83b7;&#x53d6;&#x4e2d;&#x6587;&#x9519;&#x8bef;&#x4fe1;&#x606f;\n * <span class=\"hljs-doctag\">@param</span> code &#x9519;&#x8bef;&#x7801;\n * <span class=\"hljs-doctag\">@param</span> objects &#x53c2;&#x6570;\n * <span class=\"hljs-doctag\">@return</span> &#x9519;&#x8bef;&#x4fe1;&#x606f;\n */</span>\n<span class=\"hljs-keyword\">public</span> <span class=\"hljs-title class_\">String</span> <span class=\"hljs-title function_\">getMessage</span>(<span class=\"hljs-params\"><span class=\"hljs-title class_\">String</span> code, <span class=\"hljs-title class_\">Object</span>... objects</span>) {\n <span class=\"hljs-title class_\">MessageSource</span> messageSource = <span class=\"hljs-title class_\">SpringUtil</span>.<span class=\"hljs-title function_\">getBean</span>(<span class=\"hljs-string\">&quot;messageSource&quot;</span>);\n <span class=\"hljs-keyword\">return</span> messageSource.<span class=\"hljs-title function_\">getMessage</span>(code, objects, <span class=\"hljs-title class_\">Locale</span>.<span class=\"hljs-property\">CHINA</span>);\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"56,78"}}],"payload":{"tag":"h3","lines":"52,53"}}],"payload":{"tag":"h2","lines":"45,47"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>

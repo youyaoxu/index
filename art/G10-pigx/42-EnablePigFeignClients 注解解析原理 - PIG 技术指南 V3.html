@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"EnablePigFeignClients &#x6ce8;&#x89e3;&#x89e3;&#x6790;&#x539f;&#x7406;","children":[{"content":"&#x6e90;&#x7801;&#x89e3;&#x6790;","children":[{"content":"<pre data-lines=\"4,5\"><code>&#x53ea;&#x662f;&#x7ed9;&#x9ed8;&#x8ba4;&#x7684; EnableFeignClients &#x589e;&#x52a0;&#x4e86;&#x4e00;&#x4e2a;&#x9ed8;&#x8ba4;&#x503c;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"4,5"}},{"content":"<pre data-lines=\"6,25\"><code data-lines=\"6,25\"><span class=\"hljs-keyword\">@Target</span>(ElementType.TYPE)\n<span class=\"hljs-keyword\">@Retention</span>(RetentionPolicy.RUNTIME)\n<span class=\"hljs-keyword\">@Documented</span>\n<span class=\"hljs-keyword\">@EnableFeignClients</span>\npublic <span class=\"hljs-keyword\">@interface</span> EnablePigxFeignClients {\n\n String<span class=\"hljs-selector-attr\">[]</span> <span class=\"hljs-built_in\">value</span>() default {};\n    \n <span class=\"hljs-comment\">// &#x6307;&#x5b9a;&#x9ed8;&#x8ba4;&#x7684;&#x626b;&#x63cf;&#x8303;&#x56f4;</span>\n String<span class=\"hljs-selector-attr\">[]</span> <span class=\"hljs-built_in\">basePackages</span>() default {&quot;com<span class=\"hljs-selector-class\">.pig4cloud</span><span class=\"hljs-selector-class\">.pigx</span>&quot;};\n\n Class&lt;?&gt;<span class=\"hljs-selector-attr\">[]</span> <span class=\"hljs-built_in\">basePackageClasses</span>() default {};\n\n Class&lt;?&gt;<span class=\"hljs-selector-attr\">[]</span> <span class=\"hljs-built_in\">defaultConfiguration</span>() default {};\n\n Class&lt;?&gt;<span class=\"hljs-selector-attr\">[]</span> <span class=\"hljs-built_in\">clients</span>() default {};\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,25"}}],"payload":{"tag":"h3","lines":"2,3"}},{"content":"&#x4ee5; UPMS &#x4e3a;&#x4f8b;&#x5206;&#x6790;&#x5c01;&#x88c5;&#x7684;&#x597d;&#x5904;","children":[{"content":"<a href=\"https://wiki.pig4cloud.com/EnableFeignClients\">@EnableFeignClients</a>","children":[{"content":"<pre data-lines=\"37,44\"><code data-lines=\"37,44\"><span class=\"hljs-variable\">@EnableFeignClients</span>\n<span class=\"hljs-variable\">@SpringCloudApplication</span>\npublic class PigAdminApplication {\n\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"37,44"}}],"payload":{"tag":"h4","lines":"35,36"}},{"content":"@EnablePigFeignClients","children":[{"content":"<pre data-lines=\"47,57\"><code data-lines=\"47,57\"><span class=\"hljs-variable\">@EnablePigFeignClients</span>\n<span class=\"hljs-variable\">@SpringCloudApplication</span>\npublic class PigAdminApplication {\n <span class=\"hljs-selector-tag\">public</span> <span class=\"hljs-selector-tag\">static</span> <span class=\"hljs-selector-tag\">void</span> <span class=\"hljs-selector-tag\">main</span>(String[] args) {\n <span class=\"hljs-selector-tag\">SpringApplication</span><span class=\"hljs-selector-class\">.run</span>(PigAdminApplication.class, args);\n }\n\n} \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,57"}}],"payload":{"tag":"h4","lines":"45,46"}}],"payload":{"tag":"h3","lines":"26,27"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

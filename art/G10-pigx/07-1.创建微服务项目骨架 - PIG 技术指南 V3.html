@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"07-1.&#x521b;&#x5efa;&#x5fae;&#x670d;&#x52a1;&#x9879;&#x76ee;&#x9aa8;&#x67b6; - PIG &#x6280;&#x672f;&#x6307;&#x5357; V3","children":[{"content":"1.&#x521b;&#x5efa;&#x5fae;&#x670d;&#x52a1;&#x9879;&#x76ee;&#x9aa8;&#x67b6;","children":[{"content":"1. &#x7f16;&#x8bd1;&#x539f;&#x6709; pig &#x9879;&#x76ee;","children":[{"content":"<pre data-lines=\"12,13\"><code>&#x5728; pig &#x6839;&#x76ee;&#x5f55;&#x6267;&#x884c;&#x4ee5;&#x4e0b;&#x547d;&#x4ee4;&#xff1a;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"12,13"}},{"content":"<pre data-lines=\"14,17\"><code data-lines=\"14,17\"><span class=\"hljs-keyword\">mvn</span> clean install \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"14,17"}}],"payload":{"tag":"h3","lines":"9,10"}},{"content":"2. &#x6267;&#x884c;&#x751f;&#x6210;","children":[{"content":"<pre data-lines=\"21,22\"><code>**&#x52a1;&#x5fc5;&#x6309;&#x7167;&#x672c;&#x6587;&#x6863;** `&#x5305;&#x540d;&#x3001;&#x9879;&#x76ee;&#x540d;` **&#x8fdb;&#x884c;&#x521d;&#x59cb;&#x5316;&#xff0c;&#x5176;&#x4ed6;&#x8bf7;&#x4e86;&#x89e3; pig** `feign&#x3001;mybatis` **&#x7684;&#x5305;&#x626b;&#x63cf;&#x89c4;&#x5219;&#xff0c;&#x4e0d;&#x7136; bean &#x626b;&#x63cf;&#x4e0d;&#x5230;&#xff01;**\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"21,22"}}],"payload":{"tag":"h3","lines":"18,19"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x5728;&#x7ebf;&#x4e0b;&#x8f7d;","children":[{"content":"<pre data-lines=\"27,28\"><code>&#x70b9;&#x51fb;&#x6b64;&#x5904;&#x8bbf;&#x95ee;&#x5728;&#x7ebf;&#x4e0b;&#x8f7d;&#x9875;&#x9762;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"27,28"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1721096240999-6f06577e-9d96-4d1d-a2e0-ab94ac47f53f.png\" alt>","children":[],"payload":{"tag":"img","lines":"29,30"}}],"payload":{"tag":"h2","lines":"24,26"}},{"content":"&#x5e38;&#x89c1;&#x95ee;&#x9898;","children":[{"content":"1. &#x8fd0;&#x884c;&#x63d0;&#x793a;&#x7f3a;&#x5c11;&#x4f9d;&#x8d56;","children":[{"content":"<pre data-lines=\"36,37\"><code>&#x8fd0;&#x884c;&#x65b0;&#x6a21;&#x5757;&#x63d0;&#x793a;&#x7f3a;&#x5c11;&#x4f9d;&#x8d56;&#x62a5;&#x9519;&#xff0c;&#x5982;&#x4e0b;&#x56fe;&#x62a5;&#x9519;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,37"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661477533668-37521260-69b3-4fa5-ab46-02501843a0a9.png\" alt>","children":[],"payload":{"tag":"img","lines":"38,39"}}],"payload":{"tag":"h3","lines":"34,35"}},{"content":"2. &#x89e3;&#x51b3;&#x65b9;&#x6848;","children":[{"content":"<pre data-lines=\"43,54\"><code>*   &#x68c0;&#x67e5;&#x7f16;&#x8bd1;\n*   &#x68c0;&#x67e5;&#x7248;&#x672c;\n*   &#x68c0;&#x67e5; Maven &#x8bbe;&#x7f6e;\n\n**&#x7f16;&#x8bd1;&#x9a8c;&#x8bc1;&#xff1a;**  &#x786e;&#x8ba4;&#x5df2;&#x5b8c;&#x6210; PIG &#x5fae;&#x670d;&#x52a1;&#x9879;&#x76ee;&#x7684;&#x6574;&#x4f53;&#x7f16;&#x8bd1;&#xff08;&#x6267;&#x884c;&#x8fc7;`mvn clean install`&#xff09;\n\n**&#x7f16;&#x8bd1;&#x9a8c;&#x8bc1;&#xff1a;**  &#x786e;&#x8ba4;&#x5df2;&#x5b8c;&#x6210; PIG &#x5fae;&#x670d;&#x52a1;&#x9879;&#x76ee;&#x7684;&#x6574;&#x4f53;&#x7f16;&#x8bd1;&#xff08;&#x6267;&#x884c;&#x8fc7;`mvn clean install`&#xff09;\n\n**&#x7248;&#x672c;&#x4e00;&#x81f4;&#x6027;&#xff1a;**  &#x6838;&#x5bf9;&#x65b0;&#x5efa;&#x9879;&#x76ee;&#x4e0e; PIG &#x4e3b;&#x5de5;&#x7a0b;&#x7684;&#x7248;&#x672c;&#x53f7;&#xff08;&#x67e5;&#x770b; pom.xml &#x4e2d; parent &#x7248;&#x672c;&#x53f7;&#xff09;\n\n**&#x914d;&#x7f6e;&#x9a8c;&#x8bc1;&#xff1a;**  &#x9a8c;&#x8bc1; IDEA &#x4e2d; Maven &#x914d;&#x7f6e;&#x6307;&#x5411;&#x6b63;&#x786e;&#x7684;&#x672c;&#x5730;&#x4ed3;&#x5e93;&#x53ca;&#x8fdc;&#x7a0b;&#x4ed3;&#x5e93;&#xff08;File &gt; Settings &gt; Build Tools &gt; Maven&#xff09;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"43,54"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661477769308-44a8e837-9bf7-406e-98d6-a32877cc5a7e.png\" alt>","children":[],"payload":{"tag":"img","lines":"55,56"}}],"payload":{"tag":"h3","lines":"41,42"}},{"content":"3. &#x5237;&#x65b0; Maven &#x9762;&#x677f;","children":[{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661477882335-b77e0eed-f889-48dc-a0c6-9237da433cc8.png\" alt>","children":[],"payload":{"tag":"img","lines":"60,61"}}],"payload":{"tag":"h3","lines":"58,59"}}],"payload":{"tag":"h2","lines":"31,33"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

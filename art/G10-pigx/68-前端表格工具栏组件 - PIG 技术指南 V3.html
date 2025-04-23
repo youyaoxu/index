@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x524d;&#x7aef;&#x8868;&#x683c;&#x5de5;&#x5177;&#x680f;&#x7ec4;&#x4ef6;","children":[{"content":"&#x5206;&#x9875;&#x7ec4;&#x4ef6;&#x4f7f;&#x7528;","children":[{"content":"<pre data-lines=\"5,6\"><code>&#x5de5;&#x5177;&#x680f;&#x7ec4;&#x4ef6;&#x4e00;&#x822c;&#x548c;&#x8868;&#x683c;&#x7ec4;&#x4ef6;&#x4e00;&#x8d77;&#x4f7f;&#x7528;&#xff0c;&#x53ea;&#x9700;&#x8981;&#x56de;&#x8c03; useTable hook &#x4e2d;&#x7684;&#x51fd;&#x6570;&#x5373;&#x53ef;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}},{"content":"<pre data-lines=\"7,15\"><code data-lines=\"7,15\">&lt;right-toolbar\n v-model:<span class=\"hljs-attribute\">showSearch</span>=<span class=\"hljs-string\">&quot;showSearch&quot;</span>\n :<span class=\"hljs-attribute\">export</span>=<span class=\"hljs-string\">&quot;&apos;sys_user_export&apos;&quot;</span>\n @<span class=\"hljs-attribute\">exportExcel</span>=<span class=\"hljs-string\">&quot;exportExcel&quot;</span>\n @<span class=\"hljs-attribute\">queryTable</span>=<span class=\"hljs-string\">&quot;getDataList&quot;</span>\n/&gt; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"7,15"}},{"content":"<pre data-lines=\"16,19\"><code data-lines=\"16,19\"><span class=\"hljs-keyword\">const</span> { getDataList } = useTable(<span class=\"hljs-keyword\">state</span>); \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"16,19"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x63d2;&#x69fd;&#x6269;&#x5c55;","children":[{"content":"<pre data-lines=\"23,28\"><code data-lines=\"23,28\"><span class=\"language-xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">query-tree</span>&gt;</span>\n <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">template</span> #<span class=\"hljs-attr\">default</span>=<span class=\"hljs-string\">&quot;</span></span></span><span class=\"hljs-template-variable\">{ node, data }</span><span class=\"language-xml\"><span class=\"hljs-tag\"><span class=\"hljs-string\">&quot;</span>&gt;</span> <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">template</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">query-tree</span>&gt;</span> \n</span></code></pre>","children":[],"payload":{"tag":"pre","lines":"23,28"}}],"payload":{"tag":"h2","lines":"20,22"}},{"content":"&#x5c5e;&#x6027;&#x8bf4;&#x660e;","children":[{"content":"<table data-lines=\"32,38\">\n<thead data-lines=\"32,33\">\n<tr data-lines=\"32,33\">\n<th>&#x5c5e;&#x6027;</th>\n<th>&#x7c7b;&#x578b;</th>\n<th>&#x9ed8;&#x8ba4;&#x503c;</th>\n<th>&#x8bf4;&#x660e;</th>\n</tr>\n</thead>\n<tbody data-lines=\"34,38\">\n<tr data-lines=\"34,35\">\n<td>showSearch</td>\n<td>Boolean</td>\n<td>true</td>\n<td>&#x662f;&#x5426;&#x663e;&#x793a;&#x641c;&#x7d22;&#x6846;</td>\n</tr>\n<tr data-lines=\"35,36\">\n<td>export</td>\n<td>String</td>\n<td>Boolean</td>\n<td>-</td>\n</tr>\n<tr data-lines=\"36,37\">\n<td>search</td>\n<td>Boolean</td>\n<td>true</td>\n<td>&#x662f;&#x5426;&#x663e;&#x793a;&#x641c;&#x7d22;&#x6846;</td>\n</tr>\n<tr data-lines=\"37,38\">\n<td>gutter</td>\n<td>Number</td>\n<td>10</td>\n<td>&#x5217;&#x8868;&#x9879;&#x4e4b;&#x95f4;&#x7684;&#x95f4;&#x8ddd;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"32,38"}}],"payload":{"tag":"h2","lines":"29,31"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

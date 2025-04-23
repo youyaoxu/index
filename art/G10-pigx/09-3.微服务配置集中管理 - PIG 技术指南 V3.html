@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"09-3.&#x5fae;&#x670d;&#x52a1;&#x914d;&#x7f6e;&#x96c6;&#x4e2d;&#x7ba1;&#x7406; - PIG &#x6280;&#x672f;&#x6307;&#x5357; V3","children":[{"content":"Nacos &#x914d;&#x7f6e;&#x7ba1;&#x7406;","children":[{"content":"<pre data-lines=\"5,6\"><code>&#x8bbf;&#x95ee; Nacos &#x63a7;&#x5236;&#x53f0;&#x5730;&#x5740;&#xff1a;`http://pig-register:8848/nacos`\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"5,6"}}],"payload":{"tag":"h2","lines":"2,4"}},{"content":"&#x65b0;&#x589e;&#x914d;&#x7f6e;&#x6587;&#x4ef6;","children":[{"content":"<pre data-lines=\"10,12\"><code>1.  dataId &#x5fc5;&#x987b;&#x4e3a; &#x5fae;&#x670d;&#x52a1;&#x540d;&#x79f0;-dev.yml&#xff08;&#x4f8b;&#x5982; demo-biz-dev.yml&#xff09;\n2.  &#x914d;&#x7f6e;&#x7c7b;&#x578b; &#x5fc5;&#x987b;&#x9009;&#x62e9; yaml\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,12"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599233245468-0fb3e17c-e58f-47b9-a443-42eb7b8ef928.png\" alt>","children":[],"payload":{"tag":"img","lines":"13,14"}},{"content":"<pre data-lines=\"15,16\"><code>&#x5c06; **&#x5b8c;&#x6210;&#x5fae;&#x670d;&#x52a1;&#x589e;&#x5220;&#x6539;&#x67e5;&#x7ae0;&#x8282;** &#x65b0;&#x589e;&#x7684;&#x914d;&#x7f6e; **&#x526a;&#x5207;**&#x5230;&#x914d;&#x7f6e;&#x4e2d;&#x5fc3;&#x5373;&#x53ef;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"15,16"}},{"content":"<pre data-lines=\"17,26\"><code data-lines=\"17,26\"><span class=\"hljs-params\">spring:</span>\n <span class=\"hljs-params\">datasource:</span>  <span class=\"hljs-comment\"># &#x793a;&#x4f8b;&#x6570;&#x636e;&#x6e90;&#x914d;&#x7f6e;&#xff0c;&#x6ce8;&#x610f;&#x4fee;&#x6539;&#x4e5f;&#x53ef;&#x914d;&#x7f6e;&#x81f3; nacos</span>\n <span class=\"hljs-params\">type:</span> com.zaxxer.hikari.HikariDataSource\n <span class=\"hljs-params\">driver-class-name:</span> com.mysql.cj.jdbc.Driver\n <span class=\"hljs-params\">username:</span> root\n <span class=\"hljs-params\">password:</span> root\n <span class=\"hljs-params\">url:</span> jdbc:mysql:<span class=\"hljs-operator\">//</span>pig-mysql:<span class=\"hljs-number\">3306</span><span class=\"hljs-operator\">/</span>pig_demo<span class=\"hljs-operator\">?</span>characterEncoding<span class=\"hljs-operator\">=</span>utf8&amp;zeroDateTimeBehavior<span class=\"hljs-operator\">=</span>convertToNull&amp;useSSL<span class=\"hljs-operator\">=</span><span class=\"hljs-literal\">false</span>&amp;useJDBCCompliantTimezoneShift<span class=\"hljs-operator\">=</span><span class=\"hljs-literal\">true</span>&amp;useLegacyDatetimeCode<span class=\"hljs-operator\">=</span><span class=\"hljs-literal\">false</span>&amp;serverTimezone<span class=\"hljs-operator\">=</span>Asia<span class=\"hljs-symbol\">/Shanghai</span> \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,26"}}],"payload":{"tag":"h2","lines":"7,9"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

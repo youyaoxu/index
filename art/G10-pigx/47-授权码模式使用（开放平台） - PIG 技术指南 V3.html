@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"&#x6388;&#x6743;&#x7801;&#x6a21;&#x5f0f;&#x4f7f;&#x7528;&#xff08;&#x5f00;&#x653e;&#x5e73;&#x53f0;&#xff09;","children":[{"content":"&#x8ba4;&#x8bc6;","children":[{"content":"<pre data-lines=\"6,7\"><code>&#x672c;&#x6587;&#x5355;&#x7eaf;&#x4ece;&#x7b80;&#x5355;&#x7684;&#x6280;&#x672f;&#x5b9e;&#x73b0;&#x6765;&#x8bb2;&#xff0c;&#x4e0d;&#x6d89;&#x53ca;&#x5f00;&#x653e;&#x5e73;&#x53f0;&#x7684;&#x591a;&#x7ef4;&#x5ea6;&#x7684;&#x8fd0;&#x8425;&#x7406;&#x5ff5;&#x3002;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"6,7"}}],"payload":{"tag":"h2","lines":"3,5"}},{"content":"&#x4ec0;&#x4e48;&#x662f;&#x5f00;&#x653e;&#x5e73;&#x53f0;","children":[{"content":"<pre data-lines=\"20,21\"><code>&#x5fae;&#x4fe1;&#x5f00;&#x653e;&#x5e73;&#x53f0;&#x6388;&#x6743;&#x673a;&#x5236;&#x6d41;&#x7a0b;&#x56fe;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"20,21"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1599314414672-bed5346e-83cb-48e4-a4ee-a4b85e455212.jpeg\" alt>","children":[],"payload":{"tag":"img","lines":"22,23"}}],"payload":{"tag":"h2","lines":"9,11"}},{"content":"&#x6d4b;&#x8bd5;&#x5f00;&#x653e;&#x5e73;&#x53f0;&#x83b7;&#x53d6;&#x6388;&#x6743;&#x7801;","children":[{"content":"<pre data-lines=\"28,31\"><code>1.  &#x6ce8;&#x518c;&#x652f;&#x6301;&#x6388;&#x6743;&#x7801;&#x7684;&#x5ba2;&#x6237;&#x7aef;&#xff0c;\n    \n    &#x76f4;&#x63a5;&#x64cd;&#x4f5c;&#x6570;&#x636e;&#x5e93;&#xff0c;&#x6ce8;&#x610f;&#x6e05;&#x7a7a; redis (flushdb)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,31"}},{"content":"<pre data-lines=\"35,38\"><code data-lines=\"35,38\"><span class=\"hljs-keyword\">UPDATE</span> <span class=\"hljs-symbol\">`sys_oauth_client_details`</span> <span class=\"hljs-keyword\">SET</span> <span class=\"hljs-symbol\">`authorized_grant_types`</span> = <span class=\"hljs-string\">&apos;password,refresh_token,authorization_code,client_credentials&apos;</span>, <span class=\"hljs-symbol\">`web_server_redirect_uri`</span> = <span class=\"hljs-string\">&apos;https://pig4cloud.com&apos;</span><span class=\"hljs-keyword\">WHERE</span> <span class=\"hljs-symbol\">`client_id`</span> = <span class=\"hljs-string\">&apos;test&apos;</span>; \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,38"}},{"content":"<pre data-lines=\"39,44\"><code>2.  &#x6d4f;&#x89c8;&#x5668;&#x8bbf;&#x95ee;&#x5982;&#x4e0b;&#x94fe;&#x63a5;&#xff0c;&#x5fc5;&#x987b;&#x5b8c;&#x5168;&#x590d;&#x5236;&#x4e0d;&#x8981;&#x4fee;&#x6539;&#x4efb;&#x4f55;&#x53c2;&#x6570;&#xff1b;\n    \n    &#x6ce8;&#x610f;\n    \n    &#xff1a;&#x6388;&#x6743;&#x7801;&#x6a21;&#x5f0f;&#x56de;&#x8c03;&#x5730;&#x5740;&#x4e0d;&#x80fd;&#x4f7f;&#x7528; localhost\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"39,44"}},{"content":"<pre data-lines=\"47,50\"><code data-lines=\"47,50\">http://localhost:3000/oauth2/authorize?scope=server&amp;client_id=<span class=\"hljs-built_in\">test</span>&amp;response_type=code&amp;redirect_uri=https://pig4cloud.com \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"47,50"}},{"content":"<pre data-lines=\"51,52\"><code>3.  &#x7edf;&#x4e00;&#x8ba4;&#x8bc1;&#x754c;&#x9762;&#xff08;admin/123456&#xff09;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"51,52"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1734249521088-b3b4863b-1a9d-43d6-93ca-30650858ecf6.png\" alt>","children":[],"payload":{"tag":"img","lines":"53,54"}},{"content":"<pre data-lines=\"55,56\"><code>4.  &#x6388;&#x6743;&#x786e;&#x8ba4;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"55,56"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1633962058487-fc8fa397-cb15-4fde-b7b4-7aab479af0a1.png\" alt>","children":[],"payload":{"tag":"img","lines":"57,58"}},{"content":"<pre data-lines=\"59,60\"><code>5.  &#x767b;&#x5f55;&#x6210;&#x529f;&#x5e26;&#x7740; code &#x56de;&#x8c03;&#x5230;&#x76ee;&#x6807;&#x63a5;&#x53e3;\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"59,60"}},{"content":"<img src=\"https://minio.pigx.vip/oss/1633962131.png\" alt>","children":[],"payload":{"tag":"img","lines":"61,62"}}],"payload":{"tag":"h2","lines":"25,27"}},{"content":"&#x901a;&#x8fc7;&#x6388;&#x6743;&#x7801;&#x83b7;&#x53d6;&#x4ea4;&#x4e92;&#x4ee4;&#x724c;","children":[{"content":"<pre data-lines=\"68,69\"><code>&#x53c2;&#x8003; Postman &#x8c03;&#x7528;&#x7ae0;&#x8282;&#x5bfc;&#x5165;&#x811a;&#x672c;&#xff1a;[https://wiki.pig4cloud.com/backend/function/postman-api-usage#postman-api](https://wiki.pig4cloud.com/backend/function/postman-api-usage#postman-api)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"68,69"}},{"content":"<img src=\"https://mintlify.s3.us-west-1.amazonaws.com/xzcxz/images/1661931726658-9d90fc59-3940-40e6-b1a4-8d06aab842f4.png\" alt>","children":[],"payload":{"tag":"img","lines":"70,71"}}],"payload":{"tag":"h2","lines":"65,67"}},{"content":"&#x9000;&#x51fa;&#x7edf;&#x4e00;&#x8eab;&#x4efd;&#x8ba4;&#x8bc1;","children":[{"content":"<pre data-lines=\"77,78\"><code>&#x6d4f;&#x89c8;&#x5668;&#x8bbf;&#x95ee;&#xff1a;[http://localhost:3000/oauth2/logout](http://localhost:3000/oauth2/logout)\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"77,78"}}],"payload":{"tag":"h2","lines":"74,76"}}],"payload":{"tag":"h1","lines":"0,2"}},{})</script>
+</body>
+</html>
